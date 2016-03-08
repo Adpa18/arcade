@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:50:09 2016 Nicolas Constanty
-** Last update	Tue Mar 08 18:06:19 2016 Nicolas Constanty
+** Last update	Tue Mar 08 22:32:30 2016 Nicolas Constanty
 */
 
 #ifndef OBJECT2D_HPP_

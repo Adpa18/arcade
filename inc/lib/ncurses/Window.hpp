@@ -5,14 +5,12 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Tue Mar 08 19:03:57 2016 Nicolas Constanty
+** Last update	Tue Mar 08 22:15:49 2016 Nicolas Constanty
 */
 
 #ifndef WINDOW_HPP_
 #define WINDOW_HPP_
 
-# include <cstdlib>
-# include <ncurses.h>
 # include "Vector2.hpp"
 
 class Window {
