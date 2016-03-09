@@ -1,31 +1,37 @@
-SRC=			Snake.cpp \
+SRC			=	Snake.cpp \
 
-BASE=     ../../../
+BASE		=	../../../
 
-CC=				g++
+CC			=	g++
 
-RM=				rm -rf
+RM			=	rm -rf
 
-NAME=			$(BASE)games/lib_arcade_snake.so
+NAME		=	$(BASE)games/lib_arcade_snake.so
 
-CPPFLAGS= -W -Wall -Wextra -Werror -fPIC -I$(BASE)inc/games/snake/ -I$(BASE)inc/
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC
 
-LDFLAGS=  -shared
+CPPFLAGS	+= 	-I$(BASE)inc/games/snake/ -I$(BASE)inc/
 
-OBJ=       $(SRC:.cpp=.o)
+LDFLAGS		=	-shared
 
+OBJ			=	$(SRC:%cpp=%o)
 
-all: $(NAME)
+%.o : %.cpp
+	@echo -e "Compiling $<"
+	@$(CC) -c $(CPPFLAGS) $< -o $@
 
-$(NAME):   $(OBJ)
-	$(CC) $(LDFLAGS) $(OBJ) -o $(NAME)
+all		:	$(NAME)
 
-clean:
+$(NAME)	:	$(OBJ)
+	@$(CC) $(LDFLAGS) $(OBJ) -o $(NAME)
+	@echo -e "\033[33mlib_arcade_snake.so Compiled\033[00m"
+
+clean	:
 	$(RM) $(OBJ)
 
-fclean: clean
+fclean	:	clean
 	$(RM) $(NAME)
 
-re: fclean all
+re		:	fclean all
 
-.PHONY  : all clean fclean re
+.PHONY	: all clean fclean re

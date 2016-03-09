@@ -1,37 +1,50 @@
-SRC=			Ncurses.cpp \
-					Window.cpp	\
-					../../../src/Vector2.cpp
+BASE		=   ../../../
 
-DEP_SRC=			../../../src/Vector2.cpp
+SRC			=	Ncurses.cpp	\
+				Window.cpp	\
+				$(BASE)src/Vector2.cpp
 
-BASE=     ../../../
-
-CC=				g++
-
-RM=				rm -rf
-
-NAME=			$(BASE)lib/lib_arcade_ncurses.so
-
-CPPFLAGS= -W -Wall -Wextra -Werror -fPIC -I$(BASE)inc/lib/ncurses/ -I$(BASE)inc/ -I/usr/include/ncurses6/ncurses -I/usr/include/ncurses6
-
-LDFLAGS=  -shared
-
-OBJ=       $(SRC:.cpp=.o)
-
-DEP=       $(DEP_SRC:.cpp=.o)
+DEP_SRC		=	$(BASE)src/Vector2.cpp
 
 
-all: $(NAME)
+CC			=	g++
 
-$(NAME):   $(OBJ)
-	$(CC) $(LDFLAGS) $(OBJ) -o $(NAME) -lncurses -ltinfo -lncurses -ltinfo -L/usr/lib64/ncurses6
+RM			=	rm -rf
 
-clean:
+NAME		=	$(BASE)lib/lib_arcade_ncurses.so
+
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC
+
+CPPFLAGS	+=	-I$(BASE)inc/lib/ncurses/ -I$(BASE)inc/
+
+CPPFLAGS	+=	-I/usr/include/ncurses6/ncurses -I/usr/include/ncurses6
+
+LIBS 		=	-lncurses -ltinfo -lncurses -ltinfo -L/usr/lib64/ncurses6
+
+LDFLAGS		=	-shared
+
+OBJDIR		=	$(BASE)obj
+
+OBJ			=	$(SRC:%cpp=%o)
+
+DEP			=	$(DEP_SRC:%cpp=%o)
+
+%.o : %.cpp
+	@echo -e "Compiling $<"
+	@$(CC) -c $(CPPFLAGS) $< -o $@
+
+all		:	$(NAME)
+
+$(NAME)	:	$(OBJ)
+	@$(CC) $(LDFLAGS) $(OBJ) -o $(NAME) $(LIBS)
+	@echo -e "\033[33mlib_arcade_ncurses.so Compiled\033[00m"
+
+clean	:
 	$(RM) $(OBJ)
 
-fclean: clean
+fclean	:	clean
 	$(RM) $(NAME)
 
-re: fclean all
+re		:	fclean all
 
 .PHONY  : all clean fclean re
