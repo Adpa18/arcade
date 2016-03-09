@@ -5,22 +5,22 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Wed Mar 09 19:37:40 2016 Nicolas Constanty
+** Last update	Wed Mar 09 20:38:54 2016 Nicolas Constanty
 */
 
 #include <iostream>
 #include "Arcade.hpp"
 
-Arcade::Arcade()
+arcade::Arcade::Arcade()
 {
   this->refresh_lib("./lib/");
   this->refresh_lib("./games/");
 }
 
-Arcade::~Arcade()
+arcade::Arcade::~Arcade()
 {}
 
-void Arcade::refresh_lib(std::string const &folder)
+void arcade::Arcade::refresh_lib(std::string const &folder)
 {
   DIR *dir;
   struct dirent *ent;
@@ -38,9 +38,8 @@ void Arcade::refresh_lib(std::string const &folder)
   }
 }
 
-IGraph *Arcade::initGraph(void *ptr)
+IGraph *arcade::Arcade::initGraph(void *ptr)
 {
-  std::cout << "StartInit => Graph" << std::endl;
   const char *lib_name = "loadLib";
   typedef IGraph *(*fptr)();
   fptr load_lib = (IGraph *(*)())(dlsym(ptr, lib_name));
@@ -52,9 +51,8 @@ IGraph *Arcade::initGraph(void *ptr)
   return (NULL);
 }
 
-IGame *Arcade::initGame(void *ptr)
+IGame *arcade::Arcade::initGame(void *ptr)
 {
-  std::cout << "StartInit => Game" << std::endl;
   const char *lib_name = "loadGame";
   typedef IGame *(*fptr)();
   fptr load_game = (IGame *(*)())(dlsym(ptr, lib_name));
@@ -66,7 +64,7 @@ IGame *Arcade::initGame(void *ptr)
   return (NULL);
 }
 
-void	*Arcade::initSo(std::string const &name, SOTYPE type)
+void	*arcade::Arcade::initSo(std::string const &name, SOTYPE type)
 {
   //reset error
   dlerror();
@@ -91,6 +89,9 @@ void	*Arcade::initSo(std::string const &name, SOTYPE type)
   return (NULL);
 }
 
+#include <chrono>
+#include <thread>
+
 int	main(int ac, char **av)
 {
   //Make usage
@@ -99,19 +100,20 @@ int	main(int ac, char **av)
     std::cout << "USAGE : ./arcade [LIB_PATH.so]" << std::endl;
     return (1);
   }
-  Arcade *arcade = new Arcade();
+  arcade::Arcade *arcade = new arcade::Arcade();
   IGraph *graph = (IGraph *)arcade->initSo(av[1], GRAPH);
   if (!graph)
     return (1);
-  std::cout << "EndInit => Grap" << std::endl;
   IGame *game = (IGame *)arcade->initSo("snake", GAME);
   if (!game)
     return (1);
-  std::cout << "EndInit => Game" << std::endl;
+  int	key;
+  std::chrono::milliseconds interval( 250 );
   while (42)
   {
-    graph->display(game->compute(graph->getKey()));
-    usleep(200);
+    key = graph->eventManagment();
+    graph->display(game->compute(key));
+    std::this_thread::sleep_for( interval ) ;
   }
   return (0);
 }

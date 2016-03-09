@@ -2,7 +2,7 @@ SRC			=	Snake.cpp \
 
 BASE		=	../../../
 
-CC			=	g++
+CC			=	g++ -std=gnu++11
 
 RM			=	rm -rf
 

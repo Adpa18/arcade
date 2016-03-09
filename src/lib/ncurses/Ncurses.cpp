@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 19:23:21 2016 Nicolas Constanty
+** Last update	Wed Mar 09 20:39:16 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -21,6 +21,8 @@ Ncurses::Ncurses (void)
   start_color();
   curs_set(0);
   noecho();
+  keypad(stdscr, true);
+  halfdelay(1);
   init_pair(1, COLOR_GREEN, COLOR_BLACK);
   init_pair(2, COLOR_BLUE, COLOR_MAGENTA);
 
@@ -28,54 +30,16 @@ Ncurses::Ncurses (void)
   wattr_on(stdscr, A_REVERSE, NULL);
   wborder(stdscr, ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
   wattr_off(stdscr, A_REVERSE, NULL);
-
-  Window *menu = NULL;
-  Vector2 *size;
-  Vector2 *pos;
-
-  int key;
-  while ((key = getch()) != 27) {
-      if (key == KEY_RESIZE) {
-          clear();
-          wattr_on(stdscr, A_REVERSE, NULL);
-          wborder(stdscr, ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-          wattr_off(stdscr, A_REVERSE, NULL);
-          if (menu && menu->getWind())
-          {
-            pos = new Vector2(LINES / 4, COLS / 4);
-            size = new Vector2(LINES / 2, COLS / 2);
-            menu->setWind(*size, *pos, NULL);
-          }
-      }
-      if (key == 32)
-      {
-        if (menu && menu->getWind())
-          menu->close();
-        else
-        {
-          pos = new Vector2(LINES / 4, COLS / 4);
-          size = new Vector2(LINES / 2, COLS / 2);
-          menu = new Window(*size, *pos, NULL);
-        }
-      }
-  }
-
-  // Vector2 pos(3, 3);
-  // Vector2 size(10, 10);
-  // Window *wind = new Window(size, pos, NULL);
-  //
-  // wind->getPos();
-
-  std::cout << "EndInit => Lib Ncurses" << std::endl;
-  getch();
+  wrefresh(stdscr);
 }
 
 Ncurses::~Ncurses ()
 {}
 
-void Ncurses::eventManagment()
+int Ncurses::eventManagment()
 {
-
+  getch();
+  return (0);
 }
 
 void Ncurses::display(std::stack<AComponent> *)
@@ -83,9 +47,4 @@ void Ncurses::display(std::stack<AComponent> *)
   // Object2D *obj = static_cast<Object2D *>(objects.top());
   // Vector2 vec = obj->getCoord<Vector2>();
   // std::cout << "x = " << vec.x << " y = " << vec.y << std::endl;
-}
-
-size_t Ncurses::getKey() const
-{
-  return (0);
 }

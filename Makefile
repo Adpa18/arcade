@@ -6,7 +6,7 @@ SRC=	$(SRC_DIR)Arcade.cpp								\
 			$(SRC_DIR)GameComponent.cpp					\
 			$(SRC_DIR)UIComponent.cpp						\
 
-CC			=	g++
+CC			=	g++ -std=gnu++11
 
 RM			=	rm -rf
 

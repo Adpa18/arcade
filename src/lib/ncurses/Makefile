@@ -7,7 +7,7 @@ SRC			=	Ncurses.cpp	\
 DEP_SRC		=	$(BASE)src/Vector2.cpp
 
 
-CC			=	g++
+CC			=	g++ -std=gnu++11
 
 RM			=	rm -rf
 
