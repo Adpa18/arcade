@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 07:09:09 2016 Nicolas Constanty
+** Last update	Wed Mar 09 11:20:43 2016 Nicolas Constanty
 */
 #include "Window.hpp"
 
@@ -60,13 +60,13 @@ void ncurses::Window::close()
 {
   if (this->parent)
   {
-    delete this->parent;
+    delwin(this->parent);
     this->parent = NULL;
     this->wind = NULL;
   }
   else if (this->wind)
   {
-    delete this->wind;
+    delwin(this->wind);
     this->parent = NULL;
     this->wind = NULL;
   }
