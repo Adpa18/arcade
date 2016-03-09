@@ -1,10 +1,26 @@
-all:
-	$(MAKE) -C ./snake/ MAKEFLAGS=
+SUBDIRS	=	snake \
 
-clean:
-	$(MAKE) clean -C ./snake/ MAKEFLAGS=
+all		:
+	@echo -e "\033[32m=> Compiling Games\033[00m"
+	@for dir in $(SUBDIRS); do \
+		echo -e "\t\033[32mCompiling $$dir\033[00m"; \
+		make -C $$dir; \
+	done
 
-fclean:
-	$(MAKE) fclean -C ./snake/ MAKEFLAGS=
+clean	:
+	@echo -e "\033[35m=> Removing Games Objects\033[00m"
+	@for dir in $(SUBDIRS); do \
+		echo -e "\t\033[31mRemoving Objects from $$dir\033[0m"; \
+		make -C $$dir clean; \
+	done
 
-re: fclean all
+fclean	:
+	@echo -e "\033[35m=> Removing Games\033[00m"
+	@for dir in $(SUBDIRS); do \
+		echo -e "\t\033[31mRemoving $$dir\033[0m"; \
+		make -C $$dir fclean; \
+	done
+
+re		: fclean all
+
+.PHONY	: all clean fclean re
