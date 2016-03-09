@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 00:32:51 2016 Nicolas Constanty
-** Last update	Wed Mar 09 16:52:33 2016 Nicolas Constanty
+** Last update	Wed Mar 09 19:35:55 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -18,13 +18,12 @@ class Snake : public IGame {
 public:
   Snake ();
   virtual ~Snake ();
-  virtual void compute();
+  virtual std::stack<AComponent> *compute(size_t key);
 };
 
-IGame *loadGame()
+extern "C" IGame *loadGame()
 {
   return (new Snake());
 }
-
 
 #endif /* !SNAKE_HPP_ */

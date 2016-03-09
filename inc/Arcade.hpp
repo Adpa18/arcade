@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:23:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 18:25:07 2016 Nicolas Constanty
+** Last update	Wed Mar 09 19:35:45 2016 Nicolas Constanty
 */
 
 #ifndef ARCADE_HPP_
@@ -13,9 +13,10 @@
 
 # include <dlfcn.h>
 # include <vector>
-#include <dirent.h>
-#include <stdio.h>
-#include <algorithm>
+# include <dirent.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <algorithm>
 # include "Utils.hpp"
 # include "Interfaces.hpp"
 

@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Wed Mar 09 15:28:12 2016 Nicolas Constanty
+** Last update	Wed Mar 09 19:36:14 2016 Nicolas Constanty
 */
 
 #ifndef NCURSES_HPP_
@@ -22,11 +22,11 @@ public:
   virtual ~Ncurses ();
 
   virtual void eventManagment();
-  virtual void display();
+  virtual void display(std::stack<AComponent> *);
   virtual size_t getKey() const;
 };
 
-IGraph *loadLib()
+extern "C" IGraph *loadLib()
 {
   return (new Ncurses());
 }
