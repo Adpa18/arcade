@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Wed Mar 09 20:38:54 2016 Nicolas Constanty
+** Last update	Wed Mar 09 20:44:32 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -109,11 +109,10 @@ int	main(int ac, char **av)
     return (1);
   int	key;
   std::chrono::milliseconds interval( 250 );
-  while (42)
-  {
+GameLoop:
     key = graph->eventManagment();
     graph->display(game->compute(key));
     std::this_thread::sleep_for( interval ) ;
-  }
+    goto GameLoop;
   return (0);
 }
