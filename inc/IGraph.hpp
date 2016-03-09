@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:47:17 2016 Nicolas Constanty
-** Last update	Tue Mar 08 17:49:28 2016 Nicolas Constanty
+** Last update	Tue Mar 08 23:37:36 2016 Nicolas Constanty
 */
 
 #ifndef IGRAPH_HPP_
@@ -17,7 +17,7 @@
 class IGraph {
 public:
   virtual void eventManagment() = 0;
-  virtual void refresh(std::stack<Object *>) = 0;
+  virtual void display(std::stack<Object *>) = 0;
   virtual size_t getKey() const = 0;
 };
 

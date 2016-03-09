@@ -5,11 +5,11 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:50:09 2016 Nicolas Constanty
-** Last update	Tue Mar 08 22:32:30 2016 Nicolas Constanty
+** Last update	Wed Mar 09 04:31:03 2016 Nicolas Constanty
 */
 
 #ifndef OBJECT2D_HPP_
-#define OBJECT2D_HPP_
+# define OBJECT2D_HPP_
 
 # include <string>
 # include "Object.hpp"

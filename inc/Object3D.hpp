@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:58:05 2016 Nicolas Constanty
-** Last update	Tue Mar 08 18:08:14 2016 Nicolas Constanty
+** Last update	Wed Mar 09 00:05:34 2016 Nicolas Constanty
 */
 
 #ifndef OBJECT3D_HPP_

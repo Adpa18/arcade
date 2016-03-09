@@ -5,13 +5,13 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:07:00 2016 Nicolas Constanty
-** Last update	Tue Mar 08 18:14:40 2016 Nicolas Constanty
+** Last update	Wed Mar 09 04:30:49 2016 Nicolas Constanty
 */
 
 #ifndef VECTOR2_HPP_
-#define VECTOR2_HPP_
+# define VECTOR2_HPP_
 
-#include <cstdlib>
+# include <cstdlib>
 
 class Vector2 {
 public:
