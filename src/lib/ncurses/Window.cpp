@@ -5,8 +5,9 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 11:20:43 2016 Nicolas Constanty
+** Last update	Wed Mar 09 15:27:41 2016 Nicolas Constanty
 */
+#include <iostream>
 #include "Window.hpp"
 
 ncurses::Window::Window (Vector2 &s, Vector2 &p, WINDOW *pa)

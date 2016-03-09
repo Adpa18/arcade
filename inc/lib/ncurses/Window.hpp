@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 06:46:15 2016 Nicolas Constanty
+** Last update	Wed Mar 09 13:26:40 2016 Nicolas Constanty
 */
 
 #ifndef WINDOW_HPP_
@@ -29,7 +29,7 @@ namespace ncurses {
     Vector2 getPos() const;
     void		setPos();
     WINDOW	*getWind() const;
-    void	close();
+    void	  close();
     void		setWind(Vector2 &s, Vector2 &p, WINDOW *pa);
   };
 };

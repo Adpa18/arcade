@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Wed Mar 09 07:05:57 2016 Nicolas Constanty
+** Last update	Wed Mar 09 15:28:12 2016 Nicolas Constanty
 */
 
 #ifndef NCURSES_HPP_
@@ -15,17 +15,14 @@
 # include <unistd.h>
 # include <ncurses.h>
 # include "IGraph.hpp"
-# include "Object2D.hpp"
 
 class Ncurses : public IGraph {
-private:
-  std::stack<Object2D *> toto;
 public:
   Ncurses (void);
   virtual ~Ncurses ();
 
   virtual void eventManagment();
-  virtual void display(std::stack<Object *>);
+  virtual void display();
   virtual size_t getKey() const;
 };
 

@@ -1,12 +1,10 @@
 SRC_DIR= ./src/
 
 SRC=	$(SRC_DIR)Arcade.cpp								\
-			$(SRC_DIR)Object.cpp								\
-			$(SRC_DIR)Object2D.cpp							\
-			$(SRC_DIR)Object3D.cpp							\
-			$(SRC_DIR)ObjectTerm.cpp						\
 			$(SRC_DIR)Vector2.cpp								\
-			$(SRC_DIR)Vector3.cpp
+			$(SRC_DIR)AComponent.cpp						\
+			$(SRC_DIR)GameComponent.cpp					\
+			$(SRC_DIR)UIComponent.cpp						\
 
 CC=				g++
 

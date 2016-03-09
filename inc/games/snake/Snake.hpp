@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 00:32:51 2016 Nicolas Constanty
-** Last update	Wed Mar 09 03:47:13 2016 Nicolas Constanty
+** Last update	Wed Mar 09 16:52:33 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -15,18 +15,15 @@
 # include "Utils.hpp"
 
 class Snake : public IGame {
-private:
-  void	*lptr;
-  IGraph *graph;
 public:
-  Snake (void *);
+  Snake ();
   virtual ~Snake ();
   virtual void compute();
 };
 
-IGame *loadGame(void *ptr)
+IGame *loadGame()
 {
-  return (new Snake(ptr));
+  return (new Snake());
 }
 
 
