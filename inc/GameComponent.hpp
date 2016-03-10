@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:36:54 2016 Nicolas Constanty
-** Last update	Wed Mar 09 15:49:28 2016 Nicolas Constanty
+** Last update	Thu Mar 10 15:38:40 2016 Adrien WERY
 */
 
 #ifndef GAMECOMPONENT_HPP_
@@ -17,9 +17,9 @@
 
 class GameComponent : public AComponent {
 private:
-  std::string spriteText;
-  std::string fileSprite2D;
-  void *sprite3D;
+  std::string   spriteText;
+  std::string   fileSprite2D;
+  void          *sprite3D;
 public:
   GameComponent(Vector2 const &pos, void *sprite3D, std::string const &spriteText,
      std::string const &sprite2D);
@@ -27,7 +27,7 @@ public:
 
   std::string const &getSpriteText() const;
   std::string const &getSprite2D() const;
-  void *getSprite3D() const;
+  void              *getSprite3D() const;
 };
 
 #endif /* !GAMECOMPONENT_HPP_ */
