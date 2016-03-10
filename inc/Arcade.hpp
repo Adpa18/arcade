@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:23:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 19:52:37 2016 Nicolas Constanty
+** Last update	Thu Mar 10 15:35:56 2016 Adrien WERY
 */
 
 #ifndef ARCADE_HPP_
@@ -17,11 +17,16 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <algorithm>
+# include <chrono>
+# include <thread>
+#include <iostream>
 # include "Utils.hpp"
 # include "Interfaces.hpp"
 
 enum SOTYPE { GRAPH, GAME };
 
+# define USAGE "USAGE : ./arcade [LIB_PATH.so]"
+# define ERROR(msg, ret) ({std::cerr << msg << std::endl;return (ret);})
 
 namespace arcade {
 
@@ -34,10 +39,8 @@ namespace arcade {
   public:
     Arcade ();
     virtual ~Arcade ();
-    void* initSo(std::string const &, SOTYPE);
-    IGame*  initGame(void *ptr);
-    IGraph* initGraph(void *ptr);
-    void		refresh_lib(std::string const &folder);
+    void    *initSo(std::string const &, SOTYPE);
+    void    refresh_lib(std::string const &folder);
   };
 }
 
