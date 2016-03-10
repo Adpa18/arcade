@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:23:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 19:52:37 2016 Nicolas Constanty
+** Last update	Thu Mar 10 14:29:34 2016 Nicolas Constanty
 */
 
 #ifndef ARCADE_HPP_
@@ -17,6 +17,8 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <algorithm>
+#include <chrono>
+#include <thread>
 # include "Utils.hpp"
 # include "Interfaces.hpp"
 
@@ -25,8 +27,9 @@ enum SOTYPE { GRAPH, GAME };
 
 namespace arcade {
 
-  static const size_t winWidth = 50;
-  static const size_t winHeight = 30;
+  static const int winWidth = 50;
+  static const int winHeight = 30;
+  
   class Arcade {
   private:
     std::vector<std::string> graph_paths;

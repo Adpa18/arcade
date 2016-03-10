@@ -10,7 +10,7 @@
 
 #include "Vector2.hpp"
 
-Vector2::Vector2(size_t x, size_t y)
+Vector2::Vector2(int x, int y)
 {
   this->x = x;
   this->y = y;

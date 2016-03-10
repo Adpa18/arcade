@@ -13,7 +13,7 @@
 AComponent::AComponent(Vector2 p) : pos(p)
 {}
 
-AComponent::AComponent(size_t x, size_t y) : pos(Vector2(x, y))
+AComponent::AComponent(int x, int y) : pos(Vector2(x, y))
 {}
 
 AComponent::~AComponent ()

@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 15:27:41 2016 Nicolas Constanty
+** Last update	Thu Mar 10 16:35:59 2016 Nicolas Constanty
 */
 #include <iostream>
 #include "Window.hpp"
@@ -45,9 +45,9 @@ void		ncurses::Window::setWind(Vector2 &s, Vector2 &p, WINDOW *pa)
   this->pos = p;
   this->parent = pa;
   if (!this->parent)
-    this->wind = newwin(this->size.x, this->size.y, this->pos.x, this->pos.y);
+    this->wind = newwin(this->size.y, this->size.x, this->pos.y, this->pos.x);
   else
-    this->wind = subwin(pa, this->size.x, this->size.y, this->pos.x, this->pos.y);
+    this->wind = subwin(pa, this->size.y, this->size.x, this->pos.y, this->pos.x);
   box(this->wind, 0 , 0);
   wbkgd(this->wind, COLOR_PAIR(2));
   wrefresh(this->wind);

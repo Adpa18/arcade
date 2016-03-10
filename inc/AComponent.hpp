@@ -18,7 +18,7 @@ private:
   Vector2	pos;
 public:
   AComponent(Vector2 pos);
-  AComponent(size_t x, size_t y);
+  AComponent(int x, int y);
   virtual ~AComponent ();
   Vector2 const &getPos() const;
 };

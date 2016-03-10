@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Wed Mar 09 20:44:32 2016 Nicolas Constanty
+** Last update	Thu Mar 10 14:36:19 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -28,7 +28,6 @@ void arcade::Arcade::refresh_lib(std::string const &folder)
     while ((ent = readdir (dir)) != NULL) {
       if (std::string(ent->d_name).find(".so") != std::string::npos)
       {
-        std::cout << ent->d_name << std::endl;
         if (std::find(this->game_paths.begin(), this->game_paths.end(), ent->d_name) != this->game_paths.end())
           this->game_paths.push_back(ent->d_name);
       }
@@ -89,12 +88,8 @@ void	*arcade::Arcade::initSo(std::string const &name, SOTYPE type)
   return (NULL);
 }
 
-#include <chrono>
-#include <thread>
-
 int	main(int ac, char **av)
 {
-  //Make usage
   if (ac < 2)
   {
     std::cout << "USAGE : ./arcade [LIB_PATH.so]" << std::endl;
@@ -108,11 +103,11 @@ int	main(int ac, char **av)
   if (!game)
     return (1);
   int	key;
-  std::chrono::milliseconds interval( 250 );
+  std::chrono::milliseconds interval(250);
 GameLoop:
     key = graph->eventManagment();
     graph->display(game->compute(key));
-    std::this_thread::sleep_for( interval ) ;
+    std::this_thread::sleep_for(interval) ;
     goto GameLoop;
   return (0);
 }

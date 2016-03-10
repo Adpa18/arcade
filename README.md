@@ -7,7 +7,7 @@ IGraph();
 ~IGraph();
 void eventManagement();
 void refresh();
-size_t getKey();
+int getKey();
 
 **Lib Games**
 1. IGame

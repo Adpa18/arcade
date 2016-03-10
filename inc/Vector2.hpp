@@ -15,9 +15,9 @@
 
 class Vector2 {
 public:
-  size_t x;
-  size_t y;
-  Vector2 (size_t x, size_t y);
+  int x;
+  int y;
+  Vector2 (int x, int y);
   virtual ~Vector2 ();
   Vector2(const Vector2 &obj);
   Vector2  &operator=(const Vector2 &obj);
