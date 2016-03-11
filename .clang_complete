@@ -1,3 +1,4 @@
 -I./inc/lib/ncurses
+-I./inc/lib/sdl2
 -I./inc/games/snake
 -I./inc

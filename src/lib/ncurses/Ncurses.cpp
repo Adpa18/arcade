@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Thu Mar 10 18:19:43 2016 Nicolas Constanty
+** Last update	Thu Mar 10 18:35:31 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -37,11 +37,7 @@ Ncurses::Ncurses (void)
   {
     this->wind = new Window(size, pos, NULL);
     keypad(this->wind->getWind(), true);
-    wbkgd(this->wind->getWind(), COLOR_PAIR(1));
-    wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-    wborder(this->wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-    wattr_off(this->wind->getWind(), A_REVERSE, NULL);
-    wrefresh(this->wind->getWind());
+    this->initMainWindow();
   }
   else
     this->wind = NULL;
@@ -51,7 +47,16 @@ Ncurses::~Ncurses ()
 {
 }
 
-bool Ncurses::invalidSize(int width, int height, Vector2 const &size, Vector2 const &pos)
+void	Ncurses::initMainWindow()
+{
+  wbkgd(this->wind->getWind(), COLOR_PAIR(1));
+  wattr_on(this->wind->getWind(), A_REVERSE, NULL);
+  wborder(this->wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
+  wattr_off(this->wind->getWind(), A_REVERSE, NULL);
+  wrefresh(this->wind->getWind());
+}
+
+bool	Ncurses::invalidSize(int width, int height, Vector2 const &size, Vector2 const &pos)
 {
   if (pos.x + size.x > COLS -2 || pos.y + size.y > LINES - 1)
   {
@@ -70,45 +75,41 @@ bool Ncurses::invalidSize(int width, int height, Vector2 const &size, Vector2 co
   return (false);
 }
 
-int Ncurses::eventManagment()
+int	Ncurses::resizeTerm()
 {
-  int key;
   int width = 50;
   int height = 30;
 
-  key = getch();
-  if (key == KEY_RESIZE)
+  Vector2 size(width, height);
+  Vector2 pos(COLS / 2 - (width / 2), LINES / 2 - (height / 2));
+  if (!this->invalidSize(width, height, size, pos))
   {
-    Vector2 size(width, height);
-    Vector2 pos(COLS / 2 - (width / 2), LINES / 2 - (height / 2));
-    if (!this->invalidSize(width, height, size, pos))
-    {
-      if (this->wind)
-        {
-          clear();
-          refresh();
-          mvwin(this->wind->getWind(), pos.y, pos.x);
-          wbkgd(this->wind->getWind(), COLOR_PAIR(1));
-          wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-          wborder(this->wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-          wattr_off(this->wind->getWind(), A_REVERSE, NULL);
-          wrefresh(this->wind->getWind());
-        }
-      else
+    if (this->wind)
       {
         clear();
         refresh();
-        this->wind = new Window(size, pos, NULL);
-        keypad(this->wind->getWind(), true);
-        wbkgd(this->wind->getWind(), COLOR_PAIR(1));
-        wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-        wborder(this->wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-        wattr_off(this->wind->getWind(), A_REVERSE, NULL);
-        wrefresh(this->wind->getWind());
+        mvwin(this->wind->getWind(), pos.y, pos.x);
+        this->initMainWindow();
       }
-      return (-2);
+    else
+    {
+      clear();
+      refresh();
+      this->wind = new Window(size, pos, NULL);
+      keypad(this->wind->getWind(), true);
+      this->initMainWindow();
     }
   }
+  return (-2);
+}
+
+int Ncurses::eventManagment()
+{
+  int key;
+
+  key = getch();
+  if (key == KEY_RESIZE)
+    return (this->resizeTerm());
   return (key);
 }
 
