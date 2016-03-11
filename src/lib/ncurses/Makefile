@@ -2,10 +2,8 @@ BASE		=   ../../../
 
 SRC			=	Ncurses.cpp	\
 				Window.cpp	\
-				$(BASE)src/Vector2.cpp
 
 DEP_SRC		=	$(BASE)src/Vector2.cpp
-
 
 CC			=	g++ -std=gnu++11
 
@@ -35,8 +33,8 @@ DEP			=	$(DEP_SRC:%cpp=%o)
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJ)
-	@$(CC) $(LDFLAGS) $(OBJ) -o $(NAME) $(LIBS)
+$(NAME)	:	$(OBJ) $(DEP)
+	@$(CC) $(LDFLAGS) $(OBJ) $(DEP) -o $(NAME) $(LIBS)
 	@echo -e "\033[33mlib_arcade_ncurses.so Compiled\033[00m"
 
 clean	:

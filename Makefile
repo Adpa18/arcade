@@ -1,10 +1,11 @@
 SRC_DIR		=	src/
 
-SRC=	$(SRC_DIR)Arcade.cpp								\
-			$(SRC_DIR)Vector2.cpp								\
-			$(SRC_DIR)AComponent.cpp						\
-			$(SRC_DIR)GameComponent.cpp					\
-			$(SRC_DIR)UIComponent.cpp						\
+SRC=	$(SRC_DIR)Arcade.cpp				\
+			$(SRC_DIR)Vector2.cpp			\
+			$(SRC_DIR)AGame.cpp				\
+			$(SRC_DIR)AComponent.cpp		\
+			$(SRC_DIR)GameComponent.cpp		\
+			$(SRC_DIR)UIComponent.cpp		\
 
 CC			=	g++ -std=gnu++11
 

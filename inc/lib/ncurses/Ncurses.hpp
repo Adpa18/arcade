@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 10 18:28:29 2016 Nicolas Constanty
+** Last update	Fri Mar 11 18:22:08 2016 Adrien WERY
 */
 
 #ifndef NCURSES_HPP_
@@ -31,7 +31,8 @@ public:
   virtual ~Ncurses ();
 
   virtual int eventManagment();
-  virtual void display(std::stack<AComponent> *);
+  virtual void display(std::stack<AComponent*>);
+  virtual void init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
 
 };
 

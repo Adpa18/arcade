@@ -1,5 +1,5 @@
-SUBDIRS	=	ncurses \
-					sdl2		\
+SUBDIRS	=	ncurses	\
+			sdl2	\
 
 all		:
 	@echo -e "\033[32m=> Compiling Graphics\033[00m"

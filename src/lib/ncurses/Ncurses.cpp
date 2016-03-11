@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Thu Mar 10 18:35:31 2016 Nicolas Constanty
+** Last update	Fri Mar 11 18:23:23 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -113,9 +113,16 @@ int Ncurses::eventManagment()
   return (key);
 }
 
-void Ncurses::display(std::stack<AComponent> *)
+void Ncurses::display(std::stack<AComponent*>)
 {
   // Object2D *obj = static_cast<Object2D *>(objects.top());
   // Vector2 vec = obj->getCoord<Vector2>();
   // std::cout << "x = " << vec.x << " y = " << vec.y << std::endl;
+}
+
+void  Ncurses::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
+{
+    (void)name;
+    (void)size;
+    (void)cache;
 }

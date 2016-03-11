@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Thu Mar 10 18:19:15 2016 Nicolas Constanty
+** Last update	Fri Mar 11 17:12:30 2016 Adrien WERY
 */
 
 #include "Arcade.hpp"
@@ -69,7 +69,7 @@ int	main(int ac, char **av)
 {
     arcade::Arcade  *arcade;
     IGraph          *graph;
-    IGame           *game;
+    AGame           *game;
     int	            key;
 
     if (ac < 2)
@@ -77,9 +77,10 @@ int	main(int ac, char **av)
     arcade = new arcade::Arcade();
     if (!(graph = (IGraph *)arcade->initSo(av[1], GRAPH)))
         return (1);
-    if (!(game = (IGame *)arcade->initSo("snake", GAME)))
+    if (!(game = (AGame *)arcade->initSo("snake", GAME)))
         return (1);
     std::chrono::milliseconds interval(250);
+    // graph->init(game->getInfo());
     GameLoop:
         key = graph->eventManagment();
         graph->display(game->compute(key));

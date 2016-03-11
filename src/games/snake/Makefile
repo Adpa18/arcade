@@ -1,6 +1,9 @@
-SRC			=	Snake.cpp \
+BASE		=   ../../../
 
-BASE		=	../../../
+SRC			=	Snake.cpp	\
+
+DEP_SRC		=	$(BASE)src/Vector2.cpp	\
+				$(BASE)src/AGame.cpp
 
 CC			=	g++ -std=gnu++11
 
@@ -16,14 +19,16 @@ LDFLAGS		=	-shared
 
 OBJ			=	$(SRC:%cpp=%o)
 
+DEP			=	$(DEP_SRC:%cpp=%o)
+
 %.o : %.cpp
 	@echo -e "Compiling $<"
 	@$(CC) -c $(CPPFLAGS) $< -o $@
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJ)
-	@$(CC) $(LDFLAGS) $(OBJ) -o $(NAME)
+$(NAME)	:	$(OBJ) $(DEP)
+	@$(CC) $(LDFLAGS) $(OBJ) $(DEP) -o $(NAME)
 	@echo -e "\033[33mlib_arcade_snake.so Compiled\033[00m"
 
 clean	:

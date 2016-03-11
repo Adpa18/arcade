@@ -10,8 +10,8 @@ void refresh();
 int getKey();
 
 **Lib Games**
-1. IGame
-IGame();
-~IGame();
+1. AGame
+AGame();
+~AGame();
 void init();
 void update();

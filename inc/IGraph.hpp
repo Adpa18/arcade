@@ -5,19 +5,21 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:47:17 2016 Nicolas Constanty
-** Last update	Wed Mar 09 19:41:45 2016 Nicolas Constanty
+** Last update	Fri Mar 11 18:20:54 2016 Adrien WERY
 */
 
 #ifndef IGRAPH_HPP_
 #define IGRAPH_HPP_
 
 # include <stack>
+# include <iostream>
 # include <AComponent.hpp>
 
 class IGraph {
 public:
-  virtual int eventManagment() = 0;
-  virtual void display(std::stack<AComponent> *) = 0;
+  virtual int   eventManagment() = 0;
+  virtual void  display(std::stack<AComponent*>) = 0;
+  virtual void  init(const std::string &name, Vector2 size, std::stack<AComponent*>) = 0;
 };
 
 #endif /* !IGRAPH_HPP_ */
