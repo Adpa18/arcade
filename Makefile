@@ -1,11 +1,12 @@
 SRC_DIR		=	src/
 
-SRC=	$(SRC_DIR)Arcade.cpp				\
-			$(SRC_DIR)Vector2.cpp			\
-			$(SRC_DIR)AGame.cpp				\
-			$(SRC_DIR)AComponent.cpp		\
-			$(SRC_DIR)GameComponent.cpp		\
-			$(SRC_DIR)UIComponent.cpp		\
+SRC			=		$(SRC_DIR)Arcade.cpp			\
+					$(SRC_DIR)Vector2.cpp			\
+					$(SRC_DIR)AGame.cpp				\
+					$(SRC_DIR)AComponent.cpp		\
+					$(SRC_DIR)GameComponent.cpp		\
+					$(SRC_DIR)TextComponent.cpp		\
+					$(SRC_DIR)UIComponent.cpp		\
 
 CC			=	g++ -std=gnu++11
 
@@ -36,7 +37,7 @@ $(NAME)	:	$(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(LFLAGS)
 
 clean	:
-	@echo -e "\033[31mRemoving Objects\033[00m"s
+	@echo -e "\033[31mRemoving Objects\033[00m"
 	@$(RM) $(OBJ)
 	@make clean -s -C $(SRC_DIR)lib
 	@make clean -s -C $(SRC_DIR)games

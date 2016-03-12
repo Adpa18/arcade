@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 01:25:36 2016 Nicolas Constanty
-** Last update	Wed Mar 09 03:34:34 2016 Nicolas Constanty
+** Last update	Fri Mar 11 20:18:45 2016 Adrien WERY
 */
 
 #ifndef GAMES_HPP_

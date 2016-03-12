@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:38:09 2016 Nicolas Constanty
-** Last update	Fri Mar 11 18:28:40 2016 Adrien WERY
+** Last update	Fri Mar 11 20:26:12 2016 Adrien WERY
 */
 
 #ifndef AGAME_HPP_
@@ -14,6 +14,8 @@
 # include <stack>
 # include <iostream>
 # include "AComponent.hpp"
+
+enum keys { ESC = 1, UP, DOWN, LEFT, RIGHT };
 
 class AGame {
 private:
