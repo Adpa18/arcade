@@ -5,13 +5,14 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:55:29 2016 Nicolas Constanty
-** Last update	Tue Mar 15 15:20:14 2016 Adrien WERY
+** Last update	Tue Mar 15 20:48:18 2016 Adrien WERY
 */
 
 #include "GameComponent.hpp"
 
-GameComponent::GameComponent(Vector2 const &p, void *spr3D, std::string const &sprText,
-   std::string const &sprite2D) : AComponent(p)
+GameComponent::GameComponent(Vector2 const &p, Vector2 const &s, ComponentColor color,
+    void *spr3D, std::string const &sprText, std::string const &sprite2D)
+     : AComponent(p, s, color)
 {
   this->spriteText = sprText;
   this->fileSprite2D = sprite2D;

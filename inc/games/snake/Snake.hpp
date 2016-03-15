@@ -5,28 +5,37 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 00:32:51 2016 Nicolas Constanty
-** Last update	Tue Mar 15 15:40:41 2016 Adrien WERY
+** Last update	Tue Mar 15 21:12:55 2016 Adrien WERY
 */
 
 #ifndef SNAKE_HPP_
 #define SNAKE_HPP_
 
+# include <vector>
 # include "AGame.hpp"
 # include "Utils.hpp"
 # include "GameComponent.hpp"
 
-# define STEP 10
+# define WIDTH  1000
+# define HEIGHT 1000
+# define STEP   10
+# define SIZE   3
+
+enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
 class Snake : public AGame {
 private:
+    GameComponent   *old_target;
     GameComponent   *target;
-    GameComponent   *snake;
+    std::vector<GameComponent*> snake;
+    direction       dir;
 public:
     Snake ();
     virtual ~Snake ();
     virtual std::stack<AComponent*>   compute(int key);
     virtual std::stack<AComponent*>   getInfos();
     virtual void                      restart();
+    bool                              check(Vector2 snakePos);
 };
 
 extern "C" AGame *loadGame()

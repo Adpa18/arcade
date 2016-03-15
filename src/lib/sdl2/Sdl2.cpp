@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Fri Mar 11 14:49:21 2016 Nicolas Constanty
-** Last update	Tue Mar 15 16:55:39 2016 Adrien WERY
+** Last update	Tue Mar 15 21:12:34 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -40,9 +40,12 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
-    this->affText(TextComponent(Vector2(10, 10), "Snake", "frenchy", 24, 0xFF00FF00));
+    this->affText(TextComponent(Vector2(10, 10), GREEN, "Snake", "frenchy", 24));
+    SDL_SetRenderDrawColor(this->render, 255, 255, 0, 255);
     this->display(cache);
-    this->old_components= std::stack<AComponent*>();
+    while (!this->old_pos.empty()) {
+        this->old_pos.pop();
+    }
 }
 
 int Sdl2::eventManagment()
@@ -58,26 +61,18 @@ void Sdl2::display(std::stack<AComponent*> components)
 {
     SDL_Rect    rect;
     AComponent  *obj;
+    unsigned int    colorInt;
 
-    SDL_SetRenderDrawColor(this->render, 255, 255, 255, 255);
-    while (!this->old_components.empty()) {
-        obj = this->old_components.top();
-        this->old_components.pop();
-        rect.x = obj->getPos().x;
-        rect.y = obj->getPos().y;
-        rect.w = 10;
-        rect.h = 10;
-        SDL_RenderFillRect(this->render, &rect);
-    }
-    SDL_SetRenderDrawColor(this->render, 255, 0, 0, 255);
     while (!components.empty()) {
         obj = components.top();
-        this->old_components.push(obj);
         components.pop();
         rect.x = obj->getPos().x;
         rect.y = obj->getPos().y;
-        rect.w = 10;
-        rect.h = 10;
+        rect.w = obj->getSize().x;
+        rect.h = obj->getSize().y;
+        this->old_pos.push(rect);
+        colorInt = this->colors[obj->getColor()];
+        SDL_SetRenderDrawColor(this->render, ((colorInt >> 8) & 255), ((colorInt >> 16) & 255), ((colorInt >> 24) & 255), ((colorInt) & 255));
         SDL_RenderFillRect(this->render, &rect);
     }
     SDL_RenderPresent(this->render);
@@ -94,7 +89,7 @@ void    Sdl2::affText(const TextComponent &text)
     int             w = 1;
     int             h = 1;
 
-    colorInt = text.getColor();
+    colorInt = this->colors[text.getColor()];
     color.r = ((colorInt) & 255);
     color.g = ((colorInt >> 8) & 255);
     color.b = ((colorInt >> 16) & 255);

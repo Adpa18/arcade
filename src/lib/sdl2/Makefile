@@ -14,7 +14,7 @@ CC			=	g++ -std=gnu++11
 
 RM			=	rm -rf
 
-NAME		=	$(BASE)lib/lib_arcade_sld2.so
+NAME		=	$(BASE)lib/lib_arcade_sdl2.so
 
 CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w -g
 

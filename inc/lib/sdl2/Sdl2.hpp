@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Tue Mar 15 15:50:49 2016 Adrien WERY
+** Last update	Tue Mar 15 19:32:09 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
@@ -26,12 +26,22 @@ class Sdl2 : public IGraph {
 private:
     SDL_Window      *win;
     SDL_Renderer    *render;
-    std::stack<AComponent*> old_components;
+    std::stack<SDL_Rect> old_pos;
     // std::map<std::string, TTF_Font*> fonts;
     std::map<std::string, SDL_Texture*> tex;
     std::map<SDL_Keycode, int>    keyMap = {
         {SDLK_ESCAPE, ESC},
         {SDLK_UP, UP}, {SDLK_DOWN, DOWN}, {SDLK_LEFT, LEFT}, {SDLK_RIGHT, RIGHT}
+    };
+    std::map<ComponentColor, int>    colors = {
+        {BLACK, 0x000000},
+        {RED, 0xFF0000},
+        {GREEN, 0x00FF00},
+        {BLUE, 0x0000FF},
+        {YELLOW, 0xFFFF00},
+        {MAGENTA, 0xFF00FF},
+        {CYAN, 0x00FFFF},
+        {WHITE, 0xFFFFFF}
     };
 public:
     Sdl2 (void);
@@ -41,7 +51,6 @@ public:
     virtual void    display(std::stack<AComponent*>);
     virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
     void            affText(const TextComponent &text);
-
 };
 
 extern "C" IGraph *loadLib()

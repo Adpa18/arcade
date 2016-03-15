@@ -5,15 +5,18 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 15 15:34:23 2016 Adrien WERY
+** Last update	Tue Mar 15 20:47:30 2016 Adrien WERY
 */
 
 #include "AComponent.hpp"
 
-AComponent::AComponent(Vector2 const &p) : pos(p)
+AComponent::AComponent(Vector2 const &p, ComponentColor color) : pos(p), size(Vector2(0, 0)), color(color)
 {}
 
-AComponent::AComponent(int x, int y) : pos(Vector2(x, y))
+AComponent::AComponent(Vector2 const &p, Vector2 const &s, ComponentColor color) : pos(p), size(s), color(color)
+{}
+
+AComponent::AComponent(int x, int y, ComponentColor color) : pos(Vector2(x, y)), size(Vector2(0, 0)), color(color)
 {}
 
 AComponent::~AComponent ()
@@ -27,4 +30,24 @@ Vector2 const &AComponent::getPos() const
 void            AComponent::setPos(const Vector2 &pos)
 {
     this->pos = pos;
+}
+
+Vector2 const &AComponent::getSize() const
+{
+  return (this->size);
+}
+
+void            AComponent::setSize(const Vector2 &size)
+{
+    this->size = size;
+}
+
+ComponentColor const   &AComponent::getColor() const
+{
+    return this->color;
+}
+
+void            AComponent::setColor(const ComponentColor color)
+{
+    this->color = color;
 }
