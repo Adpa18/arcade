@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Fri Mar 11 14:49:21 2016 Nicolas Constanty
-** Last update	Sat Mar 12 13:26:46 2016 Adrien WERY
+** Last update	Tue Mar 15 16:55:39 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -16,17 +16,19 @@ Sdl2::Sdl2 (void)
     std::cout << "StartInit => Lib Sdl2" << std::endl;
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
         throw std::runtime_error(std::string("Can't init SDL") + SDL_GetError());
-    // if (TTF_Init() == -1)
-    //     throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
+    if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1)
+        throw std::runtime_error(std::string("Can't init IMG") + SDL_GetError());
+    if (TTF_Init() == -1)
+        throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
 }
 
 Sdl2::~Sdl2 ()
 {
     SDL_DestroyWindow(this->win);
     SDL_DestroyRenderer(this->render);
-    for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
-        TTF_CloseFont(it->second);
-    }
+    // for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
+    //     TTF_CloseFont(it->second);
+    // }
     TTF_Quit();
     SDL_Quit();
 }
@@ -38,6 +40,9 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
+    this->affText(TextComponent(Vector2(10, 10), "Snake", "frenchy", 24, 0xFF00FF00));
+    this->display(cache);
+    this->old_components= std::stack<AComponent*>();
 }
 
 int Sdl2::eventManagment()
@@ -49,16 +54,32 @@ int Sdl2::eventManagment()
     return (this->keyMap[event.key.keysym.sym]);
 }
 
-void Sdl2::display(std::stack<AComponent*>)
+void Sdl2::display(std::stack<AComponent*> components)
 {
     SDL_Rect    rect;
+    AComponent  *obj;
 
-    rect.x = 10;
-    rect.y = 10;
-    rect.w = 100;
-    rect.h = 100;
+    SDL_SetRenderDrawColor(this->render, 255, 255, 255, 255);
+    while (!this->old_components.empty()) {
+        obj = this->old_components.top();
+        this->old_components.pop();
+        rect.x = obj->getPos().x;
+        rect.y = obj->getPos().y;
+        rect.w = 10;
+        rect.h = 10;
+        SDL_RenderFillRect(this->render, &rect);
+    }
     SDL_SetRenderDrawColor(this->render, 255, 0, 0, 255);
-    SDL_RenderFillRect(this->render, &rect);
+    while (!components.empty()) {
+        obj = components.top();
+        this->old_components.push(obj);
+        components.pop();
+        rect.x = obj->getPos().x;
+        rect.y = obj->getPos().y;
+        rect.w = 10;
+        rect.h = 10;
+        SDL_RenderFillRect(this->render, &rect);
+    }
     SDL_RenderPresent(this->render);
 }
 
@@ -68,6 +89,10 @@ void    Sdl2::affText(const TextComponent &text)
     unsigned int    colorInt;
     SDL_Color       color;
     SDL_Surface*    surface;
+    SDL_Texture     *texture;
+    SDL_Rect        rec;
+    int             w = 1;
+    int             h = 1;
 
     colorInt = text.getColor();
     color.r = ((colorInt) & 255);
@@ -75,9 +100,24 @@ void    Sdl2::affText(const TextComponent &text)
     color.b = ((colorInt >> 16) & 255);
     color.a = ((colorInt >> 24) & 255);
     fontName = text.getFontName();
-    if (this->fonts[fontName] == 0)
-        this->fonts.insert(std::pair<std::string, TTF_Font*>(fontName,
-                TTF_OpenFont(fontName.c_str(), text.getFontSize())));
-    surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
+    // if (this->fonts[fontName] == 0) {
+    //     this->fonts.insert(std::pair<std::string, TTF_Font*>(fontName,
+    //         TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(),
+    //         text.getFontSize())));
+    // }
+    // surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
+    surface = TTF_RenderText_Blended(TTF_OpenFont(
+            std::string("./assets/fonts/" + fontName + ".ttf").c_str(),
+            text.getFontSize()), text.getText().c_str(), color);
+    texture = SDL_CreateTextureFromSurface(this->render, surface);
+    SDL_FreeSurface(surface);
+    rec.x = text.getPos().x;
+    rec.y = text.getPos().y;
+    w = h = 1;
+    SDL_QueryTexture(texture, NULL, NULL, &w, &h);
+    rec.w = w;
+    rec.h = h;
+    SDL_RenderCopy(this->render, texture, NULL, &rec);
+    SDL_DestroyTexture(texture);
     // SDL_BlitSurface(surface, NULL, ecran, &position)
 }

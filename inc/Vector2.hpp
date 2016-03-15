@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:07:00 2016 Nicolas Constanty
-** Last update	Wed Mar 09 04:30:49 2016 Nicolas Constanty
+** Last update	Tue Mar 15 15:12:01 2016 Adrien WERY
 */
 
 #ifndef VECTOR2_HPP_

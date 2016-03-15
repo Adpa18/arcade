@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Wed Mar 09 15:36:17 2016 Nicolas Constanty
+** Last update	Tue Mar 15 15:43:06 2016 Adrien WERY
 */
 
 #ifndef ACOMPONENT_HPP_
@@ -15,12 +15,13 @@
 
 class AComponent {
 private:
-  Vector2	pos;
+    Vector2	pos;
 public:
-  AComponent(Vector2 pos);
-  AComponent(int x, int y);
-  virtual ~AComponent ();
-  Vector2 const &getPos() const;
+    AComponent(Vector2 const &pos);
+    AComponent(int x, int y);
+    virtual ~AComponent ();
+    Vector2 const   &getPos() const;
+    void            setPos(const Vector2 &pos);
 };
 
 #endif /* !ACOMPONENT_HPP_ */

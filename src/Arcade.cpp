@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Fri Mar 11 21:14:10 2016 Adrien WERY
+** Last update	Tue Mar 15 15:30:05 2016 Adrien WERY
 */
 
 #include "Arcade.hpp"
@@ -84,8 +84,6 @@ int	main(int ac, char **av)
     GameLoop:
         if ((key = graph->eventManagment()) == ESC)
             return (0);
-        if (key != -1)
-            printf("%d\n", key);
         graph->display(game->compute(key));
         std::this_thread::sleep_for(interval);
         goto GameLoop;

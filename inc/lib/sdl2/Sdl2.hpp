@@ -5,13 +5,14 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Fri Mar 11 21:16:00 2016 Adrien WERY
+** Last update	Tue Mar 15 15:50:49 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
 # define SDL2_HPP_
 
 # include <SDL2/SDL.h>
+# include <SDL2/SDL_image.h>
 # include <SDL2/SDL_ttf.h>
 # include <exception>
 # include <stack>
@@ -25,7 +26,9 @@ class Sdl2 : public IGraph {
 private:
     SDL_Window      *win;
     SDL_Renderer    *render;
-    std::map<std::string, TTF_Font*> fonts;
+    std::stack<AComponent*> old_components;
+    // std::map<std::string, TTF_Font*> fonts;
+    std::map<std::string, SDL_Texture*> tex;
     std::map<SDL_Keycode, int>    keyMap = {
         {SDLK_ESCAPE, ESC},
         {SDLK_UP, UP}, {SDLK_DOWN, DOWN}, {SDLK_LEFT, LEFT}, {SDLK_RIGHT, RIGHT}

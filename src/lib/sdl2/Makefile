@@ -1,9 +1,13 @@
 BASE		=   ../../../
 
 SRC			=	Sdl2.cpp	\
-				$(BASE)src/Vector2.cpp
 
-DEP_SRC		=	$(BASE)src/Vector2.cpp
+DEP_SRC		=	$(BASE)src/AComponent.cpp		\
+				$(BASE)src/AGame.cpp			\
+				$(BASE)src/GameComponent.cpp	\
+				$(BASE)src/TextComponent.cpp	\
+				$(BASE)src/UIComponent.cpp		\
+				$(BASE)src/Vector2.cpp			\
 
 
 CC			=	g++ -std=gnu++11
@@ -12,13 +16,13 @@ RM			=	rm -rf
 
 NAME		=	$(BASE)lib/lib_arcade_sld2.so
 
-CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w -g
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/sdl2/ -I$(BASE)inc/
 
 CPPFLAGS	+= -D_REENTRANT
 
-LIBS 		=	-lSDL2 -lpthread
+LIBS 		=	-lSDL2 -lSDL2_image -lSDL2_ttf -lpthread
 
 LDFLAGS		=	-shared
 
