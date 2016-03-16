@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 15 20:46:46 2016 Adrien WERY
+** Last update	Wed Mar 16 10:33:47 2016 Adrien WERY
 */
 
 #ifndef ACOMPONENT_HPP_

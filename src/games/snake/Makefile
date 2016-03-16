@@ -19,7 +19,7 @@ CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -g
 
 CPPFLAGS	+= 	-I$(BASE)inc/games/snake/ -I$(BASE)inc/
 
-LDFLAGS		=	-shared
+LDFLAGS		=	-shared -z defs
 
 OBJ			=	$(SRC:%cpp=%o)
 

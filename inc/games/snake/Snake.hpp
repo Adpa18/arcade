@@ -4,8 +4,8 @@
 ** Made by	Nicolas Constanty
 ** Login	consta_n
 **
-** Started on	Wed Mar 09 00:32:51 2016 Nicolas Constanty
-** Last update	Wed Mar 16 08:24:11 2016 Nicolas Constanty
+** Started on	Wed Mar 16 21:33:57 2016 Nicolas Constanty
+** Last update	Wed Mar 16 21:33:59 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -18,8 +18,8 @@
 
 # define WIDTH  1000
 # define HEIGHT 1000
-# define STEP   10
-# define SIZE   3
+# define STEP   20
+# define SIZE   10
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
@@ -32,10 +32,12 @@ private:
 public:
     Snake ();
     virtual ~Snake ();
-    virtual std::stack<AComponent*>   compute(int key);
-    virtual std::stack<AComponent*>   getInfos();
-    virtual void                      restart();
-    bool                              check(Vector2 snakePos);
+    virtual std::stack<AComponent*> compute(int key);
+    virtual std::stack<AComponent*> getInfos();
+    virtual void                    restart();
+    bool                            check(Vector2 snakePos);
+    const   std::string             getImg(size_t pos);
+
 };
 
 extern "C" AGame *loadGame()
