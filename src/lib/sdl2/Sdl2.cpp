@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
-** Last update	Wed Mar 16 22:04:37 2016 Adrien WERY
+** Last update	Wed Mar 16 23:12:24 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -38,13 +38,25 @@ Sdl2::~Sdl2 ()
 
 void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
 {
+    SDL_Rect        rect;
+
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_UNDEFINED,
-        SDL_WINDOWPOS_UNDEFINED, size.x, size.y, SDL_WINDOW_SHOWN)))
+        SDL_WINDOWPOS_UNDEFINED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
-    SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
-    SDL_RenderClear(this->render);
+    // SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
+    // SDL_RenderClear(this->render);
+    this->tex["snakeBackground1.jpg"] = IMG_LoadTexture(this->render, "./assets/sprites2D/snakeBackground1.jpg");
+    for (size_t i = 0; i <size.y; i++) {
+        for (size_t j = 0; j < size.x; j++) {
+            rect.x = j * STEP;
+            rect.y = i * STEP;
+            rect.w = STEP;
+            rect.h = STEP;
+            SDL_RenderCopy(this->render, this->tex["snakeBackground1.jpg"], NULL, &rect);
+        }
+    }
     this->display(cache);
 }
 
@@ -68,16 +80,17 @@ void Sdl2::display(std::stack<AComponent*> components)
     while (!components.empty()) {
         obj = components.top();
         components.pop();
-        rect.x = obj->getPos().x;
-        rect.y = obj->getPos().y;
-        rect.w = obj->getSize().x;
-        rect.h = obj->getSize().y;
+        rect.x = obj->getPos().x * STEP;
+        rect.y = obj->getPos().y * STEP;
+        rect.w = obj->getSize().x * STEP;
+        rect.h = obj->getSize().y * STEP;
         if ((Gobj = dynamic_cast<GameComponent*>(obj)) && !Gobj->getSprite2D().empty()) {
             if (this->tex[Gobj->getSprite2D()] == 0) {
                 this->tex[Gobj->getSprite2D()] = IMG_LoadTexture(this->render, std::string("./assets/sprites2D/" + Gobj->getSprite2D()).c_str());
             }
-            SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
-            SDL_RenderFillRect(this->render, &rect);
+            // SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
+            // SDL_RenderFillRect(this->render, &rect);
+            SDL_RenderCopy(this->render, this->tex["snakeBackground1.jpg"], NULL, &rect);
             SDL_RenderCopy(this->render, this->tex[Gobj->getSprite2D()], NULL, &rect);
         } else if ((Tobj = dynamic_cast<TextComponent*>(obj))) {
             this->affText(*Tobj);
@@ -113,8 +126,8 @@ void    Sdl2::affText(const TextComponent &text)
     surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
     texture = SDL_CreateTextureFromSurface(this->render, surface);
     SDL_FreeSurface(surface);
-    rect.x = text.getPos().x;
-    rect.y = text.getPos().y;
+    rect.x = text.getPos().x * STEP;
+    rect.y = text.getPos().y * STEP;
     w = h = 1;
     SDL_QueryTexture(texture, NULL, NULL, &w, &h);
     rect.w = w;

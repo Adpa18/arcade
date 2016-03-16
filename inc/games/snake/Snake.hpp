@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Wed Mar 16 22:07:05 2016 Adrien WERY
+** Last update	Wed Mar 16 23:10:07 2016 Adrien WERY
 */
 
 #ifndef SNAKE_HPP_
@@ -17,9 +17,9 @@
 # include "GameComponent.hpp"
 # include "TextComponent.hpp"
 
-# define WIDTH  1000
-# define HEIGHT 1000
-# define STEP   40
+# define WIDTH  50
+# define HEIGHT 30
+# define STEP   1
 # define SIZE   3
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };

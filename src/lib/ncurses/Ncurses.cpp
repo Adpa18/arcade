@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Wed Mar 16 22:11:54 2016 Adrien WERY
+** Last update	Wed Mar 16 22:20:30 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -135,7 +135,7 @@ void Ncurses::display(std::stack<AComponent*> components)
             wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
             wattr_on(this->wind->getWind(), A_REVERSE, NULL);
             mvwaddch(this->wind->getWind(),
-            Gobj->getPos().y / 40, Gobj->getPos().x / 40, Gobj->getSpriteText());
+            Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText());
             wattr_off(this->wind->getWind(), A_REVERSE, NULL);
             wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
         }

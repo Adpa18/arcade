@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Wed Mar 16 13:04:22 2016 Adrien WERY
+** Last update	Wed Mar 16 23:12:22 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
@@ -22,6 +22,8 @@
 # include "AGame.hpp"
 # include "GameComponent.hpp"
 # include "TextComponent.hpp"
+
+# define STEP 30
 
 class Sdl2 : public IGraph {
 private:

@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Wed Mar 16 22:10:45 2016 Adrien WERY
+** Last update	Wed Mar 16 23:09:55 2016 Adrien WERY
 */
 
 #include "Snake.hpp"
@@ -14,8 +14,8 @@ Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
 {
     Vector2 pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
     this->target = new GameComponent(pos, Vector2(STEP, STEP), YELLOW, ' ', "snakeApple.png", NULL);
-    this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, ' ', "", NULL);
-    this->scoreText = new TextComponent(Vector2(10, 10), GREEN, "", "frenchy", 60);
+    this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, ' ', "snakeBackground1.jpg", NULL);
+    this->scoreText = new TextComponent(Vector2(1, 1), GREEN, "", "frenchy", 60);
     this->restart();
 }
 
@@ -120,7 +120,7 @@ std::stack<AComponent*>     Snake::compute(int key)
         components.push(this->old_target);
         for (size_t i = 0; i < this->snake.size(); i++) {
             this->snake[i]->setColor(BLACK);
-            this->snake[i]->setSprite2D("");
+            this->snake[i]->setSprite2D("snakeBackground1.jpg");
             components.push(this->snake[i]);
         }
         this->restart();
@@ -136,7 +136,7 @@ std::stack<AComponent*>     Snake::compute(int key)
         this->scoreText->setText("Score : " + std::to_string(this->score));
     } else {
         this->snake.back()->setColor(BLACK);
-        this->snake.back()->setSprite2D("");
+        this->snake.back()->setSprite2D("snakeBackground1.jpg");
         components.push(this->snake.back());
         this->snake.pop_back();
     }
