@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Tue Mar 15 21:12:44 2016 Adrien WERY
+** Last update	Wed Mar 16 12:30:13 2016 Adrien WERY
 */
 
 #include "Arcade.hpp"
@@ -51,10 +51,10 @@ void	*arcade::Arcade::initSo(std::string const &name, SOTYPE type)
     {
         myso = dlopen(std::string("./" +
         ((type == GAME)?std::string("games"):std::string("lib")) +
-        "/lib_arcade_" + name + ".so").c_str(), RTLD_LAZY | RTLD_GLOBAL);
+        "/lib_arcade_" + name + ".so").c_str(), RTLD_NOW | RTLD_GLOBAL);
     }
     else
-        myso = dlopen(name.c_str(), RTLD_LAZY | RTLD_GLOBAL);
+        myso = dlopen(name.c_str(), RTLD_NOW | RTLD_GLOBAL);
     if (!myso)
         ERROR("Cannot open library: " << dlerror(), NULL);
     symbol = (type == GAME) ? "loadGame" : "loadLib";
@@ -79,7 +79,7 @@ int	main(int ac, char **av)
         return (1);
     if (!(game = (AGame *)arcade->initSo("snake", GAME)))
         return (1);
-    std::chrono::milliseconds interval(30);
+    std::chrono::milliseconds interval(60);
     graph->init(game->getName(), game->getSize(), game->getInfos());
     GameLoop:
         if ((key = graph->eventManagment()) == ESC)

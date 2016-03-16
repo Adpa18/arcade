@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Fri Mar 11 14:49:21 2016 Nicolas Constanty
-** Last update	Tue Mar 15 21:12:34 2016 Adrien WERY
+** Last update	Wed Mar 16 12:39:52 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -29,6 +29,9 @@ Sdl2::~Sdl2 ()
     // for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
     //     TTF_CloseFont(it->second);
     // }
+    for (std::map<std::string, SDL_Texture*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
+        SDL_DestroyTexture(it->second);
+    }
     TTF_Quit();
     SDL_Quit();
 }
@@ -43,9 +46,6 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
     this->affText(TextComponent(Vector2(10, 10), GREEN, "Snake", "frenchy", 24));
     SDL_SetRenderDrawColor(this->render, 255, 255, 0, 255);
     this->display(cache);
-    while (!this->old_pos.empty()) {
-        this->old_pos.pop();
-    }
 }
 
 int Sdl2::eventManagment()
@@ -59,8 +59,9 @@ int Sdl2::eventManagment()
 
 void Sdl2::display(std::stack<AComponent*> components)
 {
-    SDL_Rect    rect;
-    AComponent  *obj;
+    SDL_Rect        rect;
+    AComponent      *obj;
+    GameComponent   *Gobj;
     unsigned int    colorInt;
 
     while (!components.empty()) {
@@ -70,10 +71,18 @@ void Sdl2::display(std::stack<AComponent*> components)
         rect.y = obj->getPos().y;
         rect.w = obj->getSize().x;
         rect.h = obj->getSize().y;
-        this->old_pos.push(rect);
-        colorInt = this->colors[obj->getColor()];
-        SDL_SetRenderDrawColor(this->render, ((colorInt >> 8) & 255), ((colorInt >> 16) & 255), ((colorInt >> 24) & 255), ((colorInt) & 255));
-        SDL_RenderFillRect(this->render, &rect);
+        if ((Gobj = dynamic_cast<GameComponent*>(obj)) && !Gobj->getSprite2D().empty()) {
+            if (this->tex[Gobj->getSprite2D()] == 0) {
+                this->tex[Gobj->getSprite2D()] = IMG_LoadTexture(this->render, std::string("./assets/sprites2D/" + Gobj->getSprite2D()).c_str());
+            }
+            SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
+            SDL_RenderFillRect(this->render, &rect);
+            SDL_RenderCopy(this->render, this->tex[Gobj->getSprite2D()], NULL, &rect);
+        } else {
+            colorInt = this->colors[obj->getColor()];
+            SDL_SetRenderDrawColor(this->render, ((colorInt >> 16) & 255), ((colorInt >> 8) & 255), ((colorInt) & 255), ((colorInt >> 24) & 255));
+            SDL_RenderFillRect(this->render, &rect);
+        }
     }
     SDL_RenderPresent(this->render);
 }

@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 15 20:47:30 2016 Adrien WERY
+** Last update	Wed Mar 16 10:34:05 2016 Adrien WERY
 */
 
 #include "AComponent.hpp"
@@ -32,10 +32,10 @@ void            AComponent::setPos(const Vector2 &pos)
     this->pos = pos;
 }
 
-Vector2 const &AComponent::getSize() const
+Vector2 const   &AComponent::getSize() const
 {
   return (this->size);
-}
+};
 
 void            AComponent::setSize(const Vector2 &size)
 {

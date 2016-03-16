@@ -2,12 +2,12 @@ BASE		=   ../../../
 
 SRC			=	Sdl2.cpp	\
 
-DEP_SRC		=	$(BASE)src/AComponent.cpp		\
+DEP_SRC		=	$(BASE)src/Vector2.cpp			\
+				$(BASE)src/AComponent.cpp		\
 				$(BASE)src/AGame.cpp			\
 				$(BASE)src/GameComponent.cpp	\
 				$(BASE)src/TextComponent.cpp	\
 				$(BASE)src/UIComponent.cpp		\
-				$(BASE)src/Vector2.cpp			\
 
 
 CC			=	g++ -std=gnu++11
@@ -24,7 +24,7 @@ CPPFLAGS	+= -D_REENTRANT
 
 LIBS 		=	-lSDL2 -lSDL2_image -lSDL2_ttf -lpthread
 
-LDFLAGS		=	-shared
+LDFLAGS		=	-shared -z defs
 
 OBJDIR		=	$(BASE)obj
 
@@ -38,8 +38,8 @@ DEP			=	$(DEP_SRC:%cpp=%o)
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJ)
-	@$(CC) $(LDFLAGS) $(OBJ) -o $(NAME) $(LIBS)
+$(NAME)	:	$(OBJ) $(DEP)
+	@$(CC) $(LDFLAGS) $(OBJ) $(DEP) -o $(NAME) $(LIBS)
 	@echo -e "\033[33mlib_arcade_sdl2.so Compiled\033[00m"
 
 clean	:
