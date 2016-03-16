@@ -1,11 +1,11 @@
 /*
 ** Sdl2.cpp for cpp_arcade
 **
-** Made by	Nicolas Constanty
-** Login	consta_n
+** Made by	Adrien WERY
+** Login	wery_a
 **
-** Started on	Fri Mar 11 14:49:21 2016 Nicolas Constanty
-** Last update	Wed Mar 16 21:31:14 2016 Nicolas Constanty
+** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
+** Last update	Wed Mar 16 22:04:37 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -43,8 +43,8 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
-    this->affText(TextComponent(Vector2(10, 10), GREEN, "Snake", "frenchy", 24));
-    SDL_SetRenderDrawColor(this->render, 255, 255, 0, 255);
+    SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
+    SDL_RenderClear(this->render);
     this->display(cache);
 }
 
@@ -62,6 +62,7 @@ void Sdl2::display(std::stack<AComponent*> components)
     SDL_Rect        rect;
     AComponent      *obj;
     GameComponent   *Gobj;
+    TextComponent   *Tobj;
     unsigned int    colorInt;
 
     while (!components.empty()) {
@@ -78,6 +79,8 @@ void Sdl2::display(std::stack<AComponent*> components)
             SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
             SDL_RenderFillRect(this->render, &rect);
             SDL_RenderCopy(this->render, this->tex[Gobj->getSprite2D()], NULL, &rect);
+        } else if ((Tobj = dynamic_cast<TextComponent*>(obj))) {
+            this->affText(*Tobj);
         } else {
             colorInt = this->colors[obj->getColor()];
             SDL_SetRenderDrawColor(this->render, ((colorInt >> 16) & 255), ((colorInt >> 8) & 255), ((colorInt) & 255), ((colorInt >> 24) & 255));
@@ -94,7 +97,7 @@ void    Sdl2::affText(const TextComponent &text)
     SDL_Color       color;
     SDL_Surface*    surface;
     SDL_Texture     *texture;
-    SDL_Rect        rec;
+    SDL_Rect        rect;
     int             w = 1;
     int             h = 1;
 
@@ -104,24 +107,18 @@ void    Sdl2::affText(const TextComponent &text)
     color.b = ((colorInt >> 16) & 255);
     color.a = ((colorInt >> 24) & 255);
     fontName = text.getFontName();
-    // if (this->fonts[fontName] == 0) {
-    //     this->fonts.insert(std::pair<std::string, TTF_Font*>(fontName,
-    //         TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(),
-    //         text.getFontSize())));
-    // }
-    // surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
-    surface = TTF_RenderText_Blended(TTF_OpenFont(
-            std::string("./assets/fonts/" + fontName + ".ttf").c_str(),
-            text.getFontSize()), text.getText().c_str(), color);
+    if (this->fonts[fontName] == 0) {
+        this->fonts[fontName] = TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(), text.getFontSize());
+    }
+    surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
     texture = SDL_CreateTextureFromSurface(this->render, surface);
     SDL_FreeSurface(surface);
-    rec.x = text.getPos().x;
-    rec.y = text.getPos().y;
+    rect.x = text.getPos().x;
+    rect.y = text.getPos().y;
     w = h = 1;
     SDL_QueryTexture(texture, NULL, NULL, &w, &h);
-    rec.w = w;
-    rec.h = h;
-    SDL_RenderCopy(this->render, texture, NULL, &rec);
+    rect.w = w;
+    rect.h = h;
+    SDL_RenderCopy(this->render, texture, NULL, &rect);
     SDL_DestroyTexture(texture);
-    // SDL_BlitSurface(surface, NULL, ecran, &position)
 }

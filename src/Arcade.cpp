@@ -1,11 +1,11 @@
 /*
 ** Arcade.cpp for cpp_arcade
 **
-** Made by	Nicolas Constanty
-** Login	consta_n
+** Made by	Adrien WERY
+** Login	wery_a
 **
-** Started on	Wed Mar 16 21:34:07 2016 Nicolas Constanty
-** Last update	Wed Mar 16 21:34:09 2016 Nicolas Constanty
+** Started on	Wed Mar 16 21:49:22 2016 Adrien WERY
+** Last update	Wed Mar 16 21:49:23 2016 Adrien WERY
 */
 
 #include "Arcade.hpp"

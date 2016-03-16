@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 15 19:28:21 2016 Adrien WERY
+** Last update	Wed Mar 16 13:52:43 2016 Adrien WERY
 */
 
 #ifndef TEXTCOMPONENT_HPP_
@@ -29,6 +29,9 @@ public:
     const std::string   &getText() const;
     const std::string   &getFontName() const;
     unsigned int        getFontSize() const;
+    void                setText(const std::string &text);
+    void                setFontName(const std::string &fontName);
+    void                setFontSize(unsigned int fontSize);
 };
 
 #endif /* !TEXTCOMPONENT_HPP_ */

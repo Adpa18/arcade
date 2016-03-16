@@ -1,11 +1,11 @@
 /*
 ** Snake.hpp for cpp_arcade
 **
-** Made by	Nicolas Constanty
-** Login	consta_n
+** Made by	Adrien WERY
+** Login	wery_a
 **
-** Started on	Wed Mar 16 21:33:57 2016 Nicolas Constanty
-** Last update	Wed Mar 16 21:33:59 2016 Nicolas Constanty
+** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
+** Last update	Wed Mar 16 22:07:05 2016 Adrien WERY
 */
 
 #ifndef SNAKE_HPP_
@@ -15,18 +15,21 @@
 # include "AGame.hpp"
 # include "Utils.hpp"
 # include "GameComponent.hpp"
+# include "TextComponent.hpp"
 
 # define WIDTH  1000
 # define HEIGHT 1000
-# define STEP   20
-# define SIZE   10
+# define STEP   40
+# define SIZE   3
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
 class Snake : public AGame {
 private:
-    GameComponent   *old_target;
+    AComponent      *old_target;
     GameComponent   *target;
+    TextComponent   *scoreText;
+    size_t          score;
     std::vector<GameComponent*> snake;
     direction       dir;
 public:

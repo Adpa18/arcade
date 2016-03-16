@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Wed Mar 16 11:17:35 2016 Adrien WERY
+** Last update	Wed Mar 16 13:04:22 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
@@ -27,7 +27,7 @@ class Sdl2 : public IGraph {
 private:
     SDL_Window      *win;
     SDL_Renderer    *render;
-    // std::map<std::string, TTF_Font*> fonts;
+    std::map<std::string, TTF_Font*> fonts;
     std::map<std::string, SDL_Texture*> tex;
     std::map<SDL_Keycode, int>    keyMap = {
         {SDLK_ESCAPE, ESC},

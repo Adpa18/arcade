@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Tue Mar 15 19:28:22 2016 Adrien WERY
+** Last update	Wed Mar 16 13:52:44 2016 Adrien WERY
 */
 
 #include "TextComponent.hpp"
@@ -37,4 +37,19 @@ const std::string   &TextComponent::getFontName() const
 unsigned int        TextComponent::getFontSize() const
 {
     return (this->fontSize);
+}
+
+void                TextComponent::setText(const std::string &text)
+{
+    this->text = text;
+}
+
+void                TextComponent::setFontName(const std::string &fontName)
+{
+    this->fontName = fontName;
+}
+
+void                TextComponent::setFontSize(unsigned int fontSize)
+{
+    this->fontSize = fontSize;
 }
