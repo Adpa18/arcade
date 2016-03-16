@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Fri Mar 11 18:23:23 2016 Adrien WERY
+** Last update	Wed Mar 16 21:05:02 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -26,9 +26,14 @@ Ncurses::Ncurses (void)
   curs_set(0);
   noecho();
   halfdelay(1);
-  init_pair(1, COLOR_GREEN, COLOR_BLACK);
-  init_pair(2, COLOR_BLUE, COLOR_MAGENTA);
-  init_pair(3, COLOR_BLACK, COLOR_BLACK);
+  init_pair(1, COLOR_BLACK, COLOR_BLACK);
+  init_pair(2, COLOR_RED, COLOR_BLACK);
+  init_pair(3, COLOR_GREEN, COLOR_BLACK);
+  init_pair(4, COLOR_BLUE, COLOR_BLACK);
+  init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+  init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
+  init_pair(7, COLOR_CYAN, COLOR_BLACK);
+  init_pair(8, COLOR_WHITE, COLOR_BLACK);
 
   refresh();
   Vector2 size(width, height);
@@ -49,7 +54,7 @@ Ncurses::~Ncurses ()
 
 void	Ncurses::initMainWindow()
 {
-  wbkgd(this->wind->getWind(), COLOR_PAIR(1));
+  wbkgd(this->wind->getWind(), COLOR_PAIR(3));
   wattr_on(this->wind->getWind(), A_REVERSE, NULL);
   wborder(this->wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
   wattr_off(this->wind->getWind(), A_REVERSE, NULL);
@@ -113,11 +118,43 @@ int Ncurses::eventManagment()
   return (key);
 }
 
-void Ncurses::display(std::stack<AComponent*>)
+void Ncurses::display(std::stack<AComponent*> components)
 {
-  // Object2D *obj = static_cast<Object2D *>(objects.top());
-  // Vector2 vec = obj->getCoord<Vector2>();
-  // std::cout << "x = " << vec.x << " y = " << vec.y << std::endl;
+  // (void)components;
+  if (this->valid_size == false)
+    return;
+  while (!components.empty())
+  {
+    GameComponent *object = dynamic_cast<GameComponent *>(components.top());
+    if (object)
+    {
+      // printf("%d\n", this->wind->getPos().x + object->getPos().x);
+      // if (object->getSpriteText() != ' ')
+      // {
+        wattron(this->wind->getWind(), COLOR_PAIR(object->getColor() + 1));
+        wattr_on(this->wind->getWind(), A_REVERSE, NULL);
+        mvwaddch(this->wind->getWind(),
+        object->getPos().y,
+        object->getPos().x,
+        object->getSpriteText());
+        wattr_off(this->wind->getWind(), A_REVERSE, NULL);
+        wattroff(this->wind->getWind(), COLOR_PAIR(object->getColor() + 1));
+      // }
+      // else
+      // {
+      //   attron(COLOR_PAIR(object->getColor() + 1));
+      //   mvwaddch(this->wind->getWind(),
+      //   this->wind->getPos().x + object->getPos().x,
+      //   this->wind->getPos().y + object->getPos().y,
+      //   object->getSpriteText());
+      //   attron(COLOR_PAIR(object->getColor() + 1));
+      // }
+      components.pop();
+    }
+    else
+      components.pop();
+  }
+  wrefresh(this->wind->getWind());
 }
 
 void  Ncurses::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)

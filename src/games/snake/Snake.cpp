@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 00:40:10 2016 Nicolas Constanty
-** Last update	Tue Mar 15 21:13:00 2016 Adrien WERY
+** Last update	Wed Mar 16 08:13:58 2016 Nicolas Constanty
 */
 
 #include "Snake.hpp"
@@ -14,8 +14,8 @@ Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
 {
     Vector2 pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
 
-    this->target = new GameComponent(pos, Vector2(STEP, STEP), YELLOW, NULL, std::string(), std::string());
-    this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, NULL, std::string(), std::string());
+    this->target = new GameComponent(pos, Vector2(STEP, STEP), YELLOW, NULL, ' ', std::string());
+    this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, NULL, ' ', std::string());
     this->restart();
 }
 
@@ -71,7 +71,7 @@ std::stack<AComponent*>     Snake::compute(int key)
         components.push(this->target);
         return (components);
     }
-    this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2(STEP, STEP), CYAN, NULL, std::string(), std::string()));
+    this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2(STEP, STEP), CYAN, NULL, ' ', std::string()));
     for (size_t i = 0; i < this->snake.size(); i++) {
         components.push(this->snake[i]);
     }
@@ -98,7 +98,7 @@ void                        Snake::restart()
     this->dir = DIR_UP;
     this->snake.erase(this->snake.begin(), this->snake.end());
     for (size_t i = 0; i < SIZE; i++) {
-        this->snake.push_back(new GameComponent(Vector2(WIDTH / 2 , HEIGHT / 2), Vector2(STEP, STEP), CYAN, NULL, std::string(), std::string()));
+        this->snake.push_back(new GameComponent(Vector2(WIDTH / 2 , HEIGHT / 2), Vector2(STEP, STEP), CYAN, NULL, ' ', std::string()));
     }
     this->target->setPos(Vector2(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
 }

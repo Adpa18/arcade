@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:47:17 2016 Nicolas Constanty
-** Last update	Fri Mar 11 18:20:54 2016 Adrien WERY
+** Last update	Wed Mar 16 07:19:48 2016 Nicolas Constanty
 */
 
 #ifndef IGRAPH_HPP_

@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 00:32:51 2016 Nicolas Constanty
-** Last update	Tue Mar 15 21:12:55 2016 Adrien WERY
+** Last update	Wed Mar 16 08:24:11 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_

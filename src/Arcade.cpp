@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:28:59 2016 Nicolas Constanty
-** Last update	Tue Mar 15 21:12:44 2016 Adrien WERY
+** Last update	Wed Mar 16 21:05:37 2016 Nicolas Constanty
 */
 
 #include "Arcade.hpp"
@@ -79,7 +79,7 @@ int	main(int ac, char **av)
         return (1);
     if (!(game = (AGame *)arcade->initSo("snake", GAME)))
         return (1);
-    std::chrono::milliseconds interval(30);
+    std::chrono::milliseconds interval(60);
     graph->init(game->getName(), game->getSize(), game->getInfos());
     GameLoop:
         if ((key = graph->eventManagment()) == ESC)
