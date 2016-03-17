@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 00:29:16 2016 Adrien WERY
+** Last update	Thu Mar 17 08:54:05 2016 Nicolas Constanty
 */
 
 #ifndef SDL2_HPP_
@@ -47,8 +47,12 @@ private:
         {CYAN, 0x00FFFF},
         {WHITE, 0xFFFFFF}
     };
+    std::map<size_t, SDL_Surface *> texts;
+
     Vector2         size;
     std::string     background;
+    void            affText(const TextComponent &text);
+    void			      fill_audio(void *udata, Uint8 *stream, int len);
 public:
     Sdl2 (void);
     virtual ~Sdl2 ();
@@ -56,7 +60,6 @@ public:
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
     virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
-    void            affText(const TextComponent &text);
 };
 
 extern "C" IGraph *loadLib()

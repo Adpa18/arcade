@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
-** Last update	Thu Mar 17 06:28:53 2016 Nicolas Constanty
+** Last update	Thu Mar 17 14:03:02 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -112,7 +112,7 @@ void    Sdl2::affText(const TextComponent &text)
     std::string     fontName;
     unsigned int    colorInt;
     SDL_Color       color;
-    SDL_Surface*    surface;
+    SDL_Surface     *surface;
     SDL_Texture     *texture;
     SDL_Rect        rect;
     int             w = 1;
@@ -146,4 +146,13 @@ void    Sdl2::affText(const TextComponent &text)
     rect.h = h;
     SDL_RenderCopy(this->render, texture, NULL, &rect);
     SDL_DestroyTexture(texture);
+    // SDL_FreeSurface(surface);
+}
+
+void sound()
+{
+  // Mix
+  // if (!SDL_LoadWAV("toto.wav", &have, &audiobuf, &length))
+  //   return;
+
 }
