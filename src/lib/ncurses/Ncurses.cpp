@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Thu Mar 17 03:37:44 2016 Nicolas Constanty
+** Last update	Thu Mar 17 06:11:38 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -35,13 +35,17 @@ Ncurses::Ncurses (void)
     init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
     init_pair(7, COLOR_CYAN, COLOR_BLACK);
     init_pair(8, COLOR_WHITE, COLOR_BLACK);
+    init_pair(9, COLOR_WHITE, -1);
 
     refresh();
     Vector2 size(width, height);
+    Vector2 size_main(width + 2, height + 2);
     Vector2 pos(COLS / 2 - (width / 2), LINES / 2 - (height / 2));
-    if (this->invalidSize(width, height, size, pos) == false)
+    Vector2 pos_main(COLS / 2 - ((width + 2) / 2), LINES / 2 - ((height + 2) / 2));
+    if (this->invalidSize(width + 2, height + 2, size_main, pos_main) == false)
     {
         this->wind = new Window(size, pos, NULL);
+        this->main_wind = new Window(size_main, pos_main, NULL);
         keypad(this->wind->getWind(), true);
         this->initMainWindow();
     }
@@ -55,11 +59,15 @@ Ncurses::~Ncurses ()
 
 void	Ncurses::initMainWindow()
 {
-    wbkgd(this->wind->getWind(), COLOR_PAIR(3));
-    wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-    wborder(this->wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-    wattr_off(this->wind->getWind(), A_REVERSE, NULL);
+    wbkgd(this->main_wind->getWind(), COLOR_PAIR(9));
+    wattr_on(this->main_wind->getWind(), A_REVERSE, NULL);
+    wattr_on(this->main_wind->getWind(), A_BOLD, NULL);
+    wborder(this->main_wind->getWind(), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
+    wattr_off(this->main_wind->getWind(), A_BOLD, NULL);
+    wattr_off(this->main_wind->getWind(), A_REVERSE, NULL);
     wrefresh(this->wind->getWind());
+    wrefresh(this->main_wind->getWind());
+    refresh();
 }
 
 bool	Ncurses::invalidSize(int width, int height, Vector2 const &size, Vector2 const &pos)
@@ -88,12 +96,15 @@ int	Ncurses::resizeTerm()
 
     Vector2 size(width, height);
     Vector2 pos(COLS / 2 - (width / 2), LINES / 2 - (height / 2));
-    if (!this->invalidSize(width, height, size, pos))
+    Vector2 size_main(width + 2, height + 2);
+    Vector2 pos_main(COLS / 2 - ((width + 2) / 2), LINES / 2 - ((height + 2) / 2));
+    if (!this->invalidSize(width + 2, height + 2, size_main, pos_main))
     {
         if (this->wind)
         {
             clear();
             refresh();
+            mvwin(this->main_wind->getWind(), pos_main.y, pos_main.x);
             mvwin(this->wind->getWind(), pos.y, pos.x);
             this->initMainWindow();
         }
@@ -102,6 +113,7 @@ int	Ncurses::resizeTerm()
             clear();
             refresh();
             this->wind = new Window(size, pos, NULL);
+            this->main_wind = new Window(size_main, pos_main, NULL);
             keypad(this->wind->getWind(), true);
             this->initMainWindow();
         }
@@ -135,18 +147,32 @@ void Ncurses::display(std::stack<AComponent*> components)
         obj = components.top();
         components.pop();
         if ((Gobj = dynamic_cast<GameComponent*>(obj))) {
-            wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
-            wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-            mvwaddch(this->wind->getWind(),
-            Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText());
-            wattr_off(this->wind->getWind(), A_REVERSE, NULL);
-            wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
+            if (Gobj->getSpriteText() == ' ')
+            {
+              wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
+              wattr_on(this->wind->getWind(), A_REVERSE, NULL);
+              mvwaddch(this->wind->getWind(),
+              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText());
+              wattr_off(this->wind->getWind(), A_REVERSE, NULL);
+              wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
+            }
+            else
+            {
+              wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
+              mvwaddch(this->wind->getWind(),
+              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText());
+              wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
+            }
         }
         else if ((Aobj = dynamic_cast<AudioComponent*>(obj)))
           beep();
         else if ((Tobj = dynamic_cast<TextComponent*>(obj)))
         {
-          WINDOW *ntext = newwin(Tobj->getSize().y, Tobj->getSize().x, Tobj->getPos().y, Tobj->getPos().x);
+          WINDOW *ntext;
+          if (Tobj->getPos().x < 0 || Tobj->getPos().y < 0)
+            ntext = newwin(Tobj->getSize().y, Tobj->getSize().x, 1, COLS / 2 - (Tobj->getSize().x / 2));
+          else
+            ntext = newwin(Tobj->getSize().y, Tobj->getSize().x, Tobj->getPos().y, Tobj->getPos().x);
           box(ntext, 0, 0);
           wattr_on(ntext, A_REVERSE, NULL);
           wbkgd(ntext, COLOR_PAIR(Tobj->getColor() + 1));

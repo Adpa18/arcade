@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Thu Mar 17 04:34:26 2016 Nicolas Constanty
+** Last update	Thu Mar 17 06:05:25 2016 Nicolas Constanty
 */
 
 #include "Snake.hpp"
@@ -13,8 +13,8 @@
 Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
 {
     Vector2 pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
-    this->target = new GameComponent(pos, Vector2(STEP, STEP), YELLOW, ' ', "snakeApple.png", NULL);
-    this->scoreText = new TextComponent(Vector2(1, 1), Vector2(50, 5), WHITE, "", "frenchy", 60);
+    this->target = new GameComponent(pos, Vector2(STEP, STEP), RED, ' ', "snakeApple.png", NULL);
+    this->scoreText = new TextComponent(Vector2(-1, -1), Vector2(50, 5), WHITE, "", "frenchy", 60);
     this->background = new BackgroundComponent(BLACK, "");
     this->sound = new AudioComponent(Vector2(0, 0), BLACK, '\a', "", "");
     this->restart();
