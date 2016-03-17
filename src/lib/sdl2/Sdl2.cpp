@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
-** Last update	Thu Mar 17 00:47:01 2016 Adrien WERY
+** Last update	Thu Mar 17 06:28:53 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -130,8 +130,16 @@ void    Sdl2::affText(const TextComponent &text)
     surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
     texture = SDL_CreateTextureFromSurface(this->render, surface);
     SDL_FreeSurface(surface);
-    rect.x = text.getPos().x * STEP;
-    rect.y = text.getPos().y * STEP;
+    if (text.getPos().x < 0 || text.getPos().y < 0)
+    {
+      rect.x = this->size.x * STEP / 2 - text.getFontSize() * text.getText().length() / 4;
+      rect.y = STEP;
+    }
+    else
+    {
+      rect.x = text.getPos().x * STEP;
+      rect.y = text.getPos().y * STEP;
+    }
     w = h = 1;
     SDL_QueryTexture(texture, NULL, NULL, &w, &h);
     rect.w = w;
