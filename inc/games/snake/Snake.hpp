@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Thu Mar 17 02:30:52 2016 Nicolas Constanty
+** Last update	Thu Mar 17 04:20:13 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -15,6 +15,7 @@
 # include "AGame.hpp"
 # include "Utils.hpp"
 # include "GameComponent.hpp"
+# include "BackgroundComponent.hpp"
 # include "TextComponent.hpp"
 # include "AudioComponent.hpp"
 
@@ -27,13 +28,15 @@ enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
 class Snake : public AGame {
 private:
-    AComponent      *old_target;
+    // AComponent      *old_target;
     GameComponent   *target;
     TextComponent   *scoreText;
     AudioComponent  *sound;
     size_t          score;
     std::vector<GameComponent*> snake;
+    BackgroundComponent *background;
     direction       dir;
+    std::vector<std::string>    backgroundSprites;
 public:
     Snake ();
     virtual ~Snake ();

@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Thu Mar 17 03:39:05 2016 Nicolas Constanty
+** Last update	Thu Mar 17 04:34:26 2016 Nicolas Constanty
 */
 
 #include "Snake.hpp"
@@ -13,9 +13,9 @@
 Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
 {
     Vector2 pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
-    this->target = new GameComponent(pos, Vector2(STEP, STEP), RED, ' ', "snakeApple.png", NULL);
-    this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, ' ', "snakeBackground1.jpg", NULL);
+    this->target = new GameComponent(pos, Vector2(STEP, STEP), YELLOW, ' ', "snakeApple.png", NULL);
     this->scoreText = new TextComponent(Vector2(1, 1), Vector2(50, 5), WHITE, "", "frenchy", 60);
+    this->background = new BackgroundComponent(BLACK, "");
     this->sound = new AudioComponent(Vector2(0, 0), BLACK, '\a', "", "");
     this->restart();
 }
@@ -117,16 +117,17 @@ std::stack<AComponent*>     Snake::compute(int key)
             break;
     }
     if (!check(snakePos)) {
-        this->old_target->setPos(this->target->getPos());
-        components.push(this->old_target);
+        // this->old_target->setPos(this->target->getPos());
+        components.push(this->target);
+        components.push(this->background);
         for (size_t i = 0; i < this->snake.size(); i++) {
             this->snake[i]->setColor(BLACK);
-            this->snake[i]->setSprite2D("snakeBackground1.jpg");
+            this->snake[i]->setSprite2D(this->background->getSprite2D());
             components.push(this->snake[i]);
         }
-        this->restart();
         components.push(this->sound);
-        components.push(this->target);
+        components.push(new GameComponent(this->target->getPos(), this->target->getSize(), BLACK, ' ', "snakeApple.png", NULL));
+        this->restart();
         return (components);
     }
     this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2(STEP, STEP), GREEN, ' ', "", NULL));
@@ -139,7 +140,7 @@ std::stack<AComponent*>     Snake::compute(int key)
         this->scoreText->setText("Score : " + std::to_string(this->score));
     } else {
         this->snake.back()->setColor(BLACK);
-        this->snake.back()->setSprite2D("snakeBackground1.jpg");
+        this->snake.back()->setSprite2D(this->background->getSprite2D());
         components.push(this->snake.back());
         this->snake.pop_back();
     }
@@ -155,17 +156,24 @@ std::stack<AComponent*>     Snake::getInfos()
     std::stack<AComponent*> components;
 
     components.push(this->target);
+    components.push(this->background);
     return (components);
 }
 
 void                        Snake::restart()
 {
+    static const char * const backgroundSprites[] = {
+        "snakeBackground.jpg",
+        "snakeBackground1.jpg",
+        "snakeBackground2.jpg"
+    };
     this->dir = DIR_UP;
     this->score = 0;
+    this->background->setSprite2D(backgroundSprites[rand() % 3]);
     this->scoreText->setText("Score : 0");
     this->snake.erase(this->snake.begin(), this->snake.end());
     for (size_t i = 0; i < SIZE; i++) {
-        this->snake.push_back(new GameComponent(Vector2(WIDTH / STEP / 2 * STEP , HEIGHT / STEP / 2 * STEP), Vector2(STEP, STEP), RED, ' ', "", NULL));
+      this->snake.push_back(new GameComponent(Vector2(WIDTH / STEP / 2 * STEP, HEIGHT / STEP / 2 * STEP), Vector2(STEP, STEP), RED, ' ', "", NULL));
     }
     this->target->setPos(Vector2(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
 }

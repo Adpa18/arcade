@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Wed Mar 16 23:12:22 2016 Adrien WERY
+** Last update	Thu Mar 17 00:29:16 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
@@ -22,6 +22,8 @@
 # include "AGame.hpp"
 # include "GameComponent.hpp"
 # include "TextComponent.hpp"
+# include "BackgroundComponent.hpp"
+
 
 # define STEP 30
 
@@ -45,6 +47,8 @@ private:
         {CYAN, 0x00FFFF},
         {WHITE, 0xFFFFFF}
     };
+    Vector2         size;
+    std::string     background;
 public:
     Sdl2 (void);
     virtual ~Sdl2 ();
