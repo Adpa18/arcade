@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Thu Mar 17 06:05:25 2016 Nicolas Constanty
+** Last update	Thu Mar 17 12:44:07 2016 Adrien WERY
 */
 
 #include "Snake.hpp"
@@ -17,6 +17,7 @@ Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
     this->scoreText = new TextComponent(Vector2(-1, -1), Vector2(50, 5), WHITE, "", "frenchy", 60);
     this->background = new BackgroundComponent(BLACK, "");
     this->sound = new AudioComponent(Vector2(0, 0), BLACK, '\a', "", "");
+    this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, ' ', this->background->getSprite2D(), NULL);
     this->restart();
 }
 
@@ -117,16 +118,16 @@ std::stack<AComponent*>     Snake::compute(int key)
             break;
     }
     if (!check(snakePos)) {
-        // this->old_target->setPos(this->target->getPos());
+        this->old_target->setPos(this->target->getPos());
         components.push(this->target);
         components.push(this->background);
+        components.push(this->old_target);
         for (size_t i = 0; i < this->snake.size(); i++) {
             this->snake[i]->setColor(BLACK);
             this->snake[i]->setSprite2D(this->background->getSprite2D());
             components.push(this->snake[i]);
         }
         components.push(this->sound);
-        components.push(new GameComponent(this->target->getPos(), this->target->getSize(), BLACK, ' ', "snakeApple.png", NULL));
         this->restart();
         return (components);
     }
@@ -136,7 +137,7 @@ std::stack<AComponent*>     Snake::compute(int key)
         this->target->setPos(Vector2(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
         components.push(this->target);
         components.push(this->sound);
-        ++this->score;
+        this->score += 10;
         this->scoreText->setText("Score : " + std::to_string(this->score));
     } else {
         this->snake.back()->setColor(BLACK);

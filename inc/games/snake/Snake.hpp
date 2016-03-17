@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Thu Mar 17 04:20:13 2016 Nicolas Constanty
+** Last update	Thu Mar 17 12:38:38 2016 Adrien WERY
 */
 
 #ifndef SNAKE_HPP_
@@ -28,7 +28,7 @@ enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
 class Snake : public AGame {
 private:
-    // AComponent      *old_target;
+    AComponent      *old_target;
     GameComponent   *target;
     TextComponent   *scoreText;
     AudioComponent  *sound;
