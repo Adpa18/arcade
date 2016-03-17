@@ -5,8 +5,8 @@ SRC			=		$(SRC_DIR)Arcade.cpp			\
 					$(SRC_DIR)AGame.cpp				\
 					$(SRC_DIR)AComponent.cpp		\
 					$(SRC_DIR)GameComponent.cpp		\
+					$(SRC_DIR)AudioComponent.cpp	\
 					$(SRC_DIR)BackgroundComponent.cpp		\
-					$(SRC_DIR)TextComponent.cpp		\
 					$(SRC_DIR)UIComponent.cpp		\
 
 CC			=	g++ -std=gnu++11

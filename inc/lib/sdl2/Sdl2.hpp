@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 08:54:05 2016 Nicolas Constanty
+** Last update	Thu Mar 17 14:51:15 2016 Nicolas Constanty
 */
 
 #ifndef SDL2_HPP_
@@ -21,8 +21,9 @@
 # include "IGraph.hpp"
 # include "AGame.hpp"
 # include "GameComponent.hpp"
-# include "TextComponent.hpp"
+# include "UIComponent.hpp"
 # include "BackgroundComponent.hpp"
+# include "UIComponent.hpp"
 
 
 # define STEP 30
@@ -51,8 +52,6 @@ private:
 
     Vector2         size;
     std::string     background;
-    void            affText(const TextComponent &text);
-    void			      fill_audio(void *udata, Uint8 *stream, int len);
 public:
     Sdl2 (void);
     virtual ~Sdl2 ();
@@ -60,6 +59,14 @@ public:
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
     virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
+
+private:
+    void            displayGame(const GameComponent &game, SDL_Rect *rect);
+    void            displayText(const UIComponent &text, SDL_Rect *rect);
+    void            displayUI(const UIComponent &ui, SDL_Rect *rect);
+    void            displayBackground(const BackgroundComponent &background, SDL_Rect *rect);
+    void			      fill_audio(void *udata, Uint8 *stream, int len);
+
 };
 
 extern "C" IGraph *loadLib()

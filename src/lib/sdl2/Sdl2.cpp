@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
-** Last update	Thu Mar 17 14:03:02 2016 Nicolas Constanty
+** Last update	Thu Mar 17 14:52:20 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -26,9 +26,9 @@ Sdl2::~Sdl2 ()
 {
     SDL_DestroyWindow(this->win);
     SDL_DestroyRenderer(this->render);
-    // for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
-    //     TTF_CloseFont(it->second);
-    // }
+    for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
+        TTF_CloseFont(it->second);
+    }
     for (std::map<std::string, SDL_Texture*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
         SDL_DestroyTexture(it->second);
     }
@@ -44,8 +44,6 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
-    // SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
-    // SDL_RenderClear(this->render);
     this->display(cache);
 }
 
@@ -63,7 +61,7 @@ void Sdl2::display(std::stack<AComponent*> components)
     SDL_Rect        rect;
     AComponent      *obj;
     GameComponent   *Gobj;
-    TextComponent   *Tobj;
+    UIComponent   *Tobj;
     BackgroundComponent   *Bobj;
     unsigned int    colorInt;
 
@@ -75,29 +73,11 @@ void Sdl2::display(std::stack<AComponent*> components)
         rect.w = obj->getSize().x * STEP;
         rect.h = obj->getSize().y * STEP;
         if ((Gobj = dynamic_cast<GameComponent*>(obj)) && !Gobj->getSprite2D().empty()) {
-            if (this->tex[Gobj->getSprite2D()] == 0) {
-                this->tex[Gobj->getSprite2D()] = IMG_LoadTexture(this->render, std::string("./assets/sprites2D/" + Gobj->getSprite2D()).c_str());
-            }
-            // SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
-            // SDL_RenderFillRect(this->render, &rect);
-            SDL_RenderCopy(this->render, this->tex[this->background], NULL, &rect);
-            SDL_RenderCopy(this->render, this->tex[Gobj->getSprite2D()], NULL, &rect);
-        } else if ((Tobj = dynamic_cast<TextComponent*>(obj))) {
-            this->affText(*Tobj);
+            this->displayGame(*Gobj, &rect);
+        } else if ((Tobj = dynamic_cast<UIComponent*>(obj))) {
+            this->displayText(*Tobj, &rect);
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
-            this->background = Bobj->getSprite2D();
-            for (size_t i = 0; i <size.y; i++) {
-                for (size_t j = 0; j < size.x; j++) {
-                    rect.x = j * STEP;
-                    rect.y = i * STEP;
-                    rect.w = STEP;
-                    rect.h = STEP;
-                    if (this->tex[Bobj->getSprite2D()] == 0) {
-                        this->tex[Bobj->getSprite2D()] = IMG_LoadTexture(this->render, std::string("./assets/sprites2D/" + Bobj->getSprite2D()).c_str());
-                    }
-                    SDL_RenderCopy(this->render, this->tex[Bobj->getSprite2D()], NULL, &rect);
-                }
-            }
+            this->displayBackground(*Bobj, &rect);
         } else {
             colorInt = this->colors[obj->getColor()];
             SDL_SetRenderDrawColor(this->render, ((colorInt >> 16) & 255), ((colorInt >> 8) & 255), ((colorInt) & 255), ((colorInt >> 24) & 255));
@@ -107,16 +87,52 @@ void Sdl2::display(std::stack<AComponent*> components)
     SDL_RenderPresent(this->render);
 }
 
-void    Sdl2::affText(const TextComponent &text)
+void    Sdl2::displayGame(const GameComponent &game, SDL_Rect *rect)
+{
+    if (this->tex[game.getSprite2D()] == 0) {
+        this->tex[game.getSprite2D()] = IMG_LoadTexture(this->render,
+                std::string("./assets/sprites2D/" + game.getSprite2D()).c_str());
+    }
+    SDL_RenderCopy(this->render, this->tex[this->background], NULL, rect);
+    SDL_RenderCopy(this->render, this->tex[game.getSprite2D()], NULL, rect);
+}
+
+void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect *rect2)
+{
+    SDL_Rect    rect;
+
+    rect.w = STEP;
+    rect.h = STEP;
+    std::cout << background.getSize().x << std::endl;
+    std::cout << background.getSize().y << std::endl;
+    std::cout << rect2->x << std::endl;
+    std::cout << rect2->y << std::endl;
+    this->background = background.getSprite2D();
+    for (size_t i = 0; i < background.getSize().y; i++) {
+        for (size_t j = 0; j < background.getSize().x; j++) {
+            rect.x = rect2->x + j * STEP;
+            rect.y = rect2->y + i * STEP;
+            if (this->tex[background.getSprite2D()] == 0) {
+                this->tex[background.getSprite2D()] = IMG_LoadTexture(this->render,
+                        std::string("./assets/sprites2D/" + background.getSprite2D()).c_str());
+            }
+            SDL_RenderCopy(this->render, this->tex[background.getSprite2D()], NULL, &rect);
+        }
+    }
+}
+
+void    Sdl2::displayUI(const UIComponent &ui, SDL_Rect *rect)
+{
+
+}
+
+void    Sdl2::displayText(const UIComponent &text, SDL_Rect *rect)
 {
     std::string     fontName;
     unsigned int    colorInt;
     SDL_Color       color;
     SDL_Surface     *surface;
     SDL_Texture     *texture;
-    SDL_Rect        rect;
-    int             w = 1;
-    int             h = 1;
 
     colorInt = this->colors[text.getColor()];
     color.r = ((colorInt) & 255);
@@ -132,19 +148,11 @@ void    Sdl2::affText(const TextComponent &text)
     SDL_FreeSurface(surface);
     if (text.getPos().x < 0 || text.getPos().y < 0)
     {
-      rect.x = this->size.x * STEP / 2 - text.getFontSize() * text.getText().length() / 4;
-      rect.y = STEP;
+      rect->x = this->size.x * STEP / 2 - text.getFontSize() * text.getText().length() / 4;
+      rect->y = STEP;
     }
-    else
-    {
-      rect.x = text.getPos().x * STEP;
-      rect.y = text.getPos().y * STEP;
-    }
-    w = h = 1;
-    SDL_QueryTexture(texture, NULL, NULL, &w, &h);
-    rect.w = w;
-    rect.h = h;
-    SDL_RenderCopy(this->render, texture, NULL, &rect);
+    SDL_QueryTexture(texture, NULL, NULL, &(rect->w), &(rect->h));
+    SDL_RenderCopy(this->render, texture, NULL, rect);
     SDL_DestroyTexture(texture);
     // SDL_FreeSurface(surface);
 }
