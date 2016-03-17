@@ -20,7 +20,7 @@
 # include "Window.hpp"
 # include "GameComponent.hpp"
 # include "AudioComponent.hpp"
-# include "TextComponent.hpp"
+# include "UIComponent.hpp"
 
 
 class Ncurses : public IGraph {

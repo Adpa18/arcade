@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Thu Mar 17 12:44:07 2016 Adrien WERY
+** Last update	Thu Mar 17 13:31:10 2016 Adrien WERY
 */
 
 #include "Snake.hpp"
@@ -14,8 +14,8 @@ Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
 {
     Vector2 pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
     this->target = new GameComponent(pos, Vector2(STEP, STEP), RED, ' ', "snakeApple.png", NULL);
-    this->scoreText = new TextComponent(Vector2(-1, -1), Vector2(50, 5), WHITE, "", "frenchy", 60);
-    this->background = new BackgroundComponent(BLACK, "");
+    this->scoreText = new UIComponent(Vector2(-1, -1), Vector2(50, 5), WHITE, "", "frenchy", 60);
+    this->background = new BackgroundComponent(Vector2(0, 0), Vector2(WIDTH, HEIGHT), BLACK, "");
     this->sound = new AudioComponent(Vector2(0, 0), BLACK, '\a', "", "");
     this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, ' ', this->background->getSprite2D(), NULL);
     this->restart();
@@ -138,6 +138,8 @@ std::stack<AComponent*>     Snake::compute(int key)
         components.push(this->target);
         components.push(this->sound);
         this->score += 10;
+        components.push(new BackgroundComponent(this->scoreText->getPos(),
+            this->scoreText->getSize(), BLACK, this->background->getSprite2D()));
         this->scoreText->setText("Score : " + std::to_string(this->score));
     } else {
         this->snake.back()->setColor(BLACK);

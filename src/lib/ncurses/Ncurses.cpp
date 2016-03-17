@@ -139,7 +139,7 @@ void Ncurses::display(std::stack<AComponent*> components)
     AComponent      *obj;
     GameComponent   *Gobj;
     AudioComponent  *Aobj;
-    TextComponent   *Tobj;
+    UIComponent   *Tobj;
 
     if (this->valid_size == false)
         return;
@@ -166,7 +166,7 @@ void Ncurses::display(std::stack<AComponent*> components)
         }
         else if ((Aobj = dynamic_cast<AudioComponent*>(obj)))
           beep();
-        else if ((Tobj = dynamic_cast<TextComponent*>(obj)))
+        else if ((Tobj = dynamic_cast<UIComponent*>(obj)))
         {
           WINDOW *ntext;
           if (Tobj->getPos().x < 0 || Tobj->getPos().y < 0)

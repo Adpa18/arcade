@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 00:29:16 2016 Adrien WERY
+** Last update	Thu Mar 17 13:19:55 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
@@ -21,8 +21,9 @@
 # include "IGraph.hpp"
 # include "AGame.hpp"
 # include "GameComponent.hpp"
-# include "TextComponent.hpp"
+# include "UIComponent.hpp"
 # include "BackgroundComponent.hpp"
+# include "UIComponent.hpp"
 
 
 # define STEP 30
@@ -56,7 +57,11 @@ public:
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
     virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
-    void            affText(const TextComponent &text);
+private:
+    void            displayGame(const GameComponent &game, SDL_Rect *rect);
+    void            displayText(const UIComponent &text, SDL_Rect *rect);
+    void            displayUI(const UIComponent &ui, SDL_Rect *rect);
+    void            displayBackground(const BackgroundComponent &background, SDL_Rect *rect);
 };
 
 extern "C" IGraph *loadLib()
