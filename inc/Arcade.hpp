@@ -1,15 +1,11 @@
 /*
 ** Arcade.hpp for cpp_arcade
 **
-** Made by	Nicolas Constanty
-** Login	consta_n
+** Made by	Adrien WERY
+** Login	wery_a
 **
-** Started on	Tue Mar 08 18:23:04 2016 Nicolas Constanty
-<<<<<<< HEAD
-** Last update	Thu Mar 10 14:29:34 2016 Nicolas Constanty
-=======
-** Last update	Thu Mar 10 15:35:56 2016 Adrien WERY
->>>>>>> eb8433b0cda9a6713033fe09981c0dae98436182
+** Started on	Thu Mar 17 15:42:32 2016 Adrien WERY
+** Last update	Thu Mar 17 15:53:07 2016 Adrien WERY
 */
 
 #ifndef ARCADE_HPP_
@@ -34,18 +30,21 @@ enum SOTYPE { GRAPH, GAME };
 
 namespace arcade {
 
-  static const int winWidth = 50;
-  static const int winHeight = 30;
+  // static const int winWidth = 50;
+  // static const int winHeight = 30;
 
   class Arcade {
   private:
-    std::vector<std::string> graph_paths;
-    std::vector<std::string> game_paths;
+    std::vector<IGraph *>       graphs;
+    std::vector<AGame *>        games;
+    std::vector<std::string>    graphsNames;
+    std::vector<std::string>    gamesNames;
   public:
     Arcade ();
     virtual ~Arcade ();
+    bool    run(const std::string &graph);
     void    *initSo(std::string const &, SOTYPE);
-    void    refresh_lib(std::string const &folder);
+    void    refresh_lib(std::string const &folder, SOTYPE);
   };
 }
 

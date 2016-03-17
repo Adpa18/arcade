@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
-** Last update	Thu Mar 17 13:36:34 2016 Adrien WERY
+** Last update	Thu Mar 17 14:26:42 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -103,10 +103,6 @@ void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect 
 
     rect.w = STEP;
     rect.h = STEP;
-    std::cout << background.getSize().x << std::endl;
-    std::cout << background.getSize().y << std::endl;
-    std::cout << rect2->x << std::endl;
-    std::cout << rect2->y << std::endl;
     this->background = background.getSprite2D();
     for (size_t i = 0; i < background.getSize().y; i++) {
         for (size_t j = 0; j < background.getSize().x; j++) {

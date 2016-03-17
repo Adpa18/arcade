@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 13:19:55 2016 Adrien WERY
+** Last update	Thu Mar 17 15:10:52 2016 Adrien WERY
 */
 
 #ifndef SDL2_HPP_
@@ -36,7 +36,10 @@ private:
     std::map<std::string, SDL_Texture*> tex;
     std::map<SDL_Keycode, int>    keyMap = {
         {SDLK_ESCAPE, ESC},
-        {SDLK_UP, UP}, {SDLK_DOWN, DOWN}, {SDLK_LEFT, LEFT}, {SDLK_RIGHT, RIGHT}
+        {SDLK_UP, UP}, {SDLK_DOWN, DOWN}, {SDLK_LEFT, LEFT}, {SDLK_RIGHT, RIGHT},
+        {SDLK_0, KEY_0}, {SDLK_1, KEY_1}, {SDLK_2, KEY_2}, {SDLK_3, KEY_3},
+        {SDLK_4, KEY_4}, {SDLK_5, KEY_5}, {SDLK_6, KEY_6}, {SDLK_7, KEY_7},
+        {SDLK_8, KEY_8}, {SDLK_9, KEY_9}
     };
     std::map<ComponentColor, int>    colors = {
         {BLACK, 0x000000},

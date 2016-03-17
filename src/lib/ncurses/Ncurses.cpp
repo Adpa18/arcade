@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Thu Mar 17 06:11:38 2016 Nicolas Constanty
+** Last update	Thu Mar 17 16:02:40 2016 Adrien WERY
 */
 
 #include <iostream>
@@ -13,44 +13,8 @@
 
 using namespace ncurses;
 
-Ncurses::Ncurses (void)
+Ncurses::Ncurses (void) : size(0, 0)
 {
-    std::cout << "StartInit => Lib Ncurses" << std::endl;
-    int width = 50;
-    int height = 30;
-
-    initscr();
-    cbreak();
-    keypad(stdscr, true);
-    start_color();
-    curs_set(0);
-    noecho();
-    // halfdelay(1);
-    timeout(1);
-    init_pair(1, COLOR_BLACK, COLOR_BLACK);
-    init_pair(2, COLOR_RED, COLOR_BLACK);
-    init_pair(3, COLOR_GREEN, COLOR_BLACK);
-    init_pair(4, COLOR_BLUE, COLOR_BLACK);
-    init_pair(5, COLOR_YELLOW, COLOR_BLACK);
-    init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
-    init_pair(7, COLOR_CYAN, COLOR_BLACK);
-    init_pair(8, COLOR_WHITE, COLOR_BLACK);
-    init_pair(9, COLOR_WHITE, -1);
-
-    refresh();
-    Vector2 size(width, height);
-    Vector2 size_main(width + 2, height + 2);
-    Vector2 pos(COLS / 2 - (width / 2), LINES / 2 - (height / 2));
-    Vector2 pos_main(COLS / 2 - ((width + 2) / 2), LINES / 2 - ((height + 2) / 2));
-    if (this->invalidSize(width + 2, height + 2, size_main, pos_main) == false)
-    {
-        this->wind = new Window(size, pos, NULL);
-        this->main_wind = new Window(size_main, pos_main, NULL);
-        keypad(this->wind->getWind(), true);
-        this->initMainWindow();
-    }
-    else
-      this->wind = NULL;
 }
 
 Ncurses::~Ncurses ()
@@ -91,14 +55,10 @@ bool	Ncurses::invalidSize(int width, int height, Vector2 const &size, Vector2 co
 
 int	Ncurses::resizeTerm()
 {
-    int width = 50;
-    int height = 30;
-
-    Vector2 size(width, height);
-    Vector2 pos(COLS / 2 - (width / 2), LINES / 2 - (height / 2));
-    Vector2 size_main(width + 2, height + 2);
-    Vector2 pos_main(COLS / 2 - ((width + 2) / 2), LINES / 2 - ((height + 2) / 2));
-    if (!this->invalidSize(width + 2, height + 2, size_main, pos_main))
+    Vector2 pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
+    Vector2 size_main(size.x + 2, size.y + 2);
+    Vector2 pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
+    if (!this->invalidSize(size.x + 2, size.y + 2, size_main, pos_main))
     {
         if (this->wind)
         {
@@ -188,6 +148,36 @@ void Ncurses::display(std::stack<AComponent*> components)
 void  Ncurses::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
 {
     (void)name;
-    (void)size;
+    std::cout << "StartInit => Lib Ncurses" << std::endl;
+    initscr();
+    cbreak();
+    keypad(stdscr, true);
+    start_color();
+    curs_set(0);
+    noecho();
+    // halfdelay(1);
+    timeout(1);
+    init_pair(1, COLOR_BLACK, COLOR_BLACK);
+    init_pair(2, COLOR_RED, COLOR_BLACK);
+    init_pair(3, COLOR_GREEN, COLOR_BLACK);
+    init_pair(4, COLOR_BLUE, COLOR_BLACK);
+    init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
+    init_pair(7, COLOR_CYAN, COLOR_BLACK);
+    init_pair(8, COLOR_WHITE, COLOR_BLACK);
+    init_pair(9, COLOR_WHITE, -1);
+    refresh();
+    Vector2 size_main(size.x + 2, size.y + 2);
+    Vector2 pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
+    Vector2 pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
+    if (this->invalidSize(size.x + 2, size.y + 2, size_main, pos_main) == false)
+    {
+        this->wind = new Window(size, pos, NULL);
+        this->main_wind = new Window(size_main, pos_main, NULL);
+        keypad(this->wind->getWind(), true);
+        this->initMainWindow();
+    }
+    else
+      this->wind = NULL;
     this->display(cache);
 }
