@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 23:35:04 2016 Nicolas Constanty
-** Last update	Wed Mar 16 22:20:30 2016 Adrien WERY
+** Last update	Thu Mar 17 03:37:44 2016 Nicolas Constanty
 */
 
 #include <iostream>
@@ -25,7 +25,8 @@ Ncurses::Ncurses (void)
     start_color();
     curs_set(0);
     noecho();
-    halfdelay(1);
+    // halfdelay(1);
+    timeout(1);
     init_pair(1, COLOR_BLACK, COLOR_BLACK);
     init_pair(2, COLOR_RED, COLOR_BLACK);
     init_pair(3, COLOR_GREEN, COLOR_BLACK);
@@ -45,7 +46,7 @@ Ncurses::Ncurses (void)
         this->initMainWindow();
     }
     else
-    this->wind = NULL;
+      this->wind = NULL;
 }
 
 Ncurses::~Ncurses ()
@@ -125,6 +126,8 @@ void Ncurses::display(std::stack<AComponent*> components)
 {
     AComponent      *obj;
     GameComponent   *Gobj;
+    AudioComponent  *Aobj;
+    TextComponent   *Tobj;
 
     if (this->valid_size == false)
         return;
@@ -139,41 +142,21 @@ void Ncurses::display(std::stack<AComponent*> components)
             wattr_off(this->wind->getWind(), A_REVERSE, NULL);
             wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
         }
+        else if ((Aobj = dynamic_cast<AudioComponent*>(obj)))
+          beep();
+        else if ((Tobj = dynamic_cast<TextComponent*>(obj)))
+        {
+          WINDOW *ntext = newwin(Tobj->getSize().y, Tobj->getSize().x, Tobj->getPos().y, Tobj->getPos().x);
+          box(ntext, 0, 0);
+          wattr_on(ntext, A_REVERSE, NULL);
+          wbkgd(ntext, COLOR_PAIR(Tobj->getColor() + 1));
+          wattr_off(ntext, A_REVERSE, NULL);
+          mvwprintw(ntext, Tobj->getSize().y / 2, Tobj->getSize().x / 2 - Tobj->getText().length() / 2, "%s", Tobj->getText().c_str());
+          wrefresh(ntext);
+          refresh();
+        }
     }
     wrefresh(this->wind->getWind());
-    // if (this->valid_size == false)
-    //   return;
-    // while (!components.empty())
-    // {
-    //   GameComponent *object = dynamic_cast<GameComponent *>(components.top());
-    //   if (object)
-    //   {
-    //     // printf("%d\n", this->wind->getPos().x + object->getPos().x);
-    //     // if (object->getSpriteText() != ' ')
-    //     // {
-    //       wattron(this->wind->getWind(), COLOR_PAIR(object->getColor() + 1));
-    //       wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-    //       mvwaddch(this->wind->getWind(),
-    //       object->getPos().y,
-    //       object->getPos().x,
-    //       object->getSpriteText());
-    //       wattr_off(this->wind->getWind(), A_REVERSE, NULL);
-    //       wattroff(this->wind->getWind(), COLOR_PAIR(object->getColor() + 1));
-    //     // }
-    //     // else
-    //     // {
-    //     //   attron(COLOR_PAIR(object->getColor() + 1));
-    //     //   mvwaddch(this->wind->getWind(),
-    //     //   this->wind->getPos().x + object->getPos().x,
-    //     //   this->wind->getPos().y + object->getPos().y,
-    //     //   object->getSpriteText());
-    //     //   attron(COLOR_PAIR(object->getColor() + 1));
-    //     // }
-    //     components.pop();
-    //   }
-    //   else
-    //     components.pop();
-    // }
 }
 
 void  Ncurses::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)

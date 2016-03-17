@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Wed Mar 16 13:52:43 2016 Adrien WERY
+** Last update	Thu Mar 17 03:12:05 2016 Nicolas Constanty
 */
 
 #ifndef TEXTCOMPONENT_HPP_
@@ -23,7 +23,7 @@ private:
     std::string     fontName;
     unsigned int    fontSize;
 public:
-    TextComponent(Vector2 const &p, ComponentColor color, const std::string &text,
+    TextComponent(Vector2 const &p, Vector2 const &s, ComponentColor color, const std::string &text,
             const std::string &fontName, unsigned int fontSize);
     virtual ~TextComponent();
     const std::string   &getText() const;

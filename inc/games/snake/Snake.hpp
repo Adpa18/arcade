@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Wed Mar 16 23:10:07 2016 Adrien WERY
+** Last update	Thu Mar 17 02:30:52 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -16,6 +16,7 @@
 # include "Utils.hpp"
 # include "GameComponent.hpp"
 # include "TextComponent.hpp"
+# include "AudioComponent.hpp"
 
 # define WIDTH  50
 # define HEIGHT 30
@@ -29,6 +30,7 @@ private:
     AComponent      *old_target;
     GameComponent   *target;
     TextComponent   *scoreText;
+    AudioComponent  *sound;
     size_t          score;
     std::vector<GameComponent*> snake;
     direction       dir;

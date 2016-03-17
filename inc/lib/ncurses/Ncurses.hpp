@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Wed Mar 16 21:59:22 2016 Adrien WERY
+** Last update	Thu Mar 17 02:55:59 2016 Nicolas Constanty
 */
 
 #ifndef NCURSES_HPP_
@@ -19,6 +19,8 @@
 # include "AGame.hpp"
 # include "Window.hpp"
 # include "GameComponent.hpp"
+# include "AudioComponent.hpp"
+# include "TextComponent.hpp"
 
 
 class Ncurses : public IGraph {

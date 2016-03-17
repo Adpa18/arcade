@@ -5,14 +5,14 @@
 ** Login	wery_a
 **
 ** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Wed Mar 16 13:52:44 2016 Adrien WERY
+** Last update	Thu Mar 17 03:13:21 2016 Nicolas Constanty
 */
 
 #include "TextComponent.hpp"
 
-TextComponent::TextComponent(Vector2 const &p, ComponentColor color, const std::string &text,
+TextComponent::TextComponent(Vector2 const &p, Vector2 const &s, ComponentColor color, const std::string &text,
     const std::string &fontName, unsigned int fontSize)
-    : AComponent(p, color)
+    : AComponent(p, s, color)
 {
     this->text = text;
     this->fontName = fontName;

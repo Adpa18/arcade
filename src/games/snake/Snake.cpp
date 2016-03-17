@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Wed Mar 16 23:09:55 2016 Adrien WERY
+** Last update	Thu Mar 17 03:39:05 2016 Nicolas Constanty
 */
 
 #include "Snake.hpp"
@@ -13,9 +13,10 @@
 Snake::Snake () : AGame("Snake", Vector2(WIDTH, HEIGHT))
 {
     Vector2 pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
-    this->target = new GameComponent(pos, Vector2(STEP, STEP), YELLOW, ' ', "snakeApple.png", NULL);
+    this->target = new GameComponent(pos, Vector2(STEP, STEP), RED, ' ', "snakeApple.png", NULL);
     this->old_target = new GameComponent(pos, Vector2(STEP, STEP), BLACK, ' ', "snakeBackground1.jpg", NULL);
-    this->scoreText = new TextComponent(Vector2(1, 1), GREEN, "", "frenchy", 60);
+    this->scoreText = new TextComponent(Vector2(1, 1), Vector2(50, 5), WHITE, "", "frenchy", 60);
+    this->sound = new AudioComponent(Vector2(0, 0), BLACK, '\a', "", "");
     this->restart();
 }
 
@@ -124,6 +125,7 @@ std::stack<AComponent*>     Snake::compute(int key)
             components.push(this->snake[i]);
         }
         this->restart();
+        components.push(this->sound);
         components.push(this->target);
         return (components);
     }
@@ -132,6 +134,7 @@ std::stack<AComponent*>     Snake::compute(int key)
     if (this->snake.front()->getPos() == this->target->getPos()) {
         this->target->setPos(Vector2(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
         components.push(this->target);
+        components.push(this->sound);
         ++this->score;
         this->scoreText->setText("Score : " + std::to_string(this->score));
     } else {
@@ -162,7 +165,7 @@ void                        Snake::restart()
     this->scoreText->setText("Score : 0");
     this->snake.erase(this->snake.begin(), this->snake.end());
     for (size_t i = 0; i < SIZE; i++) {
-        this->snake.push_back(new GameComponent(Vector2(WIDTH / STEP / 2 * STEP , WIDTH / STEP / 2 * STEP), Vector2(STEP, STEP), RED, ' ', "", NULL));
+        this->snake.push_back(new GameComponent(Vector2(WIDTH / STEP / 2 * STEP , HEIGHT / STEP / 2 * STEP), Vector2(STEP, STEP), RED, ' ', "", NULL));
     }
     this->target->setPos(Vector2(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
 }
