@@ -1,13 +1,3 @@
-/*
-** Ncurses.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 15:10:52 2016 Adrien WERY
-*/
-
 #ifndef SDL2_HPP_
 # define SDL2_HPP_
 
@@ -51,6 +41,8 @@ private:
         {CYAN, 0x00FFFF},
         {WHITE, 0xFFFFFF}
     };
+    std::map<size_t, SDL_Surface *> texts;
+
     Vector2         size;
     std::string     background;
 public:
@@ -60,11 +52,14 @@ public:
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
     virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
+
 private:
     void            displayGame(const GameComponent &game, SDL_Rect *rect);
     void            displayText(const UIComponent &text, SDL_Rect *rect);
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);
     void            displayBackground(const BackgroundComponent &background, SDL_Rect *rect);
+    void			      fill_audio(void *udata, Uint8 *stream, int len);
+
 };
 
 extern "C" IGraph *loadLib()

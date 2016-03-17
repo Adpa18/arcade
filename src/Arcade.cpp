@@ -1,13 +1,3 @@
-/*
-** Arcade.cpp for cpp_arcade
-**
-** Made by	Adrien WERY
-** Login	wery_a
-**
-** Started on	Wed Mar 16 21:49:22 2016 Adrien WERY
-** Last update	Thu Mar 17 16:12:52 2016 Adrien WERY
-*/
-
 #include "Arcade.hpp"
 
 arcade::Arcade::Arcade()

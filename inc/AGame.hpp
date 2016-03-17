@@ -1,13 +1,3 @@
-/*
-** AGame.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Tue Mar 08 17:38:09 2016 Nicolas Constanty
-** Last update	Thu Mar 17 15:09:32 2016 Adrien WERY
-*/
-
 #ifndef AGAME_HPP_
 # define AGAME_HPP_
 

@@ -1,13 +1,3 @@
-/*
-** Ncurses.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 15:59:59 2016 Adrien WERY
-*/
-
 #ifndef NCURSES_HPP_
 # define NCURSES_HPP_
 

@@ -1,13 +1,3 @@
-/*
-** Arcade.hpp for cpp_arcade
-**
-** Made by	Adrien WERY
-** Login	wery_a
-**
-** Started on	Thu Mar 17 15:42:32 2016 Adrien WERY
-** Last update	Thu Mar 17 15:53:07 2016 Adrien WERY
-*/
-
 #ifndef ARCADE_HPP_
 # define ARCADE_HPP_
 

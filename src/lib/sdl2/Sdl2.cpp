@@ -1,13 +1,3 @@
-/*
-** Sdl2.cpp for cpp_arcade
-**
-** Made by	Adrien WERY
-** Login	wery_a
-**
-** Started on	Wed Mar 16 21:47:26 2016 Adrien WERY
-** Last update	Thu Mar 17 14:26:42 2016 Adrien WERY
-*/
-
 #include <iostream>
 #include "Sdl2.hpp"
 
@@ -127,7 +117,7 @@ void    Sdl2::displayText(const UIComponent &text, SDL_Rect *rect)
     std::string     fontName;
     unsigned int    colorInt;
     SDL_Color       color;
-    SDL_Surface*    surface;
+    SDL_Surface     *surface;
     SDL_Texture     *texture;
 
     colorInt = this->colors[text.getColor()];
@@ -150,4 +140,13 @@ void    Sdl2::displayText(const UIComponent &text, SDL_Rect *rect)
     SDL_QueryTexture(texture, NULL, NULL, &(rect->w), &(rect->h));
     SDL_RenderCopy(this->render, texture, NULL, rect);
     SDL_DestroyTexture(texture);
+    // SDL_FreeSurface(surface);
+}
+
+void sound()
+{
+  // Mix
+  // if (!SDL_LoadWAV("toto.wav", &have, &audiobuf, &length))
+  //   return;
+
 }
