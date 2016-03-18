@@ -171,3 +171,8 @@ void  Ncurses::init(const std::string &name, Vector2 size, std::stack<AComponent
       this->wind = NULL;
     this->display(cache);
 }
+
+void    Ncurses::destroy()
+ {
+     endwin();
+ }

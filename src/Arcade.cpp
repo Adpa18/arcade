@@ -74,16 +74,19 @@ bool    arcade::Arcade::run(const std::string &graphPath)
     GameLoop:
         if ((key = graphs[graphPos]->eventManagment()) == ESC) {
             return (true);
-        } else if (key == KEY_2) {
-            --graphPos;
-        } else if (key == KEY_3) {
-            ++graphPos;
-        } else if (key == KEY_4) {
-            --gamePos;
-        } else if (key == KEY_5) {
-            ++gamePos;
-        }
-        if (key == KEY_2 || key == KEY_3 || key == KEY_3 || key == KEY_4) {
+        } else if (key == KEY_2 || key == KEY_3 || key == KEY_3 || key == KEY_4) {
+            graphs[graphPos]->destroy();
+            if (key == KEY_2) {
+                --graphPos;
+            } else if (key == KEY_3) {
+                ++graphPos;
+            } else if (key == KEY_4) {
+                --gamePos;
+            } else if (key == KEY_5) {
+                ++gamePos;
+            }
+            graphPos %= graphsNames.size();
+            gamePos %= gamesNames.size();
             graphs[graphPos]->init(games[gamePos]->getName(), games[gamePos]->getSize(),
             games[gamePos]->getInfos());
         }

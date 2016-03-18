@@ -14,8 +14,7 @@ Sdl2::Sdl2 (void) : size(0, 0)
 
 Sdl2::~Sdl2 ()
 {
-    SDL_DestroyWindow(this->win);
-    SDL_DestroyRenderer(this->render);
+    this->destroy();
     for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
         TTF_CloseFont(it->second);
     }
@@ -35,6 +34,12 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
     this->display(cache);
+}
+
+void    Sdl2::destroy()
+{
+    SDL_DestroyWindow(this->win);
+    SDL_DestroyRenderer(this->render);
 }
 
 int Sdl2::eventManagment()
