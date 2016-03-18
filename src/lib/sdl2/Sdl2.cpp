@@ -28,8 +28,8 @@ Sdl2::~Sdl2 ()
 void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
 {
     this->size = size;
-    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_UNDEFINED,
-        SDL_WINDOWPOS_UNDEFINED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
+    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
+        SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
@@ -56,7 +56,7 @@ void Sdl2::display(std::stack<AComponent*> components)
     SDL_Rect        rect;
     AComponent      *obj;
     GameComponent   *Gobj;
-    UIComponent   *Tobj;
+    UIComponent   *Uobj;
     BackgroundComponent   *Bobj;
     unsigned int    colorInt;
 
@@ -69,8 +69,8 @@ void Sdl2::display(std::stack<AComponent*> components)
         rect.h = obj->getSize().y * STEP;
         if ((Gobj = dynamic_cast<GameComponent*>(obj)) && !Gobj->getSprite2D().empty()) {
             this->displayGame(*Gobj, &rect);
-        } else if ((Tobj = dynamic_cast<UIComponent*>(obj))) {
-            this->displayText(*Tobj, &rect);
+        } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
+            this->displayUI(*Uobj, &rect);
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
             this->displayBackground(*Bobj, &rect);
         } else {
@@ -114,38 +114,32 @@ void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect 
 
 void    Sdl2::displayUI(const UIComponent &ui, SDL_Rect *rect)
 {
-
-}
-
-void    Sdl2::displayText(const UIComponent &text, SDL_Rect *rect)
-{
     std::string     fontName;
     unsigned int    colorInt;
     SDL_Color       color;
     SDL_Surface     *surface;
     SDL_Texture     *texture;
 
-    colorInt = this->colors[text.getColor()];
+    colorInt = this->colors[ui.getColor()];
     color.r = ((colorInt) & 255);
     color.g = ((colorInt >> 8) & 255);
     color.b = ((colorInt >> 16) & 255);
     color.a = ((colorInt >> 24) & 255);
-    fontName = text.getFontName();
+    fontName = ui.getFontName();
     if (this->fonts[fontName] == 0) {
-        this->fonts[fontName] = TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(), text.getFontSize());
+        this->fonts[fontName] = TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(), ui.getFontSize());
     }
-    surface = TTF_RenderText_Blended(fonts[fontName], text.getText().c_str(), color);
+    surface = TTF_RenderText_Blended(fonts[fontName], ui.getText().c_str(), color);
     texture = SDL_CreateTextureFromSurface(this->render, surface);
     SDL_FreeSurface(surface);
-    if (text.getPos().x < 0 || text.getPos().y < 0)
+    if (ui.getPos().x < 0 || ui.getPos().y < 0)
     {
-      rect->x = this->size.x * STEP / 2 - text.getFontSize() * text.getText().length() / 4;
+      rect->x = this->size.x * STEP / 2 - ui.getFontSize() * ui.getText().length() / 4;
       rect->y = STEP;
     }
     SDL_QueryTexture(texture, NULL, NULL, &(rect->w), &(rect->h));
     SDL_RenderCopy(this->render, texture, NULL, rect);
     SDL_DestroyTexture(texture);
-    // SDL_FreeSurface(surface);
 }
 
 void sound()

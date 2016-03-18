@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Thu Mar 17 14:58:04 2016 Adrien WERY
+** Last update	Fri Mar 18 20:51:52 2016 Adrien WERY
 */
 
 #include "Snake.hpp"

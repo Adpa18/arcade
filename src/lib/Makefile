@@ -1,5 +1,6 @@
 SUBDIRS	=	ncurses	\
 			sdl2	\
+			openGL
 
 all		:
 	@echo -e "\033[32m=> Compiling Graphics\033[00m"
