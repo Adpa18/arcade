@@ -3,3 +3,4 @@
 -I./inc/games/snake
 -I./inc/games/Pacman
 -I./inc
+-I./library/SDL2/include/SDL2/
