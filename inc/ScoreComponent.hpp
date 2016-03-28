@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Thu Mar 17 14:18:50 2016 Adrien WERY
+** Last update	Fri Mar 25 16:35:34 2016 Adrien WERY
 */
 
 #ifndef SCORECOMPONENT_HPP_
@@ -14,6 +14,8 @@
 # include <string>
 # include <iostream>
 # include <fstream>
+# include <vector>
+# include <cstring>
 # include "UIComponent.hpp"
 
 typedef     struct s_header {
@@ -34,7 +36,7 @@ private:
     size_t      score;
     UIComponent *text;
     t_header    header;
-    t_highScore hightScore[10];
+    std::vector<t_highScore> hightScore;
 public:
   ScoreComponent(const std::string &game);
   virtual ~ScoreComponent();

@@ -25,11 +25,12 @@ private:
     std::map<std::string, TTF_Font*> fonts;
     std::map<std::string, SDL_Texture*> tex;
     std::map<SDL_Keycode, int>    keyMap = {
-        {SDLK_ESCAPE, ESC},
-        {SDLK_UP, UP}, {SDLK_DOWN, DOWN}, {SDLK_LEFT, LEFT}, {SDLK_RIGHT, RIGHT},
-        {SDLK_0, KEY_0}, {SDLK_F1, KEY_1}, {SDLK_F2, KEY_2}, {SDLK_F3, KEY_3},
-        {SDLK_F4, KEY_4}, {SDLK_F5, KEY_5}, {SDLK_F6, KEY_6}, {SDLK_F7, KEY_7},
-        {SDLK_F8, KEY_8}, {SDLK_F9, KEY_9}
+        {SDL_SCANCODE_ESCAPE, ESC}, {SDL_SCANCODE_UP, UP}, {SDL_SCANCODE_DOWN, DOWN},
+        {SDL_SCANCODE_LEFT, LEFT}, {SDL_SCANCODE_RIGHT, RIGHT},
+        {SDL_SCANCODE_0, KEY_0}, {SDL_SCANCODE_1, KEY_1}, {SDL_SCANCODE_2, KEY_2},
+        {SDL_SCANCODE_3, KEY_3}, {SDL_SCANCODE_4, KEY_4}, {SDL_SCANCODE_5, KEY_5},
+        {SDL_SCANCODE_6, KEY_6}, {SDL_SCANCODE_7, KEY_7}, {SDL_SCANCODE_8, KEY_8},
+        {SDL_SCANCODE_9, KEY_9}
     };
     std::map<ComponentColor, int>    colors = {
         {BLACK, 0x000000},
@@ -41,8 +42,6 @@ private:
         {CYAN, 0x00FFFF},
         {WHITE, 0xFFFFFF}
     };
-    std::map<size_t, SDL_Surface *> texts;
-
     Vector2         size;
     std::string     background;
 public:

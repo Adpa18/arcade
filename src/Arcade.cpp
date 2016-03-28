@@ -63,9 +63,9 @@ void	*arcade::Arcade::initSo(std::string const &name, SOTYPE type)
 
 bool    arcade::Arcade::run(const std::string &graphPath)
 {
-    int	            key;
-    unsigned int    graphPos;
-    unsigned int    gamePos;
+    int	   key;
+    int    graphPos;
+    int    gamePos;
 
     graphPos = find(this->graphsNames.begin(), this->graphsNames.end(), graphPath.substr(graphPath.find_last_of('/') + 1, graphPath.length())) - this->graphsNames.begin();
     gamePos = 0;
@@ -85,10 +85,9 @@ bool    arcade::Arcade::run(const std::string &graphPath)
             } else if (key == KEY_5) {
                 ++gamePos;
             }
-            graphPos %= graphsNames.size();
-            gamePos %= gamesNames.size();
-            graphs[graphPos]->init(games[gamePos]->getName(), games[gamePos]->getSize(),
-            games[gamePos]->getInfos());
+            graphPos = (graphPos < 0) ? graphsNames.size() - 1 : graphPos % graphsNames.size();
+            gamePos = (gamePos < 0) ? gamesNames.size() - 1 : gamePos % gamesNames.size();
+            graphs[graphPos]->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
         }
         graphs[graphPos]->display(games[gamePos]->compute(key));
         std::this_thread::sleep_for(interval);

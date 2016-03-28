@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Fri Mar 18 20:51:52 2016 Adrien WERY
+** Last update	Mon Mar 28 12:28:54 2016 Adrien WERY
 */
 
 #include "Snake.hpp"
@@ -94,6 +94,7 @@ std::stack<AComponent*>     Snake::compute(int key)
 {
     std::stack<AComponent*> components;
     Vector2                 snakePos = this->snake.front()->getPos();
+
     if (key == LEFT && dir != DIR_RIGHT) {
         dir = DIR_LEFT;
     } else if (key == RIGHT && dir != DIR_LEFT) {
@@ -151,6 +152,8 @@ std::stack<AComponent*>     Snake::compute(int key)
         this->snake[i]->setSprite2D(this->getImg(i));
         components.push(this->snake[i]);
     }
+    components.push(this->target);
+    components.push(this->background);
     return (components);
 }
 
@@ -171,6 +174,7 @@ void                        Snake::restart()
         "snakeBackground2.jpg"
     };
     this->dir = DIR_UP;
+    this->score->writeScore();
     this->background->setSprite2D(backgroundSprites[rand() % 3]);
     this->score->getScoreUI()->setText("Score : 0");
     this->snake.erase(this->snake.begin(), this->snake.end());

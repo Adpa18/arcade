@@ -3,7 +3,6 @@
 
 OpenGL::OpenGL (void) : size(0, 0)
 {
-    std::cout << "StartInit => Lib OpenGL" << std::endl;
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     throw std::runtime_error(std::string("Can't init SDL") + SDL_GetError());
     if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1)
@@ -27,6 +26,7 @@ OpenGL::~OpenGL ()
 
 void  OpenGL::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
 {
+    std::cout << "StartInit => Lib OpenGL" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
     SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL)))
@@ -57,7 +57,7 @@ int OpenGL::eventManagment()
     SDL_PollEvent(&event);
     if (event.key.type != SDL_KEYDOWN)
     return (-1);
-    return (this->keyMap[event.key.keysym.sym]);
+    return (this->keyMap[event.key.keysym.scancode]);
 }
 
 void    OpenGL::drawCube(Vector2 pos, Vector2 size, Vector2 rot)

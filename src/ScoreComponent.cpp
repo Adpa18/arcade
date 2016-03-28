@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Thu Mar 17 14:57:13 2016 Adrien WERY
+** Last update	Mon Mar 28 11:06:35 2016 Adrien WERY
 */
 
 #include "ScoreComponent.hpp"
@@ -52,7 +52,11 @@ void      ScoreComponent::setScore(size_t score)
 void    ScoreComponent::writeScore()
 {
     std::fstream file;
+    t_highScore  hScore;
 
+    strcpy(hScore.name, "Toto");
+    hScore.score = this->score;
+    this->hightScore.push_back(hScore);
     file.open("./assets/scores/" + this->game, std::fstream::in | std::fstream::binary);
     if (file.is_open()) {
         file.write((char*)&this->header, sizeof(t_header));
@@ -62,4 +66,6 @@ void    ScoreComponent::writeScore()
     } else {
         std::cerr << "Cannot save score" << std::endl;
     }
+    this->score = 0;
+    this->text->setText("Score : 0");
 }

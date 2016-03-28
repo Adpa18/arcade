@@ -3,7 +3,6 @@
 
 Sdl2::Sdl2 (void) : size(0, 0)
 {
-    std::cout << "StartInit => Lib Sdl2" << std::endl;
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
         throw std::runtime_error(std::string("Can't init SDL") + SDL_GetError());
     if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1)
@@ -15,18 +14,13 @@ Sdl2::Sdl2 (void) : size(0, 0)
 Sdl2::~Sdl2 ()
 {
     this->destroy();
-    for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
-        TTF_CloseFont(it->second);
-    }
-    for (std::map<std::string, SDL_Texture*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
-        SDL_DestroyTexture(it->second);
-    }
     TTF_Quit();
     SDL_Quit();
 }
 
 void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
 {
+    std::cout << "StartInit => Lib Sdl2" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
@@ -38,8 +32,16 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
 
 void    Sdl2::destroy()
 {
-    SDL_DestroyWindow(this->win);
+    for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
+        TTF_CloseFont(it->second);
+    }
+    for (std::map<std::string, SDL_Texture*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
+        SDL_DestroyTexture(it->second);
+    }
+    fonts.clear();
+    tex.clear();
     SDL_DestroyRenderer(this->render);
+    SDL_DestroyWindow(this->win);
 }
 
 int Sdl2::eventManagment()
@@ -48,7 +50,7 @@ int Sdl2::eventManagment()
     SDL_PollEvent(&event);
     if (event.key.type != SDL_KEYDOWN)
         return (-1);
-    return (this->keyMap[event.key.keysym.sym]);
+    return (this->keyMap[event.key.keysym.scancode]);
 }
 
 void Sdl2::display(std::stack<AComponent*> components)
