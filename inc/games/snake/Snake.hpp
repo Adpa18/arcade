@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Thu Mar 17 12:44:42 2016 Adrien WERY
+** Last update	Thu Mar 17 14:08:55 2016 Adrien WERY
 */
 
 #ifndef SNAKE_HPP_
@@ -18,6 +18,7 @@
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
 # include "AudioComponent.hpp"
+# include "ScoreComponent.hpp"
 
 # define WIDTH  50
 # define HEIGHT 30
@@ -30,9 +31,8 @@ class Snake : public AGame {
 private:
     AComponent      *old_target;
     GameComponent   *target;
-    UIComponent   *scoreText;
+    ScoreComponent  *score;
     AudioComponent  *sound;
-    size_t          score;
     std::vector<GameComponent*> snake;
     BackgroundComponent *background;
     direction       dir;

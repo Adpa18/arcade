@@ -1,13 +1,3 @@
-/*
-** Ncurses.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Tue Mar 08 21:25:48 2016 Nicolas Constanty
-** Last update	Thu Mar 17 05:55:24 2016 Nicolas Constanty
-*/
-
 #ifndef NCURSES_HPP_
 # define NCURSES_HPP_
 
@@ -25,12 +15,16 @@
 
 class Ncurses : public IGraph {
 private:
+    Vector2         size;
   bool				valid_size;
   ncurses::Window	*wind;
   ncurses::Window	*main_wind;
   std::map<int, int>    keyMap = {
       {27, ESC},
-      {KEY_UP, UP}, {KEY_DOWN, DOWN}, {KEY_LEFT, LEFT}, {KEY_RIGHT, RIGHT}
+      {KEY_UP, UP}, {KEY_DOWN, DOWN}, {KEY_LEFT, LEFT}, {KEY_RIGHT, RIGHT},
+      {48, KEY_0}, {49, KEY_1}, {50, KEY_2}, {51, KEY_3},
+      {52, KEY_4}, {53, KEY_5}, {54, KEY_6}, {55, KEY_7},
+      {56, KEY_8}, {57, KEY_9}
   };
   std::map<AComponent *, WINDOW *> texts;
 
@@ -43,13 +37,23 @@ public:
 
   virtual int eventManagment();
   virtual void display(std::stack<AComponent*>);
-  virtual void init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
-
+  virtual void init(const std::string &name, Vector2 s, std::stack<AComponent*> cache);
+  virtual void    destroy();
 };
 
 extern "C" IGraph *loadLib()
 {
   return (new Ncurses());
+}
+
+extern "C" void initLib(IGraph *graph, const std::string &name, Vector2 size, std::stack<AComponent *> cache)
+{
+  static_cast<Ncurses *>(graph)->init(name, size, cache);
+}
+
+extern "C" void destroyLib(IGraph *graph)
+{
+  static_cast<Ncurses *>(graph)->destroy();
 }
 
 
