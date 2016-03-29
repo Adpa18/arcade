@@ -46,19 +46,22 @@ private:
     };
     std::map<size_t, SDL_Surface *> texts;
 
-    Vector2         size;
+    Vector2<int>         size;
     std::string     background;
+    bool						is_init;
+    bool						is_destroy;
 public:
     OpenGL (void);
     virtual ~OpenGL ();
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
+    virtual void    init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache);
+    virtual void    init(const std::string &name, Vector2<int> size);
     virtual void    destroy();
 
 private:
-    void            drawCube(Vector2 pos, Vector2 size, Vector2 rot);
+    void            drawCube(Vector2<int> pos, Vector2<int> size, Vector2<int> rot);
     void            displayGame(const GameComponent &game);
     void            displayUI(const UIComponent &ui);
     void            displayBackground(const BackgroundComponent &background);
@@ -71,7 +74,7 @@ extern "C" IGraph *loadLib()
     return (new OpenGL());
 }
 
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2 size, std::stack<AComponent *> cache)
+extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<int> size, std::stack<AComponent *> cache)
 {
   static_cast<OpenGL *>(graph)->init(name, size, cache);
 }

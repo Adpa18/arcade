@@ -7,7 +7,6 @@ DEP_SRC		=	$(BASE)src/AComponent.cpp		\
 						$(BASE)src/GameComponent.cpp	\
 						$(BASE)src/UIComponent.cpp	\
 						$(BASE)src/AudioComponent.cpp		\
-						$(BASE)src/Vector2.cpp			\
 
 CC			=	g++ -std=gnu++11
 
@@ -15,7 +14,7 @@ RM			=	rm -rf
 
 NAME		=	$(BASE)lib/lib_arcade_ncurses.so
 
-CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC
+CPPFLAGS	=	-g -W -Wall -Wextra -Werror -fPIC
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/ncurses/ -I$(BASE)inc/
 

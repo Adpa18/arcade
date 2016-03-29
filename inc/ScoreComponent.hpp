@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Fri Mar 25 16:35:34 2016 Adrien WERY
+** Last update	Mon Mar 28 21:22:43 2016 Nicolas Constanty
 */
 
 #ifndef SCORECOMPONENT_HPP_

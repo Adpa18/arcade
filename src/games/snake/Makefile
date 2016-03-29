@@ -9,7 +9,6 @@ DEP_SRC		=	$(BASE)src/AComponent.cpp		\
 				$(BASE)src/UIComponent.cpp	\
 				$(BASE)src/AudioComponent.cpp		\
 				$(BASE)src/ScoreComponent.cpp		\
-				$(BASE)src/Vector2.cpp			\
 
 CC			=	g++ -std=gnu++11
 

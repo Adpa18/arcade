@@ -9,11 +9,14 @@ OpenGL::OpenGL (void) : size(0, 0)
     throw std::runtime_error(std::string("Can't init IMG") + SDL_GetError());
     if (TTF_Init() == -1)
     throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
+    this->is_init = false;
+    this->is_destroy = false;
 }
 
 OpenGL::~OpenGL ()
 {
-    this->destroy();
+    if (is_destroy == false)
+      this->destroy();
     for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
         TTF_CloseFont(it->second);
     }
@@ -24,8 +27,9 @@ OpenGL::~OpenGL ()
     SDL_Quit();
 }
 
-void  OpenGL::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
+void  OpenGL::init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache)
 {
+    this->is_init = true;
     std::cout << "StartInit => Lib OpenGL" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
@@ -45,8 +49,30 @@ void  OpenGL::init(const std::string &name, Vector2 size, std::stack<AComponent*
     this->display(cache);
 }
 
+void  OpenGL::init(const std::string &name, Vector2<int> size)
+{
+    this->is_init = true;
+    std::cout << "StartInit => Lib OpenGL" << std::endl;
+    this->size = size;
+    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
+    SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL)))
+    throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
+    this->gl = SDL_GL_CreateContext(this->win);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
+    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+    SDL_GL_SetSwapInterval(1);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(70, (double)((size.x * STEP) / (double)(size.y * STEP)), 1, 1000);
+    glEnable(GL_DEPTH_TEST);
+    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+}
+
 void    OpenGL::destroy()
 {
+    is_destroy = true;
     SDL_GL_DeleteContext(this->gl);
     SDL_DestroyWindow(this->win);
 }
@@ -60,7 +86,7 @@ int OpenGL::eventManagment()
     return (this->keyMap[event.key.keysym.scancode]);
 }
 
-void    OpenGL::drawCube(Vector2 pos, Vector2 size, Vector2 rot)
+void    OpenGL::drawCube(Vector2<int> pos, Vector2<int> size, Vector2<int> rot)
 {
     glPushMatrix();
     glTranslatef(pos.x, pos.y, 0);
@@ -110,6 +136,8 @@ void OpenGL::display(std::stack<AComponent*> components)
     BackgroundComponent   *Bobj;
 
     // glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+    if (is_init == false)
+      init("OpenGl", Vector2<int>(50, 30));
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(50, 0, 20, 0, 0, 0, 0, 0, 1);
@@ -128,7 +156,7 @@ void OpenGL::display(std::stack<AComponent*> components)
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
             this->displayBackground(*Bobj);
         } else {
-            this->drawCube(obj->getPos(), obj->getSize(), Vector2(0, 0));
+            this->drawCube(obj->getPos(), obj->getSize(), Vector2<int>(0, 0));
         }
     }
     SDL_GL_SwapWindow(this->win);
@@ -136,7 +164,7 @@ void OpenGL::display(std::stack<AComponent*> components)
 
 void    OpenGL::displayGame(const GameComponent &game)
 {
-    this->drawCube(game.getPos(), game.getSize(), Vector2(0, 0));
+    this->drawCube(game.getPos(), game.getSize(), Vector2<int>(0, 0));
 }
 
 void    OpenGL::displayBackground(const BackgroundComponent &background)
@@ -154,14 +182,14 @@ void    OpenGL::displayBackground(const BackgroundComponent &background)
     glEnd();
     glPopMatrix();
     for (int i = 0; i <= size.x; i++) {
-        this->drawCube(Vector2(i, 0), Vector2(1, 1), Vector2(0, 0));
+        this->drawCube(Vector2<int>(i, 0), Vector2<int>(1, 1), Vector2<int>(0, 0));
     }
     for (int i = 1; i < size.y; i++) {
-        this->drawCube(Vector2(0, i), Vector2(1, 1), Vector2(0, 0));
-        this->drawCube(Vector2(size.x, i), Vector2(1, 1), Vector2(0, 0));
+        this->drawCube(Vector2<int>(0, i), Vector2<int>(1, 1), Vector2<int>(0, 0));
+        this->drawCube(Vector2<int>(size.x, i), Vector2<int>(1, 1), Vector2<int>(0, 0));
     }
     for (int i = 0; i <= size.x; i++) {
-        this->drawCube(Vector2(i, size.y), Vector2(1, 1), Vector2(0, 0));
+        this->drawCube(Vector2<int>(i, size.y), Vector2<int>(1, 1), Vector2<int>(0, 0));
     }
 }
 

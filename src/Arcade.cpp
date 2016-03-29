@@ -39,13 +39,13 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
     const char    *dlsym_error;
     const char    *symbol;
     typedef void  *(*fptr)();
-    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2, std::stack<AComponent*>);
+    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2<int>, std::stack<AComponent*>);
     typedef void  *(*f_destroy)(IGraph *);
     bool					has_init;
 
     has_init = true;
     if (type != GAME && type != GRAPH)
-      ERROR("Type Error", NULL);
+      std::runtime_error("Type Error");
     dlerror();
     if (name.find(".so") == std::string::npos)
     {
@@ -53,33 +53,27 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
         ((type == GAME)?std::string("games"):std::string("lib")) +
         "/lib_arcade_" + name + ".so").c_str(), RTLD_NOW | RTLD_GLOBAL);
     }
-    else {
-        myso = dlopen(name.c_str(), RTLD_NOW | RTLD_GLOBAL);
-    }
-    if (!myso) {
-        ERROR("Cannot open library: " << dlerror(), NULL);
-    }
+    else
+      myso = dlopen(name.c_str(), RTLD_NOW | RTLD_GLOBAL);
+    if (!myso)
+        std::runtime_error(std::string("Cannot open library: ") + dlerror());
     symbol = (type == GAME) ? "loadGame" : "loadLib";
     fptr load = (void *(*)())(dlsym(myso, symbol));
-    if ((dlsym_error = dlerror())) {
-        ERROR("Cannot load symbol '" << symbol << "': " << dlsym_error, NULL);
-    }
+    if ((dlsym_error = dlerror()))
+      std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
     libs.push(myso);
     //check if init exist
-    f_init ini = (void *(*)(IGraph *, const std::string &, Vector2, std::stack<AComponent*>))(dlsym(myso, "initLib"));
+    f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<int>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
     if ((dlsym_error = dlerror())) {
       (void)ini;
       has_init = false;
-      // ERROR("Cannot load symbol '" << symbol << "': " << dlsym_error, NULL);
     }
     f_destroy dest = (void *(*)(IGraph *))(dlsym(myso, "destroyLib"));
     if ((dlsym_error = dlerror()))
       {
         (void)dest;
         has_init = false;
-        // ERROR("Cannot load symbol '" << symbol << "': " << dlsym_error, NULL);
       }
-    std::cout << name << " " << has_init << std::endl;
     if (has_init)
       return (new std::pair<void *, bool>(load(), true));
   return (new std::pair<void *, bool>(load(), false));
@@ -108,9 +102,11 @@ bool    arcade::Arcade::run(const std::string &graphPath)
     GameLoop:
         if ((key = graphs[graphPos].first->eventManagment()) == ESC) {
             return (true);
-        } else if (key == KEY_2 || key == KEY_3 || key == KEY_3 || key == KEY_4) {
+        } else if (key == KEY_2 || key == KEY_3 || key == KEY_4 || key == KEY_5) {
             if (graphs[graphPos].second)
               graphs[graphPos].first->destroy();
+            else
+              delete graphs[graphPos].first;
             if (key == KEY_2) {
                 --graphPos;
             } else if (key == KEY_3) {
@@ -124,6 +120,8 @@ bool    arcade::Arcade::run(const std::string &graphPath)
             gamePos = (gamePos < 0) ? gamesNames.size() - 1 : gamePos % gamesNames.size();
             if (graphs[graphPos].second)
               graphs[graphPos].first->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
+            else
+              graphs[graphPos].first = static_cast<IGraph *>(initSo(graphsNames[graphPos], GRAPH)->first);
         }
         graphs[graphPos].first->display(games[gamePos]->compute(key));
         std::this_thread::sleep_for(interval);

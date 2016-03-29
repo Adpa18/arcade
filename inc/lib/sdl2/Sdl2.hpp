@@ -42,15 +42,18 @@ private:
         {CYAN, 0x00FFFF},
         {WHITE, 0xFFFFFF}
     };
-    Vector2         size;
+    Vector2<int>         size;
     std::string     background;
+    bool						is_init;
+    bool						is_destroy;
 public:
     Sdl2 (void);
     virtual ~Sdl2 ();
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    virtual void    init(const std::string &name, Vector2 size, std::stack<AComponent*> cache);
+    virtual void    init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache);
+    virtual void    init(const std::string &name, Vector2<int> size);
     virtual void    destroy();
 
 private:
@@ -66,7 +69,7 @@ extern "C" IGraph *loadLib()
     return (new Sdl2());
 }
 
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2 size, std::stack<AComponent *> cache)
+extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<int> size, std::stack<AComponent *> cache)
 {
   static_cast<Sdl2 *>(graph)->init(name, size, cache);
 }

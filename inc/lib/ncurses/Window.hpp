@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Wed Mar 09 13:26:40 2016 Nicolas Constanty
+** Last update	Mon Mar 28 21:28:24 2016 Nicolas Constanty
 */
 
 #ifndef WINDOW_HPP_
@@ -17,20 +17,20 @@
 namespace ncurses {
   class Window {
   private:
-    Vector2	size;
-    Vector2	pos;
+    Vector2<int>	size;
+    Vector2<int>	pos;
     WINDOW	*parent;
     WINDOW	*wind;
   public:
-    Window (Vector2 &s, Vector2 &p, WINDOW *pa);
+    Window (Vector2<int> &s, Vector2<int> &p, WINDOW *pa);
     virtual ~Window ();
-    Vector2	getSize() const;
+    Vector2<int>	getSize() const;
     void		setSize();
-    Vector2 getPos() const;
+    Vector2<int> getPos() const;
     void		setPos();
     WINDOW	*getWind() const;
     void	  close();
-    void		setWind(Vector2 &s, Vector2 &p, WINDOW *pa);
+    void		setWind(Vector2<int> &s, Vector2<int> &p, WINDOW *pa);
   };
 };
 

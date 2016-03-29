@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Mon Mar 28 11:06:35 2016 Adrien WERY
+** Last update	Tue Mar 29 03:23:49 2016 Nicolas Constanty
 */
 
 #include "ScoreComponent.hpp"
@@ -15,16 +15,16 @@ ScoreComponent::ScoreComponent(const std::string &game) : game(game)
     std::fstream file;
 
     file.open("./assets/scores/" + game, std::fstream::out | std::fstream::binary);
-    if (file.is_open()) {
-        file.read((char*)&this->header, sizeof(t_header));
-        for (int i = 0; i < this->header.nbrHighScore; i++) {
-            file.read((char*)&this->hightScore[i], sizeof(t_highScore));
-        }
-        file.close();
-    } else {
-        writeScore();
-    }
-    this->text = new UIComponent(Vector2(-1, -1), Vector2(50, 5), WHITE, "", "frenchy", 60);
+    // if (file.is_open()) {
+    //     file.read((char*)&this->header, sizeof(t_header));
+    //     for (int i = 0; i < this->header.nbrHighScore; i++) {
+    //         file.read((char*)&this->hightScore[i], sizeof(t_highScore));
+    //     }
+    //     file.close();
+    // } else {
+    //     writeScore();
+    // }
+    this->text = new UIComponent(Vector2<int>(-1, -1), Vector2<int>(50, 5), WHITE, "", "frenchy", 60);
     this->score = 0;
 }
 

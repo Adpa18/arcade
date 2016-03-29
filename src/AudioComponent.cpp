@@ -5,12 +5,12 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:40:56 2016 Nicolas Constanty
-** Last update	Thu Mar 17 02:05:05 2016 Nicolas Constanty
+** Last update	Mon Mar 28 21:23:02 2016 Nicolas Constanty
 */
 
 #include "AudioComponent.hpp"
 
-AudioComponent::AudioComponent(Vector2 const &pos, ComponentColor color,
+AudioComponent::AudioComponent(Vector2<int> const &pos, ComponentColor color,
   char const s_term, std::string const &s_2D, std::string const &s_3D)
  : AComponent(pos, color)
 {

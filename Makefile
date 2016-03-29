@@ -1,7 +1,6 @@
 SRC_DIR		=	src/
 
 SRC			=		$(SRC_DIR)Arcade.cpp			\
-					$(SRC_DIR)Vector2.cpp			\
 					$(SRC_DIR)AGame.cpp				\
 					$(SRC_DIR)AComponent.cpp		\
 					$(SRC_DIR)GameComponent.cpp		\
@@ -28,8 +27,6 @@ OBJ			=	$(SRC:%cpp=%o)
 	@$(CC) -c $(CPPFLAGS) $< -o $@
 
 
-$(NAME)	:	$(OBJ)
-	@$(CC) $(OBJ) -o $(NAME) $(LFLAGS)
 
 all		:	$(NAME)
 	@echo -e "\033[32mCompiling Arcade\033[00m"
@@ -38,6 +35,9 @@ all		:	$(NAME)
 	@make --no-print-directory -C $(SRC_DIR)lib
 	@make --no-print-directory -C $(SRC_DIR)games
 	@echo -e "\033[33mArcade Compiled\033[00m"
+
+$(NAME)	:	$(OBJ)
+	@$(CC) $(OBJ) -o $(NAME) $(LFLAGS)
 
 clean	:
 	@echo -e "\033[31mRemoving Objects\033[00m"

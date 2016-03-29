@@ -1,0 +1,181 @@
+==9893== Memcheck, a memory error detector
+==9893== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==9893== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==9893== Command: ./arcade2 lib/lib_arcade_ncurses.so
+==9893== Parent PID: 25862
+==9893== 
+--9893-- 
+--9893-- Valgrind options:
+--9893--    -v
+--9893--    --log-file=shit.log
+--9893-- Contents of /proc/version:
+--9893--   Linux version 4.4.1-4.g4dac1be-default (geeko@buildhost) (gcc version 5.3.1 20151207 [gcc-5-branch revision 231355] (SUSE Linux) ) #1 SMP PREEMPT Thu Feb 11 08:48:30 UTC 2016 (4dac1be)
+--9893-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--9893-- Page sizes: currently 4096, max supported 4096
+--9893-- Valgrind library directory: /usr/lib64/valgrind
+--9893-- Reading syms from /home/consta_n/rendu/cpp_arcade/arcade2
+--9893-- Reading syms from /lib64/ld-2.19.so
+--9893-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--9893--    object doesn't have a symbol table
+--9893--    object doesn't have a dynamic symbol table
+--9893-- Scheduler: using generic scheduler lock implementation.
+--9893-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==9893== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-9893-by-consta_n-on-pc-consta_n
+==9893== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-9893-by-consta_n-on-pc-consta_n
+==9893== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-9893-by-consta_n-on-pc-consta_n
+==9893== 
+==9893== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==9893== don't want to do, unless you know exactly what you're doing,
+==9893== or are doing some strange experiment):
+==9893==   /usr/lib64/valgrind/../../bin/vgdb --pid=9893 ...command...
+==9893== 
+==9893== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==9893==   /path/to/gdb ./arcade2
+==9893== and then give GDB the following command
+==9893==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=9893
+==9893== --pid is optional if only one valgrind process is running
+==9893== 
+--9893-- REDIR: 0x40177d0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3806bd01 (???)
+--9893-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--9893--    object doesn't have a symbol table
+--9893-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--9893--    object doesn't have a symbol table
+==9893== WARNING: new redirection conflicts with existing -- ignoring it
+--9893--     old: 0x040177d0 (strlen              ) R-> (0000.0) 0x3806bd01 ???
+--9893--     new: 0x040177d0 (strlen              ) R-> (2007.0) 0x04c2c730 strlen
+--9893-- REDIR: 0x4017580 (ld-linux-x86-64.so.2:index) redirected to 0x4c2c2e0 (index)
+--9893-- REDIR: 0x40177a0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2d880 (strcmp)
+--9893-- REDIR: 0x40184d0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c30330 (mempcpy)
+--9893-- Reading syms from /lib64/libdl-2.19.so
+--9893-- Reading syms from /usr/lib64/libstdc++.so.6.0.19
+--9893--    object doesn't have a symbol table
+--9893-- Reading syms from /lib64/libm-2.19.so
+--9893-- Reading syms from /lib64/libgcc_s.so.1
+--9893--    object doesn't have a symbol table
+--9893-- Reading syms from /lib64/libc-2.19.so
+--9893-- REDIR: 0x58de530 (libc.so.6:strcasecmp) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58e0820 (libc.so.6:strncasecmp) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58ddcb0 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58dc030 (libc.so.6:rindex) redirected to 0x4c2bfc0 (rindex)
+--9893-- REDIR: 0x58da330 (libc.so.6:strlen) redirected to 0x4c2c670 (strlen)
+--9893-- REDIR: 0x58dd710 (libc.so.6:__GI_memcmp) redirected to 0x4c2f110 (__GI_memcmp)
+--9893-- REDIR: 0x58d88e0 (libc.so.6:strcmp) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x597cfd0 (libc.so.6:__strcmp_ssse3) redirected to 0x4c2d740 (strcmp)
+--9893-- REDIR: 0x509c9a0 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c29600 (operator new(unsigned long))
+--9893-- REDIR: 0x58e2f00 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58e8e20 (libc.so.6:__memcpy_sse2_unaligned) redirected to 0x4c2dc40 (memcpy@@GLIBC_2.14)
+--9893-- REDIR: 0x58d46e0 (libc.so.6:malloc) redirected to 0x4c290a0 (malloc)
+--9893-- REDIR: 0x58d4db0 (libc.so.6:realloc) redirected to 0x4c2b3a0 (realloc)
+--9893-- REDIR: 0x58d5050 (libc.so.6:calloc) redirected to 0x4c2b180 (calloc)
+--9893-- REDIR: 0x58d4d20 (libc.so.6:free) redirected to 0x4c2a310 (free)
+--9893-- REDIR: 0x58e2f50 (libc.so.6:__GI_memcpy) redirected to 0x4c2e220 (__GI_memcpy)
+--9893-- REDIR: 0x58ddb10 (libc.so.6:__GI_memmove) redirected to 0x4c2fbf0 (__GI_memmove)
+--9893-- REDIR: 0x509ad10 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c2a7e0 (operator delete(void*))
+--9893-- Reading syms from /home/consta_n/rendu/cpp_arcade/games/lib_arcade_snake.so
+--9893-- REDIR: 0x58dd6d0 (libc.so.6:bcmp) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x599ce30 (libc.so.6:__memcmp_sse4_1) redirected to 0x4c2f190 (__memcmp_sse4_1)
+--9893-- REDIR: 0x58dcc80 (libc.so.6:__GI_strstr) redirected to 0x4c305c0 (__strstr_sse2)
+--9893-- REDIR: 0x509cab0 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4c29d20 (operator new[](unsigned long))
+--9893-- REDIR: 0x509ad40 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4c2ad60 (operator delete[](void*))
+--9893-- REDIR: 0x598ce60 (libc.so.6:__memmove_ssse3_back) redirected to 0x4c2d9e0 (memcpy@GLIBC_2.2.5)
+--9893-- Reading syms from /home/consta_n/rendu/cpp_arcade/games/lib_arcade_pacman.so
+--9893-- Reading syms from /home/consta_n/rendu/cpp_arcade/lib/lib_arcade_ncurses.so
+--9893-- Reading syms from /lib64/libncurses.so.6.0
+--9893--    object doesn't have a symbol table
+--9893-- Reading syms from /lib64/libtinfo.so.6.0
+--9893--    object doesn't have a symbol table
+--9893-- REDIR: 0x58da750 (libc.so.6:strncmp) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58d9d70 (libc.so.6:strcpy) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58d8690 (libc.so.6:index) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58da710 (libc.so.6:strncat) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x594b610 (libc.so.6:__memcpy_chk) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+--9893-- REDIR: 0x58dd140 (libc.so.6:strstr) redirected to 0x4a23770 (_vgnU_ifunc_wrapper)
+==9893== Conditional jump or move depends on uninitialised value(s)
+==9893==    at 0x50F865A: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893== 
+==9893== Use of uninitialised value of size 8
+==9893==    at 0x50F865C: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893== 
+==9893== Invalid read of size 4
+==9893==    at 0x50F865C: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==  Address 0x1000000022 is not stack'd, malloc'd or (recently) free'd
+==9893== 
+==9893== 
+==9893== Process terminating with default action of signal 11 (SIGSEGV)
+==9893==  Access not within mapped region at address 0x1000000022
+==9893==    at 0x50F865C: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==  If you believe this happened as a result of a stack
+==9893==  overflow in your program's main thread (unlikely but
+==9893==  possible), you can try to increase the size of the
+==9893==  main thread stack using the --main-stacksize= flag.
+==9893==  The main thread stack size used in this run was 8388608.
+==9893== 
+==9893== HEAP SUMMARY:
+==9893==     in use at exit: 62,174 bytes in 467 blocks
+==9893==   total heap usage: 743 allocs, 276 frees, 165,079 bytes allocated
+==9893== 
+==9893== Searching for pointers to 467 not-freed blocks
+==9893== Checked 285,648 bytes
+==9893== 
+==9893== LEAK SUMMARY:
+==9893==    definitely lost: 144 bytes in 3 blocks
+==9893==    indirectly lost: 0 bytes in 0 blocks
+==9893==      possibly lost: 717 bytes in 19 blocks
+==9893==    still reachable: 61,313 bytes in 445 blocks
+==9893==         suppressed: 0 bytes in 0 blocks
+==9893== Rerun with --leak-check=full to see details of leaked memory
+==9893== 
+==9893== Use --track-origins=yes to see where uninitialised values come from
+==9893== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==9893== 
+==9893== 1 errors in context 1 of 3:
+==9893== Invalid read of size 4
+==9893==    at 0x50F865C: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==  Address 0x1000000022 is not stack'd, malloc'd or (recently) free'd
+==9893== 
+==9893== 
+==9893== 1 errors in context 2 of 3:
+==9893== Use of uninitialised value of size 8
+==9893==    at 0x50F865C: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893== 
+==9893== 
+==9893== 1 errors in context 3 of 3:
+==9893== Conditional jump or move depends on uninitialised value(s)
+==9893==    at 0x50F865A: std::string::assign(std::string const&) (in /usr/lib64/libstdc++.so.6.0.19)
+==9893==    by 0x410420: DualTextComponent::setSubTitle(std::string const&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40BA52: ArcadeMenu::updateTexts() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40AEB3: ArcadeMenu::ArcadeMenu(arcade::Arcade&) (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x403416: arcade::Arcade::Run() (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893==    by 0x40FAE6: main (in /home/consta_n/rendu/cpp_arcade/arcade2)
+==9893== 
+==9893== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

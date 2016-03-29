@@ -2,8 +2,7 @@ BASE		=   ../../../
 
 SRC			=	OpenGL.cpp	\
 
-DEP_SRC		=	$(BASE)src/Vector2.cpp					\
-						$(BASE)src/AComponent.cpp		\
+DEP_SRC		=	$(BASE)src/AComponent.cpp		\
 						$(BASE)src/GameComponent.cpp	\
 						$(BASE)src/BackgroundComponent.cpp	\
 						$(BASE)src/UIComponent.cpp		\

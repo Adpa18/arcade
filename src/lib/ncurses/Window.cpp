@@ -5,12 +5,12 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Thu Mar 10 16:35:59 2016 Nicolas Constanty
+** Last update	Mon Mar 28 21:28:28 2016 Nicolas Constanty
 */
 #include <iostream>
 #include "Window.hpp"
 
-ncurses::Window::Window (Vector2 &s, Vector2 &p, WINDOW *pa)
+ncurses::Window::Window (Vector2<int> &s, Vector2<int> &p, WINDOW *pa)
  : size(s), pos(p)
 {
   this->setWind(s, p, pa);
@@ -22,7 +22,7 @@ ncurses::Window::~Window ()
     delwin(this->wind);
 }
 
-Vector2	ncurses::Window::getSize() const
+Vector2<int>	ncurses::Window::getSize() const
 {
   return (this->size);
 }
@@ -30,7 +30,7 @@ Vector2	ncurses::Window::getSize() const
 void		ncurses::Window::setSize()
 {}
 
-Vector2 ncurses::Window::getPos() const
+Vector2<int> ncurses::Window::getPos() const
 {
   return (this->size);
 }
@@ -38,7 +38,7 @@ Vector2 ncurses::Window::getPos() const
 void		ncurses::Window::setPos()
 {}
 
-void		ncurses::Window::setWind(Vector2 &s, Vector2 &p, WINDOW *pa)
+void		ncurses::Window::setWind(Vector2<int> &s, Vector2<int> &p, WINDOW *pa)
 {
 
   this->size = s;

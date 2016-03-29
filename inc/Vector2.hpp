@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:07:00 2016 Nicolas Constanty
-** Last update	Tue Mar 15 19:42:58 2016 Adrien WERY
+** Last update	Mon Mar 28 22:00:50 2016 Nicolas Constanty
 */
 
 #ifndef VECTOR2_HPP_
@@ -13,15 +13,39 @@
 
 # include <cstdlib>
 
+template <class T>
 class Vector2 {
 public:
-    int x;
-    int y;
-    Vector2 (int x, int y);
-    virtual ~Vector2 ();
-    Vector2(const Vector2 &obj);
-    Vector2 &operator=(const Vector2 &obj);
-    bool    operator==(const Vector2 &obj) const;
+    T x;
+    T y;
+
+    Vector2(T x, T y)
+    {
+      this->x = x;
+      this->y = y;
+    }
+
+
+    Vector2(const Vector2<T> &obj)
+    {
+      *this = obj;
+    }
+    
+    ~Vector2()
+    {}
+
+    Vector2<T> &operator=(const Vector2<T> &vec)
+    {
+      this->x = vec.x;
+      this->y = vec.y;
+      return *this;
+    }
+
+    bool    operator==(const Vector2<T> &vec) const
+    {
+        return (this->x == vec.x && this->y == vec.y);
+    }
+
 };
 
 #endif /* !VECTOR2_HPP_ */

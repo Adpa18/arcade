@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Thu Mar 17 13:24:13 2016 Adrien WERY
+** Last update	Mon Mar 28 21:22:15 2016 Nicolas Constanty
 */
 
 #ifndef BACKGROUNDCOMPONENT_HPP_
@@ -19,7 +19,7 @@ class BackgroundComponent : public AComponent {
 private:
     std::string     sprite2D;
 public:
-  BackgroundComponent(Vector2 pos, Vector2 size, ComponentColor color, std::string const &sprite2D);
+  BackgroundComponent(Vector2<int> pos, Vector2<int> size, ComponentColor color, std::string const &sprite2D);
   virtual ~BackgroundComponent();
 
   std::string const &getSprite2D() const;

@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Thu Mar 17 13:32:54 2016 Adrien WERY
+** Last update	Mon Mar 28 21:22:37 2016 Nicolas Constanty
 */
 
 #ifndef UICOMPONENT_HPP_
@@ -23,7 +23,7 @@ private:
     std::string     fontName;
     unsigned int    fontSize;
 public:
-    UIComponent(Vector2 const &p, Vector2 const &s, ComponentColor color, const std::string &text,
+    UIComponent(Vector2<int> const &p, Vector2<int> const &s, ComponentColor color, const std::string &text,
             const std::string &fontName, unsigned int fontSize);
     virtual ~UIComponent();
     const std::string   &getText() const;

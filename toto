@@ -1,0 +1,1234 @@
+==1390== Memcheck, a memory error detector
+==1390== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==1390== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==1390== Command: ./arcade lib/lib_arcade_ncurses.so
+==1390== Parent PID: 25862
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3B841: brw_emit_select_pipeline (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3B8D1: brw_upload_invariant_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB47375: brw_init_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3059B: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9000 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3BA76: brw_upload_invariant_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB47375: brw_init_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3059B: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9004 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3BA7C: brw_upload_invariant_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB47375: brw_init_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3059B: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9008 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3B9F2: brw_upload_invariant_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB47375: brw_init_state (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3059B: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd900c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66BD4: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd81b8 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66C61: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9010 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66C67: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9014 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66C6E: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9018 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66C79: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd901c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66C79: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9020 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66C79: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9024 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66C79: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9028 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66C79: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd902c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66D0A: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9030 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66D11: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9034 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66D2E: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9038 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66D35: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd903c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66D35: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9040 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66D35: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9044 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66D35: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9048 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66D35: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd904c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66DBD: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9050 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66DC3: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9054 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66DCA: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9058 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd905c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9060 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9064 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9068 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd906c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB628D2: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9070 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB628E1: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9074 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9078 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd907c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9080 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9084 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd9088 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB62591: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66DD5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd908c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid read of size 4
+==1390==    at 0xBB66DEF: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd81b8 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB669FC: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd8190 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66A8D: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0000 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66A93: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0004 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66A9A: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0008 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66AA5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd000c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66AA5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0010 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66AA5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0014 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66AA5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0018 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66AA5: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd001c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66B3A: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0020 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66B41: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0024 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB66B67: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0028 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd002c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0030 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0034 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0038 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd003c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB628D2: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0040 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB628E1: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0044 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0048 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd004c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0050 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0054 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0058 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB62591: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB66B71: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd005c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid read of size 4
+==1390==    at 0xBB66B8B: intelInitExtensions (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB305A3: brwCreateContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0B03: driCreateContextAttribs (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE0BB4: driCreateNewContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EE5D16: dri2_create_context (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC3312: CreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x9EC35FC: glXCreateContext (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E58E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D8B35: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA6CB: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA3DF: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd8190 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0010 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0014 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0018 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd001c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB3DB0F: brw_emit_mi_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB6284C: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0020 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB628D2: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x601CC19: Sdl2::Sdl2() (Sdl2.cpp:6)
+==1390==  Address 0x7fb75dcd0024 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB628E1: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x601CC19: Sdl2::Sdl2() (Sdl2.cpp:6)
+==1390==  Address 0x7fb75dcd0028 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D552: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd002c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D558: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0030 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D55B: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0034 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D562: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd0038 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB3D569: brw_emit_pipe_control_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB628E8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==  Address 0x7fb75dcd003c is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB62591: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x601CC19: Sdl2::Sdl2() (Sdl2.cpp:6)
+==1390==  Address 0x7fb75dcd0040 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Invalid write of size 4
+==1390==    at 0xBB625B8: _intel_batchbuffer_flush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30E34: intel_glFlush (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xB8415CF: _mesa_make_current (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBB30CBE: intelUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0xBAE1165: driUnbindContext (in /usr/lib64/dri/i965_dri.so)
+==1390==    by 0x9EC493C: MakeContextCurrent (in /usr/lib64/libGL.so.1.2.0)
+==1390==    by 0x62E5C6F: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D97E1: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62D9FA8: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x62DA480: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x624266E: ??? (in /usr/lib64/libSDL2-2.0.so.0)
+==1390==    by 0x601CC19: Sdl2::Sdl2() (Sdl2.cpp:6)
+==1390==  Address 0x7fb75dcd0044 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== Conditional jump or move depends on uninitialised value(s)
+==1390==    at 0x402BBE: arcade::Arcade::run(std::string const&) (Arcade.cpp:100)
+==1390==    by 0x4031B3: main (Arcade.cpp:141)
+==1390==  Uninitialised value was created by a heap allocation
+==1390==    at 0x4C29670: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1390==    by 0x406553: __gnu_cxx::new_allocator<IGraph*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==1390==    by 0x405EAC: std::_Vector_base<IGraph*, std::allocator<IGraph*> >::_M_allocate(unsigned long) (in /home/consta_n/rendu/cpp_arcade/arcade)
+==1390==    by 0x404EE3: void std::vector<IGraph*, std::allocator<IGraph*> >::_M_emplace_back_aux<IGraph*>(IGraph*&&) (vector.tcc:404)
+==1390==    by 0x404110: void std::vector<IGraph*, std::allocator<IGraph*> >::emplace_back<IGraph*>(IGraph*&&) (vector.tcc:101)
+==1390==    by 0x403625: std::vector<IGraph*, std::allocator<IGraph*> >::push_back(IGraph*&&) (stl_vector.h:920)
+==1390==    by 0x40224D: arcade::Arcade::refresh_lib(std::string const&, SOTYPE) (Arcade.cpp:22)
+==1390==    by 0x401EE5: arcade::Arcade::Arcade() (Arcade.cpp:5)
+==1390==    by 0x403172: main (Arcade.cpp:140)
+==1390== 
+==1390== Use of uninitialised value of size 8
+==1390==    at 0x402CE2: arcade::Arcade::run(std::string const&) (Arcade.cpp:104)
+==1390==    by 0x4031B3: main (Arcade.cpp:141)
+==1390==  Uninitialised value was created by a heap allocation
+==1390==    at 0x4C29670: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1390==    by 0x406553: __gnu_cxx::new_allocator<IGraph*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+==1390==    by 0x405EAC: std::_Vector_base<IGraph*, std::allocator<IGraph*> >::_M_allocate(unsigned long) (in /home/consta_n/rendu/cpp_arcade/arcade)
+==1390==    by 0x404EE3: void std::vector<IGraph*, std::allocator<IGraph*> >::_M_emplace_back_aux<IGraph*>(IGraph*&&) (vector.tcc:404)
+==1390==    by 0x404110: void std::vector<IGraph*, std::allocator<IGraph*> >::emplace_back<IGraph*>(IGraph*&&) (vector.tcc:101)
+==1390==    by 0x403625: std::vector<IGraph*, std::allocator<IGraph*> >::push_back(IGraph*&&) (stl_vector.h:920)
+==1390==    by 0x40224D: arcade::Arcade::refresh_lib(std::string const&, SOTYPE) (Arcade.cpp:22)
+==1390==    by 0x401EE5: arcade::Arcade::Arcade() (Arcade.cpp:5)
+==1390==    by 0x403172: main (Arcade.cpp:140)
+==1390== 
+==1390== Invalid read of size 8
+==1390==    at 0x402CE2: arcade::Arcade::run(std::string const&) (Arcade.cpp:104)
+==1390==    by 0x4031B3: main (Arcade.cpp:141)
+==1390==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==1390== 
+==1390== 
+==1390== Process terminating with default action of signal 11 (SIGSEGV)
+==1390==  Access not within mapped region at address 0x0
+==1390==    at 0x402CE2: arcade::Arcade::run(std::string const&) (Arcade.cpp:104)
+==1390==    by 0x4031B3: main (Arcade.cpp:141)
+==1390==  If you believe this happened as a result of a stack
+==1390==  overflow in your program's main thread (unlikely but
+==1390==  possible), you can try to increase the size of the
+==1390==  main thread stack using the --main-stacksize= flag.
+==1390==  The main thread stack size used in this run was 8388608.
+==1390== 
+==1390== HEAP SUMMARY:
+==1390==     in use at exit: 1,464,565 bytes in 5,100 blocks
+==1390==   total heap usage: 13,588 allocs, 8,488 frees, 44,514,594 bytes allocated
+==1390== 
+==1390== LEAK SUMMARY:
+==1390==    definitely lost: 65,646 bytes in 4 blocks
+==1390==    indirectly lost: 0 bytes in 0 blocks
+==1390==      possibly lost: 1,090,079 bytes in 3,908 blocks
+==1390==    still reachable: 308,840 bytes in 1,188 blocks
+==1390==         suppressed: 0 bytes in 0 blocks
+==1390== Rerun with --leak-check=full to see details of leaked memory
+==1390== 
+==1390== For counts of detected and suppressed errors, rerun with: -v
+==1390== ERROR SUMMARY: 85 errors from 81 contexts (suppressed: 4 from 1)

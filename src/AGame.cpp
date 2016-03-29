@@ -5,12 +5,12 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Fri Mar 11 18:20:17 2016 Adrien WERY
+** Last update	Mon Mar 28 21:26:39 2016 Nicolas Constanty
 */
 
 #include "AGame.hpp"
 
-AGame::AGame(std::string const &name, Vector2 size) : name(name), size(size)
+AGame::AGame(std::string const &name, Vector2<int> size) : name(name), size(size)
 {
 
 }
@@ -20,7 +20,7 @@ AGame::~AGame()
 
 }
 
-Vector2 const           &AGame::getSize() const
+Vector2<int> const           &AGame::getSize() const
 {
     return (this->size);
 }

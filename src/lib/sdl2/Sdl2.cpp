@@ -9,17 +9,21 @@ Sdl2::Sdl2 (void) : size(0, 0)
         throw std::runtime_error(std::string("Can't init IMG") + SDL_GetError());
     if (TTF_Init() == -1)
         throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
+    this->is_destroy = false;
+    this->is_init = false;
 }
 
 Sdl2::~Sdl2 ()
 {
-    this->destroy();
+    if (is_destroy == false)
+      this->destroy();
     TTF_Quit();
     SDL_Quit();
 }
 
-void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> cache)
+void  Sdl2::init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache)
 {
+    this->is_init = true;
     std::cout << "StartInit => Lib Sdl2" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
@@ -30,8 +34,21 @@ void  Sdl2::init(const std::string &name, Vector2 size, std::stack<AComponent*> 
     this->display(cache);
 }
 
+void  Sdl2::init(const std::string &name, Vector2<int> size)
+{
+    this->is_init = true;
+    std::cout << "StartInit => Lib Sdl2" << std::endl;
+    this->size = size;
+    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
+        SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
+        throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
+    if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
+        throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
+}
+
 void    Sdl2::destroy()
 {
+    is_destroy = true;
     for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
         TTF_CloseFont(it->second);
     }
@@ -62,6 +79,8 @@ void Sdl2::display(std::stack<AComponent*> components)
     BackgroundComponent   *Bobj;
     unsigned int    colorInt;
 
+    if (is_init == false)
+      init("SDL2", Vector2<int>(50, 30));
     while (!components.empty()) {
         obj = components.top();
         components.pop();

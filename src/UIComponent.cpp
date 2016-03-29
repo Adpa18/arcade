@@ -5,12 +5,12 @@
 ** Login	wery_a
 **
 ** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Thu Mar 17 13:34:12 2016 Adrien WERY
+** Last update	Mon Mar 28 21:23:34 2016 Nicolas Constanty
 */
 
 #include "UIComponent.hpp"
 
-UIComponent::UIComponent(Vector2 const &p, Vector2 const &s, ComponentColor color, const std::string &text,
+UIComponent::UIComponent(Vector2<int> const &p, Vector2<int> const &s, ComponentColor color, const std::string &text,
     const std::string &fontName, unsigned int fontSize)
     : AComponent(p, s, color)
 {

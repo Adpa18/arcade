@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Wed Mar 16 10:33:47 2016 Adrien WERY
+** Last update	Mon Mar 28 21:15:58 2016 Nicolas Constanty
 */
 
 #ifndef ACOMPONENT_HPP_
@@ -26,18 +26,18 @@ enum ComponentColor {
 
 class AComponent {
 private:
-    Vector2	        pos;
-    Vector2	        size;
-    ComponentColor  color;
+    Vector2<int>	        pos;
+    Vector2<int>	        size;
+    ComponentColor        color;
 public:
-    AComponent(Vector2 const &pos, ComponentColor color);
-    AComponent(Vector2 const &pos, Vector2 const &size, ComponentColor color);
+    AComponent(Vector2<int> const &pos, ComponentColor color);
+    AComponent(Vector2<int> const &pos, Vector2<int> const &size, ComponentColor color);
     AComponent(int x, int y, ComponentColor color);
     virtual ~AComponent ();
-    Vector2 const   &getPos() const;
-    void            setPos(const Vector2 &pos);
-    Vector2 const   &getSize() const;
-    void            setSize(const Vector2 &pos);
+    Vector2<int> const   &getPos() const;
+    void            setPos(const Vector2<int> &pos);
+    Vector2<int> const   &getSize() const;
+    void            setSize(const Vector2<int> &pos);
     ComponentColor const   &getColor() const;
     void            setColor(const ComponentColor color);
 };

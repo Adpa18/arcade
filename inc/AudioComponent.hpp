@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:40:56 2016 Nicolas Constanty
-** Last update	Thu Mar 17 02:04:29 2016 Nicolas Constanty
+** Last update	Mon Mar 28 21:21:57 2016 Nicolas Constanty
 */
 
 #ifndef AUDIOCOMPONENT_HPP_
@@ -20,7 +20,7 @@ private:
   std::string sound_2D;
   std::string sound_3D;
 public:
-  AudioComponent(Vector2 const &pos, ComponentColor color,
+  AudioComponent(Vector2<int> const &pos, ComponentColor color,
     char const s_term, std::string const &s_2D, std::string const &s_3D);
   virtual ~AudioComponent();
   char const &getSoundTerm() const;

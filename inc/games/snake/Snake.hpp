@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Thu Mar 17 14:08:55 2016 Adrien WERY
+** Last update	Mon Mar 28 21:31:35 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -43,7 +43,7 @@ public:
     virtual std::stack<AComponent*> compute(int key);
     virtual std::stack<AComponent*> getInfos();
     virtual void                    restart();
-    bool                            check(Vector2 snakePos);
+    bool                            check(Vector2<int> snakePos);
     const   std::string             getImg(size_t pos);
 
 };
