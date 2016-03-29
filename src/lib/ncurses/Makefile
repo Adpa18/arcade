@@ -18,9 +18,9 @@ CPPFLAGS	=	-g -W -Wall -Wextra -Werror -fPIC
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/ncurses/ -I$(BASE)inc/
 
-CPPFLAGS	+=	-I/usr/include/ncurses6/ncurses -I/usr/include/ncurses6
+CPPFLAGS	+= 	-I$(BASE)library/ncurses/include
 
-LIBS 		=	-lncurses -ltinfo -lncurses -ltinfo -L/usr/lib64/ncurses6
+LIBS 		=	-lncurses -ltinfo -L$(BASE)library/ncurses
 
 LDFLAGS		=	-shared
 

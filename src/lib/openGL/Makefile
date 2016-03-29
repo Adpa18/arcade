@@ -17,9 +17,13 @@ CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w -g
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/openGL/ -I$(BASE)inc/
 
-CPPFLAGS	+= -D_REENTRANT
+CPPFLAGS	+= 	-I$(BASE)library/sdl2/include -I$(BASE)library/openGL/include
+
+CPPFLAGS	+=	-D_REENTRANT
 
 LIBS 		=	-lSDL2 -lSDL2_image -lSDL2_ttf -lpthread -lGL -lGLU
+
+LIBS 		+= 	-L$(BASE)library/sdl2 -L$(BASE)library/openGL
 
 LDFLAGS		=	-shared -z defs
 

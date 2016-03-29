@@ -5,13 +5,13 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 18:32:04 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:28:24 2016 Nicolas Constanty
+** Last update	Tue Mar 29 16:35:56 2016 Adrien WERY
 */
 
 #ifndef WINDOW_HPP_
 # define WINDOW_HPP_
 
-# include <ncurses.h>
+# include "ncurses.h"
 # include "Vector2.hpp"
 
 namespace ncurses {
