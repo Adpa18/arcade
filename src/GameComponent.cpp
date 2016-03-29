@@ -5,14 +5,14 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:21:30 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:26:03 2016 Nicolas Constanty
 */
 
 #include "GameComponent.hpp"
 
-GameComponent::GameComponent(Vector2<int> const &p, Vector2<int> const &s, ComponentColor color,
+GameComponent::GameComponent(Vector2<double> const &p, Vector2<double> const &s, ComponentColor color,
     char const &spriteText, std::string const &sprite2D, void *sprite3D)
-     : AComponent(p, s, color)
+     : AComponent(p, color), dim(s)
 {
   this->spriteText = spriteText;
   this->sprite2D = sprite2D;
@@ -50,4 +50,9 @@ void              GameComponent::setSprite2D(const std::string &sprite2D)
 void              GameComponent::setSprite3D(void *sprite3D)
 {
     this->sprite3D = sprite3D;
+}
+
+Vector2<double> const &GameComponent::getDim() const
+{
+  return this->dim;
 }

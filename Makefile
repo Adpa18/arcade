@@ -8,6 +8,7 @@ SRC			=		$(SRC_DIR)Arcade.cpp			\
 					$(SRC_DIR)BackgroundComponent.cpp		\
 					$(SRC_DIR)ScoreComponent.cpp	\
 					$(SRC_DIR)UIComponent.cpp		\
+					$(SRC_DIR)UIAdvanceComponent.cpp		\
 
 CC			=	g++ -std=gnu++11
 

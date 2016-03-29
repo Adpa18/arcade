@@ -5,13 +5,13 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:23:55 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:28:04 2016 Nicolas Constanty
 */
 
 #include "BackgroundComponent.hpp"
 
-BackgroundComponent::BackgroundComponent(Vector2<int> pos, Vector2<int> size, ComponentColor color, std::string const &sprite2D)
-    : AComponent(pos, size, color)
+BackgroundComponent::BackgroundComponent(Vector2<double> pos, Vector2<double> size, ComponentColor color, std::string const &sprite2D)
+    : AComponent(pos, color), dim(size)
 {
   this->sprite2D = sprite2D;
 }
@@ -27,4 +27,9 @@ std::string const &BackgroundComponent::getSprite2D() const
 void              BackgroundComponent::setSprite2D(const std::string &sprite2D)
 {
     this->sprite2D = sprite2D;
+}
+
+Vector2<double> const &BackgroundComponent::getDim() const
+{
+  return this->dim;
 }

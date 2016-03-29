@@ -39,7 +39,7 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
     const char    *dlsym_error;
     const char    *symbol;
     typedef void  *(*fptr)();
-    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2<int>, std::stack<AComponent*>);
+    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>);
     typedef void  *(*f_destroy)(IGraph *);
     bool					has_init;
 
@@ -63,7 +63,7 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
       std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
     libs.push(myso);
     //check if init exist
-    f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<int>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
+    f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
     if ((dlsym_error = dlerror())) {
       (void)ini;
       has_init = false;

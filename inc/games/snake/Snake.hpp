@@ -43,7 +43,7 @@ public:
     virtual std::stack<AComponent*> compute(int key);
     virtual std::stack<AComponent*> getInfos();
     virtual void                    restart();
-    bool                            check(Vector2<int> snakePos);
+    bool                            check(Vector2<double> snakePos);
     const   std::string             getImg(size_t pos);
 
 };

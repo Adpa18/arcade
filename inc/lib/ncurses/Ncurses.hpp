@@ -15,7 +15,7 @@
 
 class Ncurses : public IGraph {
 private:
-    Vector2<int>        size;
+    Vector2<double>        size;
     bool								is_init;
     bool								is_destroy;
   bool				valid_size;
@@ -30,17 +30,17 @@ private:
   };
   std::map<AComponent *, WINDOW *> texts;
 
-  bool 						invalidSize(int w, int h, Vector2<int> const &size, Vector2<int> const &pos);
+  bool 						invalidSize(int w, int h, Vector2<double> const &size, Vector2<double> const &pos);
   void						initMainWindow();
   int							resizeTerm();
+  void            initc(Vector2<double> s);
 public:
   Ncurses (void);
   virtual ~Ncurses ();
 
   virtual int eventManagment();
   virtual void display(std::stack<AComponent*>);
-  virtual void init(const std::string &name, Vector2<int> s, std::stack<AComponent*> cache);
-  virtual void init(Vector2<int> s);
+  virtual void init(const std::string &name, Vector2<double> s, std::stack<AComponent*> cache);
   virtual void    destroy();
 };
 
@@ -49,7 +49,7 @@ extern "C" IGraph *loadLib()
   return (new Ncurses());
 }
 
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<int> size, std::stack<AComponent *> cache)
+extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<double> size, std::stack<AComponent *> cache)
 {
   static_cast<Ncurses *>(graph)->init(name, size, cache);
 }

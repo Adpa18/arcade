@@ -20,7 +20,7 @@ private:
   std::string sound_2D;
   std::string sound_3D;
 public:
-  AudioComponent(Vector2<int> const &pos, ComponentColor color,
+  AudioComponent(Vector2<double> const &pos, ComponentColor color,
     char const s_term, std::string const &s_2D, std::string const &s_3D);
   virtual ~AudioComponent();
   char const &getSoundTerm() const;

@@ -21,7 +21,7 @@ Sdl2::~Sdl2 ()
     SDL_Quit();
 }
 
-void  Sdl2::init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache)
+void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
 {
     this->is_init = true;
     std::cout << "StartInit => Lib Sdl2" << std::endl;
@@ -34,7 +34,7 @@ void  Sdl2::init(const std::string &name, Vector2<int> size, std::stack<ACompone
     this->display(cache);
 }
 
-void  Sdl2::init(const std::string &name, Vector2<int> size)
+void  Sdl2::init(const std::string &name, Vector2<double> size)
 {
     this->is_init = true;
     std::cout << "StartInit => Lib Sdl2" << std::endl;
@@ -72,29 +72,40 @@ int Sdl2::eventManagment()
 
 void Sdl2::display(std::stack<AComponent*> components)
 {
-    SDL_Rect        rect;
-    AComponent      *obj;
-    GameComponent   *Gobj;
-    UIComponent   *Uobj;
+    SDL_Rect              rect;
+    AComponent            *obj;
+    GameComponent         *Gobj;
+    UIComponent           *Uobj;
+    UIAdvanceComponent    *UAobj;
     BackgroundComponent   *Bobj;
     unsigned int    colorInt;
 
     if (is_init == false)
-      init("SDL2", Vector2<int>(50, 30));
+      init("SDL2", Vector2<double>(50, 30));
     while (!components.empty()) {
         obj = components.top();
         components.pop();
         rect.x = obj->getPos().x * STEP;
         rect.y = obj->getPos().y * STEP;
-        rect.w = obj->getSize().x * STEP;
-        rect.h = obj->getSize().y * STEP;
         if ((Gobj = dynamic_cast<GameComponent*>(obj)) && !Gobj->getSprite2D().empty()) {
+            rect.w = Gobj->getDim().x * STEP;
+            rect.h = Gobj->getDim().y * STEP;
             this->displayGame(*Gobj, &rect);
+        } else if ((UAobj = dynamic_cast<UIAdvanceComponent*>(obj))) {
+            rect.w = UAobj->getDim().x * STEP;
+            rect.h = UAobj->getDim().y * STEP;
+            this->displayAdvanceUI(*UAobj, &rect);
         } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
+            rect.w = Uobj->getDim().x * STEP;
+            rect.h = Uobj->getDim().y * STEP;
             this->displayUI(*Uobj, &rect);
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
+            rect.w = Bobj->getDim().x * STEP;
+            rect.h = Bobj->getDim().y * STEP;
             this->displayBackground(*Bobj, &rect);
         } else {
+            rect.w = STEP;
+            rect.h = STEP;
             colorInt = this->colors[obj->getColor()];
             SDL_SetRenderDrawColor(this->render, ((colorInt >> 16) & 255), ((colorInt >> 8) & 255), ((colorInt) & 255), ((colorInt >> 24) & 255));
             SDL_RenderFillRect(this->render, &rect);
@@ -120,8 +131,8 @@ void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect 
     rect.w = STEP;
     rect.h = STEP;
     this->background = background.getSprite2D();
-    for (size_t i = 0; i < background.getSize().y; i++) {
-        for (size_t j = 0; j < background.getSize().x; j++) {
+    for (size_t i = 0; i < background.getDim().y; i++) {
+        for (size_t j = 0; j < background.getDim().x; j++) {
             rect.x = rect2->x + j * STEP;
             rect.y = rect2->y + i * STEP;
             if (this->tex[background.getSprite2D()] == 0) {
@@ -134,6 +145,36 @@ void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect 
 }
 
 void    Sdl2::displayUI(const UIComponent &ui, SDL_Rect *rect)
+{
+    unsigned int    colorInt;
+    SDL_Color       color;
+    SDL_Surface     *surface;
+    SDL_Texture     *texture;
+
+    colorInt = this->colors[ui.getColor()];
+    color.r = ((colorInt) & 255);
+    color.g = ((colorInt >> 8) & 255);
+    color.b = ((colorInt >> 16) & 255);
+    color.a = ((colorInt >> 24) & 255);
+    if (this->fonts["default"] == 0) {
+        this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP);
+    }
+    std::cout << fonts["default"] << std::endl;
+    std::cout << ui.getText() << std::endl;
+    surface = TTF_RenderText_Blended(fonts["default"], ui.getText().c_str(), color);
+    texture = SDL_CreateTextureFromSurface(this->render, surface);
+    SDL_FreeSurface(surface);
+    if (ui.getPos().x < 0 || ui.getPos().y < 0)
+    {
+      rect->x = this->size.x * STEP / 2 - STEP * ui.getText().length() / 4;
+      rect->y = STEP;
+    }
+    SDL_QueryTexture(texture, NULL, NULL, &(rect->w), &(rect->h));
+    SDL_RenderCopy(this->render, texture, NULL, rect);
+    SDL_DestroyTexture(texture);
+}
+
+void    Sdl2::displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect)
 {
     std::string     fontName;
     unsigned int    colorInt;

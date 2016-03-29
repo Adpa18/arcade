@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Tue Mar 29 03:23:49 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:31:00 2016 Nicolas Constanty
 */
 
 #include "ScoreComponent.hpp"
@@ -24,7 +24,7 @@ ScoreComponent::ScoreComponent(const std::string &game) : game(game)
     // } else {
     //     writeScore();
     // }
-    this->text = new UIComponent(Vector2<int>(-1, -1), Vector2<int>(50, 5), WHITE, "", "frenchy", 60);
+    this->text = new UIAdvanceComponent(Vector2<double>(-1, -1), Vector2<double>(50, 5), AComponent::WHITE, "", "frenchy", 60);
     this->score = 0;
 }
 
@@ -38,7 +38,7 @@ size_t    ScoreComponent::getScore() const
     return (this->score);
 }
 
-UIComponent    *ScoreComponent::getScoreUI()
+UIAdvanceComponent    *ScoreComponent::getScoreUI()
 {
     return (this->text);
 }

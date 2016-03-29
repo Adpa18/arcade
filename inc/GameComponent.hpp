@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:21:11 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:25:48 2016 Nicolas Constanty
 */
 
 #ifndef GAMECOMPONENT_HPP_
@@ -20,8 +20,9 @@ private:
     char        spriteText;
     std::string sprite2D;
     void        *sprite3D;
+    Vector2<double> dim;
 public:
-  GameComponent(Vector2<int> const &pos, Vector2<int> const &size, ComponentColor color,
+  GameComponent(Vector2<double> const &pos, Vector2<double> const &size, ComponentColor color,
       char const &spriteText, std::string const &sprite2D, void *sprite3D);
   virtual ~GameComponent();
 
@@ -31,6 +32,7 @@ public:
   void              setSpriteText(const char &spriteText);
   void              setSprite2D(const std::string &sprite2D);
   void              setSprite3D(void *sprite3D);
+  Vector2<double> const &getDim() const;
 };
 
 #endif /* !GAMECOMPONENT_HPP_ */

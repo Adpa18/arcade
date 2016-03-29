@@ -28,7 +28,7 @@ void	Ncurses::initMainWindow()
     refresh();
 }
 
-bool	Ncurses::invalidSize(int width, int height, Vector2<int> const &size, Vector2<int> const &pos)
+bool	Ncurses::invalidSize(int width, int height, Vector2<double> const &size, Vector2<double> const &pos)
 {
     if (pos.x + size.x > COLS -2 || pos.y + size.y > LINES - 1)
     {
@@ -49,9 +49,9 @@ bool	Ncurses::invalidSize(int width, int height, Vector2<int> const &size, Vecto
 
 int	Ncurses::resizeTerm()
 {
-    Vector2<int> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
-    Vector2<int> size_main(size.x + 2, size.y + 2);
-    Vector2<int> pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
+    Vector2<double> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
+    Vector2<double> size_main(size.x + 2, size.y + 2);
+    Vector2<double> pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
     if (!this->invalidSize(size.x + 2, size.y + 2, size_main, pos_main))
     {
         if (this->wind)
@@ -79,6 +79,8 @@ int Ncurses::eventManagment()
 {
     int key;
 
+    if (is_init == false)
+      this->initc(Vector2<double>(50, 30));
     key = getch();
     if (key == KEY_RESIZE)
         return (this->resizeTerm());
@@ -95,8 +97,6 @@ void Ncurses::display(std::stack<AComponent*> components)
     AudioComponent  *Aobj;
     UIComponent     *Tobj;
 
-    if (is_init == false)
-      this->init(Vector2<int>(50, 30));
     if (this->valid_size == false)
         return;
     while (!components.empty()) {
@@ -126,14 +126,15 @@ void Ncurses::display(std::stack<AComponent*> components)
         {
           WINDOW *ntext;
           if (Tobj->getPos().x < 0 || Tobj->getPos().y < 0)
-            ntext = newwin(Tobj->getSize().y, Tobj->getSize().x, 1, COLS / 2 - (Tobj->getSize().x / 2));
+            ntext = newwin(Tobj->getDim().y, Tobj->getDim().x, 1, COLS / 2 - (Tobj->getDim().x / 2));
           else
-            ntext = newwin(Tobj->getSize().y, Tobj->getSize().x, Tobj->getPos().y, Tobj->getPos().x);
+            ntext = newwin(Tobj->getDim().y, Tobj->getDim().x, Tobj->getPos().y, Tobj->getPos().x);
           box(ntext, 0, 0);
           wattr_on(ntext, A_REVERSE, NULL);
           wbkgd(ntext, COLOR_PAIR(Tobj->getColor() + 1));
           wattr_off(ntext, A_REVERSE, NULL);
-          mvwprintw(ntext, Tobj->getSize().y / 2, Tobj->getSize().x / 2 - Tobj->getText().length() / 2, "%s", Tobj->getText().c_str());
+          mvwprintw(ntext, Tobj->getDim().y / 2, Tobj->getDim().x / 2 - Tobj->getText().length() / 2,
+           "%s", Tobj->getText().c_str());
           wrefresh(ntext);
           refresh();
         }
@@ -141,7 +142,7 @@ void Ncurses::display(std::stack<AComponent*> components)
     wrefresh(this->wind->getWind());
 }
 
-void  Ncurses::init(const std::string &name, Vector2<int> s, std::stack<AComponent*> cache)
+void  Ncurses::init(const std::string &name, Vector2<double> s, std::stack<AComponent*> cache)
 {
     (void)name;
     this->is_init = true;
@@ -164,9 +165,10 @@ void  Ncurses::init(const std::string &name, Vector2<int> s, std::stack<ACompone
     init_pair(8, COLOR_WHITE, COLOR_BLACK);
     init_pair(9, COLOR_WHITE, -1);
     refresh();
-    Vector2<int> size_main(size.x + 2, size.y + 2);
-    Vector2<int> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
-    Vector2<int> pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
+    Vector2<double> size_main(size.x + 2, size.y + 2);
+    Vector2<double> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
+    Vector2<double> pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
+    this->wind = NULL;
     if (this->invalidSize(size.x + 2, size.y + 2, size_main, pos_main) == false)
     {
         this->wind = new Window(size, pos, NULL);
@@ -179,7 +181,7 @@ void  Ncurses::init(const std::string &name, Vector2<int> s, std::stack<ACompone
     this->display(cache);
 }
 
-void  Ncurses::init(Vector2<int> s)
+void  Ncurses::initc(Vector2<double> s)
 {
     this->size = s;
     this->is_init = true;
@@ -201,9 +203,10 @@ void  Ncurses::init(Vector2<int> s)
     init_pair(8, COLOR_WHITE, COLOR_BLACK);
     init_pair(9, COLOR_WHITE, -1);
     refresh();
-    Vector2<int> size_main(size.x + 2, size.y + 2);
-    Vector2<int> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
-    Vector2<int> pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
+    this->wind = NULL;
+    Vector2<double> size_main(size.x + 2, size.y + 2);
+    Vector2<double> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
+    Vector2<double> pos_main(COLS / 2 - ((size.x + 2) / 2), LINES / 2 - ((size.y + 2) / 2));
     if (this->invalidSize(size.x + 2, size.y + 2, size_main, pos_main) == false)
     {
         this->wind = new Window(size, pos, NULL);

@@ -5,7 +5,7 @@
 ** Login	vencat_a
 **
 ** Started on	Tue Mar 15 17:55:08 2016 Axel Vencatareddy
-** Last update	Mon Mar 28 21:31:59 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:01:21 2016 Nicolas Constanty
 */
 
 #ifndef PACMAN_HPP_
@@ -43,12 +43,12 @@ public:
     void				phantom_compute(GameComponent *,
                                         std::stack<AComponent*> &);
     bool				collision();
-    bool				limit(Vector2<int>);
+    bool				limit(Vector2<double>);
     void				newDir(GameComponent *);
-    bool				tryLeft(Vector2<int>);
-    bool				tryRight(Vector2<int>);
-    bool				tryUp(Vector2<int>);
-    bool				tryDown(Vector2<int>);
+    bool				tryLeft(Vector2<double>);
+    bool				tryRight(Vector2<double>);
+    bool				tryUp(Vector2<double>);
+    bool				tryDown(Vector2<double>);
 };
 
 extern "C" AGame *loadGame()

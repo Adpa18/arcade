@@ -11,14 +11,14 @@ enum keys { ESC = 1, UP, DOWN, LEFT, RIGHT,
 class AGame {
 private:
     std::string name;
-    Vector2<int>     size;
+    Vector2<double>     size;
 public:
-    AGame(std::string const &name, Vector2<int> size);
+    AGame(std::string const &name, Vector2<double> size);
     virtual ~AGame();
     virtual std::stack<AComponent*> compute(int) = 0;
     virtual std::stack<AComponent*> getInfos() = 0;
     virtual void                    restart() = 0;
-    Vector2<int> const                   &getSize() const;
+    Vector2<double> const                   &getSize() const;
     std::string const               &getName() const;
 };
 

@@ -5,18 +5,16 @@
 ** Login	wery_a
 **
 ** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Mon Mar 28 21:23:34 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:18:32 2016 Nicolas Constanty
 */
 
 #include "UIComponent.hpp"
 
-UIComponent::UIComponent(Vector2<int> const &p, Vector2<int> const &s, ComponentColor color, const std::string &text,
-    const std::string &fontName, unsigned int fontSize)
-    : AComponent(p, s, color)
+
+UIComponent::UIComponent(Vector2<double> const &p, ComponentColor color, Vector2<double> const &s, const std::string &text)
+    : AComponent(p, color), dim(s)
 {
     this->text = text;
-    this->fontName = fontName;
-    this->fontSize = fontSize;
 }
 
 UIComponent::~UIComponent ()
@@ -24,32 +22,12 @@ UIComponent::~UIComponent ()
 
 }
 
-const std::string   &UIComponent::getText() const
+std::string const  &UIComponent::getText() const
 {
     return (this->text);
 }
 
-const std::string   &UIComponent::getFontName() const
+Vector2<double> const &UIComponent::getDim() const
 {
-    return (this->fontName);
-}
-
-unsigned int        UIComponent::getFontSize() const
-{
-    return (this->fontSize);
-}
-
-void                UIComponent::setText(const std::string &text)
-{
-    this->text = text;
-}
-
-void                UIComponent::setFontName(const std::string &fontName)
-{
-    this->fontName = fontName;
-}
-
-void                UIComponent::setFontSize(unsigned int fontSize)
-{
-    this->fontSize = fontSize;
+  return this->dim;
 }

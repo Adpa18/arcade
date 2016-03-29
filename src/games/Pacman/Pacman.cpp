@@ -5,12 +5,12 @@
 ** Login	vencat_a
 **
 ** Started on	Tue Mar 15 19:05:55 2016 Axel Vencatareddy
-** Last update	Mon Mar 28 21:32:03 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:23:35 2016 Nicolas Constanty
 */
 
 #include "Pacman.hpp"
 
-Pacman::Pacman() : AGame("Pacman", Vector2<int>(WIDTH, HEIGHT))
+Pacman::Pacman() : AGame("Pacman", Vector2<double>(WIDTH, HEIGHT))
 {
   this->restart();
 }
@@ -18,7 +18,7 @@ Pacman::Pacman() : AGame("Pacman", Vector2<int>(WIDTH, HEIGHT))
 Pacman::~Pacman()
 {}
 
-bool				Pacman::limit(Vector2<int> tmp)
+bool				Pacman::limit(Vector2<double> tmp)
 {
   if (tmp.x < 0 || tmp.x >= WIDTH || tmp.y < 0 || tmp.y >= HEIGHT)
     return (true);
@@ -26,7 +26,7 @@ bool				Pacman::limit(Vector2<int> tmp)
     return (false);
 }
 
-bool				Pacman::tryDown(Vector2<int> pos)
+bool				Pacman::tryDown(Vector2<double> pos)
 {
   if (pos.y + STEP >= HEIGHT)
     return (false);
@@ -34,7 +34,7 @@ bool				Pacman::tryDown(Vector2<int> pos)
     return (true);
 }
 
-bool				Pacman::tryUp(Vector2<int> pos)
+bool				Pacman::tryUp(Vector2<double> pos)
 {
   if (pos.y - STEP <= 0)
     return (false);
@@ -42,7 +42,7 @@ bool				Pacman::tryUp(Vector2<int> pos)
     return (true);
 }
 
-bool				Pacman::tryRight(Vector2<int> pos)
+bool				Pacman::tryRight(Vector2<double> pos)
 {
   if (pos.x + STEP >= WIDTH)
     return (false);
@@ -50,7 +50,7 @@ bool				Pacman::tryRight(Vector2<int> pos)
     return (true);
 }
 
-bool				Pacman::tryLeft(Vector2<int> pos)
+bool				Pacman::tryLeft(Vector2<double> pos)
 {
   if (pos.x - STEP <= 0)
     return (false);
@@ -61,7 +61,7 @@ bool				Pacman::tryLeft(Vector2<int> pos)
 void				Pacman::newDir(GameComponent *phant)
 {
   direction			save;
-  Vector2<int>			pos = phant->getPos();
+  Vector2<double>			pos = phant->getPos();
   int				aleat;
 
   save = dir[phant];
@@ -125,7 +125,7 @@ void				Pacman::newDir(GameComponent *phant)
 bool				Pacman::collision()
 {
   for (size_t i = 0; i < this->phantom.size(); i++) {
-    Vector2<int>	tmp = this->phantom[i]->getPos();
+    Vector2<double>	tmp = this->phantom[i]->getPos();
     if (this->pacman->getPos() == tmp)
       return (true);
     else if (tmp.x < 0 || tmp.x > WIDTH || tmp.y < 0 || tmp.y > HEIGHT)
@@ -138,9 +138,9 @@ void				Pacman::phantom_compute(GameComponent *phant,
                                                         std::stack<AComponent*>
                                                         &comp)
 {
-  Vector2<int>			phantPos = phant->getPos();
+  Vector2<double>			phantPos = phant->getPos();
 
-  comp.push(new GameComponent(phantPos, Vector2<int>(STEP, STEP), BLACK,' ', "", NULL));
+  comp.push(new GameComponent(phantPos, Vector2<double>(STEP, STEP), AComponent::BLACK,' ', "", NULL));
   if (dir[phant] == WAIT)
     dir[phant] = (direction)(rand() % WAIT);
   switch (dir[phant]) {
@@ -165,11 +165,11 @@ void				Pacman::phantom_compute(GameComponent *phant,
 std::stack<AComponent*>		Pacman::compute(int key)
 {
   std::stack<AComponent*>	comp;
-  Vector2<int>			pacPos = this->pacman->getPos();
+  Vector2<double>			pacPos = this->pacman->getPos();
 
   if ((dir[pacman] == WAIT && (key == RIGHT || key == LEFT || key == DOWN || key == UP))
       || dir[pacman] != WAIT)
-    comp.push(new GameComponent(pacPos, Vector2<int>(STEP, STEP), BLACK, ' ', "", NULL));
+    comp.push(new GameComponent(pacPos, Vector2<double>(STEP, STEP), AComponent::BLACK, ' ', "", NULL));
   switch (key) {
     case RIGHT:
       dir[pacman] = DIR_RIGHT;
@@ -203,7 +203,7 @@ std::stack<AComponent*>		Pacman::compute(int key)
   if (collision() == true)
     {
       for (size_t i = 0; i < phantom.size(); i++) {
-        comp.push(new GameComponent(phantom[i]->getPos(), Vector2<int>(STEP, STEP), BLACK, ' ', "", NULL));
+        comp.push(new GameComponent(phantom[i]->getPos(), Vector2<double>(STEP, STEP), AComponent::BLACK, ' ', "", NULL));
       }
       phantom.clear();
       restart();
@@ -232,11 +232,11 @@ std::stack<AComponent*>		Pacman::getInfos()
 
 void				Pacman::restart()
 {
-  this->pacman = new GameComponent(Vector2<int>(0, 0), Vector2<int>(STEP, STEP), YELLOW, ' ', "", NULL);
-  this->phantom.push_back(new GameComponent(Vector2<int>(60, 60), Vector2<int>(STEP, STEP), GREEN, ' ', "", NULL));
-  this->phantom.push_back(new GameComponent(Vector2<int>(80, 80), Vector2<int>(STEP, STEP), RED, ' ', "", NULL));
-  this->phantom.push_back(new GameComponent(Vector2<int>(100, 100), Vector2<int>(STEP, STEP), CYAN, ' ', "", NULL));
-  this->phantom.push_back(new GameComponent(Vector2<int>(120, 120), Vector2<int>(STEP, STEP), WHITE, ' ', "", NULL));
+  this->pacman = new GameComponent(Vector2<double>(0, 0), Vector2<double>(STEP, STEP), AComponent::YELLOW, ' ', "", NULL);
+  this->phantom.push_back(new GameComponent(Vector2<double>(60, 60), Vector2<double>(STEP, STEP), AComponent::GREEN, ' ', "", NULL));
+  this->phantom.push_back(new GameComponent(Vector2<double>(80, 80), Vector2<double>(STEP, STEP), AComponent::RED, ' ', "", NULL));
+  this->phantom.push_back(new GameComponent(Vector2<double>(100, 100), Vector2<double>(STEP, STEP), AComponent::CYAN, ' ', "", NULL));
+  this->phantom.push_back(new GameComponent(Vector2<double>(120, 120), Vector2<double>(STEP, STEP), AComponent::WHITE, ' ', "", NULL));
   this->dir[pacman] = WAIT;
   for (size_t i = 0; i < this->phantom.size(); i++) {
     this->dir[phantom[i]] = WAIT;

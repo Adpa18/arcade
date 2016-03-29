@@ -27,7 +27,7 @@ OpenGL::~OpenGL ()
     SDL_Quit();
 }
 
-void  OpenGL::init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache)
+void  OpenGL::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
 {
     this->is_init = true;
     std::cout << "StartInit => Lib OpenGL" << std::endl;
@@ -49,7 +49,7 @@ void  OpenGL::init(const std::string &name, Vector2<int> size, std::stack<ACompo
     this->display(cache);
 }
 
-void  OpenGL::init(const std::string &name, Vector2<int> size)
+void  OpenGL::init(const std::string &name, Vector2<double> size)
 {
     this->is_init = true;
     std::cout << "StartInit => Lib OpenGL" << std::endl;
@@ -86,7 +86,7 @@ int OpenGL::eventManagment()
     return (this->keyMap[event.key.keysym.scancode]);
 }
 
-void    OpenGL::drawCube(Vector2<int> pos, Vector2<int> size, Vector2<int> rot)
+void    OpenGL::drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot)
 {
     glPushMatrix();
     glTranslatef(pos.x, pos.y, 0);
@@ -137,7 +137,7 @@ void OpenGL::display(std::stack<AComponent*> components)
 
     // glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
     if (is_init == false)
-      init("OpenGl", Vector2<int>(50, 30));
+      init("OpenGl", Vector2<double>(50, 30));
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(50, 0, 20, 0, 0, 0, 0, 0, 1);
@@ -156,7 +156,7 @@ void OpenGL::display(std::stack<AComponent*> components)
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
             this->displayBackground(*Bobj);
         } else {
-            this->drawCube(obj->getPos(), obj->getSize(), Vector2<int>(0, 0));
+            this->drawCube(obj->getPos(), Vector2<double>(1, 1), Vector2<double>(0, 0));
         }
     }
     SDL_GL_SwapWindow(this->win);
@@ -164,7 +164,7 @@ void OpenGL::display(std::stack<AComponent*> components)
 
 void    OpenGL::displayGame(const GameComponent &game)
 {
-    this->drawCube(game.getPos(), game.getSize(), Vector2<int>(0, 0));
+    this->drawCube(game.getPos(), game.getDim(), Vector2<double>(0, 0));
 }
 
 void    OpenGL::displayBackground(const BackgroundComponent &background)
@@ -182,14 +182,14 @@ void    OpenGL::displayBackground(const BackgroundComponent &background)
     glEnd();
     glPopMatrix();
     for (int i = 0; i <= size.x; i++) {
-        this->drawCube(Vector2<int>(i, 0), Vector2<int>(1, 1), Vector2<int>(0, 0));
+        this->drawCube(Vector2<double>(i, 0), Vector2<double>(1, 1), Vector2<double>(0, 0));
     }
     for (int i = 1; i < size.y; i++) {
-        this->drawCube(Vector2<int>(0, i), Vector2<int>(1, 1), Vector2<int>(0, 0));
-        this->drawCube(Vector2<int>(size.x, i), Vector2<int>(1, 1), Vector2<int>(0, 0));
+        this->drawCube(Vector2<double>(0, i), Vector2<double>(1, 1), Vector2<double>(0, 0));
+        this->drawCube(Vector2<double>(size.x, i), Vector2<double>(1, 1), Vector2<double>(0, 0));
     }
     for (int i = 0; i <= size.x; i++) {
-        this->drawCube(Vector2<int>(i, size.y), Vector2<int>(1, 1), Vector2<int>(0, 0));
+        this->drawCube(Vector2<double>(i, size.y), Vector2<double>(1, 1), Vector2<double>(0, 0));
     }
 }
 

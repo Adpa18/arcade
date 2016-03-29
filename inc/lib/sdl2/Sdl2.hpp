@@ -14,6 +14,7 @@
 # include "UIComponent.hpp"
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
+# include "UIAdvanceComponent.hpp"
 
 
 # define STEP 30
@@ -32,17 +33,17 @@ private:
         {SDL_SCANCODE_6, KEY_6}, {SDL_SCANCODE_7, KEY_7}, {SDL_SCANCODE_8, KEY_8},
         {SDL_SCANCODE_9, KEY_9}
     };
-    std::map<ComponentColor, int>    colors = {
-        {BLACK, 0x000000},
-        {RED, 0xFF0000},
-        {GREEN, 0x00FF00},
-        {BLUE, 0x0000FF},
-        {YELLOW, 0xFFFF00},
-        {MAGENTA, 0xFF00FF},
-        {CYAN, 0x00FFFF},
-        {WHITE, 0xFFFFFF}
+    std::map<AComponent::ComponentColor, int>    colors = {
+        {AComponent::BLACK, 0x000000},
+        {AComponent::RED, 0xFF0000},
+        {AComponent::GREEN, 0x00FF00},
+        {AComponent::BLUE, 0x0000FF},
+        {AComponent::YELLOW, 0xFFFF00},
+        {AComponent::MAGENTA, 0xFF00FF},
+        {AComponent::CYAN, 0x00FFFF},
+        {AComponent::WHITE, 0xFFFFFF}
     };
-    Vector2<int>         size;
+    Vector2<double>         size;
     std::string     background;
     bool						is_init;
     bool						is_destroy;
@@ -52,13 +53,14 @@ public:
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    virtual void    init(const std::string &name, Vector2<int> size, std::stack<AComponent*> cache);
-    virtual void    init(const std::string &name, Vector2<int> size);
+    virtual void    init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache);
+    virtual void    init(const std::string &name, Vector2<double> size);
     virtual void    destroy();
 
 private:
     void            displayGame(const GameComponent &game, SDL_Rect *rect);
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);
+    void            displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect);
     void            displayBackground(const BackgroundComponent &background, SDL_Rect *rect);
     void			      fill_audio(void *udata, Uint8 *stream, int len);
 
@@ -69,7 +71,7 @@ extern "C" IGraph *loadLib()
     return (new Sdl2());
 }
 
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<int> size, std::stack<AComponent *> cache)
+extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<double> size, std::stack<AComponent *> cache)
 {
   static_cast<Sdl2 *>(graph)->init(name, size, cache);
 }

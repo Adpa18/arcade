@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:15:58 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:22:39 2016 Nicolas Constanty
 */
 
 #ifndef ACOMPONENT_HPP_
@@ -13,33 +13,36 @@
 
 # include "Vector2.hpp"
 
-enum ComponentColor {
+class AComponent {
+public:
+  enum ComponentColor
+  {
     BLACK,
     RED,
     GREEN,
-    BLUE,
     YELLOW,
+    BLUE,
     MAGENTA,
     CYAN,
     WHITE
-};
-
-class AComponent {
+  };
 private:
-    Vector2<int>	        pos;
-    Vector2<int>	        size;
-    ComponentColor        color;
+  Vector2<double>	        pos;
+  ComponentColor          color;
+  // Vector2<double>	        size;
 public:
-    AComponent(Vector2<int> const &pos, ComponentColor color);
-    AComponent(Vector2<int> const &pos, Vector2<int> const &size, ComponentColor color);
-    AComponent(int x, int y, ComponentColor color);
+    AComponent(int x, int y, enum ComponentColor color);
+    AComponent(Vector2<double> const &pos, enum ComponentColor color);
     virtual ~AComponent ();
-    Vector2<int> const   &getPos() const;
-    void            setPos(const Vector2<int> &pos);
-    Vector2<int> const   &getSize() const;
-    void            setSize(const Vector2<int> &pos);
-    ComponentColor const   &getColor() const;
-    void            setColor(const ComponentColor color);
+    // AComponent(Vector2<double> const &pos, Vector2<double> const &size, ComponentColor color);
+public:
+    Vector2<double> const	&getPos() const;
+    enum ComponentColor		getColor() const;
+    // Vector2<double> const   &getSize() const;
+public:
+    void	setColor(ComponentColor color);
+    void	setPos(const Vector2<double> &pos);
+    // void            setSize(const Vector2<double> &pos);
 };
 
 #endif /* !ACOMPONENT_HPP_ */

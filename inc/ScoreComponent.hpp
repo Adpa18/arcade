@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:22:43 2016 Nicolas Constanty
+** Last update	Tue Mar 29 21:29:22 2016 Nicolas Constanty
 */
 
 #ifndef SCORECOMPONENT_HPP_
@@ -16,7 +16,7 @@
 # include <fstream>
 # include <vector>
 # include <cstring>
-# include "UIComponent.hpp"
+# include "UIAdvanceComponent.hpp"
 
 typedef     struct s_header {
     int     magicNbr;
@@ -34,14 +34,14 @@ class ScoreComponent {
 private:
     std::string game;
     size_t      score;
-    UIComponent *text;
+    UIAdvanceComponent *text;
     t_header    header;
     std::vector<t_highScore> hightScore;
 public:
   ScoreComponent(const std::string &game);
   virtual ~ScoreComponent();
   size_t    getScore() const;
-  UIComponent    *getScoreUI();
+  UIAdvanceComponent    *getScoreUI();
   void      setScore(size_t score);
   void      writeScore();
 };

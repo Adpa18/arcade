@@ -6,6 +6,7 @@ DEP_SRC		=	$(BASE)src/AComponent.cpp	\
 			$(BASE)src/AGame.cpp		\
 			$(BASE)src/GameComponent.cpp	\
 			$(BASE)src/UIComponent.cpp	\
+			$(BASE)src/UIAdvanceComponent.cpp		\
 
 CC		=	g++ -std=gnu++11
 

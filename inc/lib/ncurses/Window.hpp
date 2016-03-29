@@ -17,20 +17,20 @@
 namespace ncurses {
   class Window {
   private:
-    Vector2<int>	size;
-    Vector2<int>	pos;
+    Vector2<double>	size;
+    Vector2<double>	pos;
     WINDOW	*parent;
     WINDOW	*wind;
   public:
-    Window (Vector2<int> &s, Vector2<int> &p, WINDOW *pa);
+    Window (Vector2<double> &s, Vector2<double> &p, WINDOW *pa);
     virtual ~Window ();
-    Vector2<int>	getSize() const;
+    Vector2<double>	getSize() const;
     void		setSize();
-    Vector2<int> getPos() const;
+    Vector2<double> getPos() const;
     void		setPos();
     WINDOW	*getWind() const;
     void	  close();
-    void		setWind(Vector2<int> &s, Vector2<int> &p, WINDOW *pa);
+    void		setWind(Vector2<double> &s, Vector2<double> &p, WINDOW *pa);
   };
 };
 

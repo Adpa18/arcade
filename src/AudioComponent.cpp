@@ -10,7 +10,7 @@
 
 #include "AudioComponent.hpp"
 
-AudioComponent::AudioComponent(Vector2<int> const &pos, ComponentColor color,
+AudioComponent::AudioComponent(Vector2<double> const &pos, ComponentColor color,
   char const s_term, std::string const &s_2D, std::string const &s_3D)
  : AComponent(pos, color)
 {
