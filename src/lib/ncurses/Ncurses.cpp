@@ -7,6 +7,7 @@ Ncurses::Ncurses (void) : size(ArcadeSystem::winWidth, ArcadeSystem::winHeight)
 {
   this->is_init = false;
   this->is_destroy = false;
+  this->valid_size = false;
 }
 
 Ncurses::~Ncurses ()
