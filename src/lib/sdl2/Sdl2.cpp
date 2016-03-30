@@ -24,7 +24,6 @@ Sdl2::~Sdl2 ()
 void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
 {
     this->is_init = true;
-    std::cout << "StartInit => Lib Sdl2" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))

@@ -1,5 +1,5 @@
 SUBDIRS	=	snake \
-		Pacman \
+			Pacman \
 
 all		:
 	@echo -e "\033[32m=> Compiling Games\033[00m"

@@ -50,7 +50,7 @@ void	arcade::Arcade::initSo(std::string const &name, SOTYPE type)
     }
     else
       myso = dlopen(name.c_str(), RTLD_NOW | RTLD_GLOBAL);
-    if (!myso)
+    if (!myso || (dlsym_error = dlerror()))
         std::runtime_error(std::string("Cannot open library: ") + dlerror());
     symbol = (type == GAME) ? "loadGame" : "loadLib";
     fptr load = (void *(*)())(dlsym(myso, symbol));

@@ -1,44 +1,48 @@
-BASE		=	../../../
+BASE		=   ../../../
 
-SRC		=	Pacman.cpp	\
+SRC			=	Pacman.cpp	\
 
-DEP_SRC		=	$(BASE)src/AComponent.cpp	\
-			$(BASE)src/AGame.cpp		\
-			$(BASE)src/GameComponent.cpp	\
-			$(BASE)src/UIComponent.cpp	\
-			$(BASE)src/UIAdvanceComponent.cpp		\
+DEP_SRC		=	$(BASE)src/AComponent.cpp						\
+						$(BASE)src/AGame.cpp								\
+						$(BASE)src/GameComponent.cpp				\
+						$(BASE)src/BackgroundComponent.cpp	\
+						$(BASE)src/UIComponent.cpp					\
+						$(BASE)src/UIAdvanceComponent.cpp		\
+						$(BASE)src/AudioComponent.cpp				\
+						$(BASE)src/ScoreComponent.cpp				\
 
-CC		=	g++ -std=gnu++11
+CC			=	g++ -std=gnu++11
 
-RM		=	rm -rf
+RM			=	rm -rf
 
 NAME		=	$(BASE)games/lib_arcade_pacman.so
 
-CPPFLAGS	+=	-W -Wall -Wextra -Werror -fPIC -g
-CPPFLAGS	+=	-I$(BASE)inc/games/Pacman/ -I$(BASE)inc/
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -g
 
-LDFLAGS		=	-shared
+CPPFLAGS	+= 	-I$(BASE)inc/games/Pacman/ -I$(BASE)inc/
 
-OBJ		=	$(SRC:%cpp=%o)
+LDFLAGS		=	-shared -z defs
 
-DEP		=	$(DEP_SRC:%cpp=%o)
+OBJ			=	$(SRC:%cpp=%o)
 
-%.o:	 %.cpp
-	 @echo -e "Compiling $<"
-	 @$(CC) -c $(CPPFLAGS) $< -o $@
+DEP			=	$(DEP_SRC:%cpp=%o)
 
-all:	 $(NAME)
+%.o : %.cpp
+	@echo -e "Compiling $<"
+	@$(CC) -c $(CPPFLAGS) $< -o $@
 
-$(NAME): $(OBJ) $(DEP)
-	 @$(CC) $(LDFLAGS) $(OBJ) $(DEP) -o $(NAME)
-	 @echo -e "\033[33mlib_arcade_Pacman.so Compiled\033[00m"
+$(NAME)	:	$(OBJ) $(DEP)
+	@$(CC) $(LDFLAGS) $(OBJ) $(DEP) -o $(NAME)
+	@echo -e "\033[33mlib_arcade_snake.so Compiled\033[00m"
 
-clean:
-	 $(RM) $(OBJ)
+all		:	$(NAME)
 
-fclean:	 clean
-	 $(RM) $(NAME)
+clean	:
+	$(RM) $(OBJ)
 
-re:	 fclean all
+fclean	:	clean
+	$(RM) $(NAME)
 
-.PHONY:	 all clean fclean re
+re		:	fclean all
+
+.PHONY	: all clean fclean re

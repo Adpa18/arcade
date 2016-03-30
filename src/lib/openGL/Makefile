@@ -38,11 +38,11 @@ DEP			=	$(DEP_SRC:%cpp=%o)
 	@echo -e "Compiling $<"
 	@$(CC) -c $(CPPFLAGS) $< -o $@
 
-all		:	$(NAME)
-
 $(NAME)	:	$(OBJ) $(DEP)
 	@$(CC) $(LDFLAGS) $(OBJ) $(DEP) -o $(NAME) $(LIBS)
 	@echo -e "\033[33mlib_arcade_openGL.so Compiled\033[00m"
+
+all		:	$(NAME)
 
 clean	:
 	$(RM) $(OBJ)
