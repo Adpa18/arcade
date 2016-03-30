@@ -36,8 +36,8 @@ public:
     virtual std::stack<AComponent*> getInfos(void);
     virtual void                    restart(void);
     void                            Play(void);
-    void                            updateMap(struct arcade::GetMap *map);
-    void                            whereAmI(struct arcade::WhereAmI *wai);
+    void                            getMap();
+    void                            whereAmI();
     void 							changeDirection(int key);
 private:
     bool                            check(Vector2<double> snakePos);

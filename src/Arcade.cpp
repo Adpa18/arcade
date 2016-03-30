@@ -98,7 +98,7 @@ bool    arcade::Arcade::run(const std::string &graphPath)
     gamePos = 0;
     if (graphs[graphPos].second)
       graphs[graphPos].first->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
-    std::chrono::milliseconds interval(60);
+    std::chrono::milliseconds interval(600);
     GameLoop:
         if ((key = graphs[graphPos].first->eventManagment()) == ArcadeSystem::Exit) {
             return (true);

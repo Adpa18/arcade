@@ -186,15 +186,21 @@ void                        Snake::restart()
     this->score->getScoreUI()->setText("Score : 0");
     this->snake.erase(this->snake.begin(), this->snake.end());
     for (size_t i = 0; i < SIZE; i++) {
-      this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / STEP / 2 * STEP, HEIGHT / STEP / 2 * STEP), Vector2<double>(STEP, STEP), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
+      this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / STEP / 2 * STEP - (i * STEP), HEIGHT / STEP / 2 * STEP), Vector2<double>(STEP, STEP), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
     }
     this->target->setPos(Vector2<double>(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
 }
 
-void        Snake::updateMap(struct arcade::GetMap *map)
+void        Snake::getMap()
 {
+    arcade::GetMap      *map;
+
+    map = new arcade::GetMap + (WIDTH * HEIGHT) * sizeof(arcade::TileType);
+    map->type = arcade::CommandType::GET_MAP;
+    map->width = WIDTH;
+    map->height = HEIGHT;
     for (size_t i = 0; i < WIDTH * HEIGHT; i++) {
-        if (this->target->getPos().y * WIDTH + this->target->getPos().x == i) {
+        if (this->target->getPos().y / STEP * WIDTH + this->target->getPos().x / STEP == i) {
             map->tile[i] = arcade::TileType::POWERUP;
         } else if (i / HEIGHT == 0 || i / HEIGHT == HEIGHT - 1 || i % WIDTH == 0 || i % WIDTH == WIDTH - 1) {
             map->tile[i] = arcade::TileType::BLOCK;
@@ -202,43 +208,38 @@ void        Snake::updateMap(struct arcade::GetMap *map)
             map->tile[i] = arcade::TileType::EMPTY;
         }
     }
+    std::cout.write((const char *)map, sizeof(arcade::GetMap) + (WIDTH * HEIGHT) * sizeof(arcade::TileType));
 }
 
-void        Snake::whereAmI(struct arcade::WhereAmI *wai)
+void        Snake::whereAmI()
 {
-    wai = new arcade::WhereAmI + this->snake.size() * sizeof(arcade::TileType);
+    arcade::WhereAmI    *wai;
+
+    wai = new arcade::WhereAmI + this->snake.size() * sizeof(arcade::Position);
 
     wai->type = arcade::CommandType::WHERE_AM_I;
-    wai->lenght = this->snake.size();
-    for (size_t i = 0; i < this->snake.size(); i++) {
-        wai->position[i].x = this->snake[i]->getPos().x;
-        wai->position[i].y = this->snake[i]->getPos().y;
+    wai->lenght = static_cast<uint16_t>(this->snake.size());
+    for (uint16_t i = 0; i < wai->lenght; i++) {
+        wai->position[i].x = static_cast<uint16_t>(this->snake[i]->getPos().x);
+        wai->position[i].y = static_cast<uint16_t>(this->snake[i]->getPos().y);
     }
+    std::cout.write((const char *)wai, sizeof(arcade::WhereAmI) + wai->lenght * sizeof(arcade::Position));
 }
 
 void 	Play(void)
 {
     Snake               *snake;
     char                cmd;
-    arcade::GetMap      *map;
-    arcade::WhereAmI    *wai;
 
     snake = new Snake();
-    wai = NULL;
-    map = new arcade::GetMap + (WIDTH * HEIGHT) * sizeof(arcade::TileType);
-    map->type = arcade::CommandType::GET_MAP;
-    map->width = WIDTH;
-    map->height = HEIGHT;
     while (std::cin.read(&cmd, 1))
     {
         switch ((arcade::CommandType)cmd) {
             case arcade::CommandType::WHERE_AM_I:
-                snake->whereAmI(wai);
-                std::cout.write((const char *)wai, sizeof(*wai));
+                snake->whereAmI();
                 break;
             case arcade::CommandType::GET_MAP:
-                snake->updateMap(map);
-                std::cout.write((const char *)map, sizeof(*map));
+                snake->getMap();
                 break;
             case arcade::CommandType::GO_UP:
                 snake->changeDirection(DIR_UP);
