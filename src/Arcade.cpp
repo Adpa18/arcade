@@ -12,7 +12,6 @@ void arcade::Arcade::refresh_lib(std::string const &folder, SOTYPE type)
 {
     DIR           *dir;
     struct dirent *ent;
-    std::pair<void *, bool> *tmp;
 
     if ((dir = opendir(folder.c_str())) != NULL) {
         while ((ent = readdir (dir)) != NULL) {
@@ -20,12 +19,11 @@ void arcade::Arcade::refresh_lib(std::string const &folder, SOTYPE type)
             continue;
             if (type == GRAPH) {
                 this->graphsNames.push_back(ent->d_name);
-                tmp = initSo(folder + ent->d_name, GRAPH);
-                this->graphs.push_back(std::pair<IGraph *, bool>(static_cast<IGraph *>(tmp->first), tmp->second));
+                initSo(folder + ent->d_name, GRAPH);
+
             } else {
                 this->gamesNames.push_back(ent->d_name);
-                tmp = initSo(folder + ent->d_name, GAME);
-                this->games.push_back(static_cast<AGame *>(tmp->first));
+                initSo(folder + ent->d_name, GAME);
             }
         }
     } else {
@@ -33,14 +31,11 @@ void arcade::Arcade::refresh_lib(std::string const &folder, SOTYPE type)
     }
 }
 
-std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE type)
+void	arcade::Arcade::initSo(std::string const &name, SOTYPE type)
 {
     void          *myso;
     const char    *dlsym_error;
     const char    *symbol;
-    typedef void  *(*fptr)();
-    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>);
-    typedef void  *(*f_destroy)(IGraph *);
     bool					has_init;
 
     has_init = true;
@@ -63,20 +58,26 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
       std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
     this->libs.push(myso);
     //check if init exist
-    f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
-    if ((dlsym_error = dlerror())) {
-      (void)ini;
-      has_init = false;
-    }
-    f_destroy dest = (void *(*)(IGraph *))(dlsym(myso, "destroyLib"));
-    if ((dlsym_error = dlerror()))
+    if (type == GRAPH)
+    {
+      f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
+      if ((dlsym_error = dlerror())) {
+        (void)ini;
+        has_init = false;
+      }
+      f_destroy dest = (void *(*)(IGraph *))(dlsym(myso, "destroyLib"));
+      if ((dlsym_error = dlerror()))
       {
         (void)dest;
         has_init = false;
       }
-    if (has_init)
-      return (new std::pair<void *, bool>(load(), true));
-  return (new std::pair<void *, bool>(load(), false));
+      if (has_init)
+        this->graphs.push_back(std::pair<fptr, bool>(load, true));
+      else
+        this->graphs.push_back(std::pair<fptr, bool>(load, false));
+    }
+    else
+      this->games.push_back(static_cast<AGame *>(load()));
 }
 
 void		arcade::Arcade::clean()
@@ -90,24 +91,26 @@ void		arcade::Arcade::clean()
 
 bool    arcade::Arcade::run(const std::string &graphPath)
 {
-    int	   key;
-    int    graphPos;
-    int    gamePos;
+    int			key;
+    int			graphPos;
+    int			gamePos;
+    IGraph	*graph;
 
     graphPos = find(this->graphsNames.begin(), this->graphsNames.end(), graphPath.substr(graphPath.find_last_of('/') + 1, graphPath.length())) - this->graphsNames.begin();
     gamePos = 0;
+    graph = static_cast<IGraph *>(graphs[graphPos].first());
     if (graphs[graphPos].second)
-      graphs[graphPos].first->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
+      graph->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
     std::chrono::milliseconds interval(60);
     GameLoop:
-        if ((key = graphs[graphPos].first->eventManagment()) == ArcadeSystem::Exit) {
+        if ((key = graph->eventManagment()) == ArcadeSystem::Exit) {
             return (true);
         } else if (key == ArcadeSystem::PrevGraph || key == ArcadeSystem::NextGraph
            || key == ArcadeSystem::PrevGame || key == ArcadeSystem::NextGame) {
             if (graphs[graphPos].second)
-              graphs[graphPos].first->destroy();
+              graph->destroy();
             else
-              delete graphs[graphPos].first;
+              delete graph;
             if (key == ArcadeSystem::PrevGraph) {
                 --graphPos;
             } else if (key == ArcadeSystem::NextGraph) {
@@ -119,12 +122,11 @@ bool    arcade::Arcade::run(const std::string &graphPath)
             }
             graphPos = (graphPos < 0) ? graphsNames.size() - 1 : graphPos % graphsNames.size();
             gamePos = (gamePos < 0) ? gamesNames.size() - 1 : gamePos % gamesNames.size();
+            graph = static_cast<IGraph *>(graphs[graphPos].first());
             if (graphs[graphPos].second)
-              graphs[graphPos].first->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
-            else
-              graphs[graphPos].first = static_cast<IGraph *>(initSo(graphsNames[graphPos], GRAPH)->first);
+              graph->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
         }
-        graphs[graphPos].first->display(games[gamePos]->compute(key));
+        graph->display(games[gamePos]->compute(key));
         std::this_thread::sleep_for(interval);
     goto GameLoop;
     return (true);
@@ -139,6 +141,6 @@ int	main(int ac, char **av)
     }
     arcade = new arcade::Arcade();
     arcade->run(av[1]);
-    // arcade->clean();
+    arcade->clean();
     return (0);
 }

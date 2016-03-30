@@ -10,6 +10,7 @@
 # include <chrono>
 # include <thread>
 # include <iostream>
+# include <map>
 # include "Utils.hpp"
 # include "Interfaces.hpp"
 
@@ -22,7 +23,10 @@ namespace arcade {
 
   class Arcade {
   private:
-    std::vector<std::pair<IGraph *, bool>>  graphs;
+    typedef void  *(*fptr)();
+    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>);
+    typedef void  *(*f_destroy)(IGraph *);
+    std::vector<std::pair<fptr, bool>>  		graphs;
     std::vector<AGame *>                    games;
     std::stack<void *>                      libs;
     std::vector<std::string>                graphsNames;
@@ -31,7 +35,7 @@ namespace arcade {
     Arcade ();
     virtual ~Arcade ();
     bool    run(const std::string &graph);
-    std::pair<void *, bool>    *initSo(std::string const &, SOTYPE);
+    void		initSo(std::string const &, SOTYPE);
     void    refresh_lib(std::string const &folder, SOTYPE);
     void		clean();
   };

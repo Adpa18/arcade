@@ -173,8 +173,8 @@ void  Ncurses::init(const std::string &name, Vector2<double> s, std::stack<AComp
     init_pair(1, COLOR_BLACK, COLOR_BLACK);
     init_pair(2, COLOR_RED, COLOR_BLACK);
     init_pair(3, COLOR_GREEN, COLOR_BLACK);
-    init_pair(4, COLOR_BLUE, COLOR_BLACK);
-    init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(4, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(5, COLOR_BLUE, COLOR_BLACK);
     init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
     init_pair(7, COLOR_CYAN, COLOR_BLACK);
     init_pair(8, COLOR_WHITE, COLOR_BLACK);
@@ -209,8 +209,8 @@ void  Ncurses::initc(Vector2<double> s)
     init_pair(1, COLOR_BLACK, COLOR_BLACK);
     init_pair(2, COLOR_RED, COLOR_BLACK);
     init_pair(3, COLOR_GREEN, COLOR_BLACK);
-    init_pair(4, COLOR_BLUE, COLOR_BLACK);
-    init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(4, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(5, COLOR_BLUE, COLOR_BLACK);
     init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
     init_pair(7, COLOR_CYAN, COLOR_BLACK);
     init_pair(8, COLOR_WHITE, COLOR_BLACK);
