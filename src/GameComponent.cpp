@@ -5,10 +5,20 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Wed Mar 30 03:59:33 2016 Nicolas Constanty
+** Last update	Wed Mar 30 11:58:50 2016 Nicolas Constanty
 */
 
 #include "GameComponent.hpp"
+
+GameComponent::GameComponent(Vector2<double> const &pos,
+			     AComponent::ComponentColor color,
+			     Shapes sprite3D,
+			     std::string const &spriteText,
+                             std::string const &sprite2D)
+  : AComponent(pos, color), sprite3D(sprite3D),
+    spriteText(spriteText), fileSprite2D(sprite2D)
+{
+}
 
 GameComponent::GameComponent(Vector2<double> const &p, Vector2<double> const &s, ComponentColor color,
     char const &spriteText, std::string const &sprite2D, Shapes sprite3D)

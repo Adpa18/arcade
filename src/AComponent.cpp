@@ -5,15 +5,15 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 29 21:59:04 2016 Nicolas Constanty
+** Last update	Wed Mar 30 11:57:21 2016 Nicolas Constanty
 */
 
 #include "AComponent.hpp"
 
-AComponent::AComponent(int x, int y, ComponentColor color) : pos(Vector2<double>(x, y)), color(color)
+AComponent::AComponent(int x, int y, ComponentColor c) : pos(Vector2<double>(x, y)), color(c)
 {}
 
-AComponent::AComponent(Vector2<double> const &p, ComponentColor color) : pos(p), color(color)
+AComponent::AComponent(Vector2<double> const &p, ComponentColor c) : pos(p), color(c)
 {}
 
 // AComponent::AComponent(Vector2<double> const &p, Vector2<double> const &s, ComponentColor color) : pos(p), size(s), color(color)

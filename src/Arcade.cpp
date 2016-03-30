@@ -100,20 +100,21 @@ bool    arcade::Arcade::run(const std::string &graphPath)
       graphs[graphPos].first->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
     std::chrono::milliseconds interval(60);
     GameLoop:
-        if ((key = graphs[graphPos].first->eventManagment()) == ESC) {
+        if ((key = graphs[graphPos].first->eventManagment()) == ArcadeSystem::Exit) {
             return (true);
-        } else if (key == KEY_2 || key == KEY_3 || key == KEY_4 || key == KEY_5) {
+        } else if (key == ArcadeSystem::PrevGraph || key == ArcadeSystem::NextGraph
+           || key == ArcadeSystem::PrevGame || key == ArcadeSystem::NextGame) {
             if (graphs[graphPos].second)
               graphs[graphPos].first->destroy();
             else
               delete graphs[graphPos].first;
-            if (key == KEY_2) {
+            if (key == ArcadeSystem::PrevGraph) {
                 --graphPos;
-            } else if (key == KEY_3) {
+            } else if (key == ArcadeSystem::NextGraph) {
                 ++graphPos;
-            } else if (key == KEY_4) {
+            } else if (key == ArcadeSystem::PrevGame) {
                 --gamePos;
-            } else if (key == KEY_5) {
+            } else if (key == ArcadeSystem::NextGame) {
                 ++gamePos;
             }
             graphPos = (graphPos < 0) ? graphsNames.size() - 1 : graphPos % graphsNames.size();

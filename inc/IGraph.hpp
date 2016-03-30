@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Tue Mar 08 17:47:17 2016 Nicolas Constanty
-** Last update	Tue Mar 29 16:43:48 2016 Nicolas Constanty
+** Last update	Wed Mar 30 13:41:06 2016 Nicolas Constanty
 */
 
 #ifndef IGRAPH_HPP_
@@ -14,6 +14,7 @@
 # include <stack>
 # include <iostream>
 # include <AComponent.hpp>
+# include "ArcadeSystem.hpp"
 
 class IGraph {
 public:

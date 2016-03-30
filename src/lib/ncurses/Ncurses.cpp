@@ -3,7 +3,7 @@
 
 using namespace ncurses;
 
-Ncurses::Ncurses (void) : size(0, 0)
+Ncurses::Ncurses (void) : size(ArcadeSystem::winWidth, ArcadeSystem::winHeight)
 {
   this->is_init = false;
   this->is_destroy = false;

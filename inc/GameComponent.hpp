@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 03:25:20Nicolas Constanty
-** Last update	Wed Mar 30 03:40:20 2016 Nicolas Constanty
+** Last update	Wed Mar 30 13:26:29 2016 Nicolas Constanty
 */
 
 #ifndef GAMECOMPONENT_HPP_

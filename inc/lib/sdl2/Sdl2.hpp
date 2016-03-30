@@ -9,7 +9,6 @@
 # include <iostream>
 # include <map>
 # include "IGraph.hpp"
-# include "AGame.hpp"
 # include "GameComponent.hpp"
 # include "UIComponent.hpp"
 # include "BackgroundComponent.hpp"
@@ -25,13 +24,21 @@ private:
     SDL_Renderer    *render;
     std::map<std::string, TTF_Font*> fonts;
     std::map<std::string, SDL_Texture*> tex;
-    std::map<SDL_Keycode, int>    keyMap = {
-        {SDL_SCANCODE_ESCAPE, ESC}, {SDL_SCANCODE_UP, UP}, {SDL_SCANCODE_DOWN, DOWN},
-        {SDL_SCANCODE_LEFT, LEFT}, {SDL_SCANCODE_RIGHT, RIGHT},
-        {SDL_SCANCODE_0, KEY_0}, {SDL_SCANCODE_1, KEY_1}, {SDL_SCANCODE_2, KEY_2},
-        {SDL_SCANCODE_3, KEY_3}, {SDL_SCANCODE_4, KEY_4}, {SDL_SCANCODE_5, KEY_5},
-        {SDL_SCANCODE_6, KEY_6}, {SDL_SCANCODE_7, KEY_7}, {SDL_SCANCODE_8, KEY_8},
-        {SDL_SCANCODE_9, KEY_9}
+    std::map<int, int>    keyMap = {
+        {SDL_SCANCODE_ESCAPE, ArcadeSystem::Exit},
+        {SDL_SCANCODE_UP, ArcadeSystem::ArrowUp},
+        {SDL_SCANCODE_DOWN, ArcadeSystem::ArrowDown},
+        {SDL_SCANCODE_LEFT, ArcadeSystem::ArrowLeft},
+        {SDL_SCANCODE_RIGHT, ArcadeSystem::ArrowRight},
+        {SDL_SCANCODE_2, ArcadeSystem::PrevGraph},
+        {SDL_SCANCODE_3, ArcadeSystem::NextGraph},
+        {SDL_SCANCODE_4, ArcadeSystem::NextGame},
+        {SDL_SCANCODE_5, ArcadeSystem::NextGame},
+        {SDL_SCANCODE_8, ArcadeSystem::Restart},
+        {SDL_SCANCODE_9, ArcadeSystem::Home},
+        {SDL_SCANCODE_P, ArcadeSystem::Pause},
+        {SDL_SCANCODE_RETURN, ArcadeSystem::Enter},
+        {SDL_SCANCODE_BACKSPACE, ArcadeSystem::Backspace}
     };
     std::map<AComponent::ComponentColor, int>    colors = {
         {AComponent::BLACK, 0x000000},

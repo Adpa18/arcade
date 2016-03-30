@@ -20,9 +20,6 @@ enum SOTYPE { GRAPH, GAME };
 
 namespace arcade {
 
-  // static const int winWidth = 50;
-  // static const int winHeight = 30;
-
   class Arcade {
   private:
     std::vector<std::pair<IGraph *, bool>>  graphs;

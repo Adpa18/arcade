@@ -6,7 +6,6 @@
 # include <map>
 # include <ncurses.h>
 # include "IGraph.hpp"
-# include "AGame.hpp"
 # include "Window.hpp"
 # include "GameComponent.hpp"
 # include "AudioComponent.hpp"
@@ -15,18 +14,18 @@
 
 class Ncurses : public IGraph {
 private:
-    Vector2<double>        size;
-    bool								is_init;
-    bool								is_destroy;
-  bool				valid_size;
+  Vector2<double> size;
+  bool						is_init;
+  bool						is_destroy;
+  bool				    valid_size;
   ncurses::Window	*wind;
   ncurses::Window	*main_wind;
   std::map<int, int>    keyMap = {
-      {27, ESC},
-      {KEY_UP, UP}, {KEY_DOWN, DOWN}, {KEY_LEFT, LEFT}, {KEY_RIGHT, RIGHT},
-      {48, KEY_0}, {49, KEY_1}, {50, KEY_2}, {51, KEY_3},
-      {52, KEY_4}, {53, KEY_5}, {54, KEY_6}, {55, KEY_7},
-      {56, KEY_8}, {57, KEY_9}
+      {27, ArcadeSystem::Exit},
+      {KEY_UP, ArcadeSystem::ArrowUp}, {KEY_DOWN, ArcadeSystem::ArrowDown}, {KEY_LEFT, ArcadeSystem::ArrowLeft}, {KEY_RIGHT, ArcadeSystem::ArrowRight},
+      {50, ArcadeSystem::PrevGraph}, {51, ArcadeSystem::NextGraph},
+      {52, ArcadeSystem::NextGame}, {53, ArcadeSystem::NextGame},
+      {56, ArcadeSystem::Restart}, {57, ArcadeSystem::Home}
   };
   std::map<AComponent *, WINDOW *> texts;
 
