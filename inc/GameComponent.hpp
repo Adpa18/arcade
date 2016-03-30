@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 03:25:20Nicolas Constanty
-** Last update	Wed Mar 30 13:26:29 2016 Nicolas Constanty
+** Last update	Wed Mar 30 17:27:00 2016 Nicolas Constanty
 */
 
 #ifndef GAMECOMPONENT_HPP_
@@ -44,6 +44,7 @@ public:
   std::string const &getSprite2D() const;
   Shapes            getSprite3D() const;
   void              setSpriteText(const char &spriteText);
+  void              setSpriteText(const std::string &spriteText);
   void              setSprite2D(const std::string &sprite2D);
   void              setSprite3D(Shapes sprite3D);
   Vector2<double> const &getDim() const;
