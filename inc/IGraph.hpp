@@ -1,13 +1,3 @@
-/*
-** IGraph.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Tue Mar 08 17:47:17 2016 Nicolas Constanty
-** Last update	Wed Mar 30 13:41:06 2016 Nicolas Constanty
-*/
-
 #ifndef IGRAPH_HPP_
 #define IGRAPH_HPP_
 

@@ -1,13 +1,3 @@
-/*
-** UIComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Wed Mar 30 17:28:01 2016 Nicolas Constanty
-*/
-
 #ifndef UICOMPONENT_HPP_
 # define UICOMPONENT_HPP_
 

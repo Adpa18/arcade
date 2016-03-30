@@ -1,13 +1,3 @@
-/*
-** ScoreComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Tue Mar 29 21:29:22 2016 Nicolas Constanty
-*/
-
 #ifndef SCORECOMPONENT_HPP_
 # define SCORECOMPONENT_HPP_
 

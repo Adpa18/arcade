@@ -1,13 +1,3 @@
-/*
-** ScoreComponent.cpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Wed Mar 30 17:30:55 2016 Nicolas Constanty
-*/
-
 #include "ScoreComponent.hpp"
 
 ScoreComponent::ScoreComponent(const std::string &game) : game(game)

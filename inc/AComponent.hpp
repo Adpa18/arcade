@@ -1,13 +1,3 @@
-/*
-** AComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 29 21:22:39 2016 Nicolas Constanty
-*/
-
 #ifndef ACOMPONENT_HPP_
 # define ACOMPONENT_HPP_
 

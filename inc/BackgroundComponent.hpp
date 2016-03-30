@@ -1,13 +1,3 @@
-/*
-** BackgroundComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 16 21:32:30 2016 Nicolas Constanty
-** Last update	Tue Mar 29 21:28:03 2016 Nicolas Constanty
-*/
-
 #ifndef BACKGROUNDCOMPONENT_HPP_
 # define BACKGROUNDCOMPONENT_HPP_
 

@@ -1,13 +1,3 @@
-/*
-** pacman.hpp for cpp_arcade
-**
-** Made by	Axel Vencatareddy
-** Login	vencat_a
-**
-** Started on	Tue Mar 15 17:55:08 2016 Axel Vencatareddy
-** Last update	Wed Mar 30 19:59:55 2016 Adrien WERY
-*/
-
 #ifndef PACMAN_HPP_
 # define PACMAN_HPP_
 

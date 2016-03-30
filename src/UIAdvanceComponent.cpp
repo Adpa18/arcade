@@ -1,13 +1,3 @@
-/*
-** UIAdvanceComponent.cpp for cpp_arcade
-**
-** Made by	Adrien WERY
-** Login	wery_a
-**
-** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Wed Mar 30 17:28:38 2016 Nicolas Constanty
-*/
-
 #include "UIAdvanceComponent.hpp"
 
 UIAdvanceComponent::UIAdvanceComponent(Vector2<double> const &p, Vector2<double> const &s, ComponentColor color, const std::string &text,

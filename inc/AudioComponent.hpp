@@ -1,13 +1,3 @@
-/*
-** AudioComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 09 15:40:56 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:21:57 2016 Nicolas Constanty
-*/
-
 #ifndef AUDIOCOMPONENT_HPP_
 # define AUDIOCOMPONENT_HPP_
 

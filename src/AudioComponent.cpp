@@ -1,13 +1,3 @@
-/*
-** AudioComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 09 15:40:56 2016 Nicolas Constanty
-** Last update	Mon Mar 28 21:23:02 2016 Nicolas Constanty
-*/
-
 #include "AudioComponent.hpp"
 
 AudioComponent::AudioComponent(Vector2<double> const &pos, ComponentColor color,

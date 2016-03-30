@@ -1,13 +1,3 @@
-/*
-** vector2.hpp for
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Tue Mar 08 17:07:00 2016 Nicolas Constanty
-** Last update	Wed Mar 30 03:15:53 2016 Nicolas Constanty
-*/
-
 #ifndef VECTOR2_HPP_
 # define VECTOR2_HPP_
 

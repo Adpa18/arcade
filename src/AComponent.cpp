@@ -1,13 +1,3 @@
-/*
-** AComponent.hpp for cpp_arcade
-**
-** Made by	Nicolas Constanty
-** Login	consta_n
-**
-** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Wed Mar 30 11:57:21 2016 Nicolas Constanty
-*/
-
 #include "AComponent.hpp"
 
 AComponent::AComponent(int x, int y, ComponentColor c) : pos(Vector2<double>(x, y)), color(c)
