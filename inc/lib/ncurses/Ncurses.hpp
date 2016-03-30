@@ -19,7 +19,6 @@ private:
   bool						is_destroy;
   bool				    valid_size;
   ncurses::Window	*wind;
-  ncurses::Window	*main_wind;
   std::map<int, int>    keyMap = {
       {27, ArcadeSystem::Exit},
       {KEY_UP, ArcadeSystem::ArrowUp}, {KEY_DOWN, ArcadeSystem::ArrowDown}, {KEY_LEFT, ArcadeSystem::ArrowLeft}, {KEY_RIGHT, ArcadeSystem::ArrowRight},
@@ -29,10 +28,11 @@ private:
   };
   std::map<AComponent *, WINDOW *> texts;
 
-  bool 						invalidSize(int w, int h, Vector2<double> const &size, Vector2<double> const &pos);
+  bool 						invalidSize(Vector2<double> const &size, Vector2<double> const &pos);
   void						initMainWindow();
   int							resizeTerm();
   void            initc(Vector2<double> s);
+  std::stack<GameComponent *>	old_component;
 public:
   Ncurses (void);
   virtual ~Ncurses ();

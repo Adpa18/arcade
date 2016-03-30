@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Wed Mar 30 11:58:50 2016 Nicolas Constanty
+** Last update	Wed Mar 30 17:27:29 2016 Nicolas Constanty
 */
 
 #include "GameComponent.hpp"
@@ -48,6 +48,11 @@ GameComponent::Shapes GameComponent::getSprite3D() const
 }
 
 void              GameComponent::setSpriteText(const char &spriteText)
+{
+    this->spriteText = spriteText;
+}
+
+void              GameComponent::setSpriteText(const std::string &spriteText)
 {
     this->spriteText = spriteText;
 }

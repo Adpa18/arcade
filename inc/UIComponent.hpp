@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 09 15:29:50 2016 Nicolas Constanty
-** Last update	Tue Mar 29 21:29:28 2016 Nicolas Constanty
+** Last update	Wed Mar 30 17:28:01 2016 Nicolas Constanty
 */
 
 #ifndef UICOMPONENT_HPP_
@@ -31,6 +31,7 @@ protected:
  public:
   Vector2<double> const &getDim() const;
   std::string const     &getText() const;
+  void                  setText(const std::string &text);
 // private:
 //     std::string     text;
 //     std::string     fontName;
@@ -43,7 +44,6 @@ protected:
 //     const std::string   &getText() const;
 //     const std::string   &getFontName() const;
 //     unsigned int        getFontSize() const;
-//     void                setText(const std::string &text);
 //     void                setFontName(const std::string &fontName);
 //     void                setFontSize(unsigned int fontSize);
 };

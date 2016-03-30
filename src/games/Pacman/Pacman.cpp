@@ -1,13 +1,3 @@
-/*
-** Pacman.cpp for cpp_arcade
-**
-** Made by	Axel Vencatareddy
-** Login	vencat_a
-**
-** Started on	Tue Mar 15 19:05:55 2016 Axel Vencatareddy
-** Last update	Wed Mar 30 18:17:18 2016 Adrien WERY
-*/
-
 #include "Pacman.hpp"
 
 Pacman::Pacman() : AGame("Pacman", Vector2<double>(WIDTH, HEIGHT))

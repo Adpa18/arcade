@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Tue Mar 29 21:18:32 2016 Nicolas Constanty
+** Last update	Wed Mar 30 17:28:49 2016 Nicolas Constanty
 */
 
 #include "UIComponent.hpp"
@@ -30,4 +30,9 @@ std::string const  &UIComponent::getText() const
 Vector2<double> const &UIComponent::getDim() const
 {
   return this->dim;
+}
+
+void                UIComponent::setText(const std::string &text)
+{
+    this->text = text;
 }

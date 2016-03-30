@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Fri Mar 11 20:58:21 2016 Adrien WERY
-** Last update	Tue Mar 29 21:20:08 2016 Nicolas Constanty
+** Last update	Wed Mar 30 17:28:38 2016 Nicolas Constanty
 */
 
 #include "UIAdvanceComponent.hpp"
@@ -36,11 +36,6 @@ const std::string   &UIAdvanceComponent::getFontName() const
 unsigned int        UIAdvanceComponent::getFontSize() const
 {
     return (this->fontSize);
-}
-
-void                UIAdvanceComponent::setText(const std::string &text)
-{
-    this->text = text;
 }
 
 void                UIAdvanceComponent::setFontName(const std::string &fontName)
