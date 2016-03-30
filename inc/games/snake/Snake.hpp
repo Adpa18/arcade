@@ -1,13 +1,3 @@
-/*
-** Snake.hpp for cpp_arcade
-**
-** Made by	Adrien WERY
-** Login	wery_a
-**
-** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Wed Mar 30 14:50:39 2016 Nicolas Constanty
-*/
-
 #ifndef SNAKE_HPP_
 #define SNAKE_HPP_
 
@@ -38,6 +28,7 @@ private:
     BackgroundComponent *background;
     direction       dir;
     std::vector<std::string>    backgroundSprites;
+    std::vector<GameComponent*> walls;
 public:
     Snake ();
     virtual ~Snake ();
@@ -45,11 +36,16 @@ public:
     virtual std::stack<AComponent*> getInfos(void);
     virtual void                    restart(void);
     void                            Play(void);
+    void                            updateMap(struct arcade::GetMap *map);
+    void                            whereAmI(struct arcade::WhereAmI *wai);
+    void 							changeDirection(int key);
 private:
     bool                            check(Vector2<double> snakePos);
     const   std::string             getImg(size_t pos);
 
 };
+
+extern "C" void     Play(void);
 
 extern "C" AGame *loadGame()
 {

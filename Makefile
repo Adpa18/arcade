@@ -27,8 +27,6 @@ OBJ			=	$(SRC:%cpp=%o)
 	@echo -e "Compiling $<"
 	@$(CC) -c $(CPPFLAGS) $< -o $@
 
-
-
 all		:	$(NAME)
 	@echo -e "\033[32mCompiling Arcade\033[00m"
 	@mkdir -p lib

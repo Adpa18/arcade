@@ -1,23 +1,22 @@
-/*
-** Snake.cpp for cpp_arcade
-**
-** Made by	Adrien WERY
-** Login	wery_a
-**
-** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Wed Mar 30 14:14:03 2016 Nicolas Constanty
-*/
-
 #include "Snake.hpp"
 
 Snake::Snake () : AGame("Snake", Vector2<double>(WIDTH, HEIGHT))
 {
-    Vector2<double> pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
+    Vector2<double> pos(rand() % ((WIDTH - 1) / STEP) * STEP + STEP, rand() % ((HEIGHT - 1) / STEP) * STEP + STEP);
+
     this->target = new GameComponent(pos, Vector2<double>(STEP, STEP), AComponent::RED, ' ', "snakeApple.png", GameComponent::CUBE_LARGE);
     this->background = new BackgroundComponent(Vector2<double>(0, 0), Vector2<double>(WIDTH, HEIGHT), AComponent::BLACK, "");
     this->sound = new AudioComponent(Vector2<double>(0, 0), AComponent::BLACK, '\a', "", "");
     this->old_target = new GameComponent(pos, Vector2<double>(STEP, STEP), AComponent::BLACK, ' ', this->background->getSprite2D(), GameComponent::CUBE_LARGE);
     this->score = new ScoreComponent("snake");
+    for (size_t i = 0; i < WIDTH; i += STEP) {
+        this->walls.push_back(new GameComponent(Vector2<double>(i, 0), Vector2<double>(STEP, STEP), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
+        this->walls.push_back(new GameComponent(Vector2<double>(i, HEIGHT - 1), Vector2<double>(STEP, STEP), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
+    }
+    for (size_t i = 0; i < HEIGHT; i += STEP) {
+        this->walls.push_back(new GameComponent(Vector2<double>(0, i), Vector2<double>(STEP, STEP), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
+        this->walls.push_back(new GameComponent(Vector2<double>(WIDTH - 1, i), Vector2<double>(STEP, STEP), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
+    }
     this->restart();
 }
 
@@ -81,7 +80,7 @@ const   std::string     Snake::getImg(size_t pos)
 
 bool    Snake::check(Vector2<double> snakePos)
 {
-    if (snakePos.x < 0 || snakePos.x >= WIDTH || snakePos.y < 0 || snakePos.y >= HEIGHT)
+    if (snakePos.x < 1 || snakePos.x >= WIDTH - 1 || snakePos.y < 1 || snakePos.y >= HEIGHT - 1)
         return (false);
     for (size_t i = 0; i < this->snake.size(); i++) {
         if (snakePos == this->snake[i]->getPos())
@@ -90,21 +89,26 @@ bool    Snake::check(Vector2<double> snakePos)
     return (true);
 }
 
+void 		Snake::changeDirection(int key)
+{
+    if (key == ArcadeSystem::ArrowLeft && this->dir != DIR_RIGHT) {
+        this->dir = DIR_LEFT;
+    } else if (key == ArcadeSystem::ArrowRight && this->dir != DIR_LEFT) {
+        this->dir = DIR_RIGHT;
+    } else if (key == ArcadeSystem::ArrowUp && this->dir != DIR_DOWN) {
+        this->dir = DIR_UP;
+    } else if (key == ArcadeSystem::ArrowDown && this->dir != DIR_UP) {
+        this->dir = DIR_DOWN;
+    }
+}
+
 std::stack<AComponent*>     Snake::compute(int key)
 {
     std::stack<AComponent*> components;
     Vector2<double>                 snakePos = this->snake.front()->getPos();
 
-    if (key == ArcadeSystem::ArrowLeft && dir != DIR_RIGHT) {
-        dir = DIR_LEFT;
-    } else if (key == ArcadeSystem::ArrowRight && dir != DIR_LEFT) {
-        dir = DIR_RIGHT;
-    } else if (key == ArcadeSystem::ArrowUp && dir != DIR_DOWN) {
-        dir = DIR_UP;
-    } else if (key == ArcadeSystem::ArrowDown && dir != DIR_UP) {
-        dir = DIR_DOWN;
-    }
-    switch (dir) {
+    this->changeDirection(key);
+    switch (this->dir) {
         case DIR_LEFT:
             snakePos.x -= STEP;
             break;
@@ -143,14 +147,17 @@ std::stack<AComponent*>     Snake::compute(int key)
             this->score->getScoreUI()->getDim(), AComponent::BLACK, this->background->getSprite2D()));
         this->score->getScoreUI()->setText("Score : " + std::to_string(this->score->getScore()));
     } else {
-        this->snake.back()->setColor(AComponent::BLACK);
-        this->snake.back()->setSprite2D(this->background->getSprite2D());
-        components.push(this->snake.back());
+        // this->snake.back()->setColor(AComponent::BLACK);
+        // this->snake.back()->setSprite2D(this->background->getSprite2D());
+        // components.push(this->snake.back());
         this->snake.pop_back();
     }
     for (size_t i = 0; i < this->snake.size(); i++) {
         this->snake[i]->setSprite2D(this->getImg(i));
         components.push(this->snake[i]);
+    }
+    for (size_t i = 0; i < this->walls.size(); i++) {
+        components.push(this->walls[i]);
     }
     components.push(this->target);
     components.push(this->background);
@@ -182,4 +189,76 @@ void                        Snake::restart()
       this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / STEP / 2 * STEP, HEIGHT / STEP / 2 * STEP), Vector2<double>(STEP, STEP), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
     }
     this->target->setPos(Vector2<double>(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
+}
+
+void        Snake::updateMap(struct arcade::GetMap *map)
+{
+    for (size_t i = 0; i < WIDTH * HEIGHT; i++) {
+        if (this->target->getPos().y * WIDTH + this->target->getPos().x == i) {
+            map->tile[i] = arcade::TileType::POWERUP;
+        } else if (i / HEIGHT == 0 || i / HEIGHT == HEIGHT - 1 || i % WIDTH == 0 || i % WIDTH == WIDTH - 1) {
+            map->tile[i] = arcade::TileType::BLOCK;
+        } else {
+            map->tile[i] = arcade::TileType::EMPTY;
+        }
+    }
+}
+
+void        Snake::whereAmI(struct arcade::WhereAmI *wai)
+{
+    wai = new arcade::WhereAmI + this->snake.size() * sizeof(arcade::TileType);
+
+    wai->type = arcade::CommandType::WHERE_AM_I;
+    wai->lenght = this->snake.size();
+    for (size_t i = 0; i < this->snake.size(); i++) {
+        wai->position[i].x = this->snake[i]->getPos().x;
+        wai->position[i].y = this->snake[i]->getPos().y;
+    }
+}
+
+void 	Play(void)
+{
+    Snake               *snake;
+    char                cmd;
+    arcade::GetMap      *map;
+    arcade::WhereAmI    *wai;
+
+    snake = new Snake();
+    wai = NULL;
+    map = new arcade::GetMap + (WIDTH * HEIGHT) * sizeof(arcade::TileType);
+    map->type = arcade::CommandType::GET_MAP;
+    map->width = WIDTH;
+    map->height = HEIGHT;
+    while (std::cin.read(&cmd, 1))
+    {
+        switch ((arcade::CommandType)cmd) {
+            case arcade::CommandType::WHERE_AM_I:
+                snake->whereAmI(wai);
+                std::cout.write((const char *)wai, sizeof(*wai));
+                break;
+            case arcade::CommandType::GET_MAP:
+                snake->updateMap(map);
+                std::cout.write((const char *)map, sizeof(*map));
+                break;
+            case arcade::CommandType::GO_UP:
+                snake->changeDirection(DIR_UP);
+                break;
+            case arcade::CommandType::GO_DOWN:
+                snake->changeDirection(DIR_DOWN);
+                break;
+            case arcade::CommandType::GO_LEFT:
+                snake->changeDirection(DIR_LEFT);
+                break;
+            case arcade::CommandType::GO_RIGHT:
+                snake->changeDirection(DIR_RIGHT);
+                break;
+            case arcade::CommandType::GO_FORWARD:
+                break;
+            case arcade::CommandType::PLAY:
+                snake->compute(-1);
+                break;
+            default:
+                break;
+        }
+    }
 }
