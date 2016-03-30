@@ -19,15 +19,14 @@ enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
 class Snake : public AGame {
 private:
-    AComponent      *old_target;
     GameComponent   *target;
     ScoreComponent  *score;
     AudioComponent  *sound;
     std::vector<GameComponent*> snake;
     BackgroundComponent *background;
-    direction       dir;
     std::vector<std::string>    backgroundSprites;
     std::vector<GameComponent*> walls;
+    direction       dir;
 public:
     Snake ();
     virtual ~Snake ();

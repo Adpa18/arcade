@@ -7,7 +7,6 @@ Snake::Snake () : AGame("Snake", Vector2<double>(WIDTH, HEIGHT))
     this->target = new GameComponent(pos, Vector2<double>(1, 1), AComponent::RED, ' ', "snakeApple.png", GameComponent::CUBE_LARGE);
     this->background = new BackgroundComponent(Vector2<double>(0, 0), Vector2<double>(WIDTH, HEIGHT), AComponent::BLACK, "");
     this->sound = new AudioComponent(Vector2<double>(0, 0), AComponent::BLACK, '\a', "", "");
-    this->old_target = new GameComponent(pos, Vector2<double>(1, 1), AComponent::BLACK, ' ', this->background->getSprite2D(), GameComponent::CUBE_LARGE);
     this->score = new ScoreComponent("snake");
     for (size_t i = 0; i < WIDTH; i += 1) {
         this->walls.push_back(new GameComponent(Vector2<double>(i, 0), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
@@ -123,10 +122,8 @@ std::stack<AComponent*>     Snake::compute(int key)
             break;
     }
     if (!check(snakePos)) {
-        this->old_target->setPos(this->target->getPos());
         components.push(this->target);
         components.push(this->background);
-        components.push(this->old_target);
         for (size_t i = 0; i < this->snake.size(); i++) {
             this->snake[i]->setColor(AComponent::BLACK);
             this->snake[i]->setSprite2D(this->background->getSprite2D());
@@ -147,9 +144,6 @@ std::stack<AComponent*>     Snake::compute(int key)
             this->score->getScoreUI()->getDim(), AComponent::BLACK, this->background->getSprite2D()));
         this->score->getScoreUI()->setText("Score : " + std::to_string(this->score->getScore()));
     } else {
-        // this->snake.back()->setColor(AComponent::BLACK);
-        // this->snake.back()->setSprite2D(this->background->getSprite2D());
-        // components.push(this->snake.back());
         this->snake.pop_back();
     }
     for (size_t i = 0; i < this->snake.size(); i++) {

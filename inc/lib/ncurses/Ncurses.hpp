@@ -32,7 +32,7 @@ private:
   void						initMainWindow();
   int							resizeTerm();
   void            initc(Vector2<double> s);
-  std::stack<GameComponent *>	old_component;
+  std::stack<Vector2<double>>	old_component;
 public:
   Ncurses (void);
   virtual ~Ncurses ();
