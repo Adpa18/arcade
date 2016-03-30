@@ -1,0 +1,58 @@
+.TH "__DRIframeTrackingExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIframeTrackingExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBframeTracking\fP )(\fB__DRIdrawable\fP *drawable, \fBGLboolean\fP \fBenable\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBqueryFrameTracking\fP )(\fB__DRIdrawable\fP *drawable, int64_t *\fBsbc\fP, int64_t *missedFrames, float *lastMissedUsage, float *\fBusage\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 157 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIframeTrackingExtensionRec::base"
+
+.PP
+Définition à la ligne 158 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIframeTrackingExtensionRec::frameTracking) (\fB__DRIdrawable\fP *drawable, \fBGLboolean\fP \fBenable\fP)"
+Enable or disable frame usage tracking\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+Internal API version 20030317\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 165 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIframeTrackingExtensionRec::queryFrameTracking) (\fB__DRIdrawable\fP *drawable, int64_t *\fBsbc\fP, int64_t *missedFrames, float *lastMissedUsage, float *\fBusage\fP)"
+Retrieve frame usage information\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+Internal API version 20030317\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 172 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

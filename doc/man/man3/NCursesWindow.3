@@ -1,0 +1,971 @@
+.TH "NCursesWindow" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesWindow \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesw\&.h>\fP
+.PP
+Dérivée par \fBNCursesColorWindow\fP, \fBNCursesPad\fP, et \fBNCursesPanel\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesWindow\fP (\fBWINDOW\fP *window)"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y, \fBint\fP begin_x)"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP (\fBNCursesWindow\fP &\fBpar\fP, \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y, \fBint\fP begin_x, char absrel= '\fBa\fP')"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP (\fBNCursesWindow\fP &\fBpar\fP, \fBbool\fP do_box=\fBTRUE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesWindow\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP (\fBconst\fP \fBNCursesWindow\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesWindow\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP \fBClone\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlines\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBcols\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBtabsize\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBcolors\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBheight\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBwidth\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBbegx\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBbegy\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBcurx\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBcury\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBmaxx\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBmaxy\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCURSES_PAIRS_T\fP \fBgetcolor\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCURSES_COLOR_T\fP \fBforeground\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCURSES_COLOR_T\fP \fBbackground\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBsetpalette\fP (\fBNCURSES_COLOR_T\fP fore, \fBNCURSES_COLOR_T\fP back)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBsetcolor\fP (\fBNCURSES_PAIRS_T\fP pair)"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBmvwin\fP (\fBint\fP begin_y, \fBint\fP begin_x)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmove\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetyx\fP (\fBint\fP &\fBy\fP, \fBint\fP &\fBx\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetbegyx\fP (\fBint\fP &\fBy\fP, \fBint\fP &\fBx\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetmaxyx\fP (\fBint\fP &\fBy\fP, \fBint\fP &\fBx\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetparyx\fP (\fBint\fP &\fBy\fP, \fBint\fP &\fBx\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBmvcur\fP (\fBint\fP oldrow, \fBint\fP oldcol, \fBint\fP newrow, \fBint\fP newcol) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetch\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetch\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetstr\fP (char *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetstr\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, char *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinstr\fP (char *\fBs\fP, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinstr\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, char *\fBs\fP, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscanw\fP (\fBconst\fP char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscanw\fP (\fBconst\fP char *, \fBva_list\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscanw\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscanw\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP char *fmt, \fBva_list\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBaddch\fP (\fBconst\fP \fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBaddch\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP \fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBechochar\fP (\fBconst\fP \fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBaddstr\fP (\fBconst\fP char *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBaddstr\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP char *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBaddchstr\fP (\fBconst\fP \fBchtype\fP *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBaddchstr\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP \fBchtype\fP *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBprintw\fP (\fBconst\fP char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBprintw\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBprintw\fP (\fBconst\fP char *fmt, \fBva_list\fP args)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBprintw\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP char *fmt, \fBva_list\fP args)"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBinch\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBinch\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinchstr\fP (\fBchtype\fP *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinchstr\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBchtype\fP *str, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinsch\fP (\fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinsch\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinsertln\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinsdelln\fP (\fBint\fP \fBn\fP=1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinsstr\fP (\fBconst\fP char *\fBs\fP, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBinsstr\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBconst\fP char *\fBs\fP, \fBint\fP \fBn\fP=\-1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBattron\fP (\fBchtype\fP at)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBattroff\fP (\fBchtype\fP at)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBattrset\fP (\fBchtype\fP at)"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBattrget\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBcolor_set\fP (\fBNCURSES_PAIRS_T\fP color_pair_number, \fBvoid\fP *opts=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBchgat\fP (\fBint\fP \fBn\fP, \fBattr_t\fP attr, \fBNCURSES_PAIRS_T\fP \fBcolor\fP, \fBconst\fP \fBvoid\fP *opts=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBchgat\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBint\fP \fBn\fP, \fBattr_t\fP attr, \fBNCURSES_PAIRS_T\fP \fBcolor\fP, \fBconst\fP \fBvoid\fP *opts=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBgetbkgd\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBbkgd\fP (\fBconst\fP \fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBbkgdset\fP (\fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBbox\fP (\fBchtype\fP vert=0, \fBchtype\fP hor=0)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBborder\fP (\fBchtype\fP \fBleft\fP=0, \fBchtype\fP \fBright\fP=0, \fBchtype\fP \fBtop\fP=0, \fBchtype\fP \fBbottom\fP=0, \fBchtype\fP top_left=0, \fBchtype\fP top_right=0, \fBchtype\fP bottom_left=0, \fBchtype\fP bottom_right=0)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBhline\fP (\fBint\fP \fBlen\fP, \fBchtype\fP ch=0)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBhline\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBint\fP \fBlen\fP, \fBchtype\fP ch=0)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBvline\fP (\fBint\fP \fBlen\fP, \fBchtype\fP ch=0)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBvline\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP, \fBint\fP \fBlen\fP, \fBchtype\fP ch=0)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBerase\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBclear\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBclearok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBclrtobot\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBclrtoeol\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdelch\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdelch\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdeleteln\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscroll\fP (\fBint\fP amount=1)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscrollok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBsetscrreg\fP (\fBint\fP from, \fBint\fP to)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBidlok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBidcok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtouchline\fP (\fBint\fP \fBs\fP, \fBint\fP \fBc\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtouchwin\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBuntouchwin\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtouchln\fP (\fBint\fP \fBs\fP, \fBint\fP cnt, \fBbool\fP changed=\fBTRUE\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBis_linetouched\fP (\fBint\fP line) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBbool\fP \fBis_wintouched\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBleaveok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBredrawln\fP (\fBint\fP from, \fBint\fP \fBn\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBredrawwin\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdoupdate\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsyncdown\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsyncup\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBcursyncup\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBsyncok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBimmedok\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBintrflush\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBkeypad\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnodelay\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmeta\fP (\fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBstandout\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBstandend\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBrefresh\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBnoutrefresh\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBoverlay\fP (\fBNCursesWindow\fP &win)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBoverwrite\fP (\fBNCursesWindow\fP &win)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBcopywin\fP (\fBNCursesWindow\fP &win, \fBint\fP sminrow, \fBint\fP smincol, \fBint\fP dminrow, \fBint\fP dmincol, \fBint\fP dmaxrow, \fBint\fP dmaxcol, \fBbool\fP overlaywin=\fBTRUE\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBhas_mouse\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBchild\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBsibling\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBparent\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBisDescendant\fP (\fBNCursesWindow\fP &win)"
+.br
+.in -1c
+.SS "Fonctions membres publiques statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBvoid\fP \fBuseColors\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "static \fBint\fP \fBripoffline\fP (\fBint\fP ripoff_lines, \fBint\fP(*init)(\fBNCursesWindow\fP &win))"
+.br
+.ti -1c
+.RI "static \fBint\fP \fBNumberOfColors\fP ()"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBvoid\fP \fBerr_handler\fP (\fBconst\fP char *) \fBconst\fP \fBTHROWS\fP(\fBNCursesException\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBkill_subwindows\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP ()"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBWINDOW\fP * \fBw\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBalloced\fP"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBpar\fP"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBsubwins\fP"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBsib\fP"
+.br
+.in -1c
+.SS "Attributs protégés statiques"
+
+.in +1c
+.ti -1c
+.RI "static long \fBcount\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "class \fBNCursesMenu\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesForm\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_nc_xx_ripoff_init\fP (\fBWINDOW\fP *, \fBint\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 753 du fichier cursesw\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesWindow::NCursesWindow ()\fC [protected]\fP"
+
+.SS "NCursesWindow::NCursesWindow (\fBWINDOW\fP * window)"
+
+.SS "NCursesWindow::NCursesWindow (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y, \fBint\fP begin_x)"
+
+.SS "NCursesWindow::NCursesWindow (\fBNCursesWindow\fP & par, \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y, \fBint\fP begin_x, char absrel = \fC'\fBa\fP'\fP)"
+
+.SS "NCursesWindow::NCursesWindow (\fBNCursesWindow\fP & par, \fBbool\fP do_box = \fC\fBTRUE\fP\fP)"
+
+.SS "NCursesWindow::NCursesWindow (\fBconst\fP \fBNCursesWindow\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 829 du fichier cursesw\&.h\&.
+.SS "virtual NCursesWindow::~NCursesWindow ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBint\fP NCursesWindow::addch (\fBconst\fP \fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1001 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::addch (\fBint\fP y, \fBint\fP x, \fBconst\fP \fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1004 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::addchstr (\fBconst\fP \fBchtype\fP * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1022 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::addchstr (\fBint\fP y, \fBint\fP x, \fBconst\fP \fBchtype\fP * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1027 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::addstr (\fBconst\fP char * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1012 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::addstr (\fBint\fP y, \fBint\fP x, \fBconst\fP char * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1017 du fichier cursesw\&.h\&.
+.SS "\fBchtype\fP NCursesWindow::attrget ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1107 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::attroff (\fBchtype\fP at)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1101 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::attron (\fBchtype\fP at)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1098 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::attrset (\fBchtype\fP at)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1104 du fichier cursesw\&.h\&.
+.SS "\fBNCURSES_COLOR_T\fP NCursesWindow::background () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 905 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::begx () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 881 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::begy () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 884 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::bkgd (\fBconst\fP \fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1132 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::bkgdset (\fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1135 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::border (\fBchtype\fP left = \fC0\fP, \fBchtype\fP right = \fC0\fP, \fBchtype\fP top = \fC0\fP, \fBchtype\fP bottom = \fC0\fP, \fBchtype\fP top_left = \fC0\fP, \fBchtype\fP top_right = \fC0\fP, \fBchtype\fP bottom_left = \fC0\fP, \fBchtype\fP bottom_right = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1147 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::box (\fBchtype\fP vert = \fC0\fP, \fBchtype\fP hor = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1141 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::chgat (\fBint\fP n, \fBattr_t\fP attr, \fBNCURSES_PAIRS_T\fP color, \fBconst\fP \fBvoid\fP * opts = \fC\fBNULL\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1114 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::chgat (\fBint\fP y, \fBint\fP x, \fBint\fP n, \fBattr_t\fP attr, \fBNCURSES_PAIRS_T\fP color, \fBconst\fP \fBvoid\fP * opts = \fC\fBNULL\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1120 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesWindow::child ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1351 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::clear ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1182 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::clearok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1185 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP NCursesWindow::Clone ()"
+
+.SS "\fBint\fP NCursesWindow::clrtobot ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1189 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::clrtoeol ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1192 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::color_set (\fBNCURSES_PAIRS_T\fP color_pair_number, \fBvoid\fP * opts = \fC\fBNULL\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1110 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::colors () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 869 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::cols () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 860 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::copywin (\fBNCursesWindow\fP & win, \fBint\fP sminrow, \fBint\fP smincol, \fBint\fP dminrow, \fBint\fP dmincol, \fBint\fP dmaxrow, \fBint\fP dmaxcol, \fBbool\fP overlaywin = \fC\fBTRUE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1324 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::cursyncup ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1270 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::curx () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 887 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::cury () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 890 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::delch ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1195 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::delch (\fBint\fP y, \fBint\fP x)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1198 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::deleteln ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1202 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::doupdate ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1261 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::echochar (\fBconst\fP \fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1009 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::erase ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1179 du fichier cursesw\&.h\&.
+.SS "virtual \fBvoid\fP NCursesWindow::err_handler (\fBconst\fP char *) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBNCURSES_COLOR_T\fP NCursesWindow::foreground () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 902 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::getbegyx (\fBint\fP & y, \fBint\fP & x) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 931 du fichier cursesw\&.h\&.
+.SS "\fBchtype\fP NCursesWindow::getbkgd () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1129 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::getch ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 947 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::getch (\fBint\fP y, \fBint\fP x)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 950 du fichier cursesw\&.h\&.
+.SS "\fBNCURSES_PAIRS_T\fP NCursesWindow::getcolor () const"
+
+.SS "\fBvoid\fP NCursesWindow::getmaxyx (\fBint\fP & y, \fBint\fP & x) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 934 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::getparyx (\fBint\fP & y, \fBint\fP & x) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 937 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::getstr (char * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 953 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::getstr (\fBint\fP y, \fBint\fP x, char * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 959 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::getyx (\fBint\fP & y, \fBint\fP & x) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 928 du fichier cursesw\&.h\&.
+.SS "\fBbool\fP NCursesWindow::has_mouse () const"
+
+.SS "\fBint\fP NCursesWindow::height () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 875 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::hline (\fBint\fP len, \fBchtype\fP ch = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1160 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::hline (\fBint\fP y, \fBint\fP x, \fBint\fP len, \fBchtype\fP ch = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1164 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::idcok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1225 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::idlok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1221 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::immedok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1280 du fichier cursesw\&.h\&.
+.SS "\fBchtype\fP NCursesWindow::inch () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1054 du fichier cursesw\&.h\&.
+.SS "\fBchtype\fP NCursesWindow::inch (\fBint\fP y, \fBint\fP x)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1057 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::inchstr (\fBchtype\fP * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1061 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::inchstr (\fBint\fP y, \fBint\fP x, \fBchtype\fP * str, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1066 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::insch (\fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1071 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::insch (\fBint\fP y, \fBint\fP x, \fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1075 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::insdelln (\fBint\fP n = \fC1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1083 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::insertln ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1080 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::insstr (\fBconst\fP char * s, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1087 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::insstr (\fBint\fP y, \fBint\fP x, \fBconst\fP char * s, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1093 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::instr (char * s, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 964 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::instr (\fBint\fP y, \fBint\fP x, char * s, \fBint\fP n = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 969 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::intrflush (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1284 du fichier cursesw\&.h\&.
+.SS "\fBbool\fP NCursesWindow::is_linetouched (\fBint\fP line) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1243 du fichier cursesw\&.h\&.
+.SS "\fBbool\fP NCursesWindow::is_wintouched () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1247 du fichier cursesw\&.h\&.
+.SS "\fBbool\fP NCursesWindow::isDescendant (\fBNCursesWindow\fP & win)"
+
+.SS "\fBint\fP NCursesWindow::keypad (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1286 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::kill_subwindows ()\fC [protected]\fP"
+
+.SS "\fBint\fP NCursesWindow::leaveok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1251 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::lines () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 857 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::maxx () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 893 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::maxy () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 896 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::meta (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1291 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::move (\fBint\fP y, \fBint\fP x)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 925 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::mvcur (\fBint\fP oldrow, \fBint\fP oldcol, \fBint\fP newrow, \fBint\fP newcol) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 940 du fichier cursesw\&.h\&.
+.SS "virtual \fBint\fP NCursesWindow::mvwin (\fBint\fP begin_y, \fBint\fP begin_x)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 917 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::nodelay (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1289 du fichier cursesw\&.h\&.
+.SS "virtual \fBint\fP NCursesWindow::noutrefresh ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesPad\fP, et \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 1309 du fichier cursesw\&.h\&.
+.SS "static \fBint\fP NCursesWindow::NumberOfColors ()\fC [static]\fP"
+
+.SS "\fBNCursesWindow\fP& NCursesWindow::operator= (\fBconst\fP \fBNCursesWindow\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 822 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::overlay (\fBNCursesWindow\fP & win)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1316 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::overwrite (\fBNCursesWindow\fP & win)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1320 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesWindow::parent ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1357 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::printw (\fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.SS "\fBint\fP NCursesWindow::printw (\fBint\fP y, \fBint\fP x, \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.SS "\fBint\fP NCursesWindow::printw (\fBconst\fP char * fmt, \fBva_list\fP args)"
+
+.SS "\fBint\fP NCursesWindow::printw (\fBint\fP y, \fBint\fP x, \fBconst\fP char * fmt, \fBva_list\fP args)"
+
+.SS "\fBint\fP NCursesWindow::redrawln (\fBint\fP from, \fBint\fP n)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1255 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::redrawwin ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1258 du fichier cursesw\&.h\&.
+.SS "virtual \fBint\fP NCursesWindow::refresh ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesPad\fP, et \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 1305 du fichier cursesw\&.h\&.
+.SS "static \fBint\fP NCursesWindow::ripoffline (\fBint\fP ripoff_lines, \fBint\fP(*)(\fBNCursesWindow\fP &win) init)\fC [static]\fP"
+
+.SS "\fBint\fP NCursesWindow::scanw (\fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.SS "\fBint\fP NCursesWindow::scanw (\fBconst\fP char *, \fBva_list\fP)"
+
+.SS "\fBint\fP NCursesWindow::scanw (\fBint\fP y, \fBint\fP x, \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.SS "\fBint\fP NCursesWindow::scanw (\fBint\fP y, \fBint\fP x, \fBconst\fP char * fmt, \fBva_list\fP)"
+
+.SS "\fBint\fP NCursesWindow::scroll (\fBint\fP amount = \fC1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1208 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::scrollok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1212 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::setcolor (\fBNCURSES_PAIRS_T\fP pair)"
+
+.SS "\fBint\fP NCursesWindow::setpalette (\fBNCURSES_COLOR_T\fP fore, \fBNCURSES_COLOR_T\fP back)"
+
+.SS "\fBint\fP NCursesWindow::setscrreg (\fBint\fP from, \fBint\fP to)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1217 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesWindow::sibling ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1354 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::standend ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1298 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::standout ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1295 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::syncdown ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1264 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::syncok (\fBbool\fP bf)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1273 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesWindow::syncup ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1267 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::tabsize () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 863 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::touchline (\fBint\fP s, \fBint\fP c)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1229 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::touchln (\fBint\fP s, \fBint\fP cnt, \fBbool\fP changed = \fC\fBTRUE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1238 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::touchwin ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1232 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::untouchwin ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1235 du fichier cursesw\&.h\&.
+.SS "static \fBvoid\fP NCursesWindow::useColors (\fBvoid\fP)\fC [static]\fP"
+
+.SS "\fBint\fP NCursesWindow::vline (\fBint\fP len, \fBchtype\fP ch = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1168 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::vline (\fBint\fP y, \fBint\fP x, \fBint\fP len, \fBchtype\fP ch = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1172 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesWindow::width () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 878 du fichier cursesw\&.h\&.
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "\fBint\fP _nc_xx_ripoff_init (\fBWINDOW\fP *, \fBint\fP)\fC [friend]\fP"
+
+.SS "friend class \fBNCursesForm\fP\fC [friend]\fP"
+
+.PP
+Définition à la ligne 756 du fichier cursesw\&.h\&.
+.SS "friend class \fBNCursesMenu\fP\fC [friend]\fP"
+
+.PP
+Définition à la ligne 755 du fichier cursesw\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBbool\fP NCursesWindow::alloced\fC [protected]\fP"
+
+.PP
+Définition à la ligne 787 du fichier cursesw\&.h\&.
+.SS "long NCursesWindow::count\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 780 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesWindow::par\fC [protected]\fP"
+
+.PP
+Définition à la ligne 789 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesWindow::sib\fC [protected]\fP"
+
+.PP
+Définition à la ligne 791 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesWindow::subwins\fC [protected]\fP"
+
+.PP
+Définition à la ligne 790 du fichier cursesw\&.h\&.
+.SS "\fBWINDOW\fP* NCursesWindow::w\fC [protected]\fP"
+
+.PP
+Définition à la ligne 785 du fichier cursesw\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,57 @@
+.TH "__DRItexBufferExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRItexBufferExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBsetTexBuffer\fP )(\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP \fBtarget\fP, \fB__DRIdrawable\fP *pDraw)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBsetTexBuffer2\fP )(\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP \fBtarget\fP, \fBGLint\fP \fBformat\fP, \fB__DRIdrawable\fP *pDraw)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBreleaseTexBuffer\fP )(\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP \fBtarget\fP, \fB__DRIdrawable\fP *pDraw)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 231 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRItexBufferExtensionRec::base"
+
+.PP
+Définition à la ligne 232 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRItexBufferExtensionRec::releaseTexBuffer) (\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP \fBtarget\fP, \fB__DRIdrawable\fP *pDraw)"
+Method to release texture buffer in case some special platform need this\&.
+.PP
+For GLX_EXT_texture_from_pixmap with AIGLX\&. 
+.PP
+Définition à la ligne 261 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRItexBufferExtensionRec::setTexBuffer) (\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP \fBtarget\fP, \fB__DRIdrawable\fP *pDraw)"
+Method to override base texture image with the contents of a __DRIdrawable\&.
+.PP
+For GLX_EXT_texture_from_pixmap with AIGLX\&. Deprecated in favor of setTexBuffer2 in version 2 of this interface 
+.PP
+Définition à la ligne 241 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRItexBufferExtensionRec::setTexBuffer2) (\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP \fBtarget\fP, \fBGLint\fP \fBformat\fP, \fB__DRIdrawable\fP *pDraw)"
+Method to override base texture image with the contents of a __DRIdrawable, including the required texture format attribute\&.
+.PP
+For GLX_EXT_texture_from_pixmap with AIGLX\&. 
+.PP
+Définition à la ligne 251 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

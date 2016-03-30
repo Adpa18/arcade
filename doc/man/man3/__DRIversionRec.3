@@ -1,0 +1,53 @@
+.TH "__DRIversionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIversionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBmajor\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBminor\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBpatch\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Stored version of some component (i\&.e\&., server-side DRI module, kernel-side DRM, etc\&.)\&.
+.PP
+\fBA faire\fP
+.RS 4
+There are several data structures that explicitly store a major version, minor version, and patch level\&. These structures should be modified to have a \fC\fB__DRIversionRec\fP\fP instead\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 634 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBint\fP __DRIversionRec::major"
+Major version number\&. 
+.PP
+Définition à la ligne 635 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIversionRec::minor"
+Minor version number\&. 
+.PP
+Définition à la ligne 636 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIversionRec::patch"
+Patch-level\&. 
+.PP
+Définition à la ligne 637 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

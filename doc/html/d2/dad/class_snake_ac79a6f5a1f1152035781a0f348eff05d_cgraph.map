@@ -1,0 +1,14 @@
+<map id="Snake::compute" name="Snake::compute">
+<area shape="rect" id="node2" href="$d1/db4/class_a_component.html#a5aa2ca95048155eebf401167106add76" title="AComponent::setPos" alt="" coords="189,5,335,32"/>
+<area shape="rect" id="node3" href="$d6/d31/class_background_component.html#ab1ba9bfad811a26e4f293dca246266d9" title="BackgroundComponent\l::getSprite2D" alt="" coords="183,57,341,98"/>
+<area shape="rect" id="node4" href="$d6/d93/_open_g_l_8cpp.html#a69f6d7fff9dfce3a42b94789a5264396" title="sound" alt="" coords="233,123,291,149"/>
+<area shape="rect" id="node5" href="$d2/dad/class_snake.html#a352449776ddbf4dfbe91cd7add8e15fb" title="Snake::restart" alt="" coords="210,173,314,200"/>
+<area shape="rect" id="node7" href="$d5/d71/class_u_i_component.html#a1731fb003e73c1c6e343691bd08f83e5" title="UIComponent::setText" alt="" coords="647,107,801,133"/>
+<area shape="rect" id="node9" href="$d0/de1/class_score_component.html#a9d63de4ac83e45fd8a565a14a2e1d7e0" title="ScoreComponent::getScoreUI" alt="" coords="401,224,599,251"/>
+<area shape="rect" id="node10" href="$d0/de1/class_score_component.html#a830e0aa876940ad8c56cb384fc30ede1" title="ScoreComponent::setScore" alt="" coords="171,325,353,352"/>
+<area shape="rect" id="node11" href="$d0/de1/class_score_component.html#a2324b033ca63c877fefbdc7c05028b3a" title="ScoreComponent::getScore" alt="" coords="171,376,353,403"/>
+<area shape="rect" id="node12" href="$d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac" title="AComponent::getPos" alt="" coords="189,427,335,453"/>
+<area shape="rect" id="node13" href="$d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e" title="AComponent::getSize" alt="" coords="187,477,337,504"/>
+<area shape="rect" id="node6" href="$d0/de1/class_score_component.html#aa2c2c46c5c94149d55282d70d1f3dabe" title="ScoreComponent::writeScore" alt="" coords="403,56,597,83"/>
+<area shape="rect" id="node8" href="$d6/d31/class_background_component.html#a98859cddedd3a1c0f3bc271451775fd2" title="BackgroundComponent\l::setSprite2D" alt="" coords="421,158,579,199"/>
+</map>

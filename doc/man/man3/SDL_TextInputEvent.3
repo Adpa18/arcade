@@ -1,0 +1,54 @@
+.TH "SDL_TextInputEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_TextInputEvent \- Keyboard text input event structure (event\&.text\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "char \fBtext\fP [\fBSDL_TEXTINPUTEVENT_TEXT_SIZE\fP]"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Keyboard text input event structure (event\&.text\&.*) 
+.PP
+Définition à la ligne 218 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "char SDL_TextInputEvent::text[\fBSDL_TEXTINPUTEVENT_TEXT_SIZE\fP]"
+The input text 
+.PP
+Définition à la ligne 223 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TextInputEvent::timestamp"
+
+.PP
+Définition à la ligne 221 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TextInputEvent::type"
+\fBSDL_TEXTINPUT\fP 
+.PP
+Définition à la ligne 220 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TextInputEvent::windowID"
+The window with keyboard focus, if any 
+.PP
+Définition à la ligne 222 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

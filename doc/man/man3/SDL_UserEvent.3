@@ -1,0 +1,68 @@
+.TH "SDL_UserEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_UserEvent \- A user-defined event type (event\&.user\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBcode\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdata1\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdata2\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+A user-defined event type (event\&.user\&.*) 
+.PP
+Définition à la ligne 491 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBSint32\fP SDL_UserEvent::code"
+User defined event code 
+.PP
+Définition à la ligne 496 du fichier SDL_events\&.h\&.
+.SS "\fBvoid\fP* SDL_UserEvent::data1"
+User defined data pointer 
+.PP
+Définition à la ligne 497 du fichier SDL_events\&.h\&.
+.SS "\fBvoid\fP* SDL_UserEvent::data2"
+User defined data pointer 
+.PP
+Définition à la ligne 498 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_UserEvent::timestamp"
+
+.PP
+Définition à la ligne 494 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_UserEvent::type"
+\fBSDL_USEREVENT\fP through \fBSDL_LASTEVENT\fP-1 
+.PP
+Définition à la ligne 493 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_UserEvent::windowID"
+The associated window if any 
+.PP
+Définition à la ligne 495 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

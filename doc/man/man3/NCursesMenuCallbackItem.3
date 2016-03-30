@@ -1,0 +1,61 @@
+.TH "NCursesMenuCallbackItem" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesMenuCallbackItem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesm\&.h>\fP
+.PP
+Est dérivée de \fBNCursesMenuItem\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesMenuCallbackItem\fP (\fBITEMCALLBACK\fP *fct=\fBNULL\fP, \fBconst\fP char *p_name=\fBNULL\fP, \fBconst\fP char *p_descript=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesMenuCallbackItem\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesMenuCallbackItem\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesMenuCallbackItem\fP (\fBconst\fP \fBNCursesMenuCallbackItem\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesMenuCallbackItem\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBaction\fP ()"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 155 du fichier cursesm\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesMenuCallbackItem::NCursesMenuCallbackItem (\fBITEMCALLBACK\fP * fct = \fC\fBNULL\fP\fP, \fBconst\fP char * p_name = \fC\fBNULL\fP\fP, \fBconst\fP char * p_descript = \fC\fBNULL\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 161 du fichier cursesm\&.h\&.
+.SS "NCursesMenuCallbackItem::NCursesMenuCallbackItem (\fBconst\fP \fBNCursesMenuCallbackItem\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 176 du fichier cursesm\&.h\&.
+.SS "virtual NCursesMenuCallbackItem::~NCursesMenuCallbackItem ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBbool\fP NCursesMenuCallbackItem::action ()\fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesMenuItem\fP\&.
+.SS "\fBNCursesMenuCallbackItem\fP& NCursesMenuCallbackItem::operator= (\fBconst\fP \fBNCursesMenuCallbackItem\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 168 du fichier cursesm\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

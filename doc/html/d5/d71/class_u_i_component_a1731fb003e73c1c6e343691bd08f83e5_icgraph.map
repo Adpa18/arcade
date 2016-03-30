@@ -1,0 +1,6 @@
+<map id="UIComponent::setText" name="UIComponent::setText">
+<area shape="rect" id="node2" href="$d2/dad/class_snake.html#ac79a6f5a1f1152035781a0f348eff05d" title="Snake::compute" alt="" coords="601,5,719,32"/>
+<area shape="rect" id="node3" href="$d2/dad/class_snake.html#a352449776ddbf4dfbe91cd7add8e15fb" title="Snake::restart" alt="" coords="449,56,553,83"/>
+<area shape="rect" id="node5" href="$d0/de1/class_score_component.html#aa2c2c46c5c94149d55282d70d1f3dabe" title="ScoreComponent::writeScore" alt="" coords="208,107,401,133"/>
+<area shape="rect" id="node4" href="$d2/dad/class_snake.html#aa9cbcdb4b25d84cbf83509039cac8d01" title="Snake::Snake" alt="" coords="608,56,712,83"/>
+</map>

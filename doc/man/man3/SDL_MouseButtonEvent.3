@@ -1,0 +1,96 @@
+.TH "SDL_MouseButtonEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MouseButtonEvent \- Mouse button event structure (event\&.button\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBclicks\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBx\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBy\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Mouse button event structure (event\&.button\&.*) 
+.PP
+Définition à la ligne 245 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_MouseButtonEvent::button"
+The mouse button index 
+.PP
+Définition à la ligne 251 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_MouseButtonEvent::clicks"
+1 for single-click, 2 for double-click, etc\&. 
+.PP
+Définition à la ligne 253 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_MouseButtonEvent::padding1"
+
+.PP
+Définition à la ligne 254 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_MouseButtonEvent::state"
+\fBSDL_PRESSED\fP or \fBSDL_RELEASED\fP 
+.PP
+Définition à la ligne 252 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseButtonEvent::timestamp"
+
+.PP
+Définition à la ligne 248 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseButtonEvent::type"
+\fBSDL_MOUSEBUTTONDOWN\fP or \fBSDL_MOUSEBUTTONUP\fP 
+.PP
+Définition à la ligne 247 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseButtonEvent::which"
+The mouse instance id, or SDL_TOUCH_MOUSEID 
+.PP
+Définition à la ligne 250 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseButtonEvent::windowID"
+The window with mouse focus, if any 
+.PP
+Définition à la ligne 249 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_MouseButtonEvent::x"
+X coordinate, relative to window 
+.PP
+Définition à la ligne 255 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_MouseButtonEvent::y"
+Y coordinate, relative to window 
+.PP
+Définition à la ligne 256 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

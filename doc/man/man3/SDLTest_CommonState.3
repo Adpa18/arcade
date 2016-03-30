@@ -1,0 +1,380 @@
+.TH "SDLTest_CommonState" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDLTest_CommonState \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_test_common\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "char ** \fBargv\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBverbose\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBvideodriver\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdisplay\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBwindow_title\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBwindow_icon\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindow_flags\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_x\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_y\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_w\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_h\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_minW\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_minH\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_maxW\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwindow_maxH\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlogical_w\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlogical_h\fP"
+.br
+.ti -1c
+.RI "float \fBscale\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdepth\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrefresh_rate\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnum_windows\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Window\fP ** \fBwindows\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBrenderdriver\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBrender_flags\fP"
+.br
+.ti -1c
+.RI "\fBSDL_bool\fP \fBskip_renderer\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Renderer\fP ** \fBrenderers\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Texture\fP ** \fBtargets\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBaudiodriver\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioSpec\fP \fBaudiospec\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_red_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_green_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_blue_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_alpha_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_buffer_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_depth_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_stencil_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_double_buffer\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_accum_red_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_accum_green_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_accum_blue_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_accum_alpha_size\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_stereo\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_multisamplebuffers\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_multisamplesamples\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_retained_backing\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_accelerated\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_major_version\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_minor_version\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_debug\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBgl_profile_mask\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 51 du fichier SDL_test_common\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "char** SDLTest_CommonState::argv"
+
+.PP
+Définition à la ligne 54 du fichier SDL_test_common\&.h\&.
+.SS "\fBconst\fP char* SDLTest_CommonState::audiodriver"
+
+.PP
+Définition à la ligne 88 du fichier SDL_test_common\&.h\&.
+.SS "\fBSDL_AudioSpec\fP SDLTest_CommonState::audiospec"
+
+.PP
+Définition à la ligne 89 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::depth"
+
+.PP
+Définition à la ligne 75 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::display"
+
+.PP
+Définition à la ligne 60 du fichier SDL_test_common\&.h\&.
+.SS "\fBUint32\fP SDLTest_CommonState::flags"
+
+.PP
+Définition à la ligne 55 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_accelerated"
+
+.PP
+Définition à la ligne 108 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_accum_alpha_size"
+
+.PP
+Définition à la ligne 103 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_accum_blue_size"
+
+.PP
+Définition à la ligne 102 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_accum_green_size"
+
+.PP
+Définition à la ligne 101 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_accum_red_size"
+
+.PP
+Définition à la ligne 100 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_alpha_size"
+
+.PP
+Définition à la ligne 95 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_blue_size"
+
+.PP
+Définition à la ligne 94 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_buffer_size"
+
+.PP
+Définition à la ligne 96 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_debug"
+
+.PP
+Définition à la ligne 111 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_depth_size"
+
+.PP
+Définition à la ligne 97 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_double_buffer"
+
+.PP
+Définition à la ligne 99 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_green_size"
+
+.PP
+Définition à la ligne 93 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_major_version"
+
+.PP
+Définition à la ligne 109 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_minor_version"
+
+.PP
+Définition à la ligne 110 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_multisamplebuffers"
+
+.PP
+Définition à la ligne 105 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_multisamplesamples"
+
+.PP
+Définition à la ligne 106 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_profile_mask"
+
+.PP
+Définition à la ligne 112 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_red_size"
+
+.PP
+Définition à la ligne 92 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_retained_backing"
+
+.PP
+Définition à la ligne 107 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_stencil_size"
+
+.PP
+Définition à la ligne 98 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::gl_stereo"
+
+.PP
+Définition à la ligne 104 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::logical_h"
+
+.PP
+Définition à la ligne 73 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::logical_w"
+
+.PP
+Définition à la ligne 72 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::num_windows"
+
+.PP
+Définition à la ligne 77 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::refresh_rate"
+
+.PP
+Définition à la ligne 76 du fichier SDL_test_common\&.h\&.
+.SS "\fBUint32\fP SDLTest_CommonState::render_flags"
+
+.PP
+Définition à la ligne 82 du fichier SDL_test_common\&.h\&.
+.SS "\fBconst\fP char* SDLTest_CommonState::renderdriver"
+
+.PP
+Définition à la ligne 81 du fichier SDL_test_common\&.h\&.
+.SS "\fBSDL_Renderer\fP** SDLTest_CommonState::renderers"
+
+.PP
+Définition à la ligne 84 du fichier SDL_test_common\&.h\&.
+.SS "float SDLTest_CommonState::scale"
+
+.PP
+Définition à la ligne 74 du fichier SDL_test_common\&.h\&.
+.SS "\fBSDL_bool\fP SDLTest_CommonState::skip_renderer"
+
+.PP
+Définition à la ligne 83 du fichier SDL_test_common\&.h\&.
+.SS "\fBSDL_Texture\fP** SDLTest_CommonState::targets"
+
+.PP
+Définition à la ligne 85 du fichier SDL_test_common\&.h\&.
+.SS "\fBUint32\fP SDLTest_CommonState::verbose"
+
+.PP
+Définition à la ligne 56 du fichier SDL_test_common\&.h\&.
+.SS "\fBconst\fP char* SDLTest_CommonState::videodriver"
+
+.PP
+Définition à la ligne 59 du fichier SDL_test_common\&.h\&.
+.SS "\fBUint32\fP SDLTest_CommonState::window_flags"
+
+.PP
+Définition à la ligne 63 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_h"
+
+.PP
+Définition à la ligne 67 du fichier SDL_test_common\&.h\&.
+.SS "\fBconst\fP char* SDLTest_CommonState::window_icon"
+
+.PP
+Définition à la ligne 62 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_maxH"
+
+.PP
+Définition à la ligne 71 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_maxW"
+
+.PP
+Définition à la ligne 70 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_minH"
+
+.PP
+Définition à la ligne 69 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_minW"
+
+.PP
+Définition à la ligne 68 du fichier SDL_test_common\&.h\&.
+.SS "\fBconst\fP char* SDLTest_CommonState::window_title"
+
+.PP
+Définition à la ligne 61 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_w"
+
+.PP
+Définition à la ligne 66 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_x"
+
+.PP
+Définition à la ligne 64 du fichier SDL_test_common\&.h\&.
+.SS "\fBint\fP SDLTest_CommonState::window_y"
+
+.PP
+Définition à la ligne 65 du fichier SDL_test_common\&.h\&.
+.SS "\fBSDL_Window\fP** SDLTest_CommonState::windows"
+
+.PP
+Définition à la ligne 78 du fichier SDL_test_common\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

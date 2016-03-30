@@ -54,4 +54,10 @@ fclean	:	clean
 
 re		: fclean all
 
-.PHONY	: all clean fclean re
+doc		:
+	@mkdir -p doc
+	@rm -rf doc/html
+	@rm -rf doc/man
+	@cd doc/doxygen && doxygen Doxyfile
+
+.PHONY	: all clean fclean re doc

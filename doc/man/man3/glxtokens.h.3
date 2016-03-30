@@ -1,0 +1,1200 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glxtokens.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glxtokens.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_1\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_3\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_4\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_USE_GL\fP   1	/* support GLX rendering */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BUFFER_SIZE\fP   2	/* \fBdepth\fP of the \fBcolor\fP \fBbuffer\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_LEVEL\fP   3	/* \fBlevel\fP \fBin\fP plane stacking */"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA\fP   4	/* true if RGBA \fBmode\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_DOUBLEBUFFER\fP   5	/* double buffering supported */"
+.br
+.ti -1c
+.RI "#define \fBGLX_STEREO\fP   6	/* stereo buffering supported */"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS\fP   7	/* number of aux \fBbuffers\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_RED_SIZE\fP   8	/* number of red component \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_GREEN_SIZE\fP   9	/* number of \fBgreen\fP component \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BLUE_SIZE\fP   10	/* number of \fBblue\fP component \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_ALPHA_SIZE\fP   11	/* number of \fBalpha\fP component \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_SIZE\fP   12	/* number of \fBdepth\fP \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_SIZE\fP   13	/* number of \fBstencil\fP \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_RED_SIZE\fP   14	/* number of red accum \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_GREEN_SIZE\fP   15	/* number of \fBgreen\fP accum \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BLUE_SIZE\fP   16	/* number of \fBblue\fP accum \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_ALPHA_SIZE\fP   17	/* number of \fBalpha\fP accum \fBbits\fP */"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_VISUAL_TYPE\fP   0x22"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONFIG_CAVEAT\fP   0x20	/* Like visual_info VISUAL_CAVEAT_EXT */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_TYPE\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_VALUE\fP   0x24"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RED_VALUE\fP   0x25"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_GREEN_VALUE\fP   0x26"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_BLUE_VALUE\fP   0x27"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_ALPHA_VALUE\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBGLX_DRAWABLE_TYPE\fP   0x8010"
+.br
+.ti -1c
+.RI "#define \fBGLX_RENDER_TYPE\fP   0x8011"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_RENDERABLE\fP   0x8012"
+.br
+.ti -1c
+.RI "#define \fBGLX_FBCONFIG_ID\fP   0x8013"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_WIDTH\fP   0x8016"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_HEIGHT\fP   0x8017"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_PIXELS\fP   0x8018"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_ID\fP   0x800B"
+.br
+.ti -1c
+.RI "#define \fBGLX_OPTIMAL_PBUFFER_WIDTH_SGIX\fP   0x8019"
+.br
+.ti -1c
+.RI "#define \fBGLX_OPTIMAL_PBUFFER_HEIGHT_SGIX\fP   0x801A"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_SCREEN\fP   1	/* screen # is bad */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_ATTRIBUTE\fP   2	/* attribute to get is bad */"
+.br
+.ti -1c
+.RI "#define \fBGLX_NO_EXTENSION\fP   3	/* no glx extension on server */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_VISUAL\fP   4	/* visual # not known \fBby\fP GLX */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_CONTEXT\fP   5	/* returned only \fBby\fP import_context EXT? */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_VALUE\fP   6	/* returned only \fBby\fP glXSwapIntervalSGI? */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_ENUM\fP   7	/* unused? */"
+.br
+.ti -1c
+.RI "#define \fBGLX_DONT_CARE\fP   0xFFFFFFFF"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIXMAP_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_NONE\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SLOW_CONFIG\fP   0x8001"
+.br
+.ti -1c
+.RI "#define \fBGLX_NON_CONFORMANT_CONFIG\fP   0x800D"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRUE_COLOR\fP   0x8002"
+.br
+.ti -1c
+.RI "#define \fBGLX_DIRECT_COLOR\fP   0x8003"
+.br
+.ti -1c
+.RI "#define \fBGLX_PSEUDO_COLOR\fP   0x8004"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_COLOR\fP   0x8005"
+.br
+.ti -1c
+.RI "#define \fBGLX_GRAY_SCALE\fP   0x8006"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_GRAY\fP   0x8007"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RGB\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX\fP   0x8009"
+.br
+.ti -1c
+.RI "#define \fBGLX_PRESERVED_CONTENTS\fP   0x801B"
+.br
+.ti -1c
+.RI "#define \fBGLX_LARGEST_PBUFFER\fP   0x801C"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_HEIGHT\fP   0x8040	/* New for GLX 1\&.3 */"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_WIDTH\fP   0x8041	/* New for GLX 1\&.3 */"
+.br
+.ti -1c
+.RI "#define \fBGLX_WIDTH\fP   0x801D"
+.br
+.ti -1c
+.RI "#define \fBGLX_HEIGHT\fP   0x801E"
+.br
+.ti -1c
+.RI "#define \fBGLX_EVENT_MASK\fP   0x801F"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_TYPE\fP   0x8014"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_TYPE\fP   0x8015"
+.br
+.ti -1c
+.RI "#define \fBGLX_SCREEN\fP   0x800C"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_CLOBBER_MASK\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBGLX_BUFFER_SWAP_COMPLETE_INTEL_MASK\fP   0x04000000"
+.br
+.ti -1c
+.RI "#define \fBGLX_DAMAGED\fP   0x8020"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAVED\fP   0x8021"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXCHANGE_COMPLETE_INTEL\fP   0x8180"
+.br
+.ti -1c
+.RI "#define \fBGLX_BLIT_COMPLETE_INTEL\fP   0x8181"
+.br
+.ti -1c
+.RI "#define \fBGLX_FLIP_COMPLETE_INTEL\fP   0x8182"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW\fP   0x8022"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER\fP   0x8023"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_BUFFER_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_BUFFER_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_BUFFER_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_BUFFER_BIT\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS_BIT\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_BUFFER_BIT\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_BUFFER_BIT\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BUFFER_BIT\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_VISUAL_TYPE_EXT\fP   0x22	/* visual_info extension type */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_TYPE_EXT\fP   0x23	/* visual_info extension */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_VALUE_EXT\fP   0x24	/* visual_info extension */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RED_VALUE_EXT\fP   0x25	/* visual_info extension */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_GREEN_VALUE_EXT\fP   0x26	/* visual_info extension */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_BLUE_VALUE_EXT\fP   0x27	/* visual_info extension */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_ALPHA_VALUE_EXT\fP   0x28	/* visual_info extension */"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRUE_COLOR_EXT\fP   0x8002"
+.br
+.ti -1c
+.RI "#define \fBGLX_DIRECT_COLOR_EXT\fP   0x8003"
+.br
+.ti -1c
+.RI "#define \fBGLX_PSEUDO_COLOR_EXT\fP   0x8004"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_COLOR_EXT\fP   0x8005"
+.br
+.ti -1c
+.RI "#define \fBGLX_GRAY_SCALE_EXT\fP   0x8006"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_GRAY_EXT\fP   0x8007"
+.br
+.ti -1c
+.RI "#define \fBGLX_NONE_EXT\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RGB_EXT\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_EXT\fP   0x8009"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_CAVEAT_EXT\fP   0x20  /* visual_rating extension type */"
+.br
+.ti -1c
+.RI "#define \fBGLX_SLOW_VISUAL_EXT\fP   0x8001"
+.br
+.ti -1c
+.RI "#define \fBGLX_NON_CONFORMANT_VISUAL_EXT\fP   0x800D"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_METHOD_OML\fP   0x8060"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_EXCHANGE_OML\fP   0x8061"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_COPY_OML\fP   0x8062"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_UNDEFINED_OML\fP   0x8063"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_SELECT_GROUP_SGIX\fP   0x8028	/* visuals grouped by select priority */"
+.br
+.ti -1c
+.RI "#define \fBGLX_VENDOR\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSIONS\fP   0x3"
+.br
+.ti -1c
+.RI "#define \fBGLX_SHARE_CONTEXT_EXT\fP   0x800A	/* id of share context */"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_ID_EXT\fP   0x800B	/* id of context's visual */"
+.br
+.ti -1c
+.RI "#define \fBGLX_SCREEN_EXT\fP   0x800C	/* screen number */"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGB_EXT\fP   0x20D0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGBA_EXT\fP   0x20D1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_MIPMAP_TEXTURE_EXT\fP   0x20D2"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_TARGETS_EXT\fP   0x20D3"
+.br
+.ti -1c
+.RI "#define \fBGLX_Y_INVERTED_EXT\fP   0x20D4"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_EXT\fP   0x20D5"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_TARGET_EXT\fP   0x20D6"
+.br
+.ti -1c
+.RI "#define \fBGLX_MIPMAP_TEXTURE_EXT\fP   0x20D7"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_NONE_EXT\fP   0x20D8"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_RGB_EXT\fP   0x20D9"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_RGBA_EXT\fP   0x20DA"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_BIT_EXT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_BIT_EXT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RECTANGLE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_EXT\fP   0x20DB"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_EXT\fP   0x20DC"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RECTANGLE_EXT\fP   0x20DD"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_EXT\fP   0x20DE"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_EXT\fP   0x20DF"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_EXT\fP   0x20E0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_EXT\fP   0x20E1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_EXT\fP   \fBGLX_FRONT_LEFT_EXT\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_EXT\fP   \fBGLX_BACK_LEFT_EXT\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX0_EXT\fP   0x20E2"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX1_EXT\fP   0x20E3"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX2_EXT\fP   0x20E4"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX3_EXT\fP   0x20E5"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX4_EXT\fP   0x20E6"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX5_EXT\fP   0x20E7"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX6_EXT\fP   0x20E8"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX7_EXT\fP   0x20E9"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX8_EXT\fP   0x20EA"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX9_EXT\fP   0x20EB"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS_SGIS\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLES_SGIS\fP   100001"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRAMEBUFFER_SRGB_CAPABLE_EXT\fP   0x20B2"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_MAJOR_VERSION_ARB\fP   0x2091"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_MINOR_VERSION_ARB\fP   0x2092"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_FLAGS_ARB\fP   0x2094"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_PROFILE_MASK_ARB\fP   0x9126"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_DEBUG_BIT_ARB\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_CORE_PROFILE_BIT_ARB\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_ES2_PROFILE_BIT_EXT\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_ROBUST_ACCESS_BIT_ARB\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB\fP   0x8256"
+.br
+.ti -1c
+.RI "#define \fBGLX_NO_RESET_NOTIFICATION_ARB\fP   0x8261"
+.br
+.ti -1c
+.RI "#define \fBGLX_LOSE_CONTEXT_ON_RESET_ARB\fP   0x8252"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define GLX_ACCUM_ALPHA_SIZE   17	/* number of \fBalpha\fP accum \fBbits\fP */"
+
+.PP
+Définition à la ligne 62 du fichier glxtokens\&.h\&.
+.SS "#define GLX_ACCUM_BLUE_SIZE   16	/* number of \fBblue\fP accum \fBbits\fP */"
+
+.PP
+Définition à la ligne 61 du fichier glxtokens\&.h\&.
+.SS "#define GLX_ACCUM_BUFFER_BIT   0x00000080"
+
+.PP
+Définition à la ligne 177 du fichier glxtokens\&.h\&.
+.SS "#define GLX_ACCUM_GREEN_SIZE   15	/* number of \fBgreen\fP accum \fBbits\fP */"
+
+.PP
+Définition à la ligne 60 du fichier glxtokens\&.h\&.
+.SS "#define GLX_ACCUM_RED_SIZE   14	/* number of red accum \fBbits\fP */"
+
+.PP
+Définition à la ligne 59 du fichier glxtokens\&.h\&.
+.SS "#define GLX_ALPHA_SIZE   11	/* number of \fBalpha\fP component \fBbits\fP */"
+
+.PP
+Définition à la ligne 56 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX0_EXT   0x20E2"
+
+.PP
+Définition à la ligne 264 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX1_EXT   0x20E3"
+
+.PP
+Définition à la ligne 265 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX2_EXT   0x20E4"
+
+.PP
+Définition à la ligne 266 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX3_EXT   0x20E5"
+
+.PP
+Définition à la ligne 267 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX4_EXT   0x20E6"
+
+.PP
+Définition à la ligne 268 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX5_EXT   0x20E7"
+
+.PP
+Définition à la ligne 269 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX6_EXT   0x20E8"
+
+.PP
+Définition à la ligne 270 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX7_EXT   0x20E9"
+
+.PP
+Définition à la ligne 271 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX8_EXT   0x20EA"
+
+.PP
+Définition à la ligne 272 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX9_EXT   0x20EB"
+
+.PP
+Définition à la ligne 273 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX_BUFFERS   7	/* number of aux \fBbuffers\fP */"
+
+.PP
+Définition à la ligne 52 du fichier glxtokens\&.h\&.
+.SS "#define GLX_AUX_BUFFERS_BIT   0x00000010"
+
+.PP
+Définition à la ligne 174 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BACK_EXT   \fBGLX_BACK_LEFT_EXT\fP"
+
+.PP
+Définition à la ligne 263 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BACK_LEFT_BUFFER_BIT   0x00000004"
+
+.PP
+Définition à la ligne 172 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BACK_LEFT_EXT   0x20E0"
+
+.PP
+Définition à la ligne 260 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BACK_RIGHT_BUFFER_BIT   0x00000008"
+
+.PP
+Définition à la ligne 173 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BACK_RIGHT_EXT   0x20E1"
+
+.PP
+Définition à la ligne 261 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BAD_ATTRIBUTE   2	/* attribute to get is bad */"
+
+.PP
+Définition à la ligne 92 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BAD_CONTEXT   5	/* returned only \fBby\fP import_context EXT? */"
+
+.PP
+Définition à la ligne 95 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BAD_ENUM   7	/* unused? */"
+
+.PP
+Définition à la ligne 97 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BAD_SCREEN   1	/* screen # is bad */"
+
+.PP
+Définition à la ligne 91 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BAD_VALUE   6	/* returned only \fBby\fP glXSwapIntervalSGI? */"
+
+.PP
+Définition à la ligne 96 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BAD_VISUAL   4	/* visual # not known \fBby\fP GLX */"
+
+.PP
+Définition à la ligne 94 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BIND_TO_MIPMAP_TEXTURE_EXT   0x20D2"
+
+.PP
+Définition à la ligne 238 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGB_EXT   0x20D0"
+
+.PP
+Définition à la ligne 236 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGBA_EXT   0x20D1"
+
+.PP
+Définition à la ligne 237 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_TARGETS_EXT   0x20D3"
+
+.PP
+Définition à la ligne 239 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BLIT_COMPLETE_INTEL   0x8181"
+
+.PP
+Définition à la ligne 162 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BLUE_SIZE   10	/* number of \fBblue\fP component \fBbits\fP */"
+
+.PP
+Définition à la ligne 55 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BUFFER_SIZE   2	/* \fBdepth\fP of the \fBcolor\fP \fBbuffer\fP */"
+
+.PP
+Définition à la ligne 47 du fichier glxtokens\&.h\&.
+.SS "#define GLX_BUFFER_SWAP_COMPLETE_INTEL_MASK   0x04000000"
+
+.PP
+Définition à la ligne 156 du fichier glxtokens\&.h\&.
+.SS "#define GLX_COLOR_INDEX_BIT   0x00000002"
+
+.PP
+Définition à la ligne 109 du fichier glxtokens\&.h\&.
+.SS "#define GLX_COLOR_INDEX_TYPE   0x8015"
+
+.PP
+Définition à la ligne 147 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONFIG_CAVEAT   0x20	/* Like visual_info VISUAL_CAVEAT_EXT */"
+
+.PP
+Définition à la ligne 67 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB   0x0002"
+
+.PP
+Définition à la ligne 300 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_CORE_PROFILE_BIT_ARB   0x0001"
+
+.PP
+Définition à la ligne 299 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_DEBUG_BIT_ARB   0x0001"
+
+.PP
+Définition à la ligne 296 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_ES2_PROFILE_BIT_EXT   0x0004"
+
+.PP
+Définition à la ligne 301 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_FLAGS_ARB   0x2094"
+
+.PP
+Définition à la ligne 293 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB   0x0002"
+
+.PP
+Définition à la ligne 297 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_MAJOR_VERSION_ARB   0x2091"
+
+.PP
+Définition à la ligne 291 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_MINOR_VERSION_ARB   0x2092"
+
+.PP
+Définition à la ligne 292 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_PROFILE_MASK_ARB   0x9126"
+
+.PP
+Définition à la ligne 294 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB   0x8256"
+
+.PP
+Définition à la ligne 307 du fichier glxtokens\&.h\&.
+.SS "#define GLX_CONTEXT_ROBUST_ACCESS_BIT_ARB   0x0004"
+
+.PP
+Définition à la ligne 306 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DAMAGED   0x8020"
+
+.PP
+Définition à la ligne 159 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DEPTH_BUFFER_BIT   0x00000020"
+
+.PP
+Définition à la ligne 175 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DEPTH_SIZE   12	/* number of \fBdepth\fP \fBbits\fP */"
+
+.PP
+Définition à la ligne 57 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DIRECT_COLOR   0x8003"
+
+.PP
+Définition à la ligne 123 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DIRECT_COLOR_EXT   0x8003"
+
+.PP
+Définition à la ligne 194 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DONT_CARE   0xFFFFFFFF"
+
+.PP
+Définition à la ligne 105 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DOUBLEBUFFER   5	/* double buffering supported */"
+
+.PP
+Définition à la ligne 50 du fichier glxtokens\&.h\&.
+.SS "#define GLX_DRAWABLE_TYPE   0x8010"
+
+.PP
+Définition à la ligne 74 du fichier glxtokens\&.h\&.
+.SS "#define GLX_EVENT_MASK   0x801F"
+
+.PP
+Définition à la ligne 143 du fichier glxtokens\&.h\&.
+.SS "#define GLX_EXCHANGE_COMPLETE_INTEL   0x8180"
+
+.PP
+Définition à la ligne 161 du fichier glxtokens\&.h\&.
+.SS "#define GLX_EXTENSIONS   0x3"
+
+.PP
+Définition à la ligne 224 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FBCONFIG_ID   0x8013"
+
+.PP
+Définition à la ligne 77 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FLIP_COMPLETE_INTEL   0x8182"
+
+.PP
+Définition à la ligne 163 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT   0x20B2"
+
+.PP
+Définition à la ligne 284 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FRONT_EXT   \fBGLX_FRONT_LEFT_EXT\fP"
+
+.PP
+Définition à la ligne 262 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FRONT_LEFT_BUFFER_BIT   0x00000001"
+
+.PP
+Définition à la ligne 170 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FRONT_LEFT_EXT   0x20DE"
+
+.PP
+Définition à la ligne 258 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_BUFFER_BIT   0x00000002"
+
+.PP
+Définition à la ligne 171 du fichier glxtokens\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_EXT   0x20DF"
+
+.PP
+Définition à la ligne 259 du fichier glxtokens\&.h\&.
+.SS "#define GLX_GRAY_SCALE   0x8006"
+
+.PP
+Définition à la ligne 126 du fichier glxtokens\&.h\&.
+.SS "#define GLX_GRAY_SCALE_EXT   0x8006"
+
+.PP
+Définition à la ligne 197 du fichier glxtokens\&.h\&.
+.SS "#define GLX_GREEN_SIZE   9	/* number of \fBgreen\fP component \fBbits\fP */"
+
+.PP
+Définition à la ligne 54 du fichier glxtokens\&.h\&.
+.SS "#define GLX_HEIGHT   0x801E"
+
+.PP
+Définition à la ligne 142 du fichier glxtokens\&.h\&.
+.SS "#define GLX_LARGEST_PBUFFER   0x801C"
+
+.PP
+Définition à la ligne 136 du fichier glxtokens\&.h\&.
+.SS "#define GLX_LEVEL   3	/* \fBlevel\fP \fBin\fP plane stacking */"
+
+.PP
+Définition à la ligne 48 du fichier glxtokens\&.h\&.
+.SS "#define GLX_LOSE_CONTEXT_ON_RESET_ARB   0x8252"
+
+.PP
+Définition à la ligne 309 du fichier glxtokens\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_HEIGHT   0x8017"
+
+.PP
+Définition à la ligne 79 du fichier glxtokens\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_PIXELS   0x8018"
+
+.PP
+Définition à la ligne 80 du fichier glxtokens\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_WIDTH   0x8016"
+
+.PP
+Définition à la ligne 78 du fichier glxtokens\&.h\&.
+.SS "#define GLX_MIPMAP_TEXTURE_EXT   0x20D7"
+
+.PP
+Définition à la ligne 244 du fichier glxtokens\&.h\&.
+.SS "#define GLX_NO_EXTENSION   3	/* no glx extension on server */"
+
+.PP
+Définition à la ligne 93 du fichier glxtokens\&.h\&.
+.SS "#define GLX_NO_RESET_NOTIFICATION_ARB   0x8261"
+
+.PP
+Définition à la ligne 308 du fichier glxtokens\&.h\&.
+.SS "#define GLX_NON_CONFORMANT_CONFIG   0x800D"
+
+.PP
+Définition à la ligne 119 du fichier glxtokens\&.h\&.
+.SS "#define GLX_NON_CONFORMANT_VISUAL_EXT   0x800D"
+
+.PP
+Définition à la ligne 208 du fichier glxtokens\&.h\&.
+.SS "#define GLX_NONE   0x8000"
+
+.PP
+Définition à la ligne 117 du fichier glxtokens\&.h\&.
+.SS "#define GLX_NONE_EXT   0x8000"
+
+.PP
+Définition à la ligne 201 du fichier glxtokens\&.h\&.
+.SS "#define GLX_OPTIMAL_PBUFFER_HEIGHT_SGIX   0x801A"
+
+.PP
+Définition à la ligne 85 du fichier glxtokens\&.h\&.
+.SS "#define GLX_OPTIMAL_PBUFFER_WIDTH_SGIX   0x8019"
+
+.PP
+Définition à la ligne 84 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PBUFFER   0x8023"
+
+.PP
+Définition à la ligne 167 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PBUFFER_BIT   0x00000004"
+
+.PP
+Définition à la ligne 114 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PBUFFER_CLOBBER_MASK   0x08000000"
+
+.PP
+Définition à la ligne 155 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PBUFFER_HEIGHT   0x8040	/* New for GLX 1\&.3 */"
+
+.PP
+Définition à la ligne 137 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PBUFFER_WIDTH   0x8041	/* New for GLX 1\&.3 */"
+
+.PP
+Définition à la ligne 138 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PIXMAP_BIT   0x00000002"
+
+.PP
+Définition à la ligne 113 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PRESERVED_CONTENTS   0x801B"
+
+.PP
+Définition à la ligne 135 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PSEUDO_COLOR   0x8004"
+
+.PP
+Définition à la ligne 124 du fichier glxtokens\&.h\&.
+.SS "#define GLX_PSEUDO_COLOR_EXT   0x8004"
+
+.PP
+Définition à la ligne 195 du fichier glxtokens\&.h\&.
+.SS "#define GLX_RED_SIZE   8	/* number of red component \fBbits\fP */"
+
+.PP
+Définition à la ligne 53 du fichier glxtokens\&.h\&.
+.SS "#define GLX_RENDER_TYPE   0x8011"
+
+.PP
+Définition à la ligne 75 du fichier glxtokens\&.h\&.
+.SS "#define GLX_RGBA   4	/* true if RGBA \fBmode\fP */"
+
+.PP
+Définition à la ligne 49 du fichier glxtokens\&.h\&.
+.SS "#define GLX_RGBA_BIT   0x00000001"
+
+.PP
+Définition à la ligne 108 du fichier glxtokens\&.h\&.
+.SS "#define GLX_RGBA_TYPE   0x8014"
+
+.PP
+Définition à la ligne 146 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS_SGIS   100000"
+
+.PP
+Définition à la ligne 278 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SAMPLES_SGIS   100001"
+
+.PP
+Définition à la ligne 279 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SAVED   0x8021"
+
+.PP
+Définition à la ligne 160 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SCREEN   0x800C"
+
+.PP
+Définition à la ligne 152 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SCREEN_EXT   0x800C	/* screen number */"
+
+.PP
+Définition à la ligne 231 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SHARE_CONTEXT_EXT   0x800A	/* id of share context */"
+
+.PP
+Définition à la ligne 229 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SLOW_CONFIG   0x8001"
+
+.PP
+Définition à la ligne 118 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SLOW_VISUAL_EXT   0x8001"
+
+.PP
+Définition à la ligne 207 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STATIC_COLOR   0x8005"
+
+.PP
+Définition à la ligne 125 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STATIC_COLOR_EXT   0x8005"
+
+.PP
+Définition à la ligne 196 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STATIC_GRAY   0x8007"
+
+.PP
+Définition à la ligne 127 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STATIC_GRAY_EXT   0x8007"
+
+.PP
+Définition à la ligne 198 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STENCIL_BUFFER_BIT   0x00000040"
+
+.PP
+Définition à la ligne 176 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STENCIL_SIZE   13	/* number of \fBstencil\fP \fBbits\fP */"
+
+.PP
+Définition à la ligne 58 du fichier glxtokens\&.h\&.
+.SS "#define GLX_STEREO   6	/* stereo buffering supported */"
+
+.PP
+Définition à la ligne 51 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SWAP_COPY_OML   0x8062"
+
+.PP
+Définition à la ligne 213 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SWAP_EXCHANGE_OML   0x8061"
+
+.PP
+Définition à la ligne 212 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SWAP_METHOD_OML   0x8060"
+
+.PP
+Définition à la ligne 211 du fichier glxtokens\&.h\&.
+.SS "#define GLX_SWAP_UNDEFINED_OML   0x8063"
+
+.PP
+Définition à la ligne 214 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_1D_BIT_EXT   0x00000001"
+
+.PP
+Définition à la ligne 250 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_1D_EXT   0x20DB"
+
+.PP
+Définition à la ligne 254 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_2D_BIT_EXT   0x00000002"
+
+.PP
+Définition à la ligne 251 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_2D_EXT   0x20DC"
+
+.PP
+Définition à la ligne 255 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_EXT   0x20D5"
+
+.PP
+Définition à la ligne 242 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_NONE_EXT   0x20D8"
+
+.PP
+Définition à la ligne 246 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_RGB_EXT   0x20D9"
+
+.PP
+Définition à la ligne 247 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_RGBA_EXT   0x20DA"
+
+.PP
+Définition à la ligne 248 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_RECTANGLE_BIT_EXT   0x00000004"
+
+.PP
+Définition à la ligne 252 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_RECTANGLE_EXT   0x20DD"
+
+.PP
+Définition à la ligne 256 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TEXTURE_TARGET_EXT   0x20D6"
+
+.PP
+Définition à la ligne 243 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_ALPHA_VALUE   0x28"
+
+.PP
+Définition à la ligne 73 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_ALPHA_VALUE_EXT   0x28	/* visual_info extension */"
+
+.PP
+Définition à la ligne 190 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_BLUE_VALUE   0x27"
+
+.PP
+Définition à la ligne 72 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_BLUE_VALUE_EXT   0x27	/* visual_info extension */"
+
+.PP
+Définition à la ligne 189 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_GREEN_VALUE   0x26"
+
+.PP
+Définition à la ligne 71 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_GREEN_VALUE_EXT   0x26	/* visual_info extension */"
+
+.PP
+Définition à la ligne 188 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX   0x8009"
+
+.PP
+Définition à la ligne 132 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_EXT   0x8009"
+
+.PP
+Définition à la ligne 203 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_VALUE   0x24"
+
+.PP
+Définition à la ligne 69 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_VALUE_EXT   0x24	/* visual_info extension */"
+
+.PP
+Définition à la ligne 186 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_RED_VALUE   0x25"
+
+.PP
+Définition à la ligne 70 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_RED_VALUE_EXT   0x25	/* visual_info extension */"
+
+.PP
+Définition à la ligne 187 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_RGB   0x8008"
+
+.PP
+Définition à la ligne 131 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_RGB_EXT   0x8008"
+
+.PP
+Définition à la ligne 202 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_TYPE   0x23"
+
+.PP
+Définition à la ligne 68 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRANSPARENT_TYPE_EXT   0x23	/* visual_info extension */"
+
+.PP
+Définition à la ligne 185 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRUE_COLOR   0x8002"
+
+.PP
+Définition à la ligne 122 du fichier glxtokens\&.h\&.
+.SS "#define GLX_TRUE_COLOR_EXT   0x8002"
+
+.PP
+Définition à la ligne 193 du fichier glxtokens\&.h\&.
+.SS "#define GLX_USE_GL   1	/* support GLX rendering */"
+
+.PP
+Définition à la ligne 46 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VENDOR   0x1"
+
+.PP
+Définition à la ligne 222 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VERSION   0x2"
+
+.PP
+Définition à la ligne 223 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VERSION_1_1   1"
+
+.PP
+Définition à la ligne 38 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VERSION_1_2   1"
+
+.PP
+Définition à la ligne 39 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VERSION_1_3   1"
+
+.PP
+Définition à la ligne 40 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VERSION_1_4   1"
+
+.PP
+Définition à la ligne 41 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VISUAL_CAVEAT_EXT   0x20  /* visual_rating extension type */"
+
+.PP
+Définition à la ligne 206 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VISUAL_ID   0x800B"
+
+.PP
+Définition à la ligne 81 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VISUAL_ID_EXT   0x800B	/* id of context's visual */"
+
+.PP
+Définition à la ligne 230 du fichier glxtokens\&.h\&.
+.SS "#define GLX_VISUAL_SELECT_GROUP_SGIX   0x8028	/* visuals grouped by select priority */"
+
+.PP
+Définition à la ligne 217 du fichier glxtokens\&.h\&.
+.SS "#define GLX_WIDTH   0x801D"
+
+.PP
+Définition à la ligne 141 du fichier glxtokens\&.h\&.
+.SS "#define GLX_WINDOW   0x8022"
+
+.PP
+Définition à la ligne 166 du fichier glxtokens\&.h\&.
+.SS "#define GLX_WINDOW_BIT   0x00000001"
+
+.PP
+Définition à la ligne 112 du fichier glxtokens\&.h\&.
+.SS "#define GLX_X_RENDERABLE   0x8012"
+
+.PP
+Définition à la ligne 76 du fichier glxtokens\&.h\&.
+.SS "#define GLX_X_VISUAL_TYPE   0x22"
+
+.PP
+Définition à la ligne 66 du fichier glxtokens\&.h\&.
+.SS "#define GLX_X_VISUAL_TYPE_EXT   0x22	/* visual_info extension type */"
+
+.PP
+Définition à la ligne 184 du fichier glxtokens\&.h\&.
+.SS "#define GLX_Y_INVERTED_EXT   0x20D4"
+
+.PP
+Définition à la ligne 240 du fichier glxtokens\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

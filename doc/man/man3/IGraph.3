@@ -1,0 +1,62 @@
+.TH "IGraph" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IGraph \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IGraph\&.hpp>\fP
+.PP
+Dérivée par \fBNcurses\fP, \fBOpenGL\fP, et \fBSdl2\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBint\fP \fBeventManagment\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBdisplay\fP (std::stack< \fBAComponent\fP * >)=0"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP, std::stack< \fBAComponent\fP * >)=0"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBdestroy\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fB~IGraph\fP ()"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 18 du fichier IGraph\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "virtual IGraph::~IGraph ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 24 du fichier IGraph\&.hpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBvoid\fP IGraph::destroy ()\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBOpenGL\fP, \fBSdl2\fP, et \fBNcurses\fP\&.
+.SS "virtual \fBvoid\fP IGraph::display (std::stack< \fBAComponent\fP * >)\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBOpenGL\fP, \fBSdl2\fP, et \fBNcurses\fP\&.
+.SS "virtual \fBint\fP IGraph::eventManagment ()\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBOpenGL\fP, \fBSdl2\fP, et \fBNcurses\fP\&.
+.SS "virtual \fBvoid\fP IGraph::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size, std::stack< \fBAComponent\fP * >)\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBOpenGL\fP, \fBSdl2\fP, et \fBNcurses\fP\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

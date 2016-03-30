@@ -1,0 +1,3516 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/term.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/term.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/ncurses_dll\&.h>\fP
+.br
+\fC#include <termios\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtermtype\fP"
+.br
+.ti -1c
+.RI "struct \fBterm\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNCURSES_VERSION\fP   '6\&.0'"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_CONST\fP   \fBconst\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_SBOOL\fP   char"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_USE_DATABASE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_USE_TERMCAP\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_XNAMES\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTERMIOS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTTY\fP   struct termios"
+.br
+.ti -1c
+.RI "#define \fBGET_TTY\fP(fd,  \fBbuf\fP)   tcgetattr(fd, \fBbuf\fP)"
+.br
+.ti -1c
+.RI "#define \fBSET_TTY\fP(fd,  \fBbuf\fP)   tcsetattr(fd, TCSADRAIN, \fBbuf\fP)"
+.br
+.ti -1c
+.RI "#define \fBNAMESIZE\fP   256"
+.br
+.ti -1c
+.RI "#define \fBCUR\fP   cur_term\->type\&."
+.br
+.ti -1c
+.RI "#define \fBauto_left_margin\fP   \fBCUR\fP Booleans[0]"
+.br
+.ti -1c
+.RI "#define \fBauto_right_margin\fP   \fBCUR\fP Booleans[1]"
+.br
+.ti -1c
+.RI "#define \fBno_esc_ctlc\fP   \fBCUR\fP Booleans[2]"
+.br
+.ti -1c
+.RI "#define \fBceol_standout_glitch\fP   \fBCUR\fP Booleans[3]"
+.br
+.ti -1c
+.RI "#define \fBeat_newline_glitch\fP   \fBCUR\fP Booleans[4]"
+.br
+.ti -1c
+.RI "#define \fBerase_overstrike\fP   \fBCUR\fP Booleans[5]"
+.br
+.ti -1c
+.RI "#define \fBgeneric_type\fP   \fBCUR\fP Booleans[6]"
+.br
+.ti -1c
+.RI "#define \fBhard_copy\fP   \fBCUR\fP Booleans[7]"
+.br
+.ti -1c
+.RI "#define \fBhas_meta_key\fP   \fBCUR\fP Booleans[8]"
+.br
+.ti -1c
+.RI "#define \fBhas_status_line\fP   \fBCUR\fP Booleans[9]"
+.br
+.ti -1c
+.RI "#define \fBinsert_null_glitch\fP   \fBCUR\fP Booleans[10]"
+.br
+.ti -1c
+.RI "#define \fBmemory_above\fP   \fBCUR\fP Booleans[11]"
+.br
+.ti -1c
+.RI "#define \fBmemory_below\fP   \fBCUR\fP Booleans[12]"
+.br
+.ti -1c
+.RI "#define \fBmove_insert_mode\fP   \fBCUR\fP Booleans[13]"
+.br
+.ti -1c
+.RI "#define \fBmove_standout_mode\fP   \fBCUR\fP Booleans[14]"
+.br
+.ti -1c
+.RI "#define \fBover_strike\fP   \fBCUR\fP Booleans[15]"
+.br
+.ti -1c
+.RI "#define \fBstatus_line_esc_ok\fP   \fBCUR\fP Booleans[16]"
+.br
+.ti -1c
+.RI "#define \fBdest_tabs_magic_smso\fP   \fBCUR\fP Booleans[17]"
+.br
+.ti -1c
+.RI "#define \fBtilde_glitch\fP   \fBCUR\fP Booleans[18]"
+.br
+.ti -1c
+.RI "#define \fBtransparent_underline\fP   \fBCUR\fP Booleans[19]"
+.br
+.ti -1c
+.RI "#define \fBxon_xoff\fP   \fBCUR\fP Booleans[20]"
+.br
+.ti -1c
+.RI "#define \fBneeds_xon_xoff\fP   \fBCUR\fP Booleans[21]"
+.br
+.ti -1c
+.RI "#define \fBprtr_silent\fP   \fBCUR\fP Booleans[22]"
+.br
+.ti -1c
+.RI "#define \fBhard_cursor\fP   \fBCUR\fP Booleans[23]"
+.br
+.ti -1c
+.RI "#define \fBnon_rev_rmcup\fP   \fBCUR\fP Booleans[24]"
+.br
+.ti -1c
+.RI "#define \fBno_pad_char\fP   \fBCUR\fP Booleans[25]"
+.br
+.ti -1c
+.RI "#define \fBnon_dest_scroll_region\fP   \fBCUR\fP Booleans[26]"
+.br
+.ti -1c
+.RI "#define \fBcan_change\fP   \fBCUR\fP Booleans[27]"
+.br
+.ti -1c
+.RI "#define \fBback_color_erase\fP   \fBCUR\fP Booleans[28]"
+.br
+.ti -1c
+.RI "#define \fBhue_lightness_saturation\fP   \fBCUR\fP Booleans[29]"
+.br
+.ti -1c
+.RI "#define \fBcol_addr_glitch\fP   \fBCUR\fP Booleans[30]"
+.br
+.ti -1c
+.RI "#define \fBcr_cancels_micro_mode\fP   \fBCUR\fP Booleans[31]"
+.br
+.ti -1c
+.RI "#define \fBhas_print_wheel\fP   \fBCUR\fP Booleans[32]"
+.br
+.ti -1c
+.RI "#define \fBrow_addr_glitch\fP   \fBCUR\fP Booleans[33]"
+.br
+.ti -1c
+.RI "#define \fBsemi_auto_right_margin\fP   \fBCUR\fP Booleans[34]"
+.br
+.ti -1c
+.RI "#define \fBcpi_changes_res\fP   \fBCUR\fP Booleans[35]"
+.br
+.ti -1c
+.RI "#define \fBlpi_changes_res\fP   \fBCUR\fP Booleans[36]"
+.br
+.ti -1c
+.RI "#define \fBcolumns\fP   \fBCUR\fP Numbers[0]"
+.br
+.ti -1c
+.RI "#define \fBinit_tabs\fP   \fBCUR\fP Numbers[1]"
+.br
+.ti -1c
+.RI "#define \fBlines\fP   \fBCUR\fP Numbers[2]"
+.br
+.ti -1c
+.RI "#define \fBlines_of_memory\fP   \fBCUR\fP Numbers[3]"
+.br
+.ti -1c
+.RI "#define \fBmagic_cookie_glitch\fP   \fBCUR\fP Numbers[4]"
+.br
+.ti -1c
+.RI "#define \fBpadding_baud_rate\fP   \fBCUR\fP Numbers[5]"
+.br
+.ti -1c
+.RI "#define \fBvirtual_terminal\fP   \fBCUR\fP Numbers[6]"
+.br
+.ti -1c
+.RI "#define \fBwidth_status_line\fP   \fBCUR\fP Numbers[7]"
+.br
+.ti -1c
+.RI "#define \fBnum_labels\fP   \fBCUR\fP Numbers[8]"
+.br
+.ti -1c
+.RI "#define \fBlabel_height\fP   \fBCUR\fP Numbers[9]"
+.br
+.ti -1c
+.RI "#define \fBlabel_width\fP   \fBCUR\fP Numbers[10]"
+.br
+.ti -1c
+.RI "#define \fBmax_attributes\fP   \fBCUR\fP Numbers[11]"
+.br
+.ti -1c
+.RI "#define \fBmaximum_windows\fP   \fBCUR\fP Numbers[12]"
+.br
+.ti -1c
+.RI "#define \fBmax_colors\fP   \fBCUR\fP Numbers[13]"
+.br
+.ti -1c
+.RI "#define \fBmax_pairs\fP   \fBCUR\fP Numbers[14]"
+.br
+.ti -1c
+.RI "#define \fBno_color_video\fP   \fBCUR\fP Numbers[15]"
+.br
+.ti -1c
+.RI "#define \fBbuffer_capacity\fP   \fBCUR\fP Numbers[16]"
+.br
+.ti -1c
+.RI "#define \fBdot_vert_spacing\fP   \fBCUR\fP Numbers[17]"
+.br
+.ti -1c
+.RI "#define \fBdot_horz_spacing\fP   \fBCUR\fP Numbers[18]"
+.br
+.ti -1c
+.RI "#define \fBmax_micro_address\fP   \fBCUR\fP Numbers[19]"
+.br
+.ti -1c
+.RI "#define \fBmax_micro_jump\fP   \fBCUR\fP Numbers[20]"
+.br
+.ti -1c
+.RI "#define \fBmicro_col_size\fP   \fBCUR\fP Numbers[21]"
+.br
+.ti -1c
+.RI "#define \fBmicro_line_size\fP   \fBCUR\fP Numbers[22]"
+.br
+.ti -1c
+.RI "#define \fBnumber_of_pins\fP   \fBCUR\fP Numbers[23]"
+.br
+.ti -1c
+.RI "#define \fBoutput_res_char\fP   \fBCUR\fP Numbers[24]"
+.br
+.ti -1c
+.RI "#define \fBoutput_res_line\fP   \fBCUR\fP Numbers[25]"
+.br
+.ti -1c
+.RI "#define \fBoutput_res_horz_inch\fP   \fBCUR\fP Numbers[26]"
+.br
+.ti -1c
+.RI "#define \fBoutput_res_vert_inch\fP   \fBCUR\fP Numbers[27]"
+.br
+.ti -1c
+.RI "#define \fBprint_rate\fP   \fBCUR\fP Numbers[28]"
+.br
+.ti -1c
+.RI "#define \fBwide_char_size\fP   \fBCUR\fP Numbers[29]"
+.br
+.ti -1c
+.RI "#define \fBbuttons\fP   \fBCUR\fP Numbers[30]"
+.br
+.ti -1c
+.RI "#define \fBbit_image_entwining\fP   \fBCUR\fP Numbers[31]"
+.br
+.ti -1c
+.RI "#define \fBbit_image_type\fP   \fBCUR\fP Numbers[32]"
+.br
+.ti -1c
+.RI "#define \fBback_tab\fP   \fBCUR\fP Strings[0]"
+.br
+.ti -1c
+.RI "#define \fBbell\fP   \fBCUR\fP Strings[1]"
+.br
+.ti -1c
+.RI "#define \fBcarriage_return\fP   \fBCUR\fP Strings[2]"
+.br
+.ti -1c
+.RI "#define \fBchange_scroll_region\fP   \fBCUR\fP Strings[3]"
+.br
+.ti -1c
+.RI "#define \fBclear_all_tabs\fP   \fBCUR\fP Strings[4]"
+.br
+.ti -1c
+.RI "#define \fBclear_screen\fP   \fBCUR\fP Strings[5]"
+.br
+.ti -1c
+.RI "#define \fBclr_eol\fP   \fBCUR\fP Strings[6]"
+.br
+.ti -1c
+.RI "#define \fBclr_eos\fP   \fBCUR\fP Strings[7]"
+.br
+.ti -1c
+.RI "#define \fBcolumn_address\fP   \fBCUR\fP Strings[8]"
+.br
+.ti -1c
+.RI "#define \fBcommand_character\fP   \fBCUR\fP Strings[9]"
+.br
+.ti -1c
+.RI "#define \fBcursor_address\fP   \fBCUR\fP Strings[10]"
+.br
+.ti -1c
+.RI "#define \fBcursor_down\fP   \fBCUR\fP Strings[11]"
+.br
+.ti -1c
+.RI "#define \fBcursor_home\fP   \fBCUR\fP Strings[12]"
+.br
+.ti -1c
+.RI "#define \fBcursor_invisible\fP   \fBCUR\fP Strings[13]"
+.br
+.ti -1c
+.RI "#define \fBcursor_left\fP   \fBCUR\fP Strings[14]"
+.br
+.ti -1c
+.RI "#define \fBcursor_mem_address\fP   \fBCUR\fP Strings[15]"
+.br
+.ti -1c
+.RI "#define \fBcursor_normal\fP   \fBCUR\fP Strings[16]"
+.br
+.ti -1c
+.RI "#define \fBcursor_right\fP   \fBCUR\fP Strings[17]"
+.br
+.ti -1c
+.RI "#define \fBcursor_to_ll\fP   \fBCUR\fP Strings[18]"
+.br
+.ti -1c
+.RI "#define \fBcursor_up\fP   \fBCUR\fP Strings[19]"
+.br
+.ti -1c
+.RI "#define \fBcursor_visible\fP   \fBCUR\fP Strings[20]"
+.br
+.ti -1c
+.RI "#define \fBdelete_character\fP   \fBCUR\fP Strings[21]"
+.br
+.ti -1c
+.RI "#define \fBdelete_line\fP   \fBCUR\fP Strings[22]"
+.br
+.ti -1c
+.RI "#define \fBdis_status_line\fP   \fBCUR\fP Strings[23]"
+.br
+.ti -1c
+.RI "#define \fBdown_half_line\fP   \fBCUR\fP Strings[24]"
+.br
+.ti -1c
+.RI "#define \fBenter_alt_charset_mode\fP   \fBCUR\fP Strings[25]"
+.br
+.ti -1c
+.RI "#define \fBenter_blink_mode\fP   \fBCUR\fP Strings[26]"
+.br
+.ti -1c
+.RI "#define \fBenter_bold_mode\fP   \fBCUR\fP Strings[27]"
+.br
+.ti -1c
+.RI "#define \fBenter_ca_mode\fP   \fBCUR\fP Strings[28]"
+.br
+.ti -1c
+.RI "#define \fBenter_delete_mode\fP   \fBCUR\fP Strings[29]"
+.br
+.ti -1c
+.RI "#define \fBenter_dim_mode\fP   \fBCUR\fP Strings[30]"
+.br
+.ti -1c
+.RI "#define \fBenter_insert_mode\fP   \fBCUR\fP Strings[31]"
+.br
+.ti -1c
+.RI "#define \fBenter_secure_mode\fP   \fBCUR\fP Strings[32]"
+.br
+.ti -1c
+.RI "#define \fBenter_protected_mode\fP   \fBCUR\fP Strings[33]"
+.br
+.ti -1c
+.RI "#define \fBenter_reverse_mode\fP   \fBCUR\fP Strings[34]"
+.br
+.ti -1c
+.RI "#define \fBenter_standout_mode\fP   \fBCUR\fP Strings[35]"
+.br
+.ti -1c
+.RI "#define \fBenter_underline_mode\fP   \fBCUR\fP Strings[36]"
+.br
+.ti -1c
+.RI "#define \fBerase_chars\fP   \fBCUR\fP Strings[37]"
+.br
+.ti -1c
+.RI "#define \fBexit_alt_charset_mode\fP   \fBCUR\fP Strings[38]"
+.br
+.ti -1c
+.RI "#define \fBexit_attribute_mode\fP   \fBCUR\fP Strings[39]"
+.br
+.ti -1c
+.RI "#define \fBexit_ca_mode\fP   \fBCUR\fP Strings[40]"
+.br
+.ti -1c
+.RI "#define \fBexit_delete_mode\fP   \fBCUR\fP Strings[41]"
+.br
+.ti -1c
+.RI "#define \fBexit_insert_mode\fP   \fBCUR\fP Strings[42]"
+.br
+.ti -1c
+.RI "#define \fBexit_standout_mode\fP   \fBCUR\fP Strings[43]"
+.br
+.ti -1c
+.RI "#define \fBexit_underline_mode\fP   \fBCUR\fP Strings[44]"
+.br
+.ti -1c
+.RI "#define \fBflash_screen\fP   \fBCUR\fP Strings[45]"
+.br
+.ti -1c
+.RI "#define \fBform_feed\fP   \fBCUR\fP Strings[46]"
+.br
+.ti -1c
+.RI "#define \fBfrom_status_line\fP   \fBCUR\fP Strings[47]"
+.br
+.ti -1c
+.RI "#define \fBinit_1string\fP   \fBCUR\fP Strings[48]"
+.br
+.ti -1c
+.RI "#define \fBinit_2string\fP   \fBCUR\fP Strings[49]"
+.br
+.ti -1c
+.RI "#define \fBinit_3string\fP   \fBCUR\fP Strings[50]"
+.br
+.ti -1c
+.RI "#define \fBinit_file\fP   \fBCUR\fP Strings[51]"
+.br
+.ti -1c
+.RI "#define \fBinsert_character\fP   \fBCUR\fP Strings[52]"
+.br
+.ti -1c
+.RI "#define \fBinsert_line\fP   \fBCUR\fP Strings[53]"
+.br
+.ti -1c
+.RI "#define \fBinsert_padding\fP   \fBCUR\fP Strings[54]"
+.br
+.ti -1c
+.RI "#define \fBkey_backspace\fP   \fBCUR\fP Strings[55]"
+.br
+.ti -1c
+.RI "#define \fBkey_catab\fP   \fBCUR\fP Strings[56]"
+.br
+.ti -1c
+.RI "#define \fBkey_clear\fP   \fBCUR\fP Strings[57]"
+.br
+.ti -1c
+.RI "#define \fBkey_ctab\fP   \fBCUR\fP Strings[58]"
+.br
+.ti -1c
+.RI "#define \fBkey_dc\fP   \fBCUR\fP Strings[59]"
+.br
+.ti -1c
+.RI "#define \fBkey_dl\fP   \fBCUR\fP Strings[60]"
+.br
+.ti -1c
+.RI "#define \fBkey_down\fP   \fBCUR\fP Strings[61]"
+.br
+.ti -1c
+.RI "#define \fBkey_eic\fP   \fBCUR\fP Strings[62]"
+.br
+.ti -1c
+.RI "#define \fBkey_eol\fP   \fBCUR\fP Strings[63]"
+.br
+.ti -1c
+.RI "#define \fBkey_eos\fP   \fBCUR\fP Strings[64]"
+.br
+.ti -1c
+.RI "#define \fBkey_f0\fP   \fBCUR\fP Strings[65]"
+.br
+.ti -1c
+.RI "#define \fBkey_f1\fP   \fBCUR\fP Strings[66]"
+.br
+.ti -1c
+.RI "#define \fBkey_f10\fP   \fBCUR\fP Strings[67]"
+.br
+.ti -1c
+.RI "#define \fBkey_f2\fP   \fBCUR\fP Strings[68]"
+.br
+.ti -1c
+.RI "#define \fBkey_f3\fP   \fBCUR\fP Strings[69]"
+.br
+.ti -1c
+.RI "#define \fBkey_f4\fP   \fBCUR\fP Strings[70]"
+.br
+.ti -1c
+.RI "#define \fBkey_f5\fP   \fBCUR\fP Strings[71]"
+.br
+.ti -1c
+.RI "#define \fBkey_f6\fP   \fBCUR\fP Strings[72]"
+.br
+.ti -1c
+.RI "#define \fBkey_f7\fP   \fBCUR\fP Strings[73]"
+.br
+.ti -1c
+.RI "#define \fBkey_f8\fP   \fBCUR\fP Strings[74]"
+.br
+.ti -1c
+.RI "#define \fBkey_f9\fP   \fBCUR\fP Strings[75]"
+.br
+.ti -1c
+.RI "#define \fBkey_home\fP   \fBCUR\fP Strings[76]"
+.br
+.ti -1c
+.RI "#define \fBkey_ic\fP   \fBCUR\fP Strings[77]"
+.br
+.ti -1c
+.RI "#define \fBkey_il\fP   \fBCUR\fP Strings[78]"
+.br
+.ti -1c
+.RI "#define \fBkey_left\fP   \fBCUR\fP Strings[79]"
+.br
+.ti -1c
+.RI "#define \fBkey_ll\fP   \fBCUR\fP Strings[80]"
+.br
+.ti -1c
+.RI "#define \fBkey_npage\fP   \fBCUR\fP Strings[81]"
+.br
+.ti -1c
+.RI "#define \fBkey_ppage\fP   \fBCUR\fP Strings[82]"
+.br
+.ti -1c
+.RI "#define \fBkey_right\fP   \fBCUR\fP Strings[83]"
+.br
+.ti -1c
+.RI "#define \fBkey_sf\fP   \fBCUR\fP Strings[84]"
+.br
+.ti -1c
+.RI "#define \fBkey_sr\fP   \fBCUR\fP Strings[85]"
+.br
+.ti -1c
+.RI "#define \fBkey_stab\fP   \fBCUR\fP Strings[86]"
+.br
+.ti -1c
+.RI "#define \fBkey_up\fP   \fBCUR\fP Strings[87]"
+.br
+.ti -1c
+.RI "#define \fBkeypad_local\fP   \fBCUR\fP Strings[88]"
+.br
+.ti -1c
+.RI "#define \fBkeypad_xmit\fP   \fBCUR\fP Strings[89]"
+.br
+.ti -1c
+.RI "#define \fBlab_f0\fP   \fBCUR\fP Strings[90]"
+.br
+.ti -1c
+.RI "#define \fBlab_f1\fP   \fBCUR\fP Strings[91]"
+.br
+.ti -1c
+.RI "#define \fBlab_f10\fP   \fBCUR\fP Strings[92]"
+.br
+.ti -1c
+.RI "#define \fBlab_f2\fP   \fBCUR\fP Strings[93]"
+.br
+.ti -1c
+.RI "#define \fBlab_f3\fP   \fBCUR\fP Strings[94]"
+.br
+.ti -1c
+.RI "#define \fBlab_f4\fP   \fBCUR\fP Strings[95]"
+.br
+.ti -1c
+.RI "#define \fBlab_f5\fP   \fBCUR\fP Strings[96]"
+.br
+.ti -1c
+.RI "#define \fBlab_f6\fP   \fBCUR\fP Strings[97]"
+.br
+.ti -1c
+.RI "#define \fBlab_f7\fP   \fBCUR\fP Strings[98]"
+.br
+.ti -1c
+.RI "#define \fBlab_f8\fP   \fBCUR\fP Strings[99]"
+.br
+.ti -1c
+.RI "#define \fBlab_f9\fP   \fBCUR\fP Strings[100]"
+.br
+.ti -1c
+.RI "#define \fBmeta_off\fP   \fBCUR\fP Strings[101]"
+.br
+.ti -1c
+.RI "#define \fBmeta_on\fP   \fBCUR\fP Strings[102]"
+.br
+.ti -1c
+.RI "#define \fBnewline\fP   \fBCUR\fP Strings[103]"
+.br
+.ti -1c
+.RI "#define \fBpad_char\fP   \fBCUR\fP Strings[104]"
+.br
+.ti -1c
+.RI "#define \fBparm_dch\fP   \fBCUR\fP Strings[105]"
+.br
+.ti -1c
+.RI "#define \fBparm_delete_line\fP   \fBCUR\fP Strings[106]"
+.br
+.ti -1c
+.RI "#define \fBparm_down_cursor\fP   \fBCUR\fP Strings[107]"
+.br
+.ti -1c
+.RI "#define \fBparm_ich\fP   \fBCUR\fP Strings[108]"
+.br
+.ti -1c
+.RI "#define \fBparm_index\fP   \fBCUR\fP Strings[109]"
+.br
+.ti -1c
+.RI "#define \fBparm_insert_line\fP   \fBCUR\fP Strings[110]"
+.br
+.ti -1c
+.RI "#define \fBparm_left_cursor\fP   \fBCUR\fP Strings[111]"
+.br
+.ti -1c
+.RI "#define \fBparm_right_cursor\fP   \fBCUR\fP Strings[112]"
+.br
+.ti -1c
+.RI "#define \fBparm_rindex\fP   \fBCUR\fP Strings[113]"
+.br
+.ti -1c
+.RI "#define \fBparm_up_cursor\fP   \fBCUR\fP Strings[114]"
+.br
+.ti -1c
+.RI "#define \fBpkey_key\fP   \fBCUR\fP Strings[115]"
+.br
+.ti -1c
+.RI "#define \fBpkey_local\fP   \fBCUR\fP Strings[116]"
+.br
+.ti -1c
+.RI "#define \fBpkey_xmit\fP   \fBCUR\fP Strings[117]"
+.br
+.ti -1c
+.RI "#define \fBprint_screen\fP   \fBCUR\fP Strings[118]"
+.br
+.ti -1c
+.RI "#define \fBprtr_off\fP   \fBCUR\fP Strings[119]"
+.br
+.ti -1c
+.RI "#define \fBprtr_on\fP   \fBCUR\fP Strings[120]"
+.br
+.ti -1c
+.RI "#define \fBrepeat_char\fP   \fBCUR\fP Strings[121]"
+.br
+.ti -1c
+.RI "#define \fBreset_1string\fP   \fBCUR\fP Strings[122]"
+.br
+.ti -1c
+.RI "#define \fBreset_2string\fP   \fBCUR\fP Strings[123]"
+.br
+.ti -1c
+.RI "#define \fBreset_3string\fP   \fBCUR\fP Strings[124]"
+.br
+.ti -1c
+.RI "#define \fBreset_file\fP   \fBCUR\fP Strings[125]"
+.br
+.ti -1c
+.RI "#define \fBrestore_cursor\fP   \fBCUR\fP Strings[126]"
+.br
+.ti -1c
+.RI "#define \fBrow_address\fP   \fBCUR\fP Strings[127]"
+.br
+.ti -1c
+.RI "#define \fBsave_cursor\fP   \fBCUR\fP Strings[128]"
+.br
+.ti -1c
+.RI "#define \fBscroll_forward\fP   \fBCUR\fP Strings[129]"
+.br
+.ti -1c
+.RI "#define \fBscroll_reverse\fP   \fBCUR\fP Strings[130]"
+.br
+.ti -1c
+.RI "#define \fBset_attributes\fP   \fBCUR\fP Strings[131]"
+.br
+.ti -1c
+.RI "#define \fBset_tab\fP   \fBCUR\fP Strings[132]"
+.br
+.ti -1c
+.RI "#define \fBset_window\fP   \fBCUR\fP Strings[133]"
+.br
+.ti -1c
+.RI "#define \fBtab\fP   \fBCUR\fP Strings[134]"
+.br
+.ti -1c
+.RI "#define \fBto_status_line\fP   \fBCUR\fP Strings[135]"
+.br
+.ti -1c
+.RI "#define \fBunderline_char\fP   \fBCUR\fP Strings[136]"
+.br
+.ti -1c
+.RI "#define \fBup_half_line\fP   \fBCUR\fP Strings[137]"
+.br
+.ti -1c
+.RI "#define \fBinit_prog\fP   \fBCUR\fP Strings[138]"
+.br
+.ti -1c
+.RI "#define \fBkey_a1\fP   \fBCUR\fP Strings[139]"
+.br
+.ti -1c
+.RI "#define \fBkey_a3\fP   \fBCUR\fP Strings[140]"
+.br
+.ti -1c
+.RI "#define \fBkey_b2\fP   \fBCUR\fP Strings[141]"
+.br
+.ti -1c
+.RI "#define \fBkey_c1\fP   \fBCUR\fP Strings[142]"
+.br
+.ti -1c
+.RI "#define \fBkey_c3\fP   \fBCUR\fP Strings[143]"
+.br
+.ti -1c
+.RI "#define \fBprtr_non\fP   \fBCUR\fP Strings[144]"
+.br
+.ti -1c
+.RI "#define \fBchar_padding\fP   \fBCUR\fP Strings[145]"
+.br
+.ti -1c
+.RI "#define \fBacs_chars\fP   \fBCUR\fP Strings[146]"
+.br
+.ti -1c
+.RI "#define \fBplab_norm\fP   \fBCUR\fP Strings[147]"
+.br
+.ti -1c
+.RI "#define \fBkey_btab\fP   \fBCUR\fP Strings[148]"
+.br
+.ti -1c
+.RI "#define \fBenter_xon_mode\fP   \fBCUR\fP Strings[149]"
+.br
+.ti -1c
+.RI "#define \fBexit_xon_mode\fP   \fBCUR\fP Strings[150]"
+.br
+.ti -1c
+.RI "#define \fBenter_am_mode\fP   \fBCUR\fP Strings[151]"
+.br
+.ti -1c
+.RI "#define \fBexit_am_mode\fP   \fBCUR\fP Strings[152]"
+.br
+.ti -1c
+.RI "#define \fBxon_character\fP   \fBCUR\fP Strings[153]"
+.br
+.ti -1c
+.RI "#define \fBxoff_character\fP   \fBCUR\fP Strings[154]"
+.br
+.ti -1c
+.RI "#define \fBena_acs\fP   \fBCUR\fP Strings[155]"
+.br
+.ti -1c
+.RI "#define \fBlabel_on\fP   \fBCUR\fP Strings[156]"
+.br
+.ti -1c
+.RI "#define \fBlabel_off\fP   \fBCUR\fP Strings[157]"
+.br
+.ti -1c
+.RI "#define \fBkey_beg\fP   \fBCUR\fP Strings[158]"
+.br
+.ti -1c
+.RI "#define \fBkey_cancel\fP   \fBCUR\fP Strings[159]"
+.br
+.ti -1c
+.RI "#define \fBkey_close\fP   \fBCUR\fP Strings[160]"
+.br
+.ti -1c
+.RI "#define \fBkey_command\fP   \fBCUR\fP Strings[161]"
+.br
+.ti -1c
+.RI "#define \fBkey_copy\fP   \fBCUR\fP Strings[162]"
+.br
+.ti -1c
+.RI "#define \fBkey_create\fP   \fBCUR\fP Strings[163]"
+.br
+.ti -1c
+.RI "#define \fBkey_end\fP   \fBCUR\fP Strings[164]"
+.br
+.ti -1c
+.RI "#define \fBkey_enter\fP   \fBCUR\fP Strings[165]"
+.br
+.ti -1c
+.RI "#define \fBkey_exit\fP   \fBCUR\fP Strings[166]"
+.br
+.ti -1c
+.RI "#define \fBkey_find\fP   \fBCUR\fP Strings[167]"
+.br
+.ti -1c
+.RI "#define \fBkey_help\fP   \fBCUR\fP Strings[168]"
+.br
+.ti -1c
+.RI "#define \fBkey_mark\fP   \fBCUR\fP Strings[169]"
+.br
+.ti -1c
+.RI "#define \fBkey_message\fP   \fBCUR\fP Strings[170]"
+.br
+.ti -1c
+.RI "#define \fBkey_move\fP   \fBCUR\fP Strings[171]"
+.br
+.ti -1c
+.RI "#define \fBkey_next\fP   \fBCUR\fP Strings[172]"
+.br
+.ti -1c
+.RI "#define \fBkey_open\fP   \fBCUR\fP Strings[173]"
+.br
+.ti -1c
+.RI "#define \fBkey_options\fP   \fBCUR\fP Strings[174]"
+.br
+.ti -1c
+.RI "#define \fBkey_previous\fP   \fBCUR\fP Strings[175]"
+.br
+.ti -1c
+.RI "#define \fBkey_print\fP   \fBCUR\fP Strings[176]"
+.br
+.ti -1c
+.RI "#define \fBkey_redo\fP   \fBCUR\fP Strings[177]"
+.br
+.ti -1c
+.RI "#define \fBkey_reference\fP   \fBCUR\fP Strings[178]"
+.br
+.ti -1c
+.RI "#define \fBkey_refresh\fP   \fBCUR\fP Strings[179]"
+.br
+.ti -1c
+.RI "#define \fBkey_replace\fP   \fBCUR\fP Strings[180]"
+.br
+.ti -1c
+.RI "#define \fBkey_restart\fP   \fBCUR\fP Strings[181]"
+.br
+.ti -1c
+.RI "#define \fBkey_resume\fP   \fBCUR\fP Strings[182]"
+.br
+.ti -1c
+.RI "#define \fBkey_save\fP   \fBCUR\fP Strings[183]"
+.br
+.ti -1c
+.RI "#define \fBkey_suspend\fP   \fBCUR\fP Strings[184]"
+.br
+.ti -1c
+.RI "#define \fBkey_undo\fP   \fBCUR\fP Strings[185]"
+.br
+.ti -1c
+.RI "#define \fBkey_sbeg\fP   \fBCUR\fP Strings[186]"
+.br
+.ti -1c
+.RI "#define \fBkey_scancel\fP   \fBCUR\fP Strings[187]"
+.br
+.ti -1c
+.RI "#define \fBkey_scommand\fP   \fBCUR\fP Strings[188]"
+.br
+.ti -1c
+.RI "#define \fBkey_scopy\fP   \fBCUR\fP Strings[189]"
+.br
+.ti -1c
+.RI "#define \fBkey_screate\fP   \fBCUR\fP Strings[190]"
+.br
+.ti -1c
+.RI "#define \fBkey_sdc\fP   \fBCUR\fP Strings[191]"
+.br
+.ti -1c
+.RI "#define \fBkey_sdl\fP   \fBCUR\fP Strings[192]"
+.br
+.ti -1c
+.RI "#define \fBkey_select\fP   \fBCUR\fP Strings[193]"
+.br
+.ti -1c
+.RI "#define \fBkey_send\fP   \fBCUR\fP Strings[194]"
+.br
+.ti -1c
+.RI "#define \fBkey_seol\fP   \fBCUR\fP Strings[195]"
+.br
+.ti -1c
+.RI "#define \fBkey_sexit\fP   \fBCUR\fP Strings[196]"
+.br
+.ti -1c
+.RI "#define \fBkey_sfind\fP   \fBCUR\fP Strings[197]"
+.br
+.ti -1c
+.RI "#define \fBkey_shelp\fP   \fBCUR\fP Strings[198]"
+.br
+.ti -1c
+.RI "#define \fBkey_shome\fP   \fBCUR\fP Strings[199]"
+.br
+.ti -1c
+.RI "#define \fBkey_sic\fP   \fBCUR\fP Strings[200]"
+.br
+.ti -1c
+.RI "#define \fBkey_sleft\fP   \fBCUR\fP Strings[201]"
+.br
+.ti -1c
+.RI "#define \fBkey_smessage\fP   \fBCUR\fP Strings[202]"
+.br
+.ti -1c
+.RI "#define \fBkey_smove\fP   \fBCUR\fP Strings[203]"
+.br
+.ti -1c
+.RI "#define \fBkey_snext\fP   \fBCUR\fP Strings[204]"
+.br
+.ti -1c
+.RI "#define \fBkey_soptions\fP   \fBCUR\fP Strings[205]"
+.br
+.ti -1c
+.RI "#define \fBkey_sprevious\fP   \fBCUR\fP Strings[206]"
+.br
+.ti -1c
+.RI "#define \fBkey_sprint\fP   \fBCUR\fP Strings[207]"
+.br
+.ti -1c
+.RI "#define \fBkey_sredo\fP   \fBCUR\fP Strings[208]"
+.br
+.ti -1c
+.RI "#define \fBkey_sreplace\fP   \fBCUR\fP Strings[209]"
+.br
+.ti -1c
+.RI "#define \fBkey_sright\fP   \fBCUR\fP Strings[210]"
+.br
+.ti -1c
+.RI "#define \fBkey_srsume\fP   \fBCUR\fP Strings[211]"
+.br
+.ti -1c
+.RI "#define \fBkey_ssave\fP   \fBCUR\fP Strings[212]"
+.br
+.ti -1c
+.RI "#define \fBkey_ssuspend\fP   \fBCUR\fP Strings[213]"
+.br
+.ti -1c
+.RI "#define \fBkey_sundo\fP   \fBCUR\fP Strings[214]"
+.br
+.ti -1c
+.RI "#define \fBreq_for_input\fP   \fBCUR\fP Strings[215]"
+.br
+.ti -1c
+.RI "#define \fBkey_f11\fP   \fBCUR\fP Strings[216]"
+.br
+.ti -1c
+.RI "#define \fBkey_f12\fP   \fBCUR\fP Strings[217]"
+.br
+.ti -1c
+.RI "#define \fBkey_f13\fP   \fBCUR\fP Strings[218]"
+.br
+.ti -1c
+.RI "#define \fBkey_f14\fP   \fBCUR\fP Strings[219]"
+.br
+.ti -1c
+.RI "#define \fBkey_f15\fP   \fBCUR\fP Strings[220]"
+.br
+.ti -1c
+.RI "#define \fBkey_f16\fP   \fBCUR\fP Strings[221]"
+.br
+.ti -1c
+.RI "#define \fBkey_f17\fP   \fBCUR\fP Strings[222]"
+.br
+.ti -1c
+.RI "#define \fBkey_f18\fP   \fBCUR\fP Strings[223]"
+.br
+.ti -1c
+.RI "#define \fBkey_f19\fP   \fBCUR\fP Strings[224]"
+.br
+.ti -1c
+.RI "#define \fBkey_f20\fP   \fBCUR\fP Strings[225]"
+.br
+.ti -1c
+.RI "#define \fBkey_f21\fP   \fBCUR\fP Strings[226]"
+.br
+.ti -1c
+.RI "#define \fBkey_f22\fP   \fBCUR\fP Strings[227]"
+.br
+.ti -1c
+.RI "#define \fBkey_f23\fP   \fBCUR\fP Strings[228]"
+.br
+.ti -1c
+.RI "#define \fBkey_f24\fP   \fBCUR\fP Strings[229]"
+.br
+.ti -1c
+.RI "#define \fBkey_f25\fP   \fBCUR\fP Strings[230]"
+.br
+.ti -1c
+.RI "#define \fBkey_f26\fP   \fBCUR\fP Strings[231]"
+.br
+.ti -1c
+.RI "#define \fBkey_f27\fP   \fBCUR\fP Strings[232]"
+.br
+.ti -1c
+.RI "#define \fBkey_f28\fP   \fBCUR\fP Strings[233]"
+.br
+.ti -1c
+.RI "#define \fBkey_f29\fP   \fBCUR\fP Strings[234]"
+.br
+.ti -1c
+.RI "#define \fBkey_f30\fP   \fBCUR\fP Strings[235]"
+.br
+.ti -1c
+.RI "#define \fBkey_f31\fP   \fBCUR\fP Strings[236]"
+.br
+.ti -1c
+.RI "#define \fBkey_f32\fP   \fBCUR\fP Strings[237]"
+.br
+.ti -1c
+.RI "#define \fBkey_f33\fP   \fBCUR\fP Strings[238]"
+.br
+.ti -1c
+.RI "#define \fBkey_f34\fP   \fBCUR\fP Strings[239]"
+.br
+.ti -1c
+.RI "#define \fBkey_f35\fP   \fBCUR\fP Strings[240]"
+.br
+.ti -1c
+.RI "#define \fBkey_f36\fP   \fBCUR\fP Strings[241]"
+.br
+.ti -1c
+.RI "#define \fBkey_f37\fP   \fBCUR\fP Strings[242]"
+.br
+.ti -1c
+.RI "#define \fBkey_f38\fP   \fBCUR\fP Strings[243]"
+.br
+.ti -1c
+.RI "#define \fBkey_f39\fP   \fBCUR\fP Strings[244]"
+.br
+.ti -1c
+.RI "#define \fBkey_f40\fP   \fBCUR\fP Strings[245]"
+.br
+.ti -1c
+.RI "#define \fBkey_f41\fP   \fBCUR\fP Strings[246]"
+.br
+.ti -1c
+.RI "#define \fBkey_f42\fP   \fBCUR\fP Strings[247]"
+.br
+.ti -1c
+.RI "#define \fBkey_f43\fP   \fBCUR\fP Strings[248]"
+.br
+.ti -1c
+.RI "#define \fBkey_f44\fP   \fBCUR\fP Strings[249]"
+.br
+.ti -1c
+.RI "#define \fBkey_f45\fP   \fBCUR\fP Strings[250]"
+.br
+.ti -1c
+.RI "#define \fBkey_f46\fP   \fBCUR\fP Strings[251]"
+.br
+.ti -1c
+.RI "#define \fBkey_f47\fP   \fBCUR\fP Strings[252]"
+.br
+.ti -1c
+.RI "#define \fBkey_f48\fP   \fBCUR\fP Strings[253]"
+.br
+.ti -1c
+.RI "#define \fBkey_f49\fP   \fBCUR\fP Strings[254]"
+.br
+.ti -1c
+.RI "#define \fBkey_f50\fP   \fBCUR\fP Strings[255]"
+.br
+.ti -1c
+.RI "#define \fBkey_f51\fP   \fBCUR\fP Strings[256]"
+.br
+.ti -1c
+.RI "#define \fBkey_f52\fP   \fBCUR\fP Strings[257]"
+.br
+.ti -1c
+.RI "#define \fBkey_f53\fP   \fBCUR\fP Strings[258]"
+.br
+.ti -1c
+.RI "#define \fBkey_f54\fP   \fBCUR\fP Strings[259]"
+.br
+.ti -1c
+.RI "#define \fBkey_f55\fP   \fBCUR\fP Strings[260]"
+.br
+.ti -1c
+.RI "#define \fBkey_f56\fP   \fBCUR\fP Strings[261]"
+.br
+.ti -1c
+.RI "#define \fBkey_f57\fP   \fBCUR\fP Strings[262]"
+.br
+.ti -1c
+.RI "#define \fBkey_f58\fP   \fBCUR\fP Strings[263]"
+.br
+.ti -1c
+.RI "#define \fBkey_f59\fP   \fBCUR\fP Strings[264]"
+.br
+.ti -1c
+.RI "#define \fBkey_f60\fP   \fBCUR\fP Strings[265]"
+.br
+.ti -1c
+.RI "#define \fBkey_f61\fP   \fBCUR\fP Strings[266]"
+.br
+.ti -1c
+.RI "#define \fBkey_f62\fP   \fBCUR\fP Strings[267]"
+.br
+.ti -1c
+.RI "#define \fBkey_f63\fP   \fBCUR\fP Strings[268]"
+.br
+.ti -1c
+.RI "#define \fBclr_bol\fP   \fBCUR\fP Strings[269]"
+.br
+.ti -1c
+.RI "#define \fBclear_margins\fP   \fBCUR\fP Strings[270]"
+.br
+.ti -1c
+.RI "#define \fBset_left_margin\fP   \fBCUR\fP Strings[271]"
+.br
+.ti -1c
+.RI "#define \fBset_right_margin\fP   \fBCUR\fP Strings[272]"
+.br
+.ti -1c
+.RI "#define \fBlabel_format\fP   \fBCUR\fP Strings[273]"
+.br
+.ti -1c
+.RI "#define \fBset_clock\fP   \fBCUR\fP Strings[274]"
+.br
+.ti -1c
+.RI "#define \fBdisplay_clock\fP   \fBCUR\fP Strings[275]"
+.br
+.ti -1c
+.RI "#define \fBremove_clock\fP   \fBCUR\fP Strings[276]"
+.br
+.ti -1c
+.RI "#define \fBcreate_window\fP   \fBCUR\fP Strings[277]"
+.br
+.ti -1c
+.RI "#define \fBgoto_window\fP   \fBCUR\fP Strings[278]"
+.br
+.ti -1c
+.RI "#define \fBhangup\fP   \fBCUR\fP Strings[279]"
+.br
+.ti -1c
+.RI "#define \fBdial_phone\fP   \fBCUR\fP Strings[280]"
+.br
+.ti -1c
+.RI "#define \fBquick_dial\fP   \fBCUR\fP Strings[281]"
+.br
+.ti -1c
+.RI "#define \fBtone\fP   \fBCUR\fP Strings[282]"
+.br
+.ti -1c
+.RI "#define \fBpulse\fP   \fBCUR\fP Strings[283]"
+.br
+.ti -1c
+.RI "#define \fBflash_hook\fP   \fBCUR\fP Strings[284]"
+.br
+.ti -1c
+.RI "#define \fBfixed_pause\fP   \fBCUR\fP Strings[285]"
+.br
+.ti -1c
+.RI "#define \fBwait_tone\fP   \fBCUR\fP Strings[286]"
+.br
+.ti -1c
+.RI "#define \fBuser0\fP   \fBCUR\fP Strings[287]"
+.br
+.ti -1c
+.RI "#define \fBuser1\fP   \fBCUR\fP Strings[288]"
+.br
+.ti -1c
+.RI "#define \fBuser2\fP   \fBCUR\fP Strings[289]"
+.br
+.ti -1c
+.RI "#define \fBuser3\fP   \fBCUR\fP Strings[290]"
+.br
+.ti -1c
+.RI "#define \fBuser4\fP   \fBCUR\fP Strings[291]"
+.br
+.ti -1c
+.RI "#define \fBuser5\fP   \fBCUR\fP Strings[292]"
+.br
+.ti -1c
+.RI "#define \fBuser6\fP   \fBCUR\fP Strings[293]"
+.br
+.ti -1c
+.RI "#define \fBuser7\fP   \fBCUR\fP Strings[294]"
+.br
+.ti -1c
+.RI "#define \fBuser8\fP   \fBCUR\fP Strings[295]"
+.br
+.ti -1c
+.RI "#define \fBuser9\fP   \fBCUR\fP Strings[296]"
+.br
+.ti -1c
+.RI "#define \fBorig_pair\fP   \fBCUR\fP Strings[297]"
+.br
+.ti -1c
+.RI "#define \fBorig_colors\fP   \fBCUR\fP Strings[298]"
+.br
+.ti -1c
+.RI "#define \fBinitialize_color\fP   \fBCUR\fP Strings[299]"
+.br
+.ti -1c
+.RI "#define \fBinitialize_pair\fP   \fBCUR\fP Strings[300]"
+.br
+.ti -1c
+.RI "#define \fBset_color_pair\fP   \fBCUR\fP Strings[301]"
+.br
+.ti -1c
+.RI "#define \fBset_foreground\fP   \fBCUR\fP Strings[302]"
+.br
+.ti -1c
+.RI "#define \fBset_background\fP   \fBCUR\fP Strings[303]"
+.br
+.ti -1c
+.RI "#define \fBchange_char_pitch\fP   \fBCUR\fP Strings[304]"
+.br
+.ti -1c
+.RI "#define \fBchange_line_pitch\fP   \fBCUR\fP Strings[305]"
+.br
+.ti -1c
+.RI "#define \fBchange_res_horz\fP   \fBCUR\fP Strings[306]"
+.br
+.ti -1c
+.RI "#define \fBchange_res_vert\fP   \fBCUR\fP Strings[307]"
+.br
+.ti -1c
+.RI "#define \fBdefine_char\fP   \fBCUR\fP Strings[308]"
+.br
+.ti -1c
+.RI "#define \fBenter_doublewide_mode\fP   \fBCUR\fP Strings[309]"
+.br
+.ti -1c
+.RI "#define \fBenter_draft_quality\fP   \fBCUR\fP Strings[310]"
+.br
+.ti -1c
+.RI "#define \fBenter_italics_mode\fP   \fBCUR\fP Strings[311]"
+.br
+.ti -1c
+.RI "#define \fBenter_leftward_mode\fP   \fBCUR\fP Strings[312]"
+.br
+.ti -1c
+.RI "#define \fBenter_micro_mode\fP   \fBCUR\fP Strings[313]"
+.br
+.ti -1c
+.RI "#define \fBenter_near_letter_quality\fP   \fBCUR\fP Strings[314]"
+.br
+.ti -1c
+.RI "#define \fBenter_normal_quality\fP   \fBCUR\fP Strings[315]"
+.br
+.ti -1c
+.RI "#define \fBenter_shadow_mode\fP   \fBCUR\fP Strings[316]"
+.br
+.ti -1c
+.RI "#define \fBenter_subscript_mode\fP   \fBCUR\fP Strings[317]"
+.br
+.ti -1c
+.RI "#define \fBenter_superscript_mode\fP   \fBCUR\fP Strings[318]"
+.br
+.ti -1c
+.RI "#define \fBenter_upward_mode\fP   \fBCUR\fP Strings[319]"
+.br
+.ti -1c
+.RI "#define \fBexit_doublewide_mode\fP   \fBCUR\fP Strings[320]"
+.br
+.ti -1c
+.RI "#define \fBexit_italics_mode\fP   \fBCUR\fP Strings[321]"
+.br
+.ti -1c
+.RI "#define \fBexit_leftward_mode\fP   \fBCUR\fP Strings[322]"
+.br
+.ti -1c
+.RI "#define \fBexit_micro_mode\fP   \fBCUR\fP Strings[323]"
+.br
+.ti -1c
+.RI "#define \fBexit_shadow_mode\fP   \fBCUR\fP Strings[324]"
+.br
+.ti -1c
+.RI "#define \fBexit_subscript_mode\fP   \fBCUR\fP Strings[325]"
+.br
+.ti -1c
+.RI "#define \fBexit_superscript_mode\fP   \fBCUR\fP Strings[326]"
+.br
+.ti -1c
+.RI "#define \fBexit_upward_mode\fP   \fBCUR\fP Strings[327]"
+.br
+.ti -1c
+.RI "#define \fBmicro_column_address\fP   \fBCUR\fP Strings[328]"
+.br
+.ti -1c
+.RI "#define \fBmicro_down\fP   \fBCUR\fP Strings[329]"
+.br
+.ti -1c
+.RI "#define \fBmicro_left\fP   \fBCUR\fP Strings[330]"
+.br
+.ti -1c
+.RI "#define \fBmicro_right\fP   \fBCUR\fP Strings[331]"
+.br
+.ti -1c
+.RI "#define \fBmicro_row_address\fP   \fBCUR\fP Strings[332]"
+.br
+.ti -1c
+.RI "#define \fBmicro_up\fP   \fBCUR\fP Strings[333]"
+.br
+.ti -1c
+.RI "#define \fBorder_of_pins\fP   \fBCUR\fP Strings[334]"
+.br
+.ti -1c
+.RI "#define \fBparm_down_micro\fP   \fBCUR\fP Strings[335]"
+.br
+.ti -1c
+.RI "#define \fBparm_left_micro\fP   \fBCUR\fP Strings[336]"
+.br
+.ti -1c
+.RI "#define \fBparm_right_micro\fP   \fBCUR\fP Strings[337]"
+.br
+.ti -1c
+.RI "#define \fBparm_up_micro\fP   \fBCUR\fP Strings[338]"
+.br
+.ti -1c
+.RI "#define \fBselect_char_set\fP   \fBCUR\fP Strings[339]"
+.br
+.ti -1c
+.RI "#define \fBset_bottom_margin\fP   \fBCUR\fP Strings[340]"
+.br
+.ti -1c
+.RI "#define \fBset_bottom_margin_parm\fP   \fBCUR\fP Strings[341]"
+.br
+.ti -1c
+.RI "#define \fBset_left_margin_parm\fP   \fBCUR\fP Strings[342]"
+.br
+.ti -1c
+.RI "#define \fBset_right_margin_parm\fP   \fBCUR\fP Strings[343]"
+.br
+.ti -1c
+.RI "#define \fBset_top_margin\fP   \fBCUR\fP Strings[344]"
+.br
+.ti -1c
+.RI "#define \fBset_top_margin_parm\fP   \fBCUR\fP Strings[345]"
+.br
+.ti -1c
+.RI "#define \fBstart_bit_image\fP   \fBCUR\fP Strings[346]"
+.br
+.ti -1c
+.RI "#define \fBstart_char_set_def\fP   \fBCUR\fP Strings[347]"
+.br
+.ti -1c
+.RI "#define \fBstop_bit_image\fP   \fBCUR\fP Strings[348]"
+.br
+.ti -1c
+.RI "#define \fBstop_char_set_def\fP   \fBCUR\fP Strings[349]"
+.br
+.ti -1c
+.RI "#define \fBsubscript_characters\fP   \fBCUR\fP Strings[350]"
+.br
+.ti -1c
+.RI "#define \fBsuperscript_characters\fP   \fBCUR\fP Strings[351]"
+.br
+.ti -1c
+.RI "#define \fBthese_cause_cr\fP   \fBCUR\fP Strings[352]"
+.br
+.ti -1c
+.RI "#define \fBzero_motion\fP   \fBCUR\fP Strings[353]"
+.br
+.ti -1c
+.RI "#define \fBchar_set_names\fP   \fBCUR\fP Strings[354]"
+.br
+.ti -1c
+.RI "#define \fBkey_mouse\fP   \fBCUR\fP Strings[355]"
+.br
+.ti -1c
+.RI "#define \fBmouse_info\fP   \fBCUR\fP Strings[356]"
+.br
+.ti -1c
+.RI "#define \fBreq_mouse_pos\fP   \fBCUR\fP Strings[357]"
+.br
+.ti -1c
+.RI "#define \fBget_mouse\fP   \fBCUR\fP Strings[358]"
+.br
+.ti -1c
+.RI "#define \fBset_a_foreground\fP   \fBCUR\fP Strings[359]"
+.br
+.ti -1c
+.RI "#define \fBset_a_background\fP   \fBCUR\fP Strings[360]"
+.br
+.ti -1c
+.RI "#define \fBpkey_plab\fP   \fBCUR\fP Strings[361]"
+.br
+.ti -1c
+.RI "#define \fBdevice_type\fP   \fBCUR\fP Strings[362]"
+.br
+.ti -1c
+.RI "#define \fBcode_set_init\fP   \fBCUR\fP Strings[363]"
+.br
+.ti -1c
+.RI "#define \fBset0_des_seq\fP   \fBCUR\fP Strings[364]"
+.br
+.ti -1c
+.RI "#define \fBset1_des_seq\fP   \fBCUR\fP Strings[365]"
+.br
+.ti -1c
+.RI "#define \fBset2_des_seq\fP   \fBCUR\fP Strings[366]"
+.br
+.ti -1c
+.RI "#define \fBset3_des_seq\fP   \fBCUR\fP Strings[367]"
+.br
+.ti -1c
+.RI "#define \fBset_lr_margin\fP   \fBCUR\fP Strings[368]"
+.br
+.ti -1c
+.RI "#define \fBset_tb_margin\fP   \fBCUR\fP Strings[369]"
+.br
+.ti -1c
+.RI "#define \fBbit_image_repeat\fP   \fBCUR\fP Strings[370]"
+.br
+.ti -1c
+.RI "#define \fBbit_image_newline\fP   \fBCUR\fP Strings[371]"
+.br
+.ti -1c
+.RI "#define \fBbit_image_carriage_return\fP   \fBCUR\fP Strings[372]"
+.br
+.ti -1c
+.RI "#define \fBcolor_names\fP   \fBCUR\fP Strings[373]"
+.br
+.ti -1c
+.RI "#define \fBdefine_bit_image_region\fP   \fBCUR\fP Strings[374]"
+.br
+.ti -1c
+.RI "#define \fBend_bit_image_region\fP   \fBCUR\fP Strings[375]"
+.br
+.ti -1c
+.RI "#define \fBset_color_band\fP   \fBCUR\fP Strings[376]"
+.br
+.ti -1c
+.RI "#define \fBset_page_length\fP   \fBCUR\fP Strings[377]"
+.br
+.ti -1c
+.RI "#define \fBdisplay_pc_char\fP   \fBCUR\fP Strings[378]"
+.br
+.ti -1c
+.RI "#define \fBenter_pc_charset_mode\fP   \fBCUR\fP Strings[379]"
+.br
+.ti -1c
+.RI "#define \fBexit_pc_charset_mode\fP   \fBCUR\fP Strings[380]"
+.br
+.ti -1c
+.RI "#define \fBenter_scancode_mode\fP   \fBCUR\fP Strings[381]"
+.br
+.ti -1c
+.RI "#define \fBexit_scancode_mode\fP   \fBCUR\fP Strings[382]"
+.br
+.ti -1c
+.RI "#define \fBpc_term_options\fP   \fBCUR\fP Strings[383]"
+.br
+.ti -1c
+.RI "#define \fBscancode_escape\fP   \fBCUR\fP Strings[384]"
+.br
+.ti -1c
+.RI "#define \fBalt_scancode_esc\fP   \fBCUR\fP Strings[385]"
+.br
+.ti -1c
+.RI "#define \fBenter_horizontal_hl_mode\fP   \fBCUR\fP Strings[386]"
+.br
+.ti -1c
+.RI "#define \fBenter_left_hl_mode\fP   \fBCUR\fP Strings[387]"
+.br
+.ti -1c
+.RI "#define \fBenter_low_hl_mode\fP   \fBCUR\fP Strings[388]"
+.br
+.ti -1c
+.RI "#define \fBenter_right_hl_mode\fP   \fBCUR\fP Strings[389]"
+.br
+.ti -1c
+.RI "#define \fBenter_top_hl_mode\fP   \fBCUR\fP Strings[390]"
+.br
+.ti -1c
+.RI "#define \fBenter_vertical_hl_mode\fP   \fBCUR\fP Strings[391]"
+.br
+.ti -1c
+.RI "#define \fBset_a_attributes\fP   \fBCUR\fP Strings[392]"
+.br
+.ti -1c
+.RI "#define \fBset_pglen_inch\fP   \fBCUR\fP Strings[393]"
+.br
+.ti -1c
+.RI "#define \fBBOOLWRITE\fP   37"
+.br
+.ti -1c
+.RI "#define \fBNUMWRITE\fP   33"
+.br
+.ti -1c
+.RI "#define \fBSTRWRITE\fP   394"
+.br
+.ti -1c
+.RI "#define \fBbeehive_glitch\fP   \fBno_esc_ctlc\fP"
+.br
+.ti -1c
+.RI "#define \fBteleray_glitch\fP   \fBdest_tabs_magic_smso\fP"
+.br
+.ti -1c
+.RI "#define \fBmicro_char_size\fP   \fBmicro_col_size\fP"
+.br
+.ti -1c
+.RI "#define \fBBOOLCOUNT\fP   44"
+.br
+.ti -1c
+.RI "#define \fBNUMCOUNT\fP   39"
+.br
+.ti -1c
+.RI "#define \fBSTRCOUNT\fP   414"
+.br
+.ti -1c
+.RI "#define \fBacs_chars_index\fP   146"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBtermtype\fP \fBTERMTYPE\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBterm\fP \fBTERMINAL\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBTERMINAL\fP *) cur_term"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBNCURSES_CONST\fP char *\fBconst\fP ) boolnames[]"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBint\fP) _nc_set_tty_mode(\fBTTY\fP *\fBbuf\fP)"
+.br
+.ti -1c
+.RI "\fBTERMTYPE\fP * \fBNCURSES_EXPORT\fP (\fBvoid\fP) _nc_init_termtype(\fBTERMTYPE\fP *\fBconst\fP )"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (char *) _nc_first_name(\fBconst\fP char *\fBconst\fP )"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP \fBTERMTYPE\fP *) _nc_fallback(\fBconst\fP char *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBTERMINAL\fP *) set_curterm(\fBTERMINAL\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (char) ttytype[]"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBconst\fP"
+.br
+.ti -1c
+.RI "char \fBint\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define acs_chars   \fBCUR\fP Strings[146]"
+
+.PP
+Définition à la ligne 343 du fichier term\&.h\&.
+.SS "#define acs_chars_index   146"
+
+.PP
+Définition à la ligne 646 du fichier term\&.h\&.
+.SS "#define alt_scancode_esc   \fBCUR\fP Strings[385]"
+
+.PP
+Définition à la ligne 582 du fichier term\&.h\&.
+.SS "#define auto_left_margin   \fBCUR\fP Booleans[0]"
+
+.PP
+Définition à la ligne 127 du fichier term\&.h\&.
+.SS "#define auto_right_margin   \fBCUR\fP Booleans[1]"
+
+.PP
+Définition à la ligne 128 du fichier term\&.h\&.
+.SS "#define back_color_erase   \fBCUR\fP Booleans[28]"
+
+.PP
+Définition à la ligne 155 du fichier term\&.h\&.
+.SS "#define back_tab   \fBCUR\fP Strings[0]"
+
+.PP
+Définition à la ligne 197 du fichier term\&.h\&.
+.SS "#define beehive_glitch   \fBno_esc_ctlc\fP"
+
+.PP
+Définition à la ligne 597 du fichier term\&.h\&.
+.SS "#define bell   \fBCUR\fP Strings[1]"
+
+.PP
+Définition à la ligne 198 du fichier term\&.h\&.
+.SS "#define bit_image_carriage_return   \fBCUR\fP Strings[372]"
+
+.PP
+Définition à la ligne 569 du fichier term\&.h\&.
+.SS "#define bit_image_entwining   \fBCUR\fP Numbers[31]"
+
+.PP
+Définition à la ligne 195 du fichier term\&.h\&.
+.SS "#define bit_image_newline   \fBCUR\fP Strings[371]"
+
+.PP
+Définition à la ligne 568 du fichier term\&.h\&.
+.SS "#define bit_image_repeat   \fBCUR\fP Strings[370]"
+
+.PP
+Définition à la ligne 567 du fichier term\&.h\&.
+.SS "#define bit_image_type   \fBCUR\fP Numbers[32]"
+
+.PP
+Définition à la ligne 196 du fichier term\&.h\&.
+.SS "#define BOOLCOUNT   44"
+
+.PP
+Définition à la ligne 641 du fichier term\&.h\&.
+.SS "#define BOOLWRITE   37"
+
+.PP
+Définition à la ligne 592 du fichier term\&.h\&.
+.SS "#define buffer_capacity   \fBCUR\fP Numbers[16]"
+
+.PP
+Définition à la ligne 180 du fichier term\&.h\&.
+.SS "#define buttons   \fBCUR\fP Numbers[30]"
+
+.PP
+Définition à la ligne 194 du fichier term\&.h\&.
+.SS "#define can_change   \fBCUR\fP Booleans[27]"
+
+.PP
+Définition à la ligne 154 du fichier term\&.h\&.
+.SS "#define carriage_return   \fBCUR\fP Strings[2]"
+
+.PP
+Définition à la ligne 199 du fichier term\&.h\&.
+.SS "#define ceol_standout_glitch   \fBCUR\fP Booleans[3]"
+
+.PP
+Définition à la ligne 130 du fichier term\&.h\&.
+.SS "#define change_char_pitch   \fBCUR\fP Strings[304]"
+
+.PP
+Définition à la ligne 501 du fichier term\&.h\&.
+.SS "#define change_line_pitch   \fBCUR\fP Strings[305]"
+
+.PP
+Définition à la ligne 502 du fichier term\&.h\&.
+.SS "#define change_res_horz   \fBCUR\fP Strings[306]"
+
+.PP
+Définition à la ligne 503 du fichier term\&.h\&.
+.SS "#define change_res_vert   \fBCUR\fP Strings[307]"
+
+.PP
+Définition à la ligne 504 du fichier term\&.h\&.
+.SS "#define change_scroll_region   \fBCUR\fP Strings[3]"
+
+.PP
+Définition à la ligne 200 du fichier term\&.h\&.
+.SS "#define char_padding   \fBCUR\fP Strings[145]"
+
+.PP
+Définition à la ligne 342 du fichier term\&.h\&.
+.SS "#define char_set_names   \fBCUR\fP Strings[354]"
+
+.PP
+Définition à la ligne 551 du fichier term\&.h\&.
+.SS "#define clear_all_tabs   \fBCUR\fP Strings[4]"
+
+.PP
+Définition à la ligne 201 du fichier term\&.h\&.
+.SS "#define clear_margins   \fBCUR\fP Strings[270]"
+
+.PP
+Définition à la ligne 467 du fichier term\&.h\&.
+.SS "#define clear_screen   \fBCUR\fP Strings[5]"
+
+.PP
+Définition à la ligne 202 du fichier term\&.h\&.
+.SS "#define clr_bol   \fBCUR\fP Strings[269]"
+
+.PP
+Définition à la ligne 466 du fichier term\&.h\&.
+.SS "#define clr_eol   \fBCUR\fP Strings[6]"
+
+.PP
+Définition à la ligne 203 du fichier term\&.h\&.
+.SS "#define clr_eos   \fBCUR\fP Strings[7]"
+
+.PP
+Définition à la ligne 204 du fichier term\&.h\&.
+.SS "#define code_set_init   \fBCUR\fP Strings[363]"
+
+.PP
+Définition à la ligne 560 du fichier term\&.h\&.
+.SS "#define col_addr_glitch   \fBCUR\fP Booleans[30]"
+
+.PP
+Définition à la ligne 157 du fichier term\&.h\&.
+.SS "#define color_names   \fBCUR\fP Strings[373]"
+
+.PP
+Définition à la ligne 570 du fichier term\&.h\&.
+.SS "#define column_address   \fBCUR\fP Strings[8]"
+
+.PP
+Définition à la ligne 205 du fichier term\&.h\&.
+.SS "#define columns   \fBCUR\fP Numbers[0]"
+
+.PP
+Définition à la ligne 164 du fichier term\&.h\&.
+.SS "#define command_character   \fBCUR\fP Strings[9]"
+
+.PP
+Définition à la ligne 206 du fichier term\&.h\&.
+.SS "#define cpi_changes_res   \fBCUR\fP Booleans[35]"
+
+.PP
+Définition à la ligne 162 du fichier term\&.h\&.
+.SS "#define cr_cancels_micro_mode   \fBCUR\fP Booleans[31]"
+
+.PP
+Définition à la ligne 158 du fichier term\&.h\&.
+.SS "#define create_window   \fBCUR\fP Strings[277]"
+
+.PP
+Définition à la ligne 474 du fichier term\&.h\&.
+.SS "#define CUR   cur_term\->type\&."
+
+.PP
+Définition à la ligne 125 du fichier term\&.h\&.
+.SS "#define cursor_address   \fBCUR\fP Strings[10]"
+
+.PP
+Définition à la ligne 207 du fichier term\&.h\&.
+.SS "#define cursor_down   \fBCUR\fP Strings[11]"
+
+.PP
+Définition à la ligne 208 du fichier term\&.h\&.
+.SS "#define cursor_home   \fBCUR\fP Strings[12]"
+
+.PP
+Définition à la ligne 209 du fichier term\&.h\&.
+.SS "#define cursor_invisible   \fBCUR\fP Strings[13]"
+
+.PP
+Définition à la ligne 210 du fichier term\&.h\&.
+.SS "#define cursor_left   \fBCUR\fP Strings[14]"
+
+.PP
+Définition à la ligne 211 du fichier term\&.h\&.
+.SS "#define cursor_mem_address   \fBCUR\fP Strings[15]"
+
+.PP
+Définition à la ligne 212 du fichier term\&.h\&.
+.SS "#define cursor_normal   \fBCUR\fP Strings[16]"
+
+.PP
+Définition à la ligne 213 du fichier term\&.h\&.
+.SS "#define cursor_right   \fBCUR\fP Strings[17]"
+
+.PP
+Définition à la ligne 214 du fichier term\&.h\&.
+.SS "#define cursor_to_ll   \fBCUR\fP Strings[18]"
+
+.PP
+Définition à la ligne 215 du fichier term\&.h\&.
+.SS "#define cursor_up   \fBCUR\fP Strings[19]"
+
+.PP
+Définition à la ligne 216 du fichier term\&.h\&.
+.SS "#define cursor_visible   \fBCUR\fP Strings[20]"
+
+.PP
+Définition à la ligne 217 du fichier term\&.h\&.
+.SS "#define define_bit_image_region   \fBCUR\fP Strings[374]"
+
+.PP
+Définition à la ligne 571 du fichier term\&.h\&.
+.SS "#define define_char   \fBCUR\fP Strings[308]"
+
+.PP
+Définition à la ligne 505 du fichier term\&.h\&.
+.SS "#define delete_character   \fBCUR\fP Strings[21]"
+
+.PP
+Définition à la ligne 218 du fichier term\&.h\&.
+.SS "#define delete_line   \fBCUR\fP Strings[22]"
+
+.PP
+Définition à la ligne 219 du fichier term\&.h\&.
+.SS "#define dest_tabs_magic_smso   \fBCUR\fP Booleans[17]"
+
+.PP
+Définition à la ligne 144 du fichier term\&.h\&.
+.SS "#define device_type   \fBCUR\fP Strings[362]"
+
+.PP
+Définition à la ligne 559 du fichier term\&.h\&.
+.SS "#define dial_phone   \fBCUR\fP Strings[280]"
+
+.PP
+Définition à la ligne 477 du fichier term\&.h\&.
+.SS "#define dis_status_line   \fBCUR\fP Strings[23]"
+
+.PP
+Définition à la ligne 220 du fichier term\&.h\&.
+.SS "#define display_clock   \fBCUR\fP Strings[275]"
+
+.PP
+Définition à la ligne 472 du fichier term\&.h\&.
+.SS "#define display_pc_char   \fBCUR\fP Strings[378]"
+
+.PP
+Définition à la ligne 575 du fichier term\&.h\&.
+.SS "#define dot_horz_spacing   \fBCUR\fP Numbers[18]"
+
+.PP
+Définition à la ligne 182 du fichier term\&.h\&.
+.SS "#define dot_vert_spacing   \fBCUR\fP Numbers[17]"
+
+.PP
+Définition à la ligne 181 du fichier term\&.h\&.
+.SS "#define down_half_line   \fBCUR\fP Strings[24]"
+
+.PP
+Définition à la ligne 221 du fichier term\&.h\&.
+.SS "#define eat_newline_glitch   \fBCUR\fP Booleans[4]"
+
+.PP
+Définition à la ligne 131 du fichier term\&.h\&.
+.SS "#define ena_acs   \fBCUR\fP Strings[155]"
+
+.PP
+Définition à la ligne 352 du fichier term\&.h\&.
+.SS "#define end_bit_image_region   \fBCUR\fP Strings[375]"
+
+.PP
+Définition à la ligne 572 du fichier term\&.h\&.
+.SS "#define enter_alt_charset_mode   \fBCUR\fP Strings[25]"
+
+.PP
+Définition à la ligne 222 du fichier term\&.h\&.
+.SS "#define enter_am_mode   \fBCUR\fP Strings[151]"
+
+.PP
+Définition à la ligne 348 du fichier term\&.h\&.
+.SS "#define enter_blink_mode   \fBCUR\fP Strings[26]"
+
+.PP
+Définition à la ligne 223 du fichier term\&.h\&.
+.SS "#define enter_bold_mode   \fBCUR\fP Strings[27]"
+
+.PP
+Définition à la ligne 224 du fichier term\&.h\&.
+.SS "#define enter_ca_mode   \fBCUR\fP Strings[28]"
+
+.PP
+Définition à la ligne 225 du fichier term\&.h\&.
+.SS "#define enter_delete_mode   \fBCUR\fP Strings[29]"
+
+.PP
+Définition à la ligne 226 du fichier term\&.h\&.
+.SS "#define enter_dim_mode   \fBCUR\fP Strings[30]"
+
+.PP
+Définition à la ligne 227 du fichier term\&.h\&.
+.SS "#define enter_doublewide_mode   \fBCUR\fP Strings[309]"
+
+.PP
+Définition à la ligne 506 du fichier term\&.h\&.
+.SS "#define enter_draft_quality   \fBCUR\fP Strings[310]"
+
+.PP
+Définition à la ligne 507 du fichier term\&.h\&.
+.SS "#define enter_horizontal_hl_mode   \fBCUR\fP Strings[386]"
+
+.PP
+Définition à la ligne 583 du fichier term\&.h\&.
+.SS "#define enter_insert_mode   \fBCUR\fP Strings[31]"
+
+.PP
+Définition à la ligne 228 du fichier term\&.h\&.
+.SS "#define enter_italics_mode   \fBCUR\fP Strings[311]"
+
+.PP
+Définition à la ligne 508 du fichier term\&.h\&.
+.SS "#define enter_left_hl_mode   \fBCUR\fP Strings[387]"
+
+.PP
+Définition à la ligne 584 du fichier term\&.h\&.
+.SS "#define enter_leftward_mode   \fBCUR\fP Strings[312]"
+
+.PP
+Définition à la ligne 509 du fichier term\&.h\&.
+.SS "#define enter_low_hl_mode   \fBCUR\fP Strings[388]"
+
+.PP
+Définition à la ligne 585 du fichier term\&.h\&.
+.SS "#define enter_micro_mode   \fBCUR\fP Strings[313]"
+
+.PP
+Définition à la ligne 510 du fichier term\&.h\&.
+.SS "#define enter_near_letter_quality   \fBCUR\fP Strings[314]"
+
+.PP
+Définition à la ligne 511 du fichier term\&.h\&.
+.SS "#define enter_normal_quality   \fBCUR\fP Strings[315]"
+
+.PP
+Définition à la ligne 512 du fichier term\&.h\&.
+.SS "#define enter_pc_charset_mode   \fBCUR\fP Strings[379]"
+
+.PP
+Définition à la ligne 576 du fichier term\&.h\&.
+.SS "#define enter_protected_mode   \fBCUR\fP Strings[33]"
+
+.PP
+Définition à la ligne 230 du fichier term\&.h\&.
+.SS "#define enter_reverse_mode   \fBCUR\fP Strings[34]"
+
+.PP
+Définition à la ligne 231 du fichier term\&.h\&.
+.SS "#define enter_right_hl_mode   \fBCUR\fP Strings[389]"
+
+.PP
+Définition à la ligne 586 du fichier term\&.h\&.
+.SS "#define enter_scancode_mode   \fBCUR\fP Strings[381]"
+
+.PP
+Définition à la ligne 578 du fichier term\&.h\&.
+.SS "#define enter_secure_mode   \fBCUR\fP Strings[32]"
+
+.PP
+Définition à la ligne 229 du fichier term\&.h\&.
+.SS "#define enter_shadow_mode   \fBCUR\fP Strings[316]"
+
+.PP
+Définition à la ligne 513 du fichier term\&.h\&.
+.SS "#define enter_standout_mode   \fBCUR\fP Strings[35]"
+
+.PP
+Définition à la ligne 232 du fichier term\&.h\&.
+.SS "#define enter_subscript_mode   \fBCUR\fP Strings[317]"
+
+.PP
+Définition à la ligne 514 du fichier term\&.h\&.
+.SS "#define enter_superscript_mode   \fBCUR\fP Strings[318]"
+
+.PP
+Définition à la ligne 515 du fichier term\&.h\&.
+.SS "#define enter_top_hl_mode   \fBCUR\fP Strings[390]"
+
+.PP
+Définition à la ligne 587 du fichier term\&.h\&.
+.SS "#define enter_underline_mode   \fBCUR\fP Strings[36]"
+
+.PP
+Définition à la ligne 233 du fichier term\&.h\&.
+.SS "#define enter_upward_mode   \fBCUR\fP Strings[319]"
+
+.PP
+Définition à la ligne 516 du fichier term\&.h\&.
+.SS "#define enter_vertical_hl_mode   \fBCUR\fP Strings[391]"
+
+.PP
+Définition à la ligne 588 du fichier term\&.h\&.
+.SS "#define enter_xon_mode   \fBCUR\fP Strings[149]"
+
+.PP
+Définition à la ligne 346 du fichier term\&.h\&.
+.SS "#define erase_chars   \fBCUR\fP Strings[37]"
+
+.PP
+Définition à la ligne 234 du fichier term\&.h\&.
+.SS "#define erase_overstrike   \fBCUR\fP Booleans[5]"
+
+.PP
+Définition à la ligne 132 du fichier term\&.h\&.
+.SS "#define exit_alt_charset_mode   \fBCUR\fP Strings[38]"
+
+.PP
+Définition à la ligne 235 du fichier term\&.h\&.
+.SS "#define exit_am_mode   \fBCUR\fP Strings[152]"
+
+.PP
+Définition à la ligne 349 du fichier term\&.h\&.
+.SS "#define exit_attribute_mode   \fBCUR\fP Strings[39]"
+
+.PP
+Définition à la ligne 236 du fichier term\&.h\&.
+.SS "#define exit_ca_mode   \fBCUR\fP Strings[40]"
+
+.PP
+Définition à la ligne 237 du fichier term\&.h\&.
+.SS "#define exit_delete_mode   \fBCUR\fP Strings[41]"
+
+.PP
+Définition à la ligne 238 du fichier term\&.h\&.
+.SS "#define exit_doublewide_mode   \fBCUR\fP Strings[320]"
+
+.PP
+Définition à la ligne 517 du fichier term\&.h\&.
+.SS "#define exit_insert_mode   \fBCUR\fP Strings[42]"
+
+.PP
+Définition à la ligne 239 du fichier term\&.h\&.
+.SS "#define exit_italics_mode   \fBCUR\fP Strings[321]"
+
+.PP
+Définition à la ligne 518 du fichier term\&.h\&.
+.SS "#define exit_leftward_mode   \fBCUR\fP Strings[322]"
+
+.PP
+Définition à la ligne 519 du fichier term\&.h\&.
+.SS "#define exit_micro_mode   \fBCUR\fP Strings[323]"
+
+.PP
+Définition à la ligne 520 du fichier term\&.h\&.
+.SS "#define exit_pc_charset_mode   \fBCUR\fP Strings[380]"
+
+.PP
+Définition à la ligne 577 du fichier term\&.h\&.
+.SS "#define exit_scancode_mode   \fBCUR\fP Strings[382]"
+
+.PP
+Définition à la ligne 579 du fichier term\&.h\&.
+.SS "#define exit_shadow_mode   \fBCUR\fP Strings[324]"
+
+.PP
+Définition à la ligne 521 du fichier term\&.h\&.
+.SS "#define exit_standout_mode   \fBCUR\fP Strings[43]"
+
+.PP
+Définition à la ligne 240 du fichier term\&.h\&.
+.SS "#define exit_subscript_mode   \fBCUR\fP Strings[325]"
+
+.PP
+Définition à la ligne 522 du fichier term\&.h\&.
+.SS "#define exit_superscript_mode   \fBCUR\fP Strings[326]"
+
+.PP
+Définition à la ligne 523 du fichier term\&.h\&.
+.SS "#define exit_underline_mode   \fBCUR\fP Strings[44]"
+
+.PP
+Définition à la ligne 241 du fichier term\&.h\&.
+.SS "#define exit_upward_mode   \fBCUR\fP Strings[327]"
+
+.PP
+Définition à la ligne 524 du fichier term\&.h\&.
+.SS "#define exit_xon_mode   \fBCUR\fP Strings[150]"
+
+.PP
+Définition à la ligne 347 du fichier term\&.h\&.
+.SS "#define fixed_pause   \fBCUR\fP Strings[285]"
+
+.PP
+Définition à la ligne 482 du fichier term\&.h\&.
+.SS "#define flash_hook   \fBCUR\fP Strings[284]"
+
+.PP
+Définition à la ligne 481 du fichier term\&.h\&.
+.SS "#define flash_screen   \fBCUR\fP Strings[45]"
+
+.PP
+Définition à la ligne 242 du fichier term\&.h\&.
+.SS "#define form_feed   \fBCUR\fP Strings[46]"
+
+.PP
+Définition à la ligne 243 du fichier term\&.h\&.
+.SS "#define from_status_line   \fBCUR\fP Strings[47]"
+
+.PP
+Définition à la ligne 244 du fichier term\&.h\&.
+.SS "#define generic_type   \fBCUR\fP Booleans[6]"
+
+.PP
+Définition à la ligne 133 du fichier term\&.h\&.
+.SS "#define get_mouse   \fBCUR\fP Strings[358]"
+
+.PP
+Définition à la ligne 555 du fichier term\&.h\&.
+.SS "#define GET_TTY(fd, \fBbuf\fP)   tcgetattr(fd, \fBbuf\fP)"
+
+.PP
+Définition à la ligne 116 du fichier term\&.h\&.
+.SS "#define goto_window   \fBCUR\fP Strings[278]"
+
+.PP
+Définition à la ligne 475 du fichier term\&.h\&.
+.SS "#define hangup   \fBCUR\fP Strings[279]"
+
+.PP
+Définition à la ligne 476 du fichier term\&.h\&.
+.SS "#define hard_copy   \fBCUR\fP Booleans[7]"
+
+.PP
+Définition à la ligne 134 du fichier term\&.h\&.
+.SS "#define hard_cursor   \fBCUR\fP Booleans[23]"
+
+.PP
+Définition à la ligne 150 du fichier term\&.h\&.
+.SS "#define has_meta_key   \fBCUR\fP Booleans[8]"
+
+.PP
+Définition à la ligne 135 du fichier term\&.h\&.
+.SS "#define has_print_wheel   \fBCUR\fP Booleans[32]"
+
+.PP
+Définition à la ligne 159 du fichier term\&.h\&.
+.SS "#define has_status_line   \fBCUR\fP Booleans[9]"
+
+.PP
+Définition à la ligne 136 du fichier term\&.h\&.
+.SS "#define hue_lightness_saturation   \fBCUR\fP Booleans[29]"
+
+.PP
+Définition à la ligne 156 du fichier term\&.h\&.
+.SS "#define init_1string   \fBCUR\fP Strings[48]"
+
+.PP
+Définition à la ligne 245 du fichier term\&.h\&.
+.SS "#define init_2string   \fBCUR\fP Strings[49]"
+
+.PP
+Définition à la ligne 246 du fichier term\&.h\&.
+.SS "#define init_3string   \fBCUR\fP Strings[50]"
+
+.PP
+Définition à la ligne 247 du fichier term\&.h\&.
+.SS "#define init_file   \fBCUR\fP Strings[51]"
+
+.PP
+Définition à la ligne 248 du fichier term\&.h\&.
+.SS "#define init_prog   \fBCUR\fP Strings[138]"
+
+.PP
+Définition à la ligne 335 du fichier term\&.h\&.
+.SS "#define init_tabs   \fBCUR\fP Numbers[1]"
+
+.PP
+Définition à la ligne 165 du fichier term\&.h\&.
+.SS "#define initialize_color   \fBCUR\fP Strings[299]"
+
+.PP
+Définition à la ligne 496 du fichier term\&.h\&.
+.SS "#define initialize_pair   \fBCUR\fP Strings[300]"
+
+.PP
+Définition à la ligne 497 du fichier term\&.h\&.
+.SS "#define insert_character   \fBCUR\fP Strings[52]"
+
+.PP
+Définition à la ligne 249 du fichier term\&.h\&.
+.SS "#define insert_line   \fBCUR\fP Strings[53]"
+
+.PP
+Définition à la ligne 250 du fichier term\&.h\&.
+.SS "#define insert_null_glitch   \fBCUR\fP Booleans[10]"
+
+.PP
+Définition à la ligne 137 du fichier term\&.h\&.
+.SS "#define insert_padding   \fBCUR\fP Strings[54]"
+
+.PP
+Définition à la ligne 251 du fichier term\&.h\&.
+.SS "#define key_a1   \fBCUR\fP Strings[139]"
+
+.PP
+Définition à la ligne 336 du fichier term\&.h\&.
+.SS "#define key_a3   \fBCUR\fP Strings[140]"
+
+.PP
+Définition à la ligne 337 du fichier term\&.h\&.
+.SS "#define key_b2   \fBCUR\fP Strings[141]"
+
+.PP
+Définition à la ligne 338 du fichier term\&.h\&.
+.SS "#define key_backspace   \fBCUR\fP Strings[55]"
+
+.PP
+Définition à la ligne 252 du fichier term\&.h\&.
+.SS "#define key_beg   \fBCUR\fP Strings[158]"
+
+.PP
+Définition à la ligne 355 du fichier term\&.h\&.
+.SS "#define key_btab   \fBCUR\fP Strings[148]"
+
+.PP
+Définition à la ligne 345 du fichier term\&.h\&.
+.SS "#define key_c1   \fBCUR\fP Strings[142]"
+
+.PP
+Définition à la ligne 339 du fichier term\&.h\&.
+.SS "#define key_c3   \fBCUR\fP Strings[143]"
+
+.PP
+Définition à la ligne 340 du fichier term\&.h\&.
+.SS "#define key_cancel   \fBCUR\fP Strings[159]"
+
+.PP
+Définition à la ligne 356 du fichier term\&.h\&.
+.SS "#define key_catab   \fBCUR\fP Strings[56]"
+
+.PP
+Définition à la ligne 253 du fichier term\&.h\&.
+.SS "#define key_clear   \fBCUR\fP Strings[57]"
+
+.PP
+Définition à la ligne 254 du fichier term\&.h\&.
+.SS "#define key_close   \fBCUR\fP Strings[160]"
+
+.PP
+Définition à la ligne 357 du fichier term\&.h\&.
+.SS "#define key_command   \fBCUR\fP Strings[161]"
+
+.PP
+Définition à la ligne 358 du fichier term\&.h\&.
+.SS "#define key_copy   \fBCUR\fP Strings[162]"
+
+.PP
+Définition à la ligne 359 du fichier term\&.h\&.
+.SS "#define key_create   \fBCUR\fP Strings[163]"
+
+.PP
+Définition à la ligne 360 du fichier term\&.h\&.
+.SS "#define key_ctab   \fBCUR\fP Strings[58]"
+
+.PP
+Définition à la ligne 255 du fichier term\&.h\&.
+.SS "#define key_dc   \fBCUR\fP Strings[59]"
+
+.PP
+Définition à la ligne 256 du fichier term\&.h\&.
+.SS "#define key_dl   \fBCUR\fP Strings[60]"
+
+.PP
+Définition à la ligne 257 du fichier term\&.h\&.
+.SS "#define key_down   \fBCUR\fP Strings[61]"
+
+.PP
+Définition à la ligne 258 du fichier term\&.h\&.
+.SS "#define key_eic   \fBCUR\fP Strings[62]"
+
+.PP
+Définition à la ligne 259 du fichier term\&.h\&.
+.SS "#define key_end   \fBCUR\fP Strings[164]"
+
+.PP
+Définition à la ligne 361 du fichier term\&.h\&.
+.SS "#define key_enter   \fBCUR\fP Strings[165]"
+
+.PP
+Définition à la ligne 362 du fichier term\&.h\&.
+.SS "#define key_eol   \fBCUR\fP Strings[63]"
+
+.PP
+Définition à la ligne 260 du fichier term\&.h\&.
+.SS "#define key_eos   \fBCUR\fP Strings[64]"
+
+.PP
+Définition à la ligne 261 du fichier term\&.h\&.
+.SS "#define key_exit   \fBCUR\fP Strings[166]"
+
+.PP
+Définition à la ligne 363 du fichier term\&.h\&.
+.SS "#define key_f0   \fBCUR\fP Strings[65]"
+
+.PP
+Définition à la ligne 262 du fichier term\&.h\&.
+.SS "#define key_f1   \fBCUR\fP Strings[66]"
+
+.PP
+Définition à la ligne 263 du fichier term\&.h\&.
+.SS "#define key_f10   \fBCUR\fP Strings[67]"
+
+.PP
+Définition à la ligne 264 du fichier term\&.h\&.
+.SS "#define key_f11   \fBCUR\fP Strings[216]"
+
+.PP
+Définition à la ligne 413 du fichier term\&.h\&.
+.SS "#define key_f12   \fBCUR\fP Strings[217]"
+
+.PP
+Définition à la ligne 414 du fichier term\&.h\&.
+.SS "#define key_f13   \fBCUR\fP Strings[218]"
+
+.PP
+Définition à la ligne 415 du fichier term\&.h\&.
+.SS "#define key_f14   \fBCUR\fP Strings[219]"
+
+.PP
+Définition à la ligne 416 du fichier term\&.h\&.
+.SS "#define key_f15   \fBCUR\fP Strings[220]"
+
+.PP
+Définition à la ligne 417 du fichier term\&.h\&.
+.SS "#define key_f16   \fBCUR\fP Strings[221]"
+
+.PP
+Définition à la ligne 418 du fichier term\&.h\&.
+.SS "#define key_f17   \fBCUR\fP Strings[222]"
+
+.PP
+Définition à la ligne 419 du fichier term\&.h\&.
+.SS "#define key_f18   \fBCUR\fP Strings[223]"
+
+.PP
+Définition à la ligne 420 du fichier term\&.h\&.
+.SS "#define key_f19   \fBCUR\fP Strings[224]"
+
+.PP
+Définition à la ligne 421 du fichier term\&.h\&.
+.SS "#define key_f2   \fBCUR\fP Strings[68]"
+
+.PP
+Définition à la ligne 265 du fichier term\&.h\&.
+.SS "#define key_f20   \fBCUR\fP Strings[225]"
+
+.PP
+Définition à la ligne 422 du fichier term\&.h\&.
+.SS "#define key_f21   \fBCUR\fP Strings[226]"
+
+.PP
+Définition à la ligne 423 du fichier term\&.h\&.
+.SS "#define key_f22   \fBCUR\fP Strings[227]"
+
+.PP
+Définition à la ligne 424 du fichier term\&.h\&.
+.SS "#define key_f23   \fBCUR\fP Strings[228]"
+
+.PP
+Définition à la ligne 425 du fichier term\&.h\&.
+.SS "#define key_f24   \fBCUR\fP Strings[229]"
+
+.PP
+Définition à la ligne 426 du fichier term\&.h\&.
+.SS "#define key_f25   \fBCUR\fP Strings[230]"
+
+.PP
+Définition à la ligne 427 du fichier term\&.h\&.
+.SS "#define key_f26   \fBCUR\fP Strings[231]"
+
+.PP
+Définition à la ligne 428 du fichier term\&.h\&.
+.SS "#define key_f27   \fBCUR\fP Strings[232]"
+
+.PP
+Définition à la ligne 429 du fichier term\&.h\&.
+.SS "#define key_f28   \fBCUR\fP Strings[233]"
+
+.PP
+Définition à la ligne 430 du fichier term\&.h\&.
+.SS "#define key_f29   \fBCUR\fP Strings[234]"
+
+.PP
+Définition à la ligne 431 du fichier term\&.h\&.
+.SS "#define key_f3   \fBCUR\fP Strings[69]"
+
+.PP
+Définition à la ligne 266 du fichier term\&.h\&.
+.SS "#define key_f30   \fBCUR\fP Strings[235]"
+
+.PP
+Définition à la ligne 432 du fichier term\&.h\&.
+.SS "#define key_f31   \fBCUR\fP Strings[236]"
+
+.PP
+Définition à la ligne 433 du fichier term\&.h\&.
+.SS "#define key_f32   \fBCUR\fP Strings[237]"
+
+.PP
+Définition à la ligne 434 du fichier term\&.h\&.
+.SS "#define key_f33   \fBCUR\fP Strings[238]"
+
+.PP
+Définition à la ligne 435 du fichier term\&.h\&.
+.SS "#define key_f34   \fBCUR\fP Strings[239]"
+
+.PP
+Définition à la ligne 436 du fichier term\&.h\&.
+.SS "#define key_f35   \fBCUR\fP Strings[240]"
+
+.PP
+Définition à la ligne 437 du fichier term\&.h\&.
+.SS "#define key_f36   \fBCUR\fP Strings[241]"
+
+.PP
+Définition à la ligne 438 du fichier term\&.h\&.
+.SS "#define key_f37   \fBCUR\fP Strings[242]"
+
+.PP
+Définition à la ligne 439 du fichier term\&.h\&.
+.SS "#define key_f38   \fBCUR\fP Strings[243]"
+
+.PP
+Définition à la ligne 440 du fichier term\&.h\&.
+.SS "#define key_f39   \fBCUR\fP Strings[244]"
+
+.PP
+Définition à la ligne 441 du fichier term\&.h\&.
+.SS "#define key_f4   \fBCUR\fP Strings[70]"
+
+.PP
+Définition à la ligne 267 du fichier term\&.h\&.
+.SS "#define key_f40   \fBCUR\fP Strings[245]"
+
+.PP
+Définition à la ligne 442 du fichier term\&.h\&.
+.SS "#define key_f41   \fBCUR\fP Strings[246]"
+
+.PP
+Définition à la ligne 443 du fichier term\&.h\&.
+.SS "#define key_f42   \fBCUR\fP Strings[247]"
+
+.PP
+Définition à la ligne 444 du fichier term\&.h\&.
+.SS "#define key_f43   \fBCUR\fP Strings[248]"
+
+.PP
+Définition à la ligne 445 du fichier term\&.h\&.
+.SS "#define key_f44   \fBCUR\fP Strings[249]"
+
+.PP
+Définition à la ligne 446 du fichier term\&.h\&.
+.SS "#define key_f45   \fBCUR\fP Strings[250]"
+
+.PP
+Définition à la ligne 447 du fichier term\&.h\&.
+.SS "#define key_f46   \fBCUR\fP Strings[251]"
+
+.PP
+Définition à la ligne 448 du fichier term\&.h\&.
+.SS "#define key_f47   \fBCUR\fP Strings[252]"
+
+.PP
+Définition à la ligne 449 du fichier term\&.h\&.
+.SS "#define key_f48   \fBCUR\fP Strings[253]"
+
+.PP
+Définition à la ligne 450 du fichier term\&.h\&.
+.SS "#define key_f49   \fBCUR\fP Strings[254]"
+
+.PP
+Définition à la ligne 451 du fichier term\&.h\&.
+.SS "#define key_f5   \fBCUR\fP Strings[71]"
+
+.PP
+Définition à la ligne 268 du fichier term\&.h\&.
+.SS "#define key_f50   \fBCUR\fP Strings[255]"
+
+.PP
+Définition à la ligne 452 du fichier term\&.h\&.
+.SS "#define key_f51   \fBCUR\fP Strings[256]"
+
+.PP
+Définition à la ligne 453 du fichier term\&.h\&.
+.SS "#define key_f52   \fBCUR\fP Strings[257]"
+
+.PP
+Définition à la ligne 454 du fichier term\&.h\&.
+.SS "#define key_f53   \fBCUR\fP Strings[258]"
+
+.PP
+Définition à la ligne 455 du fichier term\&.h\&.
+.SS "#define key_f54   \fBCUR\fP Strings[259]"
+
+.PP
+Définition à la ligne 456 du fichier term\&.h\&.
+.SS "#define key_f55   \fBCUR\fP Strings[260]"
+
+.PP
+Définition à la ligne 457 du fichier term\&.h\&.
+.SS "#define key_f56   \fBCUR\fP Strings[261]"
+
+.PP
+Définition à la ligne 458 du fichier term\&.h\&.
+.SS "#define key_f57   \fBCUR\fP Strings[262]"
+
+.PP
+Définition à la ligne 459 du fichier term\&.h\&.
+.SS "#define key_f58   \fBCUR\fP Strings[263]"
+
+.PP
+Définition à la ligne 460 du fichier term\&.h\&.
+.SS "#define key_f59   \fBCUR\fP Strings[264]"
+
+.PP
+Définition à la ligne 461 du fichier term\&.h\&.
+.SS "#define key_f6   \fBCUR\fP Strings[72]"
+
+.PP
+Définition à la ligne 269 du fichier term\&.h\&.
+.SS "#define key_f60   \fBCUR\fP Strings[265]"
+
+.PP
+Définition à la ligne 462 du fichier term\&.h\&.
+.SS "#define key_f61   \fBCUR\fP Strings[266]"
+
+.PP
+Définition à la ligne 463 du fichier term\&.h\&.
+.SS "#define key_f62   \fBCUR\fP Strings[267]"
+
+.PP
+Définition à la ligne 464 du fichier term\&.h\&.
+.SS "#define key_f63   \fBCUR\fP Strings[268]"
+
+.PP
+Définition à la ligne 465 du fichier term\&.h\&.
+.SS "#define key_f7   \fBCUR\fP Strings[73]"
+
+.PP
+Définition à la ligne 270 du fichier term\&.h\&.
+.SS "#define key_f8   \fBCUR\fP Strings[74]"
+
+.PP
+Définition à la ligne 271 du fichier term\&.h\&.
+.SS "#define key_f9   \fBCUR\fP Strings[75]"
+
+.PP
+Définition à la ligne 272 du fichier term\&.h\&.
+.SS "#define key_find   \fBCUR\fP Strings[167]"
+
+.PP
+Définition à la ligne 364 du fichier term\&.h\&.
+.SS "#define key_help   \fBCUR\fP Strings[168]"
+
+.PP
+Définition à la ligne 365 du fichier term\&.h\&.
+.SS "#define key_home   \fBCUR\fP Strings[76]"
+
+.PP
+Définition à la ligne 273 du fichier term\&.h\&.
+.SS "#define key_ic   \fBCUR\fP Strings[77]"
+
+.PP
+Définition à la ligne 274 du fichier term\&.h\&.
+.SS "#define key_il   \fBCUR\fP Strings[78]"
+
+.PP
+Définition à la ligne 275 du fichier term\&.h\&.
+.SS "#define key_left   \fBCUR\fP Strings[79]"
+
+.PP
+Définition à la ligne 276 du fichier term\&.h\&.
+.SS "#define key_ll   \fBCUR\fP Strings[80]"
+
+.PP
+Définition à la ligne 277 du fichier term\&.h\&.
+.SS "#define key_mark   \fBCUR\fP Strings[169]"
+
+.PP
+Définition à la ligne 366 du fichier term\&.h\&.
+.SS "#define key_message   \fBCUR\fP Strings[170]"
+
+.PP
+Définition à la ligne 367 du fichier term\&.h\&.
+.SS "#define key_mouse   \fBCUR\fP Strings[355]"
+
+.PP
+Définition à la ligne 552 du fichier term\&.h\&.
+.SS "#define key_move   \fBCUR\fP Strings[171]"
+
+.PP
+Définition à la ligne 368 du fichier term\&.h\&.
+.SS "#define key_next   \fBCUR\fP Strings[172]"
+
+.PP
+Définition à la ligne 369 du fichier term\&.h\&.
+.SS "#define key_npage   \fBCUR\fP Strings[81]"
+
+.PP
+Définition à la ligne 278 du fichier term\&.h\&.
+.SS "#define key_open   \fBCUR\fP Strings[173]"
+
+.PP
+Définition à la ligne 370 du fichier term\&.h\&.
+.SS "#define key_options   \fBCUR\fP Strings[174]"
+
+.PP
+Définition à la ligne 371 du fichier term\&.h\&.
+.SS "#define key_ppage   \fBCUR\fP Strings[82]"
+
+.PP
+Définition à la ligne 279 du fichier term\&.h\&.
+.SS "#define key_previous   \fBCUR\fP Strings[175]"
+
+.PP
+Définition à la ligne 372 du fichier term\&.h\&.
+.SS "#define key_print   \fBCUR\fP Strings[176]"
+
+.PP
+Définition à la ligne 373 du fichier term\&.h\&.
+.SS "#define key_redo   \fBCUR\fP Strings[177]"
+
+.PP
+Définition à la ligne 374 du fichier term\&.h\&.
+.SS "#define key_reference   \fBCUR\fP Strings[178]"
+
+.PP
+Définition à la ligne 375 du fichier term\&.h\&.
+.SS "#define key_refresh   \fBCUR\fP Strings[179]"
+
+.PP
+Définition à la ligne 376 du fichier term\&.h\&.
+.SS "#define key_replace   \fBCUR\fP Strings[180]"
+
+.PP
+Définition à la ligne 377 du fichier term\&.h\&.
+.SS "#define key_restart   \fBCUR\fP Strings[181]"
+
+.PP
+Définition à la ligne 378 du fichier term\&.h\&.
+.SS "#define key_resume   \fBCUR\fP Strings[182]"
+
+.PP
+Définition à la ligne 379 du fichier term\&.h\&.
+.SS "#define key_right   \fBCUR\fP Strings[83]"
+
+.PP
+Définition à la ligne 280 du fichier term\&.h\&.
+.SS "#define key_save   \fBCUR\fP Strings[183]"
+
+.PP
+Définition à la ligne 380 du fichier term\&.h\&.
+.SS "#define key_sbeg   \fBCUR\fP Strings[186]"
+
+.PP
+Définition à la ligne 383 du fichier term\&.h\&.
+.SS "#define key_scancel   \fBCUR\fP Strings[187]"
+
+.PP
+Définition à la ligne 384 du fichier term\&.h\&.
+.SS "#define key_scommand   \fBCUR\fP Strings[188]"
+
+.PP
+Définition à la ligne 385 du fichier term\&.h\&.
+.SS "#define key_scopy   \fBCUR\fP Strings[189]"
+
+.PP
+Définition à la ligne 386 du fichier term\&.h\&.
+.SS "#define key_screate   \fBCUR\fP Strings[190]"
+
+.PP
+Définition à la ligne 387 du fichier term\&.h\&.
+.SS "#define key_sdc   \fBCUR\fP Strings[191]"
+
+.PP
+Définition à la ligne 388 du fichier term\&.h\&.
+.SS "#define key_sdl   \fBCUR\fP Strings[192]"
+
+.PP
+Définition à la ligne 389 du fichier term\&.h\&.
+.SS "#define key_select   \fBCUR\fP Strings[193]"
+
+.PP
+Définition à la ligne 390 du fichier term\&.h\&.
+.SS "#define key_send   \fBCUR\fP Strings[194]"
+
+.PP
+Définition à la ligne 391 du fichier term\&.h\&.
+.SS "#define key_seol   \fBCUR\fP Strings[195]"
+
+.PP
+Définition à la ligne 392 du fichier term\&.h\&.
+.SS "#define key_sexit   \fBCUR\fP Strings[196]"
+
+.PP
+Définition à la ligne 393 du fichier term\&.h\&.
+.SS "#define key_sf   \fBCUR\fP Strings[84]"
+
+.PP
+Définition à la ligne 281 du fichier term\&.h\&.
+.SS "#define key_sfind   \fBCUR\fP Strings[197]"
+
+.PP
+Définition à la ligne 394 du fichier term\&.h\&.
+.SS "#define key_shelp   \fBCUR\fP Strings[198]"
+
+.PP
+Définition à la ligne 395 du fichier term\&.h\&.
+.SS "#define key_shome   \fBCUR\fP Strings[199]"
+
+.PP
+Définition à la ligne 396 du fichier term\&.h\&.
+.SS "#define key_sic   \fBCUR\fP Strings[200]"
+
+.PP
+Définition à la ligne 397 du fichier term\&.h\&.
+.SS "#define key_sleft   \fBCUR\fP Strings[201]"
+
+.PP
+Définition à la ligne 398 du fichier term\&.h\&.
+.SS "#define key_smessage   \fBCUR\fP Strings[202]"
+
+.PP
+Définition à la ligne 399 du fichier term\&.h\&.
+.SS "#define key_smove   \fBCUR\fP Strings[203]"
+
+.PP
+Définition à la ligne 400 du fichier term\&.h\&.
+.SS "#define key_snext   \fBCUR\fP Strings[204]"
+
+.PP
+Définition à la ligne 401 du fichier term\&.h\&.
+.SS "#define key_soptions   \fBCUR\fP Strings[205]"
+
+.PP
+Définition à la ligne 402 du fichier term\&.h\&.
+.SS "#define key_sprevious   \fBCUR\fP Strings[206]"
+
+.PP
+Définition à la ligne 403 du fichier term\&.h\&.
+.SS "#define key_sprint   \fBCUR\fP Strings[207]"
+
+.PP
+Définition à la ligne 404 du fichier term\&.h\&.
+.SS "#define key_sr   \fBCUR\fP Strings[85]"
+
+.PP
+Définition à la ligne 282 du fichier term\&.h\&.
+.SS "#define key_sredo   \fBCUR\fP Strings[208]"
+
+.PP
+Définition à la ligne 405 du fichier term\&.h\&.
+.SS "#define key_sreplace   \fBCUR\fP Strings[209]"
+
+.PP
+Définition à la ligne 406 du fichier term\&.h\&.
+.SS "#define key_sright   \fBCUR\fP Strings[210]"
+
+.PP
+Définition à la ligne 407 du fichier term\&.h\&.
+.SS "#define key_srsume   \fBCUR\fP Strings[211]"
+
+.PP
+Définition à la ligne 408 du fichier term\&.h\&.
+.SS "#define key_ssave   \fBCUR\fP Strings[212]"
+
+.PP
+Définition à la ligne 409 du fichier term\&.h\&.
+.SS "#define key_ssuspend   \fBCUR\fP Strings[213]"
+
+.PP
+Définition à la ligne 410 du fichier term\&.h\&.
+.SS "#define key_stab   \fBCUR\fP Strings[86]"
+
+.PP
+Définition à la ligne 283 du fichier term\&.h\&.
+.SS "#define key_sundo   \fBCUR\fP Strings[214]"
+
+.PP
+Définition à la ligne 411 du fichier term\&.h\&.
+.SS "#define key_suspend   \fBCUR\fP Strings[184]"
+
+.PP
+Définition à la ligne 381 du fichier term\&.h\&.
+.SS "#define key_undo   \fBCUR\fP Strings[185]"
+
+.PP
+Définition à la ligne 382 du fichier term\&.h\&.
+.SS "#define key_up   \fBCUR\fP Strings[87]"
+
+.PP
+Définition à la ligne 284 du fichier term\&.h\&.
+.SS "#define keypad_local   \fBCUR\fP Strings[88]"
+
+.PP
+Définition à la ligne 285 du fichier term\&.h\&.
+.SS "#define keypad_xmit   \fBCUR\fP Strings[89]"
+
+.PP
+Définition à la ligne 286 du fichier term\&.h\&.
+.SS "#define lab_f0   \fBCUR\fP Strings[90]"
+
+.PP
+Définition à la ligne 287 du fichier term\&.h\&.
+.SS "#define lab_f1   \fBCUR\fP Strings[91]"
+
+.PP
+Définition à la ligne 288 du fichier term\&.h\&.
+.SS "#define lab_f10   \fBCUR\fP Strings[92]"
+
+.PP
+Définition à la ligne 289 du fichier term\&.h\&.
+.SS "#define lab_f2   \fBCUR\fP Strings[93]"
+
+.PP
+Définition à la ligne 290 du fichier term\&.h\&.
+.SS "#define lab_f3   \fBCUR\fP Strings[94]"
+
+.PP
+Définition à la ligne 291 du fichier term\&.h\&.
+.SS "#define lab_f4   \fBCUR\fP Strings[95]"
+
+.PP
+Définition à la ligne 292 du fichier term\&.h\&.
+.SS "#define lab_f5   \fBCUR\fP Strings[96]"
+
+.PP
+Définition à la ligne 293 du fichier term\&.h\&.
+.SS "#define lab_f6   \fBCUR\fP Strings[97]"
+
+.PP
+Définition à la ligne 294 du fichier term\&.h\&.
+.SS "#define lab_f7   \fBCUR\fP Strings[98]"
+
+.PP
+Définition à la ligne 295 du fichier term\&.h\&.
+.SS "#define lab_f8   \fBCUR\fP Strings[99]"
+
+.PP
+Définition à la ligne 296 du fichier term\&.h\&.
+.SS "#define lab_f9   \fBCUR\fP Strings[100]"
+
+.PP
+Définition à la ligne 297 du fichier term\&.h\&.
+.SS "#define label_format   \fBCUR\fP Strings[273]"
+
+.PP
+Définition à la ligne 470 du fichier term\&.h\&.
+.SS "#define label_height   \fBCUR\fP Numbers[9]"
+
+.PP
+Définition à la ligne 173 du fichier term\&.h\&.
+.SS "#define label_off   \fBCUR\fP Strings[157]"
+
+.PP
+Définition à la ligne 354 du fichier term\&.h\&.
+.SS "#define label_on   \fBCUR\fP Strings[156]"
+
+.PP
+Définition à la ligne 353 du fichier term\&.h\&.
+.SS "#define label_width   \fBCUR\fP Numbers[10]"
+
+.PP
+Définition à la ligne 174 du fichier term\&.h\&.
+.SS "#define lines   \fBCUR\fP Numbers[2]"
+
+.PP
+Définition à la ligne 166 du fichier term\&.h\&.
+.SS "#define lines_of_memory   \fBCUR\fP Numbers[3]"
+
+.PP
+Définition à la ligne 167 du fichier term\&.h\&.
+.SS "#define lpi_changes_res   \fBCUR\fP Booleans[36]"
+
+.PP
+Définition à la ligne 163 du fichier term\&.h\&.
+.SS "#define magic_cookie_glitch   \fBCUR\fP Numbers[4]"
+
+.PP
+Définition à la ligne 168 du fichier term\&.h\&.
+.SS "#define max_attributes   \fBCUR\fP Numbers[11]"
+
+.PP
+Définition à la ligne 175 du fichier term\&.h\&.
+.SS "#define max_colors   \fBCUR\fP Numbers[13]"
+
+.PP
+Définition à la ligne 177 du fichier term\&.h\&.
+.SS "#define max_micro_address   \fBCUR\fP Numbers[19]"
+
+.PP
+Définition à la ligne 183 du fichier term\&.h\&.
+.SS "#define max_micro_jump   \fBCUR\fP Numbers[20]"
+
+.PP
+Définition à la ligne 184 du fichier term\&.h\&.
+.SS "#define max_pairs   \fBCUR\fP Numbers[14]"
+
+.PP
+Définition à la ligne 178 du fichier term\&.h\&.
+.SS "#define maximum_windows   \fBCUR\fP Numbers[12]"
+
+.PP
+Définition à la ligne 176 du fichier term\&.h\&.
+.SS "#define memory_above   \fBCUR\fP Booleans[11]"
+
+.PP
+Définition à la ligne 138 du fichier term\&.h\&.
+.SS "#define memory_below   \fBCUR\fP Booleans[12]"
+
+.PP
+Définition à la ligne 139 du fichier term\&.h\&.
+.SS "#define meta_off   \fBCUR\fP Strings[101]"
+
+.PP
+Définition à la ligne 298 du fichier term\&.h\&.
+.SS "#define meta_on   \fBCUR\fP Strings[102]"
+
+.PP
+Définition à la ligne 299 du fichier term\&.h\&.
+.SS "#define micro_char_size   \fBmicro_col_size\fP"
+
+.PP
+Définition à la ligne 599 du fichier term\&.h\&.
+.SS "#define micro_col_size   \fBCUR\fP Numbers[21]"
+
+.PP
+Définition à la ligne 185 du fichier term\&.h\&.
+.SS "#define micro_column_address   \fBCUR\fP Strings[328]"
+
+.PP
+Définition à la ligne 525 du fichier term\&.h\&.
+.SS "#define micro_down   \fBCUR\fP Strings[329]"
+
+.PP
+Définition à la ligne 526 du fichier term\&.h\&.
+.SS "#define micro_left   \fBCUR\fP Strings[330]"
+
+.PP
+Définition à la ligne 527 du fichier term\&.h\&.
+.SS "#define micro_line_size   \fBCUR\fP Numbers[22]"
+
+.PP
+Définition à la ligne 186 du fichier term\&.h\&.
+.SS "#define micro_right   \fBCUR\fP Strings[331]"
+
+.PP
+Définition à la ligne 528 du fichier term\&.h\&.
+.SS "#define micro_row_address   \fBCUR\fP Strings[332]"
+
+.PP
+Définition à la ligne 529 du fichier term\&.h\&.
+.SS "#define micro_up   \fBCUR\fP Strings[333]"
+
+.PP
+Définition à la ligne 530 du fichier term\&.h\&.
+.SS "#define mouse_info   \fBCUR\fP Strings[356]"
+
+.PP
+Définition à la ligne 553 du fichier term\&.h\&.
+.SS "#define move_insert_mode   \fBCUR\fP Booleans[13]"
+
+.PP
+Définition à la ligne 140 du fichier term\&.h\&.
+.SS "#define move_standout_mode   \fBCUR\fP Booleans[14]"
+
+.PP
+Définition à la ligne 141 du fichier term\&.h\&.
+.SS "#define NAMESIZE   256"
+
+.PP
+Définition à la ligne 123 du fichier term\&.h\&.
+.SS "#define NCURSES_CONST   \fBconst\fP"
+
+.PP
+Définition à la ligne 58 du fichier term\&.h\&.
+.SS "#define NCURSES_SBOOL   char"
+
+.PP
+Définition à la ligne 61 du fichier term\&.h\&.
+.SS "#define NCURSES_USE_DATABASE   1"
+
+.PP
+Définition à la ligne 64 du fichier term\&.h\&.
+.SS "#define NCURSES_USE_TERMCAP   0"
+
+.PP
+Définition à la ligne 67 du fichier term\&.h\&.
+.SS "#define NCURSES_VERSION   '6\&.0'"
+
+.PP
+Définition à la ligne 45 du fichier term\&.h\&.
+.SS "#define NCURSES_XNAMES   1"
+
+.PP
+Définition à la ligne 70 du fichier term\&.h\&.
+.SS "#define needs_xon_xoff   \fBCUR\fP Booleans[21]"
+
+.PP
+Définition à la ligne 148 du fichier term\&.h\&.
+.SS "#define newline   \fBCUR\fP Strings[103]"
+
+.PP
+Définition à la ligne 300 du fichier term\&.h\&.
+.SS "#define no_color_video   \fBCUR\fP Numbers[15]"
+
+.PP
+Définition à la ligne 179 du fichier term\&.h\&.
+.SS "#define no_esc_ctlc   \fBCUR\fP Booleans[2]"
+
+.PP
+Définition à la ligne 129 du fichier term\&.h\&.
+.SS "#define no_pad_char   \fBCUR\fP Booleans[25]"
+
+.PP
+Définition à la ligne 152 du fichier term\&.h\&.
+.SS "#define non_dest_scroll_region   \fBCUR\fP Booleans[26]"
+
+.PP
+Définition à la ligne 153 du fichier term\&.h\&.
+.SS "#define non_rev_rmcup   \fBCUR\fP Booleans[24]"
+
+.PP
+Définition à la ligne 151 du fichier term\&.h\&.
+.SS "#define num_labels   \fBCUR\fP Numbers[8]"
+
+.PP
+Définition à la ligne 172 du fichier term\&.h\&.
+.SS "#define number_of_pins   \fBCUR\fP Numbers[23]"
+
+.PP
+Définition à la ligne 187 du fichier term\&.h\&.
+.SS "#define NUMCOUNT   39"
+
+.PP
+Définition à la ligne 642 du fichier term\&.h\&.
+.SS "#define NUMWRITE   33"
+
+.PP
+Définition à la ligne 593 du fichier term\&.h\&.
+.SS "#define order_of_pins   \fBCUR\fP Strings[334]"
+
+.PP
+Définition à la ligne 531 du fichier term\&.h\&.
+.SS "#define orig_colors   \fBCUR\fP Strings[298]"
+
+.PP
+Définition à la ligne 495 du fichier term\&.h\&.
+.SS "#define orig_pair   \fBCUR\fP Strings[297]"
+
+.PP
+Définition à la ligne 494 du fichier term\&.h\&.
+.SS "#define output_res_char   \fBCUR\fP Numbers[24]"
+
+.PP
+Définition à la ligne 188 du fichier term\&.h\&.
+.SS "#define output_res_horz_inch   \fBCUR\fP Numbers[26]"
+
+.PP
+Définition à la ligne 190 du fichier term\&.h\&.
+.SS "#define output_res_line   \fBCUR\fP Numbers[25]"
+
+.PP
+Définition à la ligne 189 du fichier term\&.h\&.
+.SS "#define output_res_vert_inch   \fBCUR\fP Numbers[27]"
+
+.PP
+Définition à la ligne 191 du fichier term\&.h\&.
+.SS "#define over_strike   \fBCUR\fP Booleans[15]"
+
+.PP
+Définition à la ligne 142 du fichier term\&.h\&.
+.SS "#define pad_char   \fBCUR\fP Strings[104]"
+
+.PP
+Définition à la ligne 301 du fichier term\&.h\&.
+.SS "#define padding_baud_rate   \fBCUR\fP Numbers[5]"
+
+.PP
+Définition à la ligne 169 du fichier term\&.h\&.
+.SS "#define parm_dch   \fBCUR\fP Strings[105]"
+
+.PP
+Définition à la ligne 302 du fichier term\&.h\&.
+.SS "#define parm_delete_line   \fBCUR\fP Strings[106]"
+
+.PP
+Définition à la ligne 303 du fichier term\&.h\&.
+.SS "#define parm_down_cursor   \fBCUR\fP Strings[107]"
+
+.PP
+Définition à la ligne 304 du fichier term\&.h\&.
+.SS "#define parm_down_micro   \fBCUR\fP Strings[335]"
+
+.PP
+Définition à la ligne 532 du fichier term\&.h\&.
+.SS "#define parm_ich   \fBCUR\fP Strings[108]"
+
+.PP
+Définition à la ligne 305 du fichier term\&.h\&.
+.SS "#define parm_index   \fBCUR\fP Strings[109]"
+
+.PP
+Définition à la ligne 306 du fichier term\&.h\&.
+.SS "#define parm_insert_line   \fBCUR\fP Strings[110]"
+
+.PP
+Définition à la ligne 307 du fichier term\&.h\&.
+.SS "#define parm_left_cursor   \fBCUR\fP Strings[111]"
+
+.PP
+Définition à la ligne 308 du fichier term\&.h\&.
+.SS "#define parm_left_micro   \fBCUR\fP Strings[336]"
+
+.PP
+Définition à la ligne 533 du fichier term\&.h\&.
+.SS "#define parm_right_cursor   \fBCUR\fP Strings[112]"
+
+.PP
+Définition à la ligne 309 du fichier term\&.h\&.
+.SS "#define parm_right_micro   \fBCUR\fP Strings[337]"
+
+.PP
+Définition à la ligne 534 du fichier term\&.h\&.
+.SS "#define parm_rindex   \fBCUR\fP Strings[113]"
+
+.PP
+Définition à la ligne 310 du fichier term\&.h\&.
+.SS "#define parm_up_cursor   \fBCUR\fP Strings[114]"
+
+.PP
+Définition à la ligne 311 du fichier term\&.h\&.
+.SS "#define parm_up_micro   \fBCUR\fP Strings[338]"
+
+.PP
+Définition à la ligne 535 du fichier term\&.h\&.
+.SS "#define pc_term_options   \fBCUR\fP Strings[383]"
+
+.PP
+Définition à la ligne 580 du fichier term\&.h\&.
+.SS "#define pkey_key   \fBCUR\fP Strings[115]"
+
+.PP
+Définition à la ligne 312 du fichier term\&.h\&.
+.SS "#define pkey_local   \fBCUR\fP Strings[116]"
+
+.PP
+Définition à la ligne 313 du fichier term\&.h\&.
+.SS "#define pkey_plab   \fBCUR\fP Strings[361]"
+
+.PP
+Définition à la ligne 558 du fichier term\&.h\&.
+.SS "#define pkey_xmit   \fBCUR\fP Strings[117]"
+
+.PP
+Définition à la ligne 314 du fichier term\&.h\&.
+.SS "#define plab_norm   \fBCUR\fP Strings[147]"
+
+.PP
+Définition à la ligne 344 du fichier term\&.h\&.
+.SS "#define print_rate   \fBCUR\fP Numbers[28]"
+
+.PP
+Définition à la ligne 192 du fichier term\&.h\&.
+.SS "#define print_screen   \fBCUR\fP Strings[118]"
+
+.PP
+Définition à la ligne 315 du fichier term\&.h\&.
+.SS "#define prtr_non   \fBCUR\fP Strings[144]"
+
+.PP
+Définition à la ligne 341 du fichier term\&.h\&.
+.SS "#define prtr_off   \fBCUR\fP Strings[119]"
+
+.PP
+Définition à la ligne 316 du fichier term\&.h\&.
+.SS "#define prtr_on   \fBCUR\fP Strings[120]"
+
+.PP
+Définition à la ligne 317 du fichier term\&.h\&.
+.SS "#define prtr_silent   \fBCUR\fP Booleans[22]"
+
+.PP
+Définition à la ligne 149 du fichier term\&.h\&.
+.SS "#define pulse   \fBCUR\fP Strings[283]"
+
+.PP
+Définition à la ligne 480 du fichier term\&.h\&.
+.SS "#define quick_dial   \fBCUR\fP Strings[281]"
+
+.PP
+Définition à la ligne 478 du fichier term\&.h\&.
+.SS "#define remove_clock   \fBCUR\fP Strings[276]"
+
+.PP
+Définition à la ligne 473 du fichier term\&.h\&.
+.SS "#define repeat_char   \fBCUR\fP Strings[121]"
+
+.PP
+Définition à la ligne 318 du fichier term\&.h\&.
+.SS "#define req_for_input   \fBCUR\fP Strings[215]"
+
+.PP
+Définition à la ligne 412 du fichier term\&.h\&.
+.SS "#define req_mouse_pos   \fBCUR\fP Strings[357]"
+
+.PP
+Définition à la ligne 554 du fichier term\&.h\&.
+.SS "#define reset_1string   \fBCUR\fP Strings[122]"
+
+.PP
+Définition à la ligne 319 du fichier term\&.h\&.
+.SS "#define reset_2string   \fBCUR\fP Strings[123]"
+
+.PP
+Définition à la ligne 320 du fichier term\&.h\&.
+.SS "#define reset_3string   \fBCUR\fP Strings[124]"
+
+.PP
+Définition à la ligne 321 du fichier term\&.h\&.
+.SS "#define reset_file   \fBCUR\fP Strings[125]"
+
+.PP
+Définition à la ligne 322 du fichier term\&.h\&.
+.SS "#define restore_cursor   \fBCUR\fP Strings[126]"
+
+.PP
+Définition à la ligne 323 du fichier term\&.h\&.
+.SS "#define row_addr_glitch   \fBCUR\fP Booleans[33]"
+
+.PP
+Définition à la ligne 160 du fichier term\&.h\&.
+.SS "#define row_address   \fBCUR\fP Strings[127]"
+
+.PP
+Définition à la ligne 324 du fichier term\&.h\&.
+.SS "#define save_cursor   \fBCUR\fP Strings[128]"
+
+.PP
+Définition à la ligne 325 du fichier term\&.h\&.
+.SS "#define scancode_escape   \fBCUR\fP Strings[384]"
+
+.PP
+Définition à la ligne 581 du fichier term\&.h\&.
+.SS "#define scroll_forward   \fBCUR\fP Strings[129]"
+
+.PP
+Définition à la ligne 326 du fichier term\&.h\&.
+.SS "#define scroll_reverse   \fBCUR\fP Strings[130]"
+
+.PP
+Définition à la ligne 327 du fichier term\&.h\&.
+.SS "#define select_char_set   \fBCUR\fP Strings[339]"
+
+.PP
+Définition à la ligne 536 du fichier term\&.h\&.
+.SS "#define semi_auto_right_margin   \fBCUR\fP Booleans[34]"
+
+.PP
+Définition à la ligne 161 du fichier term\&.h\&.
+.SS "#define set0_des_seq   \fBCUR\fP Strings[364]"
+
+.PP
+Définition à la ligne 561 du fichier term\&.h\&.
+.SS "#define set1_des_seq   \fBCUR\fP Strings[365]"
+
+.PP
+Définition à la ligne 562 du fichier term\&.h\&.
+.SS "#define set2_des_seq   \fBCUR\fP Strings[366]"
+
+.PP
+Définition à la ligne 563 du fichier term\&.h\&.
+.SS "#define set3_des_seq   \fBCUR\fP Strings[367]"
+
+.PP
+Définition à la ligne 564 du fichier term\&.h\&.
+.SS "#define set_a_attributes   \fBCUR\fP Strings[392]"
+
+.PP
+Définition à la ligne 589 du fichier term\&.h\&.
+.SS "#define set_a_background   \fBCUR\fP Strings[360]"
+
+.PP
+Définition à la ligne 557 du fichier term\&.h\&.
+.SS "#define set_a_foreground   \fBCUR\fP Strings[359]"
+
+.PP
+Définition à la ligne 556 du fichier term\&.h\&.
+.SS "#define set_attributes   \fBCUR\fP Strings[131]"
+
+.PP
+Définition à la ligne 328 du fichier term\&.h\&.
+.SS "#define set_background   \fBCUR\fP Strings[303]"
+
+.PP
+Définition à la ligne 500 du fichier term\&.h\&.
+.SS "#define set_bottom_margin   \fBCUR\fP Strings[340]"
+
+.PP
+Définition à la ligne 537 du fichier term\&.h\&.
+.SS "#define set_bottom_margin_parm   \fBCUR\fP Strings[341]"
+
+.PP
+Définition à la ligne 538 du fichier term\&.h\&.
+.SS "#define set_clock   \fBCUR\fP Strings[274]"
+
+.PP
+Définition à la ligne 471 du fichier term\&.h\&.
+.SS "#define set_color_band   \fBCUR\fP Strings[376]"
+
+.PP
+Définition à la ligne 573 du fichier term\&.h\&.
+.SS "#define set_color_pair   \fBCUR\fP Strings[301]"
+
+.PP
+Définition à la ligne 498 du fichier term\&.h\&.
+.SS "#define set_foreground   \fBCUR\fP Strings[302]"
+
+.PP
+Définition à la ligne 499 du fichier term\&.h\&.
+.SS "#define set_left_margin   \fBCUR\fP Strings[271]"
+
+.PP
+Définition à la ligne 468 du fichier term\&.h\&.
+.SS "#define set_left_margin_parm   \fBCUR\fP Strings[342]"
+
+.PP
+Définition à la ligne 539 du fichier term\&.h\&.
+.SS "#define set_lr_margin   \fBCUR\fP Strings[368]"
+
+.PP
+Définition à la ligne 565 du fichier term\&.h\&.
+.SS "#define set_page_length   \fBCUR\fP Strings[377]"
+
+.PP
+Définition à la ligne 574 du fichier term\&.h\&.
+.SS "#define set_pglen_inch   \fBCUR\fP Strings[393]"
+
+.PP
+Définition à la ligne 590 du fichier term\&.h\&.
+.SS "#define set_right_margin   \fBCUR\fP Strings[272]"
+
+.PP
+Définition à la ligne 469 du fichier term\&.h\&.
+.SS "#define set_right_margin_parm   \fBCUR\fP Strings[343]"
+
+.PP
+Définition à la ligne 540 du fichier term\&.h\&.
+.SS "#define set_tab   \fBCUR\fP Strings[132]"
+
+.PP
+Définition à la ligne 329 du fichier term\&.h\&.
+.SS "#define set_tb_margin   \fBCUR\fP Strings[369]"
+
+.PP
+Définition à la ligne 566 du fichier term\&.h\&.
+.SS "#define set_top_margin   \fBCUR\fP Strings[344]"
+
+.PP
+Définition à la ligne 541 du fichier term\&.h\&.
+.SS "#define set_top_margin_parm   \fBCUR\fP Strings[345]"
+
+.PP
+Définition à la ligne 542 du fichier term\&.h\&.
+.SS "#define SET_TTY(fd, \fBbuf\fP)   tcsetattr(fd, TCSADRAIN, \fBbuf\fP)"
+
+.PP
+Définition à la ligne 117 du fichier term\&.h\&.
+.SS "#define set_window   \fBCUR\fP Strings[133]"
+
+.PP
+Définition à la ligne 330 du fichier term\&.h\&.
+.SS "#define start_bit_image   \fBCUR\fP Strings[346]"
+
+.PP
+Définition à la ligne 543 du fichier term\&.h\&.
+.SS "#define start_char_set_def   \fBCUR\fP Strings[347]"
+
+.PP
+Définition à la ligne 544 du fichier term\&.h\&.
+.SS "#define status_line_esc_ok   \fBCUR\fP Booleans[16]"
+
+.PP
+Définition à la ligne 143 du fichier term\&.h\&.
+.SS "#define stop_bit_image   \fBCUR\fP Strings[348]"
+
+.PP
+Définition à la ligne 545 du fichier term\&.h\&.
+.SS "#define stop_char_set_def   \fBCUR\fP Strings[349]"
+
+.PP
+Définition à la ligne 546 du fichier term\&.h\&.
+.SS "#define STRCOUNT   414"
+
+.PP
+Définition à la ligne 643 du fichier term\&.h\&.
+.SS "#define STRWRITE   394"
+
+.PP
+Définition à la ligne 594 du fichier term\&.h\&.
+.SS "#define subscript_characters   \fBCUR\fP Strings[350]"
+
+.PP
+Définition à la ligne 547 du fichier term\&.h\&.
+.SS "#define superscript_characters   \fBCUR\fP Strings[351]"
+
+.PP
+Définition à la ligne 548 du fichier term\&.h\&.
+.SS "#define tab   \fBCUR\fP Strings[134]"
+
+.PP
+Définition à la ligne 331 du fichier term\&.h\&.
+.SS "#define teleray_glitch   \fBdest_tabs_magic_smso\fP"
+
+.PP
+Définition à la ligne 598 du fichier term\&.h\&.
+.SS "#define TERMIOS   1"
+
+.PP
+Définition à la ligne 84 du fichier term\&.h\&.
+.SS "#define these_cause_cr   \fBCUR\fP Strings[352]"
+
+.PP
+Définition à la ligne 549 du fichier term\&.h\&.
+.SS "#define tilde_glitch   \fBCUR\fP Booleans[18]"
+
+.PP
+Définition à la ligne 145 du fichier term\&.h\&.
+.SS "#define to_status_line   \fBCUR\fP Strings[135]"
+
+.PP
+Définition à la ligne 332 du fichier term\&.h\&.
+.SS "#define tone   \fBCUR\fP Strings[282]"
+
+.PP
+Définition à la ligne 479 du fichier term\&.h\&.
+.SS "#define transparent_underline   \fBCUR\fP Booleans[19]"
+
+.PP
+Définition à la ligne 146 du fichier term\&.h\&.
+.SS "#define TTY   struct termios"
+
+.PP
+Définition à la ligne 87 du fichier term\&.h\&.
+.SS "#define underline_char   \fBCUR\fP Strings[136]"
+
+.PP
+Définition à la ligne 333 du fichier term\&.h\&.
+.SS "#define up_half_line   \fBCUR\fP Strings[137]"
+
+.PP
+Définition à la ligne 334 du fichier term\&.h\&.
+.SS "#define user0   \fBCUR\fP Strings[287]"
+
+.PP
+Définition à la ligne 484 du fichier term\&.h\&.
+.SS "#define user1   \fBCUR\fP Strings[288]"
+
+.PP
+Définition à la ligne 485 du fichier term\&.h\&.
+.SS "#define user2   \fBCUR\fP Strings[289]"
+
+.PP
+Définition à la ligne 486 du fichier term\&.h\&.
+.SS "#define user3   \fBCUR\fP Strings[290]"
+
+.PP
+Définition à la ligne 487 du fichier term\&.h\&.
+.SS "#define user4   \fBCUR\fP Strings[291]"
+
+.PP
+Définition à la ligne 488 du fichier term\&.h\&.
+.SS "#define user5   \fBCUR\fP Strings[292]"
+
+.PP
+Définition à la ligne 489 du fichier term\&.h\&.
+.SS "#define user6   \fBCUR\fP Strings[293]"
+
+.PP
+Définition à la ligne 490 du fichier term\&.h\&.
+.SS "#define user7   \fBCUR\fP Strings[294]"
+
+.PP
+Définition à la ligne 491 du fichier term\&.h\&.
+.SS "#define user8   \fBCUR\fP Strings[295]"
+
+.PP
+Définition à la ligne 492 du fichier term\&.h\&.
+.SS "#define user9   \fBCUR\fP Strings[296]"
+
+.PP
+Définition à la ligne 493 du fichier term\&.h\&.
+.SS "#define virtual_terminal   \fBCUR\fP Numbers[6]"
+
+.PP
+Définition à la ligne 170 du fichier term\&.h\&.
+.SS "#define wait_tone   \fBCUR\fP Strings[286]"
+
+.PP
+Définition à la ligne 483 du fichier term\&.h\&.
+.SS "#define wide_char_size   \fBCUR\fP Numbers[29]"
+
+.PP
+Définition à la ligne 193 du fichier term\&.h\&.
+.SS "#define width_status_line   \fBCUR\fP Numbers[7]"
+
+.PP
+Définition à la ligne 171 du fichier term\&.h\&.
+.SS "#define xoff_character   \fBCUR\fP Strings[154]"
+
+.PP
+Définition à la ligne 351 du fichier term\&.h\&.
+.SS "#define xon_character   \fBCUR\fP Strings[153]"
+
+.PP
+Définition à la ligne 350 du fichier term\&.h\&.
+.SS "#define xon_xoff   \fBCUR\fP Booleans[20]"
+
+.PP
+Définition à la ligne 147 du fichier term\&.h\&.
+.SS "#define zero_motion   \fBCUR\fP Strings[353]"
+
+.PP
+Définition à la ligne 550 du fichier term\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBterm\fP  \fBTERMINAL\fP"
+
+.SS "typedef struct \fBtermtype\fP  \fBTERMTYPE\fP"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "NCURSES_EXPORT (\fBint\fP)"
+
+.SS "\fBTERMTYPE\fP* NCURSES_EXPORT (\fBvoid\fP) const"
+
+.SS "NCURSES_EXPORT (char *) const"
+
+.SS "NCURSES_EXPORT (\fBconst\fP \fBTERMTYPE\fP *) const"
+
+.SS "NCURSES_EXPORT (\fBTERMINAL\fP *)"
+
+.SS "NCURSES_EXPORT_VAR (\fBTERMINAL\fP *)"
+
+.SS "NCURSES_EXPORT_VAR (\fBNCURSES_CONST\fP char * const)"
+
+.SS "NCURSES_EXPORT_VAR (char)"
+
+.SH "Documentation des variables"
+.PP 
+.SS "const char const char * const"
+
+.PP
+Définition à la ligne 726 du fichier term\&.h\&.
+.SS "int int"
+
+.PP
+Définition à la ligne 729 du fichier term\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,97 @@
+.TH "AComponent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AComponent \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AComponent\&.hpp>\fP
+.PP
+Dérivée par \fBAudioComponent\fP, \fBBackgroundComponent\fP, \fBGameComponent\fP, et \fBUIComponent\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBAComponent\fP (\fBVector2\fP< \fBint\fP > \fBconst\fP &pos, \fBComponentColor\fP \fBcolor\fP)"
+.br
+.ti -1c
+.RI "\fBAComponent\fP (\fBVector2\fP< \fBint\fP > \fBconst\fP &pos, \fBVector2\fP< \fBint\fP > \fBconst\fP &\fBsize\fP, \fBComponentColor\fP \fBcolor\fP)"
+.br
+.ti -1c
+.RI "\fBAComponent\fP (\fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBComponentColor\fP \fBcolor\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~AComponent\fP ()"
+.br
+.ti -1c
+.RI "\fBVector2\fP< \fBint\fP > \fBconst\fP & \fBgetPos\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetPos\fP (\fBconst\fP \fBVector2\fP< \fBint\fP > &pos)"
+.br
+.ti -1c
+.RI "\fBVector2\fP< \fBint\fP > \fBconst\fP & \fBgetSize\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSize\fP (\fBconst\fP \fBVector2\fP< \fBint\fP > &pos)"
+.br
+.ti -1c
+.RI "\fBComponentColor\fP \fBconst\fP & \fBgetColor\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetColor\fP (\fBconst\fP \fBComponentColor\fP \fBcolor\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 27 du fichier AComponent\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "AComponent::AComponent (\fBVector2\fP< \fBint\fP > \fBconst\fP & pos, \fBComponentColor\fP color)"
+
+.PP
+Définition à la ligne 13 du fichier AComponent\&.cpp\&.
+.SS "AComponent::AComponent (\fBVector2\fP< \fBint\fP > \fBconst\fP & pos, \fBVector2\fP< \fBint\fP > \fBconst\fP & size, \fBComponentColor\fP color)"
+
+.PP
+Définition à la ligne 16 du fichier AComponent\&.cpp\&.
+.SS "AComponent::AComponent (\fBint\fP x, \fBint\fP y, \fBComponentColor\fP color)"
+
+.PP
+Définition à la ligne 19 du fichier AComponent\&.cpp\&.
+.SS "AComponent::~AComponent ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 22 du fichier AComponent\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBComponentColor\fP \fBconst\fP & AComponent::getColor () const"
+
+.PP
+Définition à la ligne 45 du fichier AComponent\&.cpp\&.
+.SS "\fBVector2\fP< \fBint\fP > \fBconst\fP & AComponent::getPos () const"
+
+.PP
+Définition à la ligne 25 du fichier AComponent\&.cpp\&.
+.SS "\fBVector2\fP< \fBint\fP > \fBconst\fP & AComponent::getSize () const"
+
+.PP
+Définition à la ligne 35 du fichier AComponent\&.cpp\&.
+.SS "\fBvoid\fP AComponent::setColor (\fBconst\fP \fBComponentColor\fP color)"
+
+.PP
+Définition à la ligne 50 du fichier AComponent\&.cpp\&.
+.SS "\fBvoid\fP AComponent::setPos (\fBconst\fP \fBVector2\fP< \fBint\fP > & pos)"
+
+.PP
+Définition à la ligne 30 du fichier AComponent\&.cpp\&.
+.SS "\fBvoid\fP AComponent::setSize (\fBconst\fP \fBVector2\fP< \fBint\fP > & pos)"
+
+.PP
+Définition à la ligne 40 du fichier AComponent\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

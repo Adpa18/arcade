@@ -1,0 +1,82 @@
+.TH "SDL_DollarGestureEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_DollarGestureEvent \- Dollar Gesture Event (event\&.dgesture\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TouchID\fP \fBtouchId\fP"
+.br
+.ti -1c
+.RI "\fBSDL_GestureID\fP \fBgestureId\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBnumFingers\fP"
+.br
+.ti -1c
+.RI "float \fBerror\fP"
+.br
+.ti -1c
+.RI "float \fBx\fP"
+.br
+.ti -1c
+.RI "float \fBy\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Dollar Gesture Event (event\&.dgesture\&.*) 
+.PP
+Définition à la ligne 444 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "float SDL_DollarGestureEvent::error"
+
+.PP
+Définition à la ligne 451 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_GestureID\fP SDL_DollarGestureEvent::gestureId"
+
+.PP
+Définition à la ligne 449 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_DollarGestureEvent::numFingers"
+
+.PP
+Définition à la ligne 450 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_DollarGestureEvent::timestamp"
+
+.PP
+Définition à la ligne 447 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_TouchID\fP SDL_DollarGestureEvent::touchId"
+The touch device id 
+.PP
+Définition à la ligne 448 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_DollarGestureEvent::type"
+\fBSDL_DOLLARGESTURE\fP or \fBSDL_DOLLARRECORD\fP 
+.PP
+Définition à la ligne 446 du fichier SDL_events\&.h\&.
+.SS "float SDL_DollarGestureEvent::x"
+Normalized center of gesture 
+.PP
+Définition à la ligne 452 du fichier SDL_events\&.h\&.
+.SS "float SDL_DollarGestureEvent::y"
+Normalized center of gesture 
+.PP
+Définition à la ligne 453 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

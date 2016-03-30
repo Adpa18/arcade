@@ -1,0 +1,7 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$d1/db4/class_a_component.html" title="AComponent" alt="" coords="5,81,104,108"/>
+<area shape="rect" id="node2" href="$d3/dba/class_audio_component.html" title="AudioComponent" alt="" coords="170,5,293,32"/>
+<area shape="rect" id="node3" href="$d6/d31/class_background_component.html" title="BackgroundComponent" alt="" coords="152,56,311,83"/>
+<area shape="rect" id="node4" href="$df/d75/class_game_component.html" title="GameComponent" alt="" coords="169,107,293,133"/>
+<area shape="rect" id="node5" href="$d5/d71/class_u_i_component.html" title="UIComponent" alt="" coords="180,157,283,184"/>
+</map>

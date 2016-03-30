@@ -1,0 +1,75 @@
+.TH "SDL_ControllerButtonEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_ControllerButtonEvent \- Game controller button event structure (event\&.cbutton\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoystickID\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Game controller button event structure (event\&.cbutton\&.*) 
+.PP
+Définition à la ligne 370 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_ControllerButtonEvent::button"
+The controller button (SDL_GameControllerButton) 
+.PP
+Définition à la ligne 375 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_ControllerButtonEvent::padding1"
+
+.PP
+Définition à la ligne 377 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_ControllerButtonEvent::padding2"
+
+.PP
+Définition à la ligne 378 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_ControllerButtonEvent::state"
+\fBSDL_PRESSED\fP or \fBSDL_RELEASED\fP 
+.PP
+Définition à la ligne 376 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_ControllerButtonEvent::timestamp"
+
+.PP
+Définition à la ligne 373 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_ControllerButtonEvent::type"
+\fBSDL_CONTROLLERBUTTONDOWN\fP or \fBSDL_CONTROLLERBUTTONUP\fP 
+.PP
+Définition à la ligne 372 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoystickID\fP SDL_ControllerButtonEvent::which"
+The joystick instance id 
+.PP
+Définition à la ligne 374 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

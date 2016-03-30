@@ -1,0 +1,71 @@
+.TH "NCursesFramedPad" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesFramedPad \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesw\&.h>\fP
+.PP
+Est dérivée de \fBNCursesPad\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesFramedPad\fP (\fBNCursesWindow\fP &win, \fBint\fP nlines, \fBint\fP ncols, \fBint\fP v_grid=1, \fBint\fP h_grid=1)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesFramedPad\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetWindow\fP (\fBNCursesWindow\fP &view, \fBint\fP v_grid=1, \fBint\fP h_grid=1)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSubWindow\fP (\fBNCursesWindow\fP &sub)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOnOperation\fP (\fBint\fP pad_req)"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 1529 du fichier cursesw\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesFramedPad::NCursesFramedPad (\fBNCursesWindow\fP & win, \fBint\fP nlines, \fBint\fP ncols, \fBint\fP v_grid = \fC1\fP, \fBint\fP h_grid = \fC1\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1535 du fichier cursesw\&.h\&.
+.SS "virtual NCursesFramedPad::~NCursesFramedPad ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 1543 du fichier cursesw\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBvoid\fP NCursesFramedPad::OnOperation (\fBint\fP pad_req)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPad\fP\&.
+.SS "\fBvoid\fP NCursesFramedPad::setSubWindow (\fBNCursesWindow\fP & sub)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPad\fP\&.
+.PP
+Définition à la ligne 1555 du fichier cursesw\&.h\&.
+.SS "\fBvoid\fP NCursesFramedPad::setWindow (\fBNCursesWindow\fP & view, \fBint\fP v_grid = \fC1\fP, \fBint\fP h_grid = \fC1\fP)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPad\fP\&.
+.PP
+Définition à la ligne 1547 du fichier cursesw\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

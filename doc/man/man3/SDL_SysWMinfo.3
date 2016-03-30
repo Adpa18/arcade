@@ -1,0 +1,107 @@
+.TH "SDL_SysWMinfo" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_SysWMinfo \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_syswm\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_version\fP \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SYSWM_TYPE\fP \fBsubsystem\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      Display * \fBdisplay\fP"
+.br
+.ti -1c
+.RI "      Window \fBwindow\fP"
+.br
+.ti -1c
+.RI "   } \fBx11\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      struct wl_display * \fBdisplay\fP"
+.br
+.ti -1c
+.RI "      struct wl_surface * \fBsurface\fP"
+.br
+.ti -1c
+.RI "      struct wl_shell_surface * \fBshell_surface\fP"
+.br
+.ti -1c
+.RI "   } \fBwl\fP"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBdummy\fP"
+.br
+.ti -1c
+.RI "} \fBinfo\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+The custom window manager information structure\&.
+.PP
+When this structure is returned, it holds information about which low level system it is using, and will be one of SDL_SYSWM_TYPE\&. 
+.PP
+Définition à la ligne 181 du fichier SDL_syswm\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "Display* SDL_SysWMinfo::display"
+The X11 display 
+.PP
+Définition à la ligne 203 du fichier SDL_syswm\&.h\&.
+.SS "struct wl_display* SDL_SysWMinfo::display"
+Wayland display 
+.PP
+Définition à la ligne 241 du fichier SDL_syswm\&.h\&.
+.SS "\fBint\fP SDL_SysWMinfo::dummy"
+
+.PP
+Définition à la ligne 263 du fichier SDL_syswm\&.h\&.
+.SS "union { \&.\&.\&. }   SDL_SysWMinfo::info"
+
+.SS "struct wl_shell_surface* SDL_SysWMinfo::shell_surface"
+Wayland shell_surface (window manager handle) 
+.PP
+Définition à la ligne 243 du fichier SDL_syswm\&.h\&.
+.SS "\fBSDL_SYSWM_TYPE\fP SDL_SysWMinfo::subsystem"
+
+.PP
+Définition à la ligne 184 du fichier SDL_syswm\&.h\&.
+.SS "struct wl_surface* SDL_SysWMinfo::surface"
+Wayland surface 
+.PP
+Définition à la ligne 242 du fichier SDL_syswm\&.h\&.
+.SS "\fBSDL_version\fP SDL_SysWMinfo::version"
+
+.PP
+Définition à la ligne 183 du fichier SDL_syswm\&.h\&.
+.SS "Window SDL_SysWMinfo::window"
+The X11 window 
+.PP
+Définition à la ligne 204 du fichier SDL_syswm\&.h\&.
+.SS "struct { \&.\&.\&. }   SDL_SysWMinfo::wl"
+
+.SS "struct { \&.\&.\&. }   SDL_SysWMinfo::x11"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

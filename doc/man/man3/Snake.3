@@ -1,0 +1,73 @@
+.TH "Snake" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Snake \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Snake\&.hpp>\fP
+.PP
+Est dérivée de \fBAGame\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBSnake\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Snake\fP ()"
+.br
+.ti -1c
+.RI "virtual std::stack< \fBAComponent\fP * > \fBcompute\fP (\fBint\fP key)"
+.br
+.ti -1c
+.RI "virtual std::stack< \fBAComponent\fP * > \fBgetInfos\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBrestart\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBPlay\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 31 du fichier Snake\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Snake::Snake ()"
+
+.PP
+Définition à la ligne 13 du fichier Snake\&.cpp\&.
+.SS "Snake::~Snake ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 24 du fichier Snake\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "std::stack< \fBAComponent\fP * > Snake::compute (\fBint\fP key)\fC [virtual]\fP"
+
+.PP
+Implémente \fBAGame\fP\&.
+.PP
+Définition à la ligne 93 du fichier Snake\&.cpp\&.
+.SS "std::stack< \fBAComponent\fP * > Snake::getInfos (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implémente \fBAGame\fP\&.
+.PP
+Définition à la ligne 160 du fichier Snake\&.cpp\&.
+.SS "\fBvoid\fP Snake::Play (\fBvoid\fP)"
+
+.SS "\fBvoid\fP Snake::restart (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implémente \fBAGame\fP\&.
+.PP
+Définition à la ligne 169 du fichier Snake\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

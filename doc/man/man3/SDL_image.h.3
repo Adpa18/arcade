@@ -1,0 +1,311 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_image.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_image.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL\&.h'\fP
+.br
+\fC#include 'SDL_version\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_IMAGE_MAJOR_VERSION\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSDL_IMAGE_MINOR_VERSION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_IMAGE_PATCHLEVEL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSDL_IMAGE_VERSION\fP(X)                                            "
+.br
+.ti -1c
+.RI "#define \fBIMG_SetError\fP   \fBSDL_SetError\fP"
+.br
+.ti -1c
+.RI "#define \fBIMG_GetError\fP   \fBSDL_GetError\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBIMG_InitFlags\fP { \fBIMG_INIT_JPG\fP = 0x00000001, \fBIMG_INIT_PNG\fP = 0x00000002, \fBIMG_INIT_TIF\fP = 0x00000004, \fBIMG_INIT_WEBP\fP = 0x00000008 }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBconst\fP \fBSDL_version\fP *\fBSDLCALL\fP \fBIMG_Linked_Version\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_Init\fP (\fBint\fP \fBflags\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBIMG_Quit\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadTyped_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP, \fBint\fP freesrc, \fBconst\fP char *\fBtype\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_Load\fP (\fBconst\fP char *file)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_Load_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP, \fBint\fP freesrc)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Texture\fP *\fBSDLCALL\fP \fBIMG_LoadTexture\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP char *file)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Texture\fP *\fBSDLCALL\fP \fBIMG_LoadTexture_RW\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_RWops\fP *\fBsrc\fP, \fBint\fP freesrc)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Texture\fP *\fBSDLCALL\fP \fBIMG_LoadTextureTyped_RW\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_RWops\fP *\fBsrc\fP, \fBint\fP freesrc, \fBconst\fP char *\fBtype\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isICO\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isCUR\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isBMP\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isGIF\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isJPG\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isLBM\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isPCX\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isPNG\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isPNM\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isTIF\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isXCF\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isXPM\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isXV\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_isWEBP\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadICO_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadCUR_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadBMP_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadGIF_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadJPG_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadLBM_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadPCX_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadPNG_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadPNM_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadTGA_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadTIF_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadXCF_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadXPM_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadXV_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_LoadWEBP_RW\fP (\fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBIMG_ReadXPMFromArray\fP (char **xpm)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_SavePNG\fP (\fBSDL_Surface\fP *surface, \fBconst\fP char *file)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBIMG_SavePNG_RW\fP (\fBSDL_Surface\fP *surface, \fBSDL_RWops\fP *\fBdst\fP, \fBint\fP freedst)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define IMG_GetError   \fBSDL_GetError\fP"
+
+.PP
+Définition à la ligne 137 du fichier SDL_image\&.h\&.
+.SS "#define IMG_SetError   \fBSDL_SetError\fP"
+
+.PP
+Définition à la ligne 136 du fichier SDL_image\&.h\&.
+.SS "#define SDL_IMAGE_MAJOR_VERSION   2"
+
+.PP
+Définition à la ligne 38 du fichier SDL_image\&.h\&.
+.SS "#define SDL_IMAGE_MINOR_VERSION   0"
+
+.PP
+Définition à la ligne 39 du fichier SDL_image\&.h\&.
+.SS "#define SDL_IMAGE_PATCHLEVEL   1"
+
+.PP
+Définition à la ligne 40 du fichier SDL_image\&.h\&.
+.SS "#define SDL_IMAGE_VERSION(X)"
+\fBValeur :\fP
+.PP
+.nf
+{                                                   \
+    (X)->major = SDL_IMAGE_MAJOR_VERSION;           \
+    (X)->minor = SDL_IMAGE_MINOR_VERSION;           \
+    (X)->patch = SDL_IMAGE_PATCHLEVEL;              \
+}
+.fi
+.PP
+Définition à la ligne 45 du fichier SDL_image\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBIMG_InitFlags\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIIMG_INIT_JPG \fP\fP
+.TP
+\fB\fIIMG_INIT_PNG \fP\fP
+.TP
+\fB\fIIMG_INIT_TIF \fP\fP
+.TP
+\fB\fIIMG_INIT_WEBP \fP\fP
+.PP
+Définition à la ligne 58 du fichier SDL_image\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_Init (\fBint\fP flags)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isBMP (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isCUR (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isGIF (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isICO (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isJPG (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isLBM (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isPCX (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isPNG (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isPNM (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isTIF (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isWEBP (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isXCF (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isXPM (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_isXV (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBconst\fP \fBSDL_version\fP* \fBSDLCALL\fP IMG_Linked_Version (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_Load (\fBconst\fP char * file)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_Load_RW (\fBSDL_RWops\fP * src, \fBint\fP freesrc)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadBMP_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadCUR_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadGIF_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadICO_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadJPG_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadLBM_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadPCX_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadPNG_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadPNM_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Texture\fP* \fBSDLCALL\fP IMG_LoadTexture (\fBSDL_Renderer\fP * renderer, \fBconst\fP char * file)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Texture\fP* \fBSDLCALL\fP IMG_LoadTexture_RW (\fBSDL_Renderer\fP * renderer, \fBSDL_RWops\fP * src, \fBint\fP freesrc)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Texture\fP* \fBSDLCALL\fP IMG_LoadTextureTyped_RW (\fBSDL_Renderer\fP * renderer, \fBSDL_RWops\fP * src, \fBint\fP freesrc, \fBconst\fP char * type)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadTGA_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadTIF_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadTyped_RW (\fBSDL_RWops\fP * src, \fBint\fP freesrc, \fBconst\fP char * type)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadWEBP_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadXCF_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadXPM_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_LoadXV_RW (\fBSDL_RWops\fP * src)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP IMG_Quit (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP IMG_ReadXPMFromArray (char ** xpm)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_SavePNG (\fBSDL_Surface\fP * surface, \fBconst\fP char * file)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP IMG_SavePNG_RW (\fBSDL_Surface\fP * surface, \fBSDL_RWops\fP * dst, \fBint\fP freedst)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

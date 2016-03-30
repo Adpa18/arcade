@@ -1,0 +1,284 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_log.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_log.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_MAX_LOG_MESSAGE\fP   4096"
+.br
+.RI "\fIThe maximum size of a log message\&. \fP"
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBSDL_LogOutputFunction\fP) (\fBvoid\fP *userdata, \fBint\fP category, \fBSDL_LogPriority\fP priority, \fBconst\fP char *\fBmessage\fP)"
+.br
+.RI "\fIThe prototype for the log output function\&. \fP"
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBSDL_LOG_CATEGORY_APPLICATION\fP, \fBSDL_LOG_CATEGORY_ERROR\fP, \fBSDL_LOG_CATEGORY_ASSERT\fP, \fBSDL_LOG_CATEGORY_SYSTEM\fP, \fBSDL_LOG_CATEGORY_AUDIO\fP, \fBSDL_LOG_CATEGORY_VIDEO\fP, \fBSDL_LOG_CATEGORY_RENDER\fP, \fBSDL_LOG_CATEGORY_INPUT\fP, \fBSDL_LOG_CATEGORY_TEST\fP, \fBSDL_LOG_CATEGORY_RESERVED1\fP, \fBSDL_LOG_CATEGORY_RESERVED2\fP, \fBSDL_LOG_CATEGORY_RESERVED3\fP, \fBSDL_LOG_CATEGORY_RESERVED4\fP, \fBSDL_LOG_CATEGORY_RESERVED5\fP, \fBSDL_LOG_CATEGORY_RESERVED6\fP, \fBSDL_LOG_CATEGORY_RESERVED7\fP, \fBSDL_LOG_CATEGORY_RESERVED8\fP, \fBSDL_LOG_CATEGORY_RESERVED9\fP, \fBSDL_LOG_CATEGORY_RESERVED10\fP, \fBSDL_LOG_CATEGORY_CUSTOM\fP }
+.RI "\fIThe predefined log categories\&. \fP""
+.br
+.ti -1c
+.RI "enum \fBSDL_LogPriority\fP { \fBSDL_LOG_PRIORITY_VERBOSE\fP = 1, \fBSDL_LOG_PRIORITY_DEBUG\fP, \fBSDL_LOG_PRIORITY_INFO\fP, \fBSDL_LOG_PRIORITY_WARN\fP, \fBSDL_LOG_PRIORITY_ERROR\fP, \fBSDL_LOG_PRIORITY_CRITICAL\fP, \fBSDL_NUM_LOG_PRIORITIES\fP }
+.RI "\fIThe predefined log priorities\&. \fP""
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogSetAllPriority\fP (\fBSDL_LogPriority\fP priority)"
+.br
+.RI "\fISet the priority of all log categories\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogSetPriority\fP (\fBint\fP category, \fBSDL_LogPriority\fP priority)"
+.br
+.RI "\fISet the priority of a particular log category\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_LogPriority\fP \fBSDLCALL\fP \fBSDL_LogGetPriority\fP (\fBint\fP category)"
+.br
+.RI "\fIGet the priority of a particular log category\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogResetPriorities\fP (\fBvoid\fP)"
+.br
+.RI "\fIReset all priorities to default\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_Log\fP (\fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(1)"
+.br
+.RI "\fILog a message with SDL_LOG_CATEGORY_APPLICATION and SDL_LOG_PRIORITY_INFO\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogVerbose\fP (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fILog a message with SDL_LOG_PRIORITY_VERBOSE\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogDebug\fP (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fILog a message with SDL_LOG_PRIORITY_DEBUG\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogInfo\fP (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fILog a message with SDL_LOG_PRIORITY_INFO\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogWarn\fP (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fILog a message with SDL_LOG_PRIORITY_WARN\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogError\fP (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fILog a message with SDL_LOG_PRIORITY_ERROR\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogCritical\fP (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fILog a message with SDL_LOG_PRIORITY_CRITICAL\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogMessage\fP (\fBint\fP category, \fBSDL_LogPriority\fP priority, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(3)"
+.br
+.RI "\fILog a message with the specified category and priority\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogMessageV\fP (\fBint\fP category, \fBSDL_LogPriority\fP priority, \fBconst\fP char *fmt, \fBva_list\fP ap)"
+.br
+.RI "\fILog a message with the specified category and priority\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogGetOutputFunction\fP (\fBSDL_LogOutputFunction\fP *callback, \fBvoid\fP **userdata)"
+.br
+.RI "\fIGet the current log output function\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_LogSetOutputFunction\fP (\fBSDL_LogOutputFunction\fP callback, \fBvoid\fP *userdata)"
+.br
+.RI "\fIThis function allows you to replace the default log output function with one of your own\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Simple log messages with categories and priorities\&.
+.PP
+By default logs are quiet, but if you're debugging SDL you might want: 
+.PP
+.nf
+SDL_LogSetAllPriority(SDL_LOG_PRIORITY_WARN);
+
+.fi
+.PP
+.PP
+Here's where the messages go on different platforms: Windows: debug output stream Android: log output Others: standard error output (stderr) 
+.PP
+Définition dans le fichier \fBSDL_log\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_MAX_LOG_MESSAGE   4096"
+
+.PP
+The maximum size of a log message\&. Messages longer than the maximum size will be truncated 
+.PP
+Définition à la ligne 54 du fichier SDL_log\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef \fBvoid\fP(* SDL_LogOutputFunction) (\fBvoid\fP *userdata, \fBint\fP category, \fBSDL_LogPriority\fP priority, \fBconst\fP char *\fBmessage\fP)"
+
+.PP
+The prototype for the log output function\&. 
+.PP
+Définition à la ligne 189 du fichier SDL_log\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "anonymous enum"
+
+.PP
+The predefined log categories\&. By default the application category is enabled at the INFO level, the assert category is enabled at the WARN level, test is enabled at the VERBOSE level and all other categories are enabled at the CRITICAL level\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_LOG_CATEGORY_APPLICATION \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_ERROR \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_ASSERT \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_SYSTEM \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_AUDIO \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_VIDEO \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RENDER \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_INPUT \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_TEST \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED1 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED2 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED3 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED4 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED5 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED6 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED7 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED8 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED9 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_RESERVED10 \fP\fP
+.TP
+\fB\fISDL_LOG_CATEGORY_CUSTOM \fP\fP
+.PP
+Définition à la ligne 64 du fichier SDL_log\&.h\&.
+.SS "enum \fBSDL_LogPriority\fP"
+
+.PP
+The predefined log priorities\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_LOG_PRIORITY_VERBOSE \fP\fP
+.TP
+\fB\fISDL_LOG_PRIORITY_DEBUG \fP\fP
+.TP
+\fB\fISDL_LOG_PRIORITY_INFO \fP\fP
+.TP
+\fB\fISDL_LOG_PRIORITY_WARN \fP\fP
+.TP
+\fB\fISDL_LOG_PRIORITY_ERROR \fP\fP
+.TP
+\fB\fISDL_LOG_PRIORITY_CRITICAL \fP\fP
+.TP
+\fB\fISDL_NUM_LOG_PRIORITIES \fP\fP
+.PP
+Définition à la ligne 102 du fichier SDL_log\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_Log (\fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_CATEGORY_APPLICATION and SDL_LOG_PRIORITY_INFO\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogCritical (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_PRIORITY_CRITICAL\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogDebug (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_PRIORITY_DEBUG\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogError (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_PRIORITY_ERROR\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogGetOutputFunction (\fBSDL_LogOutputFunction\fP * callback, \fBvoid\fP ** userdata)"
+
+.PP
+Get the current log output function\&. 
+.SS "\fBDECLSPEC\fP \fBSDL_LogPriority\fP \fBSDLCALL\fP SDL_LogGetPriority (\fBint\fP category)"
+
+.PP
+Get the priority of a particular log category\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogInfo (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_PRIORITY_INFO\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogMessage (\fBint\fP category, \fBSDL_LogPriority\fP priority, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with the specified category and priority\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogMessageV (\fBint\fP category, \fBSDL_LogPriority\fP priority, \fBconst\fP char * fmt, \fBva_list\fP ap)"
+
+.PP
+Log a message with the specified category and priority\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogResetPriorities (\fBvoid\fP)"
+
+.PP
+Reset all priorities to default\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This is called in \fBSDL_Quit()\fP\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogSetAllPriority (\fBSDL_LogPriority\fP priority)"
+
+.PP
+Set the priority of all log categories\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogSetOutputFunction (\fBSDL_LogOutputFunction\fP callback, \fBvoid\fP * userdata)"
+
+.PP
+This function allows you to replace the default log output function with one of your own\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogSetPriority (\fBint\fP category, \fBSDL_LogPriority\fP priority)"
+
+.PP
+Set the priority of a particular log category\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogVerbose (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_PRIORITY_VERBOSE\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_LogWarn (\fBint\fP category, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a message with SDL_LOG_PRIORITY_WARN\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

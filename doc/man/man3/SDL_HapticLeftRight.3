@@ -1,0 +1,67 @@
+.TH "SDL_HapticLeftRight" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticLeftRight \- A structure containing a template for a Left/Right effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBlarge_magnitude\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBsmall_magnitude\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+A structure containing a template for a Left/Right effect\&. 
+
+This struct is exclusively for the \fBSDL_HAPTIC_LEFTRIGHT\fP effect\&.
+.PP
+The Left/Right effect is used to explicitly control the large and small motors, commonly found in modern game controllers\&. One motor is high frequency, the other is low frequency\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_HAPTIC_LEFTRIGHT\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.PP
+Définition à la ligne 663 du fichier SDL_haptic\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint16\fP SDL_HapticLeftRight::large_magnitude"
+Control of the large controller motor\&. 
+.PP
+Définition à la ligne 672 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint32\fP SDL_HapticLeftRight::length"
+Duration of the effect\&. 
+.PP
+Définition à la ligne 669 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticLeftRight::small_magnitude"
+Control of the small controller motor\&. 
+.PP
+Définition à la ligne 673 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticLeftRight::type"
+\fBSDL_HAPTIC_LEFTRIGHT\fP 
+.PP
+Définition à la ligne 666 du fichier SDL_haptic\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,198 @@
+.TH "fieldnode" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fieldnode \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <form\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "unsigned short \fBstatus\fP"
+.br
+.ti -1c
+.RI "short \fBrows\fP"
+.br
+.ti -1c
+.RI "short \fBcols\fP"
+.br
+.ti -1c
+.RI "short \fBfrow\fP"
+.br
+.ti -1c
+.RI "short \fBfcol\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdrows\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdcols\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmaxgrow\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnrow\fP"
+.br
+.ti -1c
+.RI "short \fBnbuf\fP"
+.br
+.ti -1c
+.RI "short \fBjust\fP"
+.br
+.ti -1c
+.RI "short \fBpage\fP"
+.br
+.ti -1c
+.RI "short \fBindex\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBpad\fP"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBfore\fP"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBback\fP"
+.br
+.ti -1c
+.RI "\fBField_Options\fP \fBopts\fP"
+.br
+.ti -1c
+.RI "struct \fBfieldnode\fP * \fBsnext\fP"
+.br
+.ti -1c
+.RI "struct \fBfieldnode\fP * \fBsprev\fP"
+.br
+.ti -1c
+.RI "struct \fBfieldnode\fP * \fBlink\fP"
+.br
+.ti -1c
+.RI "struct \fBformnode\fP * \fBform\fP"
+.br
+.ti -1c
+.RI "struct \fBtypenode\fP * \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBarg\fP"
+.br
+.ti -1c
+.RI "\fBFIELD_CELL\fP * \fBbuf\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBusrptr\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 72 du fichier form\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBvoid\fP* fieldnode::arg"
+
+.PP
+Définition à la ligne 95 du fichier form\&.h\&.
+.SS "\fBchtype\fP fieldnode::back"
+
+.PP
+Définition à la ligne 88 du fichier form\&.h\&.
+.SS "\fBFIELD_CELL\fP* fieldnode::buf"
+
+.PP
+Définition à la ligne 96 du fichier form\&.h\&.
+.SS "short fieldnode::cols"
+
+.PP
+Définition à la ligne 75 du fichier form\&.h\&.
+.SS "\fBint\fP fieldnode::dcols"
+
+.PP
+Définition à la ligne 79 du fichier form\&.h\&.
+.SS "\fBint\fP fieldnode::drows"
+
+.PP
+Définition à la ligne 78 du fichier form\&.h\&.
+.SS "short fieldnode::fcol"
+
+.PP
+Définition à la ligne 77 du fichier form\&.h\&.
+.SS "\fBchtype\fP fieldnode::fore"
+
+.PP
+Définition à la ligne 87 du fichier form\&.h\&.
+.SS "struct \fBformnode\fP* fieldnode::form"
+
+.PP
+Définition à la ligne 93 du fichier form\&.h\&.
+.SS "short fieldnode::frow"
+
+.PP
+Définition à la ligne 76 du fichier form\&.h\&.
+.SS "short fieldnode::index"
+
+.PP
+Définition à la ligne 85 du fichier form\&.h\&.
+.SS "short fieldnode::just"
+
+.PP
+Définition à la ligne 83 du fichier form\&.h\&.
+.SS "struct \fBfieldnode\fP* fieldnode::link"
+
+.PP
+Définition à la ligne 92 du fichier form\&.h\&.
+.SS "\fBint\fP fieldnode::maxgrow"
+
+.PP
+Définition à la ligne 80 du fichier form\&.h\&.
+.SS "short fieldnode::nbuf"
+
+.PP
+Définition à la ligne 82 du fichier form\&.h\&.
+.SS "\fBint\fP fieldnode::nrow"
+
+.PP
+Définition à la ligne 81 du fichier form\&.h\&.
+.SS "\fBField_Options\fP fieldnode::opts"
+
+.PP
+Définition à la ligne 89 du fichier form\&.h\&.
+.SS "\fBint\fP fieldnode::pad"
+
+.PP
+Définition à la ligne 86 du fichier form\&.h\&.
+.SS "short fieldnode::page"
+
+.PP
+Définition à la ligne 84 du fichier form\&.h\&.
+.SS "short fieldnode::rows"
+
+.PP
+Définition à la ligne 74 du fichier form\&.h\&.
+.SS "struct \fBfieldnode\fP* fieldnode::snext"
+
+.PP
+Définition à la ligne 90 du fichier form\&.h\&.
+.SS "struct \fBfieldnode\fP* fieldnode::sprev"
+
+.PP
+Définition à la ligne 91 du fichier form\&.h\&.
+.SS "unsigned short fieldnode::status"
+
+.PP
+Définition à la ligne 73 du fichier form\&.h\&.
+.SS "struct \fBtypenode\fP* fieldnode::type"
+
+.PP
+Définition à la ligne 94 du fichier form\&.h\&.
+.SS "\fBvoid\fP* fieldnode::usrptr"
+
+.PP
+Définition à la ligne 97 du fichier form\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

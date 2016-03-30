@@ -1,0 +1,183 @@
+.TH "NCursesPad" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesPad \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesw\&.h>\fP
+.PP
+Est dérivée de \fBNCursesWindow\fP\&.
+.PP
+Dérivée par \fBNCursesFramedPad\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesPad\fP (\fBint\fP nlines, \fBint\fP ncols)"
+.br
+.ti -1c
+.RI "\fBNCursesPad\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesPad\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesPad\fP (\fBconst\fP \fBNCursesPad\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesPad\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBechochar\fP (\fBconst\fP \fBchtype\fP ch)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrefresh\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrefresh\fP (\fBint\fP pminrow, \fBint\fP pmincol, \fBint\fP sminrow, \fBint\fP smincol, \fBint\fP smaxrow, \fBint\fP smaxcol)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnoutrefresh\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnoutrefresh\fP (\fBint\fP pminrow, \fBint\fP pmincol, \fBint\fP sminrow, \fBint\fP smincol, \fBint\fP smaxrow, \fBint\fP smaxcol)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBsetWindow\fP (\fBNCursesWindow\fP &view, \fBint\fP v_grid=1, \fBint\fP h_grid=1)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBsetSubWindow\fP (\fBNCursesWindow\fP &sub)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBoperator()\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBWin\fP (\fBvoid\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBgetWindow\fP (\fBvoid\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBgetSubWindow\fP (\fBvoid\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBdriver\fP (\fBint\fP key)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOnUnknownOperation\fP (\fBint\fP pad_req)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOnNavigationError\fP (\fBint\fP pad_req)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOnOperation\fP (\fBint\fP pad_req)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBmin_row\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmin_col\fP"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 1413 du fichier cursesw\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesPad::NCursesPad (\fBint\fP nlines, \fBint\fP ncols)"
+
+.SS "NCursesPad::NCursesPad (\fBconst\fP \fBNCursesPad\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1471 du fichier cursesw\&.h\&.
+.SS "virtual NCursesPad::~NCursesPad ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 1482 du fichier cursesw\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBint\fP NCursesPad::driver (\fBint\fP key)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBint\fP NCursesPad::echochar (\fBconst\fP \fBchtype\fP ch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1484 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesPad::getSubWindow (\fBvoid\fP) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 1433 du fichier cursesw\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesPad::getWindow (\fBvoid\fP) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 1429 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesPad::noutrefresh ()\fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesWindow\fP\&.
+.SS "\fBint\fP NCursesPad::noutrefresh (\fBint\fP pminrow, \fBint\fP pmincol, \fBint\fP sminrow, \fBint\fP smincol, \fBint\fP smaxrow, \fBint\fP smaxcol)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1506 du fichier cursesw\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPad::OnNavigationError (\fBint\fP pad_req)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 1446 du fichier cursesw\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPad::OnOperation (\fBint\fP pad_req)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesFramedPad\fP\&.
+.PP
+Définition à la ligne 1452 du fichier cursesw\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPad::OnUnknownOperation (\fBint\fP pad_req)\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 1440 du fichier cursesw\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPad::operator() (\fBvoid\fP)\fC [virtual]\fP"
+
+.SS "\fBNCursesPad\fP& NCursesPad::operator= (\fBconst\fP \fBNCursesPad\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1462 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesPad::refresh ()\fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesWindow\fP\&.
+.SS "\fBint\fP NCursesPad::refresh (\fBint\fP pminrow, \fBint\fP pmincol, \fBint\fP sminrow, \fBint\fP smincol, \fBint\fP smaxrow, \fBint\fP smaxcol)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 1492 du fichier cursesw\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPad::setSubWindow (\fBNCursesWindow\fP & sub)\fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesFramedPad\fP\&.
+.SS "virtual \fBvoid\fP NCursesPad::setWindow (\fBNCursesWindow\fP & view, \fBint\fP v_grid = \fC1\fP, \fBint\fP h_grid = \fC1\fP)\fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesFramedPad\fP\&.
+.SS "\fBNCursesWindow\fP* NCursesPad::Win (\fBvoid\fP) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 1424 du fichier cursesw\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBint\fP NCursesPad::min_col\fC [protected]\fP"
+
+.PP
+Définition à la ligne 1422 du fichier cursesw\&.h\&.
+.SS "\fBint\fP NCursesPad::min_row\fC [protected]\fP"
+
+.PP
+Définition à la ligne 1422 du fichier cursesw\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

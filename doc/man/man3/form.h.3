@@ -1,0 +1,773 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/form.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/form.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/curses\&.h>\fP
+.br
+\fC#include <ncurses/eti\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_PAGE\fP"
+.br
+.ti -1c
+.RI "struct \fBfieldnode\fP"
+.br
+.ti -1c
+.RI "struct \fBformnode\fP"
+.br
+.ti -1c
+.RI "struct \fBtypenode\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNCURSES_FIELD_INTERNALS\fP   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBNO_JUSTIFICATION\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBJUSTIFY_LEFT\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBJUSTIFY_CENTER\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBJUSTIFY_RIGHT\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBO_VISIBLE\fP   (0x0001U)"
+.br
+.ti -1c
+.RI "#define \fBO_ACTIVE\fP   (0x0002U)"
+.br
+.ti -1c
+.RI "#define \fBO_PUBLIC\fP   (0x0004U)"
+.br
+.ti -1c
+.RI "#define \fBO_EDIT\fP   (0x0008U)"
+.br
+.ti -1c
+.RI "#define \fBO_WRAP\fP   (0x0010U)"
+.br
+.ti -1c
+.RI "#define \fBO_BLANK\fP   (0x0020U)"
+.br
+.ti -1c
+.RI "#define \fBO_AUTOSKIP\fP   (0x0040U)"
+.br
+.ti -1c
+.RI "#define \fBO_NULLOK\fP   (0x0080U)"
+.br
+.ti -1c
+.RI "#define \fBO_PASSOK\fP   (0x0100U)"
+.br
+.ti -1c
+.RI "#define \fBO_STATIC\fP   (0x0200U)"
+.br
+.ti -1c
+.RI "#define \fBO_DYNAMIC_JUSTIFY\fP   (0x0400U)	/* ncurses extension	*/"
+.br
+.ti -1c
+.RI "#define \fBO_NL_OVERLOAD\fP   (0x0001U)"
+.br
+.ti -1c
+.RI "#define \fBO_BS_OVERLOAD\fP   (0x0002U)"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_PAGE\fP   (\fBKEY_MAX\fP + 1)	/* \fBmove\fP to next page		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_PAGE\fP   (\fBKEY_MAX\fP + 2)	/* \fBmove\fP to previous page	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_FIRST_PAGE\fP   (\fBKEY_MAX\fP + 3)	/* \fBmove\fP to \fBfirst\fP page		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_LAST_PAGE\fP   (\fBKEY_MAX\fP + 4)	/* \fBmove\fP to last page		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_FIELD\fP   (\fBKEY_MAX\fP + 5)	/* \fBmove\fP to next field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_FIELD\fP   (\fBKEY_MAX\fP + 6)	/* \fBmove\fP to previous field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_FIRST_FIELD\fP   (\fBKEY_MAX\fP + 7)	/* \fBmove\fP to \fBfirst\fP field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_LAST_FIELD\fP   (\fBKEY_MAX\fP + 8)	/* \fBmove\fP to last field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SNEXT_FIELD\fP   (\fBKEY_MAX\fP + 9)	/* \fBmove\fP to sorted next field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SPREV_FIELD\fP   (\fBKEY_MAX\fP + 10)	/* \fBmove\fP to sorted prev field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SFIRST_FIELD\fP   (\fBKEY_MAX\fP + 11)	/* \fBmove\fP to sorted \fBfirst\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SLAST_FIELD\fP   (\fBKEY_MAX\fP + 12)	/* \fBmove\fP to sorted last field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_LEFT_FIELD\fP   (\fBKEY_MAX\fP + 13)	/* \fBmove\fP to \fBleft\fP to field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_RIGHT_FIELD\fP   (\fBKEY_MAX\fP + 14)	/* \fBmove\fP to \fBright\fP to field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_UP_FIELD\fP   (\fBKEY_MAX\fP + 15)	/* \fBmove\fP to up to field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_DOWN_FIELD\fP   (\fBKEY_MAX\fP + 16)	/* \fBmove\fP to down to field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_CHAR\fP   (\fBKEY_MAX\fP + 17)	/* \fBmove\fP to next char \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_CHAR\fP   (\fBKEY_MAX\fP + 18)	/* \fBmove\fP to prev char \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_LINE\fP   (\fBKEY_MAX\fP + 19)	/* \fBmove\fP to next line \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_LINE\fP   (\fBKEY_MAX\fP + 20)	/* \fBmove\fP to prev line \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_WORD\fP   (\fBKEY_MAX\fP + 21)	/* \fBmove\fP to next word \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_WORD\fP   (\fBKEY_MAX\fP + 22)	/* \fBmove\fP to prev word \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_BEG_FIELD\fP   (\fBKEY_MAX\fP + 23)	/* \fBmove\fP to \fBfirst\fP char \fBin\fP field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_END_FIELD\fP   (\fBKEY_MAX\fP + 24)	/* \fBmove\fP after last char \fBin\fP fld	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_BEG_LINE\fP   (\fBKEY_MAX\fP + 25)	/* \fBmove\fP to beginning of line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_END_LINE\fP   (\fBKEY_MAX\fP + 26)	/* \fBmove\fP after last char \fBin\fP line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_LEFT_CHAR\fP   (\fBKEY_MAX\fP + 27)	/* \fBmove\fP \fBleft\fP \fBin\fP field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_RIGHT_CHAR\fP   (\fBKEY_MAX\fP + 28)	/* \fBmove\fP \fBright\fP \fBin\fP field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_UP_CHAR\fP   (\fBKEY_MAX\fP + 29)	/* \fBmove\fP up \fBin\fP field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_DOWN_CHAR\fP   (\fBKEY_MAX\fP + 30)	/* \fBmove\fP down \fBin\fP field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEW_LINE\fP   (\fBKEY_MAX\fP + 31)	/* insert/overlay new line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_INS_CHAR\fP   (\fBKEY_MAX\fP + 32)	/* insert blank char at cursor	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_INS_LINE\fP   (\fBKEY_MAX\fP + 33)	/* insert blank line at cursor	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_DEL_CHAR\fP   (\fBKEY_MAX\fP + 34)	/* delete char at cursor	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_DEL_PREV\fP   (\fBKEY_MAX\fP + 35)	/* delete char before cursor	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_DEL_LINE\fP   (\fBKEY_MAX\fP + 36)	/* delete line at cursor	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_DEL_WORD\fP   (\fBKEY_MAX\fP + 37)	/* delete word at cursor	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_CLR_EOL\fP   (\fBKEY_MAX\fP + 38)	/* \fBclear\fP to \fBend\fP of line		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_CLR_EOF\fP   (\fBKEY_MAX\fP + 39)	/* \fBclear\fP to \fBend\fP of field	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_CLR_FIELD\fP   (\fBKEY_MAX\fP + 40)	/* \fBclear\fP entire field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_OVL_MODE\fP   (\fBKEY_MAX\fP + 41)	/* begin overlay \fBmode\fP		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_INS_MODE\fP   (\fBKEY_MAX\fP + 42)	/* begin insert \fBmode\fP		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_FLINE\fP   (\fBKEY_MAX\fP + 43)	/* \fBscroll\fP field forward \fBa\fP line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_BLINE\fP   (\fBKEY_MAX\fP + 44)	/* \fBscroll\fP field backward \fBa\fP line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_FPAGE\fP   (\fBKEY_MAX\fP + 45)	/* \fBscroll\fP field forward \fBa\fP page	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_BPAGE\fP   (\fBKEY_MAX\fP + 46)	/* \fBscroll\fP field backward \fBa\fP page	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_FHPAGE\fP   (\fBKEY_MAX\fP + 47) /* \fBscroll\fP field forward	 half page */"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_BHPAGE\fP   (\fBKEY_MAX\fP + 48) /* \fBscroll\fP field backward half page */"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_FCHAR\fP   (\fBKEY_MAX\fP + 49) /* horizontal \fBscroll\fP char	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_BCHAR\fP   (\fBKEY_MAX\fP + 50) /* horizontal \fBscroll\fP char	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_HFLINE\fP   (\fBKEY_MAX\fP + 51) /* horizontal \fBscroll\fP line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_HBLINE\fP   (\fBKEY_MAX\fP + 52) /* horizontal \fBscroll\fP line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_HFHALF\fP   (\fBKEY_MAX\fP + 53) /* horizontal \fBscroll\fP half line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_HBHALF\fP   (\fBKEY_MAX\fP + 54) /* horizontal \fBscroll\fP half line	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_VALIDATION\fP   (\fBKEY_MAX\fP + 55)	/* validate field		*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_CHOICE\fP   (\fBKEY_MAX\fP + 56)	/* display next field choice	*/"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_CHOICE\fP   (\fBKEY_MAX\fP + 57)	/* display prev field choice	*/"
+.br
+.ti -1c
+.RI "#define \fBMIN_FORM_COMMAND\fP   (\fBKEY_MAX\fP + 1)	/* used \fBby\fP form_driver		*/"
+.br
+.ti -1c
+.RI "#define \fBMAX_FORM_COMMAND\fP   (\fBKEY_MAX\fP + 57)	/* used \fBby\fP form_driver		*/"
+.br
+.ti -1c
+.RI "#define \fBMAX_COMMAND\fP   (\fBKEY_MAX\fP + 128)"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP * \fBFIELD_CELL\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBForm_Options\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBField_Options\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBfieldnode\fP \fBFIELD\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBformnode\fP \fBFORM\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBtypenode\fP \fBFIELDTYPE\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBForm_Hook\fP) (\fBFORM\fP *)"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBFIELDTYPE\fP *) TYPE_ALPHA"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBFIELDTYPE\fP *) new _fieldtype(\fBbool\fP(*\fBconst\fP field_check)(\fBFIELD\fP *"
+.br
+.ti -1c
+.RI "\fBFIELDTYPE\fP * \fBNCURSES_EXPORT\fP (\fBint\fP) free_fieldtype(\fBFIELDTYPE\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBFIELD\fP *) new _field(\fBint\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBchtype\fP) field_fore(\fBconst\fP \fBFIELD\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBbool\fP) new _page(\fBconst\fP \fBFIELD\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBvoid\fP *) field_arg(\fBconst\fP \fBFIELD\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (char *) field_buffer(\fBconst\fP \fBFIELD\fP *"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBFORM\fP *) new _form(\fBFIELD\fP **)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBFIELD\fP **) form_fields(\fBconst\fP \fBFORM\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBWINDOW\fP *) form_win(\fBconst\fP \fBFORM\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBForm_Hook\fP) form_init(\fBconst\fP \fBFORM\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP char *) form_request_name(\fBint\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBconst\fP \fBvoid\fP \fBbool\fP(*\fBconst\fP \fBchar_check\fP )(\fBint\fP, \fBconst\fP \fBvoid\fP *))"
+.br
+.ti -1c
+.RI "\fBvoid\fP *(*\fBconst\fP \fBmake_arg\fP )(\fBva_list\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP *(*\fBconst\fP) \fBvoid\fP *(*\fBconst\fP \fBcopy_arg\fP )(\fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP *(*\fBconst\fP) \fBvoid\fP *(*\fBconst\fP) \fBvoid\fP(*\fBconst\fP \fBfree_arg\fP )(\fBvoid\fP *))"
+.br
+.ti -1c
+.RI "\fBbool\fP(*\fBconst\fP \fBnext_choice\fP )(\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP(*\fBconst\fP) \fBbool\fP(*\fBconst\fP \fBprev_choice\fP )(\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *))"
+.br
+.ti -1c
+.RI "\fBint\fP"
+.br
+.ti -1c
+.RI "\fBFIELDTYPE\fP \fBbool\fP"
+.br
+.ti -1c
+.RI "\fBchtype\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define JUSTIFY_CENTER   (2)"
+
+.PP
+Définition à la ligne 193 du fichier form\&.h\&.
+.SS "#define JUSTIFY_LEFT   (1)"
+
+.PP
+Définition à la ligne 192 du fichier form\&.h\&.
+.SS "#define JUSTIFY_RIGHT   (3)"
+
+.PP
+Définition à la ligne 194 du fichier form\&.h\&.
+.SS "#define MAX_COMMAND   (\fBKEY_MAX\fP + 128)"
+
+.PP
+Définition à la ligne 286 du fichier form\&.h\&.
+.SS "#define MAX_FORM_COMMAND   (\fBKEY_MAX\fP + 57)	/* used \fBby\fP form_driver		*/"
+
+.PP
+Définition à la ligne 277 du fichier form\&.h\&.
+.SS "#define MIN_FORM_COMMAND   (\fBKEY_MAX\fP + 1)	/* used \fBby\fP form_driver		*/"
+
+.PP
+Définition à la ligne 276 du fichier form\&.h\&.
+.SS "#define NCURSES_FIELD_INTERNALS   /* nothing */"
+
+.PP
+Définition à la ligne 51 du fichier form\&.h\&.
+.SS "#define NO_JUSTIFICATION   (0)"
+
+.PP
+Définition à la ligne 191 du fichier form\&.h\&.
+.SS "#define O_ACTIVE   (0x0002U)"
+
+.PP
+Définition à la ligne 198 du fichier form\&.h\&.
+.SS "#define O_AUTOSKIP   (0x0040U)"
+
+.PP
+Définition à la ligne 203 du fichier form\&.h\&.
+.SS "#define O_BLANK   (0x0020U)"
+
+.PP
+Définition à la ligne 202 du fichier form\&.h\&.
+.SS "#define O_BS_OVERLOAD   (0x0002U)"
+
+.PP
+Définition à la ligne 211 du fichier form\&.h\&.
+.SS "#define O_DYNAMIC_JUSTIFY   (0x0400U)	/* ncurses extension	*/"
+
+.PP
+Définition à la ligne 207 du fichier form\&.h\&.
+.SS "#define O_EDIT   (0x0008U)"
+
+.PP
+Définition à la ligne 200 du fichier form\&.h\&.
+.SS "#define O_NL_OVERLOAD   (0x0001U)"
+
+.PP
+Définition à la ligne 210 du fichier form\&.h\&.
+.SS "#define O_NULLOK   (0x0080U)"
+
+.PP
+Définition à la ligne 204 du fichier form\&.h\&.
+.SS "#define O_PASSOK   (0x0100U)"
+
+.PP
+Définition à la ligne 205 du fichier form\&.h\&.
+.SS "#define O_PUBLIC   (0x0004U)"
+
+.PP
+Définition à la ligne 199 du fichier form\&.h\&.
+.SS "#define O_STATIC   (0x0200U)"
+
+.PP
+Définition à la ligne 206 du fichier form\&.h\&.
+.SS "#define O_VISIBLE   (0x0001U)"
+
+.PP
+Définition à la ligne 197 du fichier form\&.h\&.
+.SS "#define O_WRAP   (0x0010U)"
+
+.PP
+Définition à la ligne 201 du fichier form\&.h\&.
+.SS "#define REQ_BEG_FIELD   (\fBKEY_MAX\fP + 23)	/* \fBmove\fP to \fBfirst\fP char \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 238 du fichier form\&.h\&.
+.SS "#define REQ_BEG_LINE   (\fBKEY_MAX\fP + 25)	/* \fBmove\fP to beginning of line	*/"
+
+.PP
+Définition à la ligne 240 du fichier form\&.h\&.
+.SS "#define REQ_CLR_EOF   (\fBKEY_MAX\fP + 39)	/* \fBclear\fP to \fBend\fP of field	*/"
+
+.PP
+Définition à la ligne 255 du fichier form\&.h\&.
+.SS "#define REQ_CLR_EOL   (\fBKEY_MAX\fP + 38)	/* \fBclear\fP to \fBend\fP of line		*/"
+
+.PP
+Définition à la ligne 254 du fichier form\&.h\&.
+.SS "#define REQ_CLR_FIELD   (\fBKEY_MAX\fP + 40)	/* \fBclear\fP entire field		*/"
+
+.PP
+Définition à la ligne 256 du fichier form\&.h\&.
+.SS "#define REQ_DEL_CHAR   (\fBKEY_MAX\fP + 34)	/* delete char at cursor	*/"
+
+.PP
+Définition à la ligne 250 du fichier form\&.h\&.
+.SS "#define REQ_DEL_LINE   (\fBKEY_MAX\fP + 36)	/* delete line at cursor	*/"
+
+.PP
+Définition à la ligne 252 du fichier form\&.h\&.
+.SS "#define REQ_DEL_PREV   (\fBKEY_MAX\fP + 35)	/* delete char before cursor	*/"
+
+.PP
+Définition à la ligne 251 du fichier form\&.h\&.
+.SS "#define REQ_DEL_WORD   (\fBKEY_MAX\fP + 37)	/* delete word at cursor	*/"
+
+.PP
+Définition à la ligne 253 du fichier form\&.h\&.
+.SS "#define REQ_DOWN_CHAR   (\fBKEY_MAX\fP + 30)	/* \fBmove\fP down \fBin\fP field		*/"
+
+.PP
+Définition à la ligne 245 du fichier form\&.h\&.
+.SS "#define REQ_DOWN_FIELD   (\fBKEY_MAX\fP + 16)	/* \fBmove\fP to down to field	*/"
+
+.PP
+Définition à la ligne 230 du fichier form\&.h\&.
+.SS "#define REQ_END_FIELD   (\fBKEY_MAX\fP + 24)	/* \fBmove\fP after last char \fBin\fP fld	*/"
+
+.PP
+Définition à la ligne 239 du fichier form\&.h\&.
+.SS "#define REQ_END_LINE   (\fBKEY_MAX\fP + 26)	/* \fBmove\fP after last char \fBin\fP line	*/"
+
+.PP
+Définition à la ligne 241 du fichier form\&.h\&.
+.SS "#define REQ_FIRST_FIELD   (\fBKEY_MAX\fP + 7)	/* \fBmove\fP to \fBfirst\fP field		*/"
+
+.PP
+Définition à la ligne 221 du fichier form\&.h\&.
+.SS "#define REQ_FIRST_PAGE   (\fBKEY_MAX\fP + 3)	/* \fBmove\fP to \fBfirst\fP page		*/"
+
+.PP
+Définition à la ligne 216 du fichier form\&.h\&.
+.SS "#define REQ_INS_CHAR   (\fBKEY_MAX\fP + 32)	/* insert blank char at cursor	*/"
+
+.PP
+Définition à la ligne 248 du fichier form\&.h\&.
+.SS "#define REQ_INS_LINE   (\fBKEY_MAX\fP + 33)	/* insert blank line at cursor	*/"
+
+.PP
+Définition à la ligne 249 du fichier form\&.h\&.
+.SS "#define REQ_INS_MODE   (\fBKEY_MAX\fP + 42)	/* begin insert \fBmode\fP		*/"
+
+.PP
+Définition à la ligne 258 du fichier form\&.h\&.
+.SS "#define REQ_LAST_FIELD   (\fBKEY_MAX\fP + 8)	/* \fBmove\fP to last field		*/"
+
+.PP
+Définition à la ligne 222 du fichier form\&.h\&.
+.SS "#define REQ_LAST_PAGE   (\fBKEY_MAX\fP + 4)	/* \fBmove\fP to last page		*/"
+
+.PP
+Définition à la ligne 217 du fichier form\&.h\&.
+.SS "#define REQ_LEFT_CHAR   (\fBKEY_MAX\fP + 27)	/* \fBmove\fP \fBleft\fP \fBin\fP field		*/"
+
+.PP
+Définition à la ligne 242 du fichier form\&.h\&.
+.SS "#define REQ_LEFT_FIELD   (\fBKEY_MAX\fP + 13)	/* \fBmove\fP to \fBleft\fP to field	*/"
+
+.PP
+Définition à la ligne 227 du fichier form\&.h\&.
+.SS "#define REQ_NEW_LINE   (\fBKEY_MAX\fP + 31)	/* insert/overlay new line	*/"
+
+.PP
+Définition à la ligne 247 du fichier form\&.h\&.
+.SS "#define REQ_NEXT_CHAR   (\fBKEY_MAX\fP + 17)	/* \fBmove\fP to next char \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 232 du fichier form\&.h\&.
+.SS "#define REQ_NEXT_CHOICE   (\fBKEY_MAX\fP + 56)	/* display next field choice	*/"
+
+.PP
+Définition à la ligne 273 du fichier form\&.h\&.
+.SS "#define REQ_NEXT_FIELD   (\fBKEY_MAX\fP + 5)	/* \fBmove\fP to next field		*/"
+
+.PP
+Définition à la ligne 219 du fichier form\&.h\&.
+.SS "#define REQ_NEXT_LINE   (\fBKEY_MAX\fP + 19)	/* \fBmove\fP to next line \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 234 du fichier form\&.h\&.
+.SS "#define REQ_NEXT_PAGE   (\fBKEY_MAX\fP + 1)	/* \fBmove\fP to next page		*/"
+
+.PP
+Définition à la ligne 214 du fichier form\&.h\&.
+.SS "#define REQ_NEXT_WORD   (\fBKEY_MAX\fP + 21)	/* \fBmove\fP to next word \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 236 du fichier form\&.h\&.
+.SS "#define REQ_OVL_MODE   (\fBKEY_MAX\fP + 41)	/* begin overlay \fBmode\fP		*/"
+
+.PP
+Définition à la ligne 257 du fichier form\&.h\&.
+.SS "#define REQ_PREV_CHAR   (\fBKEY_MAX\fP + 18)	/* \fBmove\fP to prev char \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 233 du fichier form\&.h\&.
+.SS "#define REQ_PREV_CHOICE   (\fBKEY_MAX\fP + 57)	/* display prev field choice	*/"
+
+.PP
+Définition à la ligne 274 du fichier form\&.h\&.
+.SS "#define REQ_PREV_FIELD   (\fBKEY_MAX\fP + 6)	/* \fBmove\fP to previous field	*/"
+
+.PP
+Définition à la ligne 220 du fichier form\&.h\&.
+.SS "#define REQ_PREV_LINE   (\fBKEY_MAX\fP + 20)	/* \fBmove\fP to prev line \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 235 du fichier form\&.h\&.
+.SS "#define REQ_PREV_PAGE   (\fBKEY_MAX\fP + 2)	/* \fBmove\fP to previous page	*/"
+
+.PP
+Définition à la ligne 215 du fichier form\&.h\&.
+.SS "#define REQ_PREV_WORD   (\fBKEY_MAX\fP + 22)	/* \fBmove\fP to prev word \fBin\fP field	*/"
+
+.PP
+Définition à la ligne 237 du fichier form\&.h\&.
+.SS "#define REQ_RIGHT_CHAR   (\fBKEY_MAX\fP + 28)	/* \fBmove\fP \fBright\fP \fBin\fP field		*/"
+
+.PP
+Définition à la ligne 243 du fichier form\&.h\&.
+.SS "#define REQ_RIGHT_FIELD   (\fBKEY_MAX\fP + 14)	/* \fBmove\fP to \fBright\fP to field	*/"
+
+.PP
+Définition à la ligne 228 du fichier form\&.h\&.
+.SS "#define REQ_SCR_BCHAR   (\fBKEY_MAX\fP + 50) /* horizontal \fBscroll\fP char	*/"
+
+.PP
+Définition à la ligne 266 du fichier form\&.h\&.
+.SS "#define REQ_SCR_BHPAGE   (\fBKEY_MAX\fP + 48) /* \fBscroll\fP field backward half page */"
+
+.PP
+Définition à la ligne 264 du fichier form\&.h\&.
+.SS "#define REQ_SCR_BLINE   (\fBKEY_MAX\fP + 44)	/* \fBscroll\fP field backward \fBa\fP line	*/"
+
+.PP
+Définition à la ligne 260 du fichier form\&.h\&.
+.SS "#define REQ_SCR_BPAGE   (\fBKEY_MAX\fP + 46)	/* \fBscroll\fP field backward \fBa\fP page	*/"
+
+.PP
+Définition à la ligne 262 du fichier form\&.h\&.
+.SS "#define REQ_SCR_FCHAR   (\fBKEY_MAX\fP + 49) /* horizontal \fBscroll\fP char	*/"
+
+.PP
+Définition à la ligne 265 du fichier form\&.h\&.
+.SS "#define REQ_SCR_FHPAGE   (\fBKEY_MAX\fP + 47) /* \fBscroll\fP field forward	 half page */"
+
+.PP
+Définition à la ligne 263 du fichier form\&.h\&.
+.SS "#define REQ_SCR_FLINE   (\fBKEY_MAX\fP + 43)	/* \fBscroll\fP field forward \fBa\fP line	*/"
+
+.PP
+Définition à la ligne 259 du fichier form\&.h\&.
+.SS "#define REQ_SCR_FPAGE   (\fBKEY_MAX\fP + 45)	/* \fBscroll\fP field forward \fBa\fP page	*/"
+
+.PP
+Définition à la ligne 261 du fichier form\&.h\&.
+.SS "#define REQ_SCR_HBHALF   (\fBKEY_MAX\fP + 54) /* horizontal \fBscroll\fP half line	*/"
+
+.PP
+Définition à la ligne 270 du fichier form\&.h\&.
+.SS "#define REQ_SCR_HBLINE   (\fBKEY_MAX\fP + 52) /* horizontal \fBscroll\fP line	*/"
+
+.PP
+Définition à la ligne 268 du fichier form\&.h\&.
+.SS "#define REQ_SCR_HFHALF   (\fBKEY_MAX\fP + 53) /* horizontal \fBscroll\fP half line	*/"
+
+.PP
+Définition à la ligne 269 du fichier form\&.h\&.
+.SS "#define REQ_SCR_HFLINE   (\fBKEY_MAX\fP + 51) /* horizontal \fBscroll\fP line	*/"
+
+.PP
+Définition à la ligne 267 du fichier form\&.h\&.
+.SS "#define REQ_SFIRST_FIELD   (\fBKEY_MAX\fP + 11)	/* \fBmove\fP to sorted \fBfirst\fP field	*/"
+
+.PP
+Définition à la ligne 225 du fichier form\&.h\&.
+.SS "#define REQ_SLAST_FIELD   (\fBKEY_MAX\fP + 12)	/* \fBmove\fP to sorted last field	*/"
+
+.PP
+Définition à la ligne 226 du fichier form\&.h\&.
+.SS "#define REQ_SNEXT_FIELD   (\fBKEY_MAX\fP + 9)	/* \fBmove\fP to sorted next field	*/"
+
+.PP
+Définition à la ligne 223 du fichier form\&.h\&.
+.SS "#define REQ_SPREV_FIELD   (\fBKEY_MAX\fP + 10)	/* \fBmove\fP to sorted prev field	*/"
+
+.PP
+Définition à la ligne 224 du fichier form\&.h\&.
+.SS "#define REQ_UP_CHAR   (\fBKEY_MAX\fP + 29)	/* \fBmove\fP up \fBin\fP field		*/"
+
+.PP
+Définition à la ligne 244 du fichier form\&.h\&.
+.SS "#define REQ_UP_FIELD   (\fBKEY_MAX\fP + 15)	/* \fBmove\fP to up to field		*/"
+
+.PP
+Définition à la ligne 229 du fichier form\&.h\&.
+.SS "#define REQ_VALIDATION   (\fBKEY_MAX\fP + 55)	/* validate field		*/"
+
+.PP
+Définition à la ligne 272 du fichier form\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBfieldnode\fP  \fBFIELD\fP"
+
+.SS "typedef \fBvoid\fP* \fBFIELD_CELL\fP"
+
+.PP
+Définition à la ligne 47 du fichier form\&.h\&.
+.SS "\fBvoid\fP \fBField_Options\fP"
+
+.PP
+Définition à la ligne 55 du fichier form\&.h\&.
+.SS "typedef struct \fBtypenode\fP  \fBFIELDTYPE\fP"
+
+.SS "typedef struct \fBformnode\fP  \fBFORM\fP"
+
+.SS "\fBint\fP \fBint\fP Form_Hook"
+
+.PP
+Définition à la ligne 184 du fichier form\&.h\&.
+.SS "\fBvoid\fP \fBForm_Options\fP"
+
+.PP
+Définition à la ligne 54 du fichier form\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "NCURSES_EXPORT (\fBFIELDTYPE\fP *) const\fC [new]\fP"
+
+.SS "\fBFIELDTYPE\fP* NCURSES_EXPORT (\fBint\fP)"
+
+.SS "NCURSES_EXPORT (\fBFIELD\fP *)\fC [new]\fP"
+
+.SS "NCURSES_EXPORT (\fBchtype\fP) const"
+
+.SS "NCURSES_EXPORT (\fBbool\fP) const\fC [new]\fP"
+
+.SS "NCURSES_EXPORT (\fBvoid\fP *) const"
+
+.SS "NCURSES_EXPORT (char *) const"
+
+.SS "NCURSES_EXPORT (\fBFORM\fP *)\fC [new]\fP"
+
+.SS "NCURSES_EXPORT (\fBFIELD\fP **) const"
+
+.SS "NCURSES_EXPORT (\fBWINDOW\fP *) const"
+
+.SS "NCURSES_EXPORT (\fBForm_Hook\fP) const"
+
+.SS "NCURSES_EXPORT (\fBconst\fP char *)"
+
+.SS "NCURSES_EXPORT_VAR (\fBFIELDTYPE\fP *)"
+
+.SH "Documentation des variables"
+.PP 
+.SS "\fBconst\fP char bool"
+
+.PP
+Définition à la ligne 336 du fichier form\&.h\&.
+.SS "\fBconst\fP \fBvoid\fP \fBbool\fP(* \fBconst\fP char_check) (\fBint\fP, \fBconst\fP \fBvoid\fP *))"
+
+.PP
+Définition à la ligne 310 du fichier form\&.h\&.
+.SS "\fBchtype\fP"
+
+.PP
+Définition à la ligne 339 du fichier form\&.h\&.
+.SS "\fBvoid\fP*(* \fBconst\fP) \fBvoid\fP*(* \fBconst\fP copy_arg) (\fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 317 du fichier form\&.h\&.
+.SS "\fBvoid\fP*(* \fBconst\fP) \fBvoid\fP*(* \fBconst\fP) \fBvoid\fP(* \fBconst\fP free_arg) (\fBvoid\fP *))"
+
+.PP
+Définition à la ligne 318 du fichier form\&.h\&.
+.SS "int"
+
+.PP
+Définition à la ligne 326 du fichier form\&.h\&.
+.SS "\fBvoid\fP*(* \fBconst\fP make_arg) (\fBva_list\fP *)"
+
+.PP
+Définition à la ligne 316 du fichier form\&.h\&.
+.SS "\fBbool\fP(* \fBconst\fP next_choice) (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 320 du fichier form\&.h\&.
+.SS "\fBbool\fP(* \fBconst\fP) \fBbool\fP(* \fBconst\fP prev_choice) (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *))"
+
+.PP
+Définition à la ligne 321 du fichier form\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

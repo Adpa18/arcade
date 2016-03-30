@@ -1,0 +1,66 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/ncurses_dll.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/ncurses_dll.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNCURSES_PUBLIC_VAR\fP(\fBname\fP)   _nc_##\fBname\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_WRAPPED_VAR\fP(\fBtype\fP,  \fBname\fP)   extern \fBtype\fP \fBNCURSES_PUBLIC_VAR\fP(\fBname\fP)(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_STATIC\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_IMPEXP\fP   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_API\fP   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_EXPORT\fP(\fBtype\fP)   \fBNCURSES_IMPEXP\fP \fBtype\fP \fBNCURSES_API\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_EXPORT_VAR\fP(\fBtype\fP)   \fBNCURSES_IMPEXP\fP \fBtype\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define NCURSES_API   /* nothing */"
+
+.PP
+Définition à la ligne 93 du fichier ncurses_dll\&.h\&.
+.SS "#define NCURSES_EXPORT(\fBtype\fP)   \fBNCURSES_IMPEXP\fP \fBtype\fP \fBNCURSES_API\fP"
+
+.PP
+Définition à la ligne 96 du fichier ncurses_dll\&.h\&.
+.SS "#define NCURSES_EXPORT_VAR(\fBtype\fP)   \fBNCURSES_IMPEXP\fP \fBtype\fP"
+
+.PP
+Définition à la ligne 99 du fichier ncurses_dll\&.h\&.
+.SS "#define NCURSES_IMPEXP   /* nothing */"
+
+.PP
+Définition à la ligne 90 du fichier ncurses_dll\&.h\&.
+.SS "#define NCURSES_PUBLIC_VAR(\fBname\fP)   _nc_##\fBname\fP"
+
+.PP
+Définition à la ligne 53 du fichier ncurses_dll\&.h\&.
+.SS "#define NCURSES_STATIC"
+
+.PP
+Définition à la ligne 61 du fichier ncurses_dll\&.h\&.
+.SS "#define NCURSES_WRAPPED_VAR(\fBtype\fP, \fBname\fP)   extern \fBtype\fP \fBNCURSES_PUBLIC_VAR\fP(\fBname\fP)(\fBvoid\fP)"
+
+.PP
+Définition à la ligne 54 du fichier ncurses_dll\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

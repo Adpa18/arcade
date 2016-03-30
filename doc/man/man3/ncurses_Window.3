@@ -1,0 +1,88 @@
+.TH "ncurses::Window" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ncurses::Window \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Window\&.hpp>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBWindow\fP (\fBVector2\fP< \fBint\fP > &\fBs\fP, \fBVector2\fP< \fBint\fP > &\fBp\fP, \fBWINDOW\fP *pa)"
+.br
+.ti -1c
+.RI "virtual \fB~Window\fP ()"
+.br
+.ti -1c
+.RI "\fBVector2\fP< \fBint\fP > \fBgetSize\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSize\fP ()"
+.br
+.ti -1c
+.RI "\fBVector2\fP< \fBint\fP > \fBgetPos\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetPos\fP ()"
+.br
+.ti -1c
+.RI "\fBWINDOW\fP * \fBgetWind\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBclose\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetWind\fP (\fBVector2\fP< \fBint\fP > &\fBs\fP, \fBVector2\fP< \fBint\fP > &\fBp\fP, \fBWINDOW\fP *pa)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 18 du fichier Window\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "ncurses::Window::Window (\fBVector2\fP< \fBint\fP > & s, \fBVector2\fP< \fBint\fP > & p, \fBWINDOW\fP * pa)"
+
+.PP
+Définition à la ligne 13 du fichier Window\&.cpp\&.
+.SS "ncurses::Window::~Window ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 19 du fichier Window\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBvoid\fP ncurses::Window::close ()"
+
+.PP
+Définition à la ligne 60 du fichier Window\&.cpp\&.
+.SS "\fBVector2\fP< \fBint\fP > ncurses::Window::getPos () const"
+
+.PP
+Définition à la ligne 33 du fichier Window\&.cpp\&.
+.SS "\fBVector2\fP< \fBint\fP > ncurses::Window::getSize () const"
+
+.PP
+Définition à la ligne 25 du fichier Window\&.cpp\&.
+.SS "\fBWINDOW\fP * ncurses::Window::getWind () const"
+
+.PP
+Définition à la ligne 56 du fichier Window\&.cpp\&.
+.SS "\fBvoid\fP ncurses::Window::setPos ()"
+
+.PP
+Définition à la ligne 38 du fichier Window\&.cpp\&.
+.SS "\fBvoid\fP ncurses::Window::setSize ()"
+
+.PP
+Définition à la ligne 30 du fichier Window\&.cpp\&.
+.SS "\fBvoid\fP ncurses::Window::setWind (\fBVector2\fP< \fBint\fP > & s, \fBVector2\fP< \fBint\fP > & p, \fBWINDOW\fP * pa)"
+
+.PP
+Définition à la ligne 41 du fichier Window\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

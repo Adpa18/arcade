@@ -1,0 +1,69 @@
+.TH "SDL_SysWMmsg" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_SysWMmsg \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_syswm\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_version\fP \fBversion\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SYSWM_TYPE\fP \fBsubsystem\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      XEvent \fBevent\fP"
+.br
+.ti -1c
+.RI "   } \fBx11\fP"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBdummy\fP"
+.br
+.ti -1c
+.RI "} \fBmsg\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+The custom event structure\&. 
+.PP
+Définition à la ligne 129 du fichier SDL_syswm\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBint\fP SDL_SysWMmsg::dummy"
+
+.PP
+Définition à la ligne 171 du fichier SDL_syswm\&.h\&.
+.SS "XEvent SDL_SysWMmsg::event"
+
+.PP
+Définition à la ligne 145 du fichier SDL_syswm\&.h\&.
+.SS "union { \&.\&.\&. }   SDL_SysWMmsg::msg"
+
+.SS "\fBSDL_SYSWM_TYPE\fP SDL_SysWMmsg::subsystem"
+
+.PP
+Définition à la ligne 132 du fichier SDL_syswm\&.h\&.
+.SS "\fBSDL_version\fP SDL_SysWMmsg::version"
+
+.PP
+Définition à la ligne 131 du fichier SDL_syswm\&.h\&.
+.SS "struct { \&.\&.\&. }   SDL_SysWMmsg::x11"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

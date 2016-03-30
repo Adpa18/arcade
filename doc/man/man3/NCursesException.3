@@ -1,0 +1,91 @@
+.TH "NCursesException" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesException \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <etip\&.h>\fP
+.PP
+Dérivée par \fBNCursesFormException\fP, \fBNCursesMenuException\fP, et \fBNCursesPanelException\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesException\fP (\fBconst\fP char *msg, \fBint\fP err)"
+.br
+.ti -1c
+.RI "\fBNCursesException\fP (\fBconst\fP char *msg)"
+.br
+.ti -1c
+.RI "\fBNCursesException\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesException\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesException\fP (\fBconst\fP \fBNCursesException\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fBconst\fP char * \fBclassname\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fB~NCursesException\fP ()"
+.br
+.in -1c
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBconst\fP char * \fBmessage\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBerrorno\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 146 du fichier etip\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesException::NCursesException (\fBconst\fP char * msg, \fBint\fP err)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 152 du fichier etip\&.h\&.
+.SS "NCursesException::NCursesException (\fBconst\fP char * msg)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 156 du fichier etip\&.h\&.
+.SS "NCursesException::NCursesException (\fBconst\fP \fBNCursesException\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 166 du fichier etip\&.h\&.
+.SS "virtual NCursesException::~NCursesException ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 175 du fichier etip\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBconst\fP char* NCursesException::classname () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesFormException\fP, \fBNCursesMenuException\fP, et \fBNCursesPanelException\fP\&.
+.PP
+Définition à la ligne 171 du fichier etip\&.h\&.
+.SS "\fBNCursesException\fP& NCursesException::operator= (\fBconst\fP \fBNCursesException\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 160 du fichier etip\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBint\fP NCursesException::errorno"
+
+.PP
+Définition à la ligne 150 du fichier etip\&.h\&.
+.SS "\fBconst\fP char* NCursesException::message"
+
+.PP
+Définition à la ligne 149 du fichier etip\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

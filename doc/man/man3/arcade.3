@@ -1,0 +1,102 @@
+.TH "arcade" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+arcade \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBArcade\fP"
+.br
+.ti -1c
+.RI "struct \fBGetMap\fP"
+.br
+.RI "\fIThe format is width, height, and width * height * sizeof(TileType) quantity of TileType\&. \fP"
+.ti -1c
+.RI "struct \fBPosition\fP"
+.br
+.RI "\fIThe format is length, length * \fBPosition\fP quantity of TileType\&. \fP"
+.ti -1c
+.RI "struct \fBWhereAmI\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCommandType\fP : uint16_t { \fBCommandType::WHERE_AM_I\fP = 0, \fBCommandType::GET_MAP\fP = 1, \fBCommandType::GO_UP\fP = 2, \fBCommandType::GO_DOWN\fP = 3, \fBCommandType::GO_LEFT\fP = 4, \fBCommandType::GO_RIGHT\fP = 5, \fBCommandType::GO_FORWARD\fP = 6, \fBCommandType::SHOOT\fP = 7, \fBCommandType::ILLEGAL\fP = 8, \fBCommandType::PLAY\fP = 9 }"
+.br
+.ti -1c
+.RI "enum \fBTileType\fP : uint16_t { \fBTileType::EMPTY\fP = 0, \fBTileType::BLOCK\fP = 1, \fBTileType::OBSTACLE\fP = 2, \fBTileType::EVIL_DUDE\fP = 3, \fBTileType::EVIL_SHOOT\fP = 4, \fBTileType::MY_SHOOT\fP = 5, \fBTileType::POWERUP\fP = 6, \fBTileType::OTHER\fP = 7 }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBarcade::GetMap\fP \fB__attribute__\fP ((\fBpacked\fP))"
+.br
+.in -1c
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBarcade::CommandType\fP : uint16_t\fC [strong]\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIWHERE_AM_I \fP\fP
+.TP
+\fB\fIGET_MAP \fP\fP
+.TP
+\fB\fIGO_UP \fP\fP
+.TP
+\fB\fIGO_DOWN \fP\fP
+.TP
+\fB\fIGO_LEFT \fP\fP
+.TP
+\fB\fIGO_RIGHT \fP\fP
+.TP
+\fB\fIGO_FORWARD \fP\fP
+.TP
+\fB\fISHOOT \fP\fP
+.TP
+\fB\fIILLEGAL \fP\fP
+.TP
+\fB\fIPLAY \fP\fP
+.PP
+Définition à la ligne 15 du fichier Protocol\&.hpp\&.
+.SS "enum \fBarcade::TileType\fP : uint16_t\fC [strong]\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIEMPTY \fP\fP
+.TP
+\fB\fIBLOCK \fP\fP
+.TP
+\fB\fIOBSTACLE \fP\fP
+.TP
+\fB\fIEVIL_DUDE \fP\fP
+.TP
+\fB\fIEVIL_SHOOT \fP\fP
+.TP
+\fB\fIMY_SHOOT \fP\fP
+.TP
+\fB\fIPOWERUP \fP\fP
+.TP
+\fB\fIOTHER \fP\fP
+.PP
+Définition à la ligne 28 du fichier Protocol\&.hpp\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "struct \fBarcade::WhereAmI\fP arcade::__attribute__ ((\fBpacked\fP))"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

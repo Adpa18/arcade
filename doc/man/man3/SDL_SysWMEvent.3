@@ -1,0 +1,56 @@
+.TH "SDL_SysWMEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_SysWMEvent \- A video driver dependent system event (event\&.syswm\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SysWMmsg\fP * \fBmsg\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+A video driver dependent system event (event\&.syswm\&.*) This event is disabled by default, you can enable it with \fBSDL_EventState()\fP 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+If you want to use this event, you should include SDL_syswm\&.h\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 511 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBSDL_SysWMmsg\fP* SDL_SysWMEvent::msg"
+driver dependent data, defined in SDL_syswm\&.h 
+.PP
+Définition à la ligne 515 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_SysWMEvent::timestamp"
+
+.PP
+Définition à la ligne 514 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_SysWMEvent::type"
+\fBSDL_SYSWMEVENT\fP 
+.PP
+Définition à la ligne 513 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

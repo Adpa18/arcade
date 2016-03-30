@@ -1,0 +1,205 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/etip.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/etip.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/ncurses_dll\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <ncurses/eti\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBNCursesException\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesPanelException\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesMenuException\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesFormException\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAVE_BUILTIN_H\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHAVE_GXX_BUILTIN_H\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHAVE_GPP_BUILTIN_H\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHAVE_IOSTREAM\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_TYPEINFO\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHAVE_VALUES_H\fP   0"
+.br
+.ti -1c
+.RI "#define \fBETIP_NEEDS_MATH_H\fP   0"
+.br
+.ti -1c
+.RI "#define \fBETIP_NEEDS_MATH_EXCEPTION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCPP_HAS_PARAM_INIT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCPP_HAS_STATIC_CAST\fP   1"
+.br
+.ti -1c
+.RI "#define \fBIOSTREAM_NAMESPACE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_PARAM_INIT\fP(\fBvalue\fP)   /*nothing*/"
+.br
+.ti -1c
+.RI "#define \fBSTATIC_CAST\fP(\fBs\fP)   static_cast<\fBs\fP>"
+.br
+.ti -1c
+.RI "#define \fBCPP_HAS_TRY_CATCH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_CPP_TRY\fP   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_CPP_CATCH\fP(e)   if (false)"
+.br
+.ti -1c
+.RI "#define \fBTHROWS\fP(\fBs\fP)   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBTHROW2\fP(\fBs\fP,  \fBt\fP)   /* nothing */"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBexit\fP (\fBint\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBTHROW\fP (\fBconst\fP \fBNCursesException\fP *e)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "class \fBNCURSES_IMPEXP\fP \fBNCursesPanel\fP"
+.br
+.ti -1c
+.RI "class \fBNCURSES_IMPEXP\fP \fBNCursesMenu\fP"
+.br
+.ti -1c
+.RI "class \fBNCURSES_IMPEXP\fP \fBNCursesForm\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define CPP_HAS_PARAM_INIT   0"
+
+.PP
+Définition à la ligne 73 du fichier etip\&.h\&.
+.SS "#define CPP_HAS_STATIC_CAST   1"
+
+.PP
+Définition à la ligne 77 du fichier etip\&.h\&.
+.SS "#define CPP_HAS_TRY_CATCH   0"
+
+.SS "#define ETIP_NEEDS_MATH_EXCEPTION   0"
+
+.PP
+Définition à la ligne 69 du fichier etip\&.h\&.
+.SS "#define ETIP_NEEDS_MATH_H   0"
+
+.PP
+Définition à la ligne 65 du fichier etip\&.h\&.
+.SS "#define HAVE_BUILTIN_H   0"
+
+.PP
+Définition à la ligne 41 du fichier etip\&.h\&.
+.SS "#define HAVE_GPP_BUILTIN_H   0"
+
+.PP
+Définition à la ligne 49 du fichier etip\&.h\&.
+.SS "#define HAVE_GXX_BUILTIN_H   0"
+
+.PP
+Définition à la ligne 45 du fichier etip\&.h\&.
+.SS "#define HAVE_IOSTREAM   1"
+
+.PP
+Définition à la ligne 53 du fichier etip\&.h\&.
+.SS "#define HAVE_TYPEINFO   1"
+
+.PP
+Définition à la ligne 57 du fichier etip\&.h\&.
+.SS "#define HAVE_VALUES_H   0"
+
+.PP
+Définition à la ligne 61 du fichier etip\&.h\&.
+.SS "#define IOSTREAM_NAMESPACE   1"
+
+.PP
+Définition à la ligne 81 du fichier etip\&.h\&.
+.SS "#define NCURSES_CPP_CATCH(e)   if (false)"
+
+.SS "#define NCURSES_CPP_TRY   /* nothing */"
+
+.SS "#define NCURSES_PARAM_INIT(\fBvalue\fP)   /*nothing*/"
+
+.PP
+Définition à la ligne 132 du fichier etip\&.h\&.
+.SS "#define STATIC_CAST(\fBs\fP)   static_cast<\fBs\fP>"
+
+.PP
+Définition à la ligne 136 du fichier etip\&.h\&.
+.SS "#define THROW2(\fBs\fP, \fBt\fP)   /* nothing */"
+
+.SS "#define THROWS(\fBs\fP)   /* nothing */"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBvoid\fP exit (\fBint\fP)"
+
+.SS "\fBvoid\fP THROW (\fBconst\fP \fBNCursesException\fP * e)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 346 du fichier etip\&.h\&.
+.SH "Documentation des variables"
+.PP 
+.SS "class \fBNCURSES_IMPEXP\fP \fBNCursesForm\fP"
+
+.PP
+Définition à la ligne 144 du fichier etip\&.h\&.
+.SS "class \fBNCURSES_IMPEXP\fP \fBNCursesMenu\fP"
+
+.PP
+Définition à la ligne 143 du fichier etip\&.h\&.
+.SS "class \fBNCURSES_IMPEXP\fP \fBNCursesPanel\fP"
+
+.PP
+Définition à la ligne 142 du fichier etip\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

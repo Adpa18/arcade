@@ -1,0 +1,75 @@
+.TH "SDL_AudioDeviceEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_AudioDeviceEvent \- Audio device event structure (event\&.adevice\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBiscapture\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Audio device event structure (event\&.adevice\&.*) 
+.PP
+Définition à la ligne 395 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_AudioDeviceEvent::iscapture"
+zero if an output device, non-zero if a capture device\&. 
+.PP
+Définition à la ligne 400 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_AudioDeviceEvent::padding1"
+
+.PP
+Définition à la ligne 401 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_AudioDeviceEvent::padding2"
+
+.PP
+Définition à la ligne 402 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_AudioDeviceEvent::padding3"
+
+.PP
+Définition à la ligne 403 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_AudioDeviceEvent::timestamp"
+
+.PP
+Définition à la ligne 398 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_AudioDeviceEvent::type"
+\fBSDL_AUDIODEVICEADDED\fP, or \fBSDL_AUDIODEVICEREMOVED\fP 
+.PP
+Définition à la ligne 397 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_AudioDeviceEvent::which"
+The audio device index for the ADDED event (valid until next \fBSDL_GetNumAudioDevices()\fP call), SDL_AudioDeviceID for the REMOVED event 
+.PP
+Définition à la ligne 399 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

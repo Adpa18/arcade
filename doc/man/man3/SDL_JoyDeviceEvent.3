@@ -1,0 +1,47 @@
+.TH "SDL_JoyDeviceEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_JoyDeviceEvent \- Joystick device event structure (event\&.jdevice\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBwhich\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Joystick device event structure (event\&.jdevice\&.*) 
+.PP
+Définition à la ligne 342 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint32\fP SDL_JoyDeviceEvent::timestamp"
+
+.PP
+Définition à la ligne 345 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyDeviceEvent::type"
+\fBSDL_JOYDEVICEADDED\fP or \fBSDL_JOYDEVICEREMOVED\fP 
+.PP
+Définition à la ligne 344 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_JoyDeviceEvent::which"
+The joystick device index for the ADDED event, instance id for the REMOVED event 
+.PP
+Définition à la ligne 346 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

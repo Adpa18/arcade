@@ -1,0 +1,51 @@
+.TH "__DRIswrastLoaderExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIswrastLoaderExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBgetDrawableInfo\fP )(\fB__DRIdrawable\fP *drawable, \fBint\fP *\fBx\fP, \fBint\fP *\fBy\fP, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBputImage\fP )(\fB__DRIdrawable\fP *drawable, \fBint\fP op, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, char *\fBdata\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBgetImage\fP )(\fB__DRIdrawable\fP *readable, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, char *\fBdata\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 443 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIswrastLoaderExtensionRec::base"
+
+.PP
+Définition à la ligne 444 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIswrastLoaderExtensionRec::getDrawableInfo) (\fB__DRIdrawable\fP *drawable, \fBint\fP *\fBx\fP, \fBint\fP *\fBy\fP, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 449 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIswrastLoaderExtensionRec::getImage) (\fB__DRIdrawable\fP *readable, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, char *\fBdata\fP, \fBvoid\fP *loaderPrivate)"
+Get image from readable 
+.PP
+Définition à la ligne 463 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIswrastLoaderExtensionRec::putImage) (\fB__DRIdrawable\fP *drawable, \fBint\fP op, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, char *\fBdata\fP, \fBvoid\fP *loaderPrivate)"
+Put image to drawable 
+.PP
+Définition à la ligne 456 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

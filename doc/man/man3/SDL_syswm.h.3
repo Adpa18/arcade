@@ -1,0 +1,131 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_syswm.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_syswm.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'SDL_version\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include <X11/Xlib\&.h>\fP
+.br
+\fC#include <X11/Xatom\&.h>\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_SysWMmsg\fP"
+.br
+.ti -1c
+.RI "struct \fBSDL_SysWMinfo\fP"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_SysWMinfo\fP \fBSDL_SysWMinfo\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_SYSWM_TYPE\fP { \fBSDL_SYSWM_UNKNOWN\fP, \fBSDL_SYSWM_WINDOWS\fP, \fBSDL_SYSWM_X11\fP, \fBSDL_SYSWM_DIRECTFB\fP, \fBSDL_SYSWM_COCOA\fP, \fBSDL_SYSWM_UIKIT\fP, \fBSDL_SYSWM_WAYLAND\fP, \fBSDL_SYSWM_MIR\fP, \fBSDL_SYSWM_WINRT\fP, \fBSDL_SYSWM_ANDROID\fP }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP \fBSDL_GetWindowWMInfo\fP (\fBSDL_Window\fP *window, \fBSDL_SysWMinfo\fP *info)"
+.br
+.RI "\fIThis function allows access to driver-dependent window information\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL custom system window manager hooks\&.
+.PP
+Your application has access to a special type of event \fBSDL_SYSWMEVENT\fP, which contains window-manager specific information and arrives whenever an unhandled window event occurs\&. This event is ignored by default, but you can enable it with \fBSDL_EventState()\fP\&. 
+.PP
+Définition dans le fichier \fBSDL_syswm\&.h\fP\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBSDL_SysWMinfo\fP \fBSDL_SysWMinfo\fP"
+
+.PP
+Définition à la ligne 269 du fichier SDL_syswm\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBSDL_SYSWM_TYPE\fP"
+These are the various supported windowing subsystems 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_SYSWM_UNKNOWN \fP\fP
+.TP
+\fB\fISDL_SYSWM_WINDOWS \fP\fP
+.TP
+\fB\fISDL_SYSWM_X11 \fP\fP
+.TP
+\fB\fISDL_SYSWM_DIRECTFB \fP\fP
+.TP
+\fB\fISDL_SYSWM_COCOA \fP\fP
+.TP
+\fB\fISDL_SYSWM_UIKIT \fP\fP
+.TP
+\fB\fISDL_SYSWM_WAYLAND \fP\fP
+.TP
+\fB\fISDL_SYSWM_MIR \fP\fP
+.TP
+\fB\fISDL_SYSWM_WINRT \fP\fP
+.TP
+\fB\fISDL_SYSWM_ANDROID \fP\fP
+.PP
+Définition à la ligne 112 du fichier SDL_syswm\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP SDL_GetWindowWMInfo (\fBSDL_Window\fP * window, \fBSDL_SysWMinfo\fP * info)"
+
+.PP
+This function allows access to driver-dependent window information\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIwindow\fP The window about which information is being requested 
+.br
+\fIinfo\fP This structure must be initialized with the SDL version, and is then filled in with information about the given window\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+SDL_TRUE if the function is implemented and the version member of the \fCinfo\fP struct is valid, SDL_FALSE otherwise\&.
+.RE
+.PP
+You typically use this function like this: 
+.PP
+.nf
+1 SDL_SysWMinfo info;
+2 SDL_VERSION(&info\&.version);
+3 if ( SDL_GetWindowWMInfo(window, &info) ) { \&.\&.\&. }
+
+.fi
+.PP
+ 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

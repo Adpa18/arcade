@@ -1,0 +1,98 @@
+.TH "__DRIdri2ExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIdri2ExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fB__DRIscreen\fP *(* \fBcreateNewScreen\fP )(\fBint\fP screen, \fBint\fP fd, \fBconst\fP \fB__DRIextension\fP **extensions, \fBconst\fP \fB__DRIconfig\fP ***driver_configs, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIdrawable\fP *(* \fBcreateNewDrawable\fP )(\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIcontext\fP *(* \fBcreateNewContext\fP )(\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "unsigned \fBint\fP(* \fBgetAPIMask\fP )(\fB__DRIscreen\fP *screen)"
+.br
+.ti -1c
+.RI "\fB__DRIcontext\fP *(* \fBcreateNewContextForAPI\fP )(\fB__DRIscreen\fP *screen, \fBint\fP api, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fB__DRIbuffer\fP *(* \fBallocateBuffer\fP )(\fB__DRIscreen\fP *screen, unsigned \fBint\fP \fBattachment\fP, unsigned \fBint\fP \fBformat\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBreleaseBuffer\fP )(\fB__DRIscreen\fP *screen, \fB__DRIbuffer\fP *\fBbuffer\fP)"
+.br
+.ti -1c
+.RI "\fB__DRIcontext\fP *(* \fBcreateContextAttribs\fP )(\fB__DRIscreen\fP *screen, \fBint\fP api, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, unsigned num_attribs, \fBconst\fP uint32_t *\fBattribs\fP, unsigned *error, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 886 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIbuffer\fP*(* __DRIdri2ExtensionRec::allocateBuffer) (\fB__DRIscreen\fP *screen, unsigned \fBint\fP \fBattachment\fP, unsigned \fBint\fP \fBformat\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP)"
+
+.PP
+Définition à la ligne 912 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIextension\fP __DRIdri2ExtensionRec::base"
+
+.PP
+Définition à la ligne 887 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIcontext\fP*(* __DRIdri2ExtensionRec::createContextAttribs) (\fB__DRIscreen\fP *screen, \fBint\fP api, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, unsigned num_attribs, \fBconst\fP uint32_t *\fBattribs\fP, unsigned *error, \fBvoid\fP *loaderPrivate)"
+Create a context for a particular API with a set of attributes
+.PP
+\fBDepuis:\fP
+.RS 4
+version 3
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fB__DRIswrastExtensionRec::createContextAttribs\fP 
+.RE
+.PP
+
+.PP
+Définition à la ligne 927 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIcontext\fP*(* __DRIdri2ExtensionRec::createNewContext) (\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 898 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIcontext\fP*(* __DRIdri2ExtensionRec::createNewContextForAPI) (\fB__DRIscreen\fP *screen, \fBint\fP api, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, \fBvoid\fP *\fBdata\fP)"
+
+.PP
+Définition à la ligne 906 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIdrawable\fP*(* __DRIdri2ExtensionRec::createNewDrawable) (\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 894 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIscreen\fP*(* __DRIdri2ExtensionRec::createNewScreen) (\fBint\fP screen, \fBint\fP fd, \fBconst\fP \fB__DRIextension\fP **extensions, \fBconst\fP \fB__DRIconfig\fP ***driver_configs, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 889 du fichier dri_interface\&.h\&.
+.SS "unsigned \fBint\fP(* __DRIdri2ExtensionRec::getAPIMask) (\fB__DRIscreen\fP *screen)"
+
+.PP
+Définition à la ligne 904 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIdri2ExtensionRec::releaseBuffer) (\fB__DRIscreen\fP *screen, \fB__DRIbuffer\fP *\fBbuffer\fP)"
+
+.PP
+Définition à la ligne 917 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

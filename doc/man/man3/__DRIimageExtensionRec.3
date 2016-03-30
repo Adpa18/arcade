@@ -1,0 +1,144 @@
+.TH "__DRIimageExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIimageExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBcreateImageFromName\fP )(\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP \fBformat\fP, \fBint\fP \fBname\fP, \fBint\fP pitch, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBcreateImageFromRenderbuffer\fP )(\fB__DRIcontext\fP *context, \fBint\fP \fBrenderbuffer\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBdestroyImage\fP )(\fB__DRIimage\fP *\fBimage\fP)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBcreateImage\fP )(\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP \fBformat\fP, unsigned \fBint\fP use, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP(* \fBqueryImage\fP )(\fB__DRIimage\fP *\fBimage\fP, \fBint\fP attrib, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBdupImage\fP )(\fB__DRIimage\fP *\fBimage\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP(* \fBvalidateUsage\fP )(\fB__DRIimage\fP *\fBimage\fP, unsigned \fBint\fP use)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBcreateImageFromNames\fP )(\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP fourcc, \fBint\fP *\fBnames\fP, \fBint\fP num_names, \fBint\fP *\fBstrides\fP, \fBint\fP *\fBoffsets\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBfromPlanar\fP )(\fB__DRIimage\fP *\fBimage\fP, \fBint\fP plane, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBcreateImageFromTexture\fP )(\fB__DRIcontext\fP *context, \fBint\fP \fBtarget\fP, unsigned \fBtexture\fP, \fBint\fP \fBdepth\fP, \fBint\fP \fBlevel\fP, unsigned *error, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIimage\fP *(* \fBcreateImageFromFds\fP )(\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP fourcc, \fBint\fP *fds, \fBint\fP num_fds, \fBint\fP *\fBstrides\fP, \fBint\fP *\fBoffsets\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 1049 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIimageExtensionRec::base"
+
+.PP
+Définition à la ligne 1050 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::createImage) (\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP \fBformat\fP, unsigned \fBint\fP use, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 1063 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::createImageFromFds) (\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP fourcc, \fBint\fP *fds, \fBint\fP num_fds, \fBint\fP *\fBstrides\fP, \fBint\fP *\fBoffsets\fP, \fBvoid\fP *loaderPrivate)"
+Like createImageFromNames, but takes a prime fd instead\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+7 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1130 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::createImageFromName) (\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP \fBformat\fP, \fBint\fP \fBname\fP, \fBint\fP pitch, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 1052 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::createImageFromNames) (\fB__DRIscreen\fP *screen, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBint\fP fourcc, \fBint\fP *\fBnames\fP, \fBint\fP num_names, \fBint\fP *\fBstrides\fP, \fBint\fP *\fBoffsets\fP, \fBvoid\fP *loaderPrivate)"
+Unlike createImageFromName __DRI_IMAGE_FORMAT is not but instead __DRI_IMAGE_FOURCC and strides are in bytes not pixels\&. Stride is also per block and not per pixel (for non-RGB, see gallium blocks)\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+5 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1089 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::createImageFromRenderbuffer) (\fB__DRIcontext\fP *context, \fBint\fP \fBrenderbuffer\fP, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 1057 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::createImageFromTexture) (\fB__DRIcontext\fP *context, \fBint\fP \fBtarget\fP, unsigned \fBtexture\fP, \fBint\fP \fBdepth\fP, \fBint\fP \fBlevel\fP, unsigned *error, \fBvoid\fP *loaderPrivate)"
+Create image from texture\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+6 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1118 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIimageExtensionRec::destroyImage) (\fB__DRIimage\fP *\fBimage\fP)"
+
+.PP
+Définition à la ligne 1061 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::dupImage) (\fB__DRIimage\fP *\fBimage\fP, \fBvoid\fP *loaderPrivate)"
+The new __DRIimage will share the content with the old one, see dup(2)\&. 
+.PP
+Définition à la ligne 1073 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIimage\fP*(* __DRIimageExtensionRec::fromPlanar) (\fB__DRIimage\fP *\fBimage\fP, \fBint\fP plane, \fBvoid\fP *loaderPrivate)"
+Create an image out of a sub-region of a parent image\&. This entry point lets us create individual __DRIimages for different planes in a planar buffer (typically yuv), for example\&. While a sub-image shares the underlying buffer object with the parent image and other sibling sub-images, the life times of parent and sub-images are not dependent\&. Destroying the parent or a sub-image doesn't affect other images\&. The underlying buffer object is free when no __DRIimage remains that references it\&.
+.PP
+Sub-images may overlap, but rendering to overlapping sub-images is undefined\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+5 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1110 du fichier dri_interface\&.h\&.
+.SS "\fBGLboolean\fP(* __DRIimageExtensionRec::queryImage) (\fB__DRIimage\fP *\fBimage\fP, \fBint\fP attrib, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Définition à la ligne 1068 du fichier dri_interface\&.h\&.
+.SS "\fBGLboolean\fP(* __DRIimageExtensionRec::validateUsage) (\fB__DRIimage\fP *\fBimage\fP, unsigned \fBint\fP use)"
+Validate that a __DRIimage can be used a certain way\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+2 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1080 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

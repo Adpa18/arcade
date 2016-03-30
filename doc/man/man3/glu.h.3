@@ -1,0 +1,1487 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glu.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glu.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/gl\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLAPIENTRY\fP"
+.br
+.ti -1c
+.RI "#define \fBGLAPIENTRYP\fP   \fBGLAPIENTRY\fP *"
+.br
+.ti -1c
+.RI "#define \fBGLAPI\fP   extern"
+.br
+.ti -1c
+.RI "#define \fBGLU_EXT_object_space_tess\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLU_EXT_nurbs_tessellator\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLU_FALSE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLU_TRUE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLU_VERSION_1_1\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLU_VERSION_1_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLU_VERSION_1_3\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLU_VERSION\fP   100800"
+.br
+.ti -1c
+.RI "#define \fBGLU_EXTENSIONS\fP   100801"
+.br
+.ti -1c
+.RI "#define \fBGLU_INVALID_ENUM\fP   100900"
+.br
+.ti -1c
+.RI "#define \fBGLU_INVALID_VALUE\fP   100901"
+.br
+.ti -1c
+.RI "#define \fBGLU_OUT_OF_MEMORY\fP   100902"
+.br
+.ti -1c
+.RI "#define \fBGLU_INCOMPATIBLE_GL_VERSION\fP   100903"
+.br
+.ti -1c
+.RI "#define \fBGLU_INVALID_OPERATION\fP   100904"
+.br
+.ti -1c
+.RI "#define \fBGLU_OUTLINE_POLYGON\fP   100240"
+.br
+.ti -1c
+.RI "#define \fBGLU_OUTLINE_PATCH\fP   100241"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR\fP   100103"
+.br
+.ti -1c
+.RI "#define \fBGLU_ERROR\fP   100103"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_BEGIN\fP   100164"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_BEGIN_EXT\fP   100164"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_VERTEX\fP   100165"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_VERTEX_EXT\fP   100165"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_NORMAL\fP   100166"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_NORMAL_EXT\fP   100166"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_COLOR\fP   100167"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_COLOR_EXT\fP   100167"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_TEXTURE_COORD\fP   100168"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_TEX_COORD_EXT\fP   100168"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_END\fP   100169"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_END_EXT\fP   100169"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_BEGIN_DATA\fP   100170"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_BEGIN_DATA_EXT\fP   100170"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_VERTEX_DATA\fP   100171"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_VERTEX_DATA_EXT\fP   100171"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_NORMAL_DATA\fP   100172"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_NORMAL_DATA_EXT\fP   100172"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_COLOR_DATA\fP   100173"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_COLOR_DATA_EXT\fP   100173"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_TEXTURE_COORD_DATA\fP   100174"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_TEX_COORD_DATA_EXT\fP   100174"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_END_DATA\fP   100175"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_END_DATA_EXT\fP   100175"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR1\fP   100251"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR2\fP   100252"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR3\fP   100253"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR4\fP   100254"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR5\fP   100255"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR6\fP   100256"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR7\fP   100257"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR8\fP   100258"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR9\fP   100259"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR10\fP   100260"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR11\fP   100261"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR12\fP   100262"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR13\fP   100263"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR14\fP   100264"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR15\fP   100265"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR16\fP   100266"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR17\fP   100267"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR18\fP   100268"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR19\fP   100269"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR20\fP   100270"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR21\fP   100271"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR22\fP   100272"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR23\fP   100273"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR24\fP   100274"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR25\fP   100275"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR26\fP   100276"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR27\fP   100277"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR28\fP   100278"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR29\fP   100279"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR30\fP   100280"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR31\fP   100281"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR32\fP   100282"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR33\fP   100283"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR34\fP   100284"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR35\fP   100285"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR36\fP   100286"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_ERROR37\fP   100287"
+.br
+.ti -1c
+.RI "#define \fBGLU_AUTO_LOAD_MATRIX\fP   100200"
+.br
+.ti -1c
+.RI "#define \fBGLU_CULLING\fP   100201"
+.br
+.ti -1c
+.RI "#define \fBGLU_SAMPLING_TOLERANCE\fP   100203"
+.br
+.ti -1c
+.RI "#define \fBGLU_DISPLAY_MODE\fP   100204"
+.br
+.ti -1c
+.RI "#define \fBGLU_PARAMETRIC_TOLERANCE\fP   100202"
+.br
+.ti -1c
+.RI "#define \fBGLU_SAMPLING_METHOD\fP   100205"
+.br
+.ti -1c
+.RI "#define \fBGLU_U_STEP\fP   100206"
+.br
+.ti -1c
+.RI "#define \fBGLU_V_STEP\fP   100207"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_MODE\fP   100160"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_MODE_EXT\fP   100160"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_TESSELLATOR\fP   100161"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_TESSELLATOR_EXT\fP   100161"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_RENDERER\fP   100162"
+.br
+.ti -1c
+.RI "#define \fBGLU_NURBS_RENDERER_EXT\fP   100162"
+.br
+.ti -1c
+.RI "#define \fBGLU_OBJECT_PARAMETRIC_ERROR\fP   100208"
+.br
+.ti -1c
+.RI "#define \fBGLU_OBJECT_PARAMETRIC_ERROR_EXT\fP   100208"
+.br
+.ti -1c
+.RI "#define \fBGLU_OBJECT_PATH_LENGTH\fP   100209"
+.br
+.ti -1c
+.RI "#define \fBGLU_OBJECT_PATH_LENGTH_EXT\fP   100209"
+.br
+.ti -1c
+.RI "#define \fBGLU_PATH_LENGTH\fP   100215"
+.br
+.ti -1c
+.RI "#define \fBGLU_PARAMETRIC_ERROR\fP   100216"
+.br
+.ti -1c
+.RI "#define \fBGLU_DOMAIN_DISTANCE\fP   100217"
+.br
+.ti -1c
+.RI "#define \fBGLU_MAP1_TRIM_2\fP   100210"
+.br
+.ti -1c
+.RI "#define \fBGLU_MAP1_TRIM_3\fP   100211"
+.br
+.ti -1c
+.RI "#define \fBGLU_POINT\fP   100010"
+.br
+.ti -1c
+.RI "#define \fBGLU_LINE\fP   100011"
+.br
+.ti -1c
+.RI "#define \fBGLU_FILL\fP   100012"
+.br
+.ti -1c
+.RI "#define \fBGLU_SILHOUETTE\fP   100013"
+.br
+.ti -1c
+.RI "#define \fBGLU_SMOOTH\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBGLU_FLAT\fP   100001"
+.br
+.ti -1c
+.RI "#define \fBGLU_NONE\fP   100002"
+.br
+.ti -1c
+.RI "#define \fBGLU_OUTSIDE\fP   100020"
+.br
+.ti -1c
+.RI "#define \fBGLU_INSIDE\fP   100021"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_BEGIN\fP   100100"
+.br
+.ti -1c
+.RI "#define \fBGLU_BEGIN\fP   100100"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_VERTEX\fP   100101"
+.br
+.ti -1c
+.RI "#define \fBGLU_VERTEX\fP   100101"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_END\fP   100102"
+.br
+.ti -1c
+.RI "#define \fBGLU_END\fP   100102"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR\fP   100103"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_EDGE_FLAG\fP   100104"
+.br
+.ti -1c
+.RI "#define \fBGLU_EDGE_FLAG\fP   100104"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_COMBINE\fP   100105"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_BEGIN_DATA\fP   100106"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_VERTEX_DATA\fP   100107"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_END_DATA\fP   100108"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR_DATA\fP   100109"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_EDGE_FLAG_DATA\fP   100110"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_COMBINE_DATA\fP   100111"
+.br
+.ti -1c
+.RI "#define \fBGLU_CW\fP   100120"
+.br
+.ti -1c
+.RI "#define \fBGLU_CCW\fP   100121"
+.br
+.ti -1c
+.RI "#define \fBGLU_INTERIOR\fP   100122"
+.br
+.ti -1c
+.RI "#define \fBGLU_EXTERIOR\fP   100123"
+.br
+.ti -1c
+.RI "#define \fBGLU_UNKNOWN\fP   100124"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_WINDING_RULE\fP   100140"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_BOUNDARY_ONLY\fP   100141"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_TOLERANCE\fP   100142"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR1\fP   100151"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR2\fP   100152"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR3\fP   100153"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR4\fP   100154"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR5\fP   100155"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR6\fP   100156"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR7\fP   100157"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_ERROR8\fP   100158"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_MISSING_BEGIN_POLYGON\fP   100151"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_MISSING_BEGIN_CONTOUR\fP   100152"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_MISSING_END_POLYGON\fP   100153"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_MISSING_END_CONTOUR\fP   100154"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_COORD_TOO_LARGE\fP   100155"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_NEED_COMBINE_CALLBACK\fP   100156"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_WINDING_ODD\fP   100130"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_WINDING_NONZERO\fP   100131"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_WINDING_POSITIVE\fP   100132"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_WINDING_NEGATIVE\fP   100133"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_WINDING_ABS_GEQ_TWO\fP   100134"
+.br
+.ti -1c
+.RI "#define \fBGLU_TESS_MAX_COORD\fP   1\&.0e150"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBGLUnurbs\fP \fBGLUnurbs\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLUquadric\fP \fBGLUquadric\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLUtesselator\fP \fBGLUtesselator\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLUnurbs\fP \fBGLUnurbsObj\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLUquadric\fP \fBGLUquadricObj\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLUtesselator\fP \fBGLUtesselatorObj\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLUtesselator\fP \fBGLUtriangulatorObj\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP (\fBGLAPIENTRYP\fP _GLUfuncptr)(void)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluBeginCurve\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluBeginPolygon\fP (\fBGLUtesselator\fP *tess)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluBeginSurface\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluBeginTrim\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluBuild1DMipmapLevels\fP (\fBGLenum\fP \fBtarget\fP, \fBGLint\fP \fBinternalFormat\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLenum\fP \fBformat\fP, \fBGLenum\fP \fBtype\fP, \fBGLint\fP \fBlevel\fP, \fBGLint\fP base, \fBGLint\fP max, \fBconst\fP \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluBuild1DMipmaps\fP (\fBGLenum\fP \fBtarget\fP, \fBGLint\fP \fBinternalFormat\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLenum\fP \fBformat\fP, \fBGLenum\fP \fBtype\fP, \fBconst\fP \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluBuild2DMipmapLevels\fP (\fBGLenum\fP \fBtarget\fP, \fBGLint\fP \fBinternalFormat\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP, \fBGLenum\fP \fBformat\fP, \fBGLenum\fP \fBtype\fP, \fBGLint\fP \fBlevel\fP, \fBGLint\fP base, \fBGLint\fP max, \fBconst\fP \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluBuild2DMipmaps\fP (\fBGLenum\fP \fBtarget\fP, \fBGLint\fP \fBinternalFormat\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP, \fBGLenum\fP \fBformat\fP, \fBGLenum\fP \fBtype\fP, \fBconst\fP \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluBuild3DMipmapLevels\fP (\fBGLenum\fP \fBtarget\fP, \fBGLint\fP \fBinternalFormat\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP, \fBGLsizei\fP \fBdepth\fP, \fBGLenum\fP \fBformat\fP, \fBGLenum\fP \fBtype\fP, \fBGLint\fP \fBlevel\fP, \fBGLint\fP base, \fBGLint\fP max, \fBconst\fP \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluBuild3DMipmaps\fP (\fBGLenum\fP \fBtarget\fP, \fBGLint\fP \fBinternalFormat\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP, \fBGLsizei\fP \fBdepth\fP, \fBGLenum\fP \fBformat\fP, \fBGLenum\fP \fBtype\fP, \fBconst\fP \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP \fBgluCheckExtension\fP (\fBconst\fP \fBGLubyte\fP *extName, \fBconst\fP \fBGLubyte\fP *extString)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluCylinder\fP (\fBGLUquadric\fP *quad, \fBGLdouble\fP base, \fBGLdouble\fP \fBtop\fP, \fBGLdouble\fP \fBheight\fP, \fBGLint\fP slices, \fBGLint\fP stacks)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluDeleteNurbsRenderer\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluDeleteQuadric\fP (\fBGLUquadric\fP *quad)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluDeleteTess\fP (\fBGLUtesselator\fP *tess)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluDisk\fP (\fBGLUquadric\fP *quad, \fBGLdouble\fP inner, \fBGLdouble\fP outer, \fBGLint\fP slices, \fBGLint\fP loops)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluEndCurve\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluEndPolygon\fP (\fBGLUtesselator\fP *tess)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluEndSurface\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluEndTrim\fP (\fBGLUnurbs\fP *nurb)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBconst\fP \fBGLubyte\fP *\fBGLAPIENTRY\fP \fBgluErrorString\fP (\fBGLenum\fP error)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluGetNurbsProperty\fP (\fBGLUnurbs\fP *nurb, \fBGLenum\fP \fBproperty\fP, \fBGLfloat\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBconst\fP \fBGLubyte\fP *\fBGLAPIENTRY\fP \fBgluGetString\fP (\fBGLenum\fP \fBname\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluGetTessProperty\fP (\fBGLUtesselator\fP *tess, \fBGLenum\fP which, \fBGLdouble\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluLoadSamplingMatrices\fP (\fBGLUnurbs\fP *nurb, \fBconst\fP \fBGLfloat\fP *model, \fBconst\fP \fBGLfloat\fP *perspective, \fBconst\fP \fBGLint\fP *view)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluLookAt\fP (\fBGLdouble\fP eyeX, \fBGLdouble\fP eyeY, \fBGLdouble\fP eyeZ, \fBGLdouble\fP centerX, \fBGLdouble\fP centerY, \fBGLdouble\fP centerZ, \fBGLdouble\fP upX, \fBGLdouble\fP upY, \fBGLdouble\fP upZ)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLUnurbs\fP *\fBGLAPIENTRY\fP \fBgluNewNurbsRenderer\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLUquadric\fP *\fBGLAPIENTRY\fP \fBgluNewQuadric\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLUtesselator\fP *\fBGLAPIENTRY\fP \fBgluNewTess\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNextContour\fP (\fBGLUtesselator\fP *tess, \fBGLenum\fP \fBtype\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNurbsCallback\fP (\fBGLUnurbs\fP *nurb, \fBGLenum\fP which, _GLUfuncptr CallBackFunc)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNurbsCallbackData\fP (\fBGLUnurbs\fP *nurb, \fBGLvoid\fP *userData)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNurbsCallbackDataEXT\fP (\fBGLUnurbs\fP *nurb, \fBGLvoid\fP *userData)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNurbsCurve\fP (\fBGLUnurbs\fP *nurb, \fBGLint\fP knotCount, \fBGLfloat\fP *knots, \fBGLint\fP \fBstride\fP, \fBGLfloat\fP *control, \fBGLint\fP \fBorder\fP, \fBGLenum\fP \fBtype\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNurbsProperty\fP (\fBGLUnurbs\fP *nurb, \fBGLenum\fP \fBproperty\fP, \fBGLfloat\fP \fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluNurbsSurface\fP (\fBGLUnurbs\fP *nurb, \fBGLint\fP sKnotCount, \fBGLfloat\fP *sKnots, \fBGLint\fP tKnotCount, \fBGLfloat\fP *tKnots, \fBGLint\fP sStride, \fBGLint\fP tStride, \fBGLfloat\fP *control, \fBGLint\fP sOrder, \fBGLint\fP tOrder, \fBGLenum\fP \fBtype\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluOrtho2D\fP (\fBGLdouble\fP \fBleft\fP, \fBGLdouble\fP \fBright\fP, \fBGLdouble\fP \fBbottom\fP, \fBGLdouble\fP \fBtop\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluPartialDisk\fP (\fBGLUquadric\fP *quad, \fBGLdouble\fP inner, \fBGLdouble\fP outer, \fBGLint\fP slices, \fBGLint\fP loops, \fBGLdouble\fP \fBstart\fP, \fBGLdouble\fP sweep)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluPerspective\fP (\fBGLdouble\fP fovy, \fBGLdouble\fP aspect, \fBGLdouble\fP \fBzNear\fP, \fBGLdouble\fP \fBzFar\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluPickMatrix\fP (\fBGLdouble\fP \fBx\fP, \fBGLdouble\fP \fBy\fP, \fBGLdouble\fP delX, \fBGLdouble\fP delY, \fBGLint\fP *viewport)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluProject\fP (\fBGLdouble\fP objX, \fBGLdouble\fP objY, \fBGLdouble\fP objZ, \fBconst\fP \fBGLdouble\fP *model, \fBconst\fP \fBGLdouble\fP *proj, \fBconst\fP \fBGLint\fP *view, \fBGLdouble\fP *winX, \fBGLdouble\fP *winY, \fBGLdouble\fP *winZ)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluPwlCurve\fP (\fBGLUnurbs\fP *nurb, \fBGLint\fP \fBcount\fP, \fBGLfloat\fP *\fBdata\fP, \fBGLint\fP \fBstride\fP, \fBGLenum\fP \fBtype\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluQuadricCallback\fP (\fBGLUquadric\fP *quad, \fBGLenum\fP which, _GLUfuncptr CallBackFunc)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluQuadricDrawStyle\fP (\fBGLUquadric\fP *quad, \fBGLenum\fP draw)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluQuadricNormals\fP (\fBGLUquadric\fP *quad, \fBGLenum\fP normal)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluQuadricOrientation\fP (\fBGLUquadric\fP *quad, \fBGLenum\fP orientation)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluQuadricTexture\fP (\fBGLUquadric\fP *quad, \fBGLboolean\fP \fBtexture\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluScaleImage\fP (\fBGLenum\fP \fBformat\fP, \fBGLsizei\fP wIn, \fBGLsizei\fP hIn, \fBGLenum\fP typeIn, \fBconst\fP \fBvoid\fP *dataIn, \fBGLsizei\fP wOut, \fBGLsizei\fP hOut, \fBGLenum\fP typeOut, \fBGLvoid\fP *dataOut)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluSphere\fP (\fBGLUquadric\fP *quad, \fBGLdouble\fP radius, \fBGLint\fP slices, \fBGLint\fP stacks)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessBeginContour\fP (\fBGLUtesselator\fP *tess)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessBeginPolygon\fP (\fBGLUtesselator\fP *tess, \fBGLvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessCallback\fP (\fBGLUtesselator\fP *tess, \fBGLenum\fP which, _GLUfuncptr CallBackFunc)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessEndContour\fP (\fBGLUtesselator\fP *tess)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessEndPolygon\fP (\fBGLUtesselator\fP *tess)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessNormal\fP (\fBGLUtesselator\fP *tess, \fBGLdouble\fP valueX, \fBGLdouble\fP valueY, \fBGLdouble\fP valueZ)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessProperty\fP (\fBGLUtesselator\fP *tess, \fBGLenum\fP which, \fBGLdouble\fP \fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBgluTessVertex\fP (\fBGLUtesselator\fP *tess, \fBGLdouble\fP *\fBlocation\fP, \fBGLvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluUnProject\fP (\fBGLdouble\fP winX, \fBGLdouble\fP winY, \fBGLdouble\fP winZ, \fBconst\fP \fBGLdouble\fP *model, \fBconst\fP \fBGLdouble\fP *proj, \fBconst\fP \fBGLint\fP *view, \fBGLdouble\fP *objX, \fBGLdouble\fP *objY, \fBGLdouble\fP *objZ)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP \fBgluUnProject4\fP (\fBGLdouble\fP winX, \fBGLdouble\fP winY, \fBGLdouble\fP winZ, \fBGLdouble\fP clipW, \fBconst\fP \fBGLdouble\fP *model, \fBconst\fP \fBGLdouble\fP *proj, \fBconst\fP \fBGLint\fP *view, \fBGLdouble\fP nearVal, \fBGLdouble\fP farVal, \fBGLdouble\fP *objX, \fBGLdouble\fP *objY, \fBGLdouble\fP *objZ, \fBGLdouble\fP *objW)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define GLAPI   extern"
+
+.PP
+Définition à la ligne 61 du fichier glu\&.h\&.
+.SS "#define GLAPIENTRY"
+
+.PP
+Définition à la ligne 44 du fichier glu\&.h\&.
+.SS "#define GLAPIENTRYP   \fBGLAPIENTRY\fP *"
+
+.PP
+Définition à la ligne 49 du fichier glu\&.h\&.
+.SS "#define GLU_AUTO_LOAD_MATRIX   100200"
+
+.PP
+Définition à la ligne 167 du fichier glu\&.h\&.
+.SS "#define GLU_BEGIN   100100"
+
+.PP
+Définition à la ligne 215 du fichier glu\&.h\&.
+.SS "#define GLU_CCW   100121"
+
+.PP
+Définition à la ligne 233 du fichier glu\&.h\&.
+.SS "#define GLU_CULLING   100201"
+
+.PP
+Définition à la ligne 168 du fichier glu\&.h\&.
+.SS "#define GLU_CW   100120"
+
+.PP
+Définition à la ligne 232 du fichier glu\&.h\&.
+.SS "#define GLU_DISPLAY_MODE   100204"
+
+.PP
+Définition à la ligne 170 du fichier glu\&.h\&.
+.SS "#define GLU_DOMAIN_DISTANCE   100217"
+
+.PP
+Définition à la ligne 189 du fichier glu\&.h\&.
+.SS "#define GLU_EDGE_FLAG   100104"
+
+.PP
+Définition à la ligne 222 du fichier glu\&.h\&.
+.SS "#define GLU_END   100102"
+
+.PP
+Définition à la ligne 219 du fichier glu\&.h\&.
+.SS "#define GLU_ERROR   100103"
+
+.PP
+Définition à la ligne 101 du fichier glu\&.h\&.
+.SS "#define GLU_EXT_nurbs_tessellator   1"
+
+.PP
+Définition à la ligne 72 du fichier glu\&.h\&.
+.SS "#define GLU_EXT_object_space_tess   1"
+
+.PP
+Définition à la ligne 71 du fichier glu\&.h\&.
+.SS "#define GLU_EXTENSIONS   100801"
+
+.PP
+Définition à la ligne 85 du fichier glu\&.h\&.
+.SS "#define GLU_EXTERIOR   100123"
+
+.PP
+Définition à la ligne 235 du fichier glu\&.h\&.
+.SS "#define GLU_FALSE   0"
+
+.PP
+Définition à la ligne 75 du fichier glu\&.h\&.
+.SS "#define GLU_FILL   100012"
+
+.PP
+Définition à la ligne 198 du fichier glu\&.h\&.
+.SS "#define GLU_FLAT   100001"
+
+.PP
+Définition à la ligne 206 du fichier glu\&.h\&.
+.SS "#define GLU_INCOMPATIBLE_GL_VERSION   100903"
+
+.PP
+Définition à la ligne 91 du fichier glu\&.h\&.
+.SS "#define GLU_INSIDE   100021"
+
+.PP
+Définition à la ligne 211 du fichier glu\&.h\&.
+.SS "#define GLU_INTERIOR   100122"
+
+.PP
+Définition à la ligne 234 du fichier glu\&.h\&.
+.SS "#define GLU_INVALID_ENUM   100900"
+
+.PP
+Définition à la ligne 88 du fichier glu\&.h\&.
+.SS "#define GLU_INVALID_OPERATION   100904"
+
+.PP
+Définition à la ligne 92 du fichier glu\&.h\&.
+.SS "#define GLU_INVALID_VALUE   100901"
+
+.PP
+Définition à la ligne 89 du fichier glu\&.h\&.
+.SS "#define GLU_LINE   100011"
+
+.PP
+Définition à la ligne 197 du fichier glu\&.h\&.
+.SS "#define GLU_MAP1_TRIM_2   100210"
+
+.PP
+Définition à la ligne 192 du fichier glu\&.h\&.
+.SS "#define GLU_MAP1_TRIM_3   100211"
+
+.PP
+Définition à la ligne 193 du fichier glu\&.h\&.
+.SS "#define GLU_NONE   100002"
+
+.PP
+Définition à la ligne 207 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_BEGIN   100164"
+
+.PP
+Définition à la ligne 102 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_BEGIN_DATA   100170"
+
+.PP
+Définition à la ligne 114 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_BEGIN_DATA_EXT   100170"
+
+.PP
+Définition à la ligne 115 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_BEGIN_EXT   100164"
+
+.PP
+Définition à la ligne 103 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_COLOR   100167"
+
+.PP
+Définition à la ligne 108 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_COLOR_DATA   100173"
+
+.PP
+Définition à la ligne 120 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_COLOR_DATA_EXT   100173"
+
+.PP
+Définition à la ligne 121 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_COLOR_EXT   100167"
+
+.PP
+Définition à la ligne 109 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_END   100169"
+
+.PP
+Définition à la ligne 112 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_END_DATA   100175"
+
+.PP
+Définition à la ligne 124 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_END_DATA_EXT   100175"
+
+.PP
+Définition à la ligne 125 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_END_EXT   100169"
+
+.PP
+Définition à la ligne 113 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR   100103"
+
+.PP
+Définition à la ligne 100 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR1   100251"
+
+.PP
+Définition à la ligne 128 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR10   100260"
+
+.PP
+Définition à la ligne 137 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR11   100261"
+
+.PP
+Définition à la ligne 138 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR12   100262"
+
+.PP
+Définition à la ligne 139 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR13   100263"
+
+.PP
+Définition à la ligne 140 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR14   100264"
+
+.PP
+Définition à la ligne 141 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR15   100265"
+
+.PP
+Définition à la ligne 142 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR16   100266"
+
+.PP
+Définition à la ligne 143 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR17   100267"
+
+.PP
+Définition à la ligne 144 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR18   100268"
+
+.PP
+Définition à la ligne 145 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR19   100269"
+
+.PP
+Définition à la ligne 146 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR2   100252"
+
+.PP
+Définition à la ligne 129 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR20   100270"
+
+.PP
+Définition à la ligne 147 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR21   100271"
+
+.PP
+Définition à la ligne 148 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR22   100272"
+
+.PP
+Définition à la ligne 149 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR23   100273"
+
+.PP
+Définition à la ligne 150 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR24   100274"
+
+.PP
+Définition à la ligne 151 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR25   100275"
+
+.PP
+Définition à la ligne 152 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR26   100276"
+
+.PP
+Définition à la ligne 153 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR27   100277"
+
+.PP
+Définition à la ligne 154 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR28   100278"
+
+.PP
+Définition à la ligne 155 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR29   100279"
+
+.PP
+Définition à la ligne 156 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR3   100253"
+
+.PP
+Définition à la ligne 130 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR30   100280"
+
+.PP
+Définition à la ligne 157 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR31   100281"
+
+.PP
+Définition à la ligne 158 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR32   100282"
+
+.PP
+Définition à la ligne 159 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR33   100283"
+
+.PP
+Définition à la ligne 160 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR34   100284"
+
+.PP
+Définition à la ligne 161 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR35   100285"
+
+.PP
+Définition à la ligne 162 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR36   100286"
+
+.PP
+Définition à la ligne 163 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR37   100287"
+
+.PP
+Définition à la ligne 164 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR4   100254"
+
+.PP
+Définition à la ligne 131 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR5   100255"
+
+.PP
+Définition à la ligne 132 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR6   100256"
+
+.PP
+Définition à la ligne 133 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR7   100257"
+
+.PP
+Définition à la ligne 134 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR8   100258"
+
+.PP
+Définition à la ligne 135 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_ERROR9   100259"
+
+.PP
+Définition à la ligne 136 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_MODE   100160"
+
+.PP
+Définition à la ligne 175 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_MODE_EXT   100160"
+
+.PP
+Définition à la ligne 176 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_NORMAL   100166"
+
+.PP
+Définition à la ligne 106 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_NORMAL_DATA   100172"
+
+.PP
+Définition à la ligne 118 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_NORMAL_DATA_EXT   100172"
+
+.PP
+Définition à la ligne 119 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_NORMAL_EXT   100166"
+
+.PP
+Définition à la ligne 107 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_RENDERER   100162"
+
+.PP
+Définition à la ligne 179 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_RENDERER_EXT   100162"
+
+.PP
+Définition à la ligne 180 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_TESSELLATOR   100161"
+
+.PP
+Définition à la ligne 177 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_TESSELLATOR_EXT   100161"
+
+.PP
+Définition à la ligne 178 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_TEX_COORD_DATA_EXT   100174"
+
+.PP
+Définition à la ligne 123 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_TEX_COORD_EXT   100168"
+
+.PP
+Définition à la ligne 111 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_TEXTURE_COORD   100168"
+
+.PP
+Définition à la ligne 110 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_TEXTURE_COORD_DATA   100174"
+
+.PP
+Définition à la ligne 122 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_VERTEX   100165"
+
+.PP
+Définition à la ligne 104 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_VERTEX_DATA   100171"
+
+.PP
+Définition à la ligne 116 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_VERTEX_DATA_EXT   100171"
+
+.PP
+Définition à la ligne 117 du fichier glu\&.h\&.
+.SS "#define GLU_NURBS_VERTEX_EXT   100165"
+
+.PP
+Définition à la ligne 105 du fichier glu\&.h\&.
+.SS "#define GLU_OBJECT_PARAMETRIC_ERROR   100208"
+
+.PP
+Définition à la ligne 183 du fichier glu\&.h\&.
+.SS "#define GLU_OBJECT_PARAMETRIC_ERROR_EXT   100208"
+
+.PP
+Définition à la ligne 184 du fichier glu\&.h\&.
+.SS "#define GLU_OBJECT_PATH_LENGTH   100209"
+
+.PP
+Définition à la ligne 185 du fichier glu\&.h\&.
+.SS "#define GLU_OBJECT_PATH_LENGTH_EXT   100209"
+
+.PP
+Définition à la ligne 186 du fichier glu\&.h\&.
+.SS "#define GLU_OUT_OF_MEMORY   100902"
+
+.PP
+Définition à la ligne 90 du fichier glu\&.h\&.
+.SS "#define GLU_OUTLINE_PATCH   100241"
+
+.PP
+Définition à la ligne 97 du fichier glu\&.h\&.
+.SS "#define GLU_OUTLINE_POLYGON   100240"
+
+.PP
+Définition à la ligne 96 du fichier glu\&.h\&.
+.SS "#define GLU_OUTSIDE   100020"
+
+.PP
+Définition à la ligne 210 du fichier glu\&.h\&.
+.SS "#define GLU_PARAMETRIC_ERROR   100216"
+
+.PP
+Définition à la ligne 188 du fichier glu\&.h\&.
+.SS "#define GLU_PARAMETRIC_TOLERANCE   100202"
+
+.PP
+Définition à la ligne 171 du fichier glu\&.h\&.
+.SS "#define GLU_PATH_LENGTH   100215"
+
+.PP
+Définition à la ligne 187 du fichier glu\&.h\&.
+.SS "#define GLU_POINT   100010"
+
+.PP
+Définition à la ligne 196 du fichier glu\&.h\&.
+.SS "#define GLU_SAMPLING_METHOD   100205"
+
+.PP
+Définition à la ligne 172 du fichier glu\&.h\&.
+.SS "#define GLU_SAMPLING_TOLERANCE   100203"
+
+.PP
+Définition à la ligne 169 du fichier glu\&.h\&.
+.SS "#define GLU_SILHOUETTE   100013"
+
+.PP
+Définition à la ligne 199 du fichier glu\&.h\&.
+.SS "#define GLU_SMOOTH   100000"
+
+.PP
+Définition à la ligne 205 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_BEGIN   100100"
+
+.PP
+Définition à la ligne 214 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_BEGIN_DATA   100106"
+
+.PP
+Définition à la ligne 224 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_BOUNDARY_ONLY   100141"
+
+.PP
+Définition à la ligne 240 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_COMBINE   100105"
+
+.PP
+Définition à la ligne 223 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_COMBINE_DATA   100111"
+
+.PP
+Définition à la ligne 229 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_COORD_TOO_LARGE   100155"
+
+.PP
+Définition à la ligne 256 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_EDGE_FLAG   100104"
+
+.PP
+Définition à la ligne 221 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_EDGE_FLAG_DATA   100110"
+
+.PP
+Définition à la ligne 228 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_END   100102"
+
+.PP
+Définition à la ligne 218 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_END_DATA   100108"
+
+.PP
+Définition à la ligne 226 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR   100103"
+
+.PP
+Définition à la ligne 220 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR1   100151"
+
+.PP
+Définition à la ligne 244 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR2   100152"
+
+.PP
+Définition à la ligne 245 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR3   100153"
+
+.PP
+Définition à la ligne 246 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR4   100154"
+
+.PP
+Définition à la ligne 247 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR5   100155"
+
+.PP
+Définition à la ligne 248 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR6   100156"
+
+.PP
+Définition à la ligne 249 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR7   100157"
+
+.PP
+Définition à la ligne 250 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR8   100158"
+
+.PP
+Définition à la ligne 251 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_ERROR_DATA   100109"
+
+.PP
+Définition à la ligne 227 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_MAX_COORD   1\&.0e150"
+
+.PP
+Définition à la ligne 284 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_MISSING_BEGIN_CONTOUR   100152"
+
+.PP
+Définition à la ligne 253 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_MISSING_BEGIN_POLYGON   100151"
+
+.PP
+Définition à la ligne 252 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_MISSING_END_CONTOUR   100154"
+
+.PP
+Définition à la ligne 255 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_MISSING_END_POLYGON   100153"
+
+.PP
+Définition à la ligne 254 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_NEED_COMBINE_CALLBACK   100156"
+
+.PP
+Définition à la ligne 257 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_TOLERANCE   100142"
+
+.PP
+Définition à la ligne 241 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_VERTEX   100101"
+
+.PP
+Définition à la ligne 216 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_VERTEX_DATA   100107"
+
+.PP
+Définition à la ligne 225 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_WINDING_ABS_GEQ_TWO   100134"
+
+.PP
+Définition à la ligne 264 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_WINDING_NEGATIVE   100133"
+
+.PP
+Définition à la ligne 263 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_WINDING_NONZERO   100131"
+
+.PP
+Définition à la ligne 261 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_WINDING_ODD   100130"
+
+.PP
+Définition à la ligne 260 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_WINDING_POSITIVE   100132"
+
+.PP
+Définition à la ligne 262 du fichier glu\&.h\&.
+.SS "#define GLU_TESS_WINDING_RULE   100140"
+
+.PP
+Définition à la ligne 239 du fichier glu\&.h\&.
+.SS "#define GLU_TRUE   1"
+
+.PP
+Définition à la ligne 76 du fichier glu\&.h\&.
+.SS "#define GLU_U_STEP   100206"
+
+.PP
+Définition à la ligne 173 du fichier glu\&.h\&.
+.SS "#define GLU_UNKNOWN   100124"
+
+.PP
+Définition à la ligne 236 du fichier glu\&.h\&.
+.SS "#define GLU_V_STEP   100207"
+
+.PP
+Définition à la ligne 174 du fichier glu\&.h\&.
+.SS "#define GLU_VERSION   100800"
+
+.PP
+Définition à la ligne 84 du fichier glu\&.h\&.
+.SS "#define GLU_VERSION_1_1   1"
+
+.PP
+Définition à la ligne 79 du fichier glu\&.h\&.
+.SS "#define GLU_VERSION_1_2   1"
+
+.PP
+Définition à la ligne 80 du fichier glu\&.h\&.
+.SS "#define GLU_VERSION_1_3   1"
+
+.PP
+Définition à la ligne 81 du fichier glu\&.h\&.
+.SS "#define GLU_VERTEX   100101"
+
+.PP
+Définition à la ligne 217 du fichier glu\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBGLUnurbs\fP \fBGLUnurbs\fP"
+
+.PP
+Définition à la ligne 274 du fichier glu\&.h\&.
+.SS "typedef \fBGLUnurbs\fP \fBGLUnurbsObj\fP"
+
+.PP
+Définition à la ligne 279 du fichier glu\&.h\&.
+.SS "typedef struct \fBGLUquadric\fP \fBGLUquadric\fP"
+
+.PP
+Définition à la ligne 275 du fichier glu\&.h\&.
+.SS "typedef \fBGLUquadric\fP \fBGLUquadricObj\fP"
+
+.PP
+Définition à la ligne 280 du fichier glu\&.h\&.
+.SS "typedef struct \fBGLUtesselator\fP \fBGLUtesselator\fP"
+
+.PP
+Définition à la ligne 276 du fichier glu\&.h\&.
+.SS "typedef \fBGLUtesselator\fP \fBGLUtesselatorObj\fP"
+
+.PP
+Définition à la ligne 281 du fichier glu\&.h\&.
+.SS "typedef \fBGLUtesselator\fP \fBGLUtriangulatorObj\fP"
+
+.PP
+Définition à la ligne 282 du fichier glu\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluBeginCurve (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluBeginPolygon (\fBGLUtesselator\fP * tess)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluBeginSurface (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluBeginTrim (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluBuild1DMipmapLevels (\fBGLenum\fP target, \fBGLint\fP internalFormat, \fBGLsizei\fP width, \fBGLenum\fP format, \fBGLenum\fP type, \fBGLint\fP level, \fBGLint\fP base, \fBGLint\fP max, \fBconst\fP \fBvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluBuild1DMipmaps (\fBGLenum\fP target, \fBGLint\fP internalFormat, \fBGLsizei\fP width, \fBGLenum\fP format, \fBGLenum\fP type, \fBconst\fP \fBvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluBuild2DMipmapLevels (\fBGLenum\fP target, \fBGLint\fP internalFormat, \fBGLsizei\fP width, \fBGLsizei\fP height, \fBGLenum\fP format, \fBGLenum\fP type, \fBGLint\fP level, \fBGLint\fP base, \fBGLint\fP max, \fBconst\fP \fBvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluBuild2DMipmaps (\fBGLenum\fP target, \fBGLint\fP internalFormat, \fBGLsizei\fP width, \fBGLsizei\fP height, \fBGLenum\fP format, \fBGLenum\fP type, \fBconst\fP \fBvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluBuild3DMipmapLevels (\fBGLenum\fP target, \fBGLint\fP internalFormat, \fBGLsizei\fP width, \fBGLsizei\fP height, \fBGLsizei\fP depth, \fBGLenum\fP format, \fBGLenum\fP type, \fBGLint\fP level, \fBGLint\fP base, \fBGLint\fP max, \fBconst\fP \fBvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluBuild3DMipmaps (\fBGLenum\fP target, \fBGLint\fP internalFormat, \fBGLsizei\fP width, \fBGLsizei\fP height, \fBGLsizei\fP depth, \fBGLenum\fP format, \fBGLenum\fP type, \fBconst\fP \fBvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP gluCheckExtension (\fBconst\fP \fBGLubyte\fP * extName, \fBconst\fP \fBGLubyte\fP * extString)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluCylinder (\fBGLUquadric\fP * quad, \fBGLdouble\fP base, \fBGLdouble\fP top, \fBGLdouble\fP height, \fBGLint\fP slices, \fBGLint\fP stacks)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluDeleteNurbsRenderer (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluDeleteQuadric (\fBGLUquadric\fP * quad)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluDeleteTess (\fBGLUtesselator\fP * tess)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluDisk (\fBGLUquadric\fP * quad, \fBGLdouble\fP inner, \fBGLdouble\fP outer, \fBGLint\fP slices, \fBGLint\fP loops)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluEndCurve (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluEndPolygon (\fBGLUtesselator\fP * tess)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluEndSurface (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluEndTrim (\fBGLUnurbs\fP * nurb)"
+
+.SS "\fBGLAPI\fP \fBconst\fP \fBGLubyte\fP* \fBGLAPIENTRY\fP gluErrorString (\fBGLenum\fP error)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluGetNurbsProperty (\fBGLUnurbs\fP * nurb, \fBGLenum\fP property, \fBGLfloat\fP * data)"
+
+.SS "\fBGLAPI\fP \fBconst\fP \fBGLubyte\fP* \fBGLAPIENTRY\fP gluGetString (\fBGLenum\fP name)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluGetTessProperty (\fBGLUtesselator\fP * tess, \fBGLenum\fP which, \fBGLdouble\fP * data)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluLoadSamplingMatrices (\fBGLUnurbs\fP * nurb, \fBconst\fP \fBGLfloat\fP * model, \fBconst\fP \fBGLfloat\fP * perspective, \fBconst\fP \fBGLint\fP * view)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluLookAt (\fBGLdouble\fP eyeX, \fBGLdouble\fP eyeY, \fBGLdouble\fP eyeZ, \fBGLdouble\fP centerX, \fBGLdouble\fP centerY, \fBGLdouble\fP centerZ, \fBGLdouble\fP upX, \fBGLdouble\fP upY, \fBGLdouble\fP upZ)"
+
+.SS "\fBGLAPI\fP \fBGLUnurbs\fP* \fBGLAPIENTRY\fP gluNewNurbsRenderer (\fBvoid\fP)"
+
+.SS "\fBGLAPI\fP \fBGLUquadric\fP* \fBGLAPIENTRY\fP gluNewQuadric (\fBvoid\fP)"
+
+.SS "\fBGLAPI\fP \fBGLUtesselator\fP* \fBGLAPIENTRY\fP gluNewTess (\fBvoid\fP)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNextContour (\fBGLUtesselator\fP * tess, \fBGLenum\fP type)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNurbsCallback (\fBGLUnurbs\fP * nurb, \fBGLenum\fP which, _GLUfuncptr CallBackFunc)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNurbsCallbackData (\fBGLUnurbs\fP * nurb, \fBGLvoid\fP * userData)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNurbsCallbackDataEXT (\fBGLUnurbs\fP * nurb, \fBGLvoid\fP * userData)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNurbsCurve (\fBGLUnurbs\fP * nurb, \fBGLint\fP knotCount, \fBGLfloat\fP * knots, \fBGLint\fP stride, \fBGLfloat\fP * control, \fBGLint\fP order, \fBGLenum\fP type)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNurbsProperty (\fBGLUnurbs\fP * nurb, \fBGLenum\fP property, \fBGLfloat\fP value)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluNurbsSurface (\fBGLUnurbs\fP * nurb, \fBGLint\fP sKnotCount, \fBGLfloat\fP * sKnots, \fBGLint\fP tKnotCount, \fBGLfloat\fP * tKnots, \fBGLint\fP sStride, \fBGLint\fP tStride, \fBGLfloat\fP * control, \fBGLint\fP sOrder, \fBGLint\fP tOrder, \fBGLenum\fP type)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluOrtho2D (\fBGLdouble\fP left, \fBGLdouble\fP right, \fBGLdouble\fP bottom, \fBGLdouble\fP top)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluPartialDisk (\fBGLUquadric\fP * quad, \fBGLdouble\fP inner, \fBGLdouble\fP outer, \fBGLint\fP slices, \fBGLint\fP loops, \fBGLdouble\fP start, \fBGLdouble\fP sweep)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluPerspective (\fBGLdouble\fP fovy, \fBGLdouble\fP aspect, \fBGLdouble\fP zNear, \fBGLdouble\fP zFar)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluPickMatrix (\fBGLdouble\fP x, \fBGLdouble\fP y, \fBGLdouble\fP delX, \fBGLdouble\fP delY, \fBGLint\fP * viewport)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluProject (\fBGLdouble\fP objX, \fBGLdouble\fP objY, \fBGLdouble\fP objZ, \fBconst\fP \fBGLdouble\fP * model, \fBconst\fP \fBGLdouble\fP * proj, \fBconst\fP \fBGLint\fP * view, \fBGLdouble\fP * winX, \fBGLdouble\fP * winY, \fBGLdouble\fP * winZ)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluPwlCurve (\fBGLUnurbs\fP * nurb, \fBGLint\fP count, \fBGLfloat\fP * data, \fBGLint\fP stride, \fBGLenum\fP type)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluQuadricCallback (\fBGLUquadric\fP * quad, \fBGLenum\fP which, _GLUfuncptr CallBackFunc)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluQuadricDrawStyle (\fBGLUquadric\fP * quad, \fBGLenum\fP draw)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluQuadricNormals (\fBGLUquadric\fP * quad, \fBGLenum\fP normal)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluQuadricOrientation (\fBGLUquadric\fP * quad, \fBGLenum\fP orientation)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluQuadricTexture (\fBGLUquadric\fP * quad, \fBGLboolean\fP texture)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluScaleImage (\fBGLenum\fP format, \fBGLsizei\fP wIn, \fBGLsizei\fP hIn, \fBGLenum\fP typeIn, \fBconst\fP \fBvoid\fP * dataIn, \fBGLsizei\fP wOut, \fBGLsizei\fP hOut, \fBGLenum\fP typeOut, \fBGLvoid\fP * dataOut)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluSphere (\fBGLUquadric\fP * quad, \fBGLdouble\fP radius, \fBGLint\fP slices, \fBGLint\fP stacks)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessBeginContour (\fBGLUtesselator\fP * tess)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessBeginPolygon (\fBGLUtesselator\fP * tess, \fBGLvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessCallback (\fBGLUtesselator\fP * tess, \fBGLenum\fP which, _GLUfuncptr CallBackFunc)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessEndContour (\fBGLUtesselator\fP * tess)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessEndPolygon (\fBGLUtesselator\fP * tess)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessNormal (\fBGLUtesselator\fP * tess, \fBGLdouble\fP valueX, \fBGLdouble\fP valueY, \fBGLdouble\fP valueZ)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessProperty (\fBGLUtesselator\fP * tess, \fBGLenum\fP which, \fBGLdouble\fP data)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP gluTessVertex (\fBGLUtesselator\fP * tess, \fBGLdouble\fP * location, \fBGLvoid\fP * data)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluUnProject (\fBGLdouble\fP winX, \fBGLdouble\fP winY, \fBGLdouble\fP winZ, \fBconst\fP \fBGLdouble\fP * model, \fBconst\fP \fBGLdouble\fP * proj, \fBconst\fP \fBGLint\fP * view, \fBGLdouble\fP * objX, \fBGLdouble\fP * objY, \fBGLdouble\fP * objZ)"
+
+.SS "\fBGLAPI\fP \fBGLint\fP \fBGLAPIENTRY\fP gluUnProject4 (\fBGLdouble\fP winX, \fBGLdouble\fP winY, \fBGLdouble\fP winZ, \fBGLdouble\fP clipW, \fBconst\fP \fBGLdouble\fP * model, \fBconst\fP \fBGLdouble\fP * proj, \fBconst\fP \fBGLint\fP * view, \fBGLdouble\fP nearVal, \fBGLdouble\fP farVal, \fBGLdouble\fP * objX, \fBGLdouble\fP * objY, \fBGLdouble\fP * objZ, \fBGLdouble\fP * objW)"
+
+.SS "typedef void (\fBGLAPIENTRYP\fP _GLUfuncptr)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

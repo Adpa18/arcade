@@ -1,0 +1,5031 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_opengles2_gl2ext.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_opengles2_gl2ext.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGL_APIENTRYP\fP   \fBGL_APIENTRY\fP*"
+.br
+.ti -1c
+.RI "#define \fBGL_ETC1_RGB8_OES\fP   0x8D64"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE4_RGB8_OES\fP   0x8B90"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE4_RGBA8_OES\fP   0x8B91"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE4_R5_G6_B5_OES\fP   0x8B92"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE4_RGBA4_OES\fP   0x8B93"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE4_RGB5_A1_OES\fP   0x8B94"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE8_RGB8_OES\fP   0x8B95"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE8_RGBA8_OES\fP   0x8B96"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE8_R5_G6_B5_OES\fP   0x8B97"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE8_RGBA4_OES\fP   0x8B98"
+.br
+.ti -1c
+.RI "#define \fBGL_PALETTE8_RGB5_A1_OES\fP   0x8B99"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT24_OES\fP   0x81A6"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT32_OES\fP   0x81A7"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_EXTERNAL_OES\fP   0x8D65"
+.br
+.ti -1c
+.RI "#define \fBGL_SAMPLER_EXTERNAL_OES\fP   0x8D66"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_BINDING_EXTERNAL_OES\fP   0x8D67"
+.br
+.ti -1c
+.RI "#define \fBGL_REQUIRED_TEXTURE_IMAGE_UNITS_OES\fP   0x8D68"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT\fP   0x1405"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_BINARY_LENGTH_OES\fP   0x8741"
+.br
+.ti -1c
+.RI "#define \fBGL_NUM_PROGRAM_BINARY_FORMATS_OES\fP   0x87FE"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_BINARY_FORMATS_OES\fP   0x87FF"
+.br
+.ti -1c
+.RI "#define \fBGL_WRITE_ONLY_OES\fP   0x88B9"
+.br
+.ti -1c
+.RI "#define \fBGL_BUFFER_ACCESS_OES\fP   0x88BB"
+.br
+.ti -1c
+.RI "#define \fBGL_BUFFER_MAPPED_OES\fP   0x88BC"
+.br
+.ti -1c
+.RI "#define \fBGL_BUFFER_MAP_POINTER_OES\fP   0x88BD"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_STENCIL_OES\fP   0x84F9"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT_24_8_OES\fP   0x84FA"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH24_STENCIL8_OES\fP   0x88F0"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA8_OES\fP   0x803C"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT16_OES\fP   0x81A5"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE4_ALPHA4_OES\fP   0x8043"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE8_ALPHA8_OES\fP   0x8045"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE8_OES\fP   0x8040"
+.br
+.ti -1c
+.RI "#define \fBGL_RGBA4_OES\fP   0x8056"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB5_A1_OES\fP   0x8057"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB565_OES\fP   0x8D62"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB8_OES\fP   0x8051"
+.br
+.ti -1c
+.RI "#define \fBGL_RGBA8_OES\fP   0x8058"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAGMENT_SHADER_DERIVATIVE_HINT_OES\fP   0x8B8B"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_INDEX1_OES\fP   0x8D46"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_INDEX4_OES\fP   0x8D47"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_UNDEFINED_OES\fP   0x8219"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_WRAP_R_OES\fP   0x8072"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_3D_OES\fP   0x806F"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_BINDING_3D_OES\fP   0x806A"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_3D_TEXTURE_SIZE_OES\fP   0x8073"
+.br
+.ti -1c
+.RI "#define \fBGL_SAMPLER_3D_OES\fP   0x8B5F"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_OES\fP   0x8CD4"
+.br
+.ti -1c
+.RI "#define \fBGL_HALF_FLOAT_OES\fP   0x8D61"
+.br
+.ti -1c
+.RI "#define \fBGL_VERTEX_ARRAY_BINDING_OES\fP   0x85B5"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT_10_10_10_2_OES\fP   0x8DF6"
+.br
+.ti -1c
+.RI "#define \fBGL_INT_10_10_10_2_OES\fP   0x8DF7"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_OUTPUT_SYNCHRONOUS_KHR\fP   0x8242"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH_KHR\fP   0x8243"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_CALLBACK_FUNCTION_KHR\fP   0x8244"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_CALLBACK_USER_PARAM_KHR\fP   0x8245"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SOURCE_API_KHR\fP   0x8246"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SOURCE_WINDOW_SYSTEM_KHR\fP   0x8247"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SOURCE_SHADER_COMPILER_KHR\fP   0x8248"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SOURCE_THIRD_PARTY_KHR\fP   0x8249"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SOURCE_APPLICATION_KHR\fP   0x824A"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SOURCE_OTHER_KHR\fP   0x824B"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_ERROR_KHR\fP   0x824C"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_KHR\fP   0x824D"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_KHR\fP   0x824E"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_PORTABILITY_KHR\fP   0x824F"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_PERFORMANCE_KHR\fP   0x8250"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_OTHER_KHR\fP   0x8251"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_MARKER_KHR\fP   0x8268"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_PUSH_GROUP_KHR\fP   0x8269"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_TYPE_POP_GROUP_KHR\fP   0x826A"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SEVERITY_NOTIFICATION_KHR\fP   0x826B"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_DEBUG_GROUP_STACK_DEPTH_KHR\fP   0x826C"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_GROUP_STACK_DEPTH_KHR\fP   0x826D"
+.br
+.ti -1c
+.RI "#define \fBGL_BUFFER_KHR\fP   0x82E0"
+.br
+.ti -1c
+.RI "#define \fBGL_SHADER_KHR\fP   0x82E1"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_KHR\fP   0x82E2"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_KHR\fP   0x82E3"
+.br
+.ti -1c
+.RI "#define \fBGL_SAMPLER_KHR\fP   0x82E6"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_LABEL_LENGTH_KHR\fP   0x82E8"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_DEBUG_MESSAGE_LENGTH_KHR\fP   0x9143"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_DEBUG_LOGGED_MESSAGES_KHR\fP   0x9144"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_LOGGED_MESSAGES_KHR\fP   0x9145"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SEVERITY_HIGH_KHR\fP   0x9146"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SEVERITY_MEDIUM_KHR\fP   0x9147"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_SEVERITY_LOW_KHR\fP   0x9148"
+.br
+.ti -1c
+.RI "#define \fBGL_DEBUG_OUTPUT_KHR\fP   0x92E0"
+.br
+.ti -1c
+.RI "#define \fBGL_CONTEXT_FLAG_DEBUG_BIT_KHR\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGL_STACK_OVERFLOW_KHR\fP   0x0503"
+.br
+.ti -1c
+.RI "#define \fBGL_STACK_UNDERFLOW_KHR\fP   0x0504"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_4x4_KHR\fP   0x93B0"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_5x4_KHR\fP   0x93B1"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_5x5_KHR\fP   0x93B2"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_6x5_KHR\fP   0x93B3"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_6x6_KHR\fP   0x93B4"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_8x5_KHR\fP   0x93B5"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_8x6_KHR\fP   0x93B6"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_8x8_KHR\fP   0x93B7"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_10x5_KHR\fP   0x93B8"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_10x6_KHR\fP   0x93B9"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_10x8_KHR\fP   0x93BA"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_10x10_KHR\fP   0x93BB"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_12x10_KHR\fP   0x93BC"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_ASTC_12x12_KHR\fP   0x93BD"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR\fP   0x93D0"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR\fP   0x93D1"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR\fP   0x93D2"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR\fP   0x93D3"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR\fP   0x93D4"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR\fP   0x93D5"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR\fP   0x93D6"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR\fP   0x93D7"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR\fP   0x93D8"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR\fP   0x93D9"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR\fP   0x93DA"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR\fP   0x93DB"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR\fP   0x93DC"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR\fP   0x93DD"
+.br
+.ti -1c
+.RI "#define \fBGL_3DC_X_AMD\fP   0x87F9"
+.br
+.ti -1c
+.RI "#define \fBGL_3DC_XY_AMD\fP   0x87FA"
+.br
+.ti -1c
+.RI "#define \fBGL_ATC_RGB_AMD\fP   0x8C92"
+.br
+.ti -1c
+.RI "#define \fBGL_ATC_RGBA_EXPLICIT_ALPHA_AMD\fP   0x8C93"
+.br
+.ti -1c
+.RI "#define \fBGL_ATC_RGBA_INTERPOLATED_ALPHA_AMD\fP   0x87EE"
+.br
+.ti -1c
+.RI "#define \fBGL_COUNTER_TYPE_AMD\fP   0x8BC0"
+.br
+.ti -1c
+.RI "#define \fBGL_COUNTER_RANGE_AMD\fP   0x8BC1"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT64_AMD\fP   0x8BC2"
+.br
+.ti -1c
+.RI "#define \fBGL_PERCENTAGE_AMD\fP   0x8BC3"
+.br
+.ti -1c
+.RI "#define \fBGL_PERFMON_RESULT_AVAILABLE_AMD\fP   0x8BC4"
+.br
+.ti -1c
+.RI "#define \fBGL_PERFMON_RESULT_SIZE_AMD\fP   0x8BC5"
+.br
+.ti -1c
+.RI "#define \fBGL_PERFMON_RESULT_AMD\fP   0x8BC6"
+.br
+.ti -1c
+.RI "#define \fBGL_Z400_BINARY_AMD\fP   0x8740"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT\fP   0x1902"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_STENCIL_OES\fP   0x84F9"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_SHORT\fP   0x1403"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT\fP   0x1405"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT_24_8_OES\fP   0x84FA"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT16\fP   0x81A5"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT32_OES\fP   0x81A7"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH24_STENCIL8_OES\fP   0x88F0"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_FRAMEBUFFER_ANGLE\fP   0x8CA8"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_FRAMEBUFFER_ANGLE\fP   0x8CA9"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_FRAMEBUFFER_BINDING_ANGLE\fP   0x8CA6"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_FRAMEBUFFER_BINDING_ANGLE\fP   0x8CAA"
+.br
+.ti -1c
+.RI "#define \fBGL_RENDERBUFFER_SAMPLES_ANGLE\fP   0x8CAB"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_ANGLE\fP   0x8D56"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_SAMPLES_ANGLE\fP   0x8D57"
+.br
+.ti -1c
+.RI "#define \fBGL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE\fP   0x88FE"
+.br
+.ti -1c
+.RI "#define \fBGL_PACK_REVERSE_ROW_ORDER_ANGLE\fP   0x93A4"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_BINARY_ANGLE\fP   0x93A6"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE\fP   0x83F2"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE\fP   0x83F3"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_USAGE_ANGLE\fP   0x93A2"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_ATTACHMENT_ANGLE\fP   0x93A3"
+.br
+.ti -1c
+.RI "#define \fBGL_TRANSLATED_SHADER_SOURCE_LENGTH_ANGLE\fP   0x93A0"
+.br
+.ti -1c
+.RI "#define \fBGL_RENDERBUFFER_SAMPLES_APPLE\fP   0x8CAB"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_APPLE\fP   0x8D56"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_SAMPLES_APPLE\fP   0x8D57"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_FRAMEBUFFER_APPLE\fP   0x8CA8"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_FRAMEBUFFER_APPLE\fP   0x8CA9"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_FRAMEBUFFER_BINDING_APPLE\fP   0x8CA6"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_FRAMEBUFFER_BINDING_APPLE\fP   0x8CAA"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB_422_APPLE\fP   0x8A1F"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_SHORT_8_8_APPLE\fP   0x85BA"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_SHORT_8_8_REV_APPLE\fP   0x85BB"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_OBJECT_APPLE\fP   0x8A53"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_SERVER_WAIT_TIMEOUT_APPLE\fP   0x9111"
+.br
+.ti -1c
+.RI "#define \fBGL_OBJECT_TYPE_APPLE\fP   0x9112"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_CONDITION_APPLE\fP   0x9113"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_STATUS_APPLE\fP   0x9114"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_FLAGS_APPLE\fP   0x9115"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_FENCE_APPLE\fP   0x9116"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_GPU_COMMANDS_COMPLETE_APPLE\fP   0x9117"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNALED_APPLE\fP   0x9118"
+.br
+.ti -1c
+.RI "#define \fBGL_SIGNALED_APPLE\fP   0x9119"
+.br
+.ti -1c
+.RI "#define \fBGL_ALREADY_SIGNALED_APPLE\fP   0x911A"
+.br
+.ti -1c
+.RI "#define \fBGL_TIMEOUT_EXPIRED_APPLE\fP   0x911B"
+.br
+.ti -1c
+.RI "#define \fBGL_CONDITION_SATISFIED_APPLE\fP   0x911C"
+.br
+.ti -1c
+.RI "#define \fBGL_WAIT_FAILED_APPLE\fP   0x911D"
+.br
+.ti -1c
+.RI "#define \fBGL_SYNC_FLUSH_COMMANDS_BIT_APPLE\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGL_TIMEOUT_IGNORED_APPLE\fP   0xFFFFFFFFFFFFFFFFull"
+.br
+.ti -1c
+.RI "#define \fBGL_BGRA_EXT\fP   0x80E1"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_MAX_LEVEL_APPLE\fP   0x813D"
+.br
+.ti -1c
+.RI "#define \fBGL_MALI_PROGRAM_BINARY_ARM\fP   0x8F61"
+.br
+.ti -1c
+.RI "#define \fBGL_MALI_SHADER_BINARY_ARM\fP   0x8F60"
+.br
+.ti -1c
+.RI "#define \fBGL_MIN_EXT\fP   0x8007"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_EXT\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBGL_RGBA16F_EXT\fP   0x881A"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB16F_EXT\fP   0x881B"
+.br
+.ti -1c
+.RI "#define \fBGL_RG16F_EXT\fP   0x822F"
+.br
+.ti -1c
+.RI "#define \fBGL_R16F_EXT\fP   0x822D"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT\fP   0x8211"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_NORMALIZED_EXT\fP   0x8C17"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_PIPELINE_OBJECT_EXT\fP   0x8A4F"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_OBJECT_EXT\fP   0x8B40"
+.br
+.ti -1c
+.RI "#define \fBGL_SHADER_OBJECT_EXT\fP   0x8B48"
+.br
+.ti -1c
+.RI "#define \fBGL_BUFFER_OBJECT_EXT\fP   0x9151"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_OBJECT_EXT\fP   0x9153"
+.br
+.ti -1c
+.RI "#define \fBGL_VERTEX_ARRAY_OBJECT_EXT\fP   0x9154"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_EXT\fP   0x1800"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_EXT\fP   0x1801"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_EXT\fP   0x1802"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_COUNTER_BITS_EXT\fP   0x8864"
+.br
+.ti -1c
+.RI "#define \fBGL_CURRENT_QUERY_EXT\fP   0x8865"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_RESULT_EXT\fP   0x8866"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_RESULT_AVAILABLE_EXT\fP   0x8867"
+.br
+.ti -1c
+.RI "#define \fBGL_TIME_ELAPSED_EXT\fP   0x88BF"
+.br
+.ti -1c
+.RI "#define \fBGL_TIMESTAMP_EXT\fP   0x8E28"
+.br
+.ti -1c
+.RI "#define \fBGL_GPU_DISJOINT_EXT\fP   0x8FBB"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_draw_buffers\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_COLOR_ATTACHMENTS_EXT\fP   0x8CDF"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_DRAW_BUFFERS_EXT\fP   0x8824"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER0_EXT\fP   0x8825"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER1_EXT\fP   0x8826"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER2_EXT\fP   0x8827"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER3_EXT\fP   0x8828"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER4_EXT\fP   0x8829"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER5_EXT\fP   0x882A"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER6_EXT\fP   0x882B"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER7_EXT\fP   0x882C"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER8_EXT\fP   0x882D"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER9_EXT\fP   0x882E"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER10_EXT\fP   0x882F"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER11_EXT\fP   0x8830"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER12_EXT\fP   0x8831"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER13_EXT\fP   0x8832"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER14_EXT\fP   0x8833"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER15_EXT\fP   0x8834"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT0_EXT\fP   0x8CE0"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT1_EXT\fP   0x8CE1"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT2_EXT\fP   0x8CE2"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT3_EXT\fP   0x8CE3"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT4_EXT\fP   0x8CE4"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT5_EXT\fP   0x8CE5"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT6_EXT\fP   0x8CE6"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT7_EXT\fP   0x8CE7"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT8_EXT\fP   0x8CE8"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT9_EXT\fP   0x8CE9"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT10_EXT\fP   0x8CEA"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT11_EXT\fP   0x8CEB"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT12_EXT\fP   0x8CEC"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT13_EXT\fP   0x8CED"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT14_EXT\fP   0x8CEE"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT15_EXT\fP   0x8CEF"
+.br
+.ti -1c
+.RI "#define \fBGL_MAP_READ_BIT_EXT\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBGL_MAP_WRITE_BIT_EXT\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBGL_MAP_INVALIDATE_RANGE_BIT_EXT\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBGL_MAP_INVALIDATE_BUFFER_BIT_EXT\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBGL_MAP_FLUSH_EXPLICIT_BIT_EXT\fP   0x0010"
+.br
+.ti -1c
+.RI "#define \fBGL_MAP_UNSYNCHRONIZED_BIT_EXT\fP   0x0020"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT\fP   0x8D6C"
+.br
+.ti -1c
+.RI "#define \fBGL_RENDERBUFFER_SAMPLES_EXT\fP   0x8CAB"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT\fP   0x8D56"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_SAMPLES_EXT\fP   0x8D57"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT_EXT\fP   0x90F0"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTIVIEW_EXT\fP   0x90F1"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER_EXT\fP   0x0C01"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_BUFFER_EXT\fP   0x0C02"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_MULTIVIEW_BUFFERS_EXT\fP   0x90F2"
+.br
+.ti -1c
+.RI "#define \fBGL_ANY_SAMPLES_PASSED_EXT\fP   0x8C2F"
+.br
+.ti -1c
+.RI "#define \fBGL_ANY_SAMPLES_PASSED_CONSERVATIVE_EXT\fP   0x8D6A"
+.br
+.ti -1c
+.RI "#define \fBGL_CURRENT_QUERY_EXT\fP   0x8865"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_RESULT_EXT\fP   0x8866"
+.br
+.ti -1c
+.RI "#define \fBGL_QUERY_RESULT_AVAILABLE_EXT\fP   0x8867"
+.br
+.ti -1c
+.RI "#define \fBGL_BGRA_EXT\fP   0x80E1"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_SHORT_4_4_4_4_REV_EXT\fP   0x8365"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_SHORT_1_5_5_5_REV_EXT\fP   0x8366"
+.br
+.ti -1c
+.RI "#define \fBGL_GUILTY_CONTEXT_RESET_EXT\fP   0x8253"
+.br
+.ti -1c
+.RI "#define \fBGL_INNOCENT_CONTEXT_RESET_EXT\fP   0x8254"
+.br
+.ti -1c
+.RI "#define \fBGL_UNKNOWN_CONTEXT_RESET_EXT\fP   0x8255"
+.br
+.ti -1c
+.RI "#define \fBGL_CONTEXT_ROBUST_ACCESS_EXT\fP   0x90F3"
+.br
+.ti -1c
+.RI "#define \fBGL_RESET_NOTIFICATION_STRATEGY_EXT\fP   0x8256"
+.br
+.ti -1c
+.RI "#define \fBGL_LOSE_CONTEXT_ON_RESET_EXT\fP   0x8252"
+.br
+.ti -1c
+.RI "#define \fBGL_NO_RESET_NOTIFICATION_EXT\fP   0x8261"
+.br
+.ti -1c
+.RI "#define \fBGL_VERTEX_SHADER_BIT_EXT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAGMENT_SHADER_BIT_EXT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGL_ALL_SHADER_BITS_EXT\fP   0xFFFFFFFF"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_SEPARABLE_EXT\fP   0x8258"
+.br
+.ti -1c
+.RI "#define \fBGL_ACTIVE_PROGRAM_EXT\fP   0x8259"
+.br
+.ti -1c
+.RI "#define \fBGL_PROGRAM_PIPELINE_BINDING_EXT\fP   0x825A"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT\fP   0x8A52"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_COMPARE_MODE_EXT\fP   0x884C"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_COMPARE_FUNC_EXT\fP   0x884D"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPARE_REF_TO_TEXTURE_EXT\fP   0x884E"
+.br
+.ti -1c
+.RI "#define \fBGL_SAMPLER_2D_SHADOW_EXT\fP   0x8B62"
+.br
+.ti -1c
+.RI "#define \fBGL_SRGB_EXT\fP   0x8C40"
+.br
+.ti -1c
+.RI "#define \fBGL_SRGB_ALPHA_EXT\fP   0x8C42"
+.br
+.ti -1c
+.RI "#define \fBGL_SRGB8_ALPHA8_EXT\fP   0x8C43"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT\fP   0x8210"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_sRGB_write_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_SRGB_EXT\fP   0x8DB9"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGB_S3TC_DXT1_EXT\fP   0x83F0"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_S3TC_DXT1_EXT\fP   0x83F1"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_MAX_ANISOTROPY_EXT\fP   0x84FE"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_TEXTURE_MAX_ANISOTROPY_EXT\fP   0x84FF"
+.br
+.ti -1c
+.RI "#define \fBGL_BGRA_EXT\fP   0x80E1"
+.br
+.ti -1c
+.RI "#define \fBGL_RED_EXT\fP   0x1903"
+.br
+.ti -1c
+.RI "#define \fBGL_RG_EXT\fP   0x8227"
+.br
+.ti -1c
+.RI "#define \fBGL_R8_EXT\fP   0x8229"
+.br
+.ti -1c
+.RI "#define \fBGL_RG8_EXT\fP   0x822B"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_sRGB_decode\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_SRGB_DECODE_EXT\fP   0x8A48"
+.br
+.ti -1c
+.RI "#define \fBGL_DECODE_EXT\fP   0x8A49"
+.br
+.ti -1c
+.RI "#define \fBGL_SKIP_DECODE_EXT\fP   0x8A4A"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_IMMUTABLE_FORMAT_EXT\fP   0x912F"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA8_EXT\fP   0x803C"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE8_EXT\fP   0x8040"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE8_ALPHA8_EXT\fP   0x8045"
+.br
+.ti -1c
+.RI "#define \fBGL_RGBA32F_EXT\fP   0x8814"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB32F_EXT\fP   0x8815"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA32F_EXT\fP   0x8816"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE32F_EXT\fP   0x8818"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE_ALPHA32F_EXT\fP   0x8819"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA16F_EXT\fP   0x881C"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE16F_EXT\fP   0x881E"
+.br
+.ti -1c
+.RI "#define \fBGL_LUMINANCE_ALPHA16F_EXT\fP   0x881F"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB10_A2_EXT\fP   0x8059"
+.br
+.ti -1c
+.RI "#define \fBGL_RGB10_EXT\fP   0x8052"
+.br
+.ti -1c
+.RI "#define \fBGL_BGRA8_EXT\fP   0x93A1"
+.br
+.ti -1c
+.RI "#define \fBGL_R8_EXT\fP   0x8229"
+.br
+.ti -1c
+.RI "#define \fBGL_RG8_EXT\fP   0x822B"
+.br
+.ti -1c
+.RI "#define \fBGL_R32F_EXT\fP   0x822E"
+.br
+.ti -1c
+.RI "#define \fBGL_RG32F_EXT\fP   0x8230"
+.br
+.ti -1c
+.RI "#define \fBGL_R16F_EXT\fP   0x822D"
+.br
+.ti -1c
+.RI "#define \fBGL_RG16F_EXT\fP   0x822F"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_INT_2_10_10_10_REV_EXT\fP   0x8368"
+.br
+.ti -1c
+.RI "#define \fBGL_UNPACK_ROW_LENGTH_EXT\fP   0x0CF2"
+.br
+.ti -1c
+.RI "#define \fBGL_UNPACK_SKIP_ROWS_EXT\fP   0x0CF3"
+.br
+.ti -1c
+.RI "#define \fBGL_UNPACK_SKIP_PIXELS_EXT\fP   0x0CF4"
+.br
+.ti -1c
+.RI "#define \fBGL_SHADER_BINARY_DMP\fP   0x9250"
+.br
+.ti -1c
+.RI "#define \fBGL_GCCSO_SHADER_BINARY_FJ\fP   0x9260"
+.br
+.ti -1c
+.RI "#define \fBGL_SGX_PROGRAM_BINARY_IMG\fP   0x9130"
+.br
+.ti -1c
+.RI "#define \fBGL_BGRA_IMG\fP   0x80E1"
+.br
+.ti -1c
+.RI "#define \fBGL_UNSIGNED_SHORT_4_4_4_4_REV_IMG\fP   0x8365"
+.br
+.ti -1c
+.RI "#define \fBGL_SGX_BINARY_IMG\fP   0x8C0A"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG\fP   0x8C00"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG\fP   0x8C01"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG\fP   0x8C02"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG\fP   0x8C03"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG\fP   0x9137"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG\fP   0x9138"
+.br
+.ti -1c
+.RI "#define \fBGL_RENDERBUFFER_SAMPLES_IMG\fP   0x9133"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG\fP   0x9134"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_SAMPLES_IMG\fP   0x9135"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_SAMPLES_IMG\fP   0x9136"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_COMPONENT_NV\fP   0x8ED0"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_COMPONENT4_NV\fP   0x8ED1"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_ATTACHMENT_NV\fP   0x8ED2"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_BUFFERS_NV\fP   0x8ED3"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_SAMPLES_NV\fP   0x8ED4"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_ALL_FRAGMENTS_NV\fP   0x8ED5"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_EDGE_FRAGMENTS_NV\fP   0x8ED6"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_AUTOMATIC_NV\fP   0x8ED7"
+.br
+.ti -1c
+.RI "#define \fBGL_COVERAGE_BUFFER_BIT_NV\fP   0x00008000"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_COMPONENT16_NONLINEAR_NV\fP   0x8E2C"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_DRAW_BUFFERS_NV\fP   0x8824"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER0_NV\fP   0x8825"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER1_NV\fP   0x8826"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER2_NV\fP   0x8827"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER3_NV\fP   0x8828"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER4_NV\fP   0x8829"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER5_NV\fP   0x882A"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER6_NV\fP   0x882B"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER7_NV\fP   0x882C"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER8_NV\fP   0x882D"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER9_NV\fP   0x882E"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER10_NV\fP   0x882F"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER11_NV\fP   0x8830"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER12_NV\fP   0x8831"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER13_NV\fP   0x8832"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER14_NV\fP   0x8833"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_BUFFER15_NV\fP   0x8834"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT0_NV\fP   0x8CE0"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT1_NV\fP   0x8CE1"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT2_NV\fP   0x8CE2"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT3_NV\fP   0x8CE3"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT4_NV\fP   0x8CE4"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT5_NV\fP   0x8CE5"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT6_NV\fP   0x8CE6"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT7_NV\fP   0x8CE7"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT8_NV\fP   0x8CE8"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT9_NV\fP   0x8CE9"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT10_NV\fP   0x8CEA"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT11_NV\fP   0x8CEB"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT12_NV\fP   0x8CEC"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT13_NV\fP   0x8CED"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT14_NV\fP   0x8CEE"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_ATTACHMENT15_NV\fP   0x8CEF"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_COLOR_ATTACHMENTS_NV\fP   0x8CDF"
+.br
+.ti -1c
+.RI "#define \fBGL_ALL_COMPLETED_NV\fP   0x84F2"
+.br
+.ti -1c
+.RI "#define \fBGL_FENCE_STATUS_NV\fP   0x84F3"
+.br
+.ti -1c
+.RI "#define \fBGL_FENCE_CONDITION_NV\fP   0x84F4"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_FRAMEBUFFER_NV\fP   0x8CA8"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_FRAMEBUFFER_NV\fP   0x8CA9"
+.br
+.ti -1c
+.RI "#define \fBGL_DRAW_FRAMEBUFFER_BINDING_NV\fP   0x8CA6"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_FRAMEBUFFER_BINDING_NV\fP   0x8CAA"
+.br
+.ti -1c
+.RI "#define \fBGL_RENDERBUFFER_SAMPLES_NV\fP   0x8CAB"
+.br
+.ti -1c
+.RI "#define \fBGL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_NV\fP   0x8D56"
+.br
+.ti -1c
+.RI "#define \fBGL_MAX_SAMPLES_NV\fP   0x8D57"
+.br
+.ti -1c
+.RI "#define \fBGL_VERTEX_ATTRIB_ARRAY_DIVISOR_NV\fP   0x88FE"
+.br
+.ti -1c
+.RI "#define \fBGL_READ_BUFFER_NV\fP   0x0C02"
+.br
+.ti -1c
+.RI "#define \fBGL_SAMPLER_2D_ARRAY_SHADOW_NV\fP   0x8DC4"
+.br
+.ti -1c
+.RI "#define \fBGL_SAMPLER_CUBE_SHADOW_NV\fP   0x8DC5"
+.br
+.ti -1c
+.RI "#define \fBGL_SLUMINANCE_NV\fP   0x8C46"
+.br
+.ti -1c
+.RI "#define \fBGL_SLUMINANCE_ALPHA_NV\fP   0x8C44"
+.br
+.ti -1c
+.RI "#define \fBGL_SRGB8_NV\fP   0x8C41"
+.br
+.ti -1c
+.RI "#define \fBGL_SLUMINANCE8_NV\fP   0x8C47"
+.br
+.ti -1c
+.RI "#define \fBGL_SLUMINANCE8_ALPHA8_NV\fP   0x8C45"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB_S3TC_DXT1_NV\fP   0x8C4C"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_NV\fP   0x8C4D"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_NV\fP   0x8C4E"
+.br
+.ti -1c
+.RI "#define \fBGL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_NV\fP   0x8C4F"
+.br
+.ti -1c
+.RI "#define \fBGL_ETC1_SRGB8_NV\fP   0x88EE"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_BORDER_COLOR_NV\fP   0x1004"
+.br
+.ti -1c
+.RI "#define \fBGL_CLAMP_TO_BORDER_NV\fP   0x812D"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA_TEST_QCOM\fP   0x0BC0"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA_TEST_FUNC_QCOM\fP   0x0BC1"
+.br
+.ti -1c
+.RI "#define \fBGL_ALPHA_TEST_REF_QCOM\fP   0x0BC2"
+.br
+.ti -1c
+.RI "#define \fBGL_BINNING_CONTROL_HINT_QCOM\fP   0x8FB0"
+.br
+.ti -1c
+.RI "#define \fBGL_CPU_OPTIMIZED_QCOM\fP   0x8FB1"
+.br
+.ti -1c
+.RI "#define \fBGL_GPU_OPTIMIZED_QCOM\fP   0x8FB2"
+.br
+.ti -1c
+.RI "#define \fBGL_RENDER_DIRECT_TO_FRAMEBUFFER_QCOM\fP   0x8FB3"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_WIDTH_QCOM\fP   0x8BD2"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_HEIGHT_QCOM\fP   0x8BD3"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_DEPTH_QCOM\fP   0x8BD4"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_INTERNAL_FORMAT_QCOM\fP   0x8BD5"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_FORMAT_QCOM\fP   0x8BD6"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_TYPE_QCOM\fP   0x8BD7"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_IMAGE_VALID_QCOM\fP   0x8BD8"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_NUM_LEVELS_QCOM\fP   0x8BD9"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_TARGET_QCOM\fP   0x8BDA"
+.br
+.ti -1c
+.RI "#define \fBGL_TEXTURE_OBJECT_VALID_QCOM\fP   0x8BDB"
+.br
+.ti -1c
+.RI "#define \fBGL_STATE_RESTORE\fP   0x8BDC"
+.br
+.ti -1c
+.RI "#define \fBGL_PERFMON_GLOBAL_MODE_QCOM\fP   0x8FA0"
+.br
+.ti -1c
+.RI "#define \fBGL_WRITEONLY_RENDERING_QCOM\fP   0x8823"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT0_QCOM\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT1_QCOM\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT2_QCOM\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT3_QCOM\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT4_QCOM\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT5_QCOM\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT6_QCOM\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_BUFFER_BIT7_QCOM\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT0_QCOM\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT1_QCOM\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT2_QCOM\fP   0x00000400"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT3_QCOM\fP   0x00000800"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT4_QCOM\fP   0x00001000"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT5_QCOM\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT6_QCOM\fP   0x00004000"
+.br
+.ti -1c
+.RI "#define \fBGL_DEPTH_BUFFER_BIT7_QCOM\fP   0x00008000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT0_QCOM\fP   0x00010000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT1_QCOM\fP   0x00020000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT2_QCOM\fP   0x00040000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT3_QCOM\fP   0x00080000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT4_QCOM\fP   0x00100000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT5_QCOM\fP   0x00200000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT6_QCOM\fP   0x00400000"
+.br
+.ti -1c
+.RI "#define \fBGL_STENCIL_BUFFER_BIT7_QCOM\fP   0x00800000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT0_QCOM\fP   0x01000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT1_QCOM\fP   0x02000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT2_QCOM\fP   0x04000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT3_QCOM\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT4_QCOM\fP   0x10000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT5_QCOM\fP   0x20000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT6_QCOM\fP   0x40000000"
+.br
+.ti -1c
+.RI "#define \fBGL_MULTISAMPLE_BUFFER_BIT7_QCOM\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBGL_SHADER_BINARY_VIV\fP   0x8FC4"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_compressed_ETC1_RGB8_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_compressed_paletted_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_depth24\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_depth32\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_depth_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_EGL_image\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_EGL_image_external\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_element_index_uint\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_fbo_render_mipmap\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_fragment_precision_high\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_get_program_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_mapbuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_packed_depth_stencil\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_required_internalformat\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_rgb8_rgba8\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_standard_derivatives\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_stencil1\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_stencil4\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_surfaceless_context\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_texture_3D\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_texture_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_texture_float_linear\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_texture_half_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_texture_half_float_linear\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_texture_npot\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_vertex_array_object\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_vertex_half_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_OES_vertex_type_10_10_10_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_KHR_debug\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_KHR_texture_compression_astc_ldr\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_AMD_compressed_3DC_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_AMD_compressed_ATC_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_AMD_performance_monitor\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_AMD_program_binary_Z400\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_depth_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_framebuffer_blit\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_framebuffer_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_instanced_arrays\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_pack_reverse_row_order\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_program_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_texture_compression_dxt3\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_texture_compression_dxt5\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_texture_usage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ANGLE_translated_shader_source\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_APPLE_copy_texture_levels\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_APPLE_framebuffer_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_APPLE_rgb_422\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_APPLE_sync\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_APPLE_texture_format_BGRA8888\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_APPLE_texture_max_level\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ARM_mali_program_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ARM_mali_shader_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_ARM_rgba8\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_blend_minmax\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_color_buffer_half_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_debug_label\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_debug_marker\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_discard_framebuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_disjoint_timer_query\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_map_buffer_range\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_multisampled_render_to_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_multiview_draw_buffers\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_multi_draw_arrays\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_occlusion_query_boolean\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_read_format_bgra\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_robustness\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_separate_shader_objects\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_shader_framebuffer_fetch\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_shader_texture_lod\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_shadow_samplers\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_compression_dxt1\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_filter_anisotropic\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_format_BGRA8888\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_rg\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_storage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_texture_type_2_10_10_10_REV\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_EXT_unpack_subimage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_DMP_shader_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_FJ_shader_binary_GCCSO\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_IMG_program_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_IMG_read_format\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_IMG_shader_binary\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_IMG_texture_compression_pvrtc\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_IMG_texture_compression_pvrtc2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_IMG_multisampled_render_to_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_coverage_sample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_depth_nonlinear\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_draw_buffers\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_draw_instanced\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_fbo_color_attachments\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_fence\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_framebuffer_blit\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_framebuffer_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_generate_mipmap_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_instanced_arrays\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_read_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_read_buffer_front\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_read_depth\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_read_depth_stencil\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_read_stencil\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_shadow_samplers_array\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_shadow_samplers_cube\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_sRGB_formats\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_texture_border_clamp\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_texture_compression_s3tc_update\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_NV_texture_npot_2D_mipmap\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_alpha_test\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_binning_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_driver_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_extended_get\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_extended_get2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_perfmon_global_mode\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_writeonly_rendering\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_QCOM_tiled_rendering\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGL_VIV_shader_binary\fP   1"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBkhronos_int64_t\fP \fBGLint64\fP"
+.br
+.ti -1c
+.RI "typedef \fBkhronos_uint64_t\fP \fBGLuint64\fP"
+.br
+.ti -1c
+.RI "typedef struct __GLsync * \fBGLsync\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP * \fBGLeglImageOES\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLuint\fP \fBid\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBseverity\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLchar\fP * \fBmessage\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLchar\fP \fBconst\fP \fBvoid\fP * \fBuserParam\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLeglImageOES\fP \fBimage\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBbufSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP * \fBbinaryFormat\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLvoid\fP * \fBbinary\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP *\fBGL_APIENTRYP\fP \fBPFNGLMAPBUFFEROESPROC\fP(\fBGLenum\fP \fBtarget\fP, \fBGLenum\fP \fBaccess\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBpname\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLvoid\fP ** \fBparams\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBlevel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBinternalformat\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBwidth\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBheight\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBdepth\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP \fBborder\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP \fBGLenum\fP \fBformat\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP \fBGLenum\fP \fBGLenum\fP \fBconst\fP \fBGLvoid\fP * \fBpixels\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBxoffset\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fByoffset\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBzoffset\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBx\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBy\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP \fBGLsizei\fP \fBimageSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP \fBGLsizei\fP \fBconst\fP \fBGLvoid\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBattachment\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLenum\fP \fBtextarget\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBtexture\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBGLuint\fP * \fBarrays\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLenum\fP \fBGLsizei\fP \fBcount\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLuint\fP * \fBids\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLuint\fP \fBGLboolean\fP \fBenabled\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLchar\fP * \fBbuf\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBbufsize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLenum\fP * \fBsources\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP * \fBtypes\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP * \fBseverities\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP * \fBlengths\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLchar\fP * \fBmessageLog\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBname\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLsizei\fP \fBconst\fP \fBGLchar\fP * \fBlabel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBgroupsSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLuint\fP * \fBgroups\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP * \fBnumCounters\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBmaxActiveCounters\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBcounterSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLuint\fP * \fBcounters\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP * \fBgroupString\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBcounter\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP * \fBcounterString\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP * \fBmonitors\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP \fBenable\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP \fBGLuint\fP \fBgroup\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP \fBGLuint\fP \fBGLint\fP \fBGLuint\fP * \fBcountersList\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLsizei\fP \fBdataSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLsizei\fP \fBGLuint\fP \fBGLint\fP * \fBbytesWritten\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBsrcY0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBsrcX1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBmask\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBGLenum\fP \fBfilter\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBsamples\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBfirst\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBprimcount\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLenum\fP \fBconst\fP \fBvoid\fP * \fBindices\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBdivisor\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP * \fBsource\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBsourceTexture\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLint\fP \fBsourceBaseLevel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLint\fP \fBGLsizei\fP \fBsourceLevelCount\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLbitfield\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLbitfield\fP \fBGLuint64\fP \fBtimeout\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP * \fBvalues\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBobject\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBGLchar\fP * \fBmarker\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBnumAttachments\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBconst\fP \fBGLenum\fP * \fBattachments\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBtarget\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP *\fBGL_APIENTRYP\fP \fBPFNGLMAPBUFFERRANGEEXTPROC\fP(\fBGLenum\fP \fBtarget\fP, \fBGLintptr\fP \fBoffset\fP, \fBGLsizeiptr\fP \fBlength\fP, \fBGLbitfield\fP \fBaccess\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLintptr\fP \fBoffset\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBindex\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBGLenum\fP * \fBlocation\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLbitfield\fP \fBstages\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLbitfield\fP \fBGLuint\fP \fBprogram\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBconst\fP \fBGLchar\fP ** \fBstrings\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBGLuint\fP * \fBpipelines\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLint\fP \fBvalue\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBz\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBw\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLsizei\fP \fBGLboolean\fP \fBtranspose\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP * \fBinfoLog\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBlevels\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBGLenum\fP * \fBbufs\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBGLuint\fP * \fBfences\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBcondition\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLclampf\fP \fBref\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLuint\fP * \fBdriverControls\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP * \fBdriverControlString\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBmaxTextures\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBnumTextures\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBmaxBuffers\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBnumBuffers\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBmaxRenderbuffers\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBnumRenderbuffers\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBmaxFramebuffers\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBnumFramebuffers\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBface\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBGLint\fP \fBparam\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLvoid\fP * \fBtexels\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBmaxShaders\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBnumShaders\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBmaxPrograms\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP * \fBnumPrograms\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBshadertype\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLuint\fP \fBGLuint\fP \fBGLbitfield\fP \fBpreserveMask\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP (\fBGL_APIENTRYP\fP GLDEBUGPROCKHR)(\fBGLenum\fP \fBsource\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP (\fBGL_APIENTRYP\fP PFNGLUNMAPBUFFEROESPROC)(\fBGLenum\fP \fBtarget\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP (\fBGL_APIENTRYP\fP PFNGLGETDEBUGMESSAGELOGKHRPROC)(\fBGLuint\fP \fBcount\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLsync\fP (\fBGL_APIENTRYP\fP PFNGLFENCESYNCAPPLEPROC)(\fBGLenum\fP \fBcondition\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP (\fBGL_APIENTRYP\fP PFNGLCLIENTWAITSYNCAPPLEPROC)(\fBGLsync\fP sync"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define GL_3DC_X_AMD   0x87F9"
+
+.PP
+Définition à la ligne 280 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_3DC_XY_AMD   0x87FA"
+
+.PP
+Définition à la ligne 281 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ACTIVE_PROGRAM_EXT   0x8259"
+
+.PP
+Définition à la ligne 600 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALL_COMPLETED_NV   0x84F2"
+
+.PP
+Définition à la ligne 836 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALL_SHADER_BITS_EXT   0xFFFFFFFF"
+
+.PP
+Définition à la ligne 598 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA16F_EXT   0x881C"
+
+.PP
+Définition à la ligne 680 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA32F_EXT   0x8816"
+
+.PP
+Définition à la ligne 675 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA8_EXT   0x803C"
+
+.PP
+Définition à la ligne 670 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA8_OES   0x803C"
+
+.PP
+Définition à la ligne 112 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA_TEST_FUNC_QCOM   0x0BC1"
+
+.PP
+Définition à la ligne 924 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA_TEST_QCOM   0x0BC0"
+
+.PP
+Définition à la ligne 923 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALPHA_TEST_REF_QCOM   0x0BC2"
+
+.PP
+Définition à la ligne 925 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ALREADY_SIGNALED_APPLE   0x911A"
+
+.PP
+Définition à la ligne 412 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_AMD_compressed_3DC_texture   1"
+
+.PP
+Définition à la ligne 1247 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_AMD_compressed_ATC_texture   1"
+
+.PP
+Définition à la ligne 1252 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_AMD_performance_monitor   1"
+
+.PP
+Définition à la ligne 1257 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_AMD_program_binary_Z400   1"
+
+.PP
+Définition à la ligne 1286 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_depth_texture   1"
+
+.PP
+Définition à la ligne 1295 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_framebuffer_blit   1"
+
+.PP
+Définition à la ligne 1300 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_framebuffer_multisample   1"
+
+.PP
+Définition à la ligne 1309 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_instanced_arrays   1"
+
+.PP
+Définition à la ligne 1317 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_pack_reverse_row_order   1"
+
+.PP
+Définition à la ligne 1330 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_program_binary   1"
+
+.PP
+Définition à la ligne 1335 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_texture_compression_dxt3   1"
+
+.PP
+Définition à la ligne 1340 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_texture_compression_dxt5   1"
+
+.PP
+Définition à la ligne 1345 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_texture_usage   1"
+
+.PP
+Définition à la ligne 1350 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANGLE_translated_shader_source   1"
+
+.PP
+Définition à la ligne 1354 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANY_SAMPLES_PASSED_CONSERVATIVE_EXT   0x8D6A"
+
+.PP
+Définition à la ligne 569 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ANY_SAMPLES_PASSED_EXT   0x8C2F"
+
+.PP
+Définition à la ligne 568 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APIENTRYP   \fBGL_APIENTRY\fP*"
+
+.PP
+Définition à la ligne 16 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APPLE_copy_texture_levels   1"
+
+.PP
+Définition à la ligne 1367 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APPLE_framebuffer_multisample   1"
+
+.PP
+Définition à la ligne 1376 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APPLE_rgb_422   1"
+
+.PP
+Définition à la ligne 1387 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APPLE_sync   1"
+
+.PP
+Définition à la ligne 1392 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APPLE_texture_format_BGRA8888   1"
+
+.PP
+Définition à la ligne 1413 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_APPLE_texture_max_level   1"
+
+.PP
+Définition à la ligne 1418 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ARM_mali_program_binary   1"
+
+.PP
+Définition à la ligne 1427 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ARM_mali_shader_binary   1"
+
+.PP
+Définition à la ligne 1432 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ARM_rgba8   1"
+
+.PP
+Définition à la ligne 1437 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ATC_RGB_AMD   0x8C92"
+
+.PP
+Définition à la ligne 286 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ATC_RGBA_EXPLICIT_ALPHA_AMD   0x8C93"
+
+.PP
+Définition à la ligne 287 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD   0x87EE"
+
+.PP
+Définition à la ligne 288 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BGRA8_EXT   0x93A1"
+
+.PP
+Définition à la ligne 685 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BGRA_EXT   0x80E1"
+
+.PP
+Définition à la ligne 648 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BGRA_EXT   0x80E1"
+
+.PP
+Définition à la ligne 648 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BGRA_EXT   0x80E1"
+
+.PP
+Définition à la ligne 648 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BGRA_IMG   0x80E1"
+
+.PP
+Définition à la ligne 735 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BINNING_CONTROL_HINT_QCOM   0x8FB0"
+
+.PP
+Définition à la ligne 930 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BUFFER_ACCESS_OES   0x88BB"
+
+.PP
+Définition à la ligne 98 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BUFFER_KHR   0x82E0"
+
+.PP
+Définition à la ligne 223 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BUFFER_MAP_POINTER_OES   0x88BD"
+
+.PP
+Définition à la ligne 100 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BUFFER_MAPPED_OES   0x88BC"
+
+.PP
+Définition à la ligne 99 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_BUFFER_OBJECT_EXT   0x9151"
+
+.PP
+Définition à la ligne 472 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CLAMP_TO_BORDER_NV   0x812D"
+
+.PP
+Définition à la ligne 908 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT0_EXT   0x8CE0"
+
+.PP
+Définition à la ligne 517 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT0_NV   0x8CE0"
+
+.PP
+Définition à la ligne 807 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT10_EXT   0x8CEA"
+
+.PP
+Définition à la ligne 527 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT10_NV   0x8CEA"
+
+.PP
+Définition à la ligne 817 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT11_EXT   0x8CEB"
+
+.PP
+Définition à la ligne 528 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT11_NV   0x8CEB"
+
+.PP
+Définition à la ligne 818 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT12_EXT   0x8CEC"
+
+.PP
+Définition à la ligne 529 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT12_NV   0x8CEC"
+
+.PP
+Définition à la ligne 819 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT13_EXT   0x8CED"
+
+.PP
+Définition à la ligne 530 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT13_NV   0x8CED"
+
+.PP
+Définition à la ligne 820 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT14_EXT   0x8CEE"
+
+.PP
+Définition à la ligne 531 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT14_NV   0x8CEE"
+
+.PP
+Définition à la ligne 821 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT15_EXT   0x8CEF"
+
+.PP
+Définition à la ligne 532 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT15_NV   0x8CEF"
+
+.PP
+Définition à la ligne 822 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT1_EXT   0x8CE1"
+
+.PP
+Définition à la ligne 518 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT1_NV   0x8CE1"
+
+.PP
+Définition à la ligne 808 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT2_EXT   0x8CE2"
+
+.PP
+Définition à la ligne 519 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT2_NV   0x8CE2"
+
+.PP
+Définition à la ligne 809 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT3_EXT   0x8CE3"
+
+.PP
+Définition à la ligne 520 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT3_NV   0x8CE3"
+
+.PP
+Définition à la ligne 810 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT4_EXT   0x8CE4"
+
+.PP
+Définition à la ligne 521 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT4_NV   0x8CE4"
+
+.PP
+Définition à la ligne 811 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT5_EXT   0x8CE5"
+
+.PP
+Définition à la ligne 522 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT5_NV   0x8CE5"
+
+.PP
+Définition à la ligne 812 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT6_EXT   0x8CE6"
+
+.PP
+Définition à la ligne 523 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT6_NV   0x8CE6"
+
+.PP
+Définition à la ligne 813 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT7_EXT   0x8CE7"
+
+.PP
+Définition à la ligne 524 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT7_NV   0x8CE7"
+
+.PP
+Définition à la ligne 814 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT8_EXT   0x8CE8"
+
+.PP
+Définition à la ligne 525 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT8_NV   0x8CE8"
+
+.PP
+Définition à la ligne 815 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT9_EXT   0x8CE9"
+
+.PP
+Définition à la ligne 526 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT9_NV   0x8CE9"
+
+.PP
+Définition à la ligne 816 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_ATTACHMENT_EXT   0x90F0"
+
+.PP
+Définition à la ligne 556 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT0_QCOM   0x00000001"
+
+.PP
+Définition à la ligne 969 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT1_QCOM   0x00000002"
+
+.PP
+Définition à la ligne 970 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT2_QCOM   0x00000004"
+
+.PP
+Définition à la ligne 971 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT3_QCOM   0x00000008"
+
+.PP
+Définition à la ligne 972 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT4_QCOM   0x00000010"
+
+.PP
+Définition à la ligne 973 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT5_QCOM   0x00000020"
+
+.PP
+Définition à la ligne 974 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT6_QCOM   0x00000040"
+
+.PP
+Définition à la ligne 975 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_BUFFER_BIT7_QCOM   0x00000080"
+
+.PP
+Définition à la ligne 976 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COLOR_EXT   0x1800"
+
+.PP
+Définition à la ligne 482 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPARE_REF_TO_TEXTURE_EXT   0x884E"
+
+.PP
+Définition à la ligne 616 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG   0x8C01"
+
+.PP
+Définition à la ligne 747 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG   0x8C00"
+
+.PP
+Définition à la ligne 746 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGB_S3TC_DXT1_EXT   0x83F0"
+
+.PP
+Définition à la ligne 636 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_10x10_KHR   0x93BB"
+
+.PP
+Définition à la ligne 255 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_10x5_KHR   0x93B8"
+
+.PP
+Définition à la ligne 252 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_10x6_KHR   0x93B9"
+
+.PP
+Définition à la ligne 253 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_10x8_KHR   0x93BA"
+
+.PP
+Définition à la ligne 254 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_12x10_KHR   0x93BC"
+
+.PP
+Définition à la ligne 256 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_12x12_KHR   0x93BD"
+
+.PP
+Définition à la ligne 257 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_4x4_KHR   0x93B0"
+
+.PP
+Définition à la ligne 244 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_5x4_KHR   0x93B1"
+
+.PP
+Définition à la ligne 245 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_5x5_KHR   0x93B2"
+
+.PP
+Définition à la ligne 246 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_6x5_KHR   0x93B3"
+
+.PP
+Définition à la ligne 247 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_6x6_KHR   0x93B4"
+
+.PP
+Définition à la ligne 248 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_8x5_KHR   0x93B5"
+
+.PP
+Définition à la ligne 249 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_8x6_KHR   0x93B6"
+
+.PP
+Définition à la ligne 250 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_ASTC_8x8_KHR   0x93B7"
+
+.PP
+Définition à la ligne 251 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG   0x8C03"
+
+.PP
+Définition à la ligne 749 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG   0x9137"
+
+.PP
+Définition à la ligne 754 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG   0x8C02"
+
+.PP
+Définition à la ligne 748 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG   0x9138"
+
+.PP
+Définition à la ligne 755 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_S3TC_DXT1_EXT   0x83F1"
+
+.PP
+Définition à la ligne 637 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE   0x83F2"
+
+.PP
+Définition à la ligne 355 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE   0x83F3"
+
+.PP
+Définition à la ligne 360 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR   0x93DB"
+
+.PP
+Définition à la ligne 269 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR   0x93D8"
+
+.PP
+Définition à la ligne 266 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR   0x93D9"
+
+.PP
+Définition à la ligne 267 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR   0x93DA"
+
+.PP
+Définition à la ligne 268 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR   0x93DC"
+
+.PP
+Définition à la ligne 270 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR   0x93DD"
+
+.PP
+Définition à la ligne 271 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR   0x93D0"
+
+.PP
+Définition à la ligne 258 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR   0x93D1"
+
+.PP
+Définition à la ligne 259 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR   0x93D2"
+
+.PP
+Définition à la ligne 260 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR   0x93D3"
+
+.PP
+Définition à la ligne 261 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR   0x93D4"
+
+.PP
+Définition à la ligne 262 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR   0x93D5"
+
+.PP
+Définition à la ligne 263 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR   0x93D6"
+
+.PP
+Définition à la ligne 264 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR   0x93D7"
+
+.PP
+Définition à la ligne 265 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_NV   0x8C4D"
+
+.PP
+Définition à la ligne 899 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_NV   0x8C4E"
+
+.PP
+Définition à la ligne 900 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_NV   0x8C4F"
+
+.PP
+Définition à la ligne 901 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COMPRESSED_SRGB_S3TC_DXT1_NV   0x8C4C"
+
+.PP
+Définition à la ligne 898 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CONDITION_SATISFIED_APPLE   0x911C"
+
+.PP
+Définition à la ligne 414 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CONTEXT_FLAG_DEBUG_BIT_KHR   0x00000002"
+
+.PP
+Définition à la ligne 238 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CONTEXT_ROBUST_ACCESS_EXT   0x90F3"
+
+.PP
+Définition à la ligne 588 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COUNTER_RANGE_AMD   0x8BC1"
+
+.PP
+Définition à la ligne 294 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COUNTER_TYPE_AMD   0x8BC0"
+
+.PP
+Définition à la ligne 293 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_ALL_FRAGMENTS_NV   0x8ED5"
+
+.PP
+Définition à la ligne 777 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_ATTACHMENT_NV   0x8ED2"
+
+.PP
+Définition à la ligne 774 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_AUTOMATIC_NV   0x8ED7"
+
+.PP
+Définition à la ligne 779 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_BUFFER_BIT_NV   0x00008000"
+
+.PP
+Définition à la ligne 780 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_BUFFERS_NV   0x8ED3"
+
+.PP
+Définition à la ligne 775 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_COMPONENT4_NV   0x8ED1"
+
+.PP
+Définition à la ligne 773 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_COMPONENT_NV   0x8ED0"
+
+.PP
+Définition à la ligne 772 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_EDGE_FRAGMENTS_NV   0x8ED6"
+
+.PP
+Définition à la ligne 778 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_COVERAGE_SAMPLES_NV   0x8ED4"
+
+.PP
+Définition à la ligne 776 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CPU_OPTIMIZED_QCOM   0x8FB1"
+
+.PP
+Définition à la ligne 931 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CURRENT_QUERY_EXT   0x8865"
+
+.PP
+Définition à la ligne 570 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_CURRENT_QUERY_EXT   0x8865"
+
+.PP
+Définition à la ligne 570 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_CALLBACK_FUNCTION_KHR   0x8244"
+
+.PP
+Définition à la ligne 203 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_CALLBACK_USER_PARAM_KHR   0x8245"
+
+.PP
+Définition à la ligne 204 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_GROUP_STACK_DEPTH_KHR   0x826D"
+
+.PP
+Définition à la ligne 222 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_LOGGED_MESSAGES_KHR   0x9145"
+
+.PP
+Définition à la ligne 233 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH_KHR   0x8243"
+
+.PP
+Définition à la ligne 202 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_OUTPUT_KHR   0x92E0"
+
+.PP
+Définition à la ligne 237 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_OUTPUT_SYNCHRONOUS_KHR   0x8242"
+
+.PP
+Définition à la ligne 201 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SEVERITY_HIGH_KHR   0x9146"
+
+.PP
+Définition à la ligne 234 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SEVERITY_LOW_KHR   0x9148"
+
+.PP
+Définition à la ligne 236 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SEVERITY_MEDIUM_KHR   0x9147"
+
+.PP
+Définition à la ligne 235 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SEVERITY_NOTIFICATION_KHR   0x826B"
+
+.PP
+Définition à la ligne 220 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SOURCE_API_KHR   0x8246"
+
+.PP
+Définition à la ligne 205 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SOURCE_APPLICATION_KHR   0x824A"
+
+.PP
+Définition à la ligne 209 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SOURCE_OTHER_KHR   0x824B"
+
+.PP
+Définition à la ligne 210 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SOURCE_SHADER_COMPILER_KHR   0x8248"
+
+.PP
+Définition à la ligne 207 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SOURCE_THIRD_PARTY_KHR   0x8249"
+
+.PP
+Définition à la ligne 208 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_SOURCE_WINDOW_SYSTEM_KHR   0x8247"
+
+.PP
+Définition à la ligne 206 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_KHR   0x824D"
+
+.PP
+Définition à la ligne 212 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_ERROR_KHR   0x824C"
+
+.PP
+Définition à la ligne 211 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_MARKER_KHR   0x8268"
+
+.PP
+Définition à la ligne 217 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_OTHER_KHR   0x8251"
+
+.PP
+Définition à la ligne 216 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_PERFORMANCE_KHR   0x8250"
+
+.PP
+Définition à la ligne 215 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_POP_GROUP_KHR   0x826A"
+
+.PP
+Définition à la ligne 219 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_PORTABILITY_KHR   0x824F"
+
+.PP
+Définition à la ligne 214 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_PUSH_GROUP_KHR   0x8269"
+
+.PP
+Définition à la ligne 218 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_KHR   0x824E"
+
+.PP
+Définition à la ligne 213 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DECODE_EXT   0x8A49"
+
+.PP
+Définition à la ligne 663 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH24_STENCIL8_OES   0x88F0"
+
+.PP
+Définition à la ligne 320 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH24_STENCIL8_OES   0x88F0"
+
+.PP
+Définition à la ligne 320 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT0_QCOM   0x00000100"
+
+.PP
+Définition à la ligne 977 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT1_QCOM   0x00000200"
+
+.PP
+Définition à la ligne 978 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT2_QCOM   0x00000400"
+
+.PP
+Définition à la ligne 979 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT3_QCOM   0x00000800"
+
+.PP
+Définition à la ligne 980 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT4_QCOM   0x00001000"
+
+.PP
+Définition à la ligne 981 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT5_QCOM   0x00002000"
+
+.PP
+Définition à la ligne 982 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT6_QCOM   0x00004000"
+
+.PP
+Définition à la ligne 983 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_BUFFER_BIT7_QCOM   0x00008000"
+
+.PP
+Définition à la ligne 984 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT   0x1902"
+
+.PP
+Définition à la ligne 313 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT16   0x81A5"
+
+.PP
+Définition à la ligne 318 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT16_NONLINEAR_NV   0x8E2C"
+
+.PP
+Définition à la ligne 785 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT16_OES   0x81A5"
+
+.PP
+Définition à la ligne 113 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT24_OES   0x81A6"
+
+.PP
+Définition à la ligne 58 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT32_OES   0x81A7"
+
+.PP
+Définition à la ligne 319 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_COMPONENT32_OES   0x81A7"
+
+.PP
+Définition à la ligne 319 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_EXT   0x1801"
+
+.PP
+Définition à la ligne 483 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_STENCIL_OES   0x84F9"
+
+.PP
+Définition à la ligne 314 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DEPTH_STENCIL_OES   0x84F9"
+
+.PP
+Définition à la ligne 314 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DMP_shader_binary   1"
+
+.PP
+Définition à la ligne 1736 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER0_EXT   0x8825"
+
+.PP
+Définition à la ligne 501 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER0_NV   0x8825"
+
+.PP
+Définition à la ligne 791 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER10_EXT   0x882F"
+
+.PP
+Définition à la ligne 511 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER10_NV   0x882F"
+
+.PP
+Définition à la ligne 801 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER11_EXT   0x8830"
+
+.PP
+Définition à la ligne 512 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER11_NV   0x8830"
+
+.PP
+Définition à la ligne 802 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER12_EXT   0x8831"
+
+.PP
+Définition à la ligne 513 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER12_NV   0x8831"
+
+.PP
+Définition à la ligne 803 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER13_EXT   0x8832"
+
+.PP
+Définition à la ligne 514 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER13_NV   0x8832"
+
+.PP
+Définition à la ligne 804 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER14_EXT   0x8833"
+
+.PP
+Définition à la ligne 515 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER14_NV   0x8833"
+
+.PP
+Définition à la ligne 805 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER15_EXT   0x8834"
+
+.PP
+Définition à la ligne 516 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER15_NV   0x8834"
+
+.PP
+Définition à la ligne 806 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER1_EXT   0x8826"
+
+.PP
+Définition à la ligne 502 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER1_NV   0x8826"
+
+.PP
+Définition à la ligne 792 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER2_EXT   0x8827"
+
+.PP
+Définition à la ligne 503 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER2_NV   0x8827"
+
+.PP
+Définition à la ligne 793 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER3_EXT   0x8828"
+
+.PP
+Définition à la ligne 504 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER3_NV   0x8828"
+
+.PP
+Définition à la ligne 794 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER4_EXT   0x8829"
+
+.PP
+Définition à la ligne 505 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER4_NV   0x8829"
+
+.PP
+Définition à la ligne 795 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER5_EXT   0x882A"
+
+.PP
+Définition à la ligne 506 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER5_NV   0x882A"
+
+.PP
+Définition à la ligne 796 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER6_EXT   0x882B"
+
+.PP
+Définition à la ligne 507 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER6_NV   0x882B"
+
+.PP
+Définition à la ligne 797 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER7_EXT   0x882C"
+
+.PP
+Définition à la ligne 508 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER7_NV   0x882C"
+
+.PP
+Définition à la ligne 798 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER8_EXT   0x882D"
+
+.PP
+Définition à la ligne 509 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER8_NV   0x882D"
+
+.PP
+Définition à la ligne 799 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER9_EXT   0x882E"
+
+.PP
+Définition à la ligne 510 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER9_NV   0x882E"
+
+.PP
+Définition à la ligne 800 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_BUFFER_EXT   0x0C01"
+
+.PP
+Définition à la ligne 558 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_FRAMEBUFFER_ANGLE   0x8CA9"
+
+.PP
+Définition à la ligne 326 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_FRAMEBUFFER_APPLE   0x8CA9"
+
+.PP
+Définition à la ligne 387 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_FRAMEBUFFER_BINDING_ANGLE   0x8CA6"
+
+.PP
+Définition à la ligne 327 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_FRAMEBUFFER_BINDING_APPLE   0x8CA6"
+
+.PP
+Définition à la ligne 388 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_FRAMEBUFFER_BINDING_NV   0x8CA6"
+
+.PP
+Définition à la ligne 845 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_DRAW_FRAMEBUFFER_NV   0x8CA9"
+
+.PP
+Définition à la ligne 844 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ETC1_RGB8_OES   0x8D64"
+
+.PP
+Définition à la ligne 39 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_ETC1_SRGB8_NV   0x88EE"
+
+.PP
+Définition à la ligne 902 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_blend_minmax   1"
+
+.PP
+Définition à la ligne 1446 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_color_buffer_half_float   1"
+
+.PP
+Définition à la ligne 1451 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_debug_label   1"
+
+.PP
+Définition à la ligne 1456 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_debug_marker   1"
+
+.PP
+Définition à la ligne 1467 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_discard_framebuffer   1"
+
+.PP
+Définition à la ligne 1480 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_disjoint_timer_query   1"
+
+.PP
+Définition à la ligne 1488 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_draw_buffers   1"
+
+.PP
+Définition à la ligne 498 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_map_buffer_range   1"
+
+.PP
+Définition à la ligne 1525 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_multi_draw_arrays   1"
+
+.PP
+Définition à la ligne 1559 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_multisampled_render_to_texture   1"
+
+.PP
+Définition à la ligne 1536 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_multiview_draw_buffers   1"
+
+.PP
+Définition à la ligne 1547 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_occlusion_query_boolean   1"
+
+.PP
+Définition à la ligne 1570 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_read_format_bgra   1"
+
+.PP
+Définition à la ligne 1576 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_robustness   1"
+
+.PP
+Définition à la ligne 1581 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_separate_shader_objects   1"
+
+.PP
+Définition à la ligne 1596 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_shader_framebuffer_fetch   1"
+
+.PP
+Définition à la ligne 1663 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_shader_texture_lod   1"
+
+.PP
+Définition à la ligne 1668 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_shadow_samplers   1"
+
+.PP
+Définition à la ligne 1673 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_sRGB   1"
+
+.PP
+Définition à la ligne 1678 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_sRGB_write_control   1"
+
+.PP
+Définition à la ligne 630 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_compression_dxt1   1"
+
+.PP
+Définition à la ligne 1683 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_filter_anisotropic   1"
+
+.PP
+Définition à la ligne 1688 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_format_BGRA8888   1"
+
+.PP
+Définition à la ligne 1693 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_rg   1"
+
+.PP
+Définition à la ligne 1698 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_sRGB_decode   1"
+
+.PP
+Définition à la ligne 661 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_storage   1"
+
+.PP
+Définition à la ligne 1703 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_texture_type_2_10_10_10_REV   1"
+
+.PP
+Définition à la ligne 1722 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_EXT_unpack_subimage   1"
+
+.PP
+Définition à la ligne 1727 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FENCE_CONDITION_NV   0x84F4"
+
+.PP
+Définition à la ligne 838 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FENCE_STATUS_NV   0x84F3"
+
+.PP
+Définition à la ligne 837 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FJ_shader_binary_GCCSO   1"
+
+.PP
+Définition à la ligne 1745 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAGMENT_SHADER_BIT_EXT   0x00000002"
+
+.PP
+Définition à la ligne 597 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAGMENT_SHADER_DERIVATIVE_HINT_OES   0x8B8B"
+
+.PP
+Définition à la ligne 137 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT   0x8A52"
+
+.PP
+Définition à la ligne 606 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_ATTACHMENT_ANGLE   0x93A3"
+
+.PP
+Définition à la ligne 366 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT   0x8210"
+
+.PP
+Définition à la ligne 625 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT   0x8211"
+
+.PP
+Définition à la ligne 463 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_OES   0x8CD4"
+
+.PP
+Définition à la ligne 161 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT   0x8D6C"
+
+.PP
+Définition à la ligne 547 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_ANGLE   0x8D56"
+
+.PP
+Définition à la ligne 334 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_APPLE   0x8D56"
+
+.PP
+Définition à la ligne 384 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT   0x8D56"
+
+.PP
+Définition à la ligne 550 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG   0x9134"
+
+.PP
+Définition à la ligne 761 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_NV   0x8D56"
+
+.PP
+Définition à la ligne 852 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_SRGB_EXT   0x8DB9"
+
+.PP
+Définition à la ligne 631 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_FRAMEBUFFER_UNDEFINED_OES   0x8219"
+
+.PP
+Définition à la ligne 151 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_GCCSO_SHADER_BINARY_FJ   0x9260"
+
+.PP
+Définition à la ligne 721 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_GPU_DISJOINT_EXT   0x8FBB"
+
+.PP
+Définition à la ligne 494 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_GPU_OPTIMIZED_QCOM   0x8FB2"
+
+.PP
+Définition à la ligne 932 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_GUILTY_CONTEXT_RESET_EXT   0x8253"
+
+.PP
+Définition à la ligne 585 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_HALF_FLOAT_OES   0x8D61"
+
+.PP
+Définition à la ligne 172 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_IMG_multisampled_render_to_texture   1"
+
+.PP
+Définition à la ligne 1779 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_IMG_program_binary   1"
+
+.PP
+Définition à la ligne 1754 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_IMG_read_format   1"
+
+.PP
+Définition à la ligne 1759 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_IMG_shader_binary   1"
+
+.PP
+Définition à la ligne 1764 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_IMG_texture_compression_pvrtc   1"
+
+.PP
+Définition à la ligne 1769 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_IMG_texture_compression_pvrtc2   1"
+
+.PP
+Définition à la ligne 1774 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_INNOCENT_CONTEXT_RESET_EXT   0x8254"
+
+.PP
+Définition à la ligne 586 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_INT_10_10_10_2_OES   0x8DF7"
+
+.PP
+Définition à la ligne 192 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_KHR_debug   1"
+
+.PP
+Définition à la ligne 1209 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_KHR_texture_compression_astc_ldr   1"
+
+.PP
+Définition à la ligne 1237 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LOSE_CONTEXT_ON_RESET_EXT   0x8252"
+
+.PP
+Définition à la ligne 590 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE16F_EXT   0x881E"
+
+.PP
+Définition à la ligne 681 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE32F_EXT   0x8818"
+
+.PP
+Définition à la ligne 676 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE4_ALPHA4_OES   0x8043"
+
+.PP
+Définition à la ligne 117 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE8_ALPHA8_EXT   0x8045"
+
+.PP
+Définition à la ligne 672 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE8_ALPHA8_OES   0x8045"
+
+.PP
+Définition à la ligne 118 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE8_EXT   0x8040"
+
+.PP
+Définition à la ligne 671 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE8_OES   0x8040"
+
+.PP
+Définition à la ligne 119 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE_ALPHA16F_EXT   0x881F"
+
+.PP
+Définition à la ligne 682 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_LUMINANCE_ALPHA32F_EXT   0x8819"
+
+.PP
+Définition à la ligne 677 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MALI_PROGRAM_BINARY_ARM   0x8F61"
+
+.PP
+Définition à la ligne 436 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MALI_SHADER_BINARY_ARM   0x8F60"
+
+.PP
+Définition à la ligne 441 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAP_FLUSH_EXPLICIT_BIT_EXT   0x0010"
+
+.PP
+Définition à la ligne 541 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAP_INVALIDATE_BUFFER_BIT_EXT   0x0008"
+
+.PP
+Définition à la ligne 540 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAP_INVALIDATE_RANGE_BIT_EXT   0x0004"
+
+.PP
+Définition à la ligne 539 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAP_READ_BIT_EXT   0x0001"
+
+.PP
+Définition à la ligne 537 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAP_UNSYNCHRONIZED_BIT_EXT   0x0020"
+
+.PP
+Définition à la ligne 542 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAP_WRITE_BIT_EXT   0x0002"
+
+.PP
+Définition à la ligne 538 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_3D_TEXTURE_SIZE_OES   0x8073"
+
+.PP
+Définition à la ligne 159 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_COLOR_ATTACHMENTS_EXT   0x8CDF"
+
+.PP
+Définition à la ligne 499 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_COLOR_ATTACHMENTS_NV   0x8CDF"
+
+.PP
+Définition à la ligne 830 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_DEBUG_GROUP_STACK_DEPTH_KHR   0x826C"
+
+.PP
+Définition à la ligne 221 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_DEBUG_LOGGED_MESSAGES_KHR   0x9144"
+
+.PP
+Définition à la ligne 232 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_DEBUG_MESSAGE_LENGTH_KHR   0x9143"
+
+.PP
+Définition à la ligne 231 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_DRAW_BUFFERS_EXT   0x8824"
+
+.PP
+Définition à la ligne 500 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_DRAW_BUFFERS_NV   0x8824"
+
+.PP
+Définition à la ligne 790 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_EXT   0x8008"
+
+.PP
+Définition à la ligne 454 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_LABEL_LENGTH_KHR   0x82E8"
+
+.PP
+Définition à la ligne 230 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_MULTIVIEW_BUFFERS_EXT   0x90F2"
+
+.PP
+Définition à la ligne 560 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_SAMPLES_ANGLE   0x8D57"
+
+.PP
+Définition à la ligne 335 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_SAMPLES_APPLE   0x8D57"
+
+.PP
+Définition à la ligne 385 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_SAMPLES_EXT   0x8D57"
+
+.PP
+Définition à la ligne 551 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_SAMPLES_IMG   0x9135"
+
+.PP
+Définition à la ligne 762 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_SAMPLES_NV   0x8D57"
+
+.PP
+Définition à la ligne 853 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_SERVER_WAIT_TIMEOUT_APPLE   0x9111"
+
+.PP
+Définition à la ligne 403 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT   0x84FF"
+
+.PP
+Définition à la ligne 643 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MIN_EXT   0x8007"
+
+.PP
+Définition à la ligne 453 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT0_QCOM   0x01000000"
+
+.PP
+Définition à la ligne 993 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT1_QCOM   0x02000000"
+
+.PP
+Définition à la ligne 994 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT2_QCOM   0x04000000"
+
+.PP
+Définition à la ligne 995 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT3_QCOM   0x08000000"
+
+.PP
+Définition à la ligne 996 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT4_QCOM   0x10000000"
+
+.PP
+Définition à la ligne 997 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT5_QCOM   0x20000000"
+
+.PP
+Définition à la ligne 998 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT6_QCOM   0x40000000"
+
+.PP
+Définition à la ligne 999 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTISAMPLE_BUFFER_BIT7_QCOM   0x80000000"
+
+.PP
+Définition à la ligne 1000 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_MULTIVIEW_EXT   0x90F1"
+
+.PP
+Définition à la ligne 557 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NO_RESET_NOTIFICATION_EXT   0x8261"
+
+.PP
+Définition à la ligne 591 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NUM_PROGRAM_BINARY_FORMATS_OES   0x87FE"
+
+.PP
+Définition à la ligne 91 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_coverage_sample   1"
+
+.PP
+Définition à la ligne 1794 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_depth_nonlinear   1"
+
+.PP
+Définition à la ligne 1805 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_draw_buffers   1"
+
+.PP
+Définition à la ligne 1810 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_draw_instanced   1"
+
+.PP
+Définition à la ligne 1819 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_fbo_color_attachments   1"
+
+.PP
+Définition à la ligne 1830 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_fence   1"
+
+.PP
+Définition à la ligne 1835 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_framebuffer_blit   1"
+
+.PP
+Définition à la ligne 1856 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_framebuffer_multisample   1"
+
+.PP
+Définition à la ligne 1865 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_generate_mipmap_sRGB   1"
+
+.PP
+Définition à la ligne 1874 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_instanced_arrays   1"
+
+.PP
+Définition à la ligne 1879 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_read_buffer   1"
+
+.PP
+Définition à la ligne 1888 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_read_buffer_front   1"
+
+.PP
+Définition à la ligne 1897 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_read_depth   1"
+
+.PP
+Définition à la ligne 1902 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_read_depth_stencil   1"
+
+.PP
+Définition à la ligne 1907 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_read_stencil   1"
+
+.PP
+Définition à la ligne 1912 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_shadow_samplers_array   1"
+
+.PP
+Définition à la ligne 1917 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_shadow_samplers_cube   1"
+
+.PP
+Définition à la ligne 1922 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_sRGB_formats   1"
+
+.PP
+Définition à la ligne 1927 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_texture_border_clamp   1"
+
+.PP
+Définition à la ligne 1932 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_texture_compression_s3tc_update   1"
+
+.PP
+Définition à la ligne 1937 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_NV_texture_npot_2D_mipmap   1"
+
+.PP
+Définition à la ligne 1942 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OBJECT_TYPE_APPLE   0x9112"
+
+.PP
+Définition à la ligne 404 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_compressed_ETC1_RGB8_texture   1"
+
+.PP
+Définition à la ligne 1022 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_compressed_paletted_texture   1"
+
+.PP
+Définition à la ligne 1027 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_depth24   1"
+
+.PP
+Définition à la ligne 1032 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_depth32   1"
+
+.PP
+Définition à la ligne 1037 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_depth_texture   1"
+
+.PP
+Définition à la ligne 1042 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_EGL_image   1"
+
+.PP
+Définition à la ligne 1047 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_EGL_image_external   1"
+
+.PP
+Définition à la ligne 1058 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_element_index_uint   1"
+
+.PP
+Définition à la ligne 1064 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_fbo_render_mipmap   1"
+
+.PP
+Définition à la ligne 1069 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_fragment_precision_high   1"
+
+.PP
+Définition à la ligne 1074 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_get_program_binary   1"
+
+.PP
+Définition à la ligne 1079 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_mapbuffer   1"
+
+.PP
+Définition à la ligne 1090 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_packed_depth_stencil   1"
+
+.PP
+Définition à la ligne 1103 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_required_internalformat   1"
+
+.PP
+Définition à la ligne 1108 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_rgb8_rgba8   1"
+
+.PP
+Définition à la ligne 1113 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_standard_derivatives   1"
+
+.PP
+Définition à la ligne 1118 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_stencil1   1"
+
+.PP
+Définition à la ligne 1123 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_stencil4   1"
+
+.PP
+Définition à la ligne 1128 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_surfaceless_context   1"
+
+.PP
+Définition à la ligne 1132 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_texture_3D   1"
+
+.PP
+Définition à la ligne 1137 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_texture_float   1"
+
+.PP
+Définition à la ligne 1156 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_texture_float_linear   1"
+
+.PP
+Définition à la ligne 1161 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_texture_half_float   1"
+
+.PP
+Définition à la ligne 1166 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_texture_half_float_linear   1"
+
+.PP
+Définition à la ligne 1171 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_texture_npot   1"
+
+.PP
+Définition à la ligne 1176 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_vertex_array_object   1"
+
+.PP
+Définition à la ligne 1181 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_vertex_half_float   1"
+
+.PP
+Définition à la ligne 1196 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_OES_vertex_type_10_10_10_2   1"
+
+.PP
+Définition à la ligne 1201 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PACK_REVERSE_ROW_ORDER_ANGLE   0x93A4"
+
+.PP
+Définition à la ligne 345 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE4_R5_G6_B5_OES   0x8B92"
+
+.PP
+Définition à la ligne 46 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE4_RGB5_A1_OES   0x8B94"
+
+.PP
+Définition à la ligne 48 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE4_RGB8_OES   0x8B90"
+
+.PP
+Définition à la ligne 44 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE4_RGBA4_OES   0x8B93"
+
+.PP
+Définition à la ligne 47 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE4_RGBA8_OES   0x8B91"
+
+.PP
+Définition à la ligne 45 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE8_R5_G6_B5_OES   0x8B97"
+
+.PP
+Définition à la ligne 51 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE8_RGB5_A1_OES   0x8B99"
+
+.PP
+Définition à la ligne 53 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE8_RGB8_OES   0x8B95"
+
+.PP
+Définition à la ligne 49 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE8_RGBA4_OES   0x8B98"
+
+.PP
+Définition à la ligne 52 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PALETTE8_RGBA8_OES   0x8B96"
+
+.PP
+Définition à la ligne 50 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PERCENTAGE_AMD   0x8BC3"
+
+.PP
+Définition à la ligne 296 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PERFMON_GLOBAL_MODE_QCOM   0x8FA0"
+
+.PP
+Définition à la ligne 959 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PERFMON_RESULT_AMD   0x8BC6"
+
+.PP
+Définition à la ligne 299 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PERFMON_RESULT_AVAILABLE_AMD   0x8BC4"
+
+.PP
+Définition à la ligne 297 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PERFMON_RESULT_SIZE_AMD   0x8BC5"
+
+.PP
+Définition à la ligne 298 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_BINARY_ANGLE   0x93A6"
+
+.PP
+Définition à la ligne 350 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_BINARY_FORMATS_OES   0x87FF"
+
+.PP
+Définition à la ligne 92 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_BINARY_LENGTH_OES   0x8741"
+
+.PP
+Définition à la ligne 90 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_KHR   0x82E2"
+
+.PP
+Définition à la ligne 225 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_OBJECT_EXT   0x8B40"
+
+.PP
+Définition à la ligne 470 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_PIPELINE_BINDING_EXT   0x825A"
+
+.PP
+Définition à la ligne 601 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_PIPELINE_OBJECT_EXT   0x8A4F"
+
+.PP
+Définition à la ligne 469 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_PROGRAM_SEPARABLE_EXT   0x8258"
+
+.PP
+Définition à la ligne 599 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_alpha_test   1"
+
+.PP
+Définition à la ligne 1951 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_binning_control   1"
+
+.PP
+Définition à la ligne 1960 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_driver_control   1"
+
+.PP
+Définition à la ligne 1965 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_extended_get   1"
+
+.PP
+Définition à la ligne 1980 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_extended_get2   1"
+
+.PP
+Définition à la ligne 2003 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_perfmon_global_mode   1"
+
+.PP
+Définition à la ligne 2018 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_tiled_rendering   1"
+
+.PP
+Définition à la ligne 2028 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QCOM_writeonly_rendering   1"
+
+.PP
+Définition à la ligne 2023 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_COUNTER_BITS_EXT   0x8864"
+
+.PP
+Définition à la ligne 488 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_KHR   0x82E3"
+
+.PP
+Définition à la ligne 226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_OBJECT_EXT   0x9153"
+
+.PP
+Définition à la ligne 473 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_RESULT_AVAILABLE_EXT   0x8867"
+
+.PP
+Définition à la ligne 572 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_RESULT_AVAILABLE_EXT   0x8867"
+
+.PP
+Définition à la ligne 572 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_RESULT_EXT   0x8866"
+
+.PP
+Définition à la ligne 571 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_QUERY_RESULT_EXT   0x8866"
+
+.PP
+Définition à la ligne 571 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_R16F_EXT   0x822D"
+
+.PP
+Définition à la ligne 690 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_R16F_EXT   0x822D"
+
+.PP
+Définition à la ligne 690 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_R32F_EXT   0x822E"
+
+.PP
+Définition à la ligne 688 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_R8_EXT   0x8229"
+
+.PP
+Définition à la ligne 686 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_R8_EXT   0x8229"
+
+.PP
+Définition à la ligne 686 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_BUFFER_EXT   0x0C02"
+
+.PP
+Définition à la ligne 559 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_BUFFER_NV   0x0C02"
+
+.PP
+Définition à la ligne 866 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_FRAMEBUFFER_ANGLE   0x8CA8"
+
+.PP
+Définition à la ligne 325 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_FRAMEBUFFER_APPLE   0x8CA8"
+
+.PP
+Définition à la ligne 386 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_FRAMEBUFFER_BINDING_ANGLE   0x8CAA"
+
+.PP
+Définition à la ligne 328 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_FRAMEBUFFER_BINDING_APPLE   0x8CAA"
+
+.PP
+Définition à la ligne 389 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_FRAMEBUFFER_BINDING_NV   0x8CAA"
+
+.PP
+Définition à la ligne 846 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_READ_FRAMEBUFFER_NV   0x8CA8"
+
+.PP
+Définition à la ligne 843 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RED_EXT   0x1903"
+
+.PP
+Définition à la ligne 653 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RENDER_DIRECT_TO_FRAMEBUFFER_QCOM   0x8FB3"
+
+.PP
+Définition à la ligne 933 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RENDERBUFFER_SAMPLES_ANGLE   0x8CAB"
+
+.PP
+Définition à la ligne 333 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RENDERBUFFER_SAMPLES_APPLE   0x8CAB"
+
+.PP
+Définition à la ligne 383 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RENDERBUFFER_SAMPLES_EXT   0x8CAB"
+
+.PP
+Définition à la ligne 549 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RENDERBUFFER_SAMPLES_IMG   0x9133"
+
+.PP
+Définition à la ligne 760 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RENDERBUFFER_SAMPLES_NV   0x8CAB"
+
+.PP
+Définition à la ligne 851 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES   0x8D68"
+
+.PP
+Définition à la ligne 80 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RESET_NOTIFICATION_STRATEGY_EXT   0x8256"
+
+.PP
+Définition à la ligne 589 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RG16F_EXT   0x822F"
+
+.PP
+Définition à la ligne 691 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RG16F_EXT   0x822F"
+
+.PP
+Définition à la ligne 691 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RG32F_EXT   0x8230"
+
+.PP
+Définition à la ligne 689 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RG8_EXT   0x822B"
+
+.PP
+Définition à la ligne 687 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RG8_EXT   0x822B"
+
+.PP
+Définition à la ligne 687 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RG_EXT   0x8227"
+
+.PP
+Définition à la ligne 654 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB10_A2_EXT   0x8059"
+
+.PP
+Définition à la ligne 683 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB10_EXT   0x8052"
+
+.PP
+Définition à la ligne 684 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB16F_EXT   0x881B"
+
+.PP
+Définition à la ligne 460 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB32F_EXT   0x8815"
+
+.PP
+Définition à la ligne 674 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB565_OES   0x8D62"
+
+.PP
+Définition à la ligne 122 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB5_A1_OES   0x8057"
+
+.PP
+Définition à la ligne 121 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB8_OES   0x8051"
+
+.PP
+Définition à la ligne 131 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGB_422_APPLE   0x8A1F"
+
+.PP
+Définition à la ligne 394 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGBA16F_EXT   0x881A"
+
+.PP
+Définition à la ligne 459 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGBA32F_EXT   0x8814"
+
+.PP
+Définition à la ligne 673 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGBA4_OES   0x8056"
+
+.PP
+Définition à la ligne 120 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_RGBA8_OES   0x8058"
+
+.PP
+Définition à la ligne 132 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SAMPLER_2D_ARRAY_SHADOW_NV   0x8DC4"
+
+.PP
+Définition à la ligne 883 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SAMPLER_2D_SHADOW_EXT   0x8B62"
+
+.PP
+Définition à la ligne 617 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SAMPLER_3D_OES   0x8B5F"
+
+.PP
+Définition à la ligne 160 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SAMPLER_CUBE_SHADOW_NV   0x8DC5"
+
+.PP
+Définition à la ligne 888 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SAMPLER_EXTERNAL_OES   0x8D66"
+
+.PP
+Définition à la ligne 78 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SAMPLER_KHR   0x82E6"
+
+.PP
+Définition à la ligne 228 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SGX_BINARY_IMG   0x8C0A"
+
+.PP
+Définition à la ligne 741 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SGX_PROGRAM_BINARY_IMG   0x9130"
+
+.PP
+Définition à la ligne 730 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SHADER_BINARY_DMP   0x9250"
+
+.PP
+Définition à la ligne 712 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SHADER_BINARY_VIV   0x8FC4"
+
+.PP
+Définition à la ligne 1009 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SHADER_KHR   0x82E1"
+
+.PP
+Définition à la ligne 224 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SHADER_OBJECT_EXT   0x8B48"
+
+.PP
+Définition à la ligne 471 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SIGNALED_APPLE   0x9119"
+
+.PP
+Définition à la ligne 411 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SKIP_DECODE_EXT   0x8A4A"
+
+.PP
+Définition à la ligne 664 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SLUMINANCE8_ALPHA8_NV   0x8C45"
+
+.PP
+Définition à la ligne 897 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SLUMINANCE8_NV   0x8C47"
+
+.PP
+Définition à la ligne 896 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SLUMINANCE_ALPHA_NV   0x8C44"
+
+.PP
+Définition à la ligne 894 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SLUMINANCE_NV   0x8C46"
+
+.PP
+Définition à la ligne 893 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SRGB8_ALPHA8_EXT   0x8C43"
+
+.PP
+Définition à la ligne 624 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SRGB8_NV   0x8C41"
+
+.PP
+Définition à la ligne 895 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SRGB_ALPHA_EXT   0x8C42"
+
+.PP
+Définition à la ligne 623 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SRGB_EXT   0x8C40"
+
+.PP
+Définition à la ligne 622 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STACK_OVERFLOW_KHR   0x0503"
+
+.PP
+Définition à la ligne 239 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STACK_UNDERFLOW_KHR   0x0504"
+
+.PP
+Définition à la ligne 240 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STATE_RESTORE   0x8BDC"
+
+.PP
+Définition à la ligne 951 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT0_QCOM   0x00010000"
+
+.PP
+Définition à la ligne 985 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT1_QCOM   0x00020000"
+
+.PP
+Définition à la ligne 986 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT2_QCOM   0x00040000"
+
+.PP
+Définition à la ligne 987 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT3_QCOM   0x00080000"
+
+.PP
+Définition à la ligne 988 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT4_QCOM   0x00100000"
+
+.PP
+Définition à la ligne 989 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT5_QCOM   0x00200000"
+
+.PP
+Définition à la ligne 990 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT6_QCOM   0x00400000"
+
+.PP
+Définition à la ligne 991 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_BUFFER_BIT7_QCOM   0x00800000"
+
+.PP
+Définition à la ligne 992 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_EXT   0x1802"
+
+.PP
+Définition à la ligne 484 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_INDEX1_OES   0x8D46"
+
+.PP
+Définition à la ligne 142 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_STENCIL_INDEX4_OES   0x8D47"
+
+.PP
+Définition à la ligne 147 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_CONDITION_APPLE   0x9113"
+
+.PP
+Définition à la ligne 405 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_FENCE_APPLE   0x9116"
+
+.PP
+Définition à la ligne 408 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_FLAGS_APPLE   0x9115"
+
+.PP
+Définition à la ligne 407 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_FLUSH_COMMANDS_BIT_APPLE   0x00000001"
+
+.PP
+Définition à la ligne 416 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_GPU_COMMANDS_COMPLETE_APPLE   0x9117"
+
+.PP
+Définition à la ligne 409 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_OBJECT_APPLE   0x8A53"
+
+.PP
+Définition à la ligne 402 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_SYNC_STATUS_APPLE   0x9114"
+
+.PP
+Définition à la ligne 406 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_3D_OES   0x806F"
+
+.PP
+Définition à la ligne 157 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_BINDING_3D_OES   0x806A"
+
+.PP
+Définition à la ligne 158 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_BINDING_EXTERNAL_OES   0x8D67"
+
+.PP
+Définition à la ligne 79 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_BORDER_COLOR_NV   0x1004"
+
+.PP
+Définition à la ligne 907 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_COMPARE_FUNC_EXT   0x884D"
+
+.PP
+Définition à la ligne 615 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_COMPARE_MODE_EXT   0x884C"
+
+.PP
+Définition à la ligne 614 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_DEPTH_QCOM   0x8BD4"
+
+.PP
+Définition à la ligne 943 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_EXTERNAL_OES   0x8D65"
+
+.PP
+Définition à la ligne 77 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_FORMAT_QCOM   0x8BD6"
+
+.PP
+Définition à la ligne 945 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_HEIGHT_QCOM   0x8BD3"
+
+.PP
+Définition à la ligne 942 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_IMAGE_VALID_QCOM   0x8BD8"
+
+.PP
+Définition à la ligne 947 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_IMMUTABLE_FORMAT_EXT   0x912F"
+
+.PP
+Définition à la ligne 669 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_INTERNAL_FORMAT_QCOM   0x8BD5"
+
+.PP
+Définition à la ligne 944 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_MAX_ANISOTROPY_EXT   0x84FE"
+
+.PP
+Définition à la ligne 642 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_MAX_LEVEL_APPLE   0x813D"
+
+.PP
+Définition à la ligne 427 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_NUM_LEVELS_QCOM   0x8BD9"
+
+.PP
+Définition à la ligne 948 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_OBJECT_VALID_QCOM   0x8BDB"
+
+.PP
+Définition à la ligne 950 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_SAMPLES_IMG   0x9136"
+
+.PP
+Définition à la ligne 763 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_SRGB_DECODE_EXT   0x8A48"
+
+.PP
+Définition à la ligne 662 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_TARGET_QCOM   0x8BDA"
+
+.PP
+Définition à la ligne 949 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_TYPE_QCOM   0x8BD7"
+
+.PP
+Définition à la ligne 946 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_USAGE_ANGLE   0x93A2"
+
+.PP
+Définition à la ligne 365 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_WIDTH_QCOM   0x8BD2"
+
+.PP
+Définition à la ligne 941 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TEXTURE_WRAP_R_OES   0x8072"
+
+.PP
+Définition à la ligne 156 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TIME_ELAPSED_EXT   0x88BF"
+
+.PP
+Définition à la ligne 492 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TIMEOUT_EXPIRED_APPLE   0x911B"
+
+.PP
+Définition à la ligne 413 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TIMEOUT_IGNORED_APPLE   0xFFFFFFFFFFFFFFFFull"
+
+.PP
+Définition à la ligne 417 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TIMESTAMP_EXT   0x8E28"
+
+.PP
+Définition à la ligne 493 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_TRANSLATED_SHADER_SOURCE_LENGTH_ANGLE   0x93A0"
+
+.PP
+Définition à la ligne 371 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNKNOWN_CONTEXT_RESET_EXT   0x8255"
+
+.PP
+Définition à la ligne 587 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNPACK_ROW_LENGTH_EXT   0x0CF2"
+
+.PP
+Définition à la ligne 701 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNPACK_SKIP_PIXELS_EXT   0x0CF4"
+
+.PP
+Définition à la ligne 703 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNPACK_SKIP_ROWS_EXT   0x0CF3"
+
+.PP
+Définition à la ligne 702 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNALED_APPLE   0x9118"
+
+.PP
+Définition à la ligne 410 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT   0x1405"
+
+.PP
+Définition à la ligne 316 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT   0x1405"
+
+.PP
+Définition à la ligne 316 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT64_AMD   0x8BC2"
+
+.PP
+Définition à la ligne 295 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT_10_10_10_2_OES   0x8DF6"
+
+.PP
+Définition à la ligne 191 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT_24_8_OES   0x84FA"
+
+.PP
+Définition à la ligne 317 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT_24_8_OES   0x84FA"
+
+.PP
+Définition à la ligne 317 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_INT_2_10_10_10_REV_EXT   0x8368"
+
+.PP
+Définition à la ligne 696 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_NORMALIZED_EXT   0x8C17"
+
+.PP
+Définition à la ligne 464 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_SHORT   0x1403"
+
+.PP
+Définition à la ligne 315 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT   0x8366"
+
+.PP
+Définition à la ligne 579 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT   0x8365"
+
+.PP
+Définition à la ligne 578 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG   0x8365"
+
+.PP
+Définition à la ligne 736 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_SHORT_8_8_APPLE   0x85BA"
+
+.PP
+Définition à la ligne 395 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_UNSIGNED_SHORT_8_8_REV_APPLE   0x85BB"
+
+.PP
+Définition à la ligne 396 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_VERTEX_ARRAY_BINDING_OES   0x85B5"
+
+.PP
+Définition à la ligne 183 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_VERTEX_ARRAY_OBJECT_EXT   0x9154"
+
+.PP
+Définition à la ligne 474 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE   0x88FE"
+
+.PP
+Définition à la ligne 340 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_VERTEX_ATTRIB_ARRAY_DIVISOR_NV   0x88FE"
+
+.PP
+Définition à la ligne 861 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_VERTEX_SHADER_BIT_EXT   0x00000001"
+
+.PP
+Définition à la ligne 596 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_VIV_shader_binary   1"
+
+.PP
+Définition à la ligne 2043 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_WAIT_FAILED_APPLE   0x911D"
+
+.PP
+Définition à la ligne 415 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_WRITE_ONLY_OES   0x88B9"
+
+.PP
+Définition à la ligne 97 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_WRITEONLY_RENDERING_QCOM   0x8823"
+
+.PP
+Définition à la ligne 964 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "#define GL_Z400_BINARY_AMD   0x8740"
+
+.PP
+Définition à la ligne 304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef \fBGLuint\fP* \fBarrays\fP"
+
+.PP
+Définition à la ligne 1189 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBattachment\fP"
+
+.PP
+Définition à la ligne 1151 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBconst\fP \fBGLenum\fP* \fBattachments\fP"
+
+.PP
+Définition à la ligne 1484 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBconst\fP \fBGLvoid\fP* \fBbinary\fP"
+
+.PP
+Définition à la ligne 1084 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBbinaryFormat\fP"
+
+.PP
+Définition à la ligne 1084 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP \fBborder\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLchar\fP* \fBbuf\fP"
+
+.PP
+Définition à la ligne 1224 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBconst\fP \fBGLenum\fP* \fBbufs\fP"
+
+.PP
+Définition à la ligne 1814 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBbufSize\fP"
+
+.PP
+Définition à la ligne 1084 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBbufsize\fP"
+
+.PP
+Définition à la ligne 1226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLsizei\fP \fBGLuint\fP \fBGLint\fP* \fBbytesWritten\fP"
+
+.PP
+Définition à la ligne 1281 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBcondition\fP"
+
+.PP
+Définition à la ligne 1851 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBcount\fP"
+
+.PP
+Définition à la ligne 1223 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBcounter\fP"
+
+.PP
+Définition à la ligne 1274 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLuint\fP* \fBcounters\fP"
+
+.PP
+Définition à la ligne 1272 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBcounterSize\fP"
+
+.PP
+Définition à la ligne 1272 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLboolean\fP \fBGLuint\fP \fBGLint\fP \fBGLuint\fP* \fBcountersList\fP"
+
+.PP
+Définition à la ligne 1278 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP* \fBcounterString\fP"
+
+.PP
+Définition à la ligne 1274 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLsizei\fP \fBGLvoid\fP* \fBdata\fP"
+
+.PP
+Définition à la ligne 1149 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLsizei\fP \fBdataSize\fP"
+
+.PP
+Définition à la ligne 1281 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBdepth\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBdivisor\fP"
+
+.PP
+Définition à la ligne 1325 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLuint\fP* \fBdriverControls\fP"
+
+.PP
+Définition à la ligne 1972 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP* \fBdriverControlString\fP"
+
+.PP
+Définition à la ligne 1973 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX0\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX1\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY0\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY1\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLboolean\fP \fBenable\fP"
+
+.PP
+Définition à la ligne 1278 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLenum\fP \fBGLsizei\fP \fBconst\fP \fBGLuint\fP \fBGLboolean\fP \fBenabled\fP"
+
+.PP
+Définition à la ligne 1223 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBface\fP"
+
+.PP
+Définition à la ligne 1995 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBfences\fP"
+
+.PP
+Définition à la ligne 1845 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBGLenum\fP \fBfilter\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBfirst\fP"
+
+.PP
+Définition à la ligne 1323 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLbitfield\fP \fBflags\fP"
+
+.PP
+Définition à la ligne 1402 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBformat\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBvoid\fP* \fBGLeglImageOES\fP"
+
+.PP
+Définition à la ligne 71 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBkhronos_int64_t\fP \fBGLint64\fP"
+
+.PP
+Définition à la ligne 27 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef struct __GLsync* \fBGLsync\fP"
+
+.PP
+Définition à la ligne 29 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBkhronos_uint64_t\fP \fBGLuint64\fP"
+
+.PP
+Définition à la ligne 28 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLboolean\fP \fBGLuint\fP \fBgroup\fP"
+
+.PP
+Définition à la ligne 1278 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLuint\fP* \fBgroups\fP"
+
+.PP
+Définition à la ligne 1271 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBgroupsSize\fP"
+
+.PP
+Définition à la ligne 1271 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP* \fBgroupString\fP"
+
+.PP
+Définition à la ligne 1273 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP \fBGLuint\fP \fBheight\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBid\fP"
+
+.PP
+Définition à la ligne 200 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBconst\fP \fBGLuint\fP* \fBids\fP"
+
+.PP
+Définition à la ligne 1223 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLeglImageOES\fP \fBimage\fP"
+
+.PP
+Définition à la ligne 1052 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLsizei\fP \fBimageSize\fP"
+
+.PP
+Définition à la ligne 1149 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBindex\fP"
+
+.PP
+Définition à la ligne 1553 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBconst\fP \fBGLvoid\fP* \fBindices\fP"
+
+.PP
+Définition à la ligne 1324 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP* \fBinfoLog\fP"
+
+.PP
+Définition à la ligne 1658 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBinternalformat\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLchar\fP* \fBlabel\fP"
+
+.PP
+Définition à la ligne 1229 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLchar\fP \fBGLint\fP* \fBlength\fP"
+
+.PP
+Définition à la ligne 200 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP* \fBlengths\fP"
+
+.PP
+Définition à la ligne 1226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBlevel\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLsizei\fP \fBlevels\fP"
+
+.PP
+Définition à la ligne 1712 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBlocation\fP"
+
+.PP
+Définition à la ligne 1554 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBconst\fP \fBGLchar\fP* \fBmarker\fP"
+
+.PP
+Définition à la ligne 1473 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBmask\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBmaxActiveCounters\fP"
+
+.PP
+Définition à la ligne 1272 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBmaxBuffers\fP"
+
+.PP
+Définition à la ligne 1992 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBmaxFramebuffers\fP"
+
+.PP
+Définition à la ligne 1994 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBmaxPrograms\fP"
+
+.PP
+Définition à la ligne 2011 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBmaxRenderbuffers\fP"
+
+.PP
+Définition à la ligne 1993 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBmaxShaders\fP"
+
+.PP
+Définition à la ligne 2010 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBmaxTextures\fP"
+
+.PP
+Définition à la ligne 1991 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLsizei\fP \fBconst\fP \fBGLchar\fP* \fBmessage\fP"
+
+.PP
+Définition à la ligne 200 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBGLsizei\fP \fBGLchar\fP* \fBmessageLog\fP"
+
+.PP
+Définition à la ligne 1226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBmonitors\fP"
+
+.PP
+Définition à la ligne 1276 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBname\fP"
+
+.PP
+Définition à la ligne 1229 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBnumAttachments\fP"
+
+.PP
+Définition à la ligne 1484 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBnumBuffers\fP"
+
+.PP
+Définition à la ligne 1992 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLboolean\fP \fBGLuint\fP \fBGLint\fP \fBnumCounters\fP"
+
+.PP
+Définition à la ligne 1272 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBnumFramebuffers\fP"
+
+.PP
+Définition à la ligne 1994 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBnumPrograms\fP"
+
+.PP
+Définition à la ligne 2011 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBnumRenderbuffers\fP"
+
+.PP
+Définition à la ligne 1993 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBnumShaders\fP"
+
+.PP
+Définition à la ligne 2010 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP* \fBnumTextures\fP"
+
+.PP
+Définition à la ligne 1991 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBobject\fP"
+
+.PP
+Définition à la ligne 1461 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLintptr\fP \fBoffset\fP"
+
+.PP
+Définition à la ligne 1531 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLint\fP \fBparam\fP"
+
+.PP
+Définition à la ligne 1996 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLvoid\fP** \fBparams\fP"
+
+.PP
+Définition à la ligne 1098 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBvoid\fP* \fBGL_APIENTRYP\fP PFNGLMAPBUFFEROESPROC(\fBGLenum\fP \fBtarget\fP, \fBGLenum\fP \fBaccess\fP)"
+
+.PP
+Définition à la ligne 1096 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBvoid\fP* \fBGL_APIENTRYP\fP PFNGLMAPBUFFERRANGEEXTPROC(\fBGLenum\fP \fBtarget\fP, \fBGLintptr\fP \fBoffset\fP, \fBGLsizeiptr\fP \fBlength\fP, \fBGLbitfield\fP \fBaccess\fP)"
+
+.PP
+Définition à la ligne 1530 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBpipelines\fP"
+
+.PP
+Définition à la ligne 1633 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBconst\fP \fBGLvoid\fP* \fBpixels\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBpname\fP"
+
+.PP
+Définition à la ligne 1098 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP \fBGLuint\fP \fBGLbitfield\fP \fBpreserveMask\fP"
+
+.PP
+Définition à la ligne 2033 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBconst\fP \fBGLvoid\fP \fBGLsizei\fP \fBprimcount\fP"
+
+.PP
+Définition à la ligne 1323 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBprogram\fP"
+
+.PP
+Définition à la ligne 1629 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLclampf\fP \fBref\fP"
+
+.PP
+Définition à la ligne 1955 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBsamples\fP"
+
+.PP
+Définition à la ligne 1313 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP* \fBseverities\fP"
+
+.PP
+Définition à la ligne 1226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLuint\fP \fBGLenum\fP \fBseverity\fP"
+
+.PP
+Définition à la ligne 200 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBshadertype\fP"
+
+.PP
+Définition à la ligne 2013 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBsize\fP"
+
+.PP
+Définition à la ligne 1972 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLchar\fP* \fBsource\fP"
+
+.PP
+Définition à la ligne 1358 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLint\fP \fBsourceBaseLevel\fP"
+
+.PP
+Définition à la ligne 1371 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLint\fP \fBGLsizei\fP \fBsourceLevelCount\fP"
+
+.PP
+Définition à la ligne 1371 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP* \fBsources\fP"
+
+.PP
+Définition à la ligne 1226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBsourceTexture\fP"
+
+.PP
+Définition à la ligne 1371 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBsrcX1\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBsrcY0\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY1\fP"
+
+.PP
+Définition à la ligne 1304 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLbitfield\fP \fBstages\fP"
+
+.PP
+Définition à la ligne 1629 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBconst\fP \fBGLchar\fP** \fBstrings\fP"
+
+.PP
+Définition à la ligne 1631 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBtarget\fP"
+
+.PP
+Définition à la ligne 1507 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBGLvoid\fP* \fBtexels\fP"
+
+.PP
+Définition à la ligne 1997 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLenum\fP \fBtextarget\fP"
+
+.PP
+Définition à la ligne 1151 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLenum\fP \fBGLuint\fP \fBtexture\fP"
+
+.PP
+Définition à la ligne 1151 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLbitfield\fP \fBGLuint64\fP \fBtimeout\fP"
+
+.PP
+Définition à la ligne 1405 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLsizei\fP \fBGLboolean\fP \fBtranspose\fP"
+
+.PP
+Définition à la ligne 1654 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP \fBtype\fP"
+
+.PP
+Définition à la ligne 200 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLsizei\fP \fBGLenum\fP \fBGLenum\fP* \fBtypes\fP"
+
+.PP
+Définition à la ligne 1226 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBconst\fP \fBvoid\fP* \fBuserParam\fP"
+
+.PP
+Définition à la ligne 200 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLsizei\fP \fBGLboolean\fP \fBconst\fP \fBGLfloat\fP* \fBvalue\fP"
+
+.PP
+Définition à la ligne 1636 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLenum\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLint\fP* \fBvalues\fP"
+
+.PP
+Définition à la ligne 1408 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLfloat\fP \fBGLfloat\fP \fBGLfloat\fP \fBGLfloat\fP \fBw\fP"
+
+.PP
+Définition à la ligne 1641 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP \fBwidth\fP"
+
+.PP
+Définition à la ligne 1146 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLfloat\fP \fBx\fP"
+
+.PP
+Définition à la ligne 1148 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBxoffset\fP"
+
+.PP
+Définition à la ligne 1147 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBy\fP"
+
+.PP
+Définition à la ligne 1148 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fByoffset\fP"
+
+.PP
+Définition à la ligne 1147 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLfloat\fP \fBGLfloat\fP \fBGLfloat\fP \fBz\fP"
+
+.PP
+Définition à la ligne 1640 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBzoffset\fP"
+
+.PP
+Définition à la ligne 1147 du fichier SDL_opengles2_gl2ext\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "typedef \fBGLboolean\fP (\fBGL_APIENTRYP\fP PFNGLUNMAPBUFFEROESPROC)"
+
+.SS "typedef \fBGLenum\fP (\fBGL_APIENTRYP\fP PFNGLCLIENTWAITSYNCAPPLEPROC)"
+
+.SS "typedef \fBGLsync\fP (\fBGL_APIENTRYP\fP PFNGLFENCESYNCAPPLEPROC)"
+
+.SS "typedef \fBGLuint\fP (\fBGL_APIENTRYP\fP PFNGLGETDEBUGMESSAGELOGKHRPROC)"
+
+.SS "typedef void (\fBGL_APIENTRYP\fP GLDEBUGPROCKHR)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

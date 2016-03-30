@@ -1,0 +1,137 @@
+.TH "SDL_HapticCustom" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_HapticCustom \- A structure containing a template for the \fBSDL_HAPTIC_CUSTOM\fP effect\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_haptic\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint16\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_HapticDirection\fP \fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBinterval\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBchannels\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBperiod\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBsamples\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBattack_level\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_length\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBfade_level\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+A structure containing a template for the \fBSDL_HAPTIC_CUSTOM\fP effect\&. 
+
+A custom force feedback effect is much like a periodic effect, where the application can define its exact shape\&. You will have to allocate the data yourself\&. Data should consist of channels * samples Uint16 samples\&.
+.PP
+If channels is one, the effect is rotated using the defined direction\&. Otherwise it uses the samples in data for the different axes\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_HAPTIC_CUSTOM\fP 
+.PP
+\fBSDL_HapticEffect\fP 
+.RE
+.PP
+
+.PP
+Définition à la ligne 689 du fichier SDL_haptic\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint16\fP SDL_HapticCustom::attack_length"
+Duration of the attack\&. 
+.PP
+Définition à la ligne 710 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::attack_level"
+Level at the start of the attack\&. 
+.PP
+Définition à la ligne 711 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::button"
+Button that triggers the effect\&. 
+.PP
+Définition à la ligne 700 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint8\fP SDL_HapticCustom::channels"
+Axes to use, minimum of one\&. 
+.PP
+Définition à la ligne 704 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP* SDL_HapticCustom::data"
+Should contain channels*samples items\&. 
+.PP
+Définition à la ligne 707 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::delay"
+Delay before starting the effect\&. 
+.PP
+Définition à la ligne 697 du fichier SDL_haptic\&.h\&.
+.SS "\fBSDL_HapticDirection\fP SDL_HapticCustom::direction"
+Direction of the effect\&. 
+.PP
+Définition à la ligne 693 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::fade_length"
+Duration of the fade\&. 
+.PP
+Définition à la ligne 712 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::fade_level"
+Level at the end of the fade\&. 
+.PP
+Définition à la ligne 713 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::interval"
+How soon it can be triggered again after button\&. 
+.PP
+Définition à la ligne 701 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint32\fP SDL_HapticCustom::length"
+Duration of the effect\&. 
+.PP
+Définition à la ligne 696 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::period"
+Sample periods\&. 
+.PP
+Définition à la ligne 705 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::samples"
+Amount of samples\&. 
+.PP
+Définition à la ligne 706 du fichier SDL_haptic\&.h\&.
+.SS "\fBUint16\fP SDL_HapticCustom::type"
+\fBSDL_HAPTIC_CUSTOM\fP 
+.PP
+Définition à la ligne 692 du fichier SDL_haptic\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

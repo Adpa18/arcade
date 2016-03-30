@@ -1,0 +1,90 @@
+.TH "__DRI2flushExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRI2flushExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBflush\fP )(\fB__DRIdrawable\fP *drawable)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBinvalidate\fP )(\fB__DRIdrawable\fP *drawable)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBflush_with_flags\fP )(\fB__DRIcontext\fP *ctx, \fB__DRIdrawable\fP *drawable, unsigned \fBflags\fP, enum \fB__DRI2throttleReason\fP throttle_reason)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 281 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRI2flushExtensionRec::base"
+
+.PP
+Définition à la ligne 282 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRI2flushExtensionRec::flush) (\fB__DRIdrawable\fP *drawable)"
+
+.PP
+Définition à la ligne 283 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRI2flushExtensionRec::flush_with_flags) (\fB__DRIcontext\fP *ctx, \fB__DRIdrawable\fP *drawable, unsigned \fBflags\fP, enum \fB__DRI2throttleReason\fP throttle_reason)"
+This function reduces the number of flushes in the driver by combining several operations into one call\&.
+.PP
+It can:
+.IP "\(bu" 2
+throttle
+.IP "\(bu" 2
+flush a drawable
+.IP "\(bu" 2
+flush a context
+.PP
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIcontext\fP the context 
+.br
+\fIdrawable\fP the drawable to flush 
+.br
+\fIflags\fP a combination of _DRI2_FLUSH_xxx flags 
+.br
+\fIthrottle_reason\fP the reason for throttling, 0 = no throttling
+.RE
+.PP
+\fBDepuis:\fP
+.RS 4
+4 
+.RE
+.PP
+
+.PP
+Définition à la ligne 311 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRI2flushExtensionRec::invalidate) (\fB__DRIdrawable\fP *drawable)"
+Ask the driver to call getBuffers/getBuffersWithFormat before it starts rendering again\&.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIdrawable\fP the drawable to invalidate
+.RE
+.PP
+\fBDepuis:\fP
+.RS 4
+3 
+.RE
+.PP
+
+.PP
+Définition à la ligne 293 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

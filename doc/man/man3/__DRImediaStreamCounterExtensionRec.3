@@ -1,0 +1,44 @@
+.TH "__DRImediaStreamCounterExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRImediaStreamCounterExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBwaitForMSC\fP )(\fB__DRIdrawable\fP *drawable, int64_t \fBtarget_msc\fP, int64_t \fBdivisor\fP, int64_t \fBremainder\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBgetDrawableMSC\fP )(\fB__DRIscreen\fP *screen, \fB__DRIdrawable\fP *drawable, int64_t *\fBmsc\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 183 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRImediaStreamCounterExtensionRec::base"
+
+.PP
+Définition à la ligne 184 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRImediaStreamCounterExtensionRec::getDrawableMSC) (\fB__DRIscreen\fP *screen, \fB__DRIdrawable\fP *drawable, int64_t *\fBmsc\fP)"
+Get the number of vertical refreshes since some point in time before this function was first called (i\&.e\&., system start up)\&. 
+.PP
+Définition à la ligne 200 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRImediaStreamCounterExtensionRec::waitForMSC) (\fB__DRIdrawable\fP *drawable, int64_t \fBtarget_msc\fP, int64_t \fBdivisor\fP, int64_t \fBremainder\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+Wait for the MSC to equal target_msc, or, if that has already passed, the next time (MSC % divisor) is equal to remainder\&. If divisor is zero, the function will return as soon as MSC is greater than or equal to target_msc\&. 
+.PP
+Définition à la ligne 192 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

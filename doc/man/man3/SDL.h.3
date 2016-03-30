@@ -1,0 +1,193 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_main\&.h'\fP
+.br
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_assert\&.h'\fP
+.br
+\fC#include 'SDL_atomic\&.h'\fP
+.br
+\fC#include 'SDL_audio\&.h'\fP
+.br
+\fC#include 'SDL_clipboard\&.h'\fP
+.br
+\fC#include 'SDL_cpuinfo\&.h'\fP
+.br
+\fC#include 'SDL_endian\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_events\&.h'\fP
+.br
+\fC#include 'SDL_filesystem\&.h'\fP
+.br
+\fC#include 'SDL_joystick\&.h'\fP
+.br
+\fC#include 'SDL_gamecontroller\&.h'\fP
+.br
+\fC#include 'SDL_haptic\&.h'\fP
+.br
+\fC#include 'SDL_hints\&.h'\fP
+.br
+\fC#include 'SDL_loadso\&.h'\fP
+.br
+\fC#include 'SDL_log\&.h'\fP
+.br
+\fC#include 'SDL_messagebox\&.h'\fP
+.br
+\fC#include 'SDL_mutex\&.h'\fP
+.br
+\fC#include 'SDL_power\&.h'\fP
+.br
+\fC#include 'SDL_render\&.h'\fP
+.br
+\fC#include 'SDL_rwops\&.h'\fP
+.br
+\fC#include 'SDL_system\&.h'\fP
+.br
+\fC#include 'SDL_thread\&.h'\fP
+.br
+\fC#include 'SDL_timer\&.h'\fP
+.br
+\fC#include 'SDL_version\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.PP
+.RI "\fBSDL_INIT_*\fP"
+.br
+These are the flags which may be passed to \fBSDL_Init()\fP\&. You should specify the subsystems which you will be using in your application\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_INIT_TIMER\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_AUDIO\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_VIDEO\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_JOYSTICK\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_HAPTIC\fP   0x00001000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_GAMECONTROLLER\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_EVENTS\fP   0x00004000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_NOPARACHUTE\fP   0x00100000"
+.br
+.ti -1c
+.RI "#define \fBSDL_INIT_EVERYTHING\fP"
+.br
+.in -1c
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_Init\fP (\fBUint32\fP \fBflags\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_InitSubSystem\fP (\fBUint32\fP \fBflags\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_QuitSubSystem\fP (\fBUint32\fP \fBflags\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBUint32\fP \fBSDLCALL\fP \fBSDL_WasInit\fP (\fBUint32\fP \fBflags\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_Quit\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Main include header for the SDL library 
+.PP
+Définition dans le fichier \fBSDL\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_INIT_AUDIO   0x00000010"
+
+.PP
+Définition à la ligne 76 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_EVENTS   0x00004000"
+
+.PP
+Définition à la ligne 81 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_EVERYTHING"
+\fBValeur :\fP
+.PP
+.nf
+( \
+                SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_VIDEO | SDL_INIT_EVENTS | \
+                SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC | SDL_INIT_GAMECONTROLLER \
+            )
+.fi
+.PP
+Définition à la ligne 83 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_GAMECONTROLLER   0x00002000"
+SDL_INIT_GAMECONTROLLER implies SDL_INIT_JOYSTICK 
+.PP
+Définition à la ligne 80 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_HAPTIC   0x00001000"
+
+.PP
+Définition à la ligne 79 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_JOYSTICK   0x00000200"
+SDL_INIT_JOYSTICK implies SDL_INIT_EVENTS 
+.PP
+Définition à la ligne 78 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_NOPARACHUTE   0x00100000"
+compatibility; this flag is ignored\&. 
+.PP
+Définition à la ligne 82 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_TIMER   0x00000001"
+
+.PP
+Définition à la ligne 75 du fichier SDL\&.h\&.
+.SS "#define SDL_INIT_VIDEO   0x00000020"
+SDL_INIT_VIDEO implies SDL_INIT_EVENTS 
+.PP
+Définition à la ligne 77 du fichier SDL\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_Init (\fBUint32\fP flags)"
+This function initializes the subsystems specified by \fCflags\fP 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_InitSubSystem (\fBUint32\fP flags)"
+This function initializes specific SDL subsystems
+.PP
+Subsystem initialization is ref-counted, you must call SDL_QuitSubSystem for each SDL_InitSubSystem to correctly shutdown a subsystem manually (or call SDL_Quit to force shutdown)\&. If a subsystem is already loaded then this call will increase the ref-count and return\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_Quit (\fBvoid\fP)"
+This function cleans up all initialized subsystems\&. You should call it upon all exit conditions\&. 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_QuitSubSystem (\fBUint32\fP flags)"
+This function cleans up specific SDL subsystems 
+.SS "\fBDECLSPEC\fP \fBUint32\fP \fBSDLCALL\fP SDL_WasInit (\fBUint32\fP flags)"
+This function returns a mask of the specified subsystems which have previously been initialized\&.
+.PP
+If \fCflags\fP is 0, it returns a mask of all initialized subsystems\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

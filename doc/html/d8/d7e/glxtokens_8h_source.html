@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Arcade:  Fichier source de /home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glxtokens.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d8/d7e/glxtokens_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">glxtokens.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d7e/glxtokens_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __GLX_glxtokens_h__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __GLX_glxtokens_h__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * SGI FREE SOFTWARE LICENSE B (Version 2.0, Sept. 18, 2008)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Copyright (C) 1991-2000 Silicon Graphics, Inc. All Rights Reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * copy of this software and associated documentation files (the &quot;Software&quot;),</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * to deal in the Software without restriction, including without limitation</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * the rights to use, copy, modify, merge, publish, distribute, sublicense,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * and/or sell copies of the Software, and to permit persons to whom the</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Software is furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * The above copyright notice including the dates of first publication and</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * either this permission notice or a reference to</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * http://oss.sgi.com/projects/FreeB/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * shall be included in all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * SILICON GRAPHICS, INC. BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * SOFTWARE.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * Except as contained in this notice, the name of Silicon Graphics, Inc.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * shall not be used in advertising or otherwise to promote the sale, use or</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * other dealings in this Software without prior written authorization from</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * Silicon Graphics, Inc.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ae7906b57aba77ab452bfcbdd49d4aad1">   38</a></span>&#160;<span class="preprocessor">#define GLX_VERSION_1_1 1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a32f398ad62037e638b6b2e6216f7c4b3">   39</a></span>&#160;<span class="preprocessor">#define GLX_VERSION_1_2 1</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a60bbf06a30a6be4428fecd140ec50ced">   40</a></span>&#160;<span class="preprocessor">#define GLX_VERSION_1_3 1</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a13af8478caf16ac74140dd83510d020e">   41</a></span>&#160;<span class="preprocessor">#define GLX_VERSION_1_4 1</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">** Visual Config Attributes (glXGetConfig, glXGetFBConfigAttrib)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a4b04101e315c782306d9847dac4bd81e">   46</a></span>&#160;<span class="preprocessor">#define GLX_USE_GL      1   </span><span class="comment">/* support GLX rendering */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a3b6f1996a7ec5c0e4b474bd847f8cc01">   47</a></span>&#160;<span class="preprocessor">#define GLX_BUFFER_SIZE     2   </span><span class="comment">/* depth of the color buffer */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a22738f49c53260af4c09bf9a9f21de4b">   48</a></span>&#160;<span class="preprocessor">#define GLX_LEVEL       3   </span><span class="comment">/* level in plane stacking */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a99b65d5ae76a30533a0a6a9d6c91835e">   49</a></span>&#160;<span class="preprocessor">#define GLX_RGBA        4   </span><span class="comment">/* true if RGBA mode */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a3bf7844b05aa4a7ae5c56924eac41c35">   50</a></span>&#160;<span class="preprocessor">#define GLX_DOUBLEBUFFER    5   </span><span class="comment">/* double buffering supported */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ad907898a759575e9fb3ba8bbb4bd70f2">   51</a></span>&#160;<span class="preprocessor">#define GLX_STEREO      6   </span><span class="comment">/* stereo buffering supported */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a90405ce40d727d02a35ab7267c0d071c">   52</a></span>&#160;<span class="preprocessor">#define GLX_AUX_BUFFERS     7   </span><span class="comment">/* number of aux buffers */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7fe726c0860e8ab1ca8aee4e041b4fd7">   53</a></span>&#160;<span class="preprocessor">#define GLX_RED_SIZE        8   </span><span class="comment">/* number of red component bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af4f4b564881ee8ef2f3ccd0a315e42b4">   54</a></span>&#160;<span class="preprocessor">#define GLX_GREEN_SIZE      9   </span><span class="comment">/* number of green component bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a6a628fdbdc83def58f76c4231cedad82">   55</a></span>&#160;<span class="preprocessor">#define GLX_BLUE_SIZE       10  </span><span class="comment">/* number of blue component bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aa08eb17ba68eb9f66b50667ff8768803">   56</a></span>&#160;<span class="preprocessor">#define GLX_ALPHA_SIZE      11  </span><span class="comment">/* number of alpha component bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ab3bc9f4a23a2626f3d3c487e57af4cd3">   57</a></span>&#160;<span class="preprocessor">#define GLX_DEPTH_SIZE      12  </span><span class="comment">/* number of depth bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#adfcdddf7b66469af3a29e5f52d43054b">   58</a></span>&#160;<span class="preprocessor">#define GLX_STENCIL_SIZE    13  </span><span class="comment">/* number of stencil bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aebfea4047e9f5effb0bc9206d439031b">   59</a></span>&#160;<span class="preprocessor">#define GLX_ACCUM_RED_SIZE  14  </span><span class="comment">/* number of red accum bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#abfc1f958ab3dc1094340ab97d4e7c11a">   60</a></span>&#160;<span class="preprocessor">#define GLX_ACCUM_GREEN_SIZE    15  </span><span class="comment">/* number of green accum bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a2d03116f2dcb3393a7fcab5c62300c56">   61</a></span>&#160;<span class="preprocessor">#define GLX_ACCUM_BLUE_SIZE 16  </span><span class="comment">/* number of blue accum bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7d4321cb0900caeb61047d3d8619c0b4">   62</a></span>&#160;<span class="preprocessor">#define GLX_ACCUM_ALPHA_SIZE    17  </span><span class="comment">/* number of alpha accum bits */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">** FBConfig-specific attributes</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aef59bbc4fbbf455493d317bc7287c2e6">   66</a></span>&#160;<span class="preprocessor">#define GLX_X_VISUAL_TYPE       0x22</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a58d27359c7214348a8107d0550ba59fa">   67</a></span>&#160;<span class="preprocessor">#define GLX_CONFIG_CAVEAT       0x20    </span><span class="comment">/* Like visual_info VISUAL_CAVEAT_EXT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aee4d64e71ecaca236c8057292ac0851d">   68</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_TYPE        0x23</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a44e3c21ff8fecdd57e66e727d1398662">   69</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_INDEX_VALUE 0x24</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#adfe1ceb7569af890e93a4714c2d192c5">   70</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_RED_VALUE   0x25</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a02e636f028bdab6aca452102d422ea53">   71</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_GREEN_VALUE 0x26</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a0e3231ad93d61956c258f92043ba5583">   72</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_BLUE_VALUE  0x27</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a174b5da54ffeddfb135207e122bd174d">   73</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_ALPHA_VALUE 0x28</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a0eae3a00b9d4abf47ae7238e55e03905">   74</a></span>&#160;<span class="preprocessor">#define GLX_DRAWABLE_TYPE       0x8010</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a5f84122254df2d5a84aa6e44d074c24a">   75</a></span>&#160;<span class="preprocessor">#define GLX_RENDER_TYPE         0x8011</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aab3c57256b851c4a790422dfbbbcff4a">   76</a></span>&#160;<span class="preprocessor">#define GLX_X_RENDERABLE        0x8012</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ac27348d36dd5c4a0de9c3ca633caf33e">   77</a></span>&#160;<span class="preprocessor">#define GLX_FBCONFIG_ID         0x8013</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a0cc1956b35f17412802be44df902477c">   78</a></span>&#160;<span class="preprocessor">#define GLX_MAX_PBUFFER_WIDTH       0x8016</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a6d670a2668878cb74fdda26a24755641">   79</a></span>&#160;<span class="preprocessor">#define GLX_MAX_PBUFFER_HEIGHT      0x8017</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a147bd4363a3a75aab344112ba4896799">   80</a></span>&#160;<span class="preprocessor">#define GLX_MAX_PBUFFER_PIXELS      0x8018</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ac2aa66d52771f5cdfb6edd2f3d916788">   81</a></span>&#160;<span class="preprocessor">#define GLX_VISUAL_ID           0x800B</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/* FBConfigSGIX Attributes */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af84eb3d46ff2909d6e301f487763be7e">   84</a></span>&#160;<span class="preprocessor">#define GLX_OPTIMAL_PBUFFER_WIDTH_SGIX  0x8019</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a17335f9628e50159db1da0a63008582f">   85</a></span>&#160;<span class="preprocessor">#define GLX_OPTIMAL_PBUFFER_HEIGHT_SGIX 0x801A</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">** Error return values from glXGetConfig.  Success is indicated by</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">** a value of 0.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ad221a127f56672d5c5971debb45748a3">   91</a></span>&#160;<span class="preprocessor">#define GLX_BAD_SCREEN      1   </span><span class="comment">/* screen # is bad */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a3b7c0632c81e87fa7baf16564c5148f4">   92</a></span>&#160;<span class="preprocessor">#define GLX_BAD_ATTRIBUTE   2   </span><span class="comment">/* attribute to get is bad */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a4e98ca2d441de1524b8482d777e7c8ad">   93</a></span>&#160;<span class="preprocessor">#define GLX_NO_EXTENSION    3   </span><span class="comment">/* no glx extension on server */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af4ae600ecb5878dff4c9a4efe7bdfcdb">   94</a></span>&#160;<span class="preprocessor">#define GLX_BAD_VISUAL      4   </span><span class="comment">/* visual # not known by GLX */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a2e4c4633e534d0360f6bbf5954aeac21">   95</a></span>&#160;<span class="preprocessor">#define GLX_BAD_CONTEXT     5   </span><span class="comment">/* returned only by import_context EXT? */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aed136f586d80922d80d203cf2ad6991c">   96</a></span>&#160;<span class="preprocessor">#define GLX_BAD_VALUE       6   </span><span class="comment">/* returned only by glXSwapIntervalSGI? */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a089318891f39aedabe0e901a97e1dbd8">   97</a></span>&#160;<span class="preprocessor">#define GLX_BAD_ENUM        7   </span><span class="comment">/* unused? */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">/* FBConfig attribute values */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">** Generic &quot;don&#39;t care&quot; value for glX ChooseFBConfig attributes (except</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">** GLX_LEVEL)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a139db61d3057b17b2f058ba5d4f57606">  105</a></span>&#160;<span class="preprocessor">#define GLX_DONT_CARE           0xFFFFFFFF</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/* GLX_RENDER_TYPE bits */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a6ac91c2ef1293de23e782773c065d309">  108</a></span>&#160;<span class="preprocessor">#define GLX_RGBA_BIT            0x00000001</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1a7c1c861fa561e43cf9315c92fedc36">  109</a></span>&#160;<span class="preprocessor">#define GLX_COLOR_INDEX_BIT     0x00000002</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">/* GLX_DRAWABLE_TYPE bits */</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aea4137405780d52ab6a7af2839d8e41d">  112</a></span>&#160;<span class="preprocessor">#define GLX_WINDOW_BIT          0x00000001</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a8b043ca42cf3151855f5bb1415fa8ab8">  113</a></span>&#160;<span class="preprocessor">#define GLX_PIXMAP_BIT          0x00000002</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a40747561b132c6268a17c152248ff1c3">  114</a></span>&#160;<span class="preprocessor">#define GLX_PBUFFER_BIT         0x00000004</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">/* GLX_CONFIG_CAVEAT attribute values */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a469be69ad75b8720ad5f00160bd671b7">  117</a></span>&#160;<span class="preprocessor">#define GLX_NONE            0x8000</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aeb1d4b6b85fb53f9958aaf63dfc697aa">  118</a></span>&#160;<span class="preprocessor">#define GLX_SLOW_CONFIG         0x8001</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#adadd435abcc247be896391d019ebfbea">  119</a></span>&#160;<span class="preprocessor">#define GLX_NON_CONFORMANT_CONFIG   0x800D</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">/* GLX_X_VISUAL_TYPE attribute values */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#abe725d7d3c640b7c698114ef27b2b2df">  122</a></span>&#160;<span class="preprocessor">#define GLX_TRUE_COLOR          0x8002</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#adb3f2ceaa1fba3b0c97bb0880ff6cce2">  123</a></span>&#160;<span class="preprocessor">#define GLX_DIRECT_COLOR        0x8003</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a8fea3c0abfe2929ee257ecf1a137c259">  124</a></span>&#160;<span class="preprocessor">#define GLX_PSEUDO_COLOR        0x8004</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a0b8e43514dcd363ad0c3ad8938c2b836">  125</a></span>&#160;<span class="preprocessor">#define GLX_STATIC_COLOR        0x8005</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a9928d6f51bedefef8538e2ce3a631fb0">  126</a></span>&#160;<span class="preprocessor">#define GLX_GRAY_SCALE          0x8006</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ac2755eb66996189e7554da1f380d98fa">  127</a></span>&#160;<span class="preprocessor">#define GLX_STATIC_GRAY         0x8007</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">/* GLX_TRANSPARENT_TYPE attribute values */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/* #define GLX_NONE            0x8000 */</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a752fccf1e81a8cb94773fc5192662623">  131</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_RGB     0x8008</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a71e88eac4edd6b4b55287b4467893075">  132</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_INDEX       0x8009</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">/* glXCreateGLXPbuffer attributes */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ae4a52076cdb82aa8bd12b1b55c6cd6e5">  135</a></span>&#160;<span class="preprocessor">#define GLX_PRESERVED_CONTENTS      0x801B</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a336366e9afe258a080025fb27635b89f">  136</a></span>&#160;<span class="preprocessor">#define GLX_LARGEST_PBUFFER     0x801C</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aebe1451505d127574b016dffd195178c">  137</a></span>&#160;<span class="preprocessor">#define GLX_PBUFFER_HEIGHT      0x8040  </span><span class="comment">/* New for GLX 1.3 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a45bffd673ef79f2eaf92ac2e12f092af">  138</a></span>&#160;<span class="preprocessor">#define GLX_PBUFFER_WIDTH       0x8041  </span><span class="comment">/* New for GLX 1.3 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/* glXQueryGLXPBuffer attributes */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ad4f8fb4c08c6e2ff35845f4df250b1ab">  141</a></span>&#160;<span class="preprocessor">#define GLX_WIDTH           0x801D</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a291203c744ad54765644ca1126d5ce06">  142</a></span>&#160;<span class="preprocessor">#define GLX_HEIGHT          0x801E</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a841537cb352bb4b5da32abcae363c6b8">  143</a></span>&#160;<span class="preprocessor">#define GLX_EVENT_MASK          0x801F</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">/* glXCreateNewContext render_type attribute values */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1853a9117176b461cc21583332f14734">  146</a></span>&#160;<span class="preprocessor">#define GLX_RGBA_TYPE           0x8014</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1aea3930b21fb0d6fa2925f02564a8f8">  147</a></span>&#160;<span class="preprocessor">#define GLX_COLOR_INDEX_TYPE        0x8015</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/* glXQueryContext attributes */</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">/* #define GLX_FBCONFIG_ID        0x8013 */</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">/* #define GLX_RENDER_TYPE        0x8011 */</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a62f7ac8950a947df31cba3d7d24f6c8c">  152</a></span>&#160;<span class="preprocessor">#define GLX_SCREEN          0x800C</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">/* glXSelectEvent event mask bits */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a35b037dde69dd0405c1218f196bcf2cc">  155</a></span>&#160;<span class="preprocessor">#define GLX_PBUFFER_CLOBBER_MASK    0x08000000</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af6dde555c77262c71bec3fcd298baf87">  156</a></span>&#160;<span class="preprocessor">#define GLX_BUFFER_SWAP_COMPLETE_INTEL_MASK 0x04000000</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">/* GLXPbufferClobberEvent event_type values */</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1066c7c318a5bc0744bd891a31b3279f">  159</a></span>&#160;<span class="preprocessor">#define GLX_DAMAGED         0x8020</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a37765e3d603b11680f677f43f0d84a9f">  160</a></span>&#160;<span class="preprocessor">#define GLX_SAVED           0x8021</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a6c42410eca794832774938441761d35a">  161</a></span>&#160;<span class="preprocessor">#define GLX_EXCHANGE_COMPLETE_INTEL 0x8180</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a858905bd0857972727210a72cbd1bdbe">  162</a></span>&#160;<span class="preprocessor">#define GLX_BLIT_COMPLETE_INTEL     0x8181</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#acbaa9fe160654db82e87671ebaff7ff7">  163</a></span>&#160;<span class="preprocessor">#define GLX_FLIP_COMPLETE_INTEL     0x8182</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">/* GLXPbufferClobberEvent draw_type values */</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1a8b24e54162728da459297a6fc9ade4">  166</a></span>&#160;<span class="preprocessor">#define GLX_WINDOW          0x8022</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a522907a44d32ff8d315c67141775c6bb">  167</a></span>&#160;<span class="preprocessor">#define GLX_PBUFFER         0x8023</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">/* GLXPbufferClobberEvent buffer_mask bits */</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a6b7cea42e7878a2992959e705444ba33">  170</a></span>&#160;<span class="preprocessor">#define GLX_FRONT_LEFT_BUFFER_BIT   0x00000001</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a9ff65cdb3d80ffe3414dfa39f4efcfe0">  171</a></span>&#160;<span class="preprocessor">#define GLX_FRONT_RIGHT_BUFFER_BIT  0x00000002</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a643d6da57a434132456af5413bc2a10b">  172</a></span>&#160;<span class="preprocessor">#define GLX_BACK_LEFT_BUFFER_BIT    0x00000004</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ae3ad7b22e7d2aba779de5eca0d0792e1">  173</a></span>&#160;<span class="preprocessor">#define GLX_BACK_RIGHT_BUFFER_BIT   0x00000008</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a04f4c25fd706968488a0980d523cdf16">  174</a></span>&#160;<span class="preprocessor">#define GLX_AUX_BUFFERS_BIT     0x00000010</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7adcbb19f1bb44c0583f03ee60eb6011">  175</a></span>&#160;<span class="preprocessor">#define GLX_DEPTH_BUFFER_BIT        0x00000020</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af6cf6b3886b2f2552e4f9b4191543e5d">  176</a></span>&#160;<span class="preprocessor">#define GLX_STENCIL_BUFFER_BIT      0x00000040</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a5fd8727d1cea644d19e16466547b872c">  177</a></span>&#160;<span class="preprocessor">#define GLX_ACCUM_BUFFER_BIT        0x00000080</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">** Extension return values from glXGetConfig.  These are also</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">** accepted as parameter values for glXChooseVisual.</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a42a1f3a9e5a9fb8b40f215190224a03b">  184</a></span>&#160;<span class="preprocessor">#define GLX_X_VISUAL_TYPE_EXT   0x22    </span><span class="comment">/* visual_info extension type */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a774951813c3685476805b58d6ab39ad1">  185</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_TYPE_EXT 0x23   </span><span class="comment">/* visual_info extension */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7889555b32e9861b84a52e890a5c71b6">  186</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_INDEX_VALUE_EXT 0x24    </span><span class="comment">/* visual_info extension */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a3134a2362f62bf802c1471646a5ebde7">  187</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_RED_VALUE_EXT   0x25    </span><span class="comment">/* visual_info extension */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7ba8b374f60505e52bf836236cf64fb9">  188</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_GREEN_VALUE_EXT 0x26    </span><span class="comment">/* visual_info extension */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a38d97a1028930fe63a0bea02961f779e">  189</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_BLUE_VALUE_EXT  0x27    </span><span class="comment">/* visual_info extension */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a27d88067b5a23d3cd78f7cce9f8a48c7">  190</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_ALPHA_VALUE_EXT 0x28    </span><span class="comment">/* visual_info extension */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">/* Property values for visual_type */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aee7a2961b5aa91c8b32c233e47b04942">  193</a></span>&#160;<span class="preprocessor">#define GLX_TRUE_COLOR_EXT  0x8002</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ae2904791fa5b715ebe48752853a11b7a">  194</a></span>&#160;<span class="preprocessor">#define GLX_DIRECT_COLOR_EXT    0x8003</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a08bb8d30ee51e953d187feefa14bbe55">  195</a></span>&#160;<span class="preprocessor">#define GLX_PSEUDO_COLOR_EXT    0x8004</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a90439a8fb042d92eab2e7a99e6a34615">  196</a></span>&#160;<span class="preprocessor">#define GLX_STATIC_COLOR_EXT    0x8005</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#add382ceac40add6d06dd23b56fa0f021">  197</a></span>&#160;<span class="preprocessor">#define GLX_GRAY_SCALE_EXT  0x8006</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aa67c2891b1488fc6df6b14c1d01d45a7">  198</a></span>&#160;<span class="preprocessor">#define GLX_STATIC_GRAY_EXT 0x8007</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">/* Property values for transparent pixel */</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#acc387c3f87a7436c15436b74d8ef2151">  201</a></span>&#160;<span class="preprocessor">#define GLX_NONE_EXT        0x8000</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a2a935b6674a1244a46820bf534a28ec9">  202</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_RGB_EXT     0x8008</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a19dc6699b9a6313097d4df706590695b">  203</a></span>&#160;<span class="preprocessor">#define GLX_TRANSPARENT_INDEX_EXT   0x8009</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">/* Property values for visual_rating */</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7e945ded8cce9f3ae2d14fa636255a02">  206</a></span>&#160;<span class="preprocessor">#define GLX_VISUAL_CAVEAT_EXT       0x20  </span><span class="comment">/* visual_rating extension type */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a12893b09da879f370016f66c19bd178b">  207</a></span>&#160;<span class="preprocessor">#define GLX_SLOW_VISUAL_EXT     0x8001</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a3059b0a1f99ae628568c5c7f09465fb5">  208</a></span>&#160;<span class="preprocessor">#define GLX_NON_CONFORMANT_VISUAL_EXT   0x800D</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">/* Property values for swap method (GLX_OML_swap_method) */</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af6a69eae3a32e84e31fe8fd4a96007b2">  211</a></span>&#160;<span class="preprocessor">#define GLX_SWAP_METHOD_OML                0x8060</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ab23ced13cd5a60a93a8531d16a413fb5">  212</a></span>&#160;<span class="preprocessor">#define GLX_SWAP_EXCHANGE_OML              0x8061</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a2468bfb6a251c336e6396f5aca2c9674">  213</a></span>&#160;<span class="preprocessor">#define GLX_SWAP_COPY_OML                  0x8062</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a4fe2af57efb0ec3acb654db3824fc91c">  214</a></span>&#160;<span class="preprocessor">#define GLX_SWAP_UNDEFINED_OML             0x8063</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">/* Property values for multi-sampling */</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a6afe7c968dd13e8d589c065b8197acd5">  217</a></span>&#160;<span class="preprocessor">#define GLX_VISUAL_SELECT_GROUP_SGIX    0x8028  </span><span class="comment">/* visuals grouped by select priority */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">** Names for attributes to glXGetClientString.</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1d58049e601eef392d3d582d14c60893">  222</a></span>&#160;<span class="preprocessor">#define GLX_VENDOR      0x1</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ac8fe8653c4826fb3a370b1f76678f181">  223</a></span>&#160;<span class="preprocessor">#define GLX_VERSION     0x2</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a5aaab2c7372549a54b856e8438215db8">  224</a></span>&#160;<span class="preprocessor">#define GLX_EXTENSIONS      0x3</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">** Names for attributes to glXQueryContextInfoEXT.</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a54a7337e14fa9e3ab7d1b528f8cf418c">  229</a></span>&#160;<span class="preprocessor">#define GLX_SHARE_CONTEXT_EXT   0x800A  </span><span class="comment">/* id of share context */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a86534c9bd922da8df862f492c9203134">  230</a></span>&#160;<span class="preprocessor">#define GLX_VISUAL_ID_EXT   0x800B  </span><span class="comment">/* id of context&#39;s visual */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a9652c3c17c79f8f9a8a0ff1c6f5d1187">  231</a></span>&#160;<span class="preprocessor">#define GLX_SCREEN_EXT      0x800C  </span><span class="comment">/* screen number */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">** GLX_EXT_texture_from_pixmap</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a06c1a1a7fa90cf0e27eeda2e74bfdca8">  236</a></span>&#160;<span class="preprocessor">#define GLX_BIND_TO_TEXTURE_RGB_EXT        0x20D0</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a9adffe85376e091b1b54fd8b358f1018">  237</a></span>&#160;<span class="preprocessor">#define GLX_BIND_TO_TEXTURE_RGBA_EXT       0x20D1</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#abc4f5184b4db99c8d96c4cb3730581be">  238</a></span>&#160;<span class="preprocessor">#define GLX_BIND_TO_MIPMAP_TEXTURE_EXT     0x20D2</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aa9ed7186e9c9a6b499416206fc12c4d2">  239</a></span>&#160;<span class="preprocessor">#define GLX_BIND_TO_TEXTURE_TARGETS_EXT    0x20D3</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a5da97b982e5ccafaab84235cb8738022">  240</a></span>&#160;<span class="preprocessor">#define GLX_Y_INVERTED_EXT                 0x20D4</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a35adbd9e682633c71b4dcebf410dae57">  242</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_FORMAT_EXT             0x20D5</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a03fa266976102e1140b8418b0a55b203">  243</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_TARGET_EXT             0x20D6</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#add0d6c6d2ea8eba9881330bdb1ccef5f">  244</a></span>&#160;<span class="preprocessor">#define GLX_MIPMAP_TEXTURE_EXT             0x20D7</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a18d72873a80967d104346e649148d3c5">  246</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_FORMAT_NONE_EXT        0x20D8</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a38d1bff0d14c7dcba8beb050f2df0822">  247</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_FORMAT_RGB_EXT         0x20D9</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ada18a6bd621c8eb62069fda76b5126bd">  248</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_FORMAT_RGBA_EXT        0x20DA</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a871d7feebca00547af00864fbb398013">  250</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_1D_BIT_EXT             0x00000001</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ad00c49da5233261e8e384b88863020a2">  251</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_2D_BIT_EXT             0x00000002</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a0efa804082f8579292118e4e92f756cd">  252</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_RECTANGLE_BIT_EXT      0x00000004</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aa167bc6e71106518f0aac9aef1536856">  254</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_1D_EXT                 0x20DB</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a188aa9fadf5b067106a1e36fea6556f7">  255</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_2D_EXT                 0x20DC</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aa615e70d6a1644369249d53dc17b3cc0">  256</a></span>&#160;<span class="preprocessor">#define GLX_TEXTURE_RECTANGLE_EXT          0x20DD</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a07cddbabead9bf4f2f2e6e2eb02db1f4">  258</a></span>&#160;<span class="preprocessor">#define GLX_FRONT_LEFT_EXT                 0x20DE</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a7e4579cc2597459fbd1cd5a04612b8cd">  259</a></span>&#160;<span class="preprocessor">#define GLX_FRONT_RIGHT_EXT                0x20DF</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a66e1dc7b5ab409282902a73045f42e00">  260</a></span>&#160;<span class="preprocessor">#define GLX_BACK_LEFT_EXT                  0x20E0</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ae1900a94d426c8e8f04410c72c7a7338">  261</a></span>&#160;<span class="preprocessor">#define GLX_BACK_RIGHT_EXT                 0x20E1</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a8532c79e818568481fe5c61a6238f6e3">  262</a></span>&#160;<span class="preprocessor">#define GLX_FRONT_EXT                      GLX_FRONT_LEFT_EXT</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#afff8e37dff54d975300fdeff261030a1">  263</a></span>&#160;<span class="preprocessor">#define GLX_BACK_EXT                       GLX_BACK_LEFT_EXT</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a17242237ff084b6204bfe11a5d59b329">  264</a></span>&#160;<span class="preprocessor">#define GLX_AUX0_EXT                       0x20E2</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#adcd619a8fa601645251cd62542ee1ab8">  265</a></span>&#160;<span class="preprocessor">#define GLX_AUX1_EXT                       0x20E3 </span></div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a3328cb0020596921cf1c662658dc7c46">  266</a></span>&#160;<span class="preprocessor">#define GLX_AUX2_EXT                       0x20E4 </span></div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a561759ef2e037e5c0fc690c1317199d0">  267</a></span>&#160;<span class="preprocessor">#define GLX_AUX3_EXT                       0x20E5 </span></div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a4583b587413ecd8c2c8012665b06de0b">  268</a></span>&#160;<span class="preprocessor">#define GLX_AUX4_EXT                       0x20E6 </span></div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ad7308243a764034c3c1f14737d3579ca">  269</a></span>&#160;<span class="preprocessor">#define GLX_AUX5_EXT                       0x20E7 </span></div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aad31918c2bb62967550d54f34321b95c">  270</a></span>&#160;<span class="preprocessor">#define GLX_AUX6_EXT                       0x20E8</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ad966e66657e22de7ce2d7cc12497b096">  271</a></span>&#160;<span class="preprocessor">#define GLX_AUX7_EXT                       0x20E9 </span></div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a59f3b2cea25519fcb29e9afea37cbe59">  272</a></span>&#160;<span class="preprocessor">#define GLX_AUX8_EXT                       0x20EA </span></div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a8c38b7e38ab452a394657523081dcbbb">  273</a></span>&#160;<span class="preprocessor">#define GLX_AUX9_EXT                       0x20EB</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"> * GLX 1.4 and later:</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a9982de9c99b7711bfa697f73af805598">  278</a></span>&#160;<span class="preprocessor">#define GLX_SAMPLE_BUFFERS_SGIS            100000</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#acf146da3d7cb0171c58c1ef16defb34d">  279</a></span>&#160;<span class="preprocessor">#define GLX_SAMPLES_SGIS                   100001</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"> * GLX_EXT_framebuffer_SRGB</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a21d956bb959815a78efc518e7d1552a5">  284</a></span>&#160;<span class="preprocessor">#define GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT   0x20B2</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"> * GLX_ARB_create_context</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment"> * GLX_ARB_create_context_profile</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment"> * GLX_EXT_create_context_es2_profile</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ac44e7b00d5bc2af9f87b752093e96fcd">  291</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_MAJOR_VERSION_ARB      0x2091</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a60923ecde3d05e9be4ec4688af4a186c">  292</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_MINOR_VERSION_ARB      0x2092</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a9fbf65742f759adfe86f8dd3ad9fb175">  293</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_FLAGS_ARB              0x2094</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ab41280edf02867e5169cb776785e6e59">  294</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_PROFILE_MASK_ARB       0x9126</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a0cf90dff9121a185ae2a6aa992fe0bb9">  296</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_DEBUG_BIT_ARB          0x0001</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1d17031e0942bb0babeabef74cf320c9">  297</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB          0x0002</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#aefd242a232e2acbd909a211afd867807">  299</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_CORE_PROFILE_BIT_ARB   0x0001</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a1748fca6f96fd5483e950db3e6e3cc36">  300</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB   0x0002</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af709c65a95e42fd42b8873b626d99367">  301</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_ES2_PROFILE_BIT_EXT    0x0004</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"> * GLX_ARB_create_context_robustness</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a83b9074cbbdfd34a1dbcee0ef61bc67b">  306</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_ROBUST_ACCESS_BIT_ARB  0x0004</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#ade49d3de67b904fcdfc8bc5025e2b171">  307</a></span>&#160;<span class="preprocessor">#define GLX_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB 0x8256</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#a013a043a0fb1e9227eeb2df2272956a5">  308</a></span>&#160;<span class="preprocessor">#define GLX_NO_RESET_NOTIFICATION_ARB      0x8261</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="../../d8/d7e/glxtokens_8h.html#af878914ae535aa0044c89e56ad9b5dc6">  309</a></span>&#160;<span class="preprocessor">#define GLX_LOSE_CONTEXT_ON_RESET_ARB      0x8252</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !__GLX_glxtokens_h__ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li><li class="navelem"><a class="el" href="../../dir_d54d74822f795d40b11c56eea8f73df9.html">openGL</a></li><li class="navelem"><a class="el" href="../../dir_b646083ba50c9adbd09e1f1ae9507fb2.html">include</a></li><li class="navelem"><a class="el" href="../../d8/d7e/glxtokens_8h.html">glxtokens.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

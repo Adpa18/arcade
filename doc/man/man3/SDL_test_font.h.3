@@ -1,0 +1,94 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_test_font.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_test_font.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFONT_CHARACTER_SIZE\fP   8"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_DrawCharacter\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, char \fBc\fP)"
+.br
+.RI "\fIDraw a string in the currently set font\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_DrawString\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBconst\fP char *\fBs\fP)"
+.br
+.RI "\fIDraw a string in the currently set font\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.PP
+Définition dans le fichier \fBSDL_test_font\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define FONT_CHARACTER_SIZE   8"
+
+.PP
+Définition à la ligne 41 du fichier SDL_test_font\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBint\fP SDLTest_DrawCharacter (\fBSDL_Renderer\fP * renderer, \fBint\fP x, \fBint\fP y, char c)"
+
+.PP
+Draw a string in the currently set font\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer to draw on\&. 
+.br
+\fIx\fP The X coordinate of the upper left corner of the character\&. 
+.br
+\fIy\fP The Y coordinate of the upper left corner of the character\&. 
+.br
+\fIc\fP The character to draw\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+Returns 0 on success, -1 on failure\&. 
+.RE
+.PP
+
+.SS "\fBint\fP SDLTest_DrawString (\fBSDL_Renderer\fP * renderer, \fBint\fP x, \fBint\fP y, \fBconst\fP char * s)"
+
+.PP
+Draw a string in the currently set font\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer to draw on\&. 
+.br
+\fIx\fP The X coordinate of the upper left corner of the string\&. 
+.br
+\fIy\fP The Y coordinate of the upper left corner of the string\&. 
+.br
+\fIs\fP The string to draw\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+Returns 0 on success, -1 on failure\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

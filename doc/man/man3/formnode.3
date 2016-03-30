@@ -1,0 +1,177 @@
+.TH "formnode" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+formnode \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <form\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "unsigned short \fBstatus\fP"
+.br
+.ti -1c
+.RI "short \fBrows\fP"
+.br
+.ti -1c
+.RI "short \fBcols\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBcurrow\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBcurcol\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtoprow\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBbegincol\fP"
+.br
+.ti -1c
+.RI "short \fBmaxfield\fP"
+.br
+.ti -1c
+.RI "short \fBmaxpage\fP"
+.br
+.ti -1c
+.RI "short \fBcurpage\fP"
+.br
+.ti -1c
+.RI "\fBForm_Options\fP \fBopts\fP"
+.br
+.ti -1c
+.RI "\fBWINDOW\fP * \fBwin\fP"
+.br
+.ti -1c
+.RI "\fBWINDOW\fP * \fBsub\fP"
+.br
+.ti -1c
+.RI "\fBWINDOW\fP * \fBw\fP"
+.br
+.ti -1c
+.RI "\fBFIELD\fP ** \fBfield\fP"
+.br
+.ti -1c
+.RI "\fBFIELD\fP * \fBcurrent\fP"
+.br
+.ti -1c
+.RI "\fB_PAGE\fP * \fBpage\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBusrptr\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBforminit\fP )(struct \fBformnode\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBformterm\fP )(struct \fBformnode\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBfieldinit\fP )(struct \fBformnode\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBfieldterm\fP )(struct \fBformnode\fP *)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 114 du fichier form\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBint\fP formnode::begincol"
+
+.PP
+Définition à la ligne 121 du fichier form\&.h\&.
+.SS "short formnode::cols"
+
+.PP
+Définition à la ligne 117 du fichier form\&.h\&.
+.SS "\fBint\fP formnode::curcol"
+
+.PP
+Définition à la ligne 119 du fichier form\&.h\&.
+.SS "short formnode::curpage"
+
+.PP
+Définition à la ligne 124 du fichier form\&.h\&.
+.SS "\fBFIELD\fP* formnode::current"
+
+.PP
+Définition à la ligne 130 du fichier form\&.h\&.
+.SS "\fBint\fP formnode::currow"
+
+.PP
+Définition à la ligne 118 du fichier form\&.h\&.
+.SS "\fBFIELD\fP** formnode::field"
+
+.PP
+Définition à la ligne 129 du fichier form\&.h\&.
+.SS "\fBvoid\fP(* formnode::fieldinit) (struct \fBformnode\fP *)"
+
+.PP
+Définition à la ligne 136 du fichier form\&.h\&.
+.SS "\fBvoid\fP(* formnode::fieldterm) (struct \fBformnode\fP *)"
+
+.PP
+Définition à la ligne 137 du fichier form\&.h\&.
+.SS "\fBvoid\fP(* formnode::forminit) (struct \fBformnode\fP *)"
+
+.PP
+Définition à la ligne 134 du fichier form\&.h\&.
+.SS "\fBvoid\fP(* formnode::formterm) (struct \fBformnode\fP *)"
+
+.PP
+Définition à la ligne 135 du fichier form\&.h\&.
+.SS "short formnode::maxfield"
+
+.PP
+Définition à la ligne 122 du fichier form\&.h\&.
+.SS "short formnode::maxpage"
+
+.PP
+Définition à la ligne 123 du fichier form\&.h\&.
+.SS "\fBForm_Options\fP formnode::opts"
+
+.PP
+Définition à la ligne 125 du fichier form\&.h\&.
+.SS "\fB_PAGE\fP* formnode::page"
+
+.PP
+Définition à la ligne 131 du fichier form\&.h\&.
+.SS "short formnode::rows"
+
+.PP
+Définition à la ligne 116 du fichier form\&.h\&.
+.SS "unsigned short formnode::status"
+
+.PP
+Définition à la ligne 115 du fichier form\&.h\&.
+.SS "\fBWINDOW\fP* formnode::sub"
+
+.PP
+Définition à la ligne 127 du fichier form\&.h\&.
+.SS "\fBint\fP formnode::toprow"
+
+.PP
+Définition à la ligne 120 du fichier form\&.h\&.
+.SS "\fBvoid\fP* formnode::usrptr"
+
+.PP
+Définition à la ligne 132 du fichier form\&.h\&.
+.SS "\fBWINDOW\fP* formnode::w"
+
+.PP
+Définition à la ligne 128 du fichier form\&.h\&.
+.SS "\fBWINDOW\fP* formnode::win"
+
+.PP
+Définition à la ligne 126 du fichier form\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

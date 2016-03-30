@@ -1,0 +1,454 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_ttf.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_ttf.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_TTF_MAJOR_VERSION\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSDL_TTF_MINOR_VERSION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSDL_TTF_PATCHLEVEL\fP   13"
+.br
+.ti -1c
+.RI "#define \fBSDL_TTF_VERSION\fP(X)                                                "
+.br
+.ti -1c
+.RI "#define \fBTTF_MAJOR_VERSION\fP   \fBSDL_TTF_MAJOR_VERSION\fP"
+.br
+.ti -1c
+.RI "#define \fBTTF_MINOR_VERSION\fP   \fBSDL_TTF_MINOR_VERSION\fP"
+.br
+.ti -1c
+.RI "#define \fBTTF_PATCHLEVEL\fP   \fBSDL_TTF_PATCHLEVEL\fP"
+.br
+.ti -1c
+.RI "#define \fBTTF_VERSION\fP(X)           \fBSDL_TTF_VERSION\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBUNICODE_BOM_NATIVE\fP   0xFEFF"
+.br
+.ti -1c
+.RI "#define \fBUNICODE_BOM_SWAPPED\fP   0xFFFE"
+.br
+.ti -1c
+.RI "#define \fBTTF_STYLE_NORMAL\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBTTF_STYLE_BOLD\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBTTF_STYLE_ITALIC\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBTTF_STYLE_UNDERLINE\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBTTF_STYLE_STRIKETHROUGH\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBTTF_HINTING_NORMAL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTTF_HINTING_LIGHT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTTF_HINTING_MONO\fP   2"
+.br
+.ti -1c
+.RI "#define \fBTTF_HINTING_NONE\fP   3"
+.br
+.ti -1c
+.RI "#define \fBTTF_RenderText\fP(font,  text,  fg,  bg)   \fBTTF_RenderText_Shaded\fP(font, text, fg, bg)"
+.br
+.ti -1c
+.RI "#define \fBTTF_RenderUTF8\fP(font,  text,  fg,  bg)   \fBTTF_RenderUTF8_Shaded\fP(font, text, fg, bg)"
+.br
+.ti -1c
+.RI "#define \fBTTF_RenderUNICODE\fP(font,  text,  fg,  bg)     \fBTTF_RenderUNICODE_Shaded\fP(font, text, fg, bg)"
+.br
+.ti -1c
+.RI "#define \fBTTF_SetError\fP   \fBSDL_SetError\fP"
+.br
+.ti -1c
+.RI "#define \fBTTF_GetError\fP   \fBSDL_GetError\fP"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _TTF_Font \fBTTF_Font\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBconst\fP \fBSDL_version\fP *\fBSDLCALL\fP \fBTTF_Linked_Version\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_ByteSwappedUNICODE\fP (\fBint\fP swapped)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_Init\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBTTF_Font\fP *\fBSDLCALL\fP \fBTTF_OpenFont\fP (\fBconst\fP char *file, \fBint\fP ptsize)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBTTF_Font\fP *\fBSDLCALL\fP \fBTTF_OpenFontIndex\fP (\fBconst\fP char *file, \fBint\fP ptsize, long \fBindex\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBTTF_Font\fP *\fBSDLCALL\fP \fBTTF_OpenFontRW\fP (\fBSDL_RWops\fP *\fBsrc\fP, \fBint\fP freesrc, \fBint\fP ptsize)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBTTF_Font\fP *\fBSDLCALL\fP \fBTTF_OpenFontIndexRW\fP (\fBSDL_RWops\fP *\fBsrc\fP, \fBint\fP freesrc, \fBint\fP ptsize, long \fBindex\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_GetFontStyle\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_SetFontStyle\fP (\fBTTF_Font\fP *font, \fBint\fP style)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_GetFontOutline\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_SetFontOutline\fP (\fBTTF_Font\fP *font, \fBint\fP outline)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_GetFontHinting\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_SetFontHinting\fP (\fBTTF_Font\fP *font, \fBint\fP hinting)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_FontHeight\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_FontAscent\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_FontDescent\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_FontLineSkip\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_GetFontKerning\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_SetFontKerning\fP (\fBTTF_Font\fP *font, \fBint\fP allowed)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP long \fBSDLCALL\fP \fBTTF_FontFaces\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_FontFaceIsFixedWidth\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP char *\fBSDLCALL\fP \fBTTF_FontFaceFamilyName\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP char *\fBSDLCALL\fP \fBTTF_FontFaceStyleName\fP (\fBconst\fP \fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_GlyphIsProvided\fP (\fBconst\fP \fBTTF_Font\fP *font, \fBUint16\fP ch)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_GlyphMetrics\fP (\fBTTF_Font\fP *font, \fBUint16\fP ch, \fBint\fP *minx, \fBint\fP *maxx, \fBint\fP *miny, \fBint\fP *maxy, \fBint\fP *advance)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_SizeText\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_SizeUTF8\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_SizeUNICODE\fP (\fBTTF_Font\fP *font, \fBconst\fP \fBUint16\fP *text, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderText_Solid\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUTF8_Solid\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUNICODE_Solid\fP (\fBTTF_Font\fP *font, \fBconst\fP \fBUint16\fP *text, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderGlyph_Solid\fP (\fBTTF_Font\fP *font, \fBUint16\fP ch, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderText_Shaded\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUTF8_Shaded\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUNICODE_Shaded\fP (\fBTTF_Font\fP *font, \fBconst\fP \fBUint16\fP *text, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderGlyph_Shaded\fP (\fBTTF_Font\fP *font, \fBUint16\fP ch, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderText_Blended\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUTF8_Blended\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUNICODE_Blended\fP (\fBTTF_Font\fP *font, \fBconst\fP \fBUint16\fP *text, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderText_Blended_Wrapped\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg, \fBUint32\fP wrapLength)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUTF8_Blended_Wrapped\fP (\fBTTF_Font\fP *font, \fBconst\fP char *text, \fBSDL_Color\fP fg, \fBUint32\fP wrapLength)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderUNICODE_Blended_Wrapped\fP (\fBTTF_Font\fP *font, \fBconst\fP \fBUint16\fP *text, \fBSDL_Color\fP fg, \fBUint32\fP wrapLength)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Surface\fP *\fBSDLCALL\fP \fBTTF_RenderGlyph_Blended\fP (\fBTTF_Font\fP *font, \fBUint16\fP ch, \fBSDL_Color\fP fg)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_CloseFont\fP (\fBTTF_Font\fP *font)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBTTF_Quit\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBTTF_WasInit\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBTTF_GetFontKerningSize\fP (\fBTTF_Font\fP *font, \fBUint16\fP previous_ch, \fBUint16\fP ch)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_TTF_MAJOR_VERSION   2"
+
+.PP
+Définition à la ligne 40 du fichier SDL_ttf\&.h\&.
+.SS "#define SDL_TTF_MINOR_VERSION   0"
+
+.PP
+Définition à la ligne 41 du fichier SDL_ttf\&.h\&.
+.SS "#define SDL_TTF_PATCHLEVEL   13"
+
+.PP
+Définition à la ligne 42 du fichier SDL_ttf\&.h\&.
+.SS "#define SDL_TTF_VERSION(X)"
+\fBValeur :\fP
+.PP
+.nf
+{                                                   \
+    (X)->major = SDL_TTF_MAJOR_VERSION;             \
+    (X)->minor = SDL_TTF_MINOR_VERSION;             \
+    (X)->patch = SDL_TTF_PATCHLEVEL;                \
+}
+.fi
+.PP
+Définition à la ligne 47 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_GetError   \fBSDL_GetError\fP"
+
+.PP
+Définition à la ligne 255 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_HINTING_LIGHT   1"
+
+.PP
+Définition à la ligne 104 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_HINTING_MONO   2"
+
+.PP
+Définition à la ligne 105 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_HINTING_NONE   3"
+
+.PP
+Définition à la ligne 106 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_HINTING_NORMAL   0"
+
+.PP
+Définition à la ligne 103 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_MAJOR_VERSION   \fBSDL_TTF_MAJOR_VERSION\fP"
+
+.PP
+Définition à la ligne 55 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_MINOR_VERSION   \fBSDL_TTF_MINOR_VERSION\fP"
+
+.PP
+Définition à la ligne 56 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_PATCHLEVEL   \fBSDL_TTF_PATCHLEVEL\fP"
+
+.PP
+Définition à la ligne 57 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_RenderText(font, text, fg, bg)   \fBTTF_RenderText_Shaded\fP(font, text, fg, bg)"
+
+.PP
+Définition à la ligne 234 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_RenderUNICODE(font, text, fg, bg)   \fBTTF_RenderUNICODE_Shaded\fP(font, text, fg, bg)"
+
+.PP
+Définition à la ligne 238 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_RenderUTF8(font, text, fg, bg)   \fBTTF_RenderUTF8_Shaded\fP(font, text, fg, bg)"
+
+.PP
+Définition à la ligne 236 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_SetError   \fBSDL_SetError\fP"
+
+.PP
+Définition à la ligne 254 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_STYLE_BOLD   0x01"
+
+.PP
+Définition à la ligne 93 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_STYLE_ITALIC   0x02"
+
+.PP
+Définition à la ligne 94 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_STYLE_NORMAL   0x00"
+
+.PP
+Définition à la ligne 92 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_STYLE_STRIKETHROUGH   0x08"
+
+.PP
+Définition à la ligne 96 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_STYLE_UNDERLINE   0x04"
+
+.PP
+Définition à la ligne 95 du fichier SDL_ttf\&.h\&.
+.SS "#define TTF_VERSION(X)   \fBSDL_TTF_VERSION\fP(X)"
+
+.PP
+Définition à la ligne 58 du fichier SDL_ttf\&.h\&.
+.SS "#define UNICODE_BOM_NATIVE   0xFEFF"
+
+.PP
+Définition à la ligne 67 du fichier SDL_ttf\&.h\&.
+.SS "#define UNICODE_BOM_SWAPPED   0xFFFE"
+
+.PP
+Définition à la ligne 68 du fichier SDL_ttf\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct _TTF_Font \fBTTF_Font\fP"
+
+.PP
+Définition à la ligne 77 du fichier SDL_ttf\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_ByteSwappedUNICODE (\fBint\fP swapped)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_CloseFont (\fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_FontAscent (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_FontDescent (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP char* \fBSDLCALL\fP TTF_FontFaceFamilyName (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_FontFaceIsFixedWidth (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP long \fBSDLCALL\fP TTF_FontFaces (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP char* \fBSDLCALL\fP TTF_FontFaceStyleName (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_FontHeight (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_FontLineSkip (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_GetFontHinting (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_GetFontKerning (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP TTF_GetFontKerningSize (\fBTTF_Font\fP * font, \fBUint16\fP previous_ch, \fBUint16\fP ch)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_GetFontOutline (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_GetFontStyle (\fBconst\fP \fBTTF_Font\fP * font)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_GlyphIsProvided (\fBconst\fP \fBTTF_Font\fP * font, \fBUint16\fP ch)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_GlyphMetrics (\fBTTF_Font\fP * font, \fBUint16\fP ch, \fBint\fP * minx, \fBint\fP * maxx, \fBint\fP * miny, \fBint\fP * maxy, \fBint\fP * advance)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_Init (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBconst\fP \fBSDL_version\fP* \fBSDLCALL\fP TTF_Linked_Version (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBTTF_Font\fP* \fBSDLCALL\fP TTF_OpenFont (\fBconst\fP char * file, \fBint\fP ptsize)"
+
+.SS "\fBDECLSPEC\fP \fBTTF_Font\fP* \fBSDLCALL\fP TTF_OpenFontIndex (\fBconst\fP char * file, \fBint\fP ptsize, long index)"
+
+.SS "\fBDECLSPEC\fP \fBTTF_Font\fP* \fBSDLCALL\fP TTF_OpenFontIndexRW (\fBSDL_RWops\fP * src, \fBint\fP freesrc, \fBint\fP ptsize, long index)"
+
+.SS "\fBDECLSPEC\fP \fBTTF_Font\fP* \fBSDLCALL\fP TTF_OpenFontRW (\fBSDL_RWops\fP * src, \fBint\fP freesrc, \fBint\fP ptsize)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_Quit (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderGlyph_Blended (\fBTTF_Font\fP * font, \fBUint16\fP ch, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderGlyph_Shaded (\fBTTF_Font\fP * font, \fBUint16\fP ch, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderGlyph_Solid (\fBTTF_Font\fP * font, \fBUint16\fP ch, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderText_Blended (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderText_Blended_Wrapped (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg, \fBUint32\fP wrapLength)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderText_Shaded (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderText_Solid (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUNICODE_Blended (\fBTTF_Font\fP * font, \fBconst\fP \fBUint16\fP * text, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUNICODE_Blended_Wrapped (\fBTTF_Font\fP * font, \fBconst\fP \fBUint16\fP * text, \fBSDL_Color\fP fg, \fBUint32\fP wrapLength)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUNICODE_Shaded (\fBTTF_Font\fP * font, \fBconst\fP \fBUint16\fP * text, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUNICODE_Solid (\fBTTF_Font\fP * font, \fBconst\fP \fBUint16\fP * text, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUTF8_Blended (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUTF8_Blended_Wrapped (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg, \fBUint32\fP wrapLength)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUTF8_Shaded (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg, \fBSDL_Color\fP bg)"
+
+.SS "\fBDECLSPEC\fP \fBSDL_Surface\fP* \fBSDLCALL\fP TTF_RenderUTF8_Solid (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBSDL_Color\fP fg)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_SetFontHinting (\fBTTF_Font\fP * font, \fBint\fP hinting)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_SetFontKerning (\fBTTF_Font\fP * font, \fBint\fP allowed)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_SetFontOutline (\fBTTF_Font\fP * font, \fBint\fP outline)"
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP TTF_SetFontStyle (\fBTTF_Font\fP * font, \fBint\fP style)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_SizeText (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBint\fP * w, \fBint\fP * h)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_SizeUNICODE (\fBTTF_Font\fP * font, \fBconst\fP \fBUint16\fP * text, \fBint\fP * w, \fBint\fP * h)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_SizeUTF8 (\fBTTF_Font\fP * font, \fBconst\fP char * text, \fBint\fP * w, \fBint\fP * h)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP TTF_WasInit (\fBvoid\fP)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

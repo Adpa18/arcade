@@ -1,0 +1,75 @@
+.TH "SDL_MessageBoxData" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MessageBoxData \- MessageBox structure containing title, text, window, etc\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_messagebox\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Window\fP * \fBwindow\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBtitle\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBmessage\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBnumbuttons\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP \fBSDL_MessageBoxButtonData\fP * \fBbuttons\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP \fBSDL_MessageBoxColorScheme\fP * \fBcolorScheme\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+MessageBox structure containing title, text, window, etc\&. 
+.PP
+Définition à la ligne 92 du fichier SDL_messagebox\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBconst\fP \fBSDL_MessageBoxButtonData\fP* SDL_MessageBoxData::buttons"
+
+.PP
+Définition à la ligne 100 du fichier SDL_messagebox\&.h\&.
+.SS "\fBconst\fP \fBSDL_MessageBoxColorScheme\fP* SDL_MessageBoxData::colorScheme"
+\fBSDL_MessageBoxColorScheme\fP, can be NULL to use system settings 
+.PP
+Définition à la ligne 102 du fichier SDL_messagebox\&.h\&.
+.SS "\fBUint32\fP SDL_MessageBoxData::flags"
+\fBSDL_MessageBoxFlags\fP 
+.PP
+Définition à la ligne 94 du fichier SDL_messagebox\&.h\&.
+.SS "\fBconst\fP char* SDL_MessageBoxData::message"
+UTF-8 message text 
+.PP
+Définition à la ligne 97 du fichier SDL_messagebox\&.h\&.
+.SS "\fBint\fP SDL_MessageBoxData::numbuttons"
+
+.PP
+Définition à la ligne 99 du fichier SDL_messagebox\&.h\&.
+.SS "\fBconst\fP char* SDL_MessageBoxData::title"
+UTF-8 title 
+.PP
+Définition à la ligne 96 du fichier SDL_messagebox\&.h\&.
+.SS "\fBSDL_Window\fP* SDL_MessageBoxData::window"
+Parent window, can be NULL 
+.PP
+Définition à la ligne 95 du fichier SDL_messagebox\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

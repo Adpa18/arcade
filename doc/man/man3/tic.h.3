@@ -1,0 +1,351 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/tic.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/tic.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/curses\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtoken\fP"
+.br
+.ti -1c
+.RI "struct \fBtinfo_fkeys\fP"
+.br
+.ti -1c
+.RI "struct \fBname_table_entry\fP"
+.br
+.ti -1c
+.RI "struct \fBHashData\fP"
+.br
+.ti -1c
+.RI "struct \fBalias\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAGIC\fP   0432	/* \fBfirst\fP two bytes of \fBa\fP compiled \fBentry\fP */"
+.br
+.ti -1c
+.RI "#define \fBBYTE\fP(\fBp\fP,  \fBn\fP)   (unsigned char)((\fBp\fP)[\fBn\fP])"
+.br
+.ti -1c
+.RI "#define \fBIS_NEG1\fP(\fBp\fP)   ((\fBBYTE\fP(\fBp\fP,0) == 0377) && (\fBBYTE\fP(\fBp\fP,1) == 0377))"
+.br
+.ti -1c
+.RI "#define \fBIS_NEG2\fP(\fBp\fP)   ((\fBBYTE\fP(\fBp\fP,0) == 0376) && (\fBBYTE\fP(\fBp\fP,1) == 0377))"
+.br
+.ti -1c
+.RI "#define \fBLOW_MSB\fP(\fBp\fP)   (\fBBYTE\fP(\fBp\fP,0) + 256*\fBBYTE\fP(\fBp\fP,1))"
+.br
+.ti -1c
+.RI "#define \fBIS_TIC_MAGIC\fP(\fBp\fP)   (\fBLOW_MSB\fP(\fBp\fP) == \fBMAGIC\fP)"
+.br
+.ti -1c
+.RI "#define \fBMAX_NAME_SIZE\fP   512	/* maximum legal \fBname\fP field \fBsize\fP (XSI:127) */"
+.br
+.ti -1c
+.RI "#define \fBMAX_ENTRY_SIZE\fP   4096	/* maximum legal \fBentry\fP \fBsize\fP */"
+.br
+.ti -1c
+.RI "#define \fBMAX_ALIAS\fP   14	/* SVr3 filename \fBlength\fP */"
+.br
+.ti -1c
+.RI "#define \fBPRIVATE_INFO\fP   '%s/\&.terminfo'	/* plug getenv('HOME') into %\fBs\fP */"
+.br
+.ti -1c
+.RI "#define \fBMAX_DEBUG_LEVEL\fP   15"
+.br
+.ti -1c
+.RI "#define \fBDEBUG_LEVEL\fP(\fBn\fP)   ((\fBn\fP) << \fBTRACE_SHIFT\fP)"
+.br
+.ti -1c
+.RI "#define \fBset_trace_level\fP(\fBn\fP)"
+.br
+.ti -1c
+.RI "#define \fBDEBUG\fP(\fBn\fP,  \fBa\fP)   /*nothing*/"
+.br
+.ti -1c
+.RI "#define \fBBOOLEAN\fP   0		/* Boolean capability */"
+.br
+.ti -1c
+.RI "#define \fBNUMBER\fP   1		/* Numeric capability */"
+.br
+.ti -1c
+.RI "#define \fBSTRING\fP   2		/* String\-valued capability */"
+.br
+.ti -1c
+.RI "#define \fBCANCEL\fP   3		/* Capability to be cancelled \fBin\fP following \fBtc\fP'\fBs\fP */"
+.br
+.ti -1c
+.RI "#define \fBNAMES\fP   4		/* The \fBnames\fP for \fBa\fP terminal \fBtype\fP */"
+.br
+.ti -1c
+.RI "#define \fBUNDEF\fP   5		/* Undefined */"
+.br
+.ti -1c
+.RI "#define \fBNO_PUSHBACK\fP   \-1	/* used \fBin\fP pushtype to indicate no pushback */"
+.br
+.ti -1c
+.RI "#define \fBNOTFOUND\fP   ((struct \fBname_table_entry\fP *) 0)"
+.br
+.ti -1c
+.RI "#define \fBABSENT_BOOLEAN\fP   ((signed char)\-1)	/* 255 */"
+.br
+.ti -1c
+.RI "#define \fBABSENT_NUMERIC\fP   (\-1)"
+.br
+.ti -1c
+.RI "#define \fBABSENT_STRING\fP   (char *)0"
+.br
+.ti -1c
+.RI "#define \fBCANCELLED_BOOLEAN\fP   ((signed char)\-2)	/* 254 */"
+.br
+.ti -1c
+.RI "#define \fBCANCELLED_NUMERIC\fP   (\-2)"
+.br
+.ti -1c
+.RI "#define \fBCANCELLED_STRING\fP   (char *)(\-1)"
+.br
+.ti -1c
+.RI "#define \fBVALID_BOOLEAN\fP(\fBs\fP)   ((unsigned char)(\fBs\fP) <= 1) /* reject '\-1' */"
+.br
+.ti -1c
+.RI "#define \fBVALID_NUMERIC\fP(\fBs\fP)   ((\fBs\fP) >= 0)"
+.br
+.ti -1c
+.RI "#define \fBVALID_STRING\fP(\fBs\fP)   ((\fBs\fP) != \fBCANCELLED_STRING\fP && (\fBs\fP) != \fBABSENT_STRING\fP)"
+.br
+.ti -1c
+.RI "#define \fBMAX_TERMCAP_LENGTH\fP   1023"
+.br
+.ti -1c
+.RI "#define \fBMAX_TERMINFO_LENGTH\fP   4096"
+.br
+.ti -1c
+.RI "#define \fBTERMINFO\fP   '/usr/share/terminfo'"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef short \fBHashValue\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (unsigned) _nc_tracing"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBvoid\fP) _nc_tracef(char *"
+.br
+.ti -1c
+.RI "\fBGCC_PRINTFLIKE\fP (1, 2)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP char *) _nc_visbuf(\fBconst\fP char *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (struct \fBtoken\fP) _nc_curr_token"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBconst\fP struct \fBtinfo_fkeys\fP) _nc_tinfo_fkeys[]"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP struct \fBname_table_entry\fP *) _nc_get_table(\fBbool\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP \fBHashData\fP *) _nc_get_hash_info(\fBbool\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP \fBHashValue\fP *) _nc_get_hash_table(\fBbool\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP struct \fBalias\fP *) _nc_get_alias_table(\fBbool\fP)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define ABSENT_BOOLEAN   ((signed char)\-1)	/* 255 */"
+
+.PP
+Définition à la ligne 234 du fichier tic\&.h\&.
+.SS "#define ABSENT_NUMERIC   (\-1)"
+
+.PP
+Définition à la ligne 235 du fichier tic\&.h\&.
+.SS "#define ABSENT_STRING   (char *)0"
+
+.PP
+Définition à la ligne 236 du fichier tic\&.h\&.
+.SS "#define BOOLEAN   0		/* Boolean capability */"
+
+.PP
+Définition à la ligne 142 du fichier tic\&.h\&.
+.SS "#define BYTE(\fBp\fP, \fBn\fP)   (unsigned char)((\fBp\fP)[\fBn\fP])"
+
+.PP
+Définition à la ligne 81 du fichier tic\&.h\&.
+.SS "#define CANCEL   3		/* Capability to be cancelled \fBin\fP following \fBtc\fP'\fBs\fP */"
+
+.PP
+Définition à la ligne 145 du fichier tic\&.h\&.
+.SS "#define CANCELLED_BOOLEAN   ((signed char)\-2)	/* 254 */"
+
+.PP
+Définition à la ligne 239 du fichier tic\&.h\&.
+.SS "#define CANCELLED_NUMERIC   (\-2)"
+
+.PP
+Définition à la ligne 240 du fichier tic\&.h\&.
+.SS "#define CANCELLED_STRING   (char *)(\-1)"
+
+.PP
+Définition à la ligne 241 du fichier tic\&.h\&.
+.SS "#define DEBUG(\fBn\fP, \fBa\fP)   /*nothing*/"
+
+.PP
+Définition à la ligne 127 du fichier tic\&.h\&.
+.SS "#define DEBUG_LEVEL(\fBn\fP)   ((\fBn\fP) << \fBTRACE_SHIFT\fP)"
+
+.PP
+Définition à la ligne 118 du fichier tic\&.h\&.
+.SS "#define IS_NEG1(\fBp\fP)   ((\fBBYTE\fP(\fBp\fP,0) == 0377) && (\fBBYTE\fP(\fBp\fP,1) == 0377))"
+
+.PP
+Définition à la ligne 83 du fichier tic\&.h\&.
+.SS "#define IS_NEG2(\fBp\fP)   ((\fBBYTE\fP(\fBp\fP,0) == 0376) && (\fBBYTE\fP(\fBp\fP,1) == 0377))"
+
+.PP
+Définition à la ligne 84 du fichier tic\&.h\&.
+.SS "#define IS_TIC_MAGIC(\fBp\fP)   (\fBLOW_MSB\fP(\fBp\fP) == \fBMAGIC\fP)"
+
+.PP
+Définition à la ligne 87 du fichier tic\&.h\&.
+.SS "#define LOW_MSB(\fBp\fP)   (\fBBYTE\fP(\fBp\fP,0) + 256*\fBBYTE\fP(\fBp\fP,1))"
+
+.PP
+Définition à la ligne 85 du fichier tic\&.h\&.
+.SS "#define MAGIC   0432	/* \fBfirst\fP two bytes of \fBa\fP compiled \fBentry\fP */"
+
+.PP
+Définition à la ligne 78 du fichier tic\&.h\&.
+.SS "#define MAX_ALIAS   14	/* SVr3 filename \fBlength\fP */"
+
+.PP
+Définition à la ligne 105 du fichier tic\&.h\&.
+.SS "#define MAX_DEBUG_LEVEL   15"
+
+.PP
+Définition à la ligne 117 du fichier tic\&.h\&.
+.SS "#define MAX_ENTRY_SIZE   4096	/* maximum legal \fBentry\fP \fBsize\fP */"
+
+.PP
+Définition à la ligne 94 du fichier tic\&.h\&.
+.SS "#define MAX_NAME_SIZE   512	/* maximum legal \fBname\fP field \fBsize\fP (XSI:127) */"
+
+.PP
+Définition à la ligne 93 du fichier tic\&.h\&.
+.SS "#define MAX_TERMCAP_LENGTH   1023"
+
+.PP
+Définition à la ligne 248 du fichier tic\&.h\&.
+.SS "#define MAX_TERMINFO_LENGTH   4096"
+
+.PP
+Définition à la ligne 251 du fichier tic\&.h\&.
+.SS "#define NAMES   4		/* The \fBnames\fP for \fBa\fP terminal \fBtype\fP */"
+
+.PP
+Définition à la ligne 146 du fichier tic\&.h\&.
+.SS "#define NO_PUSHBACK   \-1	/* used \fBin\fP pushtype to indicate no pushback */"
+
+.PP
+Définition à la ligne 149 du fichier tic\&.h\&.
+.SS "#define NOTFOUND   ((struct \fBname_table_entry\fP *) 0)"
+
+.PP
+Définition à la ligne 225 du fichier tic\&.h\&.
+.SS "#define NUMBER   1		/* Numeric capability */"
+
+.PP
+Définition à la ligne 143 du fichier tic\&.h\&.
+.SS "#define PRIVATE_INFO   '%s/\&.terminfo'	/* plug getenv('HOME') into %\fBs\fP */"
+
+.PP
+Définition à la ligne 109 du fichier tic\&.h\&.
+.SS "#define set_trace_level(\fBn\fP)"
+\fBValeur :\fP
+.PP
+.nf
+_nc_tracing &= DEBUG_LEVEL(MAX_DEBUG_LEVEL), \
+    _nc_tracing |= DEBUG_LEVEL(n)
+.fi
+.PP
+Définition à la ligne 120 du fichier tic\&.h\&.
+.SS "#define STRING   2		/* String\-valued capability */"
+
+.PP
+Définition à la ligne 144 du fichier tic\&.h\&.
+.SS "#define TERMINFO   '/usr/share/terminfo'"
+
+.PP
+Définition à la ligne 254 du fichier tic\&.h\&.
+.SS "#define UNDEF   5		/* Undefined */"
+
+.PP
+Définition à la ligne 147 du fichier tic\&.h\&.
+.SS "#define VALID_BOOLEAN(\fBs\fP)   ((unsigned char)(\fBs\fP) <= 1) /* reject '\-1' */"
+
+.PP
+Définition à la ligne 243 du fichier tic\&.h\&.
+.SS "#define VALID_NUMERIC(\fBs\fP)   ((\fBs\fP) >= 0)"
+
+.PP
+Définition à la ligne 244 du fichier tic\&.h\&.
+.SS "#define VALID_STRING(\fBs\fP)   ((\fBs\fP) != \fBCANCELLED_STRING\fP && (\fBs\fP) != \fBABSENT_STRING\fP)"
+
+.PP
+Définition à la ligne 245 du fichier tic\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef short \fBHashValue\fP"
+
+.PP
+Définition à la ligne 186 du fichier tic\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "GCC_PRINTFLIKE (1, 2)"
+
+.SS "NCURSES_EXPORT (\fBvoid\fP)"
+
+.SS "NCURSES_EXPORT (\fBconst\fP char *) const"
+
+.SS "NCURSES_EXPORT (\fBconst\fP struct \fBname_table_entry\fP *)"
+
+.SS "NCURSES_EXPORT (\fBconst\fP \fBHashData\fP *)"
+
+.SS "NCURSES_EXPORT (\fBconst\fP \fBHashValue\fP *)"
+
+.SS "NCURSES_EXPORT (\fBconst\fP struct \fBalias\fP *)"
+
+.SS "NCURSES_EXPORT_VAR (unsigned)"
+
+.SS "NCURSES_EXPORT_VAR (struct \fBtoken\fP)"
+
+.SS "NCURSES_EXPORT_VAR (\fBconst\fP struct \fBtinfo_fkeys\fP)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

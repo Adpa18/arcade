@@ -1,0 +1,100 @@
+.TH "SDL_AudioCVT" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_AudioCVT \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_audio\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBneeded\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioFormat\fP \fBsrc_format\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioFormat\fP \fBdst_format\fP"
+.br
+.ti -1c
+.RI "double \fBrate_incr\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP * \fBbuf\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlen\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlen_cvt\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBlen_mult\fP"
+.br
+.ti -1c
+.RI "double \fBlen_ratio\fP"
+.br
+.ti -1c
+.RI "SDL_AudioFilter \fBfilters\fP [10]"
+.br
+.ti -1c
+.RI "\fBint\fP \fBfilter_index\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 200 du fichier SDL_audio\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP* SDL_AudioCVT::buf"
+Buffer to hold entire audio data 
+.PP
+Définition à la ligne 206 du fichier SDL_audio\&.h\&.
+.SS "\fBSDL_AudioFormat\fP SDL_AudioCVT::dst_format"
+Target audio format 
+.PP
+Définition à la ligne 204 du fichier SDL_audio\&.h\&.
+.SS "\fBint\fP SDL_AudioCVT::filter_index"
+Current audio conversion function 
+.PP
+Définition à la ligne 212 du fichier SDL_audio\&.h\&.
+.SS "SDL_AudioFilter SDL_AudioCVT::filters[10]"
+Filter list 
+.PP
+Définition à la ligne 211 du fichier SDL_audio\&.h\&.
+.SS "\fBint\fP SDL_AudioCVT::len"
+Length of original audio buffer 
+.PP
+Définition à la ligne 207 du fichier SDL_audio\&.h\&.
+.SS "\fBint\fP SDL_AudioCVT::len_cvt"
+Length of converted audio buffer 
+.PP
+Définition à la ligne 208 du fichier SDL_audio\&.h\&.
+.SS "\fBint\fP SDL_AudioCVT::len_mult"
+buffer must be len*len_mult big 
+.PP
+Définition à la ligne 209 du fichier SDL_audio\&.h\&.
+.SS "double SDL_AudioCVT::len_ratio"
+Given len, final size is len*len_ratio 
+.PP
+Définition à la ligne 210 du fichier SDL_audio\&.h\&.
+.SS "\fBint\fP SDL_AudioCVT::needed"
+Set to 1 if conversion possible 
+.PP
+Définition à la ligne 202 du fichier SDL_audio\&.h\&.
+.SS "double SDL_AudioCVT::rate_incr"
+Rate conversion increment 
+.PP
+Définition à la ligne 205 du fichier SDL_audio\&.h\&.
+.SS "\fBSDL_AudioFormat\fP SDL_AudioCVT::src_format"
+Source audio format 
+.PP
+Définition à la ligne 203 du fichier SDL_audio\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

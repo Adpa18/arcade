@@ -1,0 +1,233 @@
+.TH "NCursesPanel" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesPanel \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesp\&.h>\fP
+.PP
+Est dérivée de \fBNCursesWindow\fP\&.
+.PP
+Dérivée par \fBNCursesForm\fP, \fBNCursesMenu\fP, et \fBNCursesUserPanel< T >\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesPanel\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0)"
+.br
+.ti -1c
+.RI "\fBNCursesPanel\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesPanel\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesPanel\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesPanel\fP (\fBconst\fP \fBNCursesPanel\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesPanel\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBhide\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBshow\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBtop\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBbottom\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBmvwin\fP (\fBint\fP \fBy\fP, \fBint\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBhidden\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCursesPanel\fP & \fBabove\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCursesPanel\fP & \fBbelow\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBrefresh\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBnoutrefresh\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBframe\fP (\fBconst\fP char *title=\fBNULL\fP, \fBconst\fP char *btitle=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBboldframe\fP (\fBconst\fP char *title=\fBNULL\fP, \fBconst\fP char *btitle=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBlabel\fP (\fBconst\fP char *topLabel, \fBconst\fP char *bottomLabel)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBcentertext\fP (\fBint\fP \fBrow\fP, \fBconst\fP char *\fBlabel\fP)"
+.br
+.in -1c
+.SS "Fonctions membres publiques statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBvoid\fP \fBredraw\fP ()"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBset_user\fP (\fBvoid\fP *user)"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBget_user\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBOnError\fP (\fBint\fP \fBerr\fP) \fBconst\fP \fBTHROW2\fP(\fBNCursesException\fP \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBNCursesPanelException\fP \fBif\fP (\fBerr\fP==\fBERR\fP) \fBTHROW\fP(new \fBNCursesPanelException\fP(this"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBgetKey\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBPANEL\fP * \fBp\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBNCursesPanelException\fP \fBerr\fP"
+.br
+.in -1c
+.SS "Attributs protégés statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBNCursesPanel\fP * \fBdummy\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 45 du fichier cursesp\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesPanel::NCursesPanel (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 101 du fichier cursesp\&.h\&.
+.SS "NCursesPanel::NCursesPanel ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 111 du fichier cursesp\&.h\&.
+.SS "NCursesPanel::NCursesPanel (\fBconst\fP \fBNCursesPanel\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 128 du fichier cursesp\&.h\&.
+.SS "virtual NCursesPanel::~NCursesPanel ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBNCursesPanel\fP& NCursesPanel::above () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 182 du fichier cursesp\&.h\&.
+.SS "\fBNCursesPanel\fP& NCursesPanel::below () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 188 du fichier cursesp\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPanel::boldframe (\fBconst\fP char * title = \fC\fBNULL\fP\fP, \fBconst\fP char * btitle = \fC\fBNULL\fP\fP)\fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesMenu\fP, et \fBNCursesForm\fP\&.
+.SS "\fBvoid\fP NCursesPanel::bottom ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 155 du fichier cursesp\&.h\&.
+.SS "virtual \fBvoid\fP NCursesPanel::centertext (\fBint\fP row, \fBconst\fP char * label)\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesPanel::frame (\fBconst\fP char * title = \fC\fBNULL\fP\fP, \fBconst\fP char * btitle = \fC\fBNULL\fP\fP)\fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesMenu\fP, et \fBNCursesForm\fP\&.
+.SS "\fBvoid\fP* NCursesPanel::get_user ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 80 du fichier cursesp\&.h\&.
+.SS "virtual \fBint\fP NCursesPanel::getKey (\fBvoid\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBbool\fP NCursesPanel::hidden () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 169 du fichier cursesp\&.h\&.
+.SS "\fBvoid\fP NCursesPanel::hide ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 137 du fichier cursesp\&.h\&.
+.SS "\fBvoid\fP \fBNCursesPanelException\fP NCursesPanel::if (\fBerr\fP = \fC=\fBERR\fP\fP)\fC [new]\fP, \fC [protected]\fP"
+
+.SS "virtual \fBvoid\fP NCursesPanel::label (\fBconst\fP char * topLabel, \fBconst\fP char * bottomLabel)\fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesMenu\fP, et \fBNCursesForm\fP\&.
+.SS "virtual \fBint\fP NCursesPanel::mvwin (\fBint\fP y, \fBint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesWindow\fP\&.
+.PP
+Définition à la ligne 163 du fichier cursesp\&.h\&.
+.SS "virtual \fBint\fP NCursesPanel::noutrefresh ()\fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesWindow\fP\&.
+.SS "\fBvoid\fP NCursesPanel::OnError (\fBint\fP err) const\fC [protected]\fP"
+
+.SS "\fBNCursesPanel\fP& NCursesPanel::operator= (\fBconst\fP \fBNCursesPanel\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 119 du fichier cursesp\&.h\&.
+.SS "static \fBvoid\fP NCursesPanel::redraw ()\fC [static]\fP"
+
+.SS "virtual \fBint\fP NCursesPanel::refresh ()\fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesWindow\fP\&.
+.SS "\fBvoid\fP NCursesPanel::set_user (\fBvoid\fP * user)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 71 du fichier cursesp\&.h\&.
+.SS "\fBvoid\fP NCursesPanel::show ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 143 du fichier cursesp\&.h\&.
+.SS "\fBvoid\fP NCursesPanel::top ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 149 du fichier cursesp\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBNCursesPanel\fP* NCursesPanel::dummy\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 50 du fichier cursesp\&.h\&.
+.SS "\fBvoid\fP \fBNCursesPanelException\fP NCursesPanel::err\fC [protected]\fP"
+
+.PP
+Définition à la ligne 92 du fichier cursesp\&.h\&.
+.SS "\fBPANEL\fP* NCursesPanel::p\fC [protected]\fP"
+
+.PP
+Définition à la ligne 49 du fichier cursesp\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

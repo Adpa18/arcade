@@ -1,0 +1,1776 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/internal/dri_interface.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/internal/dri_interface.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <drm\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB__DRIextensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIcopySubBufferExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIswapControlExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIframeTrackingExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRImediaStreamCounterExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRItexOffsetExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRItexBufferExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRI2flushExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRI2throttleExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIgetDrawableInfoExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIsystemTimeExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIdamageExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIswrastLoaderExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIuseInvalidateExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIcoreExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIversionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIframebufferRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIlegacyExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIswrastExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIbufferRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIdri2LoaderExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIdri2ExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIimageExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIimageLookupExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRI2configQueryExtensionRec\fP"
+.br
+.ti -1c
+.RI "struct \fB__DRIrobustnessExtensionRec\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__DRI_READ_DRAWABLE\fP   'DRI_ReadDrawable'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_READ_DRAWABLE_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_COPY_SUB_BUFFER\fP   'DRI_CopySubBuffer'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_COPY_SUB_BUFFER_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWAP_CONTROL\fP   'DRI_SwapControl'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWAP_CONTROL_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_FRAME_TRACKING\fP   'DRI_FrameTracking'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_FRAME_TRACKING_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_MEDIA_STREAM_COUNTER\fP   'DRI_MediaStreamCounter'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_MEDIA_STREAM_COUNTER_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEX_OFFSET\fP   'DRI_TexOffset'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEX_OFFSET_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEXTURE_FORMAT_NONE\fP   0x20D8"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEXTURE_FORMAT_RGB\fP   0x20D9"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEXTURE_FORMAT_RGBA\fP   0x20DA"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEX_BUFFER\fP   'DRI_TexBuffer'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_TEX_BUFFER_VERSION\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_FLUSH\fP   'DRI2_Flush'"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_FLUSH_VERSION\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_FLUSH_DRAWABLE\fP   (1 << 0) /* the drawable should be flushed\&. */"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_FLUSH_CONTEXT\fP   (1 << 1) /* \fBglFlush\fP should be called */"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_THROTTLE\fP   'DRI2_Throttle'"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_THROTTLE_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_GET_DRAWABLE_INFO\fP   'DRI_GetDrawableInfo'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_GET_DRAWABLE_INFO_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SYSTEM_TIME\fP   'DRI_SystemTime'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SYSTEM_TIME_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DAMAGE\fP   'DRI_Damage'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DAMAGE_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST_IMAGE_OP_DRAW\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST_IMAGE_OP_CLEAR\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST_IMAGE_OP_SWAP\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST_LOADER\fP   'DRI_SWRastLoader'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST_LOADER_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_USE_INVALIDATE\fP   'DRI_UseInvalidate'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_USE_INVALIDATE_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DRIVER_EXTENSIONS\fP   '__driDriverExtensions'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BUFFER_SIZE\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_LEVEL\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_RED_SIZE\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_GREEN_SIZE\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BLUE_SIZE\fP   5"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_LUMINANCE_SIZE\fP   6"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ALPHA_SIZE\fP   7"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ALPHA_MASK_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_DEPTH_SIZE\fP   9"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_STENCIL_SIZE\fP   10"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ACCUM_RED_SIZE\fP   11"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ACCUM_GREEN_SIZE\fP   12"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ACCUM_BLUE_SIZE\fP   13"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ACCUM_ALPHA_SIZE\fP   14"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_SAMPLE_BUFFERS\fP   15"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_SAMPLES\fP   16"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_RENDER_TYPE\fP   17"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_CONFIG_CAVEAT\fP   18"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_CONFORMANT\fP   19"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_DOUBLE_BUFFER\fP   20"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_STEREO\fP   21"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_AUX_BUFFERS\fP   22"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_TYPE\fP   23"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_INDEX_VALUE\fP   24"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_RED_VALUE\fP   25"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_GREEN_VALUE\fP   26"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_BLUE_VALUE\fP   27"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_ALPHA_VALUE\fP   28"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_FLOAT_MODE\fP   29"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_RED_MASK\fP   30"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_GREEN_MASK\fP   31"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BLUE_MASK\fP   32"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_ALPHA_MASK\fP   33"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_MAX_PBUFFER_WIDTH\fP   34"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_MAX_PBUFFER_HEIGHT\fP   35"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_MAX_PBUFFER_PIXELS\fP   36"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_OPTIMAL_PBUFFER_WIDTH\fP   37"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_OPTIMAL_PBUFFER_HEIGHT\fP   38"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_VISUAL_SELECT_GROUP\fP   39"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_SWAP_METHOD\fP   40"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_MAX_SWAP_INTERVAL\fP   41"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_MIN_SWAP_INTERVAL\fP   42"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BIND_TO_TEXTURE_RGB\fP   43"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BIND_TO_TEXTURE_RGBA\fP   44"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BIND_TO_MIPMAP_TEXTURE\fP   45"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_BIND_TO_TEXTURE_TARGETS\fP   46"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_YINVERTED\fP   47"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_FRAMEBUFFER_SRGB_CAPABLE\fP   48"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_RGBA_BIT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_COLOR_INDEX_BIT\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_LUMINANCE_BIT\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_FLOAT_BIT\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_UNSIGNED_FLOAT_BIT\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_SLOW_BIT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_NON_CONFORMANT_CONFIG\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_RGB\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TRANSPARENT_INDEX\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TEXTURE_1D_BIT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TEXTURE_2D_BIT\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fB__DRI_ATTRIB_TEXTURE_RECTANGLE_BIT\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CORE\fP   'DRI_Core'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CORE_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_LEGACY\fP   'DRI_Legacy'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_LEGACY_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST\fP   'DRI_SWRast'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_SWRAST_VERSION\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_FRONT_LEFT\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_BACK_LEFT\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_FRONT_RIGHT\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_BACK_RIGHT\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_DEPTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_STENCIL\fP   5"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_ACCUM\fP   6"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_FAKE_FRONT_LEFT\fP   7"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_FAKE_FRONT_RIGHT\fP   8"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_DEPTH_STENCIL\fP   9"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_HIZ\fP   10"
+.br
+.ti -1c
+.RI "#define \fB__DRI_BUFFER_COUNT\fP   11"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DRI2_LOADER\fP   'DRI_DRI2Loader'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DRI2_LOADER_VERSION\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DRI2\fP   'DRI_DRI2'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_DRI2_VERSION\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_API_OPENGL\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__DRI_API_GLES\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_API_GLES2\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_API_OPENGL_CORE\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_API_GLES3\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ATTRIB_MAJOR_VERSION\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ATTRIB_MINOR_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ATTRIB_FLAGS\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ATTRIB_RESET_STRATEGY\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_FLAG_DEBUG\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_FLAG_FORWARD_COMPATIBLE\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_FLAG_ROBUST_BUFFER_ACCESS\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE\fP   'DRI_IMAGE'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_VERSION\fP   7"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_RGB565\fP   0x1001"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_XRGB8888\fP   0x1002"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_ARGB8888\fP   0x1003"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_ABGR8888\fP   0x1004"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_XBGR8888\fP   0x1005"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_R8\fP   0x1006 /* Since version 5 */"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_GR88\fP   0x1007"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FORMAT_NONE\fP   0x1008"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_USE_SHARE\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_USE_SCANOUT\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_USE_CURSOR\fP   0x0004 /* Depricated */"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_RGB565\fP   0x36314752"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_ARGB8888\fP   0x34325241"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_XRGB8888\fP   0x34325258"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_ABGR8888\fP   0x34324241"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_XBGR8888\fP   0x34324258"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_YUV410\fP   0x39565559"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_YUV411\fP   0x31315559"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_YUV420\fP   0x32315559"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_YUV422\fP   0x36315559"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_YUV444\fP   0x34325559"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_NV12\fP   0x3231564e"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_NV16\fP   0x3631564e"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_FOURCC_YUYV\fP   0x56595559"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_COMPONENTS_RGB\fP   0x3001"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_COMPONENTS_RGBA\fP   0x3002"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_COMPONENTS_Y_U_V\fP   0x3003"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_COMPONENTS_Y_UV\fP   0x3004"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_COMPONENTS_Y_XUXV\fP   0x3005"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_STRIDE\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_HANDLE\fP   0x2001"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_NAME\fP   0x2002"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_FORMAT\fP   0x2003 /* available in versions 3+ */"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_WIDTH\fP   0x2004 /* available in versions 4+ */"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_HEIGHT\fP   0x2005"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_COMPONENTS\fP   0x2006 /* available in versions 5+ */"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ATTRIB_FD\fP"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_LOOKUP\fP   'DRI_IMAGE_LOOKUP'"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_LOOKUP_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_CONFIG_QUERY\fP   'DRI_CONFIG_QUERY'"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_CONFIG_QUERY_VERSION\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_ROBUSTNESS\fP   'DRI_Robustness'"
+.br
+.ti -1c
+.RI "#define \fB__DRI2_ROBUSTNESS_VERSION\fP   1"
+.br
+.in -1c
+.PP
+.RI "\fBContext reset strategies\&.\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fB__DRI_CTX_RESET_NO_NOTIFICATION\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_RESET_LOSE_CONTEXT\fP   1"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBReasons that __DRIdri2Extension::createContextAttribs might fail\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_SUCCESS\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_NO_MEMORY\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_BAD_API\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_BAD_VERSION\fP   3"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_BAD_FLAG\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_UNKNOWN_ATTRIBUTE\fP   5"
+.br
+.ti -1c
+.RI "#define \fB__DRI_CTX_ERROR_UNKNOWN_FLAG\fP   6"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBReasons that __DRIimageExtensionRec::createImageFromTexture might fail\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ERROR_SUCCESS\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ERROR_BAD_ALLOC\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ERROR_BAD_MATCH\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__DRI_IMAGE_ERROR_BAD_PARAMETER\fP   3"
+.br
+.in -1c
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__DRIgetDrawableInfoExtensionRec\fP \fB__DRIgetDrawableInfoExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIsystemTimeExtensionRec\fP \fB__DRIsystemTimeExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIdamageExtensionRec\fP \fB__DRIdamageExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct __DRIloaderExtensionRec \fB__DRIloaderExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIswrastLoaderExtensionRec\fP \fB__DRIswrastLoaderExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIuseInvalidateExtensionRec\fP \fB__DRIuseInvalidateExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct __DRIimageRec \fB__DRIimage\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIimageExtensionRec\fP \fB__DRIimageExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIimageLookupExtensionRec\fP \fB__DRIimageLookupExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRI2configQueryExtensionRec\fP \fB__DRI2configQueryExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIrobustnessExtensionRec\fP \fB__DRIrobustnessExtension\fP"
+.br
+.in -1c
+.PP
+.RI "\fBDRI interface structures\fP"
+.br
+The following structures define the interface between the GLX client side library and the DRI (direct rendering infrastructure)\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "typedef struct __DRIdisplayRec \fB__DRIdisplay\fP"
+.br
+.ti -1c
+.RI "typedef struct __DRIscreenRec \fB__DRIscreen\fP"
+.br
+.ti -1c
+.RI "typedef struct __DRIcontextRec \fB__DRIcontext\fP"
+.br
+.ti -1c
+.RI "typedef struct __DRIdrawableRec \fB__DRIdrawable\fP"
+.br
+.ti -1c
+.RI "typedef struct __DRIconfigRec \fB__DRIconfig\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIframebufferRec\fP \fB__DRIframebuffer\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIversionRec\fP \fB__DRIversion\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIcoreExtensionRec\fP \fB__DRIcoreExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIextensionRec\fP \fB__DRIextension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIcopySubBufferExtensionRec\fP \fB__DRIcopySubBufferExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIswapControlExtensionRec\fP \fB__DRIswapControlExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIframeTrackingExtensionRec\fP \fB__DRIframeTrackingExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRImediaStreamCounterExtensionRec\fP \fB__DRImediaStreamCounterExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRItexOffsetExtensionRec\fP \fB__DRItexOffsetExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRItexBufferExtensionRec\fP \fB__DRItexBufferExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIlegacyExtensionRec\fP \fB__DRIlegacyExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIswrastExtensionRec\fP \fB__DRIswrastExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIbufferRec\fP \fB__DRIbuffer\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIdri2ExtensionRec\fP \fB__DRIdri2Extension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRIdri2LoaderExtensionRec\fP \fB__DRIdri2LoaderExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRI2flushExtensionRec\fP \fB__DRI2flushExtension\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__DRI2throttleExtensionRec\fP \fB__DRI2throttleExtension\fP"
+.br
+.in -1c
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB__DRI2throttleReason\fP { \fB__DRI2_THROTTLE_SWAPBUFFER\fP, \fB__DRI2_THROTTLE_COPYSUBBUFFER\fP, \fB__DRI2_THROTTLE_FLUSHFRONT\fP }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBconst\fP char \fB__driConfigOptions\fP []"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+This file contains all the types and functions that define the interface between a DRI driver and driver loader\&. Currently, the most common driver loader is the XFree86 libGL\&.so\&. However, other loaders do exist, and in the future the server-side libglx\&.a will also be a loader\&.
+.PP
+\fBAuteur:\fP
+.RS 4
+Kevin E\&. Martin kevin@precisioninsight.com 
+.PP
+Ian Romanick idr@us.ibm.com 
+.PP
+Kristian Høgsberg krh@redhat.com 
+.RE
+.PP
+
+.PP
+Définition dans le fichier \fBdri_interface\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define __DRI2_CONFIG_QUERY   'DRI_CONFIG_QUERY'"
+This extension allows for common DRI2 options 
+.PP
+Définition à la ligne 1161 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_CONFIG_QUERY_VERSION   1"
+
+.PP
+Définition à la ligne 1162 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_FLUSH   'DRI2_Flush'"
+Used by drivers that implement DRI2 
+.PP
+Définition à la ligne 269 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_FLUSH_CONTEXT   (1 << 1) /* \fBglFlush\fP should be called */"
+
+.PP
+Définition à la ligne 273 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_FLUSH_DRAWABLE   (1 << 0) /* the drawable should be flushed\&. */"
+
+.PP
+Définition à la ligne 272 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_FLUSH_VERSION   4"
+
+.PP
+Définition à la ligne 270 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_ROBUSTNESS   'DRI_Robustness'"
+Robust context driver extension\&.
+.PP
+Existence of this extension means the driver can accept the \fC__DRI_CTX_FLAG_ROBUST_BUFFER_ACCESS\fP flag and the \fC__DRI_CTX_ATTRIB_RESET_STRATEGY\fP attribute in \fC\fB__DRIdri2ExtensionRec::createContextAttribs\fP\fP\&. 
+.PP
+Définition à la ligne 1181 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_ROBUSTNESS_VERSION   1"
+
+.PP
+Définition à la ligne 1182 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_THROTTLE   'DRI2_Throttle'"
+Extension that the driver uses to request throttle callbacks\&. 
+.PP
+Définition à la ligne 323 du fichier dri_interface\&.h\&.
+.SS "#define __DRI2_THROTTLE_VERSION   1"
+
+.PP
+Définition à la ligne 324 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_API_GLES   1"
+\fBOpenGL\fP ES 1\&.x 
+.PP
+Définition à la ligne 830 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_API_GLES2   2"
+\fBOpenGL\fP ES 2\&.x 
+.PP
+Définition à la ligne 831 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_API_GLES3   4"
+\fBOpenGL\fP ES 3\&.x 
+.PP
+Définition à la ligne 833 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_API_OPENGL   0"
+\fBOpenGL\fP compatibility profile 
+.PP
+Définition à la ligne 829 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_API_OPENGL_CORE   3"
+\fBOpenGL\fP 3\&.2+ core profile 
+.PP
+Définition à la ligne 832 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ACCUM_ALPHA_SIZE   14"
+
+.PP
+Définition à la ligne 515 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ACCUM_BLUE_SIZE   13"
+
+.PP
+Définition à la ligne 514 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ACCUM_GREEN_SIZE   12"
+
+.PP
+Définition à la ligne 513 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ACCUM_RED_SIZE   11"
+
+.PP
+Définition à la ligne 512 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ALPHA_MASK   33"
+
+.PP
+Définition à la ligne 534 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ALPHA_MASK_SIZE   8"
+
+.PP
+Définition à la ligne 509 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_ALPHA_SIZE   7"
+
+.PP
+Définition à la ligne 508 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_AUX_BUFFERS   22"
+
+.PP
+Définition à la ligne 523 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BIND_TO_MIPMAP_TEXTURE   45"
+
+.PP
+Définition à la ligne 546 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BIND_TO_TEXTURE_RGB   43"
+
+.PP
+Définition à la ligne 544 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BIND_TO_TEXTURE_RGBA   44"
+
+.PP
+Définition à la ligne 545 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BIND_TO_TEXTURE_TARGETS   46"
+
+.PP
+Définition à la ligne 547 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BLUE_MASK   32"
+
+.PP
+Définition à la ligne 533 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BLUE_SIZE   5"
+
+.PP
+Définition à la ligne 506 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_BUFFER_SIZE   1"
+Tokens for __DRIconfig attribs\&. A number of attributes defined by GLX or EGL standards are not in the table, as they must be provided by the loader\&. For example, FBConfig ID or visual ID, drawable type\&. 
+.PP
+Définition à la ligne 502 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_COLOR_INDEX_BIT   0x02"
+
+.PP
+Définition à la ligne 553 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_CONFIG_CAVEAT   18"
+
+.PP
+Définition à la ligne 519 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_CONFORMANT   19"
+
+.PP
+Définition à la ligne 520 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_DEPTH_SIZE   9"
+
+.PP
+Définition à la ligne 510 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_DOUBLE_BUFFER   20"
+
+.PP
+Définition à la ligne 521 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_FLOAT_BIT   0x08"
+
+.PP
+Définition à la ligne 555 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_FLOAT_MODE   29"
+
+.PP
+Définition à la ligne 530 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_FRAMEBUFFER_SRGB_CAPABLE   48"
+
+.PP
+Définition à la ligne 549 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_GREEN_MASK   31"
+
+.PP
+Définition à la ligne 532 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_GREEN_SIZE   4"
+
+.PP
+Définition à la ligne 505 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_LEVEL   2"
+
+.PP
+Définition à la ligne 503 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_LUMINANCE_BIT   0x04"
+
+.PP
+Définition à la ligne 554 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_LUMINANCE_SIZE   6"
+
+.PP
+Définition à la ligne 507 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_MAX_PBUFFER_HEIGHT   35"
+
+.PP
+Définition à la ligne 536 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_MAX_PBUFFER_PIXELS   36"
+
+.PP
+Définition à la ligne 537 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_MAX_PBUFFER_WIDTH   34"
+
+.PP
+Définition à la ligne 535 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_MAX_SWAP_INTERVAL   41"
+
+.PP
+Définition à la ligne 542 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_MIN_SWAP_INTERVAL   42"
+
+.PP
+Définition à la ligne 543 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_NON_CONFORMANT_CONFIG   0x02"
+
+.PP
+Définition à la ligne 560 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_OPTIMAL_PBUFFER_HEIGHT   38"
+
+.PP
+Définition à la ligne 539 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_OPTIMAL_PBUFFER_WIDTH   37"
+
+.PP
+Définition à la ligne 538 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_RED_MASK   30"
+
+.PP
+Définition à la ligne 531 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_RED_SIZE   3"
+
+.PP
+Définition à la ligne 504 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_RENDER_TYPE   17"
+
+.PP
+Définition à la ligne 518 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_RGBA_BIT   0x01"
+
+.PP
+Définition à la ligne 552 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_SAMPLE_BUFFERS   15"
+
+.PP
+Définition à la ligne 516 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_SAMPLES   16"
+
+.PP
+Définition à la ligne 517 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_SLOW_BIT   0x01"
+
+.PP
+Définition à la ligne 559 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_STENCIL_SIZE   10"
+
+.PP
+Définition à la ligne 511 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_STEREO   21"
+
+.PP
+Définition à la ligne 522 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_SWAP_METHOD   40"
+
+.PP
+Définition à la ligne 541 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TEXTURE_1D_BIT   0x01"
+
+.PP
+Définition à la ligne 567 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TEXTURE_2D_BIT   0x02"
+
+.PP
+Définition à la ligne 568 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TEXTURE_RECTANGLE_BIT   0x04"
+
+.PP
+Définition à la ligne 569 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_ALPHA_VALUE   28"
+
+.PP
+Définition à la ligne 529 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_BLUE_VALUE   27"
+
+.PP
+Définition à la ligne 528 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_GREEN_VALUE   26"
+
+.PP
+Définition à la ligne 527 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_INDEX   0x01"
+
+.PP
+Définition à la ligne 564 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_INDEX_VALUE   24"
+
+.PP
+Définition à la ligne 525 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_RED_VALUE   25"
+
+.PP
+Définition à la ligne 526 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_RGB   0x00"
+
+.PP
+Définition à la ligne 563 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_TRANSPARENT_TYPE   23"
+
+.PP
+Définition à la ligne 524 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_UNSIGNED_FLOAT_BIT   0x10"
+
+.PP
+Définition à la ligne 556 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_VISUAL_SELECT_GROUP   39"
+
+.PP
+Définition à la ligne 540 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_ATTRIB_YINVERTED   47"
+
+.PP
+Définition à la ligne 548 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_ACCUM   6"
+
+.PP
+Définition à la ligne 756 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_BACK_LEFT   1"
+
+.PP
+Définition à la ligne 751 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_BACK_RIGHT   3"
+
+.PP
+Définition à la ligne 753 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_COUNT   11"
+
+.PP
+Définition à la ligne 763 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_DEPTH   4"
+
+.PP
+Définition à la ligne 754 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_DEPTH_STENCIL   9"
+Only available with DRI2 1\&.1 
+.PP
+Définition à la ligne 759 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_FAKE_FRONT_LEFT   7"
+
+.PP
+Définition à la ligne 757 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_FAKE_FRONT_RIGHT   8"
+
+.PP
+Définition à la ligne 758 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_FRONT_LEFT   0"
+DRI2 Loader extension\&. 
+.PP
+Définition à la ligne 750 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_FRONT_RIGHT   2"
+
+.PP
+Définition à la ligne 752 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_HIZ   10"
+
+.PP
+Définition à la ligne 760 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_BUFFER_STENCIL   5"
+
+.PP
+Définition à la ligne 755 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_COPY_SUB_BUFFER   'DRI_CopySubBuffer'"
+Used by drivers that implement the GLX_MESA_copy_sub_buffer extension\&. 
+.PP
+Définition à la ligne 133 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_COPY_SUB_BUFFER_VERSION   1"
+
+.PP
+Définition à la ligne 134 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CORE   'DRI_Core'"
+This extension defines the core DRI functionality\&. 
+.PP
+Définition à la ligne 574 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CORE_VERSION   1"
+
+.PP
+Définition à la ligne 575 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ATTRIB_FLAGS   2"
+
+.PP
+Définition à la ligne 837 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ATTRIB_MAJOR_VERSION   0"
+
+.PP
+Définition à la ligne 835 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ATTRIB_MINOR_VERSION   1"
+
+.PP
+Définition à la ligne 836 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ATTRIB_RESET_STRATEGY   3"
+__DRI2_ROBUSTNESS\&. 
+.PP
+Définition à la ligne 842 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_BAD_API   2"
+Client requested an API (e\&.g\&., \fBOpenGL\fP ES 2\&.0) that the driver can't do\&. 
+.PP
+Définition à la ligne 871 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_BAD_FLAG   4"
+Client requested a flag or combination of flags the driver can't do\&. 
+.PP
+Définition à la ligne 877 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_BAD_VERSION   3"
+Client requested an API version that the driver can't do\&. 
+.PP
+Définition à la ligne 874 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_NO_MEMORY   1"
+Memory allocation failure 
+.PP
+Définition à la ligne 868 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_SUCCESS   0"
+Success! 
+.PP
+Définition à la ligne 865 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_UNKNOWN_ATTRIBUTE   5"
+Client requested an attribute the driver doesn't understand\&. 
+.PP
+Définition à la ligne 880 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_ERROR_UNKNOWN_FLAG   6"
+Client requested a flag the driver doesn't understand\&. 
+.PP
+Définition à la ligne 883 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_FLAG_DEBUG   0x00000001"
+
+.PP
+Définition à la ligne 844 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_FLAG_FORWARD_COMPATIBLE   0x00000002"
+
+.PP
+Définition à la ligne 845 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_FLAG_ROBUST_BUFFER_ACCESS   0x00000004"
+__DRI2_ROBUSTNESS\&. 
+.PP
+Définition à la ligne 850 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_RESET_LOSE_CONTEXT   1"
+
+.PP
+Définition à la ligne 857 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_CTX_RESET_NO_NOTIFICATION   0"
+
+.PP
+Définition à la ligne 856 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DAMAGE   'DRI_Damage'"
+Damage reporting 
+.PP
+Définition à la ligne 407 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DAMAGE_VERSION   1"
+
+.PP
+Définition à la ligne 408 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DRI2   'DRI_DRI2'"
+This extension provides alternative screen, drawable and context constructors for DRI2\&. 
+.PP
+Définition à la ligne 826 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DRI2_LOADER   'DRI_DRI2Loader'"
+
+.PP
+Définition à la ligne 773 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DRI2_LOADER_VERSION   3"
+
+.PP
+Définition à la ligne 774 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DRI2_VERSION   3"
+
+.PP
+Définition à la ligne 827 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_DRIVER_EXTENSIONS   '__driDriverExtensions'"
+The remaining extensions describe driver extensions, immediately available interfaces provided by the driver\&. To start using the driver, dlsym() for the __DRI_DRIVER_EXTENSIONS symbol and look for the extension you need in the array\&. 
+.PP
+Définition à la ligne 494 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_FRAME_TRACKING   'DRI_FrameTracking'"
+Used by drivers that implement the GLX_MESA_swap_frame_usage extension\&. 
+.PP
+Définition à la ligne 155 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_FRAME_TRACKING_VERSION   1"
+
+.PP
+Définition à la ligne 156 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_GET_DRAWABLE_INFO   'DRI_GetDrawableInfo'"
+Callback to getDrawableInfo protocol 
+.PP
+Définition à la ligne 361 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_GET_DRAWABLE_INFO_VERSION   1"
+
+.PP
+Définition à la ligne 362 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE   'DRI_IMAGE'"
+This extension provides functionality to enable various EGLImage extensions\&. 
+.PP
+Définition à la ligne 942 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_COMPONENTS   0x2006 /* available in versions 5+ */"
+
+.PP
+Définition à la ligne 1025 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_FD"
+\fBValeur :\fP
+.PP
+.nf
+0x2007 /* available in versions
+                                                * 7+\&. Each query will return a
+                                                * new fd\&. */
+.fi
+.PP
+Définition à la ligne 1026 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_FORMAT   0x2003 /* available in versions 3+ */"
+
+.PP
+Définition à la ligne 1022 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_HANDLE   0x2001"
+
+.PP
+Définition à la ligne 1020 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_HEIGHT   0x2005"
+
+.PP
+Définition à la ligne 1024 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_NAME   0x2002"
+
+.PP
+Définition à la ligne 1021 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_STRIDE   0x2000"
+queryImage attributes 
+.PP
+Définition à la ligne 1019 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ATTRIB_WIDTH   0x2004 /* available in versions 4+ */"
+
+.PP
+Définition à la ligne 1023 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_COMPONENTS_RGB   0x3001"
+Queryable on images created by createImageFromNames\&.
+.PP
+RGB and RGBA are may be usable directly as images but its still recommended to call fromPlanar with plane == 0\&.
+.PP
+Y_U_V, Y_UV and Y_XUXV all requires call to fromPlanar to create usable sub-images, sampling from images return raw YUV data and color conversion needs to be done in the shader\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+5 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1008 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_COMPONENTS_RGBA   0x3002"
+
+.PP
+Définition à la ligne 1009 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_COMPONENTS_Y_U_V   0x3003"
+
+.PP
+Définition à la ligne 1010 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_COMPONENTS_Y_UV   0x3004"
+
+.PP
+Définition à la ligne 1011 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_COMPONENTS_Y_XUXV   0x3005"
+
+.PP
+Définition à la ligne 1012 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ERROR_BAD_ALLOC   1"
+Memory allocation failure 
+.PP
+Définition à la ligne 1038 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ERROR_BAD_MATCH   2"
+Client requested an invalid attribute for a texture object 
+.PP
+Définition à la ligne 1041 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ERROR_BAD_PARAMETER   3"
+Client requested an invalid texture object 
+.PP
+Définition à la ligne 1044 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_ERROR_SUCCESS   0"
+Success! 
+.PP
+Définition à la ligne 1035 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_ABGR8888   0x1004"
+
+.PP
+Définition à la ligne 962 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_ARGB8888   0x1003"
+
+.PP
+Définition à la ligne 961 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_GR88   0x1007"
+
+.PP
+Définition à la ligne 965 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_NONE   0x1008"
+
+.PP
+Définition à la ligne 966 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_R8   0x1006 /* Since version 5 */"
+
+.PP
+Définition à la ligne 964 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_RGB565   0x1001"
+These formats correspond to the similarly named MESA_FORMAT_* tokens, except in the native endian of the CPU\&. For example, on little endian __DRI_IMAGE_FORMAT_XRGB8888 corresponds to MESA_FORMAT_XRGB8888, but MESA_FORMAT_XRGB8888_REV on big endian\&.
+.PP
+__DRI_IMAGE_FORMAT_NONE is for images that aren't directly usable by the driver (YUV planar formats) but serve as a base image for creating sub-images for the different planes within the image\&.
+.PP
+R8, GR88 and NONE should not be used with createImageFormName or createImage, and are returned by query from sub images created with createImageFromNames (NONE, see above) and fromPlane (R8 & GR88)\&. 
+.PP
+Définition à la ligne 959 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_XBGR8888   0x1005"
+
+.PP
+Définition à la ligne 963 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FORMAT_XRGB8888   0x1002"
+
+.PP
+Définition à la ligne 960 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_ABGR8888   0x34324241"
+
+.PP
+Définition à la ligne 983 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_ARGB8888   0x34325241"
+
+.PP
+Définition à la ligne 981 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_NV12   0x3231564e"
+
+.PP
+Définition à la ligne 990 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_NV16   0x3631564e"
+
+.PP
+Définition à la ligne 991 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_RGB565   0x36314752"
+Four CC formats that matches with WL_DRM_FORMAT_* from wayland_drm\&.h and GBM_FORMAT_* from gbm\&.h, used with createImageFromNames\&.
+.PP
+\fBDepuis:\fP
+.RS 4
+5 
+.RE
+.PP
+
+.PP
+Définition à la ligne 980 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_XBGR8888   0x34324258"
+
+.PP
+Définition à la ligne 984 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_XRGB8888   0x34325258"
+
+.PP
+Définition à la ligne 982 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_YUV410   0x39565559"
+
+.PP
+Définition à la ligne 985 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_YUV411   0x31315559"
+
+.PP
+Définition à la ligne 986 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_YUV420   0x32315559"
+
+.PP
+Définition à la ligne 987 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_YUV422   0x36315559"
+
+.PP
+Définition à la ligne 988 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_YUV444   0x34325559"
+
+.PP
+Définition à la ligne 989 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_FOURCC_YUYV   0x56595559"
+
+.PP
+Définition à la ligne 992 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_LOOKUP   'DRI_IMAGE_LOOKUP'"
+This extension must be implemented by the loader and passed to the driver at screen creation time\&. The EGLImage entry points in the various client APIs take opaque EGLImage handles and use this extension to map them to a __DRIimage\&. At version 1, this extensions allows mapping EGLImage pointers to __DRIimage pointers, but future versions could support other EGLImage-like, opaque types with new lookup functions\&. 
+.PP
+Définition à la ligne 1147 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_LOOKUP_VERSION   1"
+
+.PP
+Définition à la ligne 1148 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_USE_CURSOR   0x0004 /* Depricated */"
+
+.PP
+Définition à la ligne 970 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_USE_SCANOUT   0x0002"
+
+.PP
+Définition à la ligne 969 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_USE_SHARE   0x0001"
+
+.PP
+Définition à la ligne 968 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_IMAGE_VERSION   7"
+
+.PP
+Définition à la ligne 943 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_LEGACY   'DRI_Legacy'"
+This extension provides alternative screen, drawable and context constructors for legacy DRI functionality\&. This is used in conjunction with the core extension\&. 
+.PP
+Définition à la ligne 673 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_LEGACY_VERSION   1"
+
+.PP
+Définition à la ligne 674 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_MEDIA_STREAM_COUNTER   'DRI_MediaStreamCounter'"
+Used by drivers that implement the GLX_SGI_video_sync extension\&. 
+.PP
+Définition à la ligne 181 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_MEDIA_STREAM_COUNTER_VERSION   1"
+
+.PP
+Définition à la ligne 182 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_READ_DRAWABLE   'DRI_ReadDrawable'"
+The first set of extension are the screen extensions, returned by __DRIcore::getExtensions()\&. This entry point will return a list of extensions and the loader can use the ones it knows about by casting them to more specific extensions and advertising any GLX extensions the DRI extensions enables\&. Used by drivers to indicate support for setting the read drawable\&. 
+.PP
+Définition à la ligne 127 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_READ_DRAWABLE_VERSION   1"
+
+.PP
+Définition à la ligne 128 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWAP_CONTROL   'DRI_SwapControl'"
+Used by drivers that implement the GLX_SGI_swap_control or GLX_MESA_swap_control extension\&. 
+.PP
+Définition à la ligne 144 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWAP_CONTROL_VERSION   1"
+
+.PP
+Définition à la ligne 145 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST   'DRI_SWRast'"
+This extension provides alternative screen, drawable and context constructors for swrast DRI functionality\&. This is used in conjunction with the core extension\&. 
+.PP
+Définition à la ligne 708 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST_IMAGE_OP_CLEAR   2"
+
+.PP
+Définition à la ligne 435 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST_IMAGE_OP_DRAW   1"
+
+.PP
+Définition à la ligne 434 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST_IMAGE_OP_SWAP   3"
+
+.PP
+Définition à la ligne 436 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST_LOADER   'DRI_SWRastLoader'"
+SWRast Loader extension\&. 
+.PP
+Définition à la ligne 441 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST_LOADER_VERSION   1"
+
+.PP
+Définition à la ligne 442 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SWRAST_VERSION   3"
+
+.PP
+Définition à la ligne 709 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SYSTEM_TIME   'DRI_SystemTime'"
+Callback to get system time for media stream counter extensions\&. 
+.PP
+Définition à la ligne 382 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_SYSTEM_TIME_VERSION   1"
+
+.PP
+Définition à la ligne 383 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEX_BUFFER   'DRI_TexBuffer'"
+
+.PP
+Définition à la ligne 229 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEX_BUFFER_VERSION   2"
+
+.PP
+Définition à la ligne 230 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEX_OFFSET   'DRI_TexOffset'"
+
+.PP
+Définition à la ligne 205 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEX_OFFSET_VERSION   1"
+
+.PP
+Définition à la ligne 206 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEXTURE_FORMAT_NONE   0x20D8"
+
+.PP
+Définition à la ligne 225 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEXTURE_FORMAT_RGB   0x20D9"
+
+.PP
+Définition à la ligne 226 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_TEXTURE_FORMAT_RGBA   0x20DA"
+
+.PP
+Définition à la ligne 227 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_USE_INVALIDATE   'DRI_UseInvalidate'"
+Invalidate loader extension\&. The presence of this extension indicates to the DRI driver that the loader will call invalidate in the __DRI2_FLUSH extension, whenever the needs to query for new buffers\&. This means that the DRI driver can drop the polling in \fBglViewport()\fP\&.
+.PP
+The extension doesn't provide any functionality, it's only use to indicate to the driver that it can use the new semantics\&. A DRI driver can use this to switch between the different semantics or just refuse to initialize if this extension isn't present\&. 
+.PP
+Définition à la ligne 480 du fichier dri_interface\&.h\&.
+.SS "#define __DRI_USE_INVALIDATE_VERSION   1"
+
+.PP
+Définition à la ligne 481 du fichier dri_interface\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fB__DRI2configQueryExtensionRec\fP \fB__DRI2configQueryExtension\fP"
+
+.PP
+Définition à la ligne 1164 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRI2flushExtensionRec\fP \fB__DRI2flushExtension\fP"
+
+.PP
+Définition à la ligne 86 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRI2throttleExtensionRec\fP \fB__DRI2throttleExtension\fP"
+
+.PP
+Définition à la ligne 87 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIbufferRec\fP \fB__DRIbuffer\fP"
+
+.PP
+Définition à la ligne 83 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIconfigRec \fB__DRIconfig\fP"
+
+.PP
+Définition à la ligne 69 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIcontextRec \fB__DRIcontext\fP"
+
+.PP
+Définition à la ligne 67 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIcopySubBufferExtensionRec\fP \fB__DRIcopySubBufferExtension\fP"
+
+.PP
+Définition à la ligne 75 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIcoreExtensionRec\fP \fB__DRIcoreExtension\fP"
+
+.PP
+Définition à la ligne 73 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIdamageExtensionRec\fP \fB__DRIdamageExtension\fP"
+
+.PP
+Définition à la ligne 353 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIdisplayRec \fB__DRIdisplay\fP"
+
+.PP
+Définition à la ligne 65 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIdrawableRec \fB__DRIdrawable\fP"
+
+.PP
+Définition à la ligne 68 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIdri2ExtensionRec\fP \fB__DRIdri2Extension\fP"
+
+.PP
+Définition à la ligne 84 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIdri2LoaderExtensionRec\fP \fB__DRIdri2LoaderExtension\fP"
+
+.PP
+Définition à la ligne 85 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIextensionRec\fP \fB__DRIextension\fP"
+
+.PP
+Définition à la ligne 74 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIframebufferRec\fP \fB__DRIframebuffer\fP"
+
+.PP
+Définition à la ligne 70 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIframeTrackingExtensionRec\fP \fB__DRIframeTrackingExtension\fP"
+
+.PP
+Définition à la ligne 77 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIgetDrawableInfoExtensionRec\fP \fB__DRIgetDrawableInfoExtension\fP"
+The following extensions describe loader features that the DRI driver can make use of\&. Some of these are mandatory, such as the getDrawableInfo extension for DRI and the DRI Loader extensions for DRI2, while others are optional, and if present allow the driver to expose certain features\&. The loader pass in a NULL terminated array of these extensions to the driver in the createNewScreen constructor\&. 
+.PP
+Définition à la ligne 351 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIimageRec \fB__DRIimage\fP"
+
+.PP
+Définition à la ligne 1047 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIimageExtensionRec\fP \fB__DRIimageExtension\fP"
+
+.PP
+Définition à la ligne 1048 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIimageLookupExtensionRec\fP \fB__DRIimageLookupExtension\fP"
+
+.PP
+Définition à la ligne 1150 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIlegacyExtensionRec\fP \fB__DRIlegacyExtension\fP"
+
+.PP
+Définition à la ligne 81 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIloaderExtensionRec \fB__DRIloaderExtension\fP"
+
+.PP
+Définition à la ligne 354 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRImediaStreamCounterExtensionRec\fP \fB__DRImediaStreamCounterExtension\fP"
+
+.PP
+Définition à la ligne 78 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIrobustnessExtensionRec\fP \fB__DRIrobustnessExtension\fP"
+
+.PP
+Définition à la ligne 1184 du fichier dri_interface\&.h\&.
+.SS "typedef struct __DRIscreenRec \fB__DRIscreen\fP"
+
+.PP
+Définition à la ligne 66 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIswapControlExtensionRec\fP \fB__DRIswapControlExtension\fP"
+
+.PP
+Définition à la ligne 76 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIswrastExtensionRec\fP \fB__DRIswrastExtension\fP"
+
+.PP
+Définition à la ligne 82 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIswrastLoaderExtensionRec\fP \fB__DRIswrastLoaderExtension\fP"
+
+.PP
+Définition à la ligne 355 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIsystemTimeExtensionRec\fP \fB__DRIsystemTimeExtension\fP"
+
+.PP
+Définition à la ligne 352 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRItexBufferExtensionRec\fP \fB__DRItexBufferExtension\fP"
+
+.PP
+Définition à la ligne 80 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRItexOffsetExtensionRec\fP \fB__DRItexOffsetExtension\fP"
+
+.PP
+Définition à la ligne 79 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIuseInvalidateExtensionRec\fP \fB__DRIuseInvalidateExtension\fP"
+
+.PP
+Définition à la ligne 483 du fichier dri_interface\&.h\&.
+.SS "typedef struct \fB__DRIversionRec\fP \fB__DRIversion\fP"
+
+.PP
+Définition à la ligne 71 du fichier dri_interface\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fB__DRI2throttleReason\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fI__DRI2_THROTTLE_SWAPBUFFER \fP\fP
+.TP
+\fB\fI__DRI2_THROTTLE_COPYSUBBUFFER \fP\fP
+.TP
+\fB\fI__DRI2_THROTTLE_FLUSHFRONT \fP\fP
+.PP
+Définition à la ligne 275 du fichier dri_interface\&.h\&.
+.SH "Documentation des variables"
+.PP 
+.SS "\fBconst\fP char __driConfigOptions[]"
+XML document describing the configuration options supported by the driver\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

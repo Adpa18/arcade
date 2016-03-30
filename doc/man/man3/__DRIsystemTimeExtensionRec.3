@@ -1,0 +1,46 @@
+.TH "__DRIsystemTimeExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIsystemTimeExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBgetUST\fP )(int64_t *\fBust\fP)"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP(* \fBgetMSCRate\fP )(\fB__DRIdrawable\fP *draw, int32_t *\fBnumerator\fP, int32_t *\fBdenominator\fP, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 384 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIsystemTimeExtensionRec::base"
+
+.PP
+Définition à la ligne 385 du fichier dri_interface\&.h\&.
+.SS "\fBGLboolean\fP(* __DRIsystemTimeExtensionRec::getMSCRate) (\fB__DRIdrawable\fP *draw, int32_t *\fBnumerator\fP, int32_t *\fBdenominator\fP, \fBvoid\fP *loaderPrivate)"
+Get the media stream counter (MSC) rate\&.
+.PP
+Matching the definition in GLX_OML_sync_control, this function returns the rate of the 'media stream counter'\&. In practical terms, this is the frame refresh rate of the display\&. 
+.PP
+Définition à la ligne 399 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIsystemTimeExtensionRec::getUST) (int64_t *\fBust\fP)"
+Get the 64-bit unadjusted system time (UST)\&. 
+.PP
+Définition à la ligne 390 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

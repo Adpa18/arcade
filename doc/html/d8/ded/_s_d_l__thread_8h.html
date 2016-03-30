@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Arcade: Référence du fichier /home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_thread.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d8/ded/_s_d_l__thread_8h.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier SDL_thread.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h_source.html">SDL_stdinc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d2d/_s_d_l__error_8h_source.html">SDL_error.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d97/_s_d_l__atomic_8h_source.html">SDL_atomic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d09/_s_d_l__mutex_8h_source.html">SDL_mutex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d90/begin__code_8h_source.html">begin_code.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2e/close__code_8h_source.html">close_code.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de SDL_thread.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d37/_s_d_l__thread_8h__incl.png" border="0" usemap="#_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__thread_8h" alt=""/></div>
+<map name="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__thread_8h" id="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__thread_8h">
+<area shape="rect" id="node2" href="../../d9/d24/_s_d_l__stdinc_8h.html" title="SDL_stdinc.h" alt="" coords="829,259,931,285"/>
+<area shape="rect" id="node5" href="../../d1/d90/begin__code_8h.html" title="begin_code.h" alt="" coords="83,483,181,509"/>
+<area shape="rect" id="node6" href="../../d0/d2e/close__code_8h.html" title="close_code.h" alt="" coords="1556,483,1655,509"/>
+<area shape="rect" id="node19" href="../../df/d2d/_s_d_l__error_8h.html" title="SDL_error.h" alt="" coords="943,184,1035,211"/>
+<area shape="rect" id="node20" href="../../d6/d97/_s_d_l__atomic_8h.html" title="SDL_atomic.h" alt="" coords="1275,184,1381,211"/>
+<area shape="rect" id="node21" href="../../d2/d09/_s_d_l__mutex_8h.html" title="SDL_mutex.h" alt="" coords="893,109,995,136"/>
+<area shape="rect" id="node3" href="../../d1/d8f/_s_d_l__config_8h.html" title="SDL_config.h" alt="" coords="1365,333,1467,360"/>
+<area shape="rect" id="node4" href="../../d4/d81/_s_d_l__platform_8h.html" title="SDL_platform.h" alt="" coords="1353,408,1466,435"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/db1/_s_d_l__thread_8h__dep__incl.png" border="0" usemap="#_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__thread_8hdep" alt=""/></div>
+<map name="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__thread_8hdep" id="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__thread_8hdep">
+<area shape="rect" id="node2" href="../../d3/d78/_s_d_l__audio_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_audio.h" alt="" coords="471,109,646,165"/>
+<area shape="rect" id="node3" href="../../de/ddc/_s_d_l_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL.h" alt="" coords="414,213,578,269"/>
+<area shape="rect" id="node4" href="../../dd/d12/_open_g_l_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/openGL/OpenGL.hpp" alt="" coords="37,443,202,499"/>
+<area shape="rect" id="node6" href="../../d1/d40/_sdl2_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/sdl2/Sdl2.hpp" alt="" coords="242,443,389,499"/>
+<area shape="rect" id="node8" href="../../d5/d9d/_s_d_l__image_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_image.h" alt="" coords="30,325,209,381"/>
+<area shape="rect" id="node9" href="../../dd/d3b/_s_d_l__test_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test.h" alt="" coords="584,555,749,611"/>
+<area shape="rect" id="node10" href="../../dc/dc7/_s_d_l__test__common_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_common.h" alt="" coords="764,436,928,507"/>
+<area shape="rect" id="node11" href="../../d4/d55/_s_d_l__test__images_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_images.h" alt="" coords="474,317,638,388"/>
+<area shape="rect" id="node12" href="../../d8/d59/_s_d_l__test__compare_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_compare.h" alt="" coords="524,436,688,507"/>
+<area shape="rect" id="node13" href="../../dc/d92/_s_d_l__ttf_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_ttf.h" alt="" coords="234,325,398,381"/>
+<area shape="rect" id="node5" href="../../d6/d93/_open_g_l_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/openGL/OpenGL.cpp" alt="" coords="37,555,202,611"/>
+<area shape="rect" id="node7" href="../../d5/de5/_sdl2_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/sdl2/Sdl2.cpp" alt="" coords="242,555,389,611"/>
+</map>
+</div>
+</div>
+<p><a href="../../d8/ded/_s_d_l__thread_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a97cd1dc60cea74b74273affb1a974db5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a></td></tr>
+<tr class="separator:a97cd1dc60cea74b74273affb1a974db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4db699531ce9f18f5a8547aa988b88e"><td class="memItemLeft" align="right" valign="top">typedef unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac4db699531ce9f18f5a8547aa988b88e">SDL_threadID</a></td></tr>
+<tr class="separator:ac4db699531ce9f18f5a8547aa988b88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ce005c35ad6ac377d6124db7296026"><td class="memItemLeft" align="right" valign="top">typedef unsigned <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a></td></tr>
+<tr class="separator:a07ce005c35ad6ac377d6124db7296026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:acce8dea56f6b307fadd2949b64e3ebda"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebda">SDL_ThreadPriority</a> { <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebdaa48d887edbfc7842abdabcec6900d3878">SDL_THREAD_PRIORITY_LOW</a>, 
+<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebdaac3a2f7a29f4c8fe11dca0ea258b07dae">SDL_THREAD_PRIORITY_NORMAL</a>, 
+<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebdaaac5ff8423acdebf3b43c279b8ec2ae0d">SDL_THREAD_PRIORITY_HIGH</a>
+ }<tr class="separator:acce8dea56f6b307fadd2949b64e3ebda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6a64f9be4433e4de6e2f2f548cf3c08e"><td class="memItemLeft" align="right" valign="top">typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> (<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *SDL_ThreadFunction)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../d2/d61/gl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>)</td></tr>
+<tr class="separator:a6a64f9be4433e4de6e2f2f548cf3c08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3013d4f50e918b17d2721b37e59082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#aca3013d4f50e918b17d2721b37e59082">SDL_CreateThread</a> (SDL_ThreadFunction fn, <a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *<a class="el" href="../../dc/dd2/glext_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../d2/d61/gl_8h.html#a2e335d56e2846b0fea47eed068b2d34a">data</a>)</td></tr>
+<tr class="separator:aca3013d4f50e918b17d2721b37e59082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2ffa508d85379b355673d557e74d9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#abe2ffa508d85379b355673d557e74d9f">SDL_GetThreadName</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *thread)</td></tr>
+<tr class="separator:abe2ffa508d85379b355673d557e74d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341933eef1470789de20b05c1392b9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac4db699531ce9f18f5a8547aa988b88e">SDL_threadID</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a341933eef1470789de20b05c1392b9ae">SDL_ThreadID</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:a341933eef1470789de20b05c1392b9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf5d93ed5cb25ea59307472c62c66db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac4db699531ce9f18f5a8547aa988b88e">SDL_threadID</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a0bf5d93ed5cb25ea59307472c62c66db">SDL_GetThreadID</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *thread)</td></tr>
+<tr class="separator:a0bf5d93ed5cb25ea59307472c62c66db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4da9c0e6a6833bef9741344b09699d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#adf4da9c0e6a6833bef9741344b09699d">SDL_SetThreadPriority</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebda">SDL_ThreadPriority</a> priority)</td></tr>
+<tr class="separator:adf4da9c0e6a6833bef9741344b09699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96743626ed21d2cdb0868a23cca9705"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *thread, <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> *status)</td></tr>
+<tr class="separator:ac96743626ed21d2cdb0868a23cca9705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af90602c51ef5a62f26ed9931af484906"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#af90602c51ef5a62f26ed9931af484906">SDL_DetachThread</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *thread)</td></tr>
+<tr class="separator:af90602c51ef5a62f26ed9931af484906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ed1ec8dec5b902da25b60da2b728fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac7ed1ec8dec5b902da25b60da2b728fa">SDL_TLSCreate</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="memdesc:ac7ed1ec8dec5b902da25b60da2b728fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an identifier that is globally visible to all threads but refers to data that is thread-specific.  <a href="#ac7ed1ec8dec5b902da25b60da2b728fa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac7ed1ec8dec5b902da25b60da2b728fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab519f8d89ea808f32fc139071e6207bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ab519f8d89ea808f32fc139071e6207bb">SDL_TLSGet</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a> <a class="el" href="../../dc/dd2/glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>)</td></tr>
+<tr class="memdesc:ab519f8d89ea808f32fc139071e6207bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value associated with a thread local storage ID for the current thread.  <a href="#ab519f8d89ea808f32fc139071e6207bb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab519f8d89ea808f32fc139071e6207bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a9414493c106d9cb05d1a53d3412fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a73a9414493c106d9cb05d1a53d3412fc">SDL_TLSSet</a> (<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a> <a class="el" href="../../dc/dd2/glext_8h.html#a58c2a664503e14ffb8f21012aabff3e9">id</a>, <a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>, <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*destructor)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *))</td></tr>
+<tr class="memdesc:a73a9414493c106d9cb05d1a53d3412fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value associated with a thread local storage ID for the current thread.  <a href="#a73a9414493c106d9cb05d1a53d3412fc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a73a9414493c106d9cb05d1a53d3412fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Header for the SDL thread management routines. </p>
+
+<p>Définition dans le fichier <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html">SDL_thread.h</a>.</p>
+</div><h2 class="groupheader">Documentation des définitions de type</h2>
+<a class="anchor" id="a97cd1dc60cea74b74273affb1a974db5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html#l00046">46</a> du fichier <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html">SDL_thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4db699531ce9f18f5a8547aa988b88e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned long <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac4db699531ce9f18f5a8547aa988b88e">SDL_threadID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html#l00049">49</a> du fichier <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html">SDL_thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a07ce005c35ad6ac377d6124db7296026"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html#l00052">52</a> du fichier <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html">SDL_thread.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a class="anchor" id="acce8dea56f6b307fadd2949b64e3ebda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebda">SDL_ThreadPriority</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The SDL thread priority.</p>
+<dl class="section note"><dt>Note</dt><dd>On many systems you require special privileges to set high priority. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="acce8dea56f6b307fadd2949b64e3ebdaa48d887edbfc7842abdabcec6900d3878"></a>SDL_THREAD_PRIORITY_LOW&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="acce8dea56f6b307fadd2949b64e3ebdaac3a2f7a29f4c8fe11dca0ea258b07dae"></a>SDL_THREAD_PRIORITY_NORMAL&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="acce8dea56f6b307fadd2949b64e3ebdaaac5ff8423acdebf3b43c279b8ec2ae0d"></a>SDL_THREAD_PRIORITY_HIGH&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html#l00059">59</a> du fichier <a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html">SDL_thread.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a6a64f9be4433e4de6e2f2f548cf3c08e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> *&#160;</td>
+          <td class="paramname"><em>SDL_ThreadFunction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The function passed to <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#aca3013d4f50e918b17d2721b37e59082">SDL_CreateThread()</a>. It is passed a void* user context parameter and returns an int. </p>
+
+</div>
+</div>
+<a class="anchor" id="aca3013d4f50e918b17d2721b37e59082"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_CreateThread </td>
+          <td>(</td>
+          <td class="paramtype">SDL_ThreadFunction&#160;</td>
+          <td class="paramname"><em>fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a thread.</p>
+<p>Thread naming is a little complicated: Most systems have very small limits for the string length (Haiku has 32 bytes, Linux currently has 16, Visual C++ 6.0 has nine!), and possibly other arbitrary rules. You'll have to see what happens with your system's debugger. The name should be UTF-8 (but using the naming limits of C identifiers is a better bet). There are no requirements for thread naming conventions, so long as the string is null-terminated UTF-8, but these guidelines are helpful in choosing a name:</p>
+<p><a href="http://stackoverflow.com/questions/149932/naming-conventions-for-threads">http://stackoverflow.com/questions/149932/naming-conventions-for-threads</a></p>
+<p>If a system imposes requirements, SDL will try to munge the string for it (truncate, etc), but the original string contents will be available from <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#abe2ffa508d85379b355673d557e74d9f">SDL_GetThreadName()</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="af90602c51ef5a62f26ed9931af484906"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_DetachThread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A thread may be "detached" to signify that it should not remain until another thread has called <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a> on it. Detaching a thread is useful for long-running threads that nothing needs to synchronize with or further manage. When a detached thread is done, it simply goes away.</p>
+<p>There is no way to recover the return code of a detached thread. If you need this, don't detach the thread and instead use <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a>.</p>
+<p>Once a thread is detached, you should usually assume the SDL_Thread isn't safe to reference again, as it will become invalid immediately upon the detached thread's exit, instead of remaining until someone has called <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a> to finally clean it up. As such, don't detach the same thread more than once.</p>
+<p>If a thread has already exited when passed to <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#af90602c51ef5a62f26ed9931af484906">SDL_DetachThread()</a>, it will stop waiting for a call to <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a> and clean up immediately. It is not safe to detach a thread that might be used with <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a>.</p>
+<p>You may not call <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a> on a thread that has been detached. Use either that function or this one, but not both, or behavior is undefined.</p>
+<p>It is safe to pass NULL to this function; it is a no-op. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0bf5d93ed5cb25ea59307472c62c66db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac4db699531ce9f18f5a8547aa988b88e">SDL_threadID</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_GetThreadID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the thread identifier for the specified thread.</p>
+<p>Equivalent to <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a341933eef1470789de20b05c1392b9ae">SDL_ThreadID()</a> if the specified thread is NULL. </p>
+
+</div>
+</div>
+<a class="anchor" id="abe2ffa508d85379b355673d557e74d9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_GetThreadName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the thread name, as it was specified in <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#aca3013d4f50e918b17d2721b37e59082">SDL_CreateThread()</a>. This function returns a pointer to a UTF-8 string that names the specified thread, or NULL if it doesn't have a name. This is internal memory, not to be free()'d by the caller, and remains valid until the specified thread is cleaned up by <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="adf4da9c0e6a6833bef9741344b09699d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_SetThreadPriority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebda">SDL_ThreadPriority</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the priority for the current thread </p>
+
+</div>
+</div>
+<a class="anchor" id="a341933eef1470789de20b05c1392b9ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac4db699531ce9f18f5a8547aa988b88e">SDL_threadID</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ThreadID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the thread identifier for the current thread. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac7ed1ec8dec5b902da25b60da2b728fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_TLSCreate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an identifier that is globally visible to all threads but refers to data that is thread-specific. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The newly created thread local storage identifier, or 0 on error</dd></dl>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;static SDL_SpinLock tls_lock;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;static SDL_TLSID thread_local_storage;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;void SetMyThreadData(void *value)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    if (!thread_local_storage) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        SDL_AtomicLock(&amp;tls_lock);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        if (!thread_local_storage) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            thread_local_storage = SDL_TLSCreate();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        SDL_AtomicUnlock(&amp;tls_lock);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    SDL_TLSSet(thread_local_storage, value, 0);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;void *GetMyThreadData(void)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    return SDL_TLSGet(thread_local_storage);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+</div><!-- fragment --><dl class="section see"><dt>Voir également</dt><dd><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ab519f8d89ea808f32fc139071e6207bb" title="Get the value associated with a thread local storage ID for the current thread. ">SDL_TLSGet()</a> </dd>
+<dd>
+<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a73a9414493c106d9cb05d1a53d3412fc" title="Set the value associated with a thread local storage ID for the current thread. ">SDL_TLSSet()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab519f8d89ea808f32fc139071e6207bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_TLSGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the value associated with a thread local storage ID for the current thread. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The thread local storage ID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The value associated with the ID for the current thread, or NULL if no value has been set.</dd></dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac7ed1ec8dec5b902da25b60da2b728fa" title="Create an identifier that is globally visible to all threads but refers to data that is thread-specif...">SDL_TLSCreate()</a> </dd>
+<dd>
+<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a73a9414493c106d9cb05d1a53d3412fc" title="Set the value associated with a thread local storage ID for the current thread. ">SDL_TLSSet()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a73a9414493c106d9cb05d1a53d3412fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_TLSSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a07ce005c35ad6ac377d6124db7296026">SDL_TLSID</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>(*)(<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *)&#160;</td>
+          <td class="paramname"><em>destructor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the value associated with a thread local storage ID for the current thread. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The thread local storage ID </td></tr>
+    <tr><td class="paramname">value</td><td>The value to associate with the ID for the current thread </td></tr>
+    <tr><td class="paramname">destructor</td><td>A function called when the thread exits, to free the value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 on success, -1 on error</dd></dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac7ed1ec8dec5b902da25b60da2b728fa" title="Create an identifier that is globally visible to all threads but refers to data that is thread-specif...">SDL_TLSCreate()</a> </dd>
+<dd>
+<a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ab519f8d89ea808f32fc139071e6207bb" title="Get the value associated with a thread local storage ID for the current thread. ">SDL_TLSGet()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac96743626ed21d2cdb0868a23cca9705"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WaitThread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a97cd1dc60cea74b74273affb1a974db5">SDL_Thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wait for a thread to finish. Threads that haven't been detached will remain (as a "zombie") until this function cleans them up. Not doing so is a resource leak.</p>
+<p>Once a thread has been cleaned up through this function, the SDL_Thread that references it becomes invalid and should not be referenced again. As such, only one thread may call <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#ac96743626ed21d2cdb0868a23cca9705">SDL_WaitThread()</a> on another.</p>
+<p>The return code for the thread function is placed in the area pointed to by <code>status</code>, if <code>status</code> is not NULL.</p>
+<p>You may not wait on a thread that has been used in a call to <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#af90602c51ef5a62f26ed9931af484906">SDL_DetachThread()</a>. Use either that function or this one, but not both, or behavior is undefined.</p>
+<p>It is safe to pass NULL to this function; it is a no-op. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li><li class="navelem"><a class="el" href="../../dir_c537e47dfa3d62f337d4977e13f846bf.html">sdl2</a></li><li class="navelem"><a class="el" href="../../dir_1b3cf7022841f77c5748cad2505e2437.html">include</a></li><li class="navelem"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html">SDL_thread.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

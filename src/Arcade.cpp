@@ -61,7 +61,7 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
     fptr load = (void *(*)())(dlsym(myso, symbol));
     if ((dlsym_error = dlerror()))
       std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
-    libs.push(myso);
+    this->libs.push(myso);
     //check if init exist
     f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
     if ((dlsym_error = dlerror())) {
@@ -81,10 +81,10 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
 
 void		arcade::Arcade::clean()
 {
-  while (!libs.empty())
+  while (!this->libs.empty())
   {
-    dlclose(libs.top());
-    libs.pop();
+    dlclose(this->libs.top());
+    this->libs.pop();
   }
 }
 

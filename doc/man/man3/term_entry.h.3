@@ -1,0 +1,282 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/term_entry.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/term_entry.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/term\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBentry\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_USES\fP   32"
+.br
+.ti -1c
+.RI "#define \fBMAX_CROSSLINKS\fP   16"
+.br
+.ti -1c
+.RI "#define \fBNUM_BOOLEANS\fP(tp)   \fBBOOLCOUNT\fP"
+.br
+.ti -1c
+.RI "#define \fBNUM_NUMBERS\fP(tp)   \fBNUMCOUNT\fP"
+.br
+.ti -1c
+.RI "#define \fBNUM_STRINGS\fP(tp)   \fBSTRCOUNT\fP"
+.br
+.ti -1c
+.RI "#define \fBEXT_NAMES\fP(tp,  i,  \fBlimit\fP,  \fBindex\fP,  \fBtable\fP)   \fBtable\fP[i]"
+.br
+.ti -1c
+.RI "#define \fBNUM_EXT_NAMES\fP(tp)   (unsigned) ((tp)\->ext_Booleans + (tp)\->ext_Numbers + (tp)\->ext_Strings)"
+.br
+.ti -1c
+.RI "#define \fBfor_each_boolean\fP(\fBn\fP,  tp)   for(\fBn\fP = 0; \fBn\fP < \fBNUM_BOOLEANS\fP(tp); \fBn\fP++)"
+.br
+.ti -1c
+.RI "#define \fBfor_each_number\fP(\fBn\fP,  tp)   for(\fBn\fP = 0; \fBn\fP < \fBNUM_NUMBERS\fP(tp);  \fBn\fP++)"
+.br
+.ti -1c
+.RI "#define \fBfor_each_string\fP(\fBn\fP,  tp)   for(\fBn\fP = 0; \fBn\fP < \fBNUM_STRINGS\fP(tp);  \fBn\fP++)"
+.br
+.ti -1c
+.RI "#define \fBExtBoolname\fP(tp,  i,  \fBnames\fP)   \fBEXT_NAMES\fP(tp, i, \fBBOOLCOUNT\fP, (i \- (tp\->num_Booleans \- tp\->ext_Booleans)), \fBnames\fP)"
+.br
+.ti -1c
+.RI "#define \fBExtNumname\fP(tp,  i,  \fBnames\fP)   \fBEXT_NAMES\fP(tp, i, \fBNUMCOUNT\fP, (i \- (tp\->num_Numbers \- tp\->ext_Numbers)) + tp\->ext_Booleans, \fBnames\fP)"
+.br
+.ti -1c
+.RI "#define \fBExtStrname\fP(tp,  i,  \fBnames\fP)   \fBEXT_NAMES\fP(tp, i, \fBSTRCOUNT\fP, (i \- (tp\->num_Strings \- tp\->ext_Strings)) + (tp\->ext_Numbers + tp\->ext_Booleans), \fBnames\fP)"
+.br
+.ti -1c
+.RI "#define \fBfor_entry_list\fP(qp)   for (qp = _nc_head; qp; qp = qp\->next)"
+.br
+.ti -1c
+.RI "#define \fBMAX_LINE\fP   132"
+.br
+.ti -1c
+.RI "#define \fBNULLHOOK\fP   (\fBbool\fP(*)(\fBENTRY\fP *))0"
+.br
+.ti -1c
+.RI "#define \fBWANTED\fP(\fBs\fP)   ((\fBs\fP) == \fBABSENT_STRING\fP)"
+.br
+.ti -1c
+.RI "#define \fBPRESENT\fP(\fBs\fP)   (((\fBs\fP) != \fBABSENT_STRING\fP) && ((\fBs\fP) != \fBCANCELLED_STRING\fP))"
+.br
+.ti -1c
+.RI "#define \fBANDMISSING\fP(\fBp\fP,  \fBq\fP)   {if (\fBPRESENT\fP(\fBp\fP) && !\fBPRESENT\fP(\fBq\fP)) _nc_warning(#\fBp\fP ' but no ' #q);}"
+.br
+.ti -1c
+.RI "#define \fBPAIRED\fP(\fBp\fP,  \fBq\fP)"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBentry\fP \fBENTRY\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDBDIRS\fP { \fBdbdTIC\fP = 0, \fBdbdLAST\fP }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBENTRY\fP *) _nc_head"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBENTRY\fP *) _nc_copy_entry(\fBENTRY\fP *oldp)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (char *) _nc_save_str(\fBconst\fP char *\fBconst\fP )"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBvoid\fP) _nc_init_entry(\fBTERMTYPE\fP *\fBconst\fP )"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBint\fP) _nc_parse_entry(\fBENTRY\fP *"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBbool\fP) _nc_entry_match(char *"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBTERMTYPE\fP * \fBconst\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP"
+.br
+.ti -1c
+.RI "\fBint\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_IMPEXP\fP \fBvoid\fP \fBNCURSES_API\fP(* \fB_nc_check_termtype\fP )(\fBTERMTYPE\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_IMPEXP\fP \fBvoid\fP \fBNCURSES_API\fP(* \fB_nc_check_termtype2\fP )(\fBTERMTYPE\fP *, \fBbool\fP)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define ANDMISSING(\fBp\fP, \fBq\fP)   {if (\fBPRESENT\fP(\fBp\fP) && !\fBPRESENT\fP(\fBq\fP)) _nc_warning(#\fBp\fP ' but no ' #q);}"
+
+.PP
+Définition à la ligne 133 du fichier term_entry\&.h\&.
+.SS "#define EXT_NAMES(tp, i, \fBlimit\fP, \fBindex\fP, \fBtable\fP)   \fBtable\fP[i]"
+
+.PP
+Définition à la ligne 99 du fichier term_entry\&.h\&.
+.SS "#define ExtBoolname(tp, i, \fBnames\fP)   \fBEXT_NAMES\fP(tp, i, \fBBOOLCOUNT\fP, (i \- (tp\->num_Booleans \- tp\->ext_Booleans)), \fBnames\fP)"
+
+.PP
+Définition à la ligne 114 du fichier term_entry\&.h\&.
+.SS "#define ExtNumname(tp, i, \fBnames\fP)   \fBEXT_NAMES\fP(tp, i, \fBNUMCOUNT\fP, (i \- (tp\->num_Numbers \- tp\->ext_Numbers)) + tp\->ext_Booleans, \fBnames\fP)"
+
+.PP
+Définition à la ligne 115 du fichier term_entry\&.h\&.
+.SS "#define ExtStrname(tp, i, \fBnames\fP)   \fBEXT_NAMES\fP(tp, i, \fBSTRCOUNT\fP, (i \- (tp\->num_Strings \- tp\->ext_Strings)) + (tp\->ext_Numbers + tp\->ext_Booleans), \fBnames\fP)"
+
+.PP
+Définition à la ligne 116 du fichier term_entry\&.h\&.
+.SS "#define for_each_boolean(\fBn\fP, tp)   for(\fBn\fP = 0; \fBn\fP < \fBNUM_BOOLEANS\fP(tp); \fBn\fP++)"
+
+.PP
+Définition à la ligne 104 du fichier term_entry\&.h\&.
+.SS "#define for_each_number(\fBn\fP, tp)   for(\fBn\fP = 0; \fBn\fP < \fBNUM_NUMBERS\fP(tp);  \fBn\fP++)"
+
+.PP
+Définition à la ligne 105 du fichier term_entry\&.h\&.
+.SS "#define for_each_string(\fBn\fP, tp)   for(\fBn\fP = 0; \fBn\fP < \fBNUM_STRINGS\fP(tp);  \fBn\fP++)"
+
+.PP
+Définition à la ligne 106 du fichier term_entry\&.h\&.
+.SS "#define for_entry_list(qp)   for (qp = _nc_head; qp; qp = qp\->next)"
+
+.PP
+Définition à la ligne 120 du fichier term_entry\&.h\&.
+.SS "#define MAX_CROSSLINKS   16"
+
+.PP
+Définition à la ligne 72 du fichier term_entry\&.h\&.
+.SS "#define MAX_LINE   132"
+
+.PP
+Définition à la ligne 122 du fichier term_entry\&.h\&.
+.SS "#define MAX_USES   32"
+
+.PP
+Définition à la ligne 71 du fichier term_entry\&.h\&.
+.SS "#define NULLHOOK   (\fBbool\fP(*)(\fBENTRY\fP *))0"
+
+.PP
+Définition à la ligne 124 du fichier term_entry\&.h\&.
+.SS "#define NUM_BOOLEANS(tp)   \fBBOOLCOUNT\fP"
+
+.PP
+Définition à la ligne 96 du fichier term_entry\&.h\&.
+.SS "#define NUM_EXT_NAMES(tp)   (unsigned) ((tp)\->ext_Booleans + (tp)\->ext_Numbers + (tp)\->ext_Strings)"
+
+.PP
+Définition à la ligne 102 du fichier term_entry\&.h\&.
+.SS "#define NUM_NUMBERS(tp)   \fBNUMCOUNT\fP"
+
+.PP
+Définition à la ligne 97 du fichier term_entry\&.h\&.
+.SS "#define NUM_STRINGS(tp)   \fBSTRCOUNT\fP"
+
+.PP
+Définition à la ligne 98 du fichier term_entry\&.h\&.
+.SS "#define PAIRED(\fBp\fP, \fBq\fP)"
+\fBValeur :\fP
+.PP
+.nf
+{ \
+        if (PRESENT(q) && !PRESENT(p)) \
+            _nc_warning(#q " but no " #p); \
+        if (PRESENT(p) && !PRESENT(q)) \
+            _nc_warning(#p " but no " #q); \
+        }
+.fi
+.PP
+Définition à la ligne 136 du fichier term_entry\&.h\&.
+.SS "#define PRESENT(\fBs\fP)   (((\fBs\fP) != \fBABSENT_STRING\fP) && ((\fBs\fP) != \fBCANCELLED_STRING\fP))"
+
+.PP
+Définition à la ligne 131 du fichier term_entry\&.h\&.
+.SS "#define WANTED(\fBs\fP)   ((\fBs\fP) == \fBABSENT_STRING\fP)"
+
+.PP
+Définition à la ligne 130 du fichier term_entry\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "char \fBbool\fP \fBENTRY\fP"
+
+.PP
+Définition à la ligne 177 du fichier term_entry\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBDBDIRS\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIdbdTIC \fP\fP
+.TP
+\fB\fIdbdLAST \fP\fP
+.PP
+Définition à la ligne 54 du fichier term_entry\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "NCURSES_EXPORT (\fBENTRY\fP *)"
+
+.SS "NCURSES_EXPORT (char *) const"
+
+.SS "NCURSES_EXPORT (\fBvoid\fP) const"
+
+.SS "NCURSES_EXPORT (\fBint\fP)"
+
+.SS "NCURSES_EXPORT (\fBbool\fP)"
+
+.SS "NCURSES_EXPORT_VAR (\fBENTRY\fP *)"
+
+.SH "Documentation des variables"
+.PP 
+.SS "\fBNCURSES_IMPEXP\fP \fBvoid\fP \fBNCURSES_API\fP(* _nc_check_termtype) (\fBTERMTYPE\fP *)"
+
+.SS "\fBNCURSES_IMPEXP\fP \fBvoid\fP \fBNCURSES_API\fP(* _nc_check_termtype2) (\fBTERMTYPE\fP *, \fBbool\fP)"
+
+.SS "bool"
+
+.PP
+Définition à la ligne 149 du fichier term_entry\&.h\&.
+.SS "\fBTERMTYPE\fP* const"
+
+.PP
+Définition à la ligne 148 du fichier term_entry\&.h\&.
+.SS "char int"
+
+.PP
+Définition à la ligne 169 du fichier term_entry\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

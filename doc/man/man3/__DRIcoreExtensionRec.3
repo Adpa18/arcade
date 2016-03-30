@@ -1,0 +1,121 @@
+.TH "__DRIcoreExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIcoreExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fB__DRIscreen\fP *(* \fBcreateNewScreen\fP )(\fBint\fP screen, \fBint\fP fd, unsigned \fBint\fP sarea_handle, \fBconst\fP \fB__DRIextension\fP **extensions, \fBconst\fP \fB__DRIconfig\fP ***driverConfigs, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBdestroyScreen\fP )(\fB__DRIscreen\fP *screen)"
+.br
+.ti -1c
+.RI "\fBconst\fP \fB__DRIextension\fP **(* \fBgetExtensions\fP )(\fB__DRIscreen\fP *screen)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBgetConfigAttrib\fP )(\fBconst\fP \fB__DRIconfig\fP *config, unsigned \fBint\fP attrib, unsigned \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBindexConfigAttrib\fP )(\fBconst\fP \fB__DRIconfig\fP *config, \fBint\fP \fBindex\fP, unsigned \fBint\fP *attrib, unsigned \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fB__DRIdrawable\fP *(* \fBcreateNewDrawable\fP )(\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, unsigned \fBint\fP drawable_id, unsigned \fBint\fP head, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBdestroyDrawable\fP )(\fB__DRIdrawable\fP *drawable)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBswapBuffers\fP )(\fB__DRIdrawable\fP *drawable)"
+.br
+.ti -1c
+.RI "\fB__DRIcontext\fP *(* \fBcreateNewContext\fP )(\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBcopyContext\fP )(\fB__DRIcontext\fP *dest, \fB__DRIcontext\fP *\fBsrc\fP, unsigned long \fBmask\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBdestroyContext\fP )(\fB__DRIcontext\fP *context)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBbindContext\fP )(\fB__DRIcontext\fP *ctx, \fB__DRIdrawable\fP *pdraw, \fB__DRIdrawable\fP *pread)"
+.br
+.ti -1c
+.RI "\fBint\fP(* \fBunbindContext\fP )(\fB__DRIcontext\fP *ctx)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 577 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIcoreExtensionRec::base"
+
+.PP
+Définition à la ligne 578 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIcoreExtensionRec::bindContext) (\fB__DRIcontext\fP *ctx, \fB__DRIdrawable\fP *pdraw, \fB__DRIdrawable\fP *pread)"
+
+.PP
+Définition à la ligne 618 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIcoreExtensionRec::copyContext) (\fB__DRIcontext\fP *dest, \fB__DRIcontext\fP *\fBsrc\fP, unsigned long \fBmask\fP)"
+
+.PP
+Définition à la ligne 612 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIcontext\fP*(* __DRIcoreExtensionRec::createNewContext) (\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, \fB__DRIcontext\fP *shared, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 607 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIdrawable\fP*(* __DRIcoreExtensionRec::createNewDrawable) (\fB__DRIscreen\fP *screen, \fBconst\fP \fB__DRIconfig\fP *config, unsigned \fBint\fP drawable_id, unsigned \fBint\fP head, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 597 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIscreen\fP*(* __DRIcoreExtensionRec::createNewScreen) (\fBint\fP screen, \fBint\fP fd, unsigned \fBint\fP sarea_handle, \fBconst\fP \fB__DRIextension\fP **extensions, \fBconst\fP \fB__DRIconfig\fP ***driverConfigs, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 580 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIcoreExtensionRec::destroyContext) (\fB__DRIcontext\fP *context)"
+
+.PP
+Définition à la ligne 616 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIcoreExtensionRec::destroyDrawable) (\fB__DRIdrawable\fP *drawable)"
+
+.PP
+Définition à la ligne 603 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIcoreExtensionRec::destroyScreen) (\fB__DRIscreen\fP *screen)"
+
+.PP
+Définition à la ligne 586 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIcoreExtensionRec::getConfigAttrib) (\fBconst\fP \fB__DRIconfig\fP *config, unsigned \fBint\fP attrib, unsigned \fBint\fP *\fBvalue\fP)"
+
+.PP
+Définition à la ligne 590 du fichier dri_interface\&.h\&.
+.SS "\fBconst\fP \fB__DRIextension\fP**(* __DRIcoreExtensionRec::getExtensions) (\fB__DRIscreen\fP *screen)"
+
+.PP
+Définition à la ligne 588 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIcoreExtensionRec::indexConfigAttrib) (\fBconst\fP \fB__DRIconfig\fP *config, \fBint\fP \fBindex\fP, unsigned \fBint\fP *attrib, unsigned \fBint\fP *\fBvalue\fP)"
+
+.PP
+Définition à la ligne 594 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIcoreExtensionRec::swapBuffers) (\fB__DRIdrawable\fP *drawable)"
+
+.PP
+Définition à la ligne 605 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP(* __DRIcoreExtensionRec::unbindContext) (\fB__DRIcontext\fP *ctx)"
+
+.PP
+Définition à la ligne 622 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

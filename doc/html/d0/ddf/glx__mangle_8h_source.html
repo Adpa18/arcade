@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Arcade:  Fichier source de /home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glx_mangle.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d0/ddf/glx__mangle_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">glx_mangle.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/ddf/glx__mangle_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Mesa 3-D graphics library</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (C) 1999-2006  Brian Paul   All Rights Reserved.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * copy of this software and associated documentation files (the &quot;Software&quot;),</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * to deal in the Software without restriction, including without limitation</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * the rights to use, copy, modify, merge, publish, distribute, sublicense,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * and/or sell copies of the Software, and to permit persons to whom the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * Software is furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * in all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef GLX_MANGLE_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define GLX_MANGLE_H</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ae37815594444d2e066de10726ee66e97">   29</a></span>&#160;<span class="preprocessor">#define glXChooseVisual mglXChooseVisual</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a1c2727ca70c1c37da2deb6d1b6d616ff">   30</a></span>&#160;<span class="preprocessor">#define glXCreateContext mglXCreateContext</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#af8622c2d72d25e0bbd90c21e9cec9d0f">   31</a></span>&#160;<span class="preprocessor">#define glXDestroyContext mglXDestroyContext</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ad096243cbff124274549a71f73e1ff4a">   32</a></span>&#160;<span class="preprocessor">#define glXMakeCurrent mglXMakeCurrent</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aafdbe0e8f3e6b58e3539fb4ee95ed310">   33</a></span>&#160;<span class="preprocessor">#define glXCopyContext mglXCopyContext</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#af4651d9edbd302e0394dd22f466708a0">   34</a></span>&#160;<span class="preprocessor">#define glXSwapBuffers mglXSwapBuffers</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aba53727f17e5ec89dbe7de886b95c954">   35</a></span>&#160;<span class="preprocessor">#define glXCreateGLXPixmap mglXCreateGLXPixmap</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a0bc87554d5fe0843b835b31bf23ca17f">   36</a></span>&#160;<span class="preprocessor">#define glXDestroyGLXPixmap mglXDestroyGLXPixmap</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a74528d45cb17f3d3c18c68406dfc4576">   37</a></span>&#160;<span class="preprocessor">#define glXQueryExtension mglXQueryExtension</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ae1222a8ebd022f3d764216a872b90f10">   38</a></span>&#160;<span class="preprocessor">#define glXQueryVersion mglXQueryVersion</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aa97bc6e0707eae2aa2f91348bd70cebe">   39</a></span>&#160;<span class="preprocessor">#define glXIsDirect mglXIsDirect</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ad8738c9b772d4f6705765b48378a62ad">   40</a></span>&#160;<span class="preprocessor">#define glXGetConfig mglXGetConfig</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a3fb5625b7e5a484c3a84e5b0c1d29bff">   41</a></span>&#160;<span class="preprocessor">#define glXGetCurrentContext mglXGetCurrentContext</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a399eae5a9664919e2900512ff9f2d10e">   42</a></span>&#160;<span class="preprocessor">#define glXGetCurrentDrawable mglXGetCurrentDrawable</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aad423af49ed86d250afb23b872a04bd0">   43</a></span>&#160;<span class="preprocessor">#define glXWaitGL mglXWaitGL</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ae814dd5977ca139831c75dd0c1f87efe">   44</a></span>&#160;<span class="preprocessor">#define glXWaitX mglXWaitX</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ab87b3aca07168d320e6868dd538f0a61">   45</a></span>&#160;<span class="preprocessor">#define glXUseXFont mglXUseXFont</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ad1d6f34f49d7e11a80fd3a6fb280080f">   46</a></span>&#160;<span class="preprocessor">#define glXQueryExtensionsString mglXQueryExtensionsString</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a1a82695ce1eb01f10e3164c3b2be7ea3">   47</a></span>&#160;<span class="preprocessor">#define glXQueryServerString mglXQueryServerString</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a15056b618675fb25ea40015049810248">   48</a></span>&#160;<span class="preprocessor">#define glXGetClientString mglXGetClientString</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#af8f14d809b9c7d612c58c1fc3d009de6">   49</a></span>&#160;<span class="preprocessor">#define glXCreateGLXPixmapMESA mglXCreateGLXPixmapMESA</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ae4c8589eb57011098d2ec7a9a86c0211">   50</a></span>&#160;<span class="preprocessor">#define glXReleaseBuffersMESA mglXReleaseBuffersMESA</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a676e708edc08fcfebe1af5671fd4c4e0">   51</a></span>&#160;<span class="preprocessor">#define glXCopySubBufferMESA mglXCopySubBufferMESA</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a194a598fab5e3118e50e7dbf7909f28d">   52</a></span>&#160;<span class="preprocessor">#define glXGetVideoSyncSGI mglXGetVideoSyncSGI</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a00091ad4585c8aba70c4e6acc61026b0">   53</a></span>&#160;<span class="preprocessor">#define glXWaitVideoSyncSGI mglXWaitVideoSyncSGI</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/* GLX 1.2 */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a5b202b4cfd077e706f5772cb38df9048">   56</a></span>&#160;<span class="preprocessor">#define glXGetCurrentDisplay mglXGetCurrentDisplay </span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/* GLX 1.3 */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a53bea768c8f19fd587e2284c9fbd8df4">   59</a></span>&#160;<span class="preprocessor">#define glXChooseFBConfig mglXChooseFBConfig          </span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#af2743a7cf1822e5374a1d66c381ae2c9">   60</a></span>&#160;<span class="preprocessor">#define glXGetFBConfigAttrib mglXGetFBConfigAttrib       </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aaf8ac97f39b34a9c07b942afe85727e3">   61</a></span>&#160;<span class="preprocessor">#define glXGetFBConfigs mglXGetFBConfigs            </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a88941f4492eacfc24b886eea8afb413f">   62</a></span>&#160;<span class="preprocessor">#define glXGetVisualFromFBConfig mglXGetVisualFromFBConfig   </span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#af69090351b578fddce1a2938c214d40d">   63</a></span>&#160;<span class="preprocessor">#define glXCreateWindow mglXCreateWindow            </span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ae2406b2df908b37a3e60d940a6632723">   64</a></span>&#160;<span class="preprocessor">#define glXDestroyWindow mglXDestroyWindow           </span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a32c0ab25e4b3e902aee1b110f113cd86">   65</a></span>&#160;<span class="preprocessor">#define glXCreatePixmap mglXCreatePixmap            </span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a5d1338ca5d8841d585b208472b5eb601">   66</a></span>&#160;<span class="preprocessor">#define glXDestroyPixmap mglXDestroyPixmap           </span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a5797b03118c9779f1b0706e614a3e345">   67</a></span>&#160;<span class="preprocessor">#define glXCreatePbuffer mglXCreatePbuffer           </span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a5ede232d85000c2f59572ff29a9f1780">   68</a></span>&#160;<span class="preprocessor">#define glXDestroyPbuffer mglXDestroyPbuffer          </span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ac13260a5a2a9b5d0ec3cf107c2684aab">   69</a></span>&#160;<span class="preprocessor">#define glXQueryDrawable mglXQueryDrawable           </span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aae1648b02e83a3d02b5db6bf488f21d2">   70</a></span>&#160;<span class="preprocessor">#define glXCreateNewContext mglXCreateNewContext        </span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#abbe37dd553fdef5210871c5d25b3233f">   71</a></span>&#160;<span class="preprocessor">#define glXMakeContextCurrent mglXMakeContextCurrent      </span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a0d53c59bd1a71d7312cfb4d8a67ab480">   72</a></span>&#160;<span class="preprocessor">#define glXGetCurrentReadDrawable mglXGetCurrentReadDrawable  </span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ac265a1c7421d748026b4e8e62a8868de">   73</a></span>&#160;<span class="preprocessor">#define glXQueryContext mglXQueryContext            </span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#ae48a8b59c2f59eca403f596fc436d2e8">   74</a></span>&#160;<span class="preprocessor">#define glXSelectEvent mglXSelectEvent             </span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#aefcf2e90314d8b2fd701f96aa56883a4">   75</a></span>&#160;<span class="preprocessor">#define glXGetSelectedEvent mglXGetSelectedEvent    </span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/* GLX 1.4 */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a2cb834cfc7a1c3991eb8cb5af047eb69">   78</a></span>&#160;<span class="preprocessor">#define glXGetProcAddress mglXGetProcAddress</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../d0/ddf/glx__mangle_8h.html#a42eb159d4ca4773abdf215f31917b1a1">   79</a></span>&#160;<span class="preprocessor">#define glXGetProcAddressARB mglXGetProcAddressARB</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li><li class="navelem"><a class="el" href="../../dir_d54d74822f795d40b11c56eea8f73df9.html">openGL</a></li><li class="navelem"><a class="el" href="../../dir_b646083ba50c9adbd09e1f1ae9507fb2.html">include</a></li><li class="navelem"><a class="el" href="../../d0/ddf/glx__mangle_8h.html">glx_mangle.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

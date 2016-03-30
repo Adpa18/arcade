@@ -1,0 +1,227 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/osmesa.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/osmesa.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/gl\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBOSMESA_MAJOR_VERSION\fP   6"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_MINOR_VERSION\fP   5"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_PATCH_VERSION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_COLOR_INDEX\fP   \fBGL_COLOR_INDEX\fP"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_RGBA\fP   \fBGL_RGBA\fP"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_BGRA\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_ARGB\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_RGB\fP   \fBGL_RGB\fP"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_BGR\fP   0x4"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_RGB_565\fP   0x5"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_ROW_LENGTH\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_Y_UP\fP   0x11"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_WIDTH\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_HEIGHT\fP   0x21"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_FORMAT\fP   0x22"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_TYPE\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_MAX_WIDTH\fP   0x24  /* new in 4\&.0 */"
+.br
+.ti -1c
+.RI "#define \fBOSMESA_MAX_HEIGHT\fP   0x25  /* new in 4\&.0 */"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct osmesa_context * \fBOSMesaContext\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBOSMESAproc\fP) ()"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLAPI\fP \fBOSMesaContext\fP \fBGLAPIENTRY\fP \fBOSMesaCreateContext\fP (\fBGLenum\fP \fBformat\fP, \fBOSMesaContext\fP sharelist)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBOSMesaContext\fP \fBGLAPIENTRY\fP \fBOSMesaCreateContextExt\fP (\fBGLenum\fP \fBformat\fP, \fBGLint\fP depthBits, \fBGLint\fP stencilBits, \fBGLint\fP accumBits, \fBOSMesaContext\fP sharelist)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBOSMesaDestroyContext\fP (\fBOSMesaContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP \fBOSMesaMakeCurrent\fP (\fBOSMesaContext\fP ctx, \fBvoid\fP *\fBbuffer\fP, \fBGLenum\fP \fBtype\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBOSMesaContext\fP \fBGLAPIENTRY\fP \fBOSMesaGetCurrentContext\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBOSMesaPixelStore\fP (\fBGLint\fP \fBpname\fP, \fBGLint\fP \fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBOSMesaGetIntegerv\fP (\fBGLint\fP \fBpname\fP, \fBGLint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP \fBOSMesaGetDepthBuffer\fP (\fBOSMesaContext\fP \fBc\fP, \fBGLint\fP *\fBwidth\fP, \fBGLint\fP *\fBheight\fP, \fBGLint\fP *bytesPerValue, \fBvoid\fP **\fBbuffer\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP \fBOSMesaGetColorBuffer\fP (\fBOSMesaContext\fP \fBc\fP, \fBGLint\fP *\fBwidth\fP, \fBGLint\fP *\fBheight\fP, \fBGLint\fP *\fBformat\fP, \fBvoid\fP **\fBbuffer\fP)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBOSMESAproc\fP \fBGLAPIENTRY\fP \fBOSMesaGetProcAddress\fP (\fBconst\fP char *funcName)"
+.br
+.ti -1c
+.RI "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP \fBOSMesaColorClamp\fP (\fBGLboolean\fP \fBenable\fP)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define OSMESA_ARGB   0x2"
+
+.PP
+Définition à la ligne 76 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_BGR   0x4"
+
+.PP
+Définition à la ligne 78 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_BGRA   0x1"
+
+.PP
+Définition à la ligne 75 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_COLOR_INDEX   \fBGL_COLOR_INDEX\fP"
+
+.PP
+Définition à la ligne 73 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_FORMAT   0x22"
+
+.PP
+Définition à la ligne 95 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_HEIGHT   0x21"
+
+.PP
+Définition à la ligne 94 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_MAJOR_VERSION   6"
+
+.PP
+Définition à la ligne 63 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_MAX_HEIGHT   0x25  /* new in 4\&.0 */"
+
+.PP
+Définition à la ligne 98 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_MAX_WIDTH   0x24  /* new in 4\&.0 */"
+
+.PP
+Définition à la ligne 97 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_MINOR_VERSION   5"
+
+.PP
+Définition à la ligne 64 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_PATCH_VERSION   0"
+
+.PP
+Définition à la ligne 65 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_RGB   \fBGL_RGB\fP"
+
+.PP
+Définition à la ligne 77 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_RGB_565   0x5"
+
+.PP
+Définition à la ligne 79 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_RGBA   \fBGL_RGBA\fP"
+
+.PP
+Définition à la ligne 74 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_ROW_LENGTH   0x10"
+
+.PP
+Définition à la ligne 86 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_TYPE   0x23"
+
+.PP
+Définition à la ligne 96 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_WIDTH   0x20"
+
+.PP
+Définition à la ligne 93 du fichier osmesa\&.h\&.
+.SS "#define OSMESA_Y_UP   0x11"
+
+.PP
+Définition à la ligne 87 du fichier osmesa\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct osmesa_context* \fBOSMesaContext\fP"
+
+.PP
+Définition à la ligne 101 du fichier osmesa\&.h\&.
+.SS "typedef \fBvoid\fP(* OSMESAproc) ()"
+This typedef is new in Mesa 6\&.3\&. 
+.PP
+Définition à la ligne 258 du fichier osmesa\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP OSMesaColorClamp (\fBGLboolean\fP enable)"
+Enable/disable color clamping, off by default\&. New in Mesa 6\&.4\&.2 
+.SS "\fBGLAPI\fP \fBOSMesaContext\fP \fBGLAPIENTRY\fP OSMesaCreateContext (\fBGLenum\fP format, \fBOSMesaContext\fP sharelist)"
+
+.SS "\fBGLAPI\fP \fBOSMesaContext\fP \fBGLAPIENTRY\fP OSMesaCreateContextExt (\fBGLenum\fP format, \fBGLint\fP depthBits, \fBGLint\fP stencilBits, \fBGLint\fP accumBits, \fBOSMesaContext\fP sharelist)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP OSMesaDestroyContext (\fBOSMesaContext\fP ctx)"
+
+.SS "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP OSMesaGetColorBuffer (\fBOSMesaContext\fP c, \fBGLint\fP * width, \fBGLint\fP * height, \fBGLint\fP * format, \fBvoid\fP ** buffer)"
+
+.SS "\fBGLAPI\fP \fBOSMesaContext\fP \fBGLAPIENTRY\fP OSMesaGetCurrentContext (\fBvoid\fP)"
+
+.SS "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP OSMesaGetDepthBuffer (\fBOSMesaContext\fP c, \fBGLint\fP * width, \fBGLint\fP * height, \fBGLint\fP * bytesPerValue, \fBvoid\fP ** buffer)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP OSMesaGetIntegerv (\fBGLint\fP pname, \fBGLint\fP * value)"
+
+.SS "\fBGLAPI\fP \fBOSMESAproc\fP \fBGLAPIENTRY\fP OSMesaGetProcAddress (\fBconst\fP char * funcName)"
+
+.SS "\fBGLAPI\fP \fBGLboolean\fP \fBGLAPIENTRY\fP OSMesaMakeCurrent (\fBOSMesaContext\fP ctx, \fBvoid\fP * buffer, \fBGLenum\fP type, \fBGLsizei\fP width, \fBGLsizei\fP height)"
+
+.SS "\fBGLAPI\fP \fBvoid\fP \fBGLAPIENTRY\fP OSMesaPixelStore (\fBGLint\fP pname, \fBGLint\fP value)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

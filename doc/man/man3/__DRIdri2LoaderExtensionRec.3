@@ -1,0 +1,81 @@
+.TH "__DRIdri2LoaderExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIdri2LoaderExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fB__DRIbuffer\fP *(* \fBgetBuffers\fP )(\fB__DRIdrawable\fP *driDrawable, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, unsigned \fBint\fP *\fBattachments\fP, \fBint\fP \fBcount\fP, \fBint\fP *out_count, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBflushFrontBuffer\fP )(\fB__DRIdrawable\fP *driDrawable, \fBvoid\fP *loaderPrivate)"
+.br
+.ti -1c
+.RI "\fB__DRIbuffer\fP *(* \fBgetBuffersWithFormat\fP )(\fB__DRIdrawable\fP *driDrawable, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, unsigned \fBint\fP *\fBattachments\fP, \fBint\fP \fBcount\fP, \fBint\fP *out_count, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 775 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIdri2LoaderExtensionRec::base"
+
+.PP
+Définition à la ligne 776 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIdri2LoaderExtensionRec::flushFrontBuffer) (\fB__DRIdrawable\fP *driDrawable, \fBvoid\fP *loaderPrivate)"
+Flush pending front-buffer rendering
+.PP
+Any rendering that has been performed to the \fC__DRI_BUFFER_FAKE_FRONT_LEFT\fP will be flushed to the \fC__DRI_BUFFER_FRONT_LEFT\fP\&.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIdriDrawable\fP Drawable whose front-buffer is to be flushed 
+.br
+\fIloaderPrivate\fP Loader's private data that was previously passed into \fB__DRIdri2ExtensionRec::createNewDrawable\fP 
+.RE
+.PP
+
+.PP
+Définition à la ligne 794 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIbuffer\fP*(* __DRIdri2LoaderExtensionRec::getBuffers) (\fB__DRIdrawable\fP *driDrawable, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, unsigned \fBint\fP *\fBattachments\fP, \fBint\fP \fBcount\fP, \fBint\fP *out_count, \fBvoid\fP *loaderPrivate)"
+
+.PP
+Définition à la ligne 778 du fichier dri_interface\&.h\&.
+.SS "\fB__DRIbuffer\fP*(* __DRIdri2LoaderExtensionRec::getBuffersWithFormat) (\fB__DRIdrawable\fP *driDrawable, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, unsigned \fBint\fP *\fBattachments\fP, \fBint\fP \fBcount\fP, \fBint\fP *out_count, \fBvoid\fP *loaderPrivate)"
+Get list of buffers from the server
+.PP
+Gets a list of buffer for the specified set of attachments\&. Unlike \fC::getBuffers\fP, this function takes a list of attachments paired with opaque \fCunsigned\fP \fCint\fP value describing the format of the buffer\&. It is the responsibility of the caller to know what the service that allocates the buffers will expect to receive for the format\&.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIdriDrawable\fP Drawable whose buffers are being queried\&. 
+.br
+\fIwidth\fP Output where the width of the buffers is stored\&. 
+.br
+\fIheight\fP Output where the height of the buffers is stored\&. 
+.br
+\fIattachments\fP List of pairs of attachment ID and opaque format requested for the drawable\&. 
+.br
+\fIcount\fP Number of attachment / format pairs stored in \fCattachments\fP\&. 
+.br
+\fIloaderPrivate\fP Loader's private data that was previously passed into \fB__DRIdri2ExtensionRec::createNewDrawable\fP\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 816 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

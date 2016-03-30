@@ -1,0 +1,68 @@
+.TH "SDL_TextEditingEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_TextEditingEvent \- Keyboard text editing event structure (event\&.edit\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "char \fBtext\fP [\fBSDL_TEXTEDITINGEVENT_TEXT_SIZE\fP]"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBstart\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBlength\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Keyboard text editing event structure (event\&.edit\&.*) 
+.PP
+Définition à la ligne 203 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBSint32\fP SDL_TextEditingEvent::length"
+The length of selected editing text 
+.PP
+Définition à la ligne 210 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_TextEditingEvent::start"
+The start cursor of selected editing text 
+.PP
+Définition à la ligne 209 du fichier SDL_events\&.h\&.
+.SS "char SDL_TextEditingEvent::text[\fBSDL_TEXTEDITINGEVENT_TEXT_SIZE\fP]"
+The editing text 
+.PP
+Définition à la ligne 208 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TextEditingEvent::timestamp"
+
+.PP
+Définition à la ligne 206 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TextEditingEvent::type"
+\fBSDL_TEXTEDITING\fP 
+.PP
+Définition à la ligne 205 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TextEditingEvent::windowID"
+The window with keyboard focus, if any 
+.PP
+Définition à la ligne 207 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

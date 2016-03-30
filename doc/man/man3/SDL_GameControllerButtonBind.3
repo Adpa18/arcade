@@ -1,0 +1,76 @@
+.TH "SDL_GameControllerButtonBind" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_GameControllerButtonBind \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_gamecontroller\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_GameControllerBindType\fP \fBbindType\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "   \fBint\fP \fBaxis\fP"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      \fBint\fP \fBhat\fP"
+.br
+.ti -1c
+.RI "      \fBint\fP \fBhat_mask\fP"
+.br
+.ti -1c
+.RI "   } \fBhat\fP"
+.br
+.ti -1c
+.RI "} \fBvalue\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Get the SDL joystick layer binding for this controller button/axis mapping 
+.PP
+Définition à la ligne 70 du fichier SDL_gamecontroller\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBint\fP SDL_GameControllerButtonBind::axis"
+
+.PP
+Définition à la ligne 76 du fichier SDL_gamecontroller\&.h\&.
+.SS "\fBSDL_GameControllerBindType\fP SDL_GameControllerButtonBind::bindType"
+
+.PP
+Définition à la ligne 72 du fichier SDL_gamecontroller\&.h\&.
+.SS "\fBint\fP SDL_GameControllerButtonBind::button"
+
+.PP
+Définition à la ligne 75 du fichier SDL_gamecontroller\&.h\&.
+.SS "\fBint\fP SDL_GameControllerButtonBind::hat"
+
+.PP
+Définition à la ligne 78 du fichier SDL_gamecontroller\&.h\&.
+.SS "struct { \&.\&.\&. }   SDL_GameControllerButtonBind::hat"
+
+.SS "\fBint\fP SDL_GameControllerButtonBind::hat_mask"
+
+.PP
+Définition à la ligne 79 du fichier SDL_gamecontroller\&.h\&.
+.SS "union { \&.\&.\&. }   SDL_GameControllerButtonBind::value"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

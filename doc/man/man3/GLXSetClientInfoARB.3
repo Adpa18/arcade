@@ -1,0 +1,104 @@
+.TH "GLXSetClientInfoARB" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLXSetClientInfoARB \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <glxproto\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "CARD8 \fBreqType\fP"
+.br
+.ti -1c
+.RI "CARD8 \fBglxCode\fP"
+.br
+.ti -1c
+.RI "CARD16 \fBlength\fP \fBB16\fP"
+.br
+.ti -1c
+.RI "CARD32 major \fBB32\fP"
+.br
+.ti -1c
+.RI "CARD32 minor \fBB32\fP"
+.br
+.ti -1c
+.RI "CARD32 numVersions \fBB32\fP"
+.br
+.ti -1c
+.RI "CARD32 numGLExtensionBytes \fBB32\fP"
+.br
+.ti -1c
+.RI "CARD32 numGLXExtensionBytes \fBB32\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Protocol header for glXSetClientInfoARB
+.PP
+This structure is follwed by \fCnumVersions\fP * 2 \fCCARD32\fP values listing the \fBOpenGL\fP versions supported by the client\&. The pairs of values are an \fBOpenGL\fP major version followed by a minor version\&. For example, 
+.PP
+.nf
+ CARD32 versions[4] = { 2, 1, 3, 0 };
+
+.fi
+.PP
+.PP
+says that the client supports \fBOpenGL\fP 2\&.1 and \fBOpenGL\fP 3\&.0\&.
+.PP
+These are followed by \fCnumGLExtensionBytes\fP bytes of \fCSTRING8\fP containing the \fBOpenGL\fP extension string supported by the client and up to 3 bytes of padding\&.
+.PP
+The list of \fBOpenGL\fP extensions is followed by \fCnumGLXExtensionBytes\fP bytes of \fCSTRING8\fP containing the GLX extension string supported by the client and up to 3 bytes of padding\&.
+.PP
+This protocol replaces \fC\fBGLXClientInfo\fP\fP\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBGLXClientInfo\fP, \fBGLXSetClientInfo2ARB\fP 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1319 du fichier glxproto\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "CARD16 \fBlength\fP GLXSetClientInfoARB::B16"
+
+.PP
+Définition à la ligne 1322 du fichier glxproto\&.h\&.
+.SS "CARD32 major GLXSetClientInfoARB::B32"
+
+.PP
+Définition à la ligne 1323 du fichier glxproto\&.h\&.
+.SS "CARD32 minor GLXSetClientInfoARB::B32"
+
+.PP
+Définition à la ligne 1324 du fichier glxproto\&.h\&.
+.SS "CARD32 numVersions GLXSetClientInfoARB::B32"
+
+.PP
+Définition à la ligne 1325 du fichier glxproto\&.h\&.
+.SS "CARD32 numGLExtensionBytes GLXSetClientInfoARB::B32"
+
+.PP
+Définition à la ligne 1326 du fichier glxproto\&.h\&.
+.SS "CARD32 numGLXExtensionBytes GLXSetClientInfoARB::B32"
+
+.PP
+Définition à la ligne 1327 du fichier glxproto\&.h\&.
+.SS "CARD8 GLXSetClientInfoARB::glxCode"
+
+.PP
+Définition à la ligne 1321 du fichier glxproto\&.h\&.
+.SS "CARD8 GLXSetClientInfoARB::reqType"
+
+.PP
+Définition à la ligne 1320 du fichier glxproto\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

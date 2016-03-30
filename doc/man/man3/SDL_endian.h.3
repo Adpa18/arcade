@@ -1,0 +1,157 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_endian.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_endian.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_BYTEORDER\fP   \fBSDL_LIL_ENDIAN\fP"
+.br
+.in -1c
+.PP
+.RI "\fBThe two types of endianness\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_LIL_ENDIAN\fP   1234"
+.br
+.ti -1c
+.RI "#define \fBSDL_BIG_ENDIAN\fP   4321"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBSwap to native\fP"
+.br
+Byteswap item from the specified endianness to the native endianness\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_SwapLE16\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapLE32\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapLE64\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapFloatLE\fP(X)   (X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapBE16\fP(X)   \fBSDL_Swap16\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapBE32\fP(X)   \fBSDL_Swap32\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapBE64\fP(X)   \fBSDL_Swap64\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBSDL_SwapFloatBE\fP(X)   \fBSDL_SwapFloat\fP(X)"
+.br
+.in -1c
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_FORCE_INLINE\fP \fBUint16\fP \fBSDL_Swap16\fP (\fBUint16\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBSDL_FORCE_INLINE\fP \fBUint32\fP \fBSDL_Swap32\fP (\fBUint32\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBSDL_FORCE_INLINE\fP \fBUint64\fP \fBSDL_Swap64\fP (\fBUint64\fP \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBSDL_FORCE_INLINE\fP float \fBSDL_SwapFloat\fP (float \fBx\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Functions for reading and writing endian-specific values
+.PP
+Définition dans le fichier \fBSDL_endian\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_BIG_ENDIAN   4321"
+
+.PP
+Définition à la ligne 38 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_BYTEORDER   \fBSDL_LIL_ENDIAN\fP"
+
+.PP
+Définition à la ligne 53 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_LIL_ENDIAN   1234"
+
+.PP
+Définition à la ligne 37 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapBE16(X)   \fBSDL_Swap16\fP(X)"
+
+.PP
+Définition à la ligne 215 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapBE32(X)   \fBSDL_Swap32\fP(X)"
+
+.PP
+Définition à la ligne 216 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapBE64(X)   \fBSDL_Swap64\fP(X)"
+
+.PP
+Définition à la ligne 217 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapFloatBE(X)   \fBSDL_SwapFloat\fP(X)"
+
+.PP
+Définition à la ligne 218 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapFloatLE(X)   (X)"
+
+.PP
+Définition à la ligne 214 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapLE16(X)   (X)"
+
+.PP
+Définition à la ligne 211 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapLE32(X)   (X)"
+
+.PP
+Définition à la ligne 212 du fichier SDL_endian\&.h\&.
+.SS "#define SDL_SwapLE64(X)   (X)"
+
+.PP
+Définition à la ligne 213 du fichier SDL_endian\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBSDL_FORCE_INLINE\fP \fBUint16\fP SDL_Swap16 (\fBUint16\fP x)"
+
+.PP
+Définition à la ligne 101 du fichier SDL_endian\&.h\&.
+.SS "\fBSDL_FORCE_INLINE\fP \fBUint32\fP SDL_Swap32 (\fBUint32\fP x)"
+
+.PP
+Définition à la ligne 141 du fichier SDL_endian\&.h\&.
+.SS "\fBSDL_FORCE_INLINE\fP \fBUint64\fP SDL_Swap64 (\fBUint64\fP x)"
+
+.PP
+Définition à la ligne 175 du fichier SDL_endian\&.h\&.
+.SS "\fBSDL_FORCE_INLINE\fP float SDL_SwapFloat (float x)"
+
+.PP
+Définition à la ligne 192 du fichier SDL_endian\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.
