@@ -1,0 +1,6 @@
+<map id="Sdl2::destroy" name="Sdl2::destroy">
+<area shape="rect" id="node2" href="$dc/d92/_s_d_l__ttf_8h.html#a006b7c83a8ff15bb9f9d453d48ba3e51" title="TTF_CloseFont" alt="" coords="173,5,286,32"/>
+<area shape="rect" id="node3" href="$d6/d30/_s_d_l__render_8h.html#a078c0a925e24542d356a02183a306be6" title="Destroy the specified texture. " alt="" coords="157,56,302,83"/>
+<area shape="rect" id="node4" href="$d6/d30/_s_d_l__render_8h.html#ab1f096742fa9c882c3f1555ee62c4ac2" title="Destroy the rendering context for a window and free associated textures. " alt="" coords="152,107,307,133"/>
+<area shape="rect" id="node5" href="$dc/d64/_s_d_l__video_8h.html#a72609295a4faee0587268339ccff80c2" title="Destroy a window. " alt="" coords="155,157,303,184"/>
+</map>

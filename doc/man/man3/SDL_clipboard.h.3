@@ -1,0 +1,74 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_clipboard.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_clipboard.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetClipboardText\fP (\fBconst\fP char *text)"
+.br
+.RI "\fIPut UTF-8 text into the clipboard\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP char *\fBSDLCALL\fP \fBSDL_GetClipboardText\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet UTF-8 text from the clipboard, which must be freed with \fBSDL_free()\fP \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP \fBSDL_HasClipboardText\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns a flag indicating whether the clipboard exists and contains a text string that is non-empty\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL clipboard handling 
+.PP
+Définition dans le fichier \fBSDL_clipboard\&.h\fP\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP char* \fBSDLCALL\fP SDL_GetClipboardText (\fBvoid\fP)"
+
+.PP
+Get UTF-8 text from the clipboard, which must be freed with \fBSDL_free()\fP 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_SetClipboardText()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP SDL_HasClipboardText (\fBvoid\fP)"
+
+.PP
+Returns a flag indicating whether the clipboard exists and contains a text string that is non-empty\&. 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetClipboardText()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetClipboardText (\fBconst\fP char * text)"
+
+.PP
+Put UTF-8 text into the clipboard\&. 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetClipboardText()\fP 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

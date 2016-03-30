@@ -1,0 +1,89 @@
+.TH "SDL_JoyAxisEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_JoyAxisEvent \- Joystick axis motion event structure (event\&.jaxis\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoystickID\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBaxis\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBvalue\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBpadding4\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Joystick axis motion event structure (event\&.jaxis\&.*) 
+.PP
+Définition à la ligne 276 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_JoyAxisEvent::axis"
+The joystick axis index 
+.PP
+Définition à la ligne 281 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyAxisEvent::padding1"
+
+.PP
+Définition à la ligne 282 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyAxisEvent::padding2"
+
+.PP
+Définition à la ligne 283 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyAxisEvent::padding3"
+
+.PP
+Définition à la ligne 284 du fichier SDL_events\&.h\&.
+.SS "\fBUint16\fP SDL_JoyAxisEvent::padding4"
+
+.PP
+Définition à la ligne 286 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyAxisEvent::timestamp"
+
+.PP
+Définition à la ligne 279 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyAxisEvent::type"
+\fBSDL_JOYAXISMOTION\fP 
+.PP
+Définition à la ligne 278 du fichier SDL_events\&.h\&.
+.SS "\fBSint16\fP SDL_JoyAxisEvent::value"
+The axis value (range: -32768 to 32767) 
+.PP
+Définition à la ligne 285 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoystickID\fP SDL_JoyAxisEvent::which"
+The joystick instance id 
+.PP
+Définition à la ligne 280 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

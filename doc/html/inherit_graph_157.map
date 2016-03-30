@@ -1,0 +1,12 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$d4/d08/class_n_curses_field_type.html" title="NCursesFieldType" alt="" coords="5,183,136,209"/>
+<area shape="rect" id="node2" href="$dc/d52/class_alpha___field.html" title="Alpha_Field" alt="" coords="215,5,305,32"/>
+<area shape="rect" id="node3" href="$d8/df3/class_alphanumeric___field.html" title="Alphanumeric_Field" alt="" coords="192,56,328,83"/>
+<area shape="rect" id="node4" href="$da/d98/class_enumeration___field.html" title="Enumeration_Field" alt="" coords="195,107,325,133"/>
+<area shape="rect" id="node5" href="$da/d06/class_integer___field.html" title="Integer_Field" alt="" coords="211,157,309,184"/>
+<area shape="rect" id="node6" href="$d1/da5/class_i_p_v4___address___field.html" title="IPV4_Address_Field" alt="" coords="189,208,331,235"/>
+<area shape="rect" id="node7" href="$df/ded/class_numeric___field.html" title="Numeric_Field" alt="" coords="207,259,313,285"/>
+<area shape="rect" id="node8" href="$df/de5/class_regular___expression___field.html" title="Regular_Expression\l_Field" alt="" coords="191,310,329,351"/>
+<area shape="rect" id="node9" href="$de/d28/class_user_defined_field_type.html" title="UserDefinedFieldType" alt="" coords="184,376,336,403"/>
+<area shape="rect" id="node10" href="$d8/d28/class_user_defined_field_type___with___choice.html" title="UserDefinedFieldType\l_With_Choice" alt="" coords="384,369,536,410"/>
+</map>

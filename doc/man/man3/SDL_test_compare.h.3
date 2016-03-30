@@ -1,0 +1,57 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_test_compare.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_test_compare.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL\&.h'\fP
+.br
+\fC#include 'SDL_test_images\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_CompareSurfaces\fP (\fBSDL_Surface\fP *surface, \fBSDL_Surface\fP *referenceSurface, \fBint\fP allowable_error)"
+.br
+.RI "\fICompares a surface and with reference image data for equality\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.PP
+Définition dans le fichier \fBSDL_test_compare\&.h\fP\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBint\fP SDLTest_CompareSurfaces (\fBSDL_Surface\fP * surface, \fBSDL_Surface\fP * referenceSurface, \fBint\fP allowable_error)"
+
+.PP
+Compares a surface and with reference image data for equality\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsurface\fP Surface used in comparison 
+.br
+\fIreferenceSurface\fP Test Surface used in comparison 
+.br
+\fIallowable_error\fP Allowable difference (=sum of squared difference for each RGB component) in blending accuracy\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 if comparison succeeded, >0 (=number of pixels for which the comparison failed) if comparison failed, -1 if any of the surfaces were NULL, -2 if the surface sizes differ\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

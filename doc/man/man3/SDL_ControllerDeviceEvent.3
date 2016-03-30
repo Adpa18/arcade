@@ -1,0 +1,47 @@
+.TH "SDL_ControllerDeviceEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_ControllerDeviceEvent \- Controller device event structure (event\&.cdevice\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBwhich\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Controller device event structure (event\&.cdevice\&.*) 
+.PP
+Définition à la ligne 385 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint32\fP SDL_ControllerDeviceEvent::timestamp"
+
+.PP
+Définition à la ligne 388 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_ControllerDeviceEvent::type"
+\fBSDL_CONTROLLERDEVICEADDED\fP, \fBSDL_CONTROLLERDEVICEREMOVED\fP, or \fBSDL_CONTROLLERDEVICEREMAPPED\fP 
+.PP
+Définition à la ligne 387 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_ControllerDeviceEvent::which"
+The joystick device index for the ADDED event, instance id for the REMOVED or REMAPPED event 
+.PP
+Définition à la ligne 389 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

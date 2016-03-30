@@ -1,0 +1,39 @@
+.TH "__DRItexOffsetExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRItexOffsetExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBsetTexOffset\fP )(\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP texname, unsigned long long \fBoffset\fP, \fBGLint\fP \fBdepth\fP, \fBGLuint\fP pitch)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 207 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRItexOffsetExtensionRec::base"
+
+.PP
+Définition à la ligne 208 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRItexOffsetExtensionRec::setTexOffset) (\fB__DRIcontext\fP *pDRICtx, \fBGLint\fP texname, unsigned long long \fBoffset\fP, \fBGLint\fP \fBdepth\fP, \fBGLuint\fP pitch)"
+Method to override base texture image with a driver specific 'offset'\&. The depth passed in allows e\&.g\&. to ignore the alpha channel of texture images where the non-alpha components don't occupy a whole texel\&.
+.PP
+For GLX_EXT_texture_from_pixmap with AIGLX\&. 
+.PP
+Définition à la ligne 217 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

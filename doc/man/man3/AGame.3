@@ -1,0 +1,76 @@
+.TH "AGame" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AGame \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AGame\&.hpp>\fP
+.PP
+Dérivée par \fBPacman\fP, et \fBSnake\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBAGame\fP (\fBstd::string\fP \fBconst\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~AGame\fP ()"
+.br
+.ti -1c
+.RI "virtual std::stack< \fBAComponent\fP * > \fBcompute\fP (\fBint\fP)=0"
+.br
+.ti -1c
+.RI "virtual std::stack< \fBAComponent\fP * > \fBgetInfos\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBrestart\fP ()=0"
+.br
+.ti -1c
+.RI "\fBVector2\fP< \fBint\fP > \fBconst\fP & \fBgetSize\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBstd::string\fP \fBconst\fP & \fBgetName\fP () \fBconst\fP "
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 11 du fichier AGame\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "AGame::AGame (\fBstd::string\fP \fBconst\fP & name, \fBVector2\fP< \fBint\fP > size)"
+
+.PP
+Définition à la ligne 13 du fichier AGame\&.cpp\&.
+.SS "AGame::~AGame ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 18 du fichier AGame\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual std::stack<\fBAComponent\fP*> AGame::compute (\fBint\fP)\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBSnake\fP, et \fBPacman\fP\&.
+.SS "virtual std::stack<\fBAComponent\fP*> AGame::getInfos ()\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBSnake\fP, et \fBPacman\fP\&.
+.SS "\fBstd::string\fP \fBconst\fP & AGame::getName () const"
+
+.PP
+Définition à la ligne 28 du fichier AGame\&.cpp\&.
+.SS "\fBVector2\fP< \fBint\fP > \fBconst\fP & AGame::getSize () const"
+
+.PP
+Définition à la ligne 23 du fichier AGame\&.cpp\&.
+.SS "virtual \fBvoid\fP AGame::restart ()\fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBSnake\fP, et \fBPacman\fP\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

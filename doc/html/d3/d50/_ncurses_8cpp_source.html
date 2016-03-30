@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Arcade:  Fichier source de /home/wery_a/rendu/CPP/cpp_arcade/src/lib/ncurses/Ncurses.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d3/d50/_ncurses_8cpp_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Ncurses.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d50/_ncurses_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d3a/_ncurses_8hpp.html">Ncurses.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d6/de7/namespacencurses.html">ncurses</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#a4e1398b106232b35e3c034c0ec7fd0ae">    6</a></span>&#160;<a class="code" href="../../d6/d57/class_ncurses.html#a4e1398b106232b35e3c034c0ec7fd0ae">Ncurses::Ncurses</a> (<span class="keywordtype">void</span>) : <a class="code" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>(0, 0)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  this-&gt;is_init = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  this-&gt;is_destroy = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#a4197da9eb0dafba570c2f60a6ce0124e">   12</a></span>&#160;<a class="code" href="../../d6/d57/class_ncurses.html#a4197da9eb0dafba570c2f60a6ce0124e">Ncurses::~Ncurses</a> ()</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (this-&gt;is_destroy == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    this-&gt;<a class="code" href="../../d6/d57/class_ncurses.html#a41e6b2ae54d257c26274a3be71fa749e">destroy</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span>    Ncurses::initMainWindow()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    wbkgd(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a>(9));</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    wattr_on(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    wattr_on(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a95d95f6f767f2b2378a1a2242e34d8ae">A_BOLD</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    wborder(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    wattr_off(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a95d95f6f767f2b2378a1a2242e34d8ae">A_BOLD</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    wattr_off(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    wrefresh(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>());</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    wrefresh(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>());</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span>    Ncurses::invalidSize(<span class="keywordtype">int</span> <a class="code" href="../../d2/d61/gl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a>, <span class="keywordtype">int</span> <a class="code" href="../../d2/d61/gl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a>, <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> <span class="keyword">const</span> &amp;<a class="code" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> <span class="keyword">const</span> &amp;pos)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (pos.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> &gt; COLS -2 || pos.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> &gt; LINES - 1)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (this-&gt;wind)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a6741ca1daf9c1c1eb2f7a290b845911d">close</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            this-&gt;wind = <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        this-&gt;valid_size = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../dd/df4/curses_8h.html#aff606fb64ff89d5982673319bab86b19">clear</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        mvprintw(LINES / 2, COLS / 2 -13, <span class="stringliteral">&quot;Available size : %d x %d&quot;</span>, COLS, LINES);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        mvprintw(LINES / 2 + 1, COLS / 2 - 12, <span class="stringliteral">&quot;Required size : %d x %d&quot;</span>, width, height);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    this-&gt;valid_size = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">int</span> Ncurses::resizeTerm()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> pos(COLS / 2 - (size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> / 2), LINES / 2 - (size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> / 2));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> size_main(size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2, size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> pos_main(COLS / 2 - ((size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2) / 2), LINES / 2 - ((size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2) / 2));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;invalidSize(size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2, size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2, size_main, pos_main))</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (this-&gt;wind)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="../../dd/df4/curses_8h.html#aff606fb64ff89d5982673319bab86b19">clear</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            mvwin(this-&gt;main_wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), pos_main.y, pos_main.x);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            mvwin(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), pos.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a>, pos.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            this-&gt;initMainWindow();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="../../dd/df4/curses_8h.html#aff606fb64ff89d5982673319bab86b19">clear</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            this-&gt;wind = <span class="keyword">new</span> <a class="code" href="../../dd/dba/classncurses_1_1_window.html">Window</a>(size, pos, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            this-&gt;main_wind = <span class="keyword">new</span> <a class="code" href="../../dd/dba/classncurses_1_1_window.html">Window</a>(size_main, pos_main, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            keypad(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            this-&gt;initMainWindow();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> (-2);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#aa3e9f83b3eeb169ffb0ad9b506270096">   78</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d6/d57/class_ncurses.html#aa3e9f83b3eeb169ffb0ad9b506270096">Ncurses::eventManagment</a>()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> key;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    key = <a class="code" href="../../dd/df4/curses_8h.html#af06d804ba4b13a2086f028475c0786f4">getch</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (key == <a class="code" href="../../dd/df4/curses_8h.html#a6653a6b2ee1aef2a00e972e114874c78">KEY_RESIZE</a>)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> (this-&gt;resizeTerm());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (key == 27) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        endwin();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> (this-&gt;keyMap[key]);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#ae12387421d11fab55a0e54c9f233f989">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d57/class_ncurses.html#ae12387421d11fab55a0e54c9f233f989">Ncurses::display</a>(std::stack&lt;AComponent*&gt; <a class="code" href="../../dc/dd2/glext_8h.html#a3824c86dfa50d23068c74eafb87375c2">components</a>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d1/db4/class_a_component.html">AComponent</a>      *<a class="code" href="../../dc/dd2/glext_8h.html#a0c0d4701a6c89f4f7f0640715d27ab26">obj</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../df/d75/class_game_component.html">GameComponent</a>   *Gobj;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../d3/dba/class_audio_component.html">AudioComponent</a>  *Aobj;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../d5/d71/class_u_i_component.html">UIComponent</a>     *Tobj;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (is_init == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      this-&gt;<a class="code" href="../../d6/d57/class_ncurses.html#a811ce85a26d52c4b62bedffcaf6f516e">init</a>(<a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a>(50, 30));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (this-&gt;valid_size == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">while</span> (!components.empty()) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        obj = components.top();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        components.pop();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> ((Gobj = dynamic_cast&lt;GameComponent*&gt;(obj))) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (Gobj-&gt;<a class="code" href="../../df/d75/class_game_component.html#aa7c6c3d942ecdbee7cb9cb4fc6e282f4">getSpriteText</a>() == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;              <a class="code" href="../../dd/df4/curses_8h.html#adf475f0bdb817c2609fc84c56b6579b7">wattron</a>(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a>(Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449">getColor</a>() + 1));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;              wattr_on(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;              <a class="code" href="../../dd/df4/curses_8h.html#a4099aa2f7af5e12c2e5eea277cac7391">mvwaddch</a>(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(),</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;              Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a>, Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a>, Gobj-&gt;<a class="code" href="../../df/d75/class_game_component.html#aa7c6c3d942ecdbee7cb9cb4fc6e282f4">getSpriteText</a>());</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;              wattr_off(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;              <a class="code" href="../../dd/df4/curses_8h.html#a5af6edf2df576b4689c93d5ebe99ee45">wattroff</a>(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a>(Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449">getColor</a>() + 1));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;              <a class="code" href="../../dd/df4/curses_8h.html#adf475f0bdb817c2609fc84c56b6579b7">wattron</a>(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a>(Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449">getColor</a>() + 1));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;              <a class="code" href="../../dd/df4/curses_8h.html#a4099aa2f7af5e12c2e5eea277cac7391">mvwaddch</a>(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;              Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a>, Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a>, Gobj-&gt;<a class="code" href="../../df/d75/class_game_component.html#aa7c6c3d942ecdbee7cb9cb4fc6e282f4">getSpriteText</a>());</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;              <a class="code" href="../../dd/df4/curses_8h.html#a5af6edf2df576b4689c93d5ebe99ee45">wattroff</a>(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <a class="code" href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a>(Gobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449">getColor</a>() + 1));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((Aobj = dynamic_cast&lt;AudioComponent*&gt;(obj)))</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;          beep();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((Tobj = dynamic_cast&lt;UIComponent*&gt;(obj)))</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;          <a class="code" href="../../df/ddb/struct__win__st.html">WINDOW</a> *ntext;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;          <span class="keywordflow">if</span> (Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> &lt; 0 || Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> &lt; 0)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            ntext = newwin(Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a>, Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a>, 1, COLS / 2 - (Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> / 2));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;          <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            ntext = newwin(Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a>, Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a>, Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a>, Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">getPos</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;          <a class="code" href="../../dd/df4/curses_8h.html#a69402876ce6099a41bc3a3ce2b5690de">box</a>(ntext, 0, 0);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;          wattr_on(ntext, <a class="code" href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;          wbkgd(ntext, <a class="code" href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a>(Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449">getColor</a>() + 1));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;          wattr_off(ntext, <a class="code" href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a>, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;          mvwprintw(ntext, Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> / 2, Tobj-&gt;<a class="code" href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">getSize</a>().<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> / 2 - Tobj-&gt;<a class="code" href="../../d5/d71/class_u_i_component.html#a438f72973e16564944af470241d8f15f">getText</a>().length() / 2, <span class="stringliteral">&quot;%s&quot;</span>, Tobj-&gt;<a class="code" href="../../d5/d71/class_u_i_component.html#a438f72973e16564944af470241d8f15f">getText</a>().c_str());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;          wrefresh(ntext);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;          <a class="code" href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    wrefresh(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>());</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#a811ce85a26d52c4b62bedffcaf6f516e">  144</a></span>&#160;<span class="keywordtype">void</span>  <a class="code" href="../../d6/d57/class_ncurses.html#a811ce85a26d52c4b62bedffcaf6f516e">Ncurses::init</a>(<span class="keyword">const</span> <a class="code" href="../../dc/dd2/glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;<a class="code" href="../../dc/dd2/glext_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a>, <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> <a class="code" href="../../d2/d61/gl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>, std::stack&lt;AComponent*&gt; cache)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    (<a class="code" href="../../d2/d61/gl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a>)name;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    this-&gt;is_init = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    this-&gt;size = <a class="code" href="../../d2/d61/gl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    initscr();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    cbreak();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    keypad(stdscr, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    start_color();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    curs_set(0);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    noecho();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// halfdelay(1);</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="../../dd/df4/curses_8h.html#a0a174c12238483be2c27b2c5ab5ac1a5">timeout</a>(1);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    init_pair(1, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    init_pair(2, <a class="code" href="../../dd/df4/curses_8h.html#ad86358bf19927183dd7b4ae215a29731">COLOR_RED</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    init_pair(3, <a class="code" href="../../dd/df4/curses_8h.html#afc9149f5de51bd9ac4f5ebbfa153f018">COLOR_GREEN</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    init_pair(4, <a class="code" href="../../dd/df4/curses_8h.html#a23c70d699a5a775bc2e1ebeb8603f630">COLOR_BLUE</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    init_pair(5, <a class="code" href="../../dd/df4/curses_8h.html#a4534b577b74a58b0f4b7be027af664e0">COLOR_YELLOW</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    init_pair(6, <a class="code" href="../../dd/df4/curses_8h.html#a8deb0beccea721b35bdb1b4f7264fe75">COLOR_MAGENTA</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    init_pair(7, <a class="code" href="../../dd/df4/curses_8h.html#a82573859711fce56f1aa0a76b18a9b18">COLOR_CYAN</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    init_pair(8, <a class="code" href="../../dd/df4/curses_8h.html#a9b44987ffdc2af19b635206b94334b69">COLOR_WHITE</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    init_pair(9, <a class="code" href="../../dd/df4/curses_8h.html#a9b44987ffdc2af19b635206b94334b69">COLOR_WHITE</a>, -1);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> size_main(size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2, size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> pos(COLS / 2 - (size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> / 2), LINES / 2 - (size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> / 2));</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> pos_main(COLS / 2 - ((size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2) / 2), LINES / 2 - ((size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2) / 2));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">if</span> (this-&gt;invalidSize(size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2, size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2, size_main, pos_main) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        this-&gt;wind = <span class="keyword">new</span> <a class="code" href="../../dd/dba/classncurses_1_1_window.html">Window</a>(size, pos, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        this-&gt;main_wind = <span class="keyword">new</span> <a class="code" href="../../dd/dba/classncurses_1_1_window.html">Window</a>(size_main, pos_main, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        keypad(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        this-&gt;initMainWindow();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      this-&gt;wind = <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    this-&gt;<a class="code" href="../../d6/d57/class_ncurses.html#ae12387421d11fab55a0e54c9f233f989">display</a>(cache);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#af72eed0f1dbdf3a78a432932639382d9">  182</a></span>&#160;<span class="keywordtype">void</span>  <a class="code" href="../../d6/d57/class_ncurses.html#a811ce85a26d52c4b62bedffcaf6f516e">Ncurses::init</a>(<a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> <a class="code" href="../../d2/d61/gl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    this-&gt;size = <a class="code" href="../../d2/d61/gl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    this-&gt;is_init = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    initscr();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    cbreak();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    keypad(stdscr, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    start_color();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    curs_set(0);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    noecho();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">// halfdelay(1);</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="../../dd/df4/curses_8h.html#a0a174c12238483be2c27b2c5ab5ac1a5">timeout</a>(1);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    init_pair(1, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    init_pair(2, <a class="code" href="../../dd/df4/curses_8h.html#ad86358bf19927183dd7b4ae215a29731">COLOR_RED</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    init_pair(3, <a class="code" href="../../dd/df4/curses_8h.html#afc9149f5de51bd9ac4f5ebbfa153f018">COLOR_GREEN</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    init_pair(4, <a class="code" href="../../dd/df4/curses_8h.html#a23c70d699a5a775bc2e1ebeb8603f630">COLOR_BLUE</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    init_pair(5, <a class="code" href="../../dd/df4/curses_8h.html#a4534b577b74a58b0f4b7be027af664e0">COLOR_YELLOW</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    init_pair(6, <a class="code" href="../../dd/df4/curses_8h.html#a8deb0beccea721b35bdb1b4f7264fe75">COLOR_MAGENTA</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    init_pair(7, <a class="code" href="../../dd/df4/curses_8h.html#a82573859711fce56f1aa0a76b18a9b18">COLOR_CYAN</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    init_pair(8, <a class="code" href="../../dd/df4/curses_8h.html#a9b44987ffdc2af19b635206b94334b69">COLOR_WHITE</a>, <a class="code" href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    init_pair(9, <a class="code" href="../../dd/df4/curses_8h.html#a9b44987ffdc2af19b635206b94334b69">COLOR_WHITE</a>, -1);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a>();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> size_main(size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2, size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> pos(COLS / 2 - (size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> / 2), LINES / 2 - (size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> / 2));</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="../../d8/dbe/class_vector2.html">Vector2&lt;int&gt;</a> pos_main(COLS / 2 - ((size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2) / 2), LINES / 2 - ((size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2) / 2));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">if</span> (this-&gt;invalidSize(size.<a class="code" href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">x</a> + 2, size.<a class="code" href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">y</a> + 2, size_main, pos_main) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        this-&gt;wind = <span class="keyword">new</span> <a class="code" href="../../dd/dba/classncurses_1_1_window.html">Window</a>(size, pos, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        this-&gt;main_wind = <span class="keyword">new</span> <a class="code" href="../../dd/dba/classncurses_1_1_window.html">Window</a>(size_main, pos_main, <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        keypad(this-&gt;wind-&gt;<a class="code" href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">getWind</a>(), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        this-&gt;initMainWindow();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      this-&gt;wind = <a class="code" href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="../../d6/d57/class_ncurses.html#a41e6b2ae54d257c26274a3be71fa749e">  218</a></span>&#160;<span class="keywordtype">void</span>    <a class="code" href="../../d6/d57/class_ncurses.html#a41e6b2ae54d257c26274a3be71fa749e">Ncurses::destroy</a>()</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    this-&gt;is_destroy = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    endwin();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; }</div>
+<div class="ttc" id="gl_8h_html_a46df6112013cf583e82b25cebd5cb499"><div class="ttname"><a href="../../d2/d61/gl_8h.html#a46df6112013cf583e82b25cebd5cb499">void</a></div><div class="ttdeci">typedef void(APIENTRYP PFNGLDRAWRANGEELEMENTSPROC)(GLenum mode</div></div>
+<div class="ttc" id="class_vector2_html_a6cfed8355591aa269f4dba43bd806ef9"><div class="ttname"><a href="../../d8/dbe/class_vector2.html#a6cfed8355591aa269f4dba43bd806ef9">Vector2::y</a></div><div class="ttdeci">T y</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d12/_vector2_8hpp_source.html#l00020">Vector2.hpp:20</a></div></div>
+<div class="ttc" id="class_ncurses_html_aa3e9f83b3eeb169ffb0ad9b506270096"><div class="ttname"><a href="../../d6/d57/class_ncurses.html#aa3e9f83b3eeb169ffb0ad9b506270096">Ncurses::eventManagment</a></div><div class="ttdeci">virtual int eventManagment()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/_ncurses_8cpp_source.html#l00078">Ncurses.cpp:78</a></div></div>
+<div class="ttc" id="class_a_component_html"><div class="ttname"><a href="../../d1/db4/class_a_component.html">AComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dea/_a_component_8hpp_source.html#l00027">AComponent.hpp:27</a></div></div>
+<div class="ttc" id="curses_8h_html_a4534b577b74a58b0f4b7be027af664e0"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a4534b577b74a58b0f4b7be027af664e0">COLOR_YELLOW</a></div><div class="ttdeci">#define COLOR_YELLOW</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00262">curses.h:262</a></div></div>
+<div class="ttc" id="struct__win__st_html"><div class="ttname"><a href="../../df/ddb/struct__win__st.html">_win_st</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00414">curses.h:414</a></div></div>
+<div class="ttc" id="curses_8h_html_aba2a7fe77a7501e5844370eec0185207"><div class="ttname"><a href="../../dd/df4/curses_8h.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a></div><div class="ttdeci">#define COLOR_BLACK</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00259">curses.h:259</a></div></div>
+<div class="ttc" id="class_u_i_component_html_a438f72973e16564944af470241d8f15f"><div class="ttname"><a href="../../d5/d71/class_u_i_component.html#a438f72973e16564944af470241d8f15f">UIComponent::getText</a></div><div class="ttdeci">const std::string &amp; getText() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_u_i_component_8cpp_source.html#l00027">UIComponent.cpp:27</a></div></div>
+<div class="ttc" id="gl_8h_html_a4af680a6c683f88ed67b76f207f2e6e4"><div class="ttname"><a href="../../d2/d61/gl_8h.html#a4af680a6c683f88ed67b76f207f2e6e4">s</a></div><div class="ttdeci">GLdouble s</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d61/gl_8h_source.html#l02038">gl.h:2038</a></div></div>
+<div class="ttc" id="curses_8h_html_a6653a6b2ee1aef2a00e972e114874c78"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a6653a6b2ee1aef2a00e972e114874c78">KEY_RESIZE</a></div><div class="ttdeci">#define KEY_RESIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01514">curses.h:1514</a></div></div>
+<div class="ttc" id="curses_8h_html_aa9bf9932476f82ad0a4994131655b57f"><div class="ttname"><a href="../../dd/df4/curses_8h.html#aa9bf9932476f82ad0a4994131655b57f">A_REVERSE</a></div><div class="ttdeci">#define A_REVERSE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01060">curses.h:1060</a></div></div>
+<div class="ttc" id="namespacencurses_html"><div class="ttname"><a href="../../d6/de7/namespacencurses.html">ncurses</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d0b/_window_8hpp_source.html#l00017">Window.hpp:17</a></div></div>
+<div class="ttc" id="class_ncurses_html_a811ce85a26d52c4b62bedffcaf6f516e"><div class="ttname"><a href="../../d6/d57/class_ncurses.html#a811ce85a26d52c4b62bedffcaf6f516e">Ncurses::init</a></div><div class="ttdeci">virtual void init(const std::string &amp;name, Vector2&lt; int &gt; s, std::stack&lt; AComponent * &gt; cache)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/_ncurses_8cpp_source.html#l00144">Ncurses.cpp:144</a></div></div>
+<div class="ttc" id="glext_8h_html_ae84541b4f3d8e1ea24ec0f466a8c568b"><div class="ttname"><a href="../../dc/dd2/glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">string</a></div><div class="ttdeci">GLsizei const GLchar *const * string</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/glext_8h_source.html#l00674">glext.h:674</a></div></div>
+<div class="ttc" id="class_a_component_html_a10bd94cfe7abe3821ccca1696b0045ac"><div class="ttname"><a href="../../d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac">AComponent::getPos</a></div><div class="ttdeci">Vector2&lt; int &gt; const &amp; getPos() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d81/_a_component_8cpp_source.html#l00025">AComponent.cpp:25</a></div></div>
+<div class="ttc" id="class_a_component_html_a64e87ee7599dac2905ea428add45c449"><div class="ttname"><a href="../../d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449">AComponent::getColor</a></div><div class="ttdeci">ComponentColor const &amp; getColor() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d81/_a_component_8cpp_source.html#l00045">AComponent.cpp:45</a></div></div>
+<div class="ttc" id="classncurses_1_1_window_html_a07625850c4cb1a6e4915b348623d7317"><div class="ttname"><a href="../../dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317">ncurses::Window::getWind</a></div><div class="ttdeci">WINDOW * getWind() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db8/_window_8cpp_source.html#l00056">Window.cpp:56</a></div></div>
+<div class="ttc" id="curses_8h_html_a23c70d699a5a775bc2e1ebeb8603f630"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a23c70d699a5a775bc2e1ebeb8603f630">COLOR_BLUE</a></div><div class="ttdeci">#define COLOR_BLUE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00263">curses.h:263</a></div></div>
+<div class="ttc" id="glext_8h_html_a0c0d4701a6c89f4f7f0640715d27ab26"><div class="ttname"><a href="../../dc/dd2/glext_8h.html#a0c0d4701a6c89f4f7f0640715d27ab26">obj</a></div><div class="ttdeci">GLhandleARB obj</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/glext_8h_source.html#l03519">glext.h:3519</a></div></div>
+<div class="ttc" id="curses_8h_html_adf475f0bdb817c2609fc84c56b6579b7"><div class="ttname"><a href="../../dd/df4/curses_8h.html#adf475f0bdb817c2609fc84c56b6579b7">wattron</a></div><div class="ttdeci">#define wattron(win, at)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01145">curses.h:1145</a></div></div>
+<div class="ttc" id="curses_8h_html_a9b44987ffdc2af19b635206b94334b69"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a9b44987ffdc2af19b635206b94334b69">COLOR_WHITE</a></div><div class="ttdeci">#define COLOR_WHITE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00266">curses.h:266</a></div></div>
+<div class="ttc" id="_ncurses_8hpp_html"><div class="ttname"><a href="../../de/d3a/_ncurses_8hpp.html">Ncurses.hpp</a></div></div>
+<div class="ttc" id="class_a_component_html_ab29cf456e841468b939eb5a11804fd3e"><div class="ttname"><a href="../../d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e">AComponent::getSize</a></div><div class="ttdeci">Vector2&lt; int &gt; const &amp; getSize() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d81/_a_component_8cpp_source.html#l00035">AComponent.cpp:35</a></div></div>
+<div class="ttc" id="curses_8h_html_a7bd90267c46f209852e8eb1cac62f0fd"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a7bd90267c46f209852e8eb1cac62f0fd">COLOR_PAIR</a></div><div class="ttdeci">#define COLOR_PAIR(n)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01188">curses.h:1188</a></div></div>
+<div class="ttc" id="class_ncurses_html_ae12387421d11fab55a0e54c9f233f989"><div class="ttname"><a href="../../d6/d57/class_ncurses.html#ae12387421d11fab55a0e54c9f233f989">Ncurses::display</a></div><div class="ttdeci">virtual void display(std::stack&lt; AComponent * &gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/_ncurses_8cpp_source.html#l00091">Ncurses.cpp:91</a></div></div>
+<div class="ttc" id="classncurses_1_1_window_html"><div class="ttname"><a href="../../dd/dba/classncurses_1_1_window.html">ncurses::Window</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d0b/_window_8hpp_source.html#l00018">Window.hpp:18</a></div></div>
+<div class="ttc" id="curses_8h_html_afc9149f5de51bd9ac4f5ebbfa153f018"><div class="ttname"><a href="../../dd/df4/curses_8h.html#afc9149f5de51bd9ac4f5ebbfa153f018">COLOR_GREEN</a></div><div class="ttdeci">#define COLOR_GREEN</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00261">curses.h:261</a></div></div>
+<div class="ttc" id="curses_8h_html_a82573859711fce56f1aa0a76b18a9b18"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a82573859711fce56f1aa0a76b18a9b18">COLOR_CYAN</a></div><div class="ttdeci">#define COLOR_CYAN</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00265">curses.h:265</a></div></div>
+<div class="ttc" id="class_vector2_html"><div class="ttname"><a href="../../d8/dbe/class_vector2.html">Vector2&lt; int &gt;</a></div></div>
+<div class="ttc" id="class_audio_component_html"><div class="ttname"><a href="../../d3/dba/class_audio_component.html">AudioComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d56/_audio_component_8hpp_source.html#l00017">AudioComponent.hpp:17</a></div></div>
+<div class="ttc" id="glext_8h_html_a3824c86dfa50d23068c74eafb87375c2"><div class="ttname"><a href="../../dc/dd2/glext_8h.html#a3824c86dfa50d23068c74eafb87375c2">components</a></div><div class="ttdeci">GLenum GLenum GLuint components</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/glext_8h_source.html#l07591">glext.h:7591</a></div></div>
+<div class="ttc" id="class_vector2_html_a78fa1f2ed5e261c7fbeb8f3536a1ee34"><div class="ttname"><a href="../../d8/dbe/class_vector2.html#a78fa1f2ed5e261c7fbeb8f3536a1ee34">Vector2::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d12/_vector2_8hpp_source.html#l00019">Vector2.hpp:19</a></div></div>
+<div class="ttc" id="gl_8h_html_a9a82cf3caff84cabc4598e2619faac17"><div class="ttname"><a href="../../d2/d61/gl_8h.html#a9a82cf3caff84cabc4598e2619faac17">width</a></div><div class="ttdeci">GLint GLint GLsizei width</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d61/gl_8h_source.html#l01545">gl.h:1545</a></div></div>
+<div class="ttc" id="class_ncurses_html_a41e6b2ae54d257c26274a3be71fa749e"><div class="ttname"><a href="../../d6/d57/class_ncurses.html#a41e6b2ae54d257c26274a3be71fa749e">Ncurses::destroy</a></div><div class="ttdeci">virtual void destroy()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/_ncurses_8cpp_source.html#l00218">Ncurses.cpp:218</a></div></div>
+<div class="ttc" id="class_u_i_component_html"><div class="ttname"><a href="../../d5/d71/class_u_i_component.html">UIComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da4/_u_i_component_8hpp_source.html#l00020">UIComponent.hpp:20</a></div></div>
+<div class="ttc" id="begin__code_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="../../d1/d90/begin__code_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d90/begin__code_8h_source.html#l00143">begin_code.h:143</a></div></div>
+<div class="ttc" id="class_ncurses_html_a4e1398b106232b35e3c034c0ec7fd0ae"><div class="ttname"><a href="../../d6/d57/class_ncurses.html#a4e1398b106232b35e3c034c0ec7fd0ae">Ncurses::Ncurses</a></div><div class="ttdeci">Ncurses(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/_ncurses_8cpp_source.html#l00006">Ncurses.cpp:6</a></div></div>
+<div class="ttc" id="curses_8h_html_a4099aa2f7af5e12c2e5eea277cac7391"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a4099aa2f7af5e12c2e5eea277cac7391">mvwaddch</a></div><div class="ttdeci">#define mvwaddch(win, y, x, ch)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01244">curses.h:1244</a></div></div>
+<div class="ttc" id="class_game_component_html_aa7c6c3d942ecdbee7cb9cb4fc6e282f4"><div class="ttname"><a href="../../df/d75/class_game_component.html#aa7c6c3d942ecdbee7cb9cb4fc6e282f4">GameComponent::getSpriteText</a></div><div class="ttdeci">char const &amp; getSpriteText() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d4f/_game_component_8cpp_source.html#l00025">GameComponent.cpp:25</a></div></div>
+<div class="ttc" id="curses_8h_html_aff606fb64ff89d5982673319bab86b19"><div class="ttname"><a href="../../dd/df4/curses_8h.html#aff606fb64ff89d5982673319bab86b19">clear</a></div><div class="ttdeci">#define clear()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01210">curses.h:1210</a></div></div>
+<div class="ttc" id="classncurses_1_1_window_html_a6741ca1daf9c1c1eb2f7a290b845911d"><div class="ttname"><a href="../../dd/dba/classncurses_1_1_window.html#a6741ca1daf9c1c1eb2f7a290b845911d">ncurses::Window::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db8/_window_8cpp_source.html#l00060">Window.cpp:60</a></div></div>
+<div class="ttc" id="glext_8h_html_a3d1e3edfcf61ca2d831883e1afbad89e"><div class="ttname"><a href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a></div><div class="ttdeci">GLsizeiptr size</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/glext_8h_source.html#l00523">glext.h:523</a></div></div>
+<div class="ttc" id="gl_8h_html_aa352f2804b9902ac30769c00dde75d5f"><div class="ttname"><a href="../../d2/d61/gl_8h.html#aa352f2804b9902ac30769c00dde75d5f">height</a></div><div class="ttdeci">GLint GLint GLsizei GLsizei height</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d61/gl_8h_source.html#l01545">gl.h:1545</a></div></div>
+<div class="ttc" id="curses_8h_html_ad86358bf19927183dd7b4ae215a29731"><div class="ttname"><a href="../../dd/df4/curses_8h.html#ad86358bf19927183dd7b4ae215a29731">COLOR_RED</a></div><div class="ttdeci">#define COLOR_RED</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00260">curses.h:260</a></div></div>
+<div class="ttc" id="curses_8h_html_a69402876ce6099a41bc3a3ce2b5690de"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a69402876ce6099a41bc3a3ce2b5690de">box</a></div><div class="ttdeci">#define box(win, v, h)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01169">curses.h:1169</a></div></div>
+<div class="ttc" id="curses_8h_html_a95d95f6f767f2b2378a1a2242e34d8ae"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a95d95f6f767f2b2378a1a2242e34d8ae">A_BOLD</a></div><div class="ttdeci">#define A_BOLD</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01063">curses.h:1063</a></div></div>
+<div class="ttc" id="curses_8h_html_a8deb0beccea721b35bdb1b4f7264fe75"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a8deb0beccea721b35bdb1b4f7264fe75">COLOR_MAGENTA</a></div><div class="ttdeci">#define COLOR_MAGENTA</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l00264">curses.h:264</a></div></div>
+<div class="ttc" id="class_game_component_html"><div class="ttname"><a href="../../df/d75/class_game_component.html">GameComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/_game_component_8hpp_source.html#l00018">GameComponent.hpp:18</a></div></div>
+<div class="ttc" id="curses_8h_html_a0a174c12238483be2c27b2c5ab5ac1a5"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a0a174c12238483be2c27b2c5ab5ac1a5">timeout</a></div><div class="ttdeci">#define timeout(delay)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01236">curses.h:1236</a></div></div>
+<div class="ttc" id="curses_8h_html_af06d804ba4b13a2086f028475c0786f4"><div class="ttname"><a href="../../dd/df4/curses_8h.html#af06d804ba4b13a2086f028475c0786f4">getch</a></div><div class="ttdeci">#define getch()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01218">curses.h:1218</a></div></div>
+<div class="ttc" id="class_ncurses_html_a4197da9eb0dafba570c2f60a6ce0124e"><div class="ttname"><a href="../../d6/d57/class_ncurses.html#a4197da9eb0dafba570c2f60a6ce0124e">Ncurses::~Ncurses</a></div><div class="ttdeci">virtual ~Ncurses()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d50/_ncurses_8cpp_source.html#l00012">Ncurses.cpp:12</a></div></div>
+<div class="ttc" id="curses_8h_html_a79af28443525d4cccad45d58d60911ad"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad">refresh</a></div><div class="ttdeci">#define refresh()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01231">curses.h:1231</a></div></div>
+<div class="ttc" id="curses_8h_html_a5af6edf2df576b4689c93d5ebe99ee45"><div class="ttname"><a href="../../dd/df4/curses_8h.html#a5af6edf2df576b4689c93d5ebe99ee45">wattroff</a></div><div class="ttdeci">#define wattroff(win, at)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df4/curses_8h_source.html#l01146">curses.h:1146</a></div></div>
+<div class="ttc" id="glext_8h_html_aaced7cfc21e7d37775d6921bb8177239"><div class="ttname"><a href="../../dc/dd2/glext_8h.html#aaced7cfc21e7d37775d6921bb8177239">name</a></div><div class="ttdeci">GLuint const GLchar * name</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/glext_8h_source.html#l00646">glext.h:646</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_c85d3e3c5052e9ad9ce18c6863244a25.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_7c3c4ed1fcc33ab13d6d607a61c46352.html">ncurses</a></li><li class="navelem"><a class="el" href="../../d3/d50/_ncurses_8cpp.html">Ncurses.cpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

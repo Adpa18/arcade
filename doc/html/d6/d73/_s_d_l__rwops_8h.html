@@ -1,0 +1,1027 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Arcade: Référence du fichier /home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_rwops.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d6/d73/_s_d_l__rwops_8h.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier SDL_rwops.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h_source.html">SDL_stdinc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d2d/_s_d_l__error_8h_source.html">SDL_error.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d90/begin__code_8h_source.html">begin_code.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2e/close__code_8h_source.html">close_code.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de SDL_rwops.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/da3/_s_d_l__rwops_8h__incl.png" border="0" usemap="#_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__rwops_8h" alt=""/></div>
+<map name="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__rwops_8h" id="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__rwops_8h">
+<area shape="rect" id="node2" href="../../d9/d24/_s_d_l__stdinc_8h.html" title="SDL_stdinc.h" alt="" coords="680,184,781,211"/>
+<area shape="rect" id="node5" href="../../d1/d90/begin__code_8h.html" title="begin_code.h" alt="" coords="32,408,131,435"/>
+<area shape="rect" id="node6" href="../../d0/d2e/close__code_8h.html" title="close_code.h" alt="" coords="1379,408,1477,435"/>
+<area shape="rect" id="node19" href="../../df/d2d/_s_d_l__error_8h.html" title="SDL_error.h" alt="" coords="726,109,818,136"/>
+<area shape="rect" id="node3" href="../../d1/d8f/_s_d_l__config_8h.html" title="SDL_config.h" alt="" coords="1149,259,1251,285"/>
+<area shape="rect" id="node4" href="../../d4/d81/_s_d_l__platform_8h.html" title="SDL_platform.h" alt="" coords="1143,333,1257,360"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d95/_s_d_l__rwops_8h__dep__incl.png" border="0" usemap="#_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__rwops_8hdep" alt=""/></div>
+<map name="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__rwops_8hdep" id="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l__rwops_8hdep">
+<area shape="rect" id="node2" href="../../d3/d78/_s_d_l__audio_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_audio.h" alt="" coords="231,213,406,269"/>
+<area shape="rect" id="node3" href="../../de/ddc/_s_d_l_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL.h" alt="" coords="414,733,578,789"/>
+<area shape="rect" id="node14" href="../../d5/d41/_s_d_l__rect_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_rect.h" alt="" coords="774,109,940,165"/>
+<area shape="rect" id="node26" href="../../d4/d6d/_s_d_l__surface_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_surface.h" alt="" coords="958,213,1145,269"/>
+<area shape="rect" id="node27" href="../../d0/d47/_s_d_l__gamecontroller_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_gamecontroller.h" alt="" coords="1423,525,1651,581"/>
+<area shape="rect" id="node4" href="../../dd/d12/_open_g_l_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/openGL/OpenGL.hpp" alt="" coords="37,963,202,1019"/>
+<area shape="rect" id="node6" href="../../d1/d40/_sdl2_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/sdl2/Sdl2.hpp" alt="" coords="242,963,389,1019"/>
+<area shape="rect" id="node8" href="../../d5/d9d/_s_d_l__image_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_image.h" alt="" coords="30,845,209,901"/>
+<area shape="rect" id="node9" href="../../dd/d3b/_s_d_l__test_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test.h" alt="" coords="584,1075,749,1131"/>
+<area shape="rect" id="node10" href="../../dc/dc7/_s_d_l__test__common_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_common.h" alt="" coords="764,956,928,1027"/>
+<area shape="rect" id="node11" href="../../d4/d55/_s_d_l__test__images_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_images.h" alt="" coords="474,837,638,908"/>
+<area shape="rect" id="node12" href="../../d8/d59/_s_d_l__test__compare_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_compare.h" alt="" coords="524,956,688,1027"/>
+<area shape="rect" id="node13" href="../../dc/d92/_s_d_l__ttf_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_ttf.h" alt="" coords="234,845,398,901"/>
+<area shape="rect" id="node5" href="../../d6/d93/_open_g_l_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/openGL/OpenGL.cpp" alt="" coords="37,1075,202,1131"/>
+<area shape="rect" id="node7" href="../../d5/de5/_sdl2_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/sdl2/Sdl2.cpp" alt="" coords="242,1075,389,1131"/>
+<area shape="rect" id="node15" href="../../dc/d64/_s_d_l__video_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_video.h" alt="" coords="708,317,883,373"/>
+<area shape="rect" id="node23" href="../../d6/d30/_s_d_l__render_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_render.h" alt="" coords="206,421,385,477"/>
+<area shape="rect" id="node24" href="../../dc/d20/_s_d_l__shape_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_shape.h" alt="" coords="1345,421,1524,477"/>
+<area shape="rect" id="node16" href="../../d9/d42/_s_d_l__events_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_events.h" alt="" coords="956,629,1139,685"/>
+<area shape="rect" id="node17" href="../../d3/d07/_s_d_l__keyboard_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_keyboard.h" alt="" coords="562,421,758,477"/>
+<area shape="rect" id="node18" href="../../d9/d7c/_s_d_l__system_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_system.h" alt="" coords="513,525,700,581"/>
+<area shape="rect" id="node19" href="../../d5/d62/_s_d_l__mouse_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_mouse.h" alt="" coords="1216,525,1399,581"/>
+<area shape="rect" id="node20" href="../../de/da1/_s_d_l__gesture_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_gesture.h" alt="" coords="954,525,1141,581"/>
+<area shape="rect" id="node21" href="../../da/dc2/_s_d_l__touch_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_touch.h" alt="" coords="1095,421,1270,477"/>
+<area shape="rect" id="node22" href="../../da/d36/_s_d_l__messagebox_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_messagebox.h" alt="" coords="460,629,678,685"/>
+<area shape="rect" id="node25" href="../../de/df3/_s_d_l__syswm_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_syswm.h" alt="" coords="834,421,1019,477"/>
+</map>
+</div>
+</div>
+<p><a href="../../d6/d73/_s_d_l__rwops_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abefd1a35086e97620beffc2c069bd97d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#abefd1a35086e97620beffc2c069bd97d">SDL_RWOPS_UNKNOWN</a>&#160;&#160;&#160;0   /* Unknown <a class="el" href="../../dc/dd2/glext_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> <a class="el" href="../../d2/d61/gl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a> */</td></tr>
+<tr class="separator:abefd1a35086e97620beffc2c069bd97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad979b58d7905cfd8af0bab9ed97c1685"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ad979b58d7905cfd8af0bab9ed97c1685">SDL_RWOPS_WINFILE</a>&#160;&#160;&#160;1   /* Win32 file */</td></tr>
+<tr class="separator:ad979b58d7905cfd8af0bab9ed97c1685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054a717fd0b1a2f175e2e822e1ecc67d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a054a717fd0b1a2f175e2e822e1ecc67d">SDL_RWOPS_STDFILE</a>&#160;&#160;&#160;2   /* Stdio file */</td></tr>
+<tr class="separator:a054a717fd0b1a2f175e2e822e1ecc67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e973a8b9f9c6cae33f2870c9f76b7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ad1e973a8b9f9c6cae33f2870c9f76b7d">SDL_RWOPS_JNIFILE</a>&#160;&#160;&#160;3   /* Android asset */</td></tr>
+<tr class="separator:ad1e973a8b9f9c6cae33f2870c9f76b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1120765c20af356803b2beb6709e6749"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a1120765c20af356803b2beb6709e6749">SDL_RWOPS_MEMORY</a>&#160;&#160;&#160;4   /* Memory <a class="el" href="../../dc/dd2/glext_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> */</td></tr>
+<tr class="separator:a1120765c20af356803b2beb6709e6749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145dd63b72548f37e2fdd9de8bf15bbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a145dd63b72548f37e2fdd9de8bf15bbc">SDL_RWOPS_MEMORY_RO</a>&#160;&#160;&#160;5   /* Read-Only memory <a class="el" href="../../dc/dd2/glext_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> */</td></tr>
+<tr class="separator:a145dd63b72548f37e2fdd9de8bf15bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac028b032bb8230df64bc6284e04789f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ac028b032bb8230df64bc6284e04789f5">RW_SEEK_SET</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ac028b032bb8230df64bc6284e04789f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba5f3b60c197def370ffa2ca1ab1348d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#aba5f3b60c197def370ffa2ca1ab1348d">RW_SEEK_CUR</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aba5f3b60c197def370ffa2ca1ab1348d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf141faabd1b8f2ec3c03cf76eaf553"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a6cf141faabd1b8f2ec3c03cf76eaf553">RW_SEEK_END</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a6cf141faabd1b8f2ec3c03cf76eaf553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Read/write macros</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Macros to easily read and write from an <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> structure. </p>
+</div></td></tr>
+<tr class="memitem:a7b20df31b72d697ab65fba60cfe93df9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a7b20df31b72d697ab65fba60cfe93df9">SDL_RWsize</a>(ctx)              &#160;&#160;&#160;(ctx)-&gt;<a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>(ctx)</td></tr>
+<tr class="separator:a7b20df31b72d697ab65fba60cfe93df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21053fbfbd96536cb7b9404a12f66822"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a21053fbfbd96536cb7b9404a12f66822">SDL_RWseek</a>(ctx,  <a class="el" href="../../dc/dd2/glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>,  whence)&#160;&#160;&#160;(ctx)-&gt;seek(ctx, <a class="el" href="../../dc/dd2/glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>, whence)</td></tr>
+<tr class="separator:a21053fbfbd96536cb7b9404a12f66822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f28139d5e47358d4ef7011de8e00a02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a4f28139d5e47358d4ef7011de8e00a02">SDL_RWtell</a>(ctx)              &#160;&#160;&#160;(ctx)-&gt;seek(ctx, 0, <a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#aba5f3b60c197def370ffa2ca1ab1348d">RW_SEEK_CUR</a>)</td></tr>
+<tr class="separator:a4f28139d5e47358d4ef7011de8e00a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2638c84bb790ed15d99b38ce43230a12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a2638c84bb790ed15d99b38ce43230a12">SDL_RWread</a>(ctx,  ptr,  <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>,  <a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)  &#160;&#160;&#160;(ctx)-&gt;read(ctx, ptr, <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)</td></tr>
+<tr class="separator:a2638c84bb790ed15d99b38ce43230a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83549e70a4a09a1d10c7a1b14b5cbdf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a83549e70a4a09a1d10c7a1b14b5cbdf4">SDL_RWwrite</a>(ctx,  ptr,  <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>,  <a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)&#160;&#160;&#160;(ctx)-&gt;write(ctx, ptr, <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)</td></tr>
+<tr class="separator:a83549e70a4a09a1d10c7a1b14b5cbdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4af764fde3da17a04f018b06390728"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#acd4af764fde3da17a04f018b06390728">SDL_RWclose</a>(ctx)            &#160;&#160;&#160;(ctx)-&gt;close(ctx)</td></tr>
+<tr class="separator:acd4af764fde3da17a04f018b06390728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:af758c42c576a0612bdf298c5823a5fe5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#af758c42c576a0612bdf298c5823a5fe5">SDL_RWops</a></td></tr>
+<tr class="separator:af758c42c576a0612bdf298c5823a5fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a02d04e13c85cd28706b8c3881c32dd46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a02d04e13c85cd28706b8c3881c32dd46">SDL_AllocRW</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:a02d04e13c85cd28706b8c3881c32dd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c87c7bed186ea1a98531164ff1acfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ac4c87c7bed186ea1a98531164ff1acfa">SDL_FreeRW</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *area)</td></tr>
+<tr class="separator:ac4c87c7bed186ea1a98531164ff1acfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">RWFrom functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Functions to create <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> structures from various data streams. </p>
+</div></td></tr>
+<tr class="memitem:aef7e843c3486bd1770667a594aa0b439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#aef7e843c3486bd1770667a594aa0b439">SDL_RWFromFile</a> (<a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *file, <a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *<a class="el" href="../../dc/dd2/glext_8h.html#a1e71d9c196e4683cc06c4b54d53f7ef5">mode</a>)</td></tr>
+<tr class="separator:aef7e843c3486bd1770667a594aa0b439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e066cae0672b16506a4204bb719e95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a53e066cae0672b16506a4204bb719e95">SDL_RWFromFP</a> (FILE *fp, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a> autoclose)</td></tr>
+<tr class="separator:a53e066cae0672b16506a4204bb719e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f34841ce63d08597477558ffc0278e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ae6f34841ce63d08597477558ffc0278e">SDL_RWFromMem</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *mem, <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:ae6f34841ce63d08597477558ffc0278e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b4be80c4647e8a473b6b9fed03b1a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a51b4be80c4647e8a473b6b9fed03b1a6">SDL_RWFromConstMem</a> (<a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *mem, <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>)</td></tr>
+<tr class="separator:a51b4be80c4647e8a473b6b9fed03b1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Read endian functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Read an item of the specified endianness and return in native format. </p>
+</div></td></tr>
+<tr class="memitem:ab864094eb6b80fbf0c77d34ecdde7907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ab864094eb6b80fbf0c77d34ecdde7907">SDL_ReadU8</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:ab864094eb6b80fbf0c77d34ecdde7907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7274f5c4b6f22a6b742ec6ef4f9d390b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a7274f5c4b6f22a6b742ec6ef4f9d390b">SDL_ReadLE16</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:a7274f5c4b6f22a6b742ec6ef4f9d390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cdf85a50e40dc58536930429b7b4d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a3cdf85a50e40dc58536930429b7b4d09">SDL_ReadBE16</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:a3cdf85a50e40dc58536930429b7b4d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8320334c299a3631fd6beb9937c30f04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a8320334c299a3631fd6beb9937c30f04">SDL_ReadLE32</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:a8320334c299a3631fd6beb9937c30f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af023e134e3ae87b1595306e5faeaab76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#af023e134e3ae87b1595306e5faeaab76">SDL_ReadBE32</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:af023e134e3ae87b1595306e5faeaab76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e5d9b56874b8bd3a8a6a0c5393c33d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#af7e5d9b56874b8bd3a8a6a0c5393c33d">SDL_ReadLE64</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:af7e5d9b56874b8bd3a8a6a0c5393c33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4917dc584d162bc5f28b63843557214e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a4917dc584d162bc5f28b63843557214e">SDL_ReadBE64</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a72e0fdf0f845ded60b1fada9e9195cd7">src</a>)</td></tr>
+<tr class="separator:a4917dc584d162bc5f28b63843557214e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Write endian functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Write an item of native format to the specified endianness. </p>
+</div></td></tr>
+<tr class="memitem:a07c817f8360ddc8c8983d12373306555"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a07c817f8360ddc8c8983d12373306555">SDL_WriteU8</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:a07c817f8360ddc8c8983d12373306555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a7df8d967c5751e3f0974743b9c2d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#aa4a7df8d967c5751e3f0974743b9c2d4">SDL_WriteLE16</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:aa4a7df8d967c5751e3f0974743b9c2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84ea778a5f8f76cd73a52216c2c08f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ab84ea778a5f8f76cd73a52216c2c08f5">SDL_WriteBE16</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:ab84ea778a5f8f76cd73a52216c2c08f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f37961925773fe8b06ea09ed144568"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a84f37961925773fe8b06ea09ed144568">SDL_WriteLE32</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:a84f37961925773fe8b06ea09ed144568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5debf04eeed819018ddd9a2f70d32c89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a5debf04eeed819018ddd9a2f70d32c89">SDL_WriteBE32</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:a5debf04eeed819018ddd9a2f70d32c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f9b45fbb3bf4a40f3f308419307e6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#ae4f9b45fbb3bf4a40f3f308419307e6b">SDL_WriteLE64</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:ae4f9b45fbb3bf4a40f3f308419307e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0422f79e1889750cf99310e968cb76fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#a0422f79e1889750cf99310e968cb76fc">SDL_WriteBE64</a> (<a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *<a class="el" href="../../dc/dd2/glext_8h.html#a92034251bfd455d524a9b5610cddba00">dst</a>, <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> <a class="el" href="../../dc/dd2/glext_8h.html#a8ad81492d410ff2ac11f754f4042150f">value</a>)</td></tr>
+<tr class="separator:a0422f79e1889750cf99310e968cb76fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>This file provides a general interface for SDL to read and write data streams. It can easily be extended to files, memory, etc. </p>
+
+<p>Définition dans le fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="aba5f3b60c197def370ffa2ca1ab1348d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RW_SEEK_CUR&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Seek relative to current read point </p>
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00175">175</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cf141faabd1b8f2ec3c03cf76eaf553"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RW_SEEK_END&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Seek relative to the end of data </p>
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00176">176</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac028b032bb8230df64bc6284e04789f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RW_SEEK_SET&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Seek from the beginning of data </p>
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00174">174</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd4af764fde3da17a04f018b06390728"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWclose</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ctx</td><td>)</td>
+          <td>&#160;&#160;&#160;(ctx)-&gt;close(ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00189">189</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1e973a8b9f9c6cae33f2870c9f76b7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWOPS_JNIFILE&#160;&#160;&#160;3   /* Android asset */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00045">45</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1120765c20af356803b2beb6709e6749"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWOPS_MEMORY&#160;&#160;&#160;4   /* Memory <a class="el" href="../../dc/dd2/glext_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00046">46</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a145dd63b72548f37e2fdd9de8bf15bbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWOPS_MEMORY_RO&#160;&#160;&#160;5   /* Read-Only memory <a class="el" href="../../dc/dd2/glext_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00047">47</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a054a717fd0b1a2f175e2e822e1ecc67d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWOPS_STDFILE&#160;&#160;&#160;2   /* Stdio file */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00044">44</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abefd1a35086e97620beffc2c069bd97d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWOPS_UNKNOWN&#160;&#160;&#160;0   /* Unknown <a class="el" href="../../dc/dd2/glext_8h.html#a10d3bc96cdfc1d478f52c13d5ffd9316">stream</a> <a class="el" href="../../d2/d61/gl_8h.html#ad5ddf6fca7b585646515660e810e0188">type</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00042">42</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad979b58d7905cfd8af0bab9ed97c1685"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWOPS_WINFILE&#160;&#160;&#160;1   /* Win32 file */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00043">43</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2638c84bb790ed15d99b38ce43230a12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWread</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ctx, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ctx)-&gt;read(ctx, ptr, <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00187">187</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a21053fbfbd96536cb7b9404a12f66822"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWseek</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ctx, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/dd2/glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">whence&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ctx)-&gt;seek(ctx, <a class="el" href="../../dc/dd2/glext_8h.html#ac915cd848f42b26af51745f204a3b9af">offset</a>, whence)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00185">185</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b20df31b72d697ab65fba60cfe93df9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWsize</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ctx</td><td>)</td>
+          <td>&#160;&#160;&#160;(ctx)-&gt;<a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>(ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00184">184</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f28139d5e47358d4ef7011de8e00a02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWtell</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ctx</td><td>)</td>
+          <td>&#160;&#160;&#160;(ctx)-&gt;seek(ctx, 0, <a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html#aba5f3b60c197def370ffa2ca1ab1348d">RW_SEEK_CUR</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00186">186</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83549e70a4a09a1d10c7a1b14b5cbdf4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_RWwrite</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ctx, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(ctx)-&gt;write(ctx, ptr, <a class="el" href="../../dc/dd2/glext_8h.html#a3d1e3edfcf61ca2d831883e1afbad89e">size</a>, <a class="el" href="../../dc/dd2/glext_8h.html#ae2b4646468bc89d0ba646f5cf838e051">n</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html#l00188">188</a> du fichier <a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a class="anchor" id="af758c42c576a0612bdf298c5823a5fe5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>  <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is the read/write operation structure &ndash; very basic. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a02d04e13c85cd28706b8c3881c32dd46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_AllocRW </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac4c87c7bed186ea1a98531164ff1acfa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_FreeRW </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>area</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3cdf85a50e40dc58536930429b7b4d09"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadBE16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af023e134e3ae87b1595306e5faeaab76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadBE32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4917dc584d162bc5f28b63843557214e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadBE64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7274f5c4b6f22a6b742ec6ef4f9d390b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadLE16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8320334c299a3631fd6beb9937c30f04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadLE32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af7e5d9b56874b8bd3a8a6a0c5393c33d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadLE64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab864094eb6b80fbf0c77d34ecdde7907"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_ReadU8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a51b4be80c4647e8a473b6b9fed03b1a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_RWFromConstMem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef7e843c3486bd1770667a594aa0b439"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_RWFromFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da6/term__entry_8h.html#a57bd63ce7f9a353488880e3de6692d5a">const</a> char *&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53e066cae0672b16506a4204bb719e95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_RWFromFP </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a8fca68df0f976765230fe589a7c7733b">SDL_bool</a>&#160;</td>
+          <td class="paramname"><em>autoclose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6f34841ce63d08597477558ffc0278e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a>* <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_RWFromMem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab84ea778a5f8f76cd73a52216c2c08f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteBE16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5debf04eeed819018ddd9a2f70d32c89"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteBE32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0422f79e1889750cf99310e968cb76fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteBE64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa4a7df8d967c5751e3f0974743b9c2d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteLE16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a31fcc0a076c9068668173ee26d33e42b">Uint16</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a84f37961925773fe8b06ea09ed144568"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteLE32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4f9b45fbb3bf4a40f3f308419307e6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteLE64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#ac006cf2bd55a42a9cc8ae9f123aa7e13">Uint64</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07c817f8360ddc8c8983d12373306555"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> size_t <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WriteU8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d3b/struct_s_d_l___r_wops.html">SDL_RWops</a> *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#a2944638813a090aa23e62f4da842c3e2">Uint8</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li><li class="navelem"><a class="el" href="../../dir_c537e47dfa3d62f337d4977e13f846bf.html">sdl2</a></li><li class="navelem"><a class="el" href="../../dir_1b3cf7022841f77c5748cad2505e2437.html">include</a></li><li class="navelem"><a class="el" href="../../d6/d73/_s_d_l__rwops_8h.html">SDL_rwops.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

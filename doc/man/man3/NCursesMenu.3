@@ -1,0 +1,482 @@
+.TH "NCursesMenu" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesMenu \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesm\&.h>\fP
+.PP
+Est dérivée de \fBNCursesPanel\fP\&.
+.PP
+Dérivée par \fBNCursesUserMenu< T >\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesMenu\fP (\fBNCursesMenuItem\fP *Items[], \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Items=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesMenu\fP (\fBNCursesMenuItem\fP *Items[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0, \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Items=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesMenu\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesMenu\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesMenu\fP (\fBconst\fP \fBNCursesMenu\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesMenu\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP & \fBsubWindow\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSubWindow\fP (\fBNCursesWindow\fP &sub)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetItems\fP (\fBNCursesMenuItem\fP *Items[])"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBunpost\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBpost\fP (\fBbool\fP flag=\fBTRUE\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBscale\fP (\fBint\fP &mrows, \fBint\fP &mcols) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_format\fP (\fBint\fP mrows, \fBint\fP mcols)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBmenu_format\fP (\fBint\fP &rows, \fBint\fP &ncols)"
+.br
+.ti -1c
+.RI "\fBNCursesMenuItem\fP * \fBitems\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBcount\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBNCursesMenuItem\fP * \fBcurrent_item\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBmark\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_mark\fP (\fBconst\fP char *\fBmarker\fP)"
+.br
+.ti -1c
+.RI "char * \fBpattern\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBbool\fP \fBset_pattern\fP (\fBconst\fP char *pat)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBsetDefaultAttributes\fP ()"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBback\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBfore\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBgrey\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBset_background\fP (\fBchtype\fP \fBa\fP)"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBset_foreground\fP (\fBchtype\fP \fBa\fP)"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fBset_grey\fP (\fBchtype\fP \fBa\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBoptions_on\fP (\fBMenu_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBoptions_off\fP (\fBMenu_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBMenu_Options\fP \fBoptions\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_options\fP (\fBMenu_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBpad\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_pad\fP (\fBint\fP padch)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBposition_cursor\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_current\fP (\fBNCursesMenuItem\fP &I)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtop_row\fP (\fBvoid\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_top_row\fP (\fBint\fP \fBrow\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSpacing\fP (\fBint\fP spc_description, \fBint\fP spc_rows, \fBint\fP spc_columns)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBSpacing\fP (\fBint\fP &spc_description, \fBint\fP &spc_rows, \fBint\fP &spc_columns) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBframe\fP (\fBconst\fP char *title=\fBNULL\fP, \fBconst\fP char *btitle=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBboldframe\fP (\fBconst\fP char *title=\fBNULL\fP, \fBconst\fP char *btitle=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBlabel\fP (\fBconst\fP char *topLabel, \fBconst\fP char *bottomLabel)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Menu_Init\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Menu_Termination\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Item_Init\fP (\fBNCursesMenuItem\fP &\fBitem\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Item_Termination\fP (\fBNCursesMenuItem\fP &\fBitem\fP)"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBvirtualize\fP (\fBint\fP \fBc\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesMenuItem\fP * \fBoperator[]\fP (\fBint\fP i) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBNCursesMenuItem\fP * \fBoperator()\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Request_Denied\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Not_Selectable\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_No_Match\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Unknown_Command\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.in -1c
+.SS "Fonctions membres publiques statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBconst\fP char * \fBrequest_name\fP (\fBint\fP \fBc\fP)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBset_user\fP (\fBvoid\fP *user)"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBget_user\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBInitMenu\fP (\fBNCursesMenuItem\fP *\fBmenu\fP[], \fBbool\fP with_frame, \fBbool\fP autoDeleteItems)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBOnError\fP (\fBint\fP \fBerr\fP) \fBconst\fP \fBTHROW2\fP(\fBNCursesException\fP \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBdriver\fP (\fBint\fP \fBc\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesMenu\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBMENU\fP * \fBmenu\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBNCursesMenuException\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_mnu_init\fP (\fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_mnu_term\fP (\fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_itm_init\fP (\fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_itm_term\fP (\fBMENU\fP *)"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 202 du fichier cursesm\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesMenu::NCursesMenu (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 266 du fichier cursesm\&.h\&.
+.SS "NCursesMenu::NCursesMenu (\fBNCursesMenuItem\fP * Items[], \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Items = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 282 du fichier cursesm\&.h\&.
+.SS "NCursesMenu::NCursesMenu (\fBNCursesMenuItem\fP * Items[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP, \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Items = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 297 du fichier cursesm\&.h\&.
+.SS "NCursesMenu::NCursesMenu (\fBconst\fP \fBNCursesMenu\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 324 du fichier cursesm\&.h\&.
+.SS "virtual NCursesMenu::~NCursesMenu ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBchtype\fP NCursesMenu::back () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 419 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::boldframe (\fBconst\fP char * title = \fC\fBNULL\fP\fP, \fBconst\fP char * btitle = \fC\fBNULL\fP\fP)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 521 du fichier cursesm\&.h\&.
+.SS "\fBint\fP NCursesMenu::count () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 382 du fichier cursesm\&.h\&.
+.SS "\fBNCursesMenuItem\fP* NCursesMenu::current_item () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 387 du fichier cursesm\&.h\&.
+.SS "virtual \fBint\fP NCursesMenu::driver (\fBint\fP c)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBchtype\fP NCursesMenu::fore () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 424 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::frame (\fBconst\fP char * title = \fC\fBNULL\fP\fP, \fBconst\fP char * btitle = \fC\fBNULL\fP\fP)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 514 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP* NCursesMenu::get_user ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 246 du fichier cursesm\&.h\&.
+.SS "\fBchtype\fP NCursesMenu::grey () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 429 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::InitMenu (\fBNCursesMenuItem\fP * menu[], \fBbool\fP with_frame, \fBbool\fP autoDeleteItems)\fC [protected]\fP"
+
+.SS "\fBNCursesMenuItem\fP* NCursesMenu::items () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 377 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::label (\fBconst\fP char * topLabel, \fBconst\fP char * bottomLabel)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 528 du fichier cursesm\&.h\&.
+.SS "\fBconst\fP char* NCursesMenu::mark () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 392 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::menu_format (\fBint\fP & rows, \fBint\fP & ncols)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 372 du fichier cursesm\&.h\&.
+.SS "virtual \fBvoid\fP NCursesMenu::On_Item_Init (\fBNCursesMenuItem\fP & item)\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_Item_Termination (\fBNCursesMenuItem\fP & item)\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_Menu_Init ()\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_Menu_Termination ()\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_No_Match (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_Not_Selectable (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_Request_Denied (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesMenu::On_Unknown_Command (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "\fBvoid\fP NCursesMenu::OnError (\fBint\fP err) const\fC [inline]\fP, \fC [protected]\fP"
+
+.SS "virtual \fBNCursesMenuItem\fP* NCursesMenu::operator() (\fBvoid\fP)\fC [virtual]\fP"
+
+.SS "\fBNCursesMenu\fP& NCursesMenu::operator= (\fBconst\fP \fBNCursesMenu\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 315 du fichier cursesm\&.h\&.
+.SS "\fBNCursesMenuItem\fP* NCursesMenu::operator[] (\fBint\fP i) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 561 du fichier cursesm\&.h\&.
+.SS "\fBMenu_Options\fP NCursesMenu::options () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 456 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::options_off (\fBMenu_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 452 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::options_on (\fBMenu_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 448 du fichier cursesm\&.h\&.
+.SS "\fBint\fP NCursesMenu::pad () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 464 du fichier cursesm\&.h\&.
+.SS "char* NCursesMenu::pattern () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 407 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::position_cursor () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 473 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::post (\fBbool\fP flag = \fC\fBTRUE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 357 du fichier cursesm\&.h\&.
+.SS "static \fBconst\fP char* NCursesMenu::request_name (\fBint\fP c)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Définition à la ligne 402 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::scale (\fBint\fP & mrows, \fBint\fP & mcols) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 362 du fichier cursesm\&.h\&.
+.SS "\fBchtype\fP NCursesMenu::set_background (\fBchtype\fP a)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 434 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::set_current (\fBNCursesMenuItem\fP & I)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 478 du fichier cursesm\&.h\&.
+.SS "\fBchtype\fP NCursesMenu::set_foreground (\fBchtype\fP a)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 439 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::set_format (\fBint\fP mrows, \fBint\fP mcols)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 367 du fichier cursesm\&.h\&.
+.SS "\fBchtype\fP NCursesMenu::set_grey (\fBchtype\fP a)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 444 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::set_mark (\fBconst\fP char * marker)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 397 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::set_options (\fBMenu_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 460 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::set_pad (\fBint\fP padch)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 468 du fichier cursesm\&.h\&.
+.SS "\fBbool\fP NCursesMenu::set_pattern (\fBconst\fP char * pat)"
+
+.SS "\fBvoid\fP NCursesMenu::set_top_row (\fBint\fP row)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 488 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::set_user (\fBvoid\fP * user)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 240 du fichier cursesm\&.h\&.
+.SS "virtual \fBvoid\fP NCursesMenu::setDefaultAttributes ()\fC [virtual]\fP"
+
+.SS "\fBvoid\fP NCursesMenu::setItems (\fBNCursesMenuItem\fP * Items[])\fC [inline]\fP"
+
+.PP
+Définition à la ligne 347 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::setSpacing (\fBint\fP spc_description, \fBint\fP spc_rows, \fBint\fP spc_columns)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 494 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::setSubWindow (\fBNCursesWindow\fP & sub)"
+
+.SS "\fBvoid\fP NCursesMenu::Spacing (\fBint\fP & spc_description, \fBint\fP & spc_rows, \fBint\fP & spc_columns) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 504 du fichier cursesm\&.h\&.
+.SS "\fBNCursesWindow\fP& NCursesMenu::subWindow () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 338 du fichier cursesm\&.h\&.
+.SS "\fBint\fP NCursesMenu::top_row (\fBvoid\fP) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 483 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::unpost (\fBvoid\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 352 du fichier cursesm\&.h\&.
+.SS "virtual \fBint\fP NCursesMenu::virtualize (\fBint\fP c)\fC [virtual]\fP"
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "\fBvoid\fP _nc_xx_itm_init (\fBMENU\fP *)\fC [friend]\fP"
+
+.SS "\fBvoid\fP _nc_xx_itm_term (\fBMENU\fP *)\fC [friend]\fP"
+
+.SS "\fBvoid\fP _nc_xx_mnu_init (\fBMENU\fP *)\fC [friend]\fP"
+
+.SS "\fBvoid\fP _nc_xx_mnu_term (\fBMENU\fP *)\fC [friend]\fP"
+
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBMENU\fP* NCursesMenu::menu\fC [protected]\fP"
+
+.PP
+Définition à la ligne 205 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenu::NCursesMenuException\fC [protected]\fP"
+\fBValeur initiale :\fP
+.PP
+.nf
+{
+    if (err != E_OK)
+      THROW(new NCursesMenuException (this, err))
+.fi
+.PP
+Définition à la ligne 256 du fichier cursesm\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

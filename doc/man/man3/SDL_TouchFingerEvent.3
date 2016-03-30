@@ -1,0 +1,89 @@
+.TH "SDL_TouchFingerEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_TouchFingerEvent \- Touch finger event structure (event\&.tfinger\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TouchID\fP \fBtouchId\fP"
+.br
+.ti -1c
+.RI "\fBSDL_FingerID\fP \fBfingerId\fP"
+.br
+.ti -1c
+.RI "float \fBx\fP"
+.br
+.ti -1c
+.RI "float \fBy\fP"
+.br
+.ti -1c
+.RI "float \fBdx\fP"
+.br
+.ti -1c
+.RI "float \fBdy\fP"
+.br
+.ti -1c
+.RI "float \fBpressure\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Touch finger event structure (event\&.tfinger\&.*) 
+.PP
+Définition à la ligne 410 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "float SDL_TouchFingerEvent::dx"
+Normalized in the range -1\&.\&.\&.1 
+.PP
+Définition à la ligne 418 du fichier SDL_events\&.h\&.
+.SS "float SDL_TouchFingerEvent::dy"
+Normalized in the range -1\&.\&.\&.1 
+.PP
+Définition à la ligne 419 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_FingerID\fP SDL_TouchFingerEvent::fingerId"
+
+.PP
+Définition à la ligne 415 du fichier SDL_events\&.h\&.
+.SS "float SDL_TouchFingerEvent::pressure"
+Normalized in the range 0\&.\&.\&.1 
+.PP
+Définition à la ligne 420 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TouchFingerEvent::timestamp"
+
+.PP
+Définition à la ligne 413 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_TouchID\fP SDL_TouchFingerEvent::touchId"
+The touch device id 
+.PP
+Définition à la ligne 414 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_TouchFingerEvent::type"
+\fBSDL_FINGERMOTION\fP or \fBSDL_FINGERDOWN\fP or \fBSDL_FINGERUP\fP 
+.PP
+Définition à la ligne 412 du fichier SDL_events\&.h\&.
+.SS "float SDL_TouchFingerEvent::x"
+Normalized in the range 0\&.\&.\&.1 
+.PP
+Définition à la ligne 416 du fichier SDL_events\&.h\&.
+.SS "float SDL_TouchFingerEvent::y"
+Normalized in the range 0\&.\&.\&.1 
+.PP
+Définition à la ligne 417 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

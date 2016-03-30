@@ -1,0 +1,88 @@
+.TH "__DRIframebufferRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIframebufferRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "unsigned char * \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBstride\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBwidth\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBheight\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdev_priv_size\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdev_priv\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Framebuffer information record\&. Used by libGL to communicate information about the framebuffer to the driver's \fC__driCreateNewScreen\fP function\&.
+.PP
+In XFree86, most of this information is derrived from data returned by calling \fCXF86DRIGetDeviceInfo\fP\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+XF86DRIGetDeviceInfo __DRIdisplayRec::createNewScreen __driUtilCreateNewScreen CallCreateNewScreen
+.RE
+.PP
+\fBBogue\fP
+.RS 4
+This structure could be better named\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 652 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "unsigned char* __DRIframebufferRec::base"
+Framebuffer base address in the CPU's address space\&. This value is calculated by calling \fCdrmMap\fP on the framebuffer handle returned by \fCXF86DRIGetDeviceInfo\fP (or a similar function)\&. 
+.PP
+Définition à la ligne 653 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP* __DRIframebufferRec::dev_priv"
+Pointer to the driver's dev-priv structure\&. 
+.PP
+Définition à la ligne 664 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIframebufferRec::dev_priv_size"
+Size of the driver's dev-priv structure\&. 
+.PP
+Définition à la ligne 663 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIframebufferRec::height"
+Pixel height of the framebuffer\&. 
+.PP
+Définition à la ligne 662 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIframebufferRec::size"
+Framebuffer size, in bytes\&. 
+.PP
+Définition à la ligne 659 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIframebufferRec::stride"
+Number of bytes from one line to the next\&. 
+.PP
+Définition à la ligne 660 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIframebufferRec::width"
+Pixel width of the framebuffer\&. 
+.PP
+Définition à la ligne 661 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

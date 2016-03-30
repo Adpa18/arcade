@@ -1,0 +1,63 @@
+.TH "SDL_Keysym" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_Keysym \- The SDL keysym structure, used in key events\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_keyboard\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBSDL_Scancode\fP \fBscancode\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Keycode\fP \fBsym\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBmod\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBunused\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+The SDL keysym structure, used in key events\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+If you are looking for translated character input, see the \fBSDL_TEXTINPUT\fP event\&. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 47 du fichier SDL_keyboard\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint16\fP SDL_Keysym::mod"
+current key modifiers 
+.PP
+Définition à la ligne 51 du fichier SDL_keyboard\&.h\&.
+.SS "\fBSDL_Scancode\fP SDL_Keysym::scancode"
+SDL physical key code - see \fBSDL_Scancode\fP for details 
+.PP
+Définition à la ligne 49 du fichier SDL_keyboard\&.h\&.
+.SS "\fBSDL_Keycode\fP SDL_Keysym::sym"
+SDL virtual key code - see \fBSDL_Keycode\fP for details 
+.PP
+Définition à la ligne 50 du fichier SDL_keyboard\&.h\&.
+.SS "\fBUint32\fP SDL_Keysym::unused"
+
+.PP
+Définition à la ligne 52 du fichier SDL_keyboard\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

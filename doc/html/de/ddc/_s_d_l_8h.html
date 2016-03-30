@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Arcade: Référence du fichier /home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('de/ddc/_s_d_l_8h.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier SDL.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d7/d70/_s_d_l__main_8h_source.html">SDL_main.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h_source.html">SDL_stdinc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d30/_s_d_l__assert_8h_source.html">SDL_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d97/_s_d_l__atomic_8h_source.html">SDL_atomic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d78/_s_d_l__audio_8h_source.html">SDL_audio.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/dee/_s_d_l__clipboard_8h_source.html">SDL_clipboard.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d62/_s_d_l__cpuinfo_8h_source.html">SDL_cpuinfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2b/_s_d_l__endian_8h_source.html">SDL_endian.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d2d/_s_d_l__error_8h_source.html">SDL_error.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d42/_s_d_l__events_8h_source.html">SDL_events.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/da4/_s_d_l__filesystem_8h_source.html">SDL_filesystem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d00/_s_d_l__joystick_8h_source.html">SDL_joystick.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d47/_s_d_l__gamecontroller_8h_source.html">SDL_gamecontroller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d3c/_s_d_l__haptic_8h_source.html">SDL_haptic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/dd3/_s_d_l__hints_8h_source.html">SDL_hints.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dd4/_s_d_l__loadso_8h_source.html">SDL_loadso.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dce/_s_d_l__log_8h_source.html">SDL_log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d36/_s_d_l__messagebox_8h_source.html">SDL_messagebox.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d09/_s_d_l__mutex_8h_source.html">SDL_mutex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d6e/_s_d_l__power_8h_source.html">SDL_power.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d30/_s_d_l__render_8h_source.html">SDL_render.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d73/_s_d_l__rwops_8h_source.html">SDL_rwops.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d7c/_s_d_l__system_8h_source.html">SDL_system.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/ded/_s_d_l__thread_8h_source.html">SDL_thread.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d46/_s_d_l__timer_8h_source.html">SDL_timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/dd5/_s_d_l__version_8h_source.html">SDL_version.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d64/_s_d_l__video_8h_source.html">SDL_video.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d90/begin__code_8h_source.html">begin_code.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2e/close__code_8h_source.html">close_code.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de SDL.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d89/_s_d_l_8h__incl.png" border="0" usemap="#_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l_8h" alt=""/></div>
+<map name="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l_8h" id="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l_8h">
+<area shape="rect" id="node2" href="../../d7/d70/_s_d_l__main_8h.html" title="SDL_main.h" alt="" coords="1525,333,1619,360"/>
+<area shape="rect" id="node3" href="../../d9/d24/_s_d_l__stdinc_8h.html" title="SDL_stdinc.h" alt="" coords="2319,408,2420,435"/>
+<area shape="rect" id="node6" href="../../d1/d90/begin__code_8h.html" title="begin_code.h" alt="" coords="919,632,1017,659"/>
+<area shape="rect" id="node7" href="../../d0/d2e/close__code_8h.html" title="close_code.h" alt="" coords="3735,632,3833,659"/>
+<area shape="rect" id="node20" href="../../d9/d30/_s_d_l__assert_8h.html" title="SDL_assert.h" alt="" coords="4582,408,4685,435"/>
+<area shape="rect" id="node22" href="../../d6/d97/_s_d_l__atomic_8h.html" title="SDL_atomic.h" alt="" coords="3787,333,3893,360"/>
+<area shape="rect" id="node23" href="../../d3/d78/_s_d_l__audio_8h.html" title="SDL_audio.h" alt="" coords="3337,109,3434,136"/>
+<area shape="rect" id="node24" href="../../df/d2d/_s_d_l__error_8h.html" title="SDL_error.h" alt="" coords="2934,333,3026,360"/>
+<area shape="rect" id="node25" href="../../d0/d2b/_s_d_l__endian_8h.html" title="SDL_endian.h" alt="" coords="3608,333,3712,360"/>
+<area shape="rect" id="node26" href="../../d2/d09/_s_d_l__mutex_8h.html" title="SDL_mutex.h" alt="" coords="3279,259,3382,285"/>
+<area shape="rect" id="node27" href="../../d8/ded/_s_d_l__thread_8h.html" title="SDL_thread.h" alt="" coords="3474,184,3577,211"/>
+<area shape="rect" id="node28" href="../../d6/d73/_s_d_l__rwops_8h.html" title="SDL_rwops.h" alt="" coords="3457,259,3559,285"/>
+<area shape="rect" id="node29" href="../../d8/dee/_s_d_l__clipboard_8h.html" title="SDL_clipboard.h" alt="" coords="1137,333,1255,360"/>
+<area shape="rect" id="node30" href="../../d6/d62/_s_d_l__cpuinfo_8h.html" title="SDL_cpuinfo.h" alt="" coords="854,333,962,360"/>
+<area shape="rect" id="node31" href="../../d9/d42/_s_d_l__events_8h.html" title="SDL_events.h" alt="" coords="2478,109,2583,136"/>
+<area shape="rect" id="node32" href="../../dc/d64/_s_d_l__video_8h.html" title="SDL_video.h" alt="" coords="2131,333,2229,360"/>
+<area shape="rect" id="node35" href="../../dd/d00/_s_d_l__joystick_8h.html" title="SDL_joystick.h" alt="" coords="2323,259,2434,285"/>
+<area shape="rect" id="node36" href="../../d0/d47/_s_d_l__gamecontroller_8h.html" title="SDL_gamecontroller.h" alt="" coords="2758,184,2909,211"/>
+<area shape="rect" id="node40" href="../../d4/da4/_s_d_l__filesystem_8h.html" title="Include file for filesystem SDL API functions. " alt="" coords="986,333,1113,360"/>
+<area shape="rect" id="node41" href="../../dc/d3c/_s_d_l__haptic_8h.html" title="The SDL Haptic subsystem allows you to control haptic (force feedback) devices. " alt="" coords="3076,184,3177,211"/>
+<area shape="rect" id="node42" href="../../dd/dd3/_s_d_l__hints_8h.html" title="SDL_hints.h" alt="" coords="1279,333,1374,360"/>
+<area shape="rect" id="node43" href="../../d6/dd4/_s_d_l__loadso_8h.html" title="SDL_loadso.h" alt="" coords="3855,259,3959,285"/>
+<area shape="rect" id="node44" href="../../db/dce/_s_d_l__log_8h.html" title="SDL_log.h" alt="" coords="3917,333,4000,360"/>
+<area shape="rect" id="node45" href="../../da/d36/_s_d_l__messagebox_8h.html" title="SDL_messagebox.h" alt="" coords="1710,259,1850,285"/>
+<area shape="rect" id="node46" href="../../d7/d6e/_s_d_l__power_8h.html" title="SDL_power.h" alt="" coords="1399,333,1500,360"/>
+<area shape="rect" id="node47" href="../../d6/d30/_s_d_l__render_8h.html" title="SDL_render.h" alt="" coords="1531,259,1634,285"/>
+<area shape="rect" id="node48" href="../../d9/d7c/_s_d_l__system_8h.html" title="SDL_system.h" alt="" coords="1767,184,1876,211"/>
+<area shape="rect" id="node49" href="../../de/d46/_s_d_l__timer_8h.html" title="SDL_timer.h" alt="" coords="3634,259,3729,285"/>
+<area shape="rect" id="node50" href="../../d7/dd5/_s_d_l__version_8h.html" title="SDL_version.h" alt="" coords="1643,333,1751,360"/>
+<area shape="rect" id="node4" href="../../d1/d8f/_s_d_l__config_8h.html" title="SDL_config.h" alt="" coords="3240,483,3341,509"/>
+<area shape="rect" id="node5" href="../../d4/d81/_s_d_l__platform_8h.html" title="SDL_platform.h" alt="" coords="3241,557,3354,584"/>
+<area shape="rect" id="node33" href="../../d3/d07/_s_d_l__keyboard_8h.html" title="SDL_keyboard.h" alt="" coords="2078,259,2197,285"/>
+<area shape="rect" id="node34" href="../../d5/d62/_s_d_l__mouse_8h.html" title="SDL_mouse.h" alt="" coords="2743,259,2849,285"/>
+<area shape="rect" id="node37" href="../../d9/d3c/_s_d_l__quit_8h.html" title="SDL_quit.h" alt="" coords="2458,259,2545,285"/>
+<area shape="rect" id="node38" href="../../de/da1/_s_d_l__gesture_8h.html" title="SDL_gesture.h" alt="" coords="2523,184,2632,211"/>
+<area shape="rect" id="node39" href="../../da/dc2/_s_d_l__touch_8h.html" title="SDL_touch.h" alt="" coords="2620,259,2719,285"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d79/_s_d_l_8h__dep__incl.png" border="0" usemap="#_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l_8hdep" alt=""/></div>
+<map name="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l_8hdep" id="_2home_2wery__a_2rendu_2_c_p_p_2cpp__arcade_2library_2sdl2_2include_2_s_d_l_8hdep">
+<area shape="rect" id="node2" href="../../dd/d12/_open_g_l_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/openGL/OpenGL.hpp" alt="" coords="37,235,202,291"/>
+<area shape="rect" id="node4" href="../../d1/d40/_sdl2_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/sdl2/Sdl2.hpp" alt="" coords="242,235,389,291"/>
+<area shape="rect" id="node6" href="../../d5/d9d/_s_d_l__image_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_image.h" alt="" coords="30,117,209,173"/>
+<area shape="rect" id="node7" href="../../dd/d3b/_s_d_l__test_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test.h" alt="" coords="584,347,749,403"/>
+<area shape="rect" id="node8" href="../../dc/dc7/_s_d_l__test__common_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_common.h" alt="" coords="764,228,928,299"/>
+<area shape="rect" id="node9" href="../../d4/d55/_s_d_l__test__images_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_images.h" alt="" coords="474,109,638,180"/>
+<area shape="rect" id="node10" href="../../d8/d59/_s_d_l__test__compare_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_compare.h" alt="" coords="524,228,688,299"/>
+<area shape="rect" id="node11" href="../../dc/d92/_s_d_l__ttf_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_ttf.h" alt="" coords="234,117,398,173"/>
+<area shape="rect" id="node3" href="../../d6/d93/_open_g_l_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/openGL/OpenGL.cpp" alt="" coords="37,347,202,403"/>
+<area shape="rect" id="node5" href="../../d5/de5/_sdl2_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/sdl2/Sdl2.cpp" alt="" coords="242,347,389,403"/>
+</map>
+</div>
+</div>
+<p><a href="../../de/ddc/_s_d_l_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">SDL_INIT_*</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These are the flags which may be passed to <a class="el" href="../../de/ddc/_s_d_l_8h.html#a8fc8d35348d7c74bad8392d776c937b8">SDL_Init()</a>. You should specify the subsystems which you will be using in your application. </p>
+</div></td></tr>
+<tr class="memitem:aadfaf3382d6e136b5944d1d5e7e50290"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#aadfaf3382d6e136b5944d1d5e7e50290">SDL_INIT_TIMER</a>&#160;&#160;&#160;0x00000001</td></tr>
+<tr class="separator:aadfaf3382d6e136b5944d1d5e7e50290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeceb02c19508655cb05cc8e64206333"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#abeceb02c19508655cb05cc8e64206333">SDL_INIT_AUDIO</a>&#160;&#160;&#160;0x00000010</td></tr>
+<tr class="separator:abeceb02c19508655cb05cc8e64206333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc988e510ed522628ffeb7c76f80c233"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#afc988e510ed522628ffeb7c76f80c233">SDL_INIT_VIDEO</a>&#160;&#160;&#160;0x00000020</td></tr>
+<tr class="separator:afc988e510ed522628ffeb7c76f80c233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b47d785eaa00d9c48e6c1cff4aef4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#ad6b47d785eaa00d9c48e6c1cff4aef4b">SDL_INIT_JOYSTICK</a>&#160;&#160;&#160;0x00000200</td></tr>
+<tr class="separator:ad6b47d785eaa00d9c48e6c1cff4aef4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd88189fec07574cae461b9dea75a85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#adfd88189fec07574cae461b9dea75a85">SDL_INIT_HAPTIC</a>&#160;&#160;&#160;0x00001000</td></tr>
+<tr class="separator:adfd88189fec07574cae461b9dea75a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac224a9aa4208de0e9b03948ff9b5fe0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#ac224a9aa4208de0e9b03948ff9b5fe0a">SDL_INIT_GAMECONTROLLER</a>&#160;&#160;&#160;0x00002000</td></tr>
+<tr class="separator:ac224a9aa4208de0e9b03948ff9b5fe0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addad89db9e13b46ebcd46a0db8ba0382"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#addad89db9e13b46ebcd46a0db8ba0382">SDL_INIT_EVENTS</a>&#160;&#160;&#160;0x00004000</td></tr>
+<tr class="separator:addad89db9e13b46ebcd46a0db8ba0382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab848174dfbc69cb2cc7bbf06a6e5c584"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#ab848174dfbc69cb2cc7bbf06a6e5c584">SDL_INIT_NOPARACHUTE</a>&#160;&#160;&#160;0x00100000</td></tr>
+<tr class="separator:ab848174dfbc69cb2cc7bbf06a6e5c584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a574afd93f30161d6e87449f675081fb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#a574afd93f30161d6e87449f675081fb5">SDL_INIT_EVERYTHING</a></td></tr>
+<tr class="separator:a574afd93f30161d6e87449f675081fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a8fc8d35348d7c74bad8392d776c937b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#a8fc8d35348d7c74bad8392d776c937b8">SDL_Init</a> (<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../dc/dd2/glext_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a8fc8d35348d7c74bad8392d776c937b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfbfddc0ec609b5e5e5cb1c89298e4db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#adfbfddc0ec609b5e5e5cb1c89298e4db">SDL_InitSubSystem</a> (<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../dc/dd2/glext_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:adfbfddc0ec609b5e5e5cb1c89298e4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e9091982e09097985e10e3ca65debb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#a14e9091982e09097985e10e3ca65debb">SDL_QuitSubSystem</a> (<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../dc/dd2/glext_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a14e9091982e09097985e10e3ca65debb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04dc570990c697eed95681216801710d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#a04dc570990c697eed95681216801710d">SDL_WasInit</a> (<a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../dc/dd2/glext_8h.html#ac7ba7d3cce3d19ca020e056b37231289">flags</a>)</td></tr>
+<tr class="separator:a04dc570990c697eed95681216801710d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdabaf714781099083592051f2d9ac11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddc/_s_d_l_8h.html#afdabaf714781099083592051f2d9ac11">SDL_Quit</a> (<a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>)</td></tr>
+<tr class="separator:afdabaf714781099083592051f2d9ac11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Main include header for the SDL library </p>
+
+<p>Définition dans le fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="abeceb02c19508655cb05cc8e64206333"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_AUDIO&#160;&#160;&#160;0x00000010</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00076">76</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="addad89db9e13b46ebcd46a0db8ba0382"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_EVENTS&#160;&#160;&#160;0x00004000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00081">81</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a574afd93f30161d6e87449f675081fb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_EVERYTHING</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">( \</div>
+<div class="line">                SDL_INIT_TIMER | <a class="code" href="../../de/ddc/_s_d_l_8h.html#abeceb02c19508655cb05cc8e64206333">SDL_INIT_AUDIO</a> | <a class="code" href="../../de/ddc/_s_d_l_8h.html#afc988e510ed522628ffeb7c76f80c233">SDL_INIT_VIDEO</a> | <a class="code" href="../../de/ddc/_s_d_l_8h.html#addad89db9e13b46ebcd46a0db8ba0382">SDL_INIT_EVENTS</a> | \</div>
+<div class="line">                SDL_INIT_JOYSTICK | <a class="code" href="../../de/ddc/_s_d_l_8h.html#adfd88189fec07574cae461b9dea75a85">SDL_INIT_HAPTIC</a> | <a class="code" href="../../de/ddc/_s_d_l_8h.html#ac224a9aa4208de0e9b03948ff9b5fe0a">SDL_INIT_GAMECONTROLLER</a> \</div>
+<div class="line">            )</div>
+<div class="ttc" id="_s_d_l_8h_html_addad89db9e13b46ebcd46a0db8ba0382"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#addad89db9e13b46ebcd46a0db8ba0382">SDL_INIT_EVENTS</a></div><div class="ttdeci">#define SDL_INIT_EVENTS</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddc/_s_d_l_8h_source.html#l00081">SDL.h:81</a></div></div>
+<div class="ttc" id="_s_d_l_8h_html_abeceb02c19508655cb05cc8e64206333"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#abeceb02c19508655cb05cc8e64206333">SDL_INIT_AUDIO</a></div><div class="ttdeci">#define SDL_INIT_AUDIO</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddc/_s_d_l_8h_source.html#l00076">SDL.h:76</a></div></div>
+<div class="ttc" id="_s_d_l_8h_html_ac224a9aa4208de0e9b03948ff9b5fe0a"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#ac224a9aa4208de0e9b03948ff9b5fe0a">SDL_INIT_GAMECONTROLLER</a></div><div class="ttdeci">#define SDL_INIT_GAMECONTROLLER</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddc/_s_d_l_8h_source.html#l00080">SDL.h:80</a></div></div>
+<div class="ttc" id="_s_d_l_8h_html_adfd88189fec07574cae461b9dea75a85"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#adfd88189fec07574cae461b9dea75a85">SDL_INIT_HAPTIC</a></div><div class="ttdeci">#define SDL_INIT_HAPTIC</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddc/_s_d_l_8h_source.html#l00079">SDL.h:79</a></div></div>
+<div class="ttc" id="_s_d_l_8h_html_afc988e510ed522628ffeb7c76f80c233"><div class="ttname"><a href="../../de/ddc/_s_d_l_8h.html#afc988e510ed522628ffeb7c76f80c233">SDL_INIT_VIDEO</a></div><div class="ttdeci">#define SDL_INIT_VIDEO</div><div class="ttdef"><b>Definition:</b> <a href="../../de/ddc/_s_d_l_8h_source.html#l00077">SDL.h:77</a></div></div>
+</div><!-- fragment -->
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00083">83</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac224a9aa4208de0e9b03948ff9b5fe0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_GAMECONTROLLER&#160;&#160;&#160;0x00002000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SDL_INIT_GAMECONTROLLER implies SDL_INIT_JOYSTICK </p>
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00080">80</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfd88189fec07574cae461b9dea75a85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_HAPTIC&#160;&#160;&#160;0x00001000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00079">79</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6b47d785eaa00d9c48e6c1cff4aef4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_JOYSTICK&#160;&#160;&#160;0x00000200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SDL_INIT_JOYSTICK implies SDL_INIT_EVENTS </p>
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00078">78</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab848174dfbc69cb2cc7bbf06a6e5c584"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_NOPARACHUTE&#160;&#160;&#160;0x00100000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compatibility; this flag is ignored. </p>
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00082">82</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aadfaf3382d6e136b5944d1d5e7e50290"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_TIMER&#160;&#160;&#160;0x00000001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00075">75</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc988e510ed522628ffeb7c76f80c233"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDL_INIT_VIDEO&#160;&#160;&#160;0x00000020</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SDL_INIT_VIDEO implies SDL_INIT_EVENTS </p>
+
+<p>Définition à la ligne <a class="el" href="../../de/ddc/_s_d_l_8h_source.html#l00077">77</a> du fichier <a class="el" href="../../de/ddc/_s_d_l_8h_source.html">SDL.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a8fc8d35348d7c74bad8392d776c937b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function initializes the subsystems specified by <code>flags</code> </p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/ddc/_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8_icgraph.png" border="0" usemap="#de/ddc/_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8_icgraph" alt=""/></div>
+<map name="de/ddc/_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8_icgraph" id="de/ddc/_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8_icgraph">
+<area shape="rect" id="node2" href="../../d8/d24/class_open_g_l.html#af5a59472e49278dc51dd427d567791e0" title="OpenGL::OpenGL" alt="" coords="127,5,253,32"/>
+<area shape="rect" id="node3" href="../../d1/dad/class_sdl2.html#a50bfe7526527b7b9688b1ed657482920" title="Sdl2::Sdl2" alt="" coords="149,56,231,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adfbfddc0ec609b5e5e5cb1c89298e4db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d8/ded/_s_d_l__thread_8h.html#a6a64f9be4433e4de6e2f2f548cf3c08e">int</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_InitSubSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function initializes specific SDL subsystems</p>
+<p>Subsystem initialization is ref-counted, you must call SDL_QuitSubSystem for each SDL_InitSubSystem to correctly shutdown a subsystem manually (or call SDL_Quit to force shutdown). If a subsystem is already loaded then this call will increase the ref-count and return. </p>
+
+</div>
+</div>
+<a class="anchor" id="afdabaf714781099083592051f2d9ac11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_Quit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function cleans up all initialized subsystems. You should call it upon all exit conditions. </p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/ddc/_s_d_l_8h_afdabaf714781099083592051f2d9ac11_icgraph.png" border="0" usemap="#de/ddc/_s_d_l_8h_afdabaf714781099083592051f2d9ac11_icgraph" alt=""/></div>
+<map name="de/ddc/_s_d_l_8h_afdabaf714781099083592051f2d9ac11_icgraph" id="de/ddc/_s_d_l_8h_afdabaf714781099083592051f2d9ac11_icgraph">
+<area shape="rect" id="node2" href="../../d8/d24/class_open_g_l.html#a2e0646c74df0ba8e85947a6bbc7d5b4d" title="OpenGL::~OpenGL" alt="" coords="132,5,267,32"/>
+<area shape="rect" id="node3" href="../../d1/dad/class_sdl2.html#af6f435cc542e3b43b08e0f5419854e39" title="Sdl2::~Sdl2" alt="" coords="154,56,245,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a14e9091982e09097985e10e3ca65debb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../dc/dfd/_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_QuitSubSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function cleans up specific SDL subsystems </p>
+
+</div>
+</div>
+<a class="anchor" id="a04dc570990c697eed95681216801710d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/begin__code_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a> <a class="el" href="../../d1/d90/begin__code_8h.html#a81faf4ba0455dc75f2e0507eddb79401">SDLCALL</a> SDL_WasInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d24/_s_d_l__stdinc_8h.html#add440eff171ea5f55cb00c4a9ab8672d">Uint32</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function returns a mask of the specified subsystems which have previously been initialized.</p>
+<p>If <code>flags</code> is 0, it returns a mask of all initialized subsystems. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_e3d620c6b6fdb93ed3bc6186215bde2e.html">library</a></li><li class="navelem"><a class="el" href="../../dir_c537e47dfa3d62f337d4977e13f846bf.html">sdl2</a></li><li class="navelem"><a class="el" href="../../dir_1b3cf7022841f77c5748cad2505e2437.html">include</a></li><li class="navelem"><a class="el" href="../../de/ddc/_s_d_l_8h.html">SDL.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

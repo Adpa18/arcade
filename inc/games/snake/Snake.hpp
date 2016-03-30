@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:49:30 2016 Adrien WERY
-** Last update	Mon Mar 28 21:31:35 2016 Nicolas Constanty
+** Last update	Wed Mar 30 14:50:39 2016 Nicolas Constanty
 */
 
 #ifndef SNAKE_HPP_
@@ -19,6 +19,7 @@
 # include "UIComponent.hpp"
 # include "AudioComponent.hpp"
 # include "ScoreComponent.hpp"
+# include "Protocol.hpp"
 
 # define WIDTH  50
 # define HEIGHT 30
@@ -41,8 +42,10 @@ public:
     Snake ();
     virtual ~Snake ();
     virtual std::stack<AComponent*> compute(int key);
-    virtual std::stack<AComponent*> getInfos();
-    virtual void                    restart();
+    virtual std::stack<AComponent*> getInfos(void);
+    virtual void                    restart(void);
+    void                            Play(void);
+private:
     bool                            check(Vector2<double> snakePos);
     const   std::string             getImg(size_t pos);
 

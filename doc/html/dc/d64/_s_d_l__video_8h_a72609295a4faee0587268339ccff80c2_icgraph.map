@@ -1,0 +1,6 @@
+<map id="SDL_DestroyWindow" name="SDL_DestroyWindow">
+<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#af9e484c792299f864f256b4790ad66f2" title="OpenGL::destroy" alt="" coords="201,5,323,32"/>
+<area shape="rect" id="node4" href="$d1/dad/class_sdl2.html#a04bb306160f7662d0f08136796aa7259" title="Sdl2::destroy" alt="" coords="213,56,311,83"/>
+<area shape="rect" id="node3" href="$d8/d24/class_open_g_l.html#a2e0646c74df0ba8e85947a6bbc7d5b4d" title="OpenGL::~OpenGL" alt="" coords="371,5,505,32"/>
+<area shape="rect" id="node5" href="$d1/dad/class_sdl2.html#af6f435cc542e3b43b08e0f5419854e39" title="Sdl2::~Sdl2" alt="" coords="393,56,483,83"/>
+</map>

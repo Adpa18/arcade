@@ -1,0 +1,75 @@
+.TH "SDL_JoyButtonEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_JoyButtonEvent \- Joystick button event structure (event\&.jbutton\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoystickID\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Joystick button event structure (event\&.jbutton\&.*) 
+.PP
+Définition à la ligne 328 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_JoyButtonEvent::button"
+The joystick button index 
+.PP
+Définition à la ligne 333 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyButtonEvent::padding1"
+
+.PP
+Définition à la ligne 335 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyButtonEvent::padding2"
+
+.PP
+Définition à la ligne 336 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyButtonEvent::state"
+\fBSDL_PRESSED\fP or \fBSDL_RELEASED\fP 
+.PP
+Définition à la ligne 334 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyButtonEvent::timestamp"
+
+.PP
+Définition à la ligne 331 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyButtonEvent::type"
+\fBSDL_JOYBUTTONDOWN\fP or \fBSDL_JOYBUTTONUP\fP 
+.PP
+Définition à la ligne 330 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoystickID\fP SDL_JoyButtonEvent::which"
+The joystick instance id 
+.PP
+Définition à la ligne 332 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

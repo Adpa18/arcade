@@ -1,0 +1,208 @@
+.TH "SDL_Event" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_Event \- General event structure\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBSDL_CommonEvent\fP \fBcommon\fP"
+.br
+.ti -1c
+.RI "\fBSDL_WindowEvent\fP \fBwindow\fP"
+.br
+.ti -1c
+.RI "\fBSDL_KeyboardEvent\fP \fBkey\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TextEditingEvent\fP \fBedit\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TextInputEvent\fP \fBtext\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MouseMotionEvent\fP \fBmotion\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MouseButtonEvent\fP \fBbutton\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MouseWheelEvent\fP \fBwheel\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyAxisEvent\fP \fBjaxis\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyBallEvent\fP \fBjball\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyHatEvent\fP \fBjhat\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyButtonEvent\fP \fBjbutton\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoyDeviceEvent\fP \fBjdevice\fP"
+.br
+.ti -1c
+.RI "\fBSDL_ControllerAxisEvent\fP \fBcaxis\fP"
+.br
+.ti -1c
+.RI "\fBSDL_ControllerButtonEvent\fP \fBcbutton\fP"
+.br
+.ti -1c
+.RI "\fBSDL_ControllerDeviceEvent\fP \fBcdevice\fP"
+.br
+.ti -1c
+.RI "\fBSDL_AudioDeviceEvent\fP \fBadevice\fP"
+.br
+.ti -1c
+.RI "\fBSDL_QuitEvent\fP \fBquit\fP"
+.br
+.ti -1c
+.RI "\fBSDL_UserEvent\fP \fBuser\fP"
+.br
+.ti -1c
+.RI "\fBSDL_SysWMEvent\fP \fBsyswm\fP"
+.br
+.ti -1c
+.RI "\fBSDL_TouchFingerEvent\fP \fBtfinger\fP"
+.br
+.ti -1c
+.RI "\fBSDL_MultiGestureEvent\fP \fBmgesture\fP"
+.br
+.ti -1c
+.RI "\fBSDL_DollarGestureEvent\fP \fBdgesture\fP"
+.br
+.ti -1c
+.RI "\fBSDL_DropEvent\fP \fBdrop\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding\fP [56]"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+General event structure\&. 
+.PP
+Définition à la ligne 521 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBSDL_AudioDeviceEvent\fP SDL_Event::adevice"
+Audio device event data 
+.PP
+Définition à la ligne 540 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_MouseButtonEvent\fP SDL_Event::button"
+Mouse button event data 
+.PP
+Définition à la ligne 530 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_ControllerAxisEvent\fP SDL_Event::caxis"
+Game Controller axis event data 
+.PP
+Définition à la ligne 537 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_ControllerButtonEvent\fP SDL_Event::cbutton"
+Game Controller button event data 
+.PP
+Définition à la ligne 538 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_ControllerDeviceEvent\fP SDL_Event::cdevice"
+Game Controller device event data 
+.PP
+Définition à la ligne 539 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_CommonEvent\fP SDL_Event::common"
+Common event data 
+.PP
+Définition à la ligne 524 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_DollarGestureEvent\fP SDL_Event::dgesture"
+Gesture event data 
+.PP
+Définition à la ligne 546 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_DropEvent\fP SDL_Event::drop"
+Drag and drop event data 
+.PP
+Définition à la ligne 547 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_TextEditingEvent\fP SDL_Event::edit"
+Text editing event data 
+.PP
+Définition à la ligne 527 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoyAxisEvent\fP SDL_Event::jaxis"
+Joystick axis event data 
+.PP
+Définition à la ligne 532 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoyBallEvent\fP SDL_Event::jball"
+Joystick ball event data 
+.PP
+Définition à la ligne 533 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoyButtonEvent\fP SDL_Event::jbutton"
+Joystick button event data 
+.PP
+Définition à la ligne 535 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoyDeviceEvent\fP SDL_Event::jdevice"
+Joystick device change event data 
+.PP
+Définition à la ligne 536 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoyHatEvent\fP SDL_Event::jhat"
+Joystick hat event data 
+.PP
+Définition à la ligne 534 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_KeyboardEvent\fP SDL_Event::key"
+Keyboard event data 
+.PP
+Définition à la ligne 526 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_MultiGestureEvent\fP SDL_Event::mgesture"
+Gesture event data 
+.PP
+Définition à la ligne 545 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_MouseMotionEvent\fP SDL_Event::motion"
+Mouse motion event data 
+.PP
+Définition à la ligne 529 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_Event::padding[56]"
+
+.PP
+Définition à la ligne 556 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_QuitEvent\fP SDL_Event::quit"
+Quit request event data 
+.PP
+Définition à la ligne 541 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_SysWMEvent\fP SDL_Event::syswm"
+System dependent window event data 
+.PP
+Définition à la ligne 543 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_TextInputEvent\fP SDL_Event::text"
+Text input event data 
+.PP
+Définition à la ligne 528 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_TouchFingerEvent\fP SDL_Event::tfinger"
+Touch finger event data 
+.PP
+Définition à la ligne 544 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_Event::type"
+Event type, shared with all events 
+.PP
+Définition à la ligne 523 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_UserEvent\fP SDL_Event::user"
+Custom event data 
+.PP
+Définition à la ligne 542 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_MouseWheelEvent\fP SDL_Event::wheel"
+Mouse wheel event data 
+.PP
+Définition à la ligne 531 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_WindowEvent\fP SDL_Event::window"
+Window event data 
+.PP
+Définition à la ligne 525 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,98 @@
+.TH "NCursesPanelException" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesPanelException \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <etip\&.h>\fP
+.PP
+Est dérivée de \fBNCursesException\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesPanelException\fP (\fBconst\fP char *msg, \fBint\fP err)"
+.br
+.ti -1c
+.RI "\fBNCursesPanelException\fP (\fBconst\fP \fBNCursesPanel\fP *\fBpanel\fP, \fBconst\fP char *msg, \fBint\fP err)"
+.br
+.ti -1c
+.RI "\fBNCursesPanelException\fP (\fBint\fP err)"
+.br
+.ti -1c
+.RI "\fBNCursesPanelException\fP (\fBconst\fP \fBNCursesPanel\fP *\fBpanel\fP, \fBint\fP err)"
+.br
+.ti -1c
+.RI "\fBNCursesPanelException\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesPanelException\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesPanelException\fP (\fBconst\fP \fBNCursesPanelException\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fBconst\fP char * \fBclassname\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fB~NCursesPanelException\fP ()"
+.br
+.in -1c
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBconst\fP \fBNCursesPanel\fP * \fBp\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 180 du fichier etip\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesPanelException::NCursesPanelException (\fBconst\fP char * msg, \fBint\fP err)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 185 du fichier etip\&.h\&.
+.SS "NCursesPanelException::NCursesPanelException (\fBconst\fP \fBNCursesPanel\fP * panel, \fBconst\fP char * msg, \fBint\fP err)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 190 du fichier etip\&.h\&.
+.SS "NCursesPanelException::NCursesPanelException (\fBint\fP err)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 197 du fichier etip\&.h\&.
+.SS "NCursesPanelException::NCursesPanelException (\fBconst\fP \fBNCursesPanel\fP * panel, \fBint\fP err)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 202 du fichier etip\&.h\&.
+.SS "NCursesPanelException::NCursesPanelException (\fBconst\fP \fBNCursesPanelException\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 217 du fichier etip\&.h\&.
+.SS "virtual NCursesPanelException::~NCursesPanelException ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 226 du fichier etip\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBconst\fP char* NCursesPanelException::classname () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesException\fP\&.
+.PP
+Définition à la ligne 222 du fichier etip\&.h\&.
+.SS "\fBNCursesPanelException\fP& NCursesPanelException::operator= (\fBconst\fP \fBNCursesPanelException\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 208 du fichier etip\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBconst\fP \fBNCursesPanel\fP* NCursesPanelException::p"
+
+.PP
+Définition à la ligne 183 du fichier etip\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

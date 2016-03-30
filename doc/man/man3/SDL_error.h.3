@@ -1,0 +1,100 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_error.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_error.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetError\fP (\fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *fmt,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(1)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBconst\fP char *\fBSDLCALL\fP \fBSDL_GetError\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_ClearError\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SS "Internal error functions"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_OutOfMemory\fP()     \fBSDL_Error\fP(\fBSDL_ENOMEM\fP)"
+.br
+.ti -1c
+.RI "#define \fBSDL_Unsupported\fP()     \fBSDL_Error\fP(\fBSDL_UNSUPPORTED\fP)"
+.br
+.ti -1c
+.RI "#define \fBSDL_InvalidParamError\fP(\fBparam\fP)       \fBSDL_SetError\fP('Parameter '%\fBs\fP' is invalid', (param))"
+.br
+.ti -1c
+.RI "enum \fBSDL_errorcode\fP { \fBSDL_ENOMEM\fP, \fBSDL_EFREAD\fP, \fBSDL_EFWRITE\fP, \fBSDL_EFSEEK\fP, \fBSDL_UNSUPPORTED\fP, \fBSDL_LASTERROR\fP }"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_Error\fP (\fBSDL_errorcode\fP code)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Simple error message routines for SDL\&. 
+.PP
+Définition dans le fichier \fBSDL_error\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_InvalidParamError(\fBparam\fP)   \fBSDL_SetError\fP('Parameter '%\fBs\fP' is invalid', (param))"
+
+.PP
+Définition à la ligne 54 du fichier SDL_error\&.h\&.
+.SS "#define SDL_OutOfMemory()   \fBSDL_Error\fP(\fBSDL_ENOMEM\fP)"
+
+.PP
+Définition à la ligne 52 du fichier SDL_error\&.h\&.
+.SS "#define SDL_Unsupported()   \fBSDL_Error\fP(\fBSDL_UNSUPPORTED\fP)"
+
+.PP
+Définition à la ligne 53 du fichier SDL_error\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBSDL_errorcode\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_ENOMEM \fP\fP
+.TP
+\fB\fISDL_EFREAD \fP\fP
+.TP
+\fB\fISDL_EFWRITE \fP\fP
+.TP
+\fB\fISDL_EFSEEK \fP\fP
+.TP
+\fB\fISDL_UNSUPPORTED \fP\fP
+.TP
+\fB\fISDL_LASTERROR \fP\fP
+.PP
+Définition à la ligne 55 du fichier SDL_error\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_ClearError (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_Error (\fBSDL_errorcode\fP code)"
+
+.SS "\fBDECLSPEC\fP \fBconst\fP char* \fBSDLCALL\fP SDL_GetError (\fBvoid\fP)"
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetError (\fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * fmt,  \&.\&.\&.)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

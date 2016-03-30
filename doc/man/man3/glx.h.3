@@ -1,0 +1,1517 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glx.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glx.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <X11/Xlib\&.h>\fP
+.br
+\fC#include <X11/Xutil\&.h>\fP
+.br
+\fC#include <GL/gl\&.h>\fP
+.br
+\fC#include <GL/glxext\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGLXPbufferClobberEvent\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXBufferSwapComplete\fP"
+.br
+.ti -1c
+.RI "union \fB__GLXEvent\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_1\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_3\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_4\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSION_NAME\fP   'GLX'"
+.br
+.ti -1c
+.RI "#define \fBGLX_USE_GL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BUFFER_SIZE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLX_LEVEL\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLX_DOUBLEBUFFER\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLX_STEREO\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLX_RED_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBGLX_GREEN_SIZE\fP   9"
+.br
+.ti -1c
+.RI "#define \fBGLX_BLUE_SIZE\fP   10"
+.br
+.ti -1c
+.RI "#define \fBGLX_ALPHA_SIZE\fP   11"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_SIZE\fP   12"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_SIZE\fP   13"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_RED_SIZE\fP   14"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_GREEN_SIZE\fP   15"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BLUE_SIZE\fP   16"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_ALPHA_SIZE\fP   17"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_SCREEN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_ATTRIBUTE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLX_NO_EXTENSION\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_VISUAL\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_CONTEXT\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_VALUE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_ENUM\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLX_VENDOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSIONS\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONFIG_CAVEAT\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBGLX_DONT_CARE\fP   0xFFFFFFFF"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_VISUAL_TYPE\fP   0x22"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_TYPE\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_VALUE\fP   0x24"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RED_VALUE\fP   0x25"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_GREEN_VALUE\fP   0x26"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_BLUE_VALUE\fP   0x27"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_ALPHA_VALUE\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIXMAP_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS_BIT\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_BUFFER_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_BUFFER_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_BUFFER_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_BUFFER_BIT\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_BUFFER_BIT\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_BUFFER_BIT\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BUFFER_BIT\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBGLX_NONE\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SLOW_CONFIG\fP   0x8001"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRUE_COLOR\fP   0x8002"
+.br
+.ti -1c
+.RI "#define \fBGLX_DIRECT_COLOR\fP   0x8003"
+.br
+.ti -1c
+.RI "#define \fBGLX_PSEUDO_COLOR\fP   0x8004"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_COLOR\fP   0x8005"
+.br
+.ti -1c
+.RI "#define \fBGLX_GRAY_SCALE\fP   0x8006"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_GRAY\fP   0x8007"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RGB\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX\fP   0x8009"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_ID\fP   0x800B"
+.br
+.ti -1c
+.RI "#define \fBGLX_SCREEN\fP   0x800C"
+.br
+.ti -1c
+.RI "#define \fBGLX_NON_CONFORMANT_CONFIG\fP   0x800D"
+.br
+.ti -1c
+.RI "#define \fBGLX_DRAWABLE_TYPE\fP   0x8010"
+.br
+.ti -1c
+.RI "#define \fBGLX_RENDER_TYPE\fP   0x8011"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_RENDERABLE\fP   0x8012"
+.br
+.ti -1c
+.RI "#define \fBGLX_FBCONFIG_ID\fP   0x8013"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_TYPE\fP   0x8014"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_TYPE\fP   0x8015"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_WIDTH\fP   0x8016"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_HEIGHT\fP   0x8017"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_PIXELS\fP   0x8018"
+.br
+.ti -1c
+.RI "#define \fBGLX_PRESERVED_CONTENTS\fP   0x801B"
+.br
+.ti -1c
+.RI "#define \fBGLX_LARGEST_PBUFFER\fP   0x801C"
+.br
+.ti -1c
+.RI "#define \fBGLX_WIDTH\fP   0x801D"
+.br
+.ti -1c
+.RI "#define \fBGLX_HEIGHT\fP   0x801E"
+.br
+.ti -1c
+.RI "#define \fBGLX_EVENT_MASK\fP   0x801F"
+.br
+.ti -1c
+.RI "#define \fBGLX_DAMAGED\fP   0x8020"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAVED\fP   0x8021"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW\fP   0x8022"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER\fP   0x8023"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_HEIGHT\fP   0x8040"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_WIDTH\fP   0x8041"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_CLOBBER_MASK\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS\fP   0x186a0 /*100000*/"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLES\fP   0x186a1 /*100001*/"
+.br
+.ti -1c
+.RI "#define \fBGLX_PbufferClobber\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BufferSwapComplete\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__GLX_NUMBER_EVENTS\fP   17"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_get_proc_address\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_vertex_array_range\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_render_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_float_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FLOAT_COMPONENTS_NV\fP   0x20B0"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_swap_frame_usage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_swap_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_texture_from_pixmap\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGB_EXT\fP   0x20D0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGBA_EXT\fP   0x20D1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_MIPMAP_TEXTURE_EXT\fP   0x20D2"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_TARGETS_EXT\fP   0x20D3"
+.br
+.ti -1c
+.RI "#define \fBGLX_Y_INVERTED_EXT\fP   0x20D4"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_EXT\fP   0x20D5"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_TARGET_EXT\fP   0x20D6"
+.br
+.ti -1c
+.RI "#define \fBGLX_MIPMAP_TEXTURE_EXT\fP   0x20D7"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_NONE_EXT\fP   0x20D8"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_RGB_EXT\fP   0x20D9"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_RGBA_EXT\fP   0x20DA"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_BIT_EXT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_BIT_EXT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RECTANGLE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_EXT\fP   0x20DB"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_EXT\fP   0x20DC"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RECTANGLE_EXT\fP   0x20DD"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_EXT\fP   0x20DE"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_EXT\fP   0x20DF"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_EXT\fP   0x20E0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_EXT\fP   0x20E1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_EXT\fP   \fBGLX_FRONT_LEFT_EXT\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_EXT\fP   \fBGLX_BACK_LEFT_EXT\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX0_EXT\fP   0x20E2"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX1_EXT\fP   0x20E3"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX2_EXT\fP   0x20E4"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX3_EXT\fP   0x20E5"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX4_EXT\fP   0x20E6"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX5_EXT\fP   0x20E7"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX6_EXT\fP   0x20E8"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX7_EXT\fP   0x20E9"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX8_EXT\fP   0x20EA"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX9_EXT\fP   0x20EB"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct __GLXcontextRec * \fBGLXContext\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXPixmap\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXDrawable\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB__GLXFBConfigRec\fP * \fBGLXFBConfig\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXFBConfigID\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXContextID\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXWindow\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLXFBConfig\fP *(* \fBPFNGLXGETFBCONFIGSPROC\fP) (Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef \fBGLXFBConfig\fP *(* \fBPFNGLXCHOOSEFBCONFIGPROC\fP) (Display *dpy, \fBint\fP screen, \fBconst\fP \fBint\fP *attrib_list, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETFBCONFIGATTRIBPROC\fP) (Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef XVisualInfo *(* \fBPFNGLXGETVISUALFROMFBCONFIGPROC\fP) (Display *dpy, \fBGLXFBConfig\fP config)"
+.br
+.ti -1c
+.RI "typedef \fBGLXWindow\fP(* \fBPFNGLXCREATEWINDOWPROC\fP) (Display *dpy, \fBGLXFBConfig\fP config, Window win, \fBconst\fP \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYWINDOWPROC\fP) (Display *dpy, \fBGLXWindow\fP win)"
+.br
+.ti -1c
+.RI "typedef \fBGLXPixmap\fP(* \fBPFNGLXCREATEPIXMAPPROC\fP) (Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap, \fBconst\fP \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYPIXMAPPROC\fP) (Display *dpy, \fBGLXPixmap\fP pixmap)"
+.br
+.ti -1c
+.RI "typedef \fBGLXPbuffer\fP(* \fBPFNGLXCREATEPBUFFERPROC\fP) (Display *dpy, \fBGLXFBConfig\fP config, \fBconst\fP \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYPBUFFERPROC\fP) (Display *dpy, \fBGLXPbuffer\fP pbuf)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXQUERYDRAWABLEPROC\fP) (Display *dpy, \fBGLXDrawable\fP draw, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXCREATENEWCONTEXTPROC\fP) (Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP render_type, \fBGLXContext\fP share_list, Bool direct)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXMAKECONTEXTCURRENTPROC\fP) (Display *dpy, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "typedef \fBGLXDrawable\fP(* \fBPFNGLXGETCURRENTREADDRAWABLEPROC\fP) (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef Display *(* \fBPFNGLXGETCURRENTDISPLAYPROC\fP) (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYCONTEXTPROC\fP) (Display *dpy, \fBGLXContext\fP ctx, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXSELECTEVENTPROC\fP) (Display *dpy, \fBGLXDrawable\fP draw, unsigned long event_mask)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXGETSELECTEDEVENTPROC\fP) (Display *dpy, \fBGLXDrawable\fP draw, unsigned long *event_mask)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fB__GLXextFuncPtr\fP) (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fB__GLXextFuncPtr\fP(* \fBPFNGLXGETPROCADDRESSPROC\fP) (\fBconst\fP \fBGLubyte\fP *procName)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP *(* \fBPFNGLXALLOCATEMEMORYNVPROC\fP) (\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readfreq, \fBGLfloat\fP writefreq, \fBGLfloat\fP priority)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXFREEMEMORYNVPROC\fP) (\fBGLvoid\fP *\fBpointer\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETFRAMEUSAGEMESAPROC\fP) (Display *dpy, \fBGLXDrawable\fP drawable, float *\fBusage\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXBEGINFRAMETRACKINGMESAPROC\fP) (Display *dpy, \fBGLXDrawable\fP drawable)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXENDFRAMETRACKINGMESAPROC\fP) (Display *dpy, \fBGLXDrawable\fP drawable)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYFRAMETRACKINGMESAPROC\fP) (Display *dpy, \fBGLXDrawable\fP drawable, int64_t *swapCount, int64_t *missedFrames, float *lastMissedUsage)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXSWAPINTERVALMESAPROC\fP) (unsigned \fBint\fP interval)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETSWAPINTERVALMESAPROC\fP) (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef union \fB__GLXEvent\fP \fBGLXEvent\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "XVisualInfo * \fBglXChooseVisual\fP (Display *dpy, \fBint\fP screen, \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "\fBGLXContext\fP \fBglXCreateContext\fP (Display *dpy, XVisualInfo *vis, \fBGLXContext\fP shareList, Bool direct)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyContext\fP (Display *dpy, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "Bool \fBglXMakeCurrent\fP (Display *dpy, \fBGLXDrawable\fP drawable, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXCopyContext\fP (Display *dpy, \fBGLXContext\fP \fBsrc\fP, \fBGLXContext\fP \fBdst\fP, unsigned long \fBmask\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXSwapBuffers\fP (Display *dpy, \fBGLXDrawable\fP drawable)"
+.br
+.ti -1c
+.RI "\fBGLXPixmap\fP \fBglXCreateGLXPixmap\fP (Display *dpy, XVisualInfo *visual, Pixmap pixmap)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyGLXPixmap\fP (Display *dpy, \fBGLXPixmap\fP pixmap)"
+.br
+.ti -1c
+.RI "Bool \fBglXQueryExtension\fP (Display *dpy, \fBint\fP *errorb, \fBint\fP *\fBevent\fP)"
+.br
+.ti -1c
+.RI "Bool \fBglXQueryVersion\fP (Display *dpy, \fBint\fP *maj, \fBint\fP *min)"
+.br
+.ti -1c
+.RI "Bool \fBglXIsDirect\fP (Display *dpy, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXGetConfig\fP (Display *dpy, XVisualInfo *visual, \fBint\fP attrib, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBGLXContext\fP \fBglXGetCurrentContext\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLXDrawable\fP \fBglXGetCurrentDrawable\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXWaitGL\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXWaitX\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXUseXFont\fP (Font font, \fBint\fP \fBfirst\fP, \fBint\fP \fBcount\fP, \fBint\fP list)"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBglXQueryExtensionsString\fP (Display *dpy, \fBint\fP screen)"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBglXQueryServerString\fP (Display *dpy, \fBint\fP screen, \fBint\fP \fBname\fP)"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBglXGetClientString\fP (Display *dpy, \fBint\fP \fBname\fP)"
+.br
+.ti -1c
+.RI "Display * \fBglXGetCurrentDisplay\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLXFBConfig\fP * \fBglXChooseFBConfig\fP (Display *dpy, \fBint\fP screen, \fBconst\fP \fBint\fP *\fBattribList\fP, \fBint\fP *nitems)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXGetFBConfigAttrib\fP (Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBGLXFBConfig\fP * \fBglXGetFBConfigs\fP (Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "XVisualInfo * \fBglXGetVisualFromFBConfig\fP (Display *dpy, \fBGLXFBConfig\fP config)"
+.br
+.ti -1c
+.RI "\fBGLXWindow\fP \fBglXCreateWindow\fP (Display *dpy, \fBGLXFBConfig\fP config, Window win, \fBconst\fP \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyWindow\fP (Display *dpy, \fBGLXWindow\fP window)"
+.br
+.ti -1c
+.RI "\fBGLXPixmap\fP \fBglXCreatePixmap\fP (Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap, \fBconst\fP \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyPixmap\fP (Display *dpy, \fBGLXPixmap\fP pixmap)"
+.br
+.ti -1c
+.RI "\fBGLXPbuffer\fP \fBglXCreatePbuffer\fP (Display *dpy, \fBGLXFBConfig\fP config, \fBconst\fP \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyPbuffer\fP (Display *dpy, \fBGLXPbuffer\fP pbuf)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXQueryDrawable\fP (Display *dpy, \fBGLXDrawable\fP draw, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBGLXContext\fP \fBglXCreateNewContext\fP (Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP renderType, \fBGLXContext\fP shareList, Bool direct)"
+.br
+.ti -1c
+.RI "Bool \fBglXMakeContextCurrent\fP (Display *dpy, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBGLXDrawable\fP \fBglXGetCurrentReadDrawable\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXQueryContext\fP (Display *dpy, \fBGLXContext\fP ctx, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXSelectEvent\fP (Display *dpy, \fBGLXDrawable\fP drawable, unsigned long \fBmask\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXGetSelectedEvent\fP (Display *dpy, \fBGLXDrawable\fP drawable, unsigned long *\fBmask\fP)"
+.br
+.ti -1c
+.RI "\fB__GLXextFuncPtr\fP \fBglXGetProcAddressARB\fP (\fBconst\fP \fBGLubyte\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBglXAllocateMemoryNV\fP (\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readfreq, \fBGLfloat\fP writefreq, \fBGLfloat\fP priority)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXFreeMemoryNV\fP (\fBGLvoid\fP *\fBpointer\fP)"
+.br
+.ti -1c
+.RI "Bool \fBglXBindTexImageARB\fP (Display *dpy, \fBGLXPbuffer\fP pbuffer, \fBint\fP \fBbuffer\fP)"
+.br
+.ti -1c
+.RI "Bool \fBglXReleaseTexImageARB\fP (Display *dpy, \fBGLXPbuffer\fP pbuffer, \fBint\fP \fBbuffer\fP)"
+.br
+.ti -1c
+.RI "Bool \fBglXDrawableAttribARB\fP (Display *dpy, \fBGLXDrawable\fP draw, \fBconst\fP \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXGetFrameUsageMESA\fP (Display *dpy, \fBGLXDrawable\fP drawable, float *\fBusage\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXBeginFrameTrackingMESA\fP (Display *dpy, \fBGLXDrawable\fP drawable)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXEndFrameTrackingMESA\fP (Display *dpy, \fBGLXDrawable\fP drawable)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXQueryFrameTrackingMESA\fP (Display *dpy, \fBGLXDrawable\fP drawable, int64_t *swapCount, int64_t *missedFrames, float *lastMissedUsage)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXSwapIntervalMESA\fP (unsigned \fBint\fP interval)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXGetSwapIntervalMESA\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXBindTexImageEXT\fP (Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP \fBbuffer\fP, \fBconst\fP \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXReleaseTexImageEXT\fP (Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP \fBbuffer\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP(*)(\fBvoid\fP) \fBglXGetProcAddress\fP (\fBconst\fP \fBGLubyte\fP *procname)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define __GLX_NUMBER_EVENTS   17"
+
+.PP
+Définition à la ligne 185 du fichier glx\&.h\&.
+.SS "#define GLX_ACCUM_ALPHA_SIZE   17"
+
+.PP
+Définition à la ligne 73 du fichier glx\&.h\&.
+.SS "#define GLX_ACCUM_BLUE_SIZE   16"
+
+.PP
+Définition à la ligne 72 du fichier glx\&.h\&.
+.SS "#define GLX_ACCUM_BUFFER_BIT   0x00000080"
+
+.PP
+Définition à la ligne 118 du fichier glx\&.h\&.
+.SS "#define GLX_ACCUM_GREEN_SIZE   15"
+
+.PP
+Définition à la ligne 71 du fichier glx\&.h\&.
+.SS "#define GLX_ACCUM_RED_SIZE   14"
+
+.PP
+Définition à la ligne 70 du fichier glx\&.h\&.
+.SS "#define GLX_ALPHA_SIZE   11"
+
+.PP
+Définition à la ligne 67 du fichier glx\&.h\&.
+.SS "#define GLX_ARB_get_proc_address   1"
+
+.PP
+Définition à la ligne 315 du fichier glx\&.h\&.
+.SS "#define GLX_ARB_render_texture   1"
+
+.PP
+Définition à la ligne 362 du fichier glx\&.h\&.
+.SS "#define GLX_AUX0_EXT   0x20E2"
+
+.PP
+Définition à la ligne 454 du fichier glx\&.h\&.
+.SS "#define GLX_AUX1_EXT   0x20E3"
+
+.PP
+Définition à la ligne 455 du fichier glx\&.h\&.
+.SS "#define GLX_AUX2_EXT   0x20E4"
+
+.PP
+Définition à la ligne 456 du fichier glx\&.h\&.
+.SS "#define GLX_AUX3_EXT   0x20E5"
+
+.PP
+Définition à la ligne 457 du fichier glx\&.h\&.
+.SS "#define GLX_AUX4_EXT   0x20E6"
+
+.PP
+Définition à la ligne 458 du fichier glx\&.h\&.
+.SS "#define GLX_AUX5_EXT   0x20E7"
+
+.PP
+Définition à la ligne 459 du fichier glx\&.h\&.
+.SS "#define GLX_AUX6_EXT   0x20E8"
+
+.PP
+Définition à la ligne 460 du fichier glx\&.h\&.
+.SS "#define GLX_AUX7_EXT   0x20E9"
+
+.PP
+Définition à la ligne 461 du fichier glx\&.h\&.
+.SS "#define GLX_AUX8_EXT   0x20EA"
+
+.PP
+Définition à la ligne 462 du fichier glx\&.h\&.
+.SS "#define GLX_AUX9_EXT   0x20EB"
+
+.PP
+Définition à la ligne 463 du fichier glx\&.h\&.
+.SS "#define GLX_AUX_BUFFERS   7"
+
+.PP
+Définition à la ligne 63 du fichier glx\&.h\&.
+.SS "#define GLX_AUX_BUFFERS_BIT   0x00000010"
+
+.PP
+Définition à la ligne 111 du fichier glx\&.h\&.
+.SS "#define GLX_BACK_EXT   \fBGLX_BACK_LEFT_EXT\fP"
+
+.PP
+Définition à la ligne 453 du fichier glx\&.h\&.
+.SS "#define GLX_BACK_LEFT_BUFFER_BIT   0x00000004"
+
+.PP
+Définition à la ligne 114 du fichier glx\&.h\&.
+.SS "#define GLX_BACK_LEFT_EXT   0x20E0"
+
+.PP
+Définition à la ligne 450 du fichier glx\&.h\&.
+.SS "#define GLX_BACK_RIGHT_BUFFER_BIT   0x00000008"
+
+.PP
+Définition à la ligne 115 du fichier glx\&.h\&.
+.SS "#define GLX_BACK_RIGHT_EXT   0x20E1"
+
+.PP
+Définition à la ligne 451 du fichier glx\&.h\&.
+.SS "#define GLX_BAD_ATTRIBUTE   2"
+
+.PP
+Définition à la ligne 80 du fichier glx\&.h\&.
+.SS "#define GLX_BAD_CONTEXT   5"
+
+.PP
+Définition à la ligne 83 du fichier glx\&.h\&.
+.SS "#define GLX_BAD_ENUM   7"
+
+.PP
+Définition à la ligne 85 du fichier glx\&.h\&.
+.SS "#define GLX_BAD_SCREEN   1"
+
+.PP
+Définition à la ligne 79 du fichier glx\&.h\&.
+.SS "#define GLX_BAD_VALUE   6"
+
+.PP
+Définition à la ligne 84 du fichier glx\&.h\&.
+.SS "#define GLX_BAD_VISUAL   4"
+
+.PP
+Définition à la ligne 82 du fichier glx\&.h\&.
+.SS "#define GLX_BIND_TO_MIPMAP_TEXTURE_EXT   0x20D2"
+
+.PP
+Définition à la ligne 428 du fichier glx\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGB_EXT   0x20D0"
+
+.PP
+Définition à la ligne 426 du fichier glx\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGBA_EXT   0x20D1"
+
+.PP
+Définition à la ligne 427 du fichier glx\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_TARGETS_EXT   0x20D3"
+
+.PP
+Définition à la ligne 429 du fichier glx\&.h\&.
+.SS "#define GLX_BLUE_SIZE   10"
+
+.PP
+Définition à la ligne 66 du fichier glx\&.h\&.
+.SS "#define GLX_BUFFER_SIZE   2"
+
+.PP
+Définition à la ligne 58 du fichier glx\&.h\&.
+.SS "#define GLX_BufferSwapComplete   1"
+
+.PP
+Définition à la ligne 183 du fichier glx\&.h\&.
+.SS "#define GLX_COLOR_INDEX_BIT   0x00000002"
+
+.PP
+Définition à la ligne 153 du fichier glx\&.h\&.
+.SS "#define GLX_COLOR_INDEX_TYPE   0x8015"
+
+.PP
+Définition à la ligne 137 du fichier glx\&.h\&.
+.SS "#define GLX_CONFIG_CAVEAT   0x20"
+
+.PP
+Définition à la ligne 99 du fichier glx\&.h\&.
+.SS "#define GLX_DAMAGED   0x8020"
+
+.PP
+Définition à la ligne 146 du fichier glx\&.h\&.
+.SS "#define GLX_DEPTH_BUFFER_BIT   0x00000020"
+
+.PP
+Définition à la ligne 116 du fichier glx\&.h\&.
+.SS "#define GLX_DEPTH_SIZE   12"
+
+.PP
+Définition à la ligne 68 du fichier glx\&.h\&.
+.SS "#define GLX_DIRECT_COLOR   0x8003"
+
+.PP
+Définition à la ligne 122 du fichier glx\&.h\&.
+.SS "#define GLX_DONT_CARE   0xFFFFFFFF"
+
+.PP
+Définition à la ligne 100 du fichier glx\&.h\&.
+.SS "#define GLX_DOUBLEBUFFER   5"
+
+.PP
+Définition à la ligne 61 du fichier glx\&.h\&.
+.SS "#define GLX_DRAWABLE_TYPE   0x8010"
+
+.PP
+Définition à la ligne 132 du fichier glx\&.h\&.
+.SS "#define GLX_EVENT_MASK   0x801F"
+
+.PP
+Définition à la ligne 145 du fichier glx\&.h\&.
+.SS "#define GLX_EXT_texture_from_pixmap   1"
+
+.PP
+Définition à la ligne 424 du fichier glx\&.h\&.
+.SS "#define GLX_EXTENSION_NAME   'GLX'"
+
+.PP
+Définition à la ligne 50 du fichier glx\&.h\&.
+.SS "#define GLX_EXTENSIONS   3"
+
+.PP
+Définition à la ligne 93 du fichier glx\&.h\&.
+.SS "#define GLX_FBCONFIG_ID   0x8013"
+
+.PP
+Définition à la ligne 135 du fichier glx\&.h\&.
+.SS "#define GLX_FLOAT_COMPONENTS_NV   0x20B0"
+
+.PP
+Définition à la ligne 377 du fichier glx\&.h\&.
+.SS "#define GLX_FRONT_EXT   \fBGLX_FRONT_LEFT_EXT\fP"
+
+.PP
+Définition à la ligne 452 du fichier glx\&.h\&.
+.SS "#define GLX_FRONT_LEFT_BUFFER_BIT   0x00000001"
+
+.PP
+Définition à la ligne 112 du fichier glx\&.h\&.
+.SS "#define GLX_FRONT_LEFT_EXT   0x20DE"
+
+.PP
+Définition à la ligne 448 du fichier glx\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_BUFFER_BIT   0x00000002"
+
+.PP
+Définition à la ligne 113 du fichier glx\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_EXT   0x20DF"
+
+.PP
+Définition à la ligne 449 du fichier glx\&.h\&.
+.SS "#define GLX_GRAY_SCALE   0x8006"
+
+.PP
+Définition à la ligne 125 du fichier glx\&.h\&.
+.SS "#define GLX_GREEN_SIZE   9"
+
+.PP
+Définition à la ligne 65 du fichier glx\&.h\&.
+.SS "#define GLX_HEIGHT   0x801E"
+
+.PP
+Définition à la ligne 144 du fichier glx\&.h\&.
+.SS "#define GLX_LARGEST_PBUFFER   0x801C"
+
+.PP
+Définition à la ligne 142 du fichier glx\&.h\&.
+.SS "#define GLX_LEVEL   3"
+
+.PP
+Définition à la ligne 59 du fichier glx\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_HEIGHT   0x8017"
+
+.PP
+Définition à la ligne 139 du fichier glx\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_PIXELS   0x8018"
+
+.PP
+Définition à la ligne 140 du fichier glx\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_WIDTH   0x8016"
+
+.PP
+Définition à la ligne 138 du fichier glx\&.h\&.
+.SS "#define GLX_MESA_swap_control   1"
+
+.PP
+Définition à la ligne 407 du fichier glx\&.h\&.
+.SS "#define GLX_MESA_swap_frame_usage   1"
+
+.PP
+Définition à la ligne 387 du fichier glx\&.h\&.
+.SS "#define GLX_MIPMAP_TEXTURE_EXT   0x20D7"
+
+.PP
+Définition à la ligne 434 du fichier glx\&.h\&.
+.SS "#define GLX_NO_EXTENSION   3"
+
+.PP
+Définition à la ligne 81 du fichier glx\&.h\&.
+.SS "#define GLX_NON_CONFORMANT_CONFIG   0x800D"
+
+.PP
+Définition à la ligne 131 du fichier glx\&.h\&.
+.SS "#define GLX_NONE   0x8000"
+
+.PP
+Définition à la ligne 119 du fichier glx\&.h\&.
+.SS "#define GLX_NV_float_buffer   1"
+
+.PP
+Définition à la ligne 375 du fichier glx\&.h\&.
+.SS "#define GLX_NV_vertex_array_range"
+The following aren't in glxext\&.h yet\&. 
+.PP
+Définition à la ligne 347 du fichier glx\&.h\&.
+.SS "#define GLX_PBUFFER   0x8023"
+
+.PP
+Définition à la ligne 149 du fichier glx\&.h\&.
+.SS "#define GLX_PBUFFER_BIT   0x00000004"
+
+.PP
+Définition à la ligne 110 du fichier glx\&.h\&.
+.SS "#define GLX_PBUFFER_CLOBBER_MASK   0x08000000"
+
+.PP
+Définition à la ligne 154 du fichier glx\&.h\&.
+.SS "#define GLX_PBUFFER_HEIGHT   0x8040"
+
+.PP
+Définition à la ligne 150 du fichier glx\&.h\&.
+.SS "#define GLX_PBUFFER_WIDTH   0x8041"
+
+.PP
+Définition à la ligne 151 du fichier glx\&.h\&.
+.SS "#define GLX_PbufferClobber   0"
+
+.PP
+Définition à la ligne 182 du fichier glx\&.h\&.
+.SS "#define GLX_PIXMAP_BIT   0x00000002"
+
+.PP
+Définition à la ligne 109 du fichier glx\&.h\&.
+.SS "#define GLX_PRESERVED_CONTENTS   0x801B"
+
+.PP
+Définition à la ligne 141 du fichier glx\&.h\&.
+.SS "#define GLX_PSEUDO_COLOR   0x8004"
+
+.PP
+Définition à la ligne 123 du fichier glx\&.h\&.
+.SS "#define GLX_RED_SIZE   8"
+
+.PP
+Définition à la ligne 64 du fichier glx\&.h\&.
+.SS "#define GLX_RENDER_TYPE   0x8011"
+
+.PP
+Définition à la ligne 133 du fichier glx\&.h\&.
+.SS "#define GLX_RGBA   4"
+
+.PP
+Définition à la ligne 60 du fichier glx\&.h\&.
+.SS "#define GLX_RGBA_BIT   0x00000001"
+
+.PP
+Définition à la ligne 152 du fichier glx\&.h\&.
+.SS "#define GLX_RGBA_TYPE   0x8014"
+
+.PP
+Définition à la ligne 136 du fichier glx\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS   0x186a0 /*100000*/"
+
+.PP
+Définition à la ligne 160 du fichier glx\&.h\&.
+.SS "#define GLX_SAMPLES   0x186a1 /*100001*/"
+
+.PP
+Définition à la ligne 161 du fichier glx\&.h\&.
+.SS "#define GLX_SAVED   0x8021"
+
+.PP
+Définition à la ligne 147 du fichier glx\&.h\&.
+.SS "#define GLX_SCREEN   0x800C"
+
+.PP
+Définition à la ligne 130 du fichier glx\&.h\&.
+.SS "#define GLX_SLOW_CONFIG   0x8001"
+
+.PP
+Définition à la ligne 120 du fichier glx\&.h\&.
+.SS "#define GLX_STATIC_COLOR   0x8005"
+
+.PP
+Définition à la ligne 124 du fichier glx\&.h\&.
+.SS "#define GLX_STATIC_GRAY   0x8007"
+
+.PP
+Définition à la ligne 126 du fichier glx\&.h\&.
+.SS "#define GLX_STENCIL_BUFFER_BIT   0x00000040"
+
+.PP
+Définition à la ligne 117 du fichier glx\&.h\&.
+.SS "#define GLX_STENCIL_SIZE   13"
+
+.PP
+Définition à la ligne 69 du fichier glx\&.h\&.
+.SS "#define GLX_STEREO   6"
+
+.PP
+Définition à la ligne 62 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_1D_BIT_EXT   0x00000001"
+
+.PP
+Définition à la ligne 440 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_1D_EXT   0x20DB"
+
+.PP
+Définition à la ligne 444 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_2D_BIT_EXT   0x00000002"
+
+.PP
+Définition à la ligne 441 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_2D_EXT   0x20DC"
+
+.PP
+Définition à la ligne 445 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_EXT   0x20D5"
+
+.PP
+Définition à la ligne 432 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_NONE_EXT   0x20D8"
+
+.PP
+Définition à la ligne 436 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_RGB_EXT   0x20D9"
+
+.PP
+Définition à la ligne 437 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_RGBA_EXT   0x20DA"
+
+.PP
+Définition à la ligne 438 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_RECTANGLE_BIT_EXT   0x00000004"
+
+.PP
+Définition à la ligne 442 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_RECTANGLE_EXT   0x20DD"
+
+.PP
+Définition à la ligne 446 du fichier glx\&.h\&.
+.SS "#define GLX_TEXTURE_TARGET_EXT   0x20D6"
+
+.PP
+Définition à la ligne 433 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_ALPHA_VALUE   0x28"
+
+.PP
+Définition à la ligne 107 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_BLUE_VALUE   0x27"
+
+.PP
+Définition à la ligne 106 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_GREEN_VALUE   0x26"
+
+.PP
+Définition à la ligne 105 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX   0x8009"
+
+.PP
+Définition à la ligne 128 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_VALUE   0x24"
+
+.PP
+Définition à la ligne 103 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_RED_VALUE   0x25"
+
+.PP
+Définition à la ligne 104 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_RGB   0x8008"
+
+.PP
+Définition à la ligne 127 du fichier glx\&.h\&.
+.SS "#define GLX_TRANSPARENT_TYPE   0x23"
+
+.PP
+Définition à la ligne 102 du fichier glx\&.h\&.
+.SS "#define GLX_TRUE_COLOR   0x8002"
+
+.PP
+Définition à la ligne 121 du fichier glx\&.h\&.
+.SS "#define GLX_USE_GL   1"
+
+.PP
+Définition à la ligne 57 du fichier glx\&.h\&.
+.SS "#define GLX_VENDOR   1"
+
+.PP
+Définition à la ligne 91 du fichier glx\&.h\&.
+.SS "#define GLX_VERSION   2"
+
+.PP
+Définition à la ligne 92 du fichier glx\&.h\&.
+.SS "#define GLX_VERSION_1_1   1"
+
+.PP
+Définition à la ligne 45 du fichier glx\&.h\&.
+.SS "#define GLX_VERSION_1_2   1"
+
+.PP
+Définition à la ligne 46 du fichier glx\&.h\&.
+.SS "#define GLX_VERSION_1_3   1"
+
+.PP
+Définition à la ligne 47 du fichier glx\&.h\&.
+.SS "#define GLX_VERSION_1_4   1"
+
+.PP
+Définition à la ligne 48 du fichier glx\&.h\&.
+.SS "#define GLX_VISUAL_ID   0x800B"
+
+.PP
+Définition à la ligne 129 du fichier glx\&.h\&.
+.SS "#define GLX_WIDTH   0x801D"
+
+.PP
+Définition à la ligne 143 du fichier glx\&.h\&.
+.SS "#define GLX_WINDOW   0x8022"
+
+.PP
+Définition à la ligne 148 du fichier glx\&.h\&.
+.SS "#define GLX_WINDOW_BIT   0x00000001"
+
+.PP
+Définition à la ligne 108 du fichier glx\&.h\&.
+.SS "#define GLX_X_RENDERABLE   0x8012"
+
+.PP
+Définition à la ligne 134 du fichier glx\&.h\&.
+.SS "#define GLX_X_VISUAL_TYPE   0x22"
+
+.PP
+Définition à la ligne 101 du fichier glx\&.h\&.
+.SS "#define GLX_Y_INVERTED_EXT   0x20D4"
+
+.PP
+Définition à la ligne 430 du fichier glx\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef \fBvoid\fP(* __GLXextFuncPtr) (\fBvoid\fP)"
+
+.PP
+Définition à la ligne 317 du fichier glx\&.h\&.
+.SS "typedef struct __GLXcontextRec* \fBGLXContext\fP"
+
+.PP
+Définition à la ligne 165 du fichier glx\&.h\&.
+.SS "typedef XID \fBGLXContextID\fP"
+
+.PP
+Définition à la ligne 171 du fichier glx\&.h\&.
+.SS "typedef XID \fBGLXDrawable\fP"
+
+.PP
+Définition à la ligne 167 du fichier glx\&.h\&.
+.SS "typedef union \fB__GLXEvent\fP  \fBGLXEvent\fP"
+
+.SS "typedef struct \fB__GLXFBConfigRec\fP* \fBGLXFBConfig\fP"
+
+.PP
+Définition à la ligne 169 du fichier glx\&.h\&.
+.SS "typedef XID \fBGLXFBConfigID\fP"
+
+.PP
+Définition à la ligne 170 du fichier glx\&.h\&.
+.SS "typedef XID \fBGLXPbuffer\fP"
+
+.PP
+Définition à la ligne 173 du fichier glx\&.h\&.
+.SS "typedef XID \fBGLXPixmap\fP"
+
+.PP
+Définition à la ligne 166 du fichier glx\&.h\&.
+.SS "typedef XID \fBGLXWindow\fP"
+
+.PP
+Définition à la ligne 172 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP*( *  PFNGLXALLOCATEMEMORYNVPROC) (\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readfreq, \fBGLfloat\fP writefreq, \fBGLfloat\fP priority)"
+
+.PP
+Définition à la ligne 351 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(* PFNGLXBEGINFRAMETRACKINGMESAPROC) (Display *dpy, \fBGLXDrawable\fP drawable)"
+
+.PP
+Définition à la ligne 395 du fichier glx\&.h\&.
+.SS "typedef \fBGLXFBConfig\fP*(*  PFNGLXCHOOSEFBCONFIGPROC) (Display *dpy, \fBint\fP screen, \fBconst\fP \fBint\fP *attrib_list, \fBint\fP *nelements)"
+
+.PP
+Définition à la ligne 292 du fichier glx\&.h\&.
+.SS "typedef \fBGLXContext\fP(*  PFNGLXCREATENEWCONTEXTPROC) (Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP render_type, \fBGLXContext\fP share_list, Bool direct)"
+
+.PP
+Définition à la ligne 302 du fichier glx\&.h\&.
+.SS "typedef \fBGLXPbuffer\fP(*  PFNGLXCREATEPBUFFERPROC) (Display *dpy, \fBGLXFBConfig\fP config, \fBconst\fP \fBint\fP *attrib_list)"
+
+.PP
+Définition à la ligne 299 du fichier glx\&.h\&.
+.SS "typedef \fBGLXPixmap\fP(*  PFNGLXCREATEPIXMAPPROC) (Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap, \fBconst\fP \fBint\fP *attrib_list)"
+
+.PP
+Définition à la ligne 297 du fichier glx\&.h\&.
+.SS "typedef \fBGLXWindow\fP(*  PFNGLXCREATEWINDOWPROC) (Display *dpy, \fBGLXFBConfig\fP config, Window win, \fBconst\fP \fBint\fP *attrib_list)"
+
+.PP
+Définition à la ligne 295 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP(*  PFNGLXDESTROYPBUFFERPROC) (Display *dpy, \fBGLXPbuffer\fP pbuf)"
+
+.PP
+Définition à la ligne 300 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP(*  PFNGLXDESTROYPIXMAPPROC) (Display *dpy, \fBGLXPixmap\fP pixmap)"
+
+.PP
+Définition à la ligne 298 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP(*  PFNGLXDESTROYWINDOWPROC) (Display *dpy, \fBGLXWindow\fP win)"
+
+.PP
+Définition à la ligne 296 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(* PFNGLXENDFRAMETRACKINGMESAPROC) (Display *dpy, \fBGLXDrawable\fP drawable)"
+
+.PP
+Définition à la ligne 396 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXFREEMEMORYNVPROC) (\fBGLvoid\fP *\fBpointer\fP)"
+
+.PP
+Définition à la ligne 352 du fichier glx\&.h\&.
+.SS "typedef Display*(*  PFNGLXGETCURRENTDISPLAYPROC) (\fBvoid\fP)"
+
+.PP
+Définition à la ligne 305 du fichier glx\&.h\&.
+.SS "typedef \fBGLXDrawable\fP(*  PFNGLXGETCURRENTREADDRAWABLEPROC) (\fBvoid\fP)"
+
+.PP
+Définition à la ligne 304 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(*  PFNGLXGETFBCONFIGATTRIBPROC) (Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Définition à la ligne 293 du fichier glx\&.h\&.
+.SS "typedef \fBGLXFBConfig\fP*(*  PFNGLXGETFBCONFIGSPROC) (Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+
+.PP
+Définition à la ligne 291 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(* PFNGLXGETFRAMEUSAGEMESAPROC) (Display *dpy, \fBGLXDrawable\fP drawable, float *\fBusage\fP)"
+
+.PP
+Définition à la ligne 394 du fichier glx\&.h\&.
+.SS "typedef \fB__GLXextFuncPtr\fP(*  PFNGLXGETPROCADDRESSPROC) (\fBconst\fP \fBGLubyte\fP *procName)"
+
+.PP
+Définition à la ligne 328 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP(*  PFNGLXGETSELECTEDEVENTPROC) (Display *dpy, \fBGLXDrawable\fP draw, unsigned long *event_mask)"
+
+.PP
+Définition à la ligne 308 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(* PFNGLXGETSWAPINTERVALMESAPROC) (\fBvoid\fP)"
+
+.PP
+Définition à la ligne 413 du fichier glx\&.h\&.
+.SS "typedef XVisualInfo*(*  PFNGLXGETVISUALFROMFBCONFIGPROC) (Display *dpy, \fBGLXFBConfig\fP config)"
+
+.PP
+Définition à la ligne 294 du fichier glx\&.h\&.
+.SS "typedef Bool(*  PFNGLXMAKECONTEXTCURRENTPROC) (Display *dpy, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+
+.PP
+Définition à la ligne 303 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(*  PFNGLXQUERYCONTEXTPROC) (Display *dpy, \fBGLXContext\fP ctx, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Définition à la ligne 306 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP(*  PFNGLXQUERYDRAWABLEPROC) (Display *dpy, \fBGLXDrawable\fP draw, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+
+.PP
+Définition à la ligne 301 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(* PFNGLXQUERYFRAMETRACKINGMESAPROC) (Display *dpy, \fBGLXDrawable\fP drawable, int64_t *swapCount, int64_t *missedFrames, float *lastMissedUsage)"
+
+.PP
+Définition à la ligne 397 du fichier glx\&.h\&.
+.SS "typedef \fBvoid\fP(*  PFNGLXSELECTEVENTPROC) (Display *dpy, \fBGLXDrawable\fP draw, unsigned long event_mask)"
+
+.PP
+Définition à la ligne 307 du fichier glx\&.h\&.
+.SS "typedef \fBint\fP(* PFNGLXSWAPINTERVALMESAPROC) (unsigned \fBint\fP interval)"
+
+.PP
+Définition à la ligne 412 du fichier glx\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBvoid\fP* glXAllocateMemoryNV (\fBGLsizei\fP size, \fBGLfloat\fP readfreq, \fBGLfloat\fP writefreq, \fBGLfloat\fP priority)"
+
+.SS "\fBint\fP glXBeginFrameTrackingMESA (Display * dpy, \fBGLXDrawable\fP drawable)"
+
+.SS "Bool glXBindTexImageARB (Display * dpy, \fBGLXPbuffer\fP pbuffer, \fBint\fP buffer)"
+
+.SS "\fBvoid\fP glXBindTexImageEXT (Display * dpy, \fBGLXDrawable\fP drawable, \fBint\fP buffer, \fBconst\fP \fBint\fP * attrib_list)"
+
+.SS "\fBGLXFBConfig\fP* glXChooseFBConfig (Display * dpy, \fBint\fP screen, \fBconst\fP \fBint\fP * attribList, \fBint\fP * nitems)"
+
+.SS "XVisualInfo* glXChooseVisual (Display * dpy, \fBint\fP screen, \fBint\fP * attribList)"
+
+.SS "\fBvoid\fP glXCopyContext (Display * dpy, \fBGLXContext\fP src, \fBGLXContext\fP dst, unsigned long mask)"
+
+.SS "\fBGLXContext\fP glXCreateContext (Display * dpy, XVisualInfo * vis, \fBGLXContext\fP shareList, Bool direct)"
+
+.SS "\fBGLXPixmap\fP glXCreateGLXPixmap (Display * dpy, XVisualInfo * visual, Pixmap pixmap)"
+
+.SS "\fBGLXContext\fP glXCreateNewContext (Display * dpy, \fBGLXFBConfig\fP config, \fBint\fP renderType, \fBGLXContext\fP shareList, Bool direct)"
+
+.SS "\fBGLXPbuffer\fP glXCreatePbuffer (Display * dpy, \fBGLXFBConfig\fP config, \fBconst\fP \fBint\fP * attribList)"
+
+.SS "\fBGLXPixmap\fP glXCreatePixmap (Display * dpy, \fBGLXFBConfig\fP config, Pixmap pixmap, \fBconst\fP \fBint\fP * attribList)"
+
+.SS "\fBGLXWindow\fP glXCreateWindow (Display * dpy, \fBGLXFBConfig\fP config, Window win, \fBconst\fP \fBint\fP * attribList)"
+
+.SS "\fBvoid\fP glXDestroyContext (Display * dpy, \fBGLXContext\fP ctx)"
+
+.SS "\fBvoid\fP glXDestroyGLXPixmap (Display * dpy, \fBGLXPixmap\fP pixmap)"
+
+.SS "\fBvoid\fP glXDestroyPbuffer (Display * dpy, \fBGLXPbuffer\fP pbuf)"
+
+.SS "\fBvoid\fP glXDestroyPixmap (Display * dpy, \fBGLXPixmap\fP pixmap)"
+
+.SS "\fBvoid\fP glXDestroyWindow (Display * dpy, \fBGLXWindow\fP window)"
+
+.SS "Bool glXDrawableAttribARB (Display * dpy, \fBGLXDrawable\fP draw, \fBconst\fP \fBint\fP * attribList)"
+
+.SS "\fBint\fP glXEndFrameTrackingMESA (Display * dpy, \fBGLXDrawable\fP drawable)"
+
+.SS "\fBvoid\fP glXFreeMemoryNV (\fBGLvoid\fP * pointer)"
+
+.SS "\fBconst\fP char* glXGetClientString (Display * dpy, \fBint\fP name)"
+
+.SS "\fBint\fP glXGetConfig (Display * dpy, XVisualInfo * visual, \fBint\fP attrib, \fBint\fP * value)"
+
+.SS "\fBGLXContext\fP glXGetCurrentContext (\fBvoid\fP)"
+
+.SS "Display* glXGetCurrentDisplay (\fBvoid\fP)"
+
+.SS "\fBGLXDrawable\fP glXGetCurrentDrawable (\fBvoid\fP)"
+
+.SS "\fBGLXDrawable\fP glXGetCurrentReadDrawable (\fBvoid\fP)"
+
+.SS "\fBint\fP glXGetFBConfigAttrib (Display * dpy, \fBGLXFBConfig\fP config, \fBint\fP attribute, \fBint\fP * value)"
+
+.SS "\fBGLXFBConfig\fP* glXGetFBConfigs (Display * dpy, \fBint\fP screen, \fBint\fP * nelements)"
+
+.SS "\fBint\fP glXGetFrameUsageMESA (Display * dpy, \fBGLXDrawable\fP drawable, float * usage)"
+
+.SS "\fB__GLXextFuncPtr\fP glXGetProcAddressARB (\fBconst\fP \fBGLubyte\fP *)"
+
+.SS "\fBvoid\fP glXGetSelectedEvent (Display * dpy, \fBGLXDrawable\fP drawable, unsigned long * mask)"
+
+.SS "\fBint\fP glXGetSwapIntervalMESA (\fBvoid\fP)"
+
+.SS "XVisualInfo* glXGetVisualFromFBConfig (Display * dpy, \fBGLXFBConfig\fP config)"
+
+.SS "Bool glXIsDirect (Display * dpy, \fBGLXContext\fP ctx)"
+
+.SS "Bool glXMakeContextCurrent (Display * dpy, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+
+.SS "Bool glXMakeCurrent (Display * dpy, \fBGLXDrawable\fP drawable, \fBGLXContext\fP ctx)"
+
+.SS "\fBint\fP glXQueryContext (Display * dpy, \fBGLXContext\fP ctx, \fBint\fP attribute, \fBint\fP * value)"
+
+.SS "\fBvoid\fP glXQueryDrawable (Display * dpy, \fBGLXDrawable\fP draw, \fBint\fP attribute, unsigned \fBint\fP * value)"
+
+.SS "Bool glXQueryExtension (Display * dpy, \fBint\fP * errorb, \fBint\fP * event)"
+
+.SS "\fBconst\fP char* glXQueryExtensionsString (Display * dpy, \fBint\fP screen)"
+
+.SS "\fBint\fP glXQueryFrameTrackingMESA (Display * dpy, \fBGLXDrawable\fP drawable, int64_t * swapCount, int64_t * missedFrames, float * lastMissedUsage)"
+
+.SS "\fBconst\fP char* glXQueryServerString (Display * dpy, \fBint\fP screen, \fBint\fP name)"
+
+.SS "Bool glXQueryVersion (Display * dpy, \fBint\fP * maj, \fBint\fP * min)"
+
+.SS "Bool glXReleaseTexImageARB (Display * dpy, \fBGLXPbuffer\fP pbuffer, \fBint\fP buffer)"
+
+.SS "\fBvoid\fP glXReleaseTexImageEXT (Display * dpy, \fBGLXDrawable\fP drawable, \fBint\fP buffer)"
+
+.SS "\fBvoid\fP glXSelectEvent (Display * dpy, \fBGLXDrawable\fP drawable, unsigned long mask)"
+
+.SS "\fBvoid\fP glXSwapBuffers (Display * dpy, \fBGLXDrawable\fP drawable)"
+
+.SS "\fBint\fP glXSwapIntervalMESA (unsigned \fBint\fP interval)"
+
+.SS "\fBvoid\fP glXUseXFont (Font font, \fBint\fP first, \fBint\fP count, \fBint\fP list)"
+
+.SS "\fBvoid\fP glXWaitGL (\fBvoid\fP)"
+
+.SS "\fBvoid\fP glXWaitX (\fBvoid\fP)"
+
+.SH "Documentation des variables"
+.PP 
+.SS "\fBvoid\fP(*)( \fBvoid\fP ) glXGetProcAddress(\fBconst\fP \fBGLubyte\fP *procname)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

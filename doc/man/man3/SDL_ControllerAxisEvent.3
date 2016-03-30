@@ -1,0 +1,89 @@
+.TH "SDL_ControllerAxisEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_ControllerAxisEvent \- Game controller axis motion event structure (event\&.caxis\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoystickID\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBaxis\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBvalue\fP"
+.br
+.ti -1c
+.RI "\fBUint16\fP \fBpadding4\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Game controller axis motion event structure (event\&.caxis\&.*) 
+.PP
+Définition à la ligne 353 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_ControllerAxisEvent::axis"
+The controller axis (SDL_GameControllerAxis) 
+.PP
+Définition à la ligne 358 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_ControllerAxisEvent::padding1"
+
+.PP
+Définition à la ligne 359 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_ControllerAxisEvent::padding2"
+
+.PP
+Définition à la ligne 360 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_ControllerAxisEvent::padding3"
+
+.PP
+Définition à la ligne 361 du fichier SDL_events\&.h\&.
+.SS "\fBUint16\fP SDL_ControllerAxisEvent::padding4"
+
+.PP
+Définition à la ligne 363 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_ControllerAxisEvent::timestamp"
+
+.PP
+Définition à la ligne 356 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_ControllerAxisEvent::type"
+\fBSDL_CONTROLLERAXISMOTION\fP 
+.PP
+Définition à la ligne 355 du fichier SDL_events\&.h\&.
+.SS "\fBSint16\fP SDL_ControllerAxisEvent::value"
+The axis value (range: -32768 to 32767) 
+.PP
+Définition à la ligne 362 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoystickID\fP SDL_ControllerAxisEvent::which"
+The joystick instance id 
+.PP
+Définition à la ligne 357 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

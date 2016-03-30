@@ -1,0 +1,43 @@
+.TH "__DRIextensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIextensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBconst\fP char * \fBname\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBversion\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Extension struct\&. Drivers 'inherit' from this struct by embedding it as the first element in the extension struct\&.
+.PP
+We never break API in for a DRI extension\&. If we need to change the way things work in a non-backwards compatible manner, we introduce a new extension\&. During a transition period, we can leave both the old and the new extension in the driver, which allows us to move to the new interface without having to update the loader(s) in lock step\&.
+.PP
+However, we can add entry points to an extension over time as long as we don't break the old ones\&. As we add entry points to an extension, we increase the version number\&. The corresponding #define can be used to guard code that accesses the new entry points at compile time and the version field in the extension struct can be used at run-time to determine how to use the extension\&. 
+.PP
+Définition à la ligne 111 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBconst\fP char* __DRIextensionRec::name"
+
+.PP
+Définition à la ligne 112 du fichier dri_interface\&.h\&.
+.SS "\fBint\fP __DRIextensionRec::version"
+
+.PP
+Définition à la ligne 113 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

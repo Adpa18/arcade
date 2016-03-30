@@ -1,0 +1,37 @@
+.TH "__DRIgetDrawableInfoExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIgetDrawableInfoExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP(* \fBgetDrawableInfo\fP )(\fB__DRIdrawable\fP *drawable, unsigned \fBint\fP *\fBindex\fP, unsigned \fBint\fP *stamp, \fBint\fP *\fBx\fP, \fBint\fP *\fBy\fP, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, \fBint\fP *numClipRects, drm_clip_rect_t **pClipRects, \fBint\fP *backX, \fBint\fP *backY, \fBint\fP *numBackClipRects, drm_clip_rect_t **pBackClipRects, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 363 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIgetDrawableInfoExtensionRec::base"
+
+.PP
+Définition à la ligne 364 du fichier dri_interface\&.h\&.
+.SS "\fBGLboolean\fP(*  __DRIgetDrawableInfoExtensionRec::getDrawableInfo) (\fB__DRIdrawable\fP *drawable, unsigned \fBint\fP *\fBindex\fP, unsigned \fBint\fP *stamp, \fBint\fP *\fBx\fP, \fBint\fP *\fBy\fP, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP, \fBint\fP *numClipRects, drm_clip_rect_t **pClipRects, \fBint\fP *backX, \fBint\fP *backY, \fBint\fP *numBackClipRects, drm_clip_rect_t **pBackClipRects, \fBvoid\fP *loaderPrivate)"
+This function is used to get information about the position, size, and clip rects of a drawable\&. 
+.PP
+Définition à la ligne 370 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

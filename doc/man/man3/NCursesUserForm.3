@@ -1,0 +1,78 @@
+.TH "NCursesUserForm< T >" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesUserForm< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesf\&.h>\fP
+.PP
+Est dérivée de \fBNCursesForm\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesUserForm\fP (\fBNCursesFormField\fP *Fields[], \fBconst\fP T *p_UserData=\fBSTATIC_CAST\fP(T *)(0), \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Fields=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesUserForm\fP (\fBNCursesFormField\fP *Fields[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0, \fBconst\fP T *p_UserData=\fBSTATIC_CAST\fP(T *)(0), \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Fields=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesUserForm\fP ()"
+.br
+.ti -1c
+.RI "T * \fBUserData\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBsetUserData\fP (\fBconst\fP T *p_UserData)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesUserForm\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0, \fBconst\fP T *p_UserData=\fBSTATIC_CAST\fP(T *)(0))"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+
+.SS "template<class T>class NCursesUserForm< T >"
+
+.PP
+Définition à la ligne 664 du fichier cursesf\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "template<class T > \fBNCursesUserForm\fP< T >::\fBNCursesUserForm\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP, \fBconst\fP T * p_UserData = \fC\fBSTATIC_CAST\fP(T*)(0)\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 669 du fichier cursesf\&.h\&.
+.SS "template<class T > \fBNCursesUserForm\fP< T >::\fBNCursesUserForm\fP (\fBNCursesFormField\fP * Fields[], \fBconst\fP T * p_UserData = \fC\fBSTATIC_CAST\fP(T*)(0)\fP, \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Fields = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 681 du fichier cursesf\&.h\&.
+.SS "template<class T > \fBNCursesUserForm\fP< T >::\fBNCursesUserForm\fP (\fBNCursesFormField\fP * Fields[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP, \fBconst\fP T * p_UserData = \fC\fBSTATIC_CAST\fP(T*)(0)\fP, \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Fields = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 690 du fichier cursesf\&.h\&.
+.SS "template<class T > virtual \fBNCursesUserForm\fP< T >::~\fBNCursesUserForm\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 705 du fichier cursesf\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "template<class T > virtual \fBvoid\fP \fBNCursesUserForm\fP< T >::setUserData (\fBconst\fP T * p_UserData)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 712 du fichier cursesf\&.h\&.
+.SS "template<class T > T* \fBNCursesUserForm\fP< T >::UserData (\fBvoid\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 708 du fichier cursesf\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,11 @@
+<map id="NCursesWindow" name="NCursesWindow">
+<area shape="rect" id="node2" href="$db/de2/class_n_curses_color_window.html" title="NCursesColorWindow" alt="" coords="5,80,157,107"/>
+<area shape="rect" id="node3" href="$db/d26/class_n_curses_pad.html" title="NCursesPad" alt="" coords="182,80,279,107"/>
+<area shape="rect" id="node5" href="$d5/d4a/class_n_curses_panel.html" title="NCursesPanel" alt="" coords="379,80,485,107"/>
+<area shape="rect" id="node4" href="$d2/d83/class_n_curses_framed_pad.html" title="NCursesFramedPad" alt="" coords="123,155,264,181"/>
+<area shape="rect" id="node6" href="$d5/d49/class_n_curses_form.html" title="NCursesForm" alt="" coords="288,155,392,181"/>
+<area shape="rect" id="node8" href="$df/d5c/class_n_curses_menu.html" title="NCursesMenu" alt="" coords="416,155,523,181"/>
+<area shape="rect" id="node10" href="$d3/d9f/class_n_curses_user_panel.html" title="NCursesUserPanel\&lt; T \&gt;" alt="" coords="547,155,714,181"/>
+<area shape="rect" id="node7" href="$d0/d53/class_n_curses_user_form.html" title="NCursesUserForm\&lt; T \&gt;" alt="" coords="229,229,393,256"/>
+<area shape="rect" id="node9" href="$d1/d11/class_n_curses_user_menu.html" title="NCursesUserMenu\&lt; T \&gt;" alt="" coords="417,229,583,256"/>
+</map>

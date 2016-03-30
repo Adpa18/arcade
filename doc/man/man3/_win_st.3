@@ -1,0 +1,217 @@
+.TH "_win_st" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_win_st \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <curses\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpdat\fP"
+.br
+.in -1c
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_cury\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_curx\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_maxy\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_maxx\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_begy\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_begx\fP"
+.br
+.ti -1c
+.RI "short \fB_flags\fP"
+.br
+.ti -1c
+.RI "\fBattr_t\fP \fB_attrs\fP"
+.br
+.ti -1c
+.RI "\fBchtype\fP \fB_bkgd\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_notimeout\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_clear\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_leaveok\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_scroll\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_idlok\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_idcok\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_immed\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_sync\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_use_keypad\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_delay\fP"
+.br
+.ti -1c
+.RI "struct ldat * \fB_line\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_regtop\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_regbottom\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_parx\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_pary\fP"
+.br
+.ti -1c
+.RI "\fBWINDOW\fP * \fB_parent\fP"
+.br
+.ti -1c
+.RI "struct \fB_win_st::pdat\fP \fB_pad\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_SIZE_T\fP \fB_yoffset\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 414 du fichier curses\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBattr_t\fP _win_st::_attrs"
+
+.PP
+Définition à la ligne 425 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_begx"
+
+.PP
+Définition à la ligne 420 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_begy"
+
+.PP
+Définition à la ligne 420 du fichier curses\&.h\&.
+.SS "\fBchtype\fP _win_st::_bkgd"
+
+.PP
+Définition à la ligne 426 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_clear"
+
+.PP
+Définition à la ligne 430 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_curx"
+
+.PP
+Définition à la ligne 416 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_cury"
+
+.PP
+Définition à la ligne 416 du fichier curses\&.h\&.
+.SS "\fBint\fP _win_st::_delay"
+
+.PP
+Définition à la ligne 438 du fichier curses\&.h\&.
+.SS "short _win_st::_flags"
+
+.PP
+Définition à la ligne 422 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_idcok"
+
+.PP
+Définition à la ligne 434 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_idlok"
+
+.PP
+Définition à la ligne 433 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_immed"
+
+.PP
+Définition à la ligne 435 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_leaveok"
+
+.PP
+Définition à la ligne 431 du fichier curses\&.h\&.
+.SS "struct ldat * _win_st::_line"
+
+.PP
+Définition à la ligne 440 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_maxx"
+
+.PP
+Définition à la ligne 419 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_maxy"
+
+.PP
+Définition à la ligne 419 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_notimeout"
+
+.PP
+Définition à la ligne 429 du fichier curses\&.h\&.
+.SS "struct \fB_win_st::pdat\fP _win_st::_pad"
+
+.SS "\fBWINDOW\fP * _win_st::_parent"
+
+.PP
+Définition à la ligne 449 du fichier curses\&.h\&.
+.SS "\fBint\fP _win_st::_parx"
+
+.PP
+Définition à la ligne 447 du fichier curses\&.h\&.
+.SS "\fBint\fP _win_st::_pary"
+
+.PP
+Définition à la ligne 448 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_regbottom"
+
+.PP
+Définition à la ligne 444 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_regtop"
+
+.PP
+Définition à la ligne 443 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_scroll"
+
+.PP
+Définition à la ligne 432 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_sync"
+
+.PP
+Définition à la ligne 436 du fichier curses\&.h\&.
+.SS "\fBbool\fP _win_st::_use_keypad"
+
+.PP
+Définition à la ligne 437 du fichier curses\&.h\&.
+.SS "\fBNCURSES_SIZE_T\fP _win_st::_yoffset"
+
+.PP
+Définition à la ligne 459 du fichier curses\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

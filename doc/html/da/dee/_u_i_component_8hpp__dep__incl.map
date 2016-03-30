@@ -1,0 +1,15 @@
+<map id="/home/wery_a/rendu/CPP/cpp_arcade/inc/UIComponent.hpp" name="/home/wery_a/rendu/CPP/cpp_arcade/inc/UIComponent.hpp">
+<area shape="rect" id="node2" href="$d1/d62/_snake_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/games/snake/Snake.hpp" alt="" coords="367,213,538,269"/>
+<area shape="rect" id="node5" href="$de/d3a/_ncurses_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/ncurses/Ncurses.hpp" alt="" coords="187,109,353,165"/>
+<area shape="rect" id="node8" href="$dd/d12/_open_g_l_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/openGL/OpenGL.hpp" alt="" coords="719,109,885,165"/>
+<area shape="rect" id="node10" href="$d1/d40/_sdl2_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/sdl2/Sdl2.hpp" alt="" coords="909,109,1055,165"/>
+<area shape="rect" id="node12" href="$d6/d8e/_score_component_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/ScoreComponent.hpp" alt="" coords="543,109,695,165"/>
+<area shape="rect" id="node14" href="$d1/d0a/_u_i_component_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/UIComponent.cpp" alt="" coords="1079,109,1226,165"/>
+<area shape="rect" id="node3" href="$db/de9/_games_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/Games.hpp" alt="" coords="289,317,435,373"/>
+<area shape="rect" id="node4" href="$dd/d33/_snake_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/games/snake/Snake.cpp" alt="" coords="459,317,630,373"/>
+<area shape="rect" id="node6" href="$d3/d71/_lib_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/Lib.hpp" alt="" coords="197,213,343,269"/>
+<area shape="rect" id="node7" href="$d3/d50/_ncurses_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/ncurses/Ncurses.cpp" alt="" coords="5,213,172,269"/>
+<area shape="rect" id="node9" href="$d6/d93/_open_g_l_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/openGL/OpenGL.cpp" alt="" coords="738,213,903,269"/>
+<area shape="rect" id="node11" href="$d5/de5/_sdl2_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/sdl2/Sdl2.cpp" alt="" coords="927,213,1074,269"/>
+<area shape="rect" id="node13" href="$d6/dd2/_score_component_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/ScoreComponent.cpp" alt="" coords="562,213,714,269"/>
+</map>

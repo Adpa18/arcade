@@ -1,0 +1,109 @@
+.TH "NCursesFieldType" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesFieldType \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesf\&.h>\fP
+.PP
+Dérivée par \fBAlpha_Field\fP, \fBAlphanumeric_Field\fP, \fBEnumeration_Field\fP, \fBInteger_Field\fP, \fBIPV4_Address_Field\fP, \fBNumeric_Field\fP, \fBRegular_Expression_Field\fP, et \fBUserDefinedFieldType\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesFieldType\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesFieldType\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesFieldType\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesFieldType\fP (\fBconst\fP \fBNCursesFieldType\fP &rhs)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBOnError\fP (\fBint\fP err) \fBconst\fP \fBTHROW2\fP(\fBNCursesException\fP \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBNCursesFormException\fP \fBif\fP (err!=\fBE_OK\fP) \fBTHROW\fP(new \fBNCursesFormException\fP(err))"
+.br
+.ti -1c
+.RI "\fBNCursesFieldType\fP (\fBFIELDTYPE\fP *\fBf\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesFieldType\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBset\fP (\fBNCursesFormField\fP &\fBf\fP)=0"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBFIELDTYPE\fP * \fBfieldtype\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "class \fBNCursesFormField\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 57 du fichier cursesf\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesFieldType::NCursesFieldType (\fBFIELDTYPE\fP * f)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 69 du fichier cursesf\&.h\&.
+.SS "virtual NCursesFieldType::~NCursesFieldType ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 72 du fichier cursesf\&.h\&.
+.SS "NCursesFieldType::NCursesFieldType ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 78 du fichier cursesf\&.h\&.
+.SS "NCursesFieldType::NCursesFieldType (\fBconst\fP \fBNCursesFieldType\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 91 du fichier cursesf\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBvoid\fP \fBNCursesFormException\fP NCursesFieldType::if (err! = \fC\fBE_OK\fP\fP)\fC [new]\fP, \fC [protected]\fP"
+
+.SS "\fBvoid\fP NCursesFieldType::OnError (\fBint\fP err) const\fC [inline]\fP, \fC [protected]\fP"
+
+.SS "\fBNCursesFieldType\fP& NCursesFieldType::operator= (\fBconst\fP \fBNCursesFieldType\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 83 du fichier cursesf\&.h\&.
+.SS "virtual \fBvoid\fP NCursesFieldType::set (\fBNCursesFormField\fP & f)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implémenté dans \fBUserDefinedFieldType\fP\&.
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "friend class \fBNCursesFormField\fP\fC [friend]\fP"
+
+.PP
+Définition à la ligne 59 du fichier cursesf\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBFIELDTYPE\fP* NCursesFieldType::fieldtype\fC [protected]\fP"
+
+.PP
+Définition à la ligne 62 du fichier cursesf\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

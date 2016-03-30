@@ -1,0 +1,84 @@
+.TH "Sdl2" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Sdl2 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Sdl2\&.hpp>\fP
+.PP
+Est dérivée de \fBIGraph\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBSdl2\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~Sdl2\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBeventManagment\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBdisplay\fP (std::stack< \fBAComponent\fP * >)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBdestroy\fP ()"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 21 du fichier Sdl2\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Sdl2::Sdl2 (\fBvoid\fP)"
+
+.PP
+Définition à la ligne 4 du fichier Sdl2\&.cpp\&.
+.SS "Sdl2::~Sdl2 ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 16 du fichier Sdl2\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBvoid\fP Sdl2::destroy ()\fC [virtual]\fP"
+
+.PP
+Implémente \fBIGraph\fP\&.
+.PP
+Définition à la ligne 49 du fichier Sdl2\&.cpp\&.
+.SS "\fBvoid\fP Sdl2::display (std::stack< \fBAComponent\fP * > components)\fC [virtual]\fP"
+
+.PP
+Implémente \fBIGraph\fP\&.
+.PP
+Définition à la ligne 73 du fichier Sdl2\&.cpp\&.
+.SS "\fBint\fP Sdl2::eventManagment ()\fC [virtual]\fP"
+
+.PP
+Implémente \fBIGraph\fP\&.
+.PP
+Définition à la ligne 64 du fichier Sdl2\&.cpp\&.
+.SS "\fBvoid\fP Sdl2::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
+
+.PP
+Implémente \fBIGraph\fP\&.
+.PP
+Définition à la ligne 24 du fichier Sdl2\&.cpp\&.
+.SS "\fBvoid\fP Sdl2::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size)\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 37 du fichier Sdl2\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

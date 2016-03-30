@@ -1,0 +1,51 @@
+<map id="/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_stdinc.h" name="/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_stdinc.h">
+<area shape="rect" id="node2" href="$d7/d70/_s_d_l__main_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_main.h" alt="" coords="4087,837,4258,893"/>
+<area shape="rect" id="node3" href="$de/ddc/_s_d_l_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL.h" alt="" coords="2569,941,2733,997"/>
+<area shape="rect" id="node13" href="$d6/d97/_s_d_l__atomic_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_atomic.h" alt="" coords="5,213,188,269"/>
+<area shape="rect" id="node14" href="$d8/ded/_s_d_l__thread_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_thread.h" alt="" coords="370,317,549,373"/>
+<area shape="rect" id="node15" href="$d3/d78/_s_d_l__audio_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_audio.h" alt="" coords="779,421,953,477"/>
+<area shape="rect" id="node16" href="$df/d2d/_s_d_l__error_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_error.h" alt="" coords="1619,109,1788,165"/>
+<area shape="rect" id="node17" href="$d2/d09/_s_d_l__mutex_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_mutex.h" alt="" coords="519,213,698,269"/>
+<area shape="rect" id="node18" href="$d6/d73/_s_d_l__rwops_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_rwops.h" alt="" coords="1437,213,1615,269"/>
+<area shape="rect" id="node19" href="$d5/d41/_s_d_l__rect_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_rect.h" alt="" coords="2399,317,2565,373"/>
+<area shape="rect" id="node20" href="$dc/d64/_s_d_l__video_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_video.h" alt="" coords="2620,525,2795,581"/>
+<area shape="rect" id="node21" href="$d9/d42/_s_d_l__events_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_events.h" alt="" coords="1955,837,2137,893"/>
+<area shape="rect" id="node22" href="$d3/d07/_s_d_l__keyboard_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_keyboard.h" alt="" coords="2740,629,2936,685"/>
+<area shape="rect" id="node23" href="$d9/d7c/_s_d_l__system_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_system.h" alt="" coords="2745,733,2931,789"/>
+<area shape="rect" id="node24" href="$d5/d62/_s_d_l__mouse_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_mouse.h" alt="" coords="1825,629,2008,685"/>
+<area shape="rect" id="node25" href="$de/da1/_s_d_l__gesture_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_gesture.h" alt="" coords="2134,733,2321,789"/>
+<area shape="rect" id="node26" href="$da/dc2/_s_d_l__touch_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_touch.h" alt="" coords="2084,629,2259,685"/>
+<area shape="rect" id="node27" href="$da/d36/_s_d_l__messagebox_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_messagebox.h" alt="" coords="3425,629,3643,685"/>
+<area shape="rect" id="node28" href="$d6/d30/_s_d_l__render_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_render.h" alt="" coords="2961,629,3139,685"/>
+<area shape="rect" id="node29" href="$dc/d20/_s_d_l__shape_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_shape.h" alt="" coords="2283,629,2462,685"/>
+<area shape="rect" id="node30" href="$de/df3/_s_d_l__syswm_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_syswm.h" alt="" coords="3164,629,3349,685"/>
+<area shape="rect" id="node31" href="$d4/d6d/_s_d_l__surface_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_surface.h" alt="" coords="2277,421,2463,477"/>
+<area shape="rect" id="node32" href="$d0/d47/_s_d_l__gamecontroller_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_gamecontroller.h" alt="" coords="1437,317,1665,373"/>
+<area shape="rect" id="node33" href="$dd/d00/_s_d_l__joystick_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_joystick.h" alt="" coords="1173,213,1361,269"/>
+<area shape="rect" id="node34" href="$dc/d3c/_s_d_l__haptic_8h.html" title="The SDL Haptic subsystem allows you to control haptic (force feedback) devices. " alt="" coords="1031,317,1210,373"/>
+<area shape="rect" id="node35" href="$d9/d3c/_s_d_l__quit_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_quit.h" alt="" coords="2096,213,2260,269"/>
+<area shape="rect" id="node36" href="$d6/dd4/_s_d_l__loadso_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_loadso.h" alt="" coords="213,213,394,269"/>
+<area shape="rect" id="node37" href="$de/d46/_s_d_l__timer_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_timer.h" alt="" coords="723,213,895,269"/>
+<area shape="rect" id="node38" href="$d0/d2b/_s_d_l__endian_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_endian.h" alt="" coords="775,317,957,373"/>
+<area shape="rect" id="node39" href="$d8/dee/_s_d_l__clipboard_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_clipboard.h" alt="" coords="3431,421,3626,477"/>
+<area shape="rect" id="node40" href="$d6/d62/_s_d_l__cpuinfo_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_cpuinfo.h" alt="" coords="3624,525,3809,581"/>
+<area shape="rect" id="node41" href="$d8/d6a/_s_d_l__pixels_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_pixels.h" alt="" coords="2488,213,2665,269"/>
+<area shape="rect" id="node42" href="$d5/df2/_s_d_l__keycode_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_keycode.h" alt="" coords="2893,213,3085,269"/>
+<area shape="rect" id="node43" href="$df/d4a/_s_d_l__scancode_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_scancode.h" alt="" coords="2835,109,3033,165"/>
+<area shape="rect" id="node44" href="$d4/da4/_s_d_l__filesystem_8h.html" title="Include file for filesystem SDL API functions. " alt="" coords="3658,733,3861,789"/>
+<area shape="rect" id="node45" href="$dd/dd3/_s_d_l__hints_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_hints.h" alt="" coords="3733,837,3903,893"/>
+<area shape="rect" id="node46" href="$db/dce/_s_d_l__log_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_log.h" alt="" coords="3936,421,4100,477"/>
+<area shape="rect" id="node47" href="$d7/d6e/_s_d_l__power_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_power.h" alt="" coords="3986,525,4165,581"/>
+<area shape="rect" id="node48" href="$d7/dd5/_s_d_l__version_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_version.h" alt="" coords="3363,525,3548,581"/>
+<area shape="rect" id="node49" href="$d2/d01/_s_d_l__bits_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_bits.h" alt="" coords="4333,109,4497,165"/>
+<area shape="rect" id="node50" href="$d8/dde/_s_d_l__types_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_types.h" alt="" coords="4521,109,4696,165"/>
+<area shape="rect" id="node4" href="$dd/d12/_open_g_l_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/openGL/OpenGL.hpp" alt="" coords="2246,1171,2411,1227"/>
+<area shape="rect" id="node6" href="$d1/d40/_sdl2_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/sdl2/Sdl2.hpp" alt="" coords="2451,1171,2598,1227"/>
+<area shape="rect" id="node7" href="$d5/d9d/_s_d_l__image_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_image.h" alt="" coords="2435,1053,2614,1109"/>
+<area shape="rect" id="node8" href="$dd/d3b/_s_d_l__test_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test.h" alt="" coords="2799,1283,2965,1339"/>
+<area shape="rect" id="node9" href="$dc/dc7/_s_d_l__test__common_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_common.h" alt="" coords="2740,1164,2904,1235"/>
+<area shape="rect" id="node10" href="$d4/d55/_s_d_l__test__images_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_images.h" alt="" coords="2860,1045,3024,1116"/>
+<area shape="rect" id="node11" href="$d8/d59/_s_d_l__test__compare_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_test\l_compare.h" alt="" coords="2980,1164,3144,1235"/>
+<area shape="rect" id="node12" href="$dc/d92/_s_d_l__ttf_8h.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/library\l/sdl2/include/SDL_ttf.h" alt="" coords="2247,1053,2411,1109"/>
+<area shape="rect" id="node5" href="$d6/d93/_open_g_l_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/openGL/OpenGL.cpp" alt="" coords="2246,1283,2411,1339"/>
+</map>

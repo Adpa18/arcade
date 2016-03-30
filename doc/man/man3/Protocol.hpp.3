@@ -1,0 +1,115 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/Protocol.hpp" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/inc/Protocol.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBarcade::GetMap\fP"
+.br
+.RI "\fIThe format is width, height, and width * height * sizeof(TileType) quantity of TileType\&. \fP"
+.ti -1c
+.RI "struct \fBarcade::Position\fP"
+.br
+.RI "\fIThe format is length, length * \fBPosition\fP quantity of TileType\&. \fP"
+.ti -1c
+.RI "struct \fBarcade::WhereAmI\fP"
+.br
+.in -1c
+.SS "Espaces de nommage"
+
+.in +1c
+.ti -1c
+.RI " \fBarcade\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBarcade::CommandType\fP : uint16_t { \fBarcade::CommandType::WHERE_AM_I\fP = 0, \fBarcade::CommandType::GET_MAP\fP = 1, \fBarcade::CommandType::GO_UP\fP = 2, \fBarcade::CommandType::GO_DOWN\fP = 3, \fBarcade::CommandType::GO_LEFT\fP = 4, \fBarcade::CommandType::GO_RIGHT\fP = 5, \fBarcade::CommandType::GO_FORWARD\fP = 6, \fBarcade::CommandType::SHOOT\fP = 7, \fBarcade::CommandType::ILLEGAL\fP = 8, \fBarcade::CommandType::PLAY\fP = 9 }"
+.br
+.ti -1c
+.RI "enum \fBarcade::TileType\fP : uint16_t { \fBarcade::TileType::EMPTY\fP = 0, \fBarcade::TileType::BLOCK\fP = 1, \fBarcade::TileType::OBSTACLE\fP = 2, \fBarcade::TileType::EVIL_DUDE\fP = 3, \fBarcade::TileType::EVIL_SHOOT\fP = 4, \fBarcade::TileType::MY_SHOOT\fP = 5, \fBarcade::TileType::POWERUP\fP = 6, \fBarcade::TileType::OTHER\fP = 7 }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBarcade::GetMap\fP \fBarcade::__attribute__\fP ((\fBpacked\fP))"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "CommandType \fBtype\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBwidth\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBheight\fP"
+.br
+.ti -1c
+.RI "TileType \fBtile\fP [0]"
+.br
+.ti -1c
+.RI "uint16_t \fBx\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBy\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBlenght\fP"
+.br
+.ti -1c
+.RI "Position \fBposition\fP [0]"
+.br
+.in -1c
+.SH "Documentation des variables"
+.PP 
+.SS "uint16_t \fBheight\fP"
+
+.PP
+Définition à la ligne 66 du fichier Protocol\&.hpp\&.
+.SS "uint16_t lenght"
+
+.PP
+Définition à la ligne 65 du fichier Protocol\&.hpp\&.
+.SS "Position position[0]"
+
+.PP
+Définition à la ligne 66 du fichier Protocol\&.hpp\&.
+.SS "TileType tile[0]"
+
+.PP
+Définition à la ligne 67 du fichier Protocol\&.hpp\&.
+.SS "CommandType \fBtype\fP"
+
+.PP
+Définition à la ligne 64 du fichier Protocol\&.hpp\&.
+.SS "uint16_t \fBwidth\fP"
+
+.PP
+Définition à la ligne 65 du fichier Protocol\&.hpp\&.
+.SS "uint16_t \fBx\fP"
+
+.PP
+Définition à la ligne 64 du fichier Protocol\&.hpp\&.
+.SS "uint16_t \fBy\fP"
+
+.PP
+Définition à la ligne 65 du fichier Protocol\&.hpp\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

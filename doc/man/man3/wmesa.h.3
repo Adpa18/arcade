@@ -1,0 +1,73 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/wmesa.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/wmesa.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'GL/gl\&.h'\fP
+.br
+
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct wmesa_context * \fBWMesaContext\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBWMesaContext\fP \fBWMesaCreateContext\fP (\fBHDC\fP \fBhDC\fP, HPALETTE *pPal, \fBGLboolean\fP rgb_flag, \fBGLboolean\fP db_flag, \fBGLboolean\fP alpha_flag)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBWMesaDestroyContext\fP (\fBWMesaContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBWMesaMakeCurrent\fP (\fBWMesaContext\fP ctx, \fBHDC\fP hdc)"
+.br
+.ti -1c
+.RI "\fBWMesaContext\fP \fBWMesaGetCurrentContext\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBWMesaSwapBuffers\fP (\fBHDC\fP hdc)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBWMesaPaletteChange\fP (HPALETTE Pal)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBWMesaMove\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBWMesaShareLists\fP (\fBWMesaContext\fP ctx_to_share, \fBWMesaContext\fP ctx)"
+.br
+.in -1c
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct wmesa_context* \fBWMesaContext\fP"
+
+.PP
+Définition à la ligne 70 du fichier wmesa\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBWMesaContext\fP WMesaCreateContext (\fBHDC\fP hDC, HPALETTE * pPal, \fBGLboolean\fP rgb_flag, \fBGLboolean\fP db_flag, \fBGLboolean\fP alpha_flag)"
+
+.SS "\fBvoid\fP WMesaDestroyContext (\fBWMesaContext\fP ctx)"
+
+.SS "\fBWMesaContext\fP WMesaGetCurrentContext (\fBvoid\fP)"
+
+.SS "\fBvoid\fP WMesaMakeCurrent (\fBWMesaContext\fP ctx, \fBHDC\fP hdc)"
+
+.SS "\fBvoid\fP WMesaMove (\fBvoid\fP)"
+
+.SS "\fBvoid\fP WMesaPaletteChange (HPALETTE Pal)"
+
+.SS "\fBvoid\fP WMesaShareLists (\fBWMesaContext\fP ctx_to_share, \fBWMesaContext\fP ctx)"
+
+.SS "\fBvoid\fP WMesaSwapBuffers (\fBHDC\fP hdc)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

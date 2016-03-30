@@ -1,0 +1,35 @@
+<map id="NCursesPanel::OnError" name="NCursesPanel::OnError">
+<area shape="rect" id="node2" href="$d5/d49/class_n_curses_form.html#a494f37fa3f84d1445e547cdeb2c39188" title="NCursesForm::setFields" alt="" coords="223,5,389,32"/>
+<area shape="rect" id="node3" href="$d5/d49/class_n_curses_form.html#a09395a54fdcbfecf3824294cd45bb417" title="NCursesForm::unpost" alt="" coords="231,56,381,83"/>
+<area shape="rect" id="node4" href="$d5/d49/class_n_curses_form.html#a436d2447e2502076353970f0046684d9" title="NCursesForm::post" alt="" coords="237,107,375,133"/>
+<area shape="rect" id="node5" href="$d5/d49/class_n_curses_form.html#a806982e242e62e499182eda5b5a9212e" title="NCursesForm::frame" alt="" coords="233,157,379,184"/>
+<area shape="rect" id="node6" href="$d5/d49/class_n_curses_form.html#a6d03daea0425834ca7c6c4d94d1bb2d0" title="NCursesForm::boldframe" alt="" coords="221,208,391,235"/>
+<area shape="rect" id="node7" href="$d5/d49/class_n_curses_form.html#af82f845120fd7ca1c6b0a3e93914df2e" title="NCursesForm::label" alt="" coords="237,259,375,285"/>
+<area shape="rect" id="node8" href="$d5/d49/class_n_curses_form.html#adc58705e5bd79322409a6ce99f6773b0" title="NCursesForm::scale" alt="" coords="235,309,377,336"/>
+<area shape="rect" id="node9" href="$d5/d49/class_n_curses_form.html#a86671c4ae8dfe0d4facd9f4475b88046" title="NCursesForm::set_page" alt="" coords="223,360,389,387"/>
+<area shape="rect" id="node10" href="$d5/d49/class_n_curses_form.html#a0e4c3f3ebddfa9ab046e0efc14b10c22" title="NCursesForm::options_on" alt="" coords="219,411,393,437"/>
+<area shape="rect" id="node11" href="$d5/d49/class_n_curses_form.html#aee283dd4f04c5be12c86ec0a2dd290a6" title="NCursesForm::options_off" alt="" coords="218,461,394,488"/>
+<area shape="rect" id="node12" href="$d5/d49/class_n_curses_form.html#a51ccb310b9e88e25ccbe645fa34667cc" title="NCursesForm::set_options" alt="" coords="217,512,395,539"/>
+<area shape="rect" id="node13" href="$d5/d49/class_n_curses_form.html#ae5dccabfdd49b524a5e28d3874501991" title="NCursesForm::position\l_cursor" alt="" coords="227,563,385,605"/>
+<area shape="rect" id="node14" href="$d5/d49/class_n_curses_form.html#aae6fd5088ad67eb83d850b3f1c946465" title="NCursesForm::set_current" alt="" coords="217,629,395,656"/>
+<area shape="rect" id="node15" href="$d5/d49/class_n_curses_form.html#a74c7223ff7cf5987459cd28036b92f5b" title="NCursesForm::operator[]" alt="" coords="223,680,389,707"/>
+<area shape="rect" id="node16" href="$df/d5c/class_n_curses_menu.html#aa06bdbdb900e6a831b94b9251c95875e" title="NCursesMenu::setItems" alt="" coords="223,731,389,757"/>
+<area shape="rect" id="node17" href="$df/d5c/class_n_curses_menu.html#a95597771dc990d9f8134282d850520d0" title="NCursesMenu::unpost" alt="" coords="229,781,383,808"/>
+<area shape="rect" id="node18" href="$df/d5c/class_n_curses_menu.html#a09437a78717ae266cfeef93562c962f4" title="NCursesMenu::post" alt="" coords="237,832,375,859"/>
+<area shape="rect" id="node19" href="$df/d5c/class_n_curses_menu.html#a4fa7195beb53adeecc3b19b106015fcb" title="NCursesMenu::scale" alt="" coords="233,883,379,909"/>
+<area shape="rect" id="node20" href="$df/d5c/class_n_curses_menu.html#a7b4307fa39ce90ee60a1a05bf470cf26" title="NCursesMenu::set_format" alt="" coords="218,933,394,960"/>
+<area shape="rect" id="node21" href="$df/d5c/class_n_curses_menu.html#a265b4f35fcfe7cab285d7882a493be53" title="NCursesMenu::set_mark" alt="" coords="222,984,390,1011"/>
+<area shape="rect" id="node22" href="$df/d5c/class_n_curses_menu.html#a3a6666a2c825aba2be2447bcd929ce11" title="NCursesMenu::options_on" alt="" coords="217,1035,395,1061"/>
+<area shape="rect" id="node23" href="$df/d5c/class_n_curses_menu.html#a2407971437a1ea0200915aa5c5405476" title="NCursesMenu::options_off" alt="" coords="217,1085,395,1112"/>
+<area shape="rect" id="node24" href="$df/d5c/class_n_curses_menu.html#a18906caecec03072ec50fee9cbb392fc" title="NCursesMenu::set_options" alt="" coords="215,1136,397,1163"/>
+<area shape="rect" id="node25" href="$df/d5c/class_n_curses_menu.html#ae7b6e403a0d0d69f7774345f2346f56c" title="NCursesMenu::set_pad" alt="" coords="226,1187,386,1213"/>
+<area shape="rect" id="node26" href="$df/d5c/class_n_curses_menu.html#a3546bab6e9b2676aaccbb21398bfa39b" title="NCursesMenu::position\l_cursor" alt="" coords="227,1238,385,1279"/>
+<area shape="rect" id="node27" href="$df/d5c/class_n_curses_menu.html#aa98f1bfc05e2d70eb2251b6cd1f6da3a" title="NCursesMenu::set_current" alt="" coords="217,1304,395,1331"/>
+<area shape="rect" id="node28" href="$df/d5c/class_n_curses_menu.html#a3170ecc7911e4f351605d70aef3def5a" title="NCursesMenu::set_top_row" alt="" coords="213,1355,399,1381"/>
+<area shape="rect" id="node29" href="$df/d5c/class_n_curses_menu.html#a0c16a87f64b7503df8d43ed3358dc9d5" title="NCursesMenu::setSpacing" alt="" coords="217,1405,395,1432"/>
+<area shape="rect" id="node30" href="$df/d5c/class_n_curses_menu.html#a4a76213c2e759daf59550d9d4da00cc8" title="NCursesMenu::Spacing" alt="" coords="225,1456,387,1483"/>
+<area shape="rect" id="node31" href="$df/d5c/class_n_curses_menu.html#a3310c4f5b3d4eaeac3a11adb046cd7cb" title="NCursesMenu::frame" alt="" coords="233,1507,379,1533"/>
+<area shape="rect" id="node32" href="$df/d5c/class_n_curses_menu.html#a6b3305e0830003dad08d7a5bbb2d5c35" title="NCursesMenu::boldframe" alt="" coords="221,1557,391,1584"/>
+<area shape="rect" id="node33" href="$df/d5c/class_n_curses_menu.html#ab15f1ca8980fa1455465485018ed32b6" title="NCursesMenu::label" alt="" coords="235,1608,377,1635"/>
+<area shape="rect" id="node34" href="$df/d5c/class_n_curses_menu.html#a26f187ce8579a40c9c7e13f49a8a9efc" title="NCursesMenu::operator[]" alt="" coords="221,1659,391,1685"/>
+</map>

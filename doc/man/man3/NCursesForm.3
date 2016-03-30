@@ -1,0 +1,356 @@
+.TH "NCursesForm" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesForm \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesf\&.h>\fP
+.PP
+Est dérivée de \fBNCursesPanel\fP\&.
+.PP
+Dérivée par \fBNCursesUserForm< T >\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesForm\fP (\fBNCursesFormField\fP *Fields[], \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Fields=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesForm\fP (\fBNCursesFormField\fP *Fields[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y, \fBint\fP begin_x, \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Fields=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesForm\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesForm\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesForm\fP (\fBconst\fP \fBNCursesForm\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesForm\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBsetDefaultAttributes\fP ()"
+.br
+.ti -1c
+.RI "\fBNCursesFormField\fP * \fBcurrent_field\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSubWindow\fP (\fBNCursesWindow\fP &sub)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetFields\fP (\fBNCursesFormField\fP *Fields[])"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBunpost\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBpost\fP (\fBbool\fP flag=\fBTRUE\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBframe\fP (\fBconst\fP char *title=\fBNULL\fP, \fBconst\fP char *btitle=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBboldframe\fP (\fBconst\fP char *title=\fBNULL\fP, \fBconst\fP char *btitle=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBlabel\fP (\fBconst\fP char *topLabel, \fBconst\fP char *bottomLabel)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Form_Init\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Form_Termination\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Field_Init\fP (\fBNCursesFormField\fP &field)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Field_Termination\fP (\fBNCursesFormField\fP &field)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBscale\fP (\fBint\fP &rows, \fBint\fP &ncols) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP \fBcount\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_page\fP (\fBint\fP pageNum)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBpage\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBoptions_on\fP (\fBForm_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBoptions_off\fP (\fBForm_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBForm_Options\fP \fBoptions\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_options\fP (\fBForm_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBdata_ahead\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBbool\fP \fBdata_behind\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBposition_cursor\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_current\fP (\fBNCursesFormField\fP &F)"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBvirtualize\fP (\fBint\fP \fBc\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesFormField\fP * \fBoperator[]\fP (\fBint\fP i) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBNCursesFormField\fP * \fBoperator()\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Request_Denied\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Invalid_Field\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBOn_Unknown_Command\fP (\fBint\fP \fBc\fP) \fBconst\fP "
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBset_user\fP (\fBvoid\fP *user)"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBget_user\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBInitForm\fP (\fBNCursesFormField\fP *Fields[], \fBbool\fP with_frame, \fBbool\fP autoDeleteFields)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBOnError\fP (\fBint\fP \fBerr\fP) \fBconst\fP \fBTHROW2\fP(\fBNCursesException\fP \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBdriver\fP (\fBint\fP \fBc\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesForm\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBFORM\fP * \fBform\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBNCursesFormException\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_frm_init\fP (\fBFORM\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_frm_term\fP (\fBFORM\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_fld_init\fP (\fBFORM\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fB_nc_xx_fld_term\fP (\fBFORM\fP *)"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 340 du fichier cursesf\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesForm::NCursesForm (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 404 du fichier cursesf\&.h\&.
+.SS "NCursesForm::NCursesForm (\fBNCursesFormField\fP * Fields[], \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Fields = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 420 du fichier cursesf\&.h\&.
+.SS "NCursesForm::NCursesForm (\fBNCursesFormField\fP * Fields[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y, \fBint\fP begin_x, \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Fields = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 435 du fichier cursesf\&.h\&.
+.SS "NCursesForm::NCursesForm (\fBconst\fP \fBNCursesForm\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 462 du fichier cursesf\&.h\&.
+.SS "virtual NCursesForm::~NCursesForm ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBvoid\fP NCursesForm::boldframe (\fBconst\fP char * title = \fC\fBNULL\fP\fP, \fBconst\fP char * btitle = \fC\fBNULL\fP\fP)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 509 du fichier cursesf\&.h\&.
+.SS "\fBint\fP NCursesForm::count () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 547 du fichier cursesf\&.h\&.
+.SS "\fBNCursesFormField\fP* NCursesForm::current_field () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 479 du fichier cursesf\&.h\&.
+.SS "\fBbool\fP NCursesForm::data_ahead () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 582 du fichier cursesf\&.h\&.
+.SS "\fBbool\fP NCursesForm::data_behind () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 587 du fichier cursesf\&.h\&.
+.SS "virtual \fBint\fP NCursesForm::driver (\fBint\fP c)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBvoid\fP NCursesForm::frame (\fBconst\fP char * title = \fC\fBNULL\fP\fP, \fBconst\fP char * btitle = \fC\fBNULL\fP\fP)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 502 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP* NCursesForm::get_user ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 384 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::InitForm (\fBNCursesFormField\fP * Fields[], \fBbool\fP with_frame, \fBbool\fP autoDeleteFields)\fC [protected]\fP"
+
+.SS "\fBvoid\fP NCursesForm::label (\fBconst\fP char * topLabel, \fBconst\fP char * bottomLabel)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Réimplémentée à partir de \fBNCursesPanel\fP\&.
+.PP
+Définition à la ligne 516 du fichier cursesf\&.h\&.
+.SS "virtual \fBvoid\fP NCursesForm::On_Field_Init (\fBNCursesFormField\fP & field)\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesForm::On_Field_Termination (\fBNCursesFormField\fP & field)\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesForm::On_Form_Init ()\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesForm::On_Form_Termination ()\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesForm::On_Invalid_Field (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesForm::On_Request_Denied (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesForm::On_Unknown_Command (\fBint\fP c) const\fC [virtual]\fP"
+
+.SS "\fBvoid\fP NCursesForm::OnError (\fBint\fP err) const\fC [inline]\fP, \fC [protected]\fP"
+
+.SS "virtual \fBNCursesFormField\fP* NCursesForm::operator() (\fBvoid\fP)\fC [virtual]\fP"
+
+.SS "\fBNCursesForm\fP& NCursesForm::operator= (\fBconst\fP \fBNCursesForm\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 453 du fichier cursesf\&.h\&.
+.SS "\fBNCursesFormField\fP* NCursesForm::operator[] (\fBint\fP i) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 607 du fichier cursesf\&.h\&.
+.SS "\fBForm_Options\fP NCursesForm::options () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 572 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::options_off (\fBForm_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 567 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::options_on (\fBForm_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 562 du fichier cursesf\&.h\&.
+.SS "\fBint\fP NCursesForm::page () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 557 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::position_cursor ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 592 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::post (\fBbool\fP flag = \fC\fBTRUE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 497 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::scale (\fBint\fP & rows, \fBint\fP & ncols) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 542 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::set_current (\fBNCursesFormField\fP & F)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 596 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::set_options (\fBForm_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 577 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::set_page (\fBint\fP pageNum)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 552 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::set_user (\fBvoid\fP * user)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 378 du fichier cursesf\&.h\&.
+.SS "virtual \fBvoid\fP NCursesForm::setDefaultAttributes ()\fC [virtual]\fP"
+
+.SS "\fBvoid\fP NCursesForm::setFields (\fBNCursesFormField\fP * Fields[])\fC [inline]\fP"
+
+.PP
+Définition à la ligne 487 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::setSubWindow (\fBNCursesWindow\fP & sub)"
+
+.SS "\fBvoid\fP NCursesForm::unpost (\fBvoid\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 492 du fichier cursesf\&.h\&.
+.SS "virtual \fBint\fP NCursesForm::virtualize (\fBint\fP c)\fC [virtual]\fP"
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "\fBvoid\fP _nc_xx_fld_init (\fBFORM\fP *)\fC [friend]\fP"
+
+.SS "\fBvoid\fP _nc_xx_fld_term (\fBFORM\fP *)\fC [friend]\fP"
+
+.SS "\fBvoid\fP _nc_xx_frm_init (\fBFORM\fP *)\fC [friend]\fP"
+
+.SS "\fBvoid\fP _nc_xx_frm_term (\fBFORM\fP *)\fC [friend]\fP"
+
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBFORM\fP* NCursesForm::form\fC [protected]\fP"
+
+.PP
+Définition à la ligne 343 du fichier cursesf\&.h\&.
+.SS "\fBvoid\fP NCursesForm::NCursesFormException\fC [protected]\fP"
+\fBValeur initiale :\fP
+.PP
+.nf
+{
+    if (err != E_OK)
+      THROW(new NCursesFormException (err))
+.fi
+.PP
+Définition à la ligne 394 du fichier cursesf\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

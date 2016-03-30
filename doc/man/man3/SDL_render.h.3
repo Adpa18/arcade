@@ -1,0 +1,1533 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_render.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_render.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_rect\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_RendererInfo\fP"
+.br
+.RI "\fIInformation on the capabilities of a render driver or context\&. \fP"
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBSDL_RendererInfo\fP \fBSDL_RendererInfo\fP"
+.br
+.RI "\fIInformation on the capabilities of a render driver or context\&. \fP"
+.ti -1c
+.RI "typedef struct \fBSDL_Renderer\fP \fBSDL_Renderer\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_Texture\fP \fBSDL_Texture\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_RendererFlags\fP { \fBSDL_RENDERER_SOFTWARE\fP = 0x00000001, \fBSDL_RENDERER_ACCELERATED\fP = 0x00000002, \fBSDL_RENDERER_PRESENTVSYNC\fP = 0x00000004, \fBSDL_RENDERER_TARGETTEXTURE\fP = 0x00000008 }
+.RI "\fIFlags used when creating a rendering context\&. \fP""
+.br
+.ti -1c
+.RI "enum \fBSDL_TextureAccess\fP { \fBSDL_TEXTUREACCESS_STATIC\fP, \fBSDL_TEXTUREACCESS_STREAMING\fP, \fBSDL_TEXTUREACCESS_TARGET\fP }
+.RI "\fIThe access pattern allowed for a texture\&. \fP""
+.br
+.ti -1c
+.RI "enum \fBSDL_TextureModulate\fP { \fBSDL_TEXTUREMODULATE_NONE\fP = 0x00000000, \fBSDL_TEXTUREMODULATE_COLOR\fP = 0x00000001, \fBSDL_TEXTUREMODULATE_ALPHA\fP = 0x00000002 }
+.RI "\fIThe texture channel modulation used in \fBSDL_RenderCopy()\fP\&. \fP""
+.br
+.ti -1c
+.RI "enum \fBSDL_RendererFlip\fP { \fBSDL_FLIP_NONE\fP = 0x00000000, \fBSDL_FLIP_HORIZONTAL\fP = 0x00000001, \fBSDL_FLIP_VERTICAL\fP = 0x00000002 }
+.RI "\fIFlip constants for SDL_RenderCopyEx\&. \fP""
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetNumRenderDrivers\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the number of 2D rendering drivers available for the current display\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetRenderDriverInfo\fP (\fBint\fP \fBindex\fP, \fBSDL_RendererInfo\fP *info)"
+.br
+.RI "\fIGet information about a specific 2D rendering driver for the current display\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_CreateWindowAndRenderer\fP (\fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, \fBUint32\fP window_flags, \fBSDL_Window\fP **window, \fBSDL_Renderer\fP **renderer)"
+.br
+.RI "\fICreate a window and default renderer\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Renderer\fP *\fBSDLCALL\fP \fBSDL_CreateRenderer\fP (\fBSDL_Window\fP *window, \fBint\fP \fBindex\fP, \fBUint32\fP \fBflags\fP)"
+.br
+.RI "\fICreate a 2D rendering context for a window\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Renderer\fP *\fBSDLCALL\fP \fBSDL_CreateSoftwareRenderer\fP (\fBSDL_Surface\fP *surface)"
+.br
+.RI "\fICreate a 2D software rendering context for a surface\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Renderer\fP *\fBSDLCALL\fP \fBSDL_GetRenderer\fP (\fBSDL_Window\fP *window)"
+.br
+.RI "\fIGet the renderer associated with a window\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetRendererInfo\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_RendererInfo\fP *info)"
+.br
+.RI "\fIGet information about a rendering context\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetRendererOutputSize\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.RI "\fIGet the output size in pixels of a rendering context\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Texture\fP *\fBSDLCALL\fP \fBSDL_CreateTexture\fP (\fBSDL_Renderer\fP *renderer, \fBUint32\fP \fBformat\fP, \fBint\fP \fBaccess\fP, \fBint\fP \fBw\fP, \fBint\fP \fBh\fP)"
+.br
+.RI "\fICreate a texture for a rendering context\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Texture\fP *\fBSDLCALL\fP \fBSDL_CreateTextureFromSurface\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_Surface\fP *surface)"
+.br
+.RI "\fICreate a texture from an existing surface\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_QueryTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBUint32\fP *\fBformat\fP, \fBint\fP *\fBaccess\fP, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.RI "\fIQuery the attributes of a texture\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetTextureColorMod\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBUint8\fP \fBr\fP, \fBUint8\fP \fBg\fP, \fBUint8\fP \fBb\fP)"
+.br
+.RI "\fISet an additional color value used in render copy operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetTextureColorMod\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBUint8\fP *\fBr\fP, \fBUint8\fP *\fBg\fP, \fBUint8\fP *\fBb\fP)"
+.br
+.RI "\fIGet the additional color value used in render copy operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetTextureAlphaMod\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBUint8\fP \fBalpha\fP)"
+.br
+.RI "\fISet an additional alpha value used in render copy operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetTextureAlphaMod\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBUint8\fP *\fBalpha\fP)"
+.br
+.RI "\fIGet the additional alpha value used in render copy operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetTextureBlendMode\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBSDL_BlendMode\fP blendMode)"
+.br
+.RI "\fISet the blend mode used for texture copy operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetTextureBlendMode\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBSDL_BlendMode\fP *blendMode)"
+.br
+.RI "\fIGet the blend mode used for texture copy operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_UpdateTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBconst\fP \fBSDL_Rect\fP *rect, \fBconst\fP \fBvoid\fP *\fBpixels\fP, \fBint\fP pitch)"
+.br
+.RI "\fIUpdate the given texture rectangle with new pixel data\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_UpdateYUVTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBconst\fP \fBSDL_Rect\fP *rect, \fBconst\fP \fBUint8\fP *Yplane, \fBint\fP Ypitch, \fBconst\fP \fBUint8\fP *Uplane, \fBint\fP Upitch, \fBconst\fP \fBUint8\fP *Vplane, \fBint\fP Vpitch)"
+.br
+.RI "\fIUpdate a rectangle within a planar YV12 or IYUV texture with new pixel data\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_LockTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP, \fBconst\fP \fBSDL_Rect\fP *rect, \fBvoid\fP **\fBpixels\fP, \fBint\fP *pitch)"
+.br
+.RI "\fILock a portion of the texture for write-only pixel access\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_UnlockTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP)"
+.br
+.RI "\fIUnlock a texture, uploading the changes to video memory, if needed\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP \fBSDL_RenderTargetSupported\fP (\fBSDL_Renderer\fP *renderer)"
+.br
+.RI "\fIDetermines whether a window supports the use of render targets\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetRenderTarget\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_Texture\fP *\fBtexture\fP)"
+.br
+.RI "\fISet a texture as the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Texture\fP *\fBSDLCALL\fP \fBSDL_GetRenderTarget\fP (\fBSDL_Renderer\fP *renderer)"
+.br
+.RI "\fIGet the current render target or NULL for the default render target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderSetLogicalSize\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP \fBw\fP, \fBint\fP \fBh\fP)"
+.br
+.RI "\fISet device independent resolution for rendering\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_RenderGetLogicalSize\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.RI "\fIGet device independent resolution for rendering\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderSetViewport\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fISet the drawing area for rendering on the current target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_RenderGetViewport\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fIGet the drawing area for the current target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderSetClipRect\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fISet the clip rectangle for the current target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_RenderGetClipRect\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fIGet the clip rectangle for the current target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP \fBSDL_RenderIsClipEnabled\fP (\fBSDL_Renderer\fP *renderer)"
+.br
+.RI "\fIGet whether clipping is enabled on the given renderer\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderSetScale\fP (\fBSDL_Renderer\fP *renderer, float scaleX, float scaleY)"
+.br
+.RI "\fISet the drawing scale for rendering on the current target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_RenderGetScale\fP (\fBSDL_Renderer\fP *renderer, float *scaleX, float *scaleY)"
+.br
+.RI "\fIGet the drawing scale for the current target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetRenderDrawColor\fP (\fBSDL_Renderer\fP *renderer, \fBUint8\fP \fBr\fP, \fBUint8\fP \fBg\fP, \fBUint8\fP \fBb\fP, \fBUint8\fP \fBa\fP)"
+.br
+.RI "\fISet the color used for drawing operations (Rect, Line and Clear)\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetRenderDrawColor\fP (\fBSDL_Renderer\fP *renderer, \fBUint8\fP *\fBr\fP, \fBUint8\fP *\fBg\fP, \fBUint8\fP *\fBb\fP, \fBUint8\fP *\fBa\fP)"
+.br
+.RI "\fIGet the color used for drawing operations (Rect, Line and Clear)\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SetRenderDrawBlendMode\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_BlendMode\fP blendMode)"
+.br
+.RI "\fISet the blend mode used for drawing operations (Fill and Line)\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetRenderDrawBlendMode\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_BlendMode\fP *blendMode)"
+.br
+.RI "\fIGet the blend mode used for drawing operations\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderClear\fP (\fBSDL_Renderer\fP *renderer)"
+.br
+.RI "\fIClear the current rendering target with the drawing color\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderDrawPoint\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP)"
+.br
+.RI "\fIDraw a point on the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderDrawPoints\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Point\fP *\fBpoints\fP, \fBint\fP \fBcount\fP)"
+.br
+.RI "\fIDraw multiple points on the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderDrawLine\fP (\fBSDL_Renderer\fP *renderer, \fBint\fP \fBx1\fP, \fBint\fP \fBy1\fP, \fBint\fP \fBx2\fP, \fBint\fP \fBy2\fP)"
+.br
+.RI "\fIDraw a line on the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderDrawLines\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Point\fP *\fBpoints\fP, \fBint\fP \fBcount\fP)"
+.br
+.RI "\fIDraw a series of connected lines on the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderDrawRect\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fIDraw a rectangle on the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderDrawRects\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rects, \fBint\fP \fBcount\fP)"
+.br
+.RI "\fIDraw some number of rectangles on the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderFillRect\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rect)"
+.br
+.RI "\fIFill a rectangle on the current rendering target with the drawing color\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderFillRects\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rects, \fBint\fP \fBcount\fP)"
+.br
+.RI "\fIFill some number of rectangles on the current rendering target with the drawing color\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderCopy\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_Texture\fP *\fBtexture\fP, \fBconst\fP \fBSDL_Rect\fP *srcrect, \fBconst\fP \fBSDL_Rect\fP *dstrect)"
+.br
+.RI "\fICopy a portion of the texture to the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderCopyEx\fP (\fBSDL_Renderer\fP *renderer, \fBSDL_Texture\fP *\fBtexture\fP, \fBconst\fP \fBSDL_Rect\fP *srcrect, \fBconst\fP \fBSDL_Rect\fP *dstrect, \fBconst\fP double \fBangle\fP, \fBconst\fP \fBSDL_Point\fP *center, \fBconst\fP \fBSDL_RendererFlip\fP flip)"
+.br
+.RI "\fICopy a portion of the source texture to the current rendering target, rotating it by angle around the given center\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RenderReadPixels\fP (\fBSDL_Renderer\fP *renderer, \fBconst\fP \fBSDL_Rect\fP *rect, \fBUint32\fP \fBformat\fP, \fBvoid\fP *\fBpixels\fP, \fBint\fP pitch)"
+.br
+.RI "\fIRead pixels from the current rendering target\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_RenderPresent\fP (\fBSDL_Renderer\fP *renderer)"
+.br
+.RI "\fIUpdate the screen with rendering performed\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_DestroyTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP)"
+.br
+.RI "\fIDestroy the specified texture\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_DestroyRenderer\fP (\fBSDL_Renderer\fP *renderer)"
+.br
+.RI "\fIDestroy the rendering context for a window and free associated textures\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GL_BindTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP, float *texw, float *texh)"
+.br
+.RI "\fIBind the texture to the current OpenGL/ES/ES2 context for use with \fBOpenGL\fP instructions\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GL_UnbindTexture\fP (\fBSDL_Texture\fP *\fBtexture\fP)"
+.br
+.RI "\fIUnbind a texture from the current OpenGL/ES/ES2 context\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Header file for SDL 2D rendering functions\&.
+.PP
+This API supports the following features:
+.IP "\(bu" 2
+single pixel points
+.IP "\(bu" 2
+single pixel lines
+.IP "\(bu" 2
+filled rectangles
+.IP "\(bu" 2
+texture images
+.PP
+.PP
+The primitives may be drawn in opaque, blended, or additive modes\&.
+.PP
+The texture images may be drawn in opaque, blended, or additive modes\&. They can have an additional color tint or alpha modulation applied to them, and may also be stretched with linear interpolation\&.
+.PP
+This API is designed to accelerate simple 2D operations\&. You may want more functionality such as polygons and particle effects and in that case you should use SDL's OpenGL/Direct3D support or one of the many good 3D engines\&.
+.PP
+These functions must be called from the main thread\&. See this bug for details: http://bugzilla.libsdl.org/show_bug.cgi?id=1995 
+.PP
+Définition dans le fichier \fBSDL_render\&.h\fP\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBSDL_Renderer\fP \fBSDL_Renderer\fP"
+
+.PP
+Définition à la ligne 122 du fichier SDL_render\&.h\&.
+.SS "typedef struct \fBSDL_RendererInfo\fP  \fBSDL_RendererInfo\fP"
+
+.PP
+Information on the capabilities of a render driver or context\&. 
+.SS "typedef struct \fBSDL_Texture\fP \fBSDL_Texture\fP"
+
+.PP
+Définition à la ligne 128 du fichier SDL_render\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBSDL_RendererFlags\fP"
+
+.PP
+Flags used when creating a rendering context\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_RENDERER_SOFTWARE \fP\fP
+The renderer is a software fallback 
+.TP
+\fB\fISDL_RENDERER_ACCELERATED \fP\fP
+The renderer uses hardware acceleration 
+.TP
+\fB\fISDL_RENDERER_PRESENTVSYNC \fP\fP
+Present is synchronized with the refresh rate 
+.TP
+\fB\fISDL_RENDERER_TARGETTEXTURE \fP\fP
+The renderer supports rendering to texture 
+.PP
+Définition à la ligne 64 du fichier SDL_render\&.h\&.
+.SS "enum \fBSDL_RendererFlip\fP"
+
+.PP
+Flip constants for SDL_RenderCopyEx\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_FLIP_NONE \fP\fP
+Do not flip 
+.TP
+\fB\fISDL_FLIP_HORIZONTAL \fP\fP
+flip horizontally 
+.TP
+\fB\fISDL_FLIP_VERTICAL \fP\fP
+flip vertically 
+.PP
+Définition à la ligne 111 du fichier SDL_render\&.h\&.
+.SS "enum \fBSDL_TextureAccess\fP"
+
+.PP
+The access pattern allowed for a texture\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_TEXTUREACCESS_STATIC \fP\fP
+Changes rarely, not lockable 
+.TP
+\fB\fISDL_TEXTUREACCESS_STREAMING \fP\fP
+Changes frequently, lockable 
+.TP
+\fB\fISDL_TEXTUREACCESS_TARGET \fP\fP
+Texture can be used as a render target 
+.PP
+Définition à la ligne 91 du fichier SDL_render\&.h\&.
+.SS "enum \fBSDL_TextureModulate\fP"
+
+.PP
+The texture channel modulation used in \fBSDL_RenderCopy()\fP\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_TEXTUREMODULATE_NONE \fP\fP
+No modulation 
+.TP
+\fB\fISDL_TEXTUREMODULATE_COLOR \fP\fP
+srcC = srcC * color 
+.TP
+\fB\fISDL_TEXTUREMODULATE_ALPHA \fP\fP
+srcA = srcA * alpha 
+.PP
+Définition à la ligne 101 du fichier SDL_render\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBSDL_Renderer\fP* \fBSDLCALL\fP SDL_CreateRenderer (\fBSDL_Window\fP * window, \fBint\fP index, \fBUint32\fP flags)"
+
+.PP
+Create a 2D rendering context for a window\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIwindow\fP The window where rendering is displayed\&. 
+.br
+\fIindex\fP The index of the rendering driver to initialize, or -1 to initialize the first one supporting the requested flags\&. 
+.br
+\fIflags\fP \fBSDL_RendererFlags\fP\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+A valid rendering context or NULL if there was an error\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_CreateSoftwareRenderer()\fP 
+.PP
+\fBSDL_GetRendererInfo()\fP 
+.PP
+\fBSDL_DestroyRenderer()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_Renderer\fP* \fBSDLCALL\fP SDL_CreateSoftwareRenderer (\fBSDL_Surface\fP * surface)"
+
+.PP
+Create a 2D software rendering context for a surface\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsurface\fP The surface where rendering is done\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+A valid rendering context or NULL if there was an error\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_CreateRenderer()\fP 
+.PP
+\fBSDL_DestroyRenderer()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_Texture\fP* \fBSDLCALL\fP SDL_CreateTexture (\fBSDL_Renderer\fP * renderer, \fBUint32\fP format, \fBint\fP access, \fBint\fP w, \fBint\fP h)"
+
+.PP
+Create a texture for a rendering context\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer\&. 
+.br
+\fIformat\fP The format of the texture\&. 
+.br
+\fIaccess\fP One of the enumerated values in \fBSDL_TextureAccess\fP\&. 
+.br
+\fIw\fP The width of the texture in pixels\&. 
+.br
+\fIh\fP The height of the texture in pixels\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The created texture is returned, or NULL if no rendering context was active, the format was unsupported, or the width or height were out of range\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_QueryTexture()\fP 
+.PP
+\fBSDL_UpdateTexture()\fP 
+.PP
+\fBSDL_DestroyTexture()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_Texture\fP* \fBSDLCALL\fP SDL_CreateTextureFromSurface (\fBSDL_Renderer\fP * renderer, \fBSDL_Surface\fP * surface)"
+
+.PP
+Create a texture from an existing surface\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer\&. 
+.br
+\fIsurface\fP The surface containing pixel data used to fill the texture\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The created texture is returned, or NULL on error\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The surface is not modified or freed by this function\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_QueryTexture()\fP 
+.PP
+\fBSDL_DestroyTexture()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_CreateWindowAndRenderer (\fBint\fP width, \fBint\fP height, \fBUint32\fP window_flags, \fBSDL_Window\fP ** window, \fBSDL_Renderer\fP ** renderer)"
+
+.PP
+Create a window and default renderer\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIwidth\fP The width of the window 
+.br
+\fIheight\fP The height of the window 
+.br
+\fIwindow_flags\fP The flags used to create the window 
+.br
+\fIwindow\fP A pointer filled with the window, or NULL on error 
+.br
+\fIrenderer\fP A pointer filled with the renderer, or NULL on error
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_DestroyRenderer (\fBSDL_Renderer\fP * renderer)"
+
+.PP
+Destroy the rendering context for a window and free associated textures\&. 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_CreateRenderer()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_DestroyTexture (\fBSDL_Texture\fP * texture)"
+
+.PP
+Destroy the specified texture\&. 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_CreateTexture()\fP 
+.PP
+\fBSDL_CreateTextureFromSurface()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetNumRenderDrivers (\fBvoid\fP)"
+
+.PP
+Get the number of 2D rendering drivers available for the current display\&. A render driver is a set of code that handles rendering and texture management on a particular display\&. Normally there is only one, but some drivers may have several available with different capabilities\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetRenderDriverInfo()\fP 
+.PP
+\fBSDL_CreateRenderer()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetRenderDrawBlendMode (\fBSDL_Renderer\fP * renderer, \fBSDL_BlendMode\fP * blendMode)"
+
+.PP
+Get the blend mode used for drawing operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which blend mode should be queried\&. 
+.br
+\fIblendMode\fP A pointer filled in with the current blend mode\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_SetRenderDrawBlendMode()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetRenderDrawColor (\fBSDL_Renderer\fP * renderer, \fBUint8\fP * r, \fBUint8\fP * g, \fBUint8\fP * b, \fBUint8\fP * a)"
+
+.PP
+Get the color used for drawing operations (Rect, Line and Clear)\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which drawing color should be queried\&. 
+.br
+\fIr\fP A pointer to the red value used to draw on the rendering target\&. 
+.br
+\fIg\fP A pointer to the green value used to draw on the rendering target\&. 
+.br
+\fIb\fP A pointer to the blue value used to draw on the rendering target\&. 
+.br
+\fIa\fP A pointer to the alpha value used to draw on the rendering target, usually \fBSDL_ALPHA_OPAQUE\fP (255)\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetRenderDriverInfo (\fBint\fP index, \fBSDL_RendererInfo\fP * info)"
+
+.PP
+Get information about a specific 2D rendering driver for the current display\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIindex\fP The index of the driver to query information about\&. 
+.br
+\fIinfo\fP A pointer to an \fBSDL_RendererInfo\fP struct to be filled with information on the rendering driver\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, -1 if the index was out of range\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_CreateRenderer()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_Renderer\fP* \fBSDLCALL\fP SDL_GetRenderer (\fBSDL_Window\fP * window)"
+
+.PP
+Get the renderer associated with a window\&. 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetRendererInfo (\fBSDL_Renderer\fP * renderer, \fBSDL_RendererInfo\fP * info)"
+
+.PP
+Get information about a rendering context\&. 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetRendererOutputSize (\fBSDL_Renderer\fP * renderer, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Get the output size in pixels of a rendering context\&. 
+.SS "\fBDECLSPEC\fP \fBSDL_Texture\fP* \fBSDLCALL\fP SDL_GetRenderTarget (\fBSDL_Renderer\fP * renderer)"
+
+.PP
+Get the current render target or NULL for the default render target\&. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+The current render target
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_SetRenderTarget()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetTextureAlphaMod (\fBSDL_Texture\fP * texture, \fBUint8\fP * alpha)"
+
+.PP
+Get the additional alpha value used in render copy operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to query\&. 
+.br
+\fIalpha\fP A pointer filled in with the current alpha value\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_SetTextureAlphaMod()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetTextureBlendMode (\fBSDL_Texture\fP * texture, \fBSDL_BlendMode\fP * blendMode)"
+
+.PP
+Get the blend mode used for texture copy operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to query\&. 
+.br
+\fIblendMode\fP A pointer filled in with the current blend mode\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_SetTextureBlendMode()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetTextureColorMod (\fBSDL_Texture\fP * texture, \fBUint8\fP * r, \fBUint8\fP * g, \fBUint8\fP * b)"
+
+.PP
+Get the additional color value used in render copy operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to query\&. 
+.br
+\fIr\fP A pointer filled in with the current red color value\&. 
+.br
+\fIg\fP A pointer filled in with the current green color value\&. 
+.br
+\fIb\fP A pointer filled in with the current blue color value\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_SetTextureColorMod()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GL_BindTexture (\fBSDL_Texture\fP * texture, float * texw, float * texh)"
+
+.PP
+Bind the texture to the current OpenGL/ES/ES2 context for use with \fBOpenGL\fP instructions\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The SDL texture to bind 
+.br
+\fItexw\fP A pointer to a float that will be filled with the texture width 
+.br
+\fItexh\fP A pointer to a float that will be filled with the texture height
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the operation is not supported 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GL_UnbindTexture (\fBSDL_Texture\fP * texture)"
+
+.PP
+Unbind a texture from the current OpenGL/ES/ES2 context\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The SDL texture to unbind
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the operation is not supported 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_LockTexture (\fBSDL_Texture\fP * texture, \fBconst\fP \fBSDL_Rect\fP * rect, \fBvoid\fP ** pixels, \fBint\fP * pitch)"
+
+.PP
+Lock a portion of the texture for write-only pixel access\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to lock for access, which was created with \fBSDL_TEXTUREACCESS_STREAMING\fP\&. 
+.br
+\fIrect\fP A pointer to the rectangle to lock for access\&. If the rect is NULL, the entire texture will be locked\&. 
+.br
+\fIpixels\fP This is filled in with a pointer to the locked pixels, appropriately offset by the locked area\&. 
+.br
+\fIpitch\fP This is filled in with the pitch of the locked pixels\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid or was not created with \fBSDL_TEXTUREACCESS_STREAMING\fP\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_UnlockTexture()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_QueryTexture (\fBSDL_Texture\fP * texture, \fBUint32\fP * format, \fBint\fP * access, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Query the attributes of a texture\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP A texture to be queried\&. 
+.br
+\fIformat\fP A pointer filled in with the raw format of the texture\&. The actual format may differ, but pixel transfers will use this format\&. 
+.br
+\fIaccess\fP A pointer filled in with the actual access to the texture\&. 
+.br
+\fIw\fP A pointer filled in with the width of the texture in pixels\&. 
+.br
+\fIh\fP A pointer filled in with the height of the texture in pixels\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderClear (\fBSDL_Renderer\fP * renderer)"
+
+.PP
+Clear the current rendering target with the drawing color\&. This function clears the entire rendering target, ignoring the viewport\&.
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderCopy (\fBSDL_Renderer\fP * renderer, \fBSDL_Texture\fP * texture, \fBconst\fP \fBSDL_Rect\fP * srcrect, \fBconst\fP \fBSDL_Rect\fP * dstrect)"
+
+.PP
+Copy a portion of the texture to the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should copy parts of a texture\&. 
+.br
+\fItexture\fP The source texture\&. 
+.br
+\fIsrcrect\fP A pointer to the source rectangle, or NULL for the entire texture\&. 
+.br
+\fIdstrect\fP A pointer to the destination rectangle, or NULL for the entire rendering target\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderCopyEx (\fBSDL_Renderer\fP * renderer, \fBSDL_Texture\fP * texture, \fBconst\fP \fBSDL_Rect\fP * srcrect, \fBconst\fP \fBSDL_Rect\fP * dstrect, \fBconst\fP double angle, \fBconst\fP \fBSDL_Point\fP * center, \fBconst\fP \fBSDL_RendererFlip\fP flip)"
+
+.PP
+Copy a portion of the source texture to the current rendering target, rotating it by angle around the given center\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should copy parts of a texture\&. 
+.br
+\fItexture\fP The source texture\&. 
+.br
+\fIsrcrect\fP A pointer to the source rectangle, or NULL for the entire texture\&. 
+.br
+\fIdstrect\fP A pointer to the destination rectangle, or NULL for the entire rendering target\&. 
+.br
+\fIangle\fP An angle in degrees that indicates the rotation that will be applied to dstrect 
+.br
+\fIcenter\fP A pointer to a point indicating the point around which dstrect will be rotated (if NULL, rotation will be done around dstrect\&.w/2, dstrect\&.h/2)\&. 
+.br
+\fIflip\fP An SDL_RendererFlip value stating which flipping actions should be performed on the texture
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderDrawLine (\fBSDL_Renderer\fP * renderer, \fBint\fP x1, \fBint\fP y1, \fBint\fP x2, \fBint\fP y2)"
+
+.PP
+Draw a line on the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should draw a line\&. 
+.br
+\fIx1\fP The x coordinate of the start point\&. 
+.br
+\fIy1\fP The y coordinate of the start point\&. 
+.br
+\fIx2\fP The x coordinate of the end point\&. 
+.br
+\fIy2\fP The y coordinate of the end point\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderDrawLines (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Point\fP * points, \fBint\fP count)"
+
+.PP
+Draw a series of connected lines on the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should draw multiple lines\&. 
+.br
+\fIpoints\fP The points along the lines 
+.br
+\fIcount\fP The number of points, drawing count-1 lines
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderDrawPoint (\fBSDL_Renderer\fP * renderer, \fBint\fP x, \fBint\fP y)"
+
+.PP
+Draw a point on the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should draw a point\&. 
+.br
+\fIx\fP The x coordinate of the point\&. 
+.br
+\fIy\fP The y coordinate of the point\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderDrawPoints (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Point\fP * points, \fBint\fP count)"
+
+.PP
+Draw multiple points on the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should draw multiple points\&. 
+.br
+\fIpoints\fP The points to draw 
+.br
+\fIcount\fP The number of points to draw
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderDrawRect (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rect)"
+
+.PP
+Draw a rectangle on the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should draw a rectangle\&. 
+.br
+\fIrect\fP A pointer to the destination rectangle, or NULL to outline the entire rendering target\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderDrawRects (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rects, \fBint\fP count)"
+
+.PP
+Draw some number of rectangles on the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should draw multiple rectangles\&. 
+.br
+\fIrects\fP A pointer to an array of destination rectangles\&. 
+.br
+\fIcount\fP The number of rectangles\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderFillRect (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rect)"
+
+.PP
+Fill a rectangle on the current rendering target with the drawing color\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should fill a rectangle\&. 
+.br
+\fIrect\fP A pointer to the destination rectangle, or NULL for the entire rendering target\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderFillRects (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rects, \fBint\fP count)"
+
+.PP
+Fill some number of rectangles on the current rendering target with the drawing color\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer which should fill multiple rectangles\&. 
+.br
+\fIrects\fP A pointer to an array of destination rectangles\&. 
+.br
+\fIcount\fP The number of rectangles\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_RenderGetClipRect (\fBSDL_Renderer\fP * renderer, \fBSDL_Rect\fP * rect)"
+
+.PP
+Get the clip rectangle for the current target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which clip rectangle should be queried\&. 
+.br
+\fIrect\fP A pointer filled in with the current clip rectangle, or an empty rectangle if clipping is disabled\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderSetClipRect()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_RenderGetLogicalSize (\fBSDL_Renderer\fP * renderer, \fBint\fP * w, \fBint\fP * h)"
+
+.PP
+Get device independent resolution for rendering\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which resolution should be queried\&. 
+.br
+\fIw\fP A pointer filled with the width of the logical resolution 
+.br
+\fIh\fP A pointer filled with the height of the logical resolution
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderSetLogicalSize()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_RenderGetScale (\fBSDL_Renderer\fP * renderer, float * scaleX, float * scaleY)"
+
+.PP
+Get the drawing scale for the current target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which drawing scale should be queried\&. 
+.br
+\fIscaleX\fP A pointer filled in with the horizontal scaling factor 
+.br
+\fIscaleY\fP A pointer filled in with the vertical scaling factor
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderSetScale()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_RenderGetViewport (\fBSDL_Renderer\fP * renderer, \fBSDL_Rect\fP * rect)"
+
+.PP
+Get the drawing area for the current target\&. 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderSetViewport()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP SDL_RenderIsClipEnabled (\fBSDL_Renderer\fP * renderer)"
+
+.PP
+Get whether clipping is enabled on the given renderer\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which clip state should be queried\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderGetClipRect()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_RenderPresent (\fBSDL_Renderer\fP * renderer)"
+
+.PP
+Update the screen with rendering performed\&. 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderReadPixels (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rect, \fBUint32\fP format, \fBvoid\fP * pixels, \fBint\fP pitch)"
+
+.PP
+Read pixels from the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer from which pixels should be read\&. 
+.br
+\fIrect\fP A pointer to the rectangle to read, or NULL for the entire render target\&. 
+.br
+\fIformat\fP The desired format of the pixel data, or 0 to use the format of the rendering target 
+.br
+\fIpixels\fP A pointer to be filled in with the pixel data 
+.br
+\fIpitch\fP The pitch of the pixels parameter\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if pixel reading is not supported\&.
+.RE
+.PP
+\fBAvertissement:\fP
+.RS 4
+This is a very slow operation, and should not be used frequently\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderSetClipRect (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rect)"
+
+.PP
+Set the clip rectangle for the current target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer for which clip rectangle should be set\&. 
+.br
+\fIrect\fP A pointer to the rectangle to set as the clip rectangle, or NULL to disable clipping\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderGetClipRect()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderSetLogicalSize (\fBSDL_Renderer\fP * renderer, \fBint\fP w, \fBint\fP h)"
+
+.PP
+Set device independent resolution for rendering\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer for which resolution should be set\&. 
+.br
+\fIw\fP The width of the logical resolution 
+.br
+\fIh\fP The height of the logical resolution
+.RE
+.PP
+This function uses the viewport and scaling functionality to allow a fixed logical resolution for rendering, regardless of the actual output resolution\&. If the actual output resolution doesn't have the same aspect ratio the output rendering will be centered within the output display\&.
+.PP
+If the output display is a window, mouse events in the window will be filtered and scaled so they seem to arrive within the logical resolution\&.
+.PP
+\fBNote:\fP
+.RS 4
+If this function results in scaling or subpixel drawing by the rendering backend, it will be handled using the appropriate quality hints\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderGetLogicalSize()\fP 
+.PP
+\fBSDL_RenderSetScale()\fP 
+.PP
+\fBSDL_RenderSetViewport()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderSetScale (\fBSDL_Renderer\fP * renderer, float scaleX, float scaleY)"
+
+.PP
+Set the drawing scale for rendering on the current target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer for which the drawing scale should be set\&. 
+.br
+\fIscaleX\fP The horizontal scaling factor 
+.br
+\fIscaleY\fP The vertical scaling factor
+.RE
+.PP
+The drawing coordinates are scaled by the x/y scaling factors before they are used by the renderer\&. This allows resolution independent drawing with a single coordinate system\&.
+.PP
+\fBNote:\fP
+.RS 4
+If this results in scaling or subpixel drawing by the rendering backend, it will be handled using the appropriate quality hints\&. For best results use integer scaling factors\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderGetScale()\fP 
+.PP
+\fBSDL_RenderSetLogicalSize()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RenderSetViewport (\fBSDL_Renderer\fP * renderer, \fBconst\fP \fBSDL_Rect\fP * rect)"
+
+.PP
+Set the drawing area for rendering on the current target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer for which the drawing area should be set\&. 
+.br
+\fIrect\fP The rectangle representing the drawing area, or NULL to set the viewport to the entire target\&.
+.RE
+.PP
+The x,y of the viewport rect represents the origin for rendering\&.
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+If the window associated with the renderer is resized, the viewport is automatically reset\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_RenderGetViewport()\fP 
+.PP
+\fBSDL_RenderSetLogicalSize()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP SDL_RenderTargetSupported (\fBSDL_Renderer\fP * renderer)"
+
+.PP
+Determines whether a window supports the use of render targets\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer that will be checked
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+SDL_TRUE if supported, SDL_FALSE if not\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetRenderDrawBlendMode (\fBSDL_Renderer\fP * renderer, \fBSDL_BlendMode\fP blendMode)"
+
+.PP
+Set the blend mode used for drawing operations (Fill and Line)\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer for which blend mode should be set\&. 
+.br
+\fIblendMode\fP \fBSDL_BlendMode\fP to use for blending\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+If the blend mode is not supported, the closest supported mode is chosen\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetRenderDrawBlendMode()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetRenderDrawColor (\fBSDL_Renderer\fP * renderer, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b, \fBUint8\fP a)"
+
+.PP
+Set the color used for drawing operations (Rect, Line and Clear)\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer for which drawing color should be set\&. 
+.br
+\fIr\fP The red value used to draw on the rendering target\&. 
+.br
+\fIg\fP The green value used to draw on the rendering target\&. 
+.br
+\fIb\fP The blue value used to draw on the rendering target\&. 
+.br
+\fIa\fP The alpha value used to draw on the rendering target, usually \fBSDL_ALPHA_OPAQUE\fP (255)\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetRenderTarget (\fBSDL_Renderer\fP * renderer, \fBSDL_Texture\fP * texture)"
+
+.PP
+Set a texture as the current rendering target\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIrenderer\fP The renderer\&. 
+.br
+\fItexture\fP The targeted texture, which must be created with the SDL_TEXTUREACCESS_TARGET flag, or NULL for the default render target
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 on error
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetRenderTarget()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetTextureAlphaMod (\fBSDL_Texture\fP * texture, \fBUint8\fP alpha)"
+
+.PP
+Set an additional alpha value used in render copy operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to update\&. 
+.br
+\fIalpha\fP The alpha value multiplied into copy operations\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid or alpha modulation is not supported\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetTextureAlphaMod()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetTextureBlendMode (\fBSDL_Texture\fP * texture, \fBSDL_BlendMode\fP blendMode)"
+
+.PP
+Set the blend mode used for texture copy operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to update\&. 
+.br
+\fIblendMode\fP \fBSDL_BlendMode\fP to use for texture blending\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid or the blend mode is not supported\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+If the blend mode is not supported, the closest supported mode is chosen\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetTextureBlendMode()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SetTextureColorMod (\fBSDL_Texture\fP * texture, \fBUint8\fP r, \fBUint8\fP g, \fBUint8\fP b)"
+
+.PP
+Set an additional color value used in render copy operations\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to update\&. 
+.br
+\fIr\fP The red color value multiplied into copy operations\&. 
+.br
+\fIg\fP The green color value multiplied into copy operations\&. 
+.br
+\fIb\fP The blue color value multiplied into copy operations\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid or color modulation is not supported\&.
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetTextureColorMod()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_UnlockTexture (\fBSDL_Texture\fP * texture)"
+
+.PP
+Unlock a texture, uploading the changes to video memory, if needed\&. 
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_LockTexture()\fP 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_UpdateTexture (\fBSDL_Texture\fP * texture, \fBconst\fP \fBSDL_Rect\fP * rect, \fBconst\fP \fBvoid\fP * pixels, \fBint\fP pitch)"
+
+.PP
+Update the given texture rectangle with new pixel data\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to update 
+.br
+\fIrect\fP A pointer to the rectangle of pixels to update, or NULL to update the entire texture\&. 
+.br
+\fIpixels\fP The raw pixel data\&. 
+.br
+\fIpitch\fP The number of bytes in a row of pixel data, including padding between lines\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This is a fairly slow function\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_UpdateYUVTexture (\fBSDL_Texture\fP * texture, \fBconst\fP \fBSDL_Rect\fP * rect, \fBconst\fP \fBUint8\fP * Yplane, \fBint\fP Ypitch, \fBconst\fP \fBUint8\fP * Uplane, \fBint\fP Upitch, \fBconst\fP \fBUint8\fP * Vplane, \fBint\fP Vpitch)"
+
+.PP
+Update a rectangle within a planar YV12 or IYUV texture with new pixel data\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fItexture\fP The texture to update 
+.br
+\fIrect\fP A pointer to the rectangle of pixels to update, or NULL to update the entire texture\&. 
+.br
+\fIYplane\fP The raw pixel data for the Y plane\&. 
+.br
+\fIYpitch\fP The number of bytes between rows of pixel data for the Y plane\&. 
+.br
+\fIUplane\fP The raw pixel data for the U plane\&. 
+.br
+\fIUpitch\fP The number of bytes between rows of pixel data for the U plane\&. 
+.br
+\fIVplane\fP The raw pixel data for the V plane\&. 
+.br
+\fIVpitch\fP The number of bytes between rows of pixel data for the V plane\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, or -1 if the texture is not valid\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+You can use \fBSDL_UpdateTexture()\fP as long as your pixel data is a contiguous block of Y and U/V planes in the proper order, but this function is available if your pixel data is not contiguous\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

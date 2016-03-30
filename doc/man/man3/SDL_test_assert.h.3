@@ -1,0 +1,140 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_test_assert.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_test_assert.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBASSERT_FAIL\fP   0"
+.br
+.RI "\fIFails the assert\&. \fP"
+.ti -1c
+.RI "#define \fBASSERT_PASS\fP   1"
+.br
+.RI "\fIPasses the assert\&. \fP"
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_Assert\fP (\fBint\fP assertCondition, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *assertDescription,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fIAssert that logs and break execution flow on failures\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_AssertCheck\fP (\fBint\fP assertCondition, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *assertDescription,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(2)"
+.br
+.RI "\fIAssert for test cases that logs but does not break execution flow on failures\&. Updates assertion counters\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_AssertPass\fP (\fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char *assertDescription,\&.\&.\&.) \fBSDL_PRINTF_VARARG_FUNC\fP(1)"
+.br
+.RI "\fIExplicitly pass without checking an assertion condition\&. Updates assertion counter\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_ResetAssertSummary\fP ()"
+.br
+.RI "\fIResets the assert summary counters to zero\&. \fP"
+.ti -1c
+.RI "\fBvoid\fP \fBSDLTest_LogAssertSummary\fP ()"
+.br
+.RI "\fILogs summary of all assertions (total, pass, fail) since last reset as INFO or ERROR\&. \fP"
+.ti -1c
+.RI "\fBint\fP \fBSDLTest_AssertSummaryToTestResult\fP ()"
+.br
+.RI "\fIConverts the current assert summary state to a test result\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL test framework\&.
+.PP
+This code is a part of the SDL2_test library, not the main SDL library\&. 
+.PP
+Définition dans le fichier \fBSDL_test_assert\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define ASSERT_FAIL   0"
+
+.PP
+Fails the assert\&. 
+.PP
+Définition à la ligne 48 du fichier SDL_test_assert\&.h\&.
+.SS "#define ASSERT_PASS   1"
+
+.PP
+Passes the assert\&. 
+.PP
+Définition à la ligne 53 du fichier SDL_test_assert\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBvoid\fP SDLTest_Assert (\fBint\fP assertCondition, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * assertDescription,  \&.\&.\&.)"
+
+.PP
+Assert that logs and break execution flow on failures\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIassertCondition\fP Evaluated condition or variable to assert; fail (==0) or pass (!=0)\&. 
+.br
+\fIassertDescription\fP Message to log with the assert describing it\&. 
+.RE
+.PP
+
+.SS "\fBint\fP SDLTest_AssertCheck (\fBint\fP assertCondition, \fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * assertDescription,  \&.\&.\&.)"
+
+.PP
+Assert for test cases that logs but does not break execution flow on failures\&. Updates assertion counters\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIassertCondition\fP Evaluated condition or variable to assert; fail (==0) or pass (!=0)\&. 
+.br
+\fIassertDescription\fP Message to log with the assert describing it\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+Returns the assertCondition so it can be used to externally to break execution flow if desired\&. 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_AssertPass (\fBSDL_PRINTF_FORMAT_STRING\fP \fBconst\fP char * assertDescription,  \&.\&.\&.)"
+
+.PP
+Explicitly pass without checking an assertion condition\&. Updates assertion counter\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIassertDescription\fP Message to log with the assert describing it\&. 
+.RE
+.PP
+
+.SS "\fBint\fP SDLTest_AssertSummaryToTestResult ()"
+
+.PP
+Converts the current assert summary state to a test result\&. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+TEST_RESULT_PASSED, TEST_RESULT_FAILED, or TEST_RESULT_NO_ASSERT 
+.RE
+.PP
+
+.SS "\fBvoid\fP SDLTest_LogAssertSummary ()"
+
+.PP
+Logs summary of all assertions (total, pass, fail) since last reset as INFO or ERROR\&. 
+.SS "\fBvoid\fP SDLTest_ResetAssertSummary ()"
+
+.PP
+Resets the assert summary counters to zero\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

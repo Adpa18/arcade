@@ -1,0 +1,124 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/games/Pacman/Pacman.hpp" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/inc/games/Pacman/Pacman.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include 'AGame\&.hpp'\fP
+.br
+\fC#include 'Utils\&.hpp'\fP
+.br
+\fC#include 'GameComponent\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBs_phantom\fP"
+.br
+.ti -1c
+.RI "class \fBPacman\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWIDTH\fP   1000"
+.br
+.ti -1c
+.RI "#define \fBHEIGHT\fP   1000"
+.br
+.ti -1c
+.RI "#define \fBSTEP\fP   20"
+.br
+.ti -1c
+.RI "#define \fBPHANTOM\fP   4"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBs_phantom\fP \fBt_phantom\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBdirection\fP { \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP, \fBWAIT\fP, \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBAGame\fP * \fBloadGame\fP ()"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define HEIGHT   1000"
+
+.PP
+Définition à la ligne 21 du fichier Pacman\&.hpp\&.
+.SS "#define PHANTOM   4"
+
+.PP
+Définition à la ligne 23 du fichier Pacman\&.hpp\&.
+.SS "#define STEP   20"
+
+.PP
+Définition à la ligne 22 du fichier Pacman\&.hpp\&.
+.SS "#define WIDTH   1000"
+
+.PP
+Définition à la ligne 20 du fichier Pacman\&.hpp\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBs_phantom\fP		 \fBt_phantom\fP"
+
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBdirection\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIDIR_LEFT \fP\fP
+.TP
+\fB\fIDIR_RIGHT \fP\fP
+.TP
+\fB\fIDIR_UP \fP\fP
+.TP
+\fB\fIDIR_DOWN \fP\fP
+.TP
+\fB\fIWAIT \fP\fP
+.TP
+\fB\fIDIR_LEFT \fP\fP
+.TP
+\fB\fIDIR_RIGHT \fP\fP
+.TP
+\fB\fIDIR_UP \fP\fP
+.TP
+\fB\fIDIR_DOWN \fP\fP
+.PP
+Définition à la ligne 25 du fichier Pacman\&.hpp\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBAGame\fP* loadGame ()"
+
+.PP
+Définition à la ligne 54 du fichier Pacman\&.hpp\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

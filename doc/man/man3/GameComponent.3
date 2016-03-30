@@ -1,0 +1,83 @@
+.TH "GameComponent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameComponent \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GameComponent\&.hpp>\fP
+.PP
+Est dérivée de \fBAComponent\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBGameComponent\fP (\fBVector2\fP< \fBint\fP > \fBconst\fP &pos, \fBVector2\fP< \fBint\fP > \fBconst\fP &\fBsize\fP, \fBComponentColor\fP \fBcolor\fP, char \fBconst\fP &spriteText, \fBstd::string\fP \fBconst\fP &sprite2D, \fBvoid\fP *sprite3D)"
+.br
+.ti -1c
+.RI "virtual \fB~GameComponent\fP ()"
+.br
+.ti -1c
+.RI "char \fBconst\fP & \fBgetSpriteText\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBstd::string\fP \fBconst\fP & \fBgetSprite2D\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBgetSprite3D\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSpriteText\fP (\fBconst\fP char &spriteText)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSprite2D\fP (\fBconst\fP \fBstd::string\fP &sprite2D)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetSprite3D\fP (\fBvoid\fP *sprite3D)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 18 du fichier GameComponent\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "GameComponent::GameComponent (\fBVector2\fP< \fBint\fP > \fBconst\fP & pos, \fBVector2\fP< \fBint\fP > \fBconst\fP & size, \fBComponentColor\fP color, char \fBconst\fP & spriteText, \fBstd::string\fP \fBconst\fP & sprite2D, \fBvoid\fP * sprite3D)"
+
+.PP
+Définition à la ligne 13 du fichier GameComponent\&.cpp\&.
+.SS "GameComponent::~GameComponent ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 22 du fichier GameComponent\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBstd::string\fP \fBconst\fP & GameComponent::getSprite2D () const"
+
+.PP
+Définition à la ligne 30 du fichier GameComponent\&.cpp\&.
+.SS "\fBvoid\fP * GameComponent::getSprite3D () const"
+
+.PP
+Définition à la ligne 35 du fichier GameComponent\&.cpp\&.
+.SS "char \fBconst\fP & GameComponent::getSpriteText () const"
+
+.PP
+Définition à la ligne 25 du fichier GameComponent\&.cpp\&.
+.SS "\fBvoid\fP GameComponent::setSprite2D (\fBconst\fP \fBstd::string\fP & sprite2D)"
+
+.PP
+Définition à la ligne 45 du fichier GameComponent\&.cpp\&.
+.SS "\fBvoid\fP GameComponent::setSprite3D (\fBvoid\fP * sprite3D)"
+
+.PP
+Définition à la ligne 50 du fichier GameComponent\&.cpp\&.
+.SS "\fBvoid\fP GameComponent::setSpriteText (\fBconst\fP char & spriteText)"
+
+.PP
+Définition à la ligne 40 du fichier GameComponent\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,78 @@
+.TH "NCursesUserMenu< T >" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesUserMenu< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesm\&.h>\fP
+.PP
+Est dérivée de \fBNCursesMenu\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesUserMenu\fP (\fBNCursesMenuItem\fP *Items[], \fBconst\fP T *p_UserData=\fBSTATIC_CAST\fP(T *)(0), \fBbool\fP with_frame=\fBFALSE\fP, \fBbool\fP autoDelete_Items=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesUserMenu\fP (\fBNCursesMenuItem\fP *Items[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0, \fBconst\fP T *p_UserData=\fBSTATIC_CAST\fP(T *)(0), \fBbool\fP with_frame=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesUserMenu\fP ()"
+.br
+.ti -1c
+.RI "T * \fBUserData\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBsetUserData\fP (\fBconst\fP T *p_UserData)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesUserMenu\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y=0, \fBint\fP begin_x=0, \fBconst\fP T *p_UserData=\fBSTATIC_CAST\fP(T *)(0))"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+
+.SS "template<class T>class NCursesUserMenu< T >"
+
+.PP
+Définition à la ligne 625 du fichier cursesm\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "template<class T > \fBNCursesUserMenu\fP< T >::\fBNCursesUserMenu\fP (\fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP, \fBconst\fP T * p_UserData = \fC\fBSTATIC_CAST\fP(T*)(0)\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 628 du fichier cursesm\&.h\&.
+.SS "template<class T > \fBNCursesUserMenu\fP< T >::\fBNCursesUserMenu\fP (\fBNCursesMenuItem\fP * Items[], \fBconst\fP T * p_UserData = \fC\fBSTATIC_CAST\fP(T*)(0)\fP, \fBbool\fP with_frame = \fC\fBFALSE\fP\fP, \fBbool\fP autoDelete_Items = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 639 du fichier cursesm\&.h\&.
+.SS "template<class T > \fBNCursesUserMenu\fP< T >::\fBNCursesUserMenu\fP (\fBNCursesMenuItem\fP * Items[], \fBint\fP nlines, \fBint\fP ncols, \fBint\fP begin_y = \fC0\fP, \fBint\fP begin_x = \fC0\fP, \fBconst\fP T * p_UserData = \fC\fBSTATIC_CAST\fP(T*)(0)\fP, \fBbool\fP with_frame = \fC\fBFALSE\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 648 du fichier cursesm\&.h\&.
+.SS "template<class T > virtual \fBNCursesUserMenu\fP< T >::~\fBNCursesUserMenu\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 660 du fichier cursesm\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "template<class T > virtual \fBvoid\fP \fBNCursesUserMenu\fP< T >::setUserData (\fBconst\fP T * p_UserData)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 667 du fichier cursesm\&.h\&.
+.SS "template<class T > T* \fBNCursesUserMenu\fP< T >::UserData (\fBvoid\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 663 du fichier cursesm\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

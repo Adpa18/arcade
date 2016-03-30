@@ -1,0 +1,401 @@
+.TH "__GLXFBConfigRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__GLXFBConfigRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <glxint\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBvisualType\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtransparentType\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtransparentRed\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtransparentGreen\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtransparentBlue\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtransparentAlpha\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBtransparentIndex\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBvisualCaveat\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBassociatedVisualId\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBscreen\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBdrawableType\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrenderType\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmaxPbufferWidth\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmaxPbufferHeight\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBmaxPbufferPixels\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBoptimalPbufferWidth\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBoptimalPbufferHeight\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBvisualSelectGroup\fP"
+.br
+.ti -1c
+.RI "unsigned \fBint\fP \fBid\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBrgbMode\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBcolorIndexMode\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBdoubleBufferMode\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBstereoMode\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBhaveAccumBuffer\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBhaveDepthBuffer\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBhaveStencilBuffer\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBaccumRedBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBaccumGreenBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBaccumBlueBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBaccumAlphaBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBdepthBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBstencilBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBindexBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBredBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBgreenBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBblueBits\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBalphaBits\fP"
+.br
+.ti -1c
+.RI "\fBGLuint\fP \fBredMask\fP"
+.br
+.ti -1c
+.RI "\fBGLuint\fP \fBgreenMask\fP"
+.br
+.ti -1c
+.RI "\fBGLuint\fP \fBblueMask\fP"
+.br
+.ti -1c
+.RI "\fBGLuint\fP \fBalphaMask\fP"
+.br
+.ti -1c
+.RI "\fBGLuint\fP \fBmultiSampleSize\fP"
+.br
+.ti -1c
+.RI "\fBGLuint\fP \fBnMultiSampleBuffers\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBmaxAuxBuffers\fP"
+.br
+.ti -1c
+.RI "\fBGLint\fP \fBlevel\fP"
+.br
+.ti -1c
+.RI "\fBGLboolean\fP \fBextendedRange\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBminRed\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBmaxRed\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBminGreen\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBmaxGreen\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBminBlue\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBmaxBlue\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBminAlpha\fP"
+.br
+.ti -1c
+.RI "\fBGLdouble\fP \fBmaxAlpha\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 81 du fichier glxint\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBGLint\fP __GLXFBConfigRec::accumAlphaBits"
+
+.PP
+Définition à la ligne 112 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::accumBlueBits"
+
+.PP
+Définition à la ligne 112 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::accumGreenBits"
+
+.PP
+Définition à la ligne 112 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::accumRedBits"
+
+.PP
+Définition à la ligne 112 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::alphaBits"
+
+.PP
+Définition à la ligne 116 du fichier glxint\&.h\&.
+.SS "\fBGLuint\fP __GLXFBConfigRec::alphaMask"
+
+.PP
+Définition à la ligne 117 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::associatedVisualId"
+
+.PP
+Définition à la ligne 90 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::blueBits"
+
+.PP
+Définition à la ligne 116 du fichier glxint\&.h\&.
+.SS "\fBGLuint\fP __GLXFBConfigRec::blueMask"
+
+.PP
+Définition à la ligne 117 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::colorIndexMode"
+
+.PP
+Définition à la ligne 104 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::depthBits"
+
+.PP
+Définition à la ligne 113 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::doubleBufferMode"
+
+.PP
+Définition à la ligne 105 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::drawableType"
+
+.PP
+Définition à la ligne 93 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::extendedRange"
+
+.PP
+Définition à la ligne 128 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::greenBits"
+
+.PP
+Définition à la ligne 116 du fichier glxint\&.h\&.
+.SS "\fBGLuint\fP __GLXFBConfigRec::greenMask"
+
+.PP
+Définition à la ligne 117 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::haveAccumBuffer"
+
+.PP
+Définition à la ligne 107 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::haveDepthBuffer"
+
+.PP
+Définition à la ligne 108 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::haveStencilBuffer"
+
+.PP
+Définition à la ligne 109 du fichier glxint\&.h\&.
+.SS "unsigned \fBint\fP __GLXFBConfigRec::id"
+
+.PP
+Définition à la ligne 101 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::indexBits"
+
+.PP
+Définition à la ligne 115 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::level"
+
+.PP
+Définition à la ligne 125 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::maxAlpha"
+
+.PP
+Définition à la ligne 132 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::maxAuxBuffers"
+
+.PP
+Définition à la ligne 122 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::maxBlue"
+
+.PP
+Définition à la ligne 131 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::maxGreen"
+
+.PP
+Définition à la ligne 130 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::maxPbufferHeight"
+
+.PP
+Définition à la ligne 96 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::maxPbufferPixels"
+
+.PP
+Définition à la ligne 96 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::maxPbufferWidth"
+
+.PP
+Définition à la ligne 96 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::maxRed"
+
+.PP
+Définition à la ligne 129 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::minAlpha"
+
+.PP
+Définition à la ligne 132 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::minBlue"
+
+.PP
+Définition à la ligne 131 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::minGreen"
+
+.PP
+Définition à la ligne 130 du fichier glxint\&.h\&.
+.SS "\fBGLdouble\fP __GLXFBConfigRec::minRed"
+
+.PP
+Définition à la ligne 129 du fichier glxint\&.h\&.
+.SS "\fBGLuint\fP __GLXFBConfigRec::multiSampleSize"
+
+.PP
+Définition à la ligne 119 du fichier glxint\&.h\&.
+.SS "\fBGLuint\fP __GLXFBConfigRec::nMultiSampleBuffers"
+
+.PP
+Définition à la ligne 121 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::optimalPbufferHeight"
+
+.PP
+Définition à la ligne 97 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::optimalPbufferWidth"
+
+.PP
+Définition à la ligne 97 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::redBits"
+
+.PP
+Définition à la ligne 116 du fichier glxint\&.h\&.
+.SS "\fBGLuint\fP __GLXFBConfigRec::redMask"
+
+.PP
+Définition à la ligne 117 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::renderType"
+
+.PP
+Définition à la ligne 94 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::rgbMode"
+
+.PP
+Définition à la ligne 103 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::screen"
+
+.PP
+Définition à la ligne 91 du fichier glxint\&.h\&.
+.SS "\fBGLint\fP __GLXFBConfigRec::stencilBits"
+
+.PP
+Définition à la ligne 114 du fichier glxint\&.h\&.
+.SS "\fBGLboolean\fP __GLXFBConfigRec::stereoMode"
+
+.PP
+Définition à la ligne 106 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::transparentAlpha"
+
+.PP
+Définition à la ligne 85 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::transparentBlue"
+
+.PP
+Définition à la ligne 85 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::transparentGreen"
+
+.PP
+Définition à la ligne 85 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::transparentIndex"
+
+.PP
+Définition à la ligne 86 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::transparentRed"
+
+.PP
+Définition à la ligne 85 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::transparentType"
+
+.PP
+Définition à la ligne 83 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::visualCaveat"
+
+.PP
+Définition à la ligne 88 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::visualSelectGroup"
+
+.PP
+Définition à la ligne 99 du fichier glxint\&.h\&.
+.SS "\fBint\fP __GLXFBConfigRec::visualType"
+
+.PP
+Définition à la ligne 82 du fichier glxint\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,10 @@
+<map id="Ncurses::init" name="Ncurses::init">
+<area shape="rect" id="node2" href="$d2/d61/gl_8h.html#a46df6112013cf583e82b25cebd5cb499" title="void" alt="" coords="186,5,233,32"/>
+<area shape="rect" id="node3" href="$dd/dba/classncurses_1_1_window.html#a07625850c4cb1a6e4915b348623d7317" title="ncurses::Window::getWind" alt="" coords="333,5,512,32"/>
+<area shape="rect" id="node4" href="$d6/d57/class_ncurses.html#ae12387421d11fab55a0e54c9f233f989" title="Ncurses::display" alt="" coords="149,107,269,133"/>
+<area shape="rect" id="node5" href="$df/d75/class_game_component.html#aa7c6c3d942ecdbee7cb9cb4fc6e282f4" title="GameComponent::getSpriteText" alt="" coords="317,56,528,83"/>
+<area shape="rect" id="node6" href="$d1/db4/class_a_component.html#a64e87ee7599dac2905ea428add45c449" title="AComponent::getColor" alt="" coords="345,107,500,133"/>
+<area shape="rect" id="node7" href="$d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac" title="AComponent::getPos" alt="" coords="349,157,496,184"/>
+<area shape="rect" id="node8" href="$d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e" title="AComponent::getSize" alt="" coords="347,208,498,235"/>
+<area shape="rect" id="node9" href="$d5/d71/class_u_i_component.html#a438f72973e16564944af470241d8f15f" title="UIComponent::getText" alt="" coords="345,259,500,285"/>
+</map>

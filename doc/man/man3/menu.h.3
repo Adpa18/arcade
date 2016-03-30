@@ -1,0 +1,361 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/menu.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/menu.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/curses\&.h>\fP
+.br
+\fC#include <ncurses/eti\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTEXT\fP"
+.br
+.ti -1c
+.RI "struct \fBtagITEM\fP"
+.br
+.ti -1c
+.RI "struct \fBtagMENU\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBO_ONEVALUE\fP   (0x01)"
+.br
+.ti -1c
+.RI "#define \fBO_SHOWDESC\fP   (0x02)"
+.br
+.ti -1c
+.RI "#define \fBO_ROWMAJOR\fP   (0x04)"
+.br
+.ti -1c
+.RI "#define \fBO_IGNORECASE\fP   (0x08)"
+.br
+.ti -1c
+.RI "#define \fBO_SHOWMATCH\fP   (0x10)"
+.br
+.ti -1c
+.RI "#define \fBO_NONCYCLIC\fP   (0x20)"
+.br
+.ti -1c
+.RI "#define \fBO_SELECTABLE\fP   (0x01)"
+.br
+.ti -1c
+.RI "#define \fBREQ_LEFT_ITEM\fP   (\fBKEY_MAX\fP + 1)"
+.br
+.ti -1c
+.RI "#define \fBREQ_RIGHT_ITEM\fP   (\fBKEY_MAX\fP + 2)"
+.br
+.ti -1c
+.RI "#define \fBREQ_UP_ITEM\fP   (\fBKEY_MAX\fP + 3)"
+.br
+.ti -1c
+.RI "#define \fBREQ_DOWN_ITEM\fP   (\fBKEY_MAX\fP + 4)"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_ULINE\fP   (\fBKEY_MAX\fP + 5)"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_DLINE\fP   (\fBKEY_MAX\fP + 6)"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_DPAGE\fP   (\fBKEY_MAX\fP + 7)"
+.br
+.ti -1c
+.RI "#define \fBREQ_SCR_UPAGE\fP   (\fBKEY_MAX\fP + 8)"
+.br
+.ti -1c
+.RI "#define \fBREQ_FIRST_ITEM\fP   (\fBKEY_MAX\fP + 9)"
+.br
+.ti -1c
+.RI "#define \fBREQ_LAST_ITEM\fP   (\fBKEY_MAX\fP + 10)"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_ITEM\fP   (\fBKEY_MAX\fP + 11)"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_ITEM\fP   (\fBKEY_MAX\fP + 12)"
+.br
+.ti -1c
+.RI "#define \fBREQ_TOGGLE_ITEM\fP   (\fBKEY_MAX\fP + 13)"
+.br
+.ti -1c
+.RI "#define \fBREQ_CLEAR_PATTERN\fP   (\fBKEY_MAX\fP + 14)"
+.br
+.ti -1c
+.RI "#define \fBREQ_BACK_PATTERN\fP   (\fBKEY_MAX\fP + 15)"
+.br
+.ti -1c
+.RI "#define \fBREQ_NEXT_MATCH\fP   (\fBKEY_MAX\fP + 16)"
+.br
+.ti -1c
+.RI "#define \fBREQ_PREV_MATCH\fP   (\fBKEY_MAX\fP + 17)"
+.br
+.ti -1c
+.RI "#define \fBMIN_MENU_COMMAND\fP   (\fBKEY_MAX\fP + 1)"
+.br
+.ti -1c
+.RI "#define \fBMAX_MENU_COMMAND\fP   (\fBKEY_MAX\fP + 17)"
+.br
+.ti -1c
+.RI "#define \fBMAX_COMMAND\fP   (\fBKEY_MAX\fP + 128)"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBint\fP \fBMenu_Options\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBItem_Options\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBtagITEM\fP \fBITEM\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBMenu_Hook\fP) (struct \fBtagMENU\fP *)"
+.br
+.ti -1c
+.RI "typedef struct \fBtagMENU\fP \fBMENU\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBITEM\fP **) menu_items(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBITEM\fP *) current_item(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBNCURSES_EXPORT\fP (\fBMENU\fP *) new _menu(\fBITEM\fP **)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBItem_Options\fP) item_opts(\fBconst\fP \fBITEM\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBMenu_Hook\fP) item_init(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBWINDOW\fP *) menu_sub(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP char *) item_description(\fBconst\fP \fBITEM\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (char *) menu_pattern(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBvoid\fP *) menu_userptr(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBchtype\fP) menu_back(\fBconst\fP \fBMENU\fP *)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBint\fP \fBint\fP * \fBNCURSES_EXPORT\fP (\fBbool\fP) item_value(\fBconst\fP \fBITEM\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBvoid\fP) menu_format(\fBconst\fP \fBMENU\fP *"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBint\fP \fBITEM\fP * \fBitem\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBbool\fP"
+.br
+.ti -1c
+.RI "\fBchtype\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define MAX_COMMAND   (\fBKEY_MAX\fP + 128)"
+
+.PP
+Définition à la ligne 169 du fichier menu\&.h\&.
+.SS "#define MAX_MENU_COMMAND   (\fBKEY_MAX\fP + 17)"
+
+.PP
+Définition à la ligne 156 du fichier menu\&.h\&.
+.SS "#define MIN_MENU_COMMAND   (\fBKEY_MAX\fP + 1)"
+
+.PP
+Définition à la ligne 155 du fichier menu\&.h\&.
+.SS "#define O_IGNORECASE   (0x08)"
+
+.PP
+Définition à la ligne 56 du fichier menu\&.h\&.
+.SS "#define O_NONCYCLIC   (0x20)"
+
+.PP
+Définition à la ligne 58 du fichier menu\&.h\&.
+.SS "#define O_ONEVALUE   (0x01)"
+
+.PP
+Définition à la ligne 53 du fichier menu\&.h\&.
+.SS "#define O_ROWMAJOR   (0x04)"
+
+.PP
+Définition à la ligne 55 du fichier menu\&.h\&.
+.SS "#define O_SELECTABLE   (0x01)"
+
+.PP
+Définition à la ligne 61 du fichier menu\&.h\&.
+.SS "#define O_SHOWDESC   (0x02)"
+
+.PP
+Définition à la ligne 54 du fichier menu\&.h\&.
+.SS "#define O_SHOWMATCH   (0x10)"
+
+.PP
+Définition à la ligne 57 du fichier menu\&.h\&.
+.SS "#define REQ_BACK_PATTERN   (\fBKEY_MAX\fP + 15)"
+
+.PP
+Définition à la ligne 151 du fichier menu\&.h\&.
+.SS "#define REQ_CLEAR_PATTERN   (\fBKEY_MAX\fP + 14)"
+
+.PP
+Définition à la ligne 150 du fichier menu\&.h\&.
+.SS "#define REQ_DOWN_ITEM   (\fBKEY_MAX\fP + 4)"
+
+.PP
+Définition à la ligne 140 du fichier menu\&.h\&.
+.SS "#define REQ_FIRST_ITEM   (\fBKEY_MAX\fP + 9)"
+
+.PP
+Définition à la ligne 145 du fichier menu\&.h\&.
+.SS "#define REQ_LAST_ITEM   (\fBKEY_MAX\fP + 10)"
+
+.PP
+Définition à la ligne 146 du fichier menu\&.h\&.
+.SS "#define REQ_LEFT_ITEM   (\fBKEY_MAX\fP + 1)"
+
+.PP
+Définition à la ligne 137 du fichier menu\&.h\&.
+.SS "#define REQ_NEXT_ITEM   (\fBKEY_MAX\fP + 11)"
+
+.PP
+Définition à la ligne 147 du fichier menu\&.h\&.
+.SS "#define REQ_NEXT_MATCH   (\fBKEY_MAX\fP + 16)"
+
+.PP
+Définition à la ligne 152 du fichier menu\&.h\&.
+.SS "#define REQ_PREV_ITEM   (\fBKEY_MAX\fP + 12)"
+
+.PP
+Définition à la ligne 148 du fichier menu\&.h\&.
+.SS "#define REQ_PREV_MATCH   (\fBKEY_MAX\fP + 17)"
+
+.PP
+Définition à la ligne 153 du fichier menu\&.h\&.
+.SS "#define REQ_RIGHT_ITEM   (\fBKEY_MAX\fP + 2)"
+
+.PP
+Définition à la ligne 138 du fichier menu\&.h\&.
+.SS "#define REQ_SCR_DLINE   (\fBKEY_MAX\fP + 6)"
+
+.PP
+Définition à la ligne 142 du fichier menu\&.h\&.
+.SS "#define REQ_SCR_DPAGE   (\fBKEY_MAX\fP + 7)"
+
+.PP
+Définition à la ligne 143 du fichier menu\&.h\&.
+.SS "#define REQ_SCR_ULINE   (\fBKEY_MAX\fP + 5)"
+
+.PP
+Définition à la ligne 141 du fichier menu\&.h\&.
+.SS "#define REQ_SCR_UPAGE   (\fBKEY_MAX\fP + 8)"
+
+.PP
+Définition à la ligne 144 du fichier menu\&.h\&.
+.SS "#define REQ_TOGGLE_ITEM   (\fBKEY_MAX\fP + 13)"
+
+.PP
+Définition à la ligne 149 du fichier menu\&.h\&.
+.SS "#define REQ_UP_ITEM   (\fBKEY_MAX\fP + 3)"
+
+.PP
+Définition à la ligne 139 du fichier menu\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBtagITEM\fP  \fBITEM\fP"
+
+.SS "\fBItem_Options\fP"
+
+.PP
+Définition à la ligne 50 du fichier menu\&.h\&.
+.SS "typedef struct \fBtagMENU\fP  \fBMENU\fP"
+
+.SS "\fBconst\fP char \fBWINDOW\fP Menu_Hook"
+
+.PP
+Définition à la ligne 88 du fichier menu\&.h\&.
+.SS "\fBITEM\fP \fBconst\fP char \fBMenu_Options\fP"
+
+.PP
+Définition à la ligne 49 du fichier menu\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "NCURSES_EXPORT (\fBITEM\fP **) const"
+
+.SS "NCURSES_EXPORT (\fBITEM\fP *) const\fC [new]\fP"
+
+.SS "\fBconst\fP char* NCURSES_EXPORT (\fBMENU\fP *)\fC [new]\fP"
+
+.SS "NCURSES_EXPORT (\fBItem_Options\fP) const"
+
+.SS "NCURSES_EXPORT (\fBMenu_Hook\fP) const"
+
+.SS "NCURSES_EXPORT (\fBWINDOW\fP *) const"
+
+.SS "NCURSES_EXPORT (\fBconst\fP char *) const"
+
+.SS "NCURSES_EXPORT (char *) const"
+
+.SS "NCURSES_EXPORT (\fBvoid\fP *) const"
+
+.SS "NCURSES_EXPORT (\fBchtype\fP) const"
+
+.SS "\fBint\fP \fBint\fP \fBint\fP* NCURSES_EXPORT (\fBbool\fP) const"
+
+.SS "NCURSES_EXPORT (\fBvoid\fP) const"
+
+.SH "Documentation des variables"
+.PP 
+.SS "\fBvoid\fP bool"
+
+.PP
+Définition à la ligne 224 du fichier menu\&.h\&.
+.SS "\fBchtype\fP"
+
+.PP
+Définition à la ligne 225 du fichier menu\&.h\&.
+.SS "int"
+
+.PP
+Définition à la ligne 212 du fichier menu\&.h\&.
+.SS "\fBint\fP \fBint\fP \fBITEM\fP* item"
+
+.PP
+Définition à la ligne 219 du fichier menu\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

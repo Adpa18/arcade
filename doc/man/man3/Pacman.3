@@ -1,0 +1,124 @@
+.TH "Pacman" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Pacman \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Pacman\&.hpp>\fP
+.PP
+Est dérivée de \fBAGame\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBPacman\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Pacman\fP ()"
+.br
+.ti -1c
+.RI "virtual std::stack< \fBAComponent\fP * > \fBcompute\fP (\fBint\fP)"
+.br
+.ti -1c
+.RI "virtual std::stack< \fBAComponent\fP * > \fBgetInfos\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBrestart\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBphantom_compute\fP (\fBGameComponent\fP *, std::stack< \fBAComponent\fP * > &)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBcollision\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBlimit\fP (\fBVector2\fP< \fBint\fP >)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBnewDir\fP (\fBGameComponent\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBtryLeft\fP (\fBVector2\fP< \fBint\fP >)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBtryRight\fP (\fBVector2\fP< \fBint\fP >)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBtryUp\fP (\fBVector2\fP< \fBint\fP >)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBtryDown\fP (\fBVector2\fP< \fBint\fP >)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 32 du fichier Pacman\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Pacman::Pacman ()"
+
+.PP
+Définition à la ligne 13 du fichier Pacman\&.cpp\&.
+.SS "Pacman::~Pacman ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 18 du fichier Pacman\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBbool\fP Pacman::collision ()"
+
+.PP
+Définition à la ligne 125 du fichier Pacman\&.cpp\&.
+.SS "std::stack< \fBAComponent\fP * > Pacman::compute (\fBint\fP key)\fC [virtual]\fP"
+
+.PP
+Implémente \fBAGame\fP\&.
+.PP
+Définition à la ligne 165 du fichier Pacman\&.cpp\&.
+.SS "std::stack< \fBAComponent\fP * > Pacman::getInfos (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implémente \fBAGame\fP\&.
+.PP
+Définition à la ligne 226 du fichier Pacman\&.cpp\&.
+.SS "\fBbool\fP Pacman::limit (\fBVector2\fP< \fBint\fP > tmp)"
+
+.PP
+Définition à la ligne 21 du fichier Pacman\&.cpp\&.
+.SS "\fBvoid\fP Pacman::newDir (\fBGameComponent\fP * phant)"
+
+.PP
+Définition à la ligne 61 du fichier Pacman\&.cpp\&.
+.SS "\fBvoid\fP Pacman::phantom_compute (\fBGameComponent\fP * phant, std::stack< \fBAComponent\fP * > & comp)"
+
+.PP
+Définition à la ligne 137 du fichier Pacman\&.cpp\&.
+.SS "\fBvoid\fP Pacman::restart (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implémente \fBAGame\fP\&.
+.PP
+Définition à la ligne 233 du fichier Pacman\&.cpp\&.
+.SS "\fBbool\fP Pacman::tryDown (\fBVector2\fP< \fBint\fP > pos)"
+
+.PP
+Définition à la ligne 29 du fichier Pacman\&.cpp\&.
+.SS "\fBbool\fP Pacman::tryLeft (\fBVector2\fP< \fBint\fP > pos)"
+
+.PP
+Définition à la ligne 53 du fichier Pacman\&.cpp\&.
+.SS "\fBbool\fP Pacman::tryRight (\fBVector2\fP< \fBint\fP > pos)"
+
+.PP
+Définition à la ligne 45 du fichier Pacman\&.cpp\&.
+.SS "\fBbool\fP Pacman::tryUp (\fBVector2\fP< \fBint\fP > pos)"
+
+.PP
+Définition à la ligne 37 du fichier Pacman\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

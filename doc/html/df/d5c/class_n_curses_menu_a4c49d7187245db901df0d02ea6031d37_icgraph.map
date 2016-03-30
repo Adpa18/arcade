@@ -1,0 +1,7 @@
+<map id="NCursesMenu::OnError" name="NCursesMenu::OnError">
+<area shape="rect" id="node2" href="$dc/d5f/class_n_curses_menu_item.html#a72395ecae05866d154c0c25e57084620" title="NCursesMenuItem::NCurses\lMenuItem" alt="" coords="218,5,410,47"/>
+<area shape="rect" id="node3" href="$dc/d5f/class_n_curses_menu_item.html#a7e69ba717e3654d6d469a59997378bf7" title="NCursesMenuItem::options_on" alt="" coords="213,71,415,98"/>
+<area shape="rect" id="node4" href="$dc/d5f/class_n_curses_menu_item.html#a3b4d520f176127b4a9d833ca8704bb57" title="NCursesMenuItem::options_off" alt="" coords="212,122,416,149"/>
+<area shape="rect" id="node5" href="$dc/d5f/class_n_curses_menu_item.html#a5dfe9bf12ee7ad0e76cfbbdd987ca5a1" title="NCursesMenuItem::set\l_options" alt="" coords="235,173,393,215"/>
+<area shape="rect" id="node6" href="$dc/d5f/class_n_curses_menu_item.html#a31688b80257515b3d857613a420d9a4f" title="NCursesMenuItem::set\l_value" alt="" coords="235,239,393,280"/>
+</map>

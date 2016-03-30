@@ -1,0 +1,82 @@
+.TH "SDL_DisplayMode" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_DisplayMode \- The structure that defines a display mode\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_video\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBformat\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBw\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBh\fP"
+.br
+.ti -1c
+.RI "\fBint\fP \fBrefresh_rate\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP * \fBdriverdata\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+The structure that defines a display mode\&. 
+
+
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_GetNumDisplayModes()\fP 
+.PP
+\fBSDL_GetDisplayMode()\fP 
+.PP
+\fBSDL_GetDesktopDisplayMode()\fP 
+.PP
+\fBSDL_GetCurrentDisplayMode()\fP 
+.PP
+\fBSDL_GetClosestDisplayMode()\fP 
+.PP
+\fBSDL_SetWindowDisplayMode()\fP 
+.PP
+\fBSDL_GetWindowDisplayMode()\fP 
+.RE
+.PP
+
+.PP
+Définition à la ligne 53 du fichier SDL_video\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBvoid\fP* SDL_DisplayMode::driverdata"
+driver-specific data, initialize to 0 
+.PP
+Définition à la ligne 59 du fichier SDL_video\&.h\&.
+.SS "\fBUint32\fP SDL_DisplayMode::format"
+pixel format 
+.PP
+Définition à la ligne 55 du fichier SDL_video\&.h\&.
+.SS "\fBint\fP SDL_DisplayMode::h"
+height, in screen coordinates 
+.PP
+Définition à la ligne 57 du fichier SDL_video\&.h\&.
+.SS "\fBint\fP SDL_DisplayMode::refresh_rate"
+refresh rate (or zero for unspecified) 
+.PP
+Définition à la ligne 58 du fichier SDL_video\&.h\&.
+.SS "\fBint\fP SDL_DisplayMode::w"
+width, in screen coordinates 
+.PP
+Définition à la ligne 56 du fichier SDL_video\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

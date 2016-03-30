@@ -1,0 +1,5930 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glxproto.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/glxproto.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/glxmd\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGLXRender\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXRenderLarge\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXSingle\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryVersion\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXIsDirect\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateContext\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyContext\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXMakeCurrent\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXWaitGL\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXWaitX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCopyContext\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXSwapBuffers\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXUseXFont\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateGLXPixmap\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyGLXPixmap\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXGetVisualConfigs\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXVendorPrivate\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXVendorPrivateWithReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryExtensionsString\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryServerString\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXClientInfo\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXGetFBConfigs\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreatePixmap\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyPixmap\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateNewContext\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryContext\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXMakeContextCurrent\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreatePbuffer\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyPbuffer\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXGetDrawableAttributes\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXChangeDrawableAttributes\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateWindow\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyWindow\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetErrorReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXMakeCurrentReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXReadPixelsReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetTexImageReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetSeparableFilterReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetConvolutionFilterReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetHistogramReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetMinmaxReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXRenderModeReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryVersionReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetVisualConfigsReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXIsDirectReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXSingleReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXVendorPrivReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryExtensionsStringReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryServerStringReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetFBConfigsReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryContextReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXMakeContextCurrentReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXCreateGLXPbufferReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetDrawableAttributesReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetColorTableReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryContextInfoEXT\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryContextInfoEXTReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXMakeCurrentReadSGI\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXMakeCurrentReadSGIReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXGetFBConfigsSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateContextWithConfigSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateGLXPixmapWithConfigSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateGLXPbufferSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyGLXPbuffer\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXChangeDrawableAttributesSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXGetDrawableAttributesSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXGetDrawableAttributesSGIXReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXJoinSwapGroupSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXBindSwapBarrierSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryMaxSwapBarriersSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryMaxSwapBarriersSGIXReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryHyperpipeNetworkSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryHyperpipeNetworkSGIXReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXDestroyHyperpipeConfigSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXDestroyHyperpipeConfigSGIXReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXQueryHyperpipeConfigSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXQueryHyperpipeConfigSGIXReply\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXHyperpipeConfigSGIXReq\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXHyperpipeConfigSGIXReply\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXSetClientInfoARB\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXCreateContextAttribsARB\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXSetClientInfo2ARB\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXPbufferClobberEvent\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXBufferSwapComplete\fP"
+.br
+.ti -1c
+.RI "struct \fBxGLXBufferSwapComplete2\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXrenderHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXrenderLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXpixelHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXbitmapHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXbitmapLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchBitmapHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXpolygonStippleHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexImageLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchTexImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexImage3DLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchTexImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexSubImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexSubImageLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchTexSubImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexSubImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXtexSubImage3DLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchTexSubImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexImageLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchCompressedTexImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexSubImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexSubImageLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchCompressedTexSubImageHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexImage3DLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchCompressedTexImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexSubImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXcompressedTexSubImage3DLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchCompressedTexSubImage3DHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdrawPixelsHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdrawPixelsLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchDrawPixelsHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXConvolutionFilterHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXConvolutionFilterLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchConvolutionFilterHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdrawArraysHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdrawArraysLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchDrawArraysHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchDrawArraysComponentHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXColorTableHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXColorTableLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchColorTableHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXColorSubTableHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXColorSubTableLargeHeader\fP"
+.br
+.ti -1c
+.RI "struct \fB__GLXdispatchColorSubTableHeader\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLXBadContext\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLXBadContextState\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLXBadDrawable\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLXBadPixmap\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLXBadContextTag\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLXBadCurrentWindow\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLXBadRenderRequest\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLXBadLargeRequest\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLXUnsupportedPrivateRequest\fP   8"
+.br
+.ti -1c
+.RI "#define \fBGLXBadFBConfig\fP   9"
+.br
+.ti -1c
+.RI "#define \fBGLXBadPbuffer\fP   10"
+.br
+.ti -1c
+.RI "#define \fBGLXBadCurrentDrawable\fP   11"
+.br
+.ti -1c
+.RI "#define \fBGLXBadWindow\fP   12"
+.br
+.ti -1c
+.RI "#define \fBGLXBadProfileARB\fP   13"
+.br
+.ti -1c
+.RI "#define \fB__GLX_NUMBER_ERRORS\fP   14"
+.br
+.ti -1c
+.RI "#define \fBGLX_PbufferClobber\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BufferSwapComplete\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__GLX_NUMBER_EVENTS\fP   17"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSION_NAME\fP   'GLX'"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSION_ALIAS\fP   'SGI\-GLX'"
+.br
+.ti -1c
+.RI "#define \fB__GLX_MAX_CONTEXT_PROPS\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_VENDOR\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSIONS\fP   0x3"
+.br
+.ti -1c
+.RI "#define \fBGLXContextID\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXPixmap\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXDrawable\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXPbuffer\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXWindow\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXFBConfigID\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXFBConfigIDSGIX\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fBGLXPbufferSGIX\fP   CARD32"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_INT8\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_INT16\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_INT32\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_CARD8\fP   1"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_CARD16\fP   2"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_CARD32\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_FLOAT32\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SIZE_FLOAT64\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXRenderReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fB__GLX_MAX_RENDER_CMD_SIZE\fP   64000"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXRenderLargeReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXSingleReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryVersionReq\fP   12"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXIsDirectReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateContextReq\fP   24"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyContextReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXMakeCurrentReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXWaitGLReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXWaitXReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCopyContextReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXSwapBuffersReq\fP   12"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXUseXFontReq\fP   24"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateGLXPixmapReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyGLXPixmapReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetVisualConfigsReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXVendorPrivateReq\fP   12"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXVendorPrivateWithReplyReq\fP   12"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryExtensionsStringReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryServerStringReq\fP   12"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXClientInfoReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetFBConfigsReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreatePixmapReq\fP   24"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyPixmapReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateNewContextReq\fP   28"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryContextReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXMakeContextCurrentReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreatePbufferReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyPbufferReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetDrawableAttributesReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXChangeDrawableAttributesReq\fP   12"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateWindowReq\fP   24"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyWindowReq\fP   8"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetErrorReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXMakeCurrentReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXReadPixelsReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetTexImageReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetSeparableFilterReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetConvolutionFilterReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetHistogramReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetMinmaxReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXRenderModeReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryVersionReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetVisualConfigsReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXIsDirectReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXSingleReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXVendorPrivReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryExtensionsStringReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryServerStringReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetFBConfigsReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryContextReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXMakeContextCurrentReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateGLXPbufferReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetDrawableAttributesReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetColorTableReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryContextInfoEXTReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryContextInfoEXTReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXMakeCurrentReadSGIReq\fP   24"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXMakeCurrentReadSGIReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetFBConfigsSGIXReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateContextWithConfigSGIXReq\fP   36"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateGLXPixmapWithConfigSGIXReq\fP   28"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateGLXPbufferSGIXReq\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyGLXPbufferSGIXReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXChangeDrawableAttributesSGIXReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetDrawableAttributesSGIXReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXGetDrawableAttributesSGIXReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXJoinSwapGroupSGIXReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXBindSwapBarrierSGIXReq\fP   20"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryMaxSwapBarriersSGIXReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryMaxSwapBarriersSGIXReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryHyperpipeNetworkSGIXReq\fP   16"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryHyperpipeNetworkSGIXReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyHyperpipeConfigSGIXReq\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXDestroyHyperpipeConfigSGIXReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryHyperpipeConfigSGIXReq\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXQueryHyperpipeConfigSGIXReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXHyperpipeConfigSGIXReq\fP   32"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXHyperpipeConfigSGIXReply\fP   32"
+.br
+.ti -1c
+.RI "#define \fB__GLX_SINGLE_HDR_SIZE\fP   \fBsz_xGLXSingleReq\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_VENDPRIV_HDR_SIZE\fP   \fBsz_xGLXVendorPrivateReq\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_RENDER_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_RENDER_HDR_SIZE\fP   4"
+.br
+.ti -1c
+.RI "#define \fB__GLX_RENDER_LARGE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_RENDER_LARGE_HDR_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fB__GLX_PIXEL_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_PIXEL_HDR_SIZE\fP   20"
+.br
+.ti -1c
+.RI "#define \fB__GLX_PIXEL_3D_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_PIXEL_3D_HDR_SIZE\fP   36"
+.br
+.ti -1c
+.RI "#define \fB__GLX_BITMAP_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_BITMAP_HDR_SIZE\fP   24"
+.br
+.ti -1c
+.RI "#define \fB__GLX_BITMAP_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_BITMAP_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_BITMAP_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_BITMAP_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_POLYGONSTIPPLE_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_HDR_SIZE\fP   32"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_3D_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_3D_HDR_SIZE\fP   44"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_3D_CMD_HDR_SIZE\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXIMAGE_3D_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_3D_HDR_SIZE\fP + \fB__GLX_TEXIMAGE_3D_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_HDR_SIZE\fP   36"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXSUBIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXSUBIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_3D_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_3D_HDR_SIZE\fP   52"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_3D_CMD_HDR_SIZE\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_TEXSUBIMAGE_3D_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_3D_HDR_SIZE\fP + \fB__GLX_TEXSUBIMAGE_3D_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_HDR_SIZE\fP   28"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_DISPATCH_HDR_SIZE\fP   (\fB__GLX_COMPRESSED_TEXIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_HDR_SIZE\fP   32"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXSUBIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_DISPATCH_HDR_SIZE\fP   (\fB__GLX_COMPRESSED_TEXSUBIMAGE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_3D_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_3D_HDR_SIZE\fP   32"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_3D_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXIMAGE_3D_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXIMAGE_3D_DISPATCH_HDR_SIZE\fP   (\fB__GLX_COMPRESSED_TEXIMAGE_3D_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR_SIZE\fP   32"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_DISPATCH_HDR_SIZE\fP   (\fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWPIXELS_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWPIXELS_HDR_SIZE\fP   16"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWPIXELS_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_DRAWPIXELS_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWPIXELS_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_DRAWPIXELS_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_CONV_FILT_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_CONV_FILT_HDR_SIZE\fP   24"
+.br
+.ti -1c
+.RI "#define \fB__GLX_CONV_FILT_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_CONV_FILT_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_CONV_FILT_CMD_DISPATCH_HDR_SIZE\fP   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_CONV_FILT_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWARRAYS_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWARRAYS_HDR_SIZE\fP   12"
+.br
+.ti -1c
+.RI "#define \fB__GLX_DRAWARRAYS_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_DRAWARRAYS_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPONENT_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COMPONENT_HDR_SIZE\fP   12"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COLOR_TABLE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COLOR_TABLE_HDR_SIZE\fP   20"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COLOR_TABLE_CMD_HDR_SIZE\fP   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_COLOR_TABLE_HDR_SIZE\fP)"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COLOR_SUBTABLE_HDR\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COLOR_SUBTABLE_HDR_SIZE\fP   20"
+.br
+.ti -1c
+.RI "#define \fB__GLX_COLOR_SUBTABLE_CMD_HDR_SIZE\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW_TYPE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIXMAP_TYPE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_SOURCE_TYPE\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_TYPE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLX_GLXWINDOW_TYPE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBX_GLXRender\fP   1"
+.br
+.ti -1c
+.RI "#define \fBX_GLXRenderLarge\fP   2"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreateContext\fP   3"
+.br
+.ti -1c
+.RI "#define \fBX_GLXDestroyContext\fP   4"
+.br
+.ti -1c
+.RI "#define \fBX_GLXMakeCurrent\fP   5"
+.br
+.ti -1c
+.RI "#define \fBX_GLXIsDirect\fP   6"
+.br
+.ti -1c
+.RI "#define \fBX_GLXQueryVersion\fP   7"
+.br
+.ti -1c
+.RI "#define \fBX_GLXWaitGL\fP   8"
+.br
+.ti -1c
+.RI "#define \fBX_GLXWaitX\fP   9"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCopyContext\fP   10"
+.br
+.ti -1c
+.RI "#define \fBX_GLXSwapBuffers\fP   11"
+.br
+.ti -1c
+.RI "#define \fBX_GLXUseXFont\fP   12"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreateGLXPixmap\fP   13"
+.br
+.ti -1c
+.RI "#define \fBX_GLXGetVisualConfigs\fP   14"
+.br
+.ti -1c
+.RI "#define \fBX_GLXDestroyGLXPixmap\fP   15"
+.br
+.ti -1c
+.RI "#define \fBX_GLXVendorPrivate\fP   16"
+.br
+.ti -1c
+.RI "#define \fBX_GLXVendorPrivateWithReply\fP   17"
+.br
+.ti -1c
+.RI "#define \fBX_GLXQueryExtensionsString\fP   18"
+.br
+.ti -1c
+.RI "#define \fBX_GLXQueryServerString\fP   19"
+.br
+.ti -1c
+.RI "#define \fBX_GLXClientInfo\fP   20"
+.br
+.ti -1c
+.RI "#define \fBX_GLXGetFBConfigs\fP   21"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreatePixmap\fP   22"
+.br
+.ti -1c
+.RI "#define \fBX_GLXDestroyPixmap\fP   23"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreateNewContext\fP   24"
+.br
+.ti -1c
+.RI "#define \fBX_GLXQueryContext\fP   25"
+.br
+.ti -1c
+.RI "#define \fBX_GLXMakeContextCurrent\fP   26"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreatePbuffer\fP   27"
+.br
+.ti -1c
+.RI "#define \fBX_GLXDestroyPbuffer\fP   28"
+.br
+.ti -1c
+.RI "#define \fBX_GLXGetDrawableAttributes\fP   29"
+.br
+.ti -1c
+.RI "#define \fBX_GLXChangeDrawableAttributes\fP   30"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreateWindow\fP   31"
+.br
+.ti -1c
+.RI "#define \fBX_GLXDestroyWindow\fP   32"
+.br
+.ti -1c
+.RI "#define \fBX_GLXSetClientInfoARB\fP   33"
+.br
+.ti -1c
+.RI "#define \fBX_GLXCreateContextAtrribsARB\fP   34"
+.br
+.ti -1c
+.RI "#define \fBX_GLXSetConfigInfo2ARB\fP   35"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_NewList\fP   101"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_EndList\fP   102"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_DeleteLists\fP   103"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GenLists\fP   104"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_FeedbackBuffer\fP   105"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_SelectBuffer\fP   106"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_RenderMode\fP   107"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_Finish\fP   108"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_Flush\fP   142"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_PixelStoref\fP   109"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_PixelStorei\fP   110"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_ReadPixels\fP   111"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetBooleanv\fP   112"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetClipPlane\fP   113"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetDoublev\fP   114"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetError\fP   115"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetFloatv\fP   116"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetIntegerv\fP   117"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetLightfv\fP   118"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetLightiv\fP   119"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMapdv\fP   120"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMapfv\fP   121"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMapiv\fP   122"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMaterialfv\fP   123"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMaterialiv\fP   124"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetPixelMapfv\fP   125"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetPixelMapuiv\fP   126"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetPixelMapusv\fP   127"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetPolygonStipple\fP   128"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetString\fP   129"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexEnvfv\fP   130"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexEnviv\fP   131"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexGendv\fP   132"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexGenfv\fP   133"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexGeniv\fP   134"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexImage\fP   135"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexParameterfv\fP   136"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexParameteriv\fP   137"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexLevelParameterfv\fP   138"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetTexLevelParameteriv\fP   139"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_IsEnabled\fP   140"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_IsList\fP   141"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_AreTexturesResident\fP   143"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_DeleteTextures\fP   144"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GenTextures\fP   145"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_IsTexture\fP   146"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetColorTable\fP   147"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetColorTableParameterfv\fP   148"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetColorTableParameteriv\fP   149"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetConvolutionFilter\fP   150"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetConvolutionParameterfv\fP   151"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetConvolutionParameteriv\fP   152"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetSeparableFilter\fP   153"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetHistogram\fP   154"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetHistogramParameterfv\fP   155"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetHistogramParameteriv\fP   156"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMinmax\fP   157"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMinmaxParameterfv\fP   158"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetMinmaxParameteriv\fP   159"
+.br
+.ti -1c
+.RI "#define \fBX_GLsop_GetCompressedTexImage\fP   160"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CallList\fP   1"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CallLists\fP   2"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ListBase\fP   3"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Begin\fP   4"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Bitmap\fP   5"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3bv\fP   6"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3dv\fP   7"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3fv\fP   8"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3iv\fP   9"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3sv\fP   10"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3ubv\fP   11"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3uiv\fP   12"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color3usv\fP   13"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4bv\fP   14"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4dv\fP   15"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4fv\fP   16"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4iv\fP   17"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4sv\fP   18"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4ubv\fP   19"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4uiv\fP   20"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Color4usv\fP   21"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EdgeFlagv\fP   22"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_End\fP   23"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Indexdv\fP   24"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Indexfv\fP   25"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Indexiv\fP   26"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Indexsv\fP   27"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Normal3bv\fP   28"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Normal3dv\fP   29"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Normal3fv\fP   30"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Normal3iv\fP   31"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Normal3sv\fP   32"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos2dv\fP   33"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos2fv\fP   34"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos2iv\fP   35"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos2sv\fP   36"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos3dv\fP   37"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos3fv\fP   38"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos3iv\fP   39"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos3sv\fP   40"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos4dv\fP   41"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos4fv\fP   42"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos4iv\fP   43"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RasterPos4sv\fP   44"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Rectdv\fP   45"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Rectfv\fP   46"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Rectiv\fP   47"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Rectsv\fP   48"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord1dv\fP   49"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord1fv\fP   50"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord1iv\fP   51"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord1sv\fP   52"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord2dv\fP   53"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord2fv\fP   54"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord2iv\fP   55"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord2sv\fP   56"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord3dv\fP   57"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord3fv\fP   58"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord3iv\fP   59"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord3sv\fP   60"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord4dv\fP   61"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord4fv\fP   62"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord4iv\fP   63"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexCoord4sv\fP   64"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex2dv\fP   65"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex2fv\fP   66"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex2iv\fP   67"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex2sv\fP   68"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex3dv\fP   69"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex3fv\fP   70"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex3iv\fP   71"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex3sv\fP   72"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex4dv\fP   73"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex4fv\fP   74"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex4iv\fP   75"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Vertex4sv\fP   76"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ClipPlane\fP   77"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ColorMaterial\fP   78"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CullFace\fP   79"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Fogf\fP   80"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Fogfv\fP   81"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Fogi\fP   82"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Fogiv\fP   83"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_FrontFace\fP   84"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Hint\fP   85"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Lightf\fP   86"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Lightfv\fP   87"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Lighti\fP   88"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Lightiv\fP   89"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LightModelf\fP   90"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LightModelfv\fP   91"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LightModeli\fP   92"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LightModeliv\fP   93"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LineStipple\fP   94"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LineWidth\fP   95"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Materialf\fP   96"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Materialfv\fP   97"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Materiali\fP   98"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Materialiv\fP   99"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PointSize\fP   100"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PolygonMode\fP   101"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PolygonStipple\fP   102"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Scissor\fP   103"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ShadeModel\fP   104"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexParameterf\fP   105"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexParameterfv\fP   106"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexParameteri\fP   107"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexParameteriv\fP   108"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexImage1D\fP   109"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexImage2D\fP   110"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexEnvf\fP   111"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexEnvfv\fP   112"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexEnvi\fP   113"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexEnviv\fP   114"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexGend\fP   115"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexGendv\fP   116"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexGenf\fP   117"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexGenfv\fP   118"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexGeni\fP   119"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexGeniv\fP   120"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_InitNames\fP   121"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LoadName\fP   122"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PassThrough\fP   123"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PopName\fP   124"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PushName\fP   125"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DrawBuffer\fP   126"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Clear\fP   127"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ClearAccum\fP   128"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ClearIndex\fP   129"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ClearColor\fP   130"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ClearStencil\fP   131"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ClearDepth\fP   132"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_StencilMask\fP   133"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ColorMask\fP   134"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DepthMask\fP   135"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_IndexMask\fP   136"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Accum\fP   137"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Disable\fP   138"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Enable\fP   139"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PopAttrib\fP   141"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PushAttrib\fP   142"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Map1d\fP   143"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Map1f\fP   144"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Map2d\fP   145"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Map2f\fP   146"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MapGrid1d\fP   147"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MapGrid1f\fP   148"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MapGrid2d\fP   149"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MapGrid2f\fP   150"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalCoord1dv\fP   151"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalCoord1fv\fP   152"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalCoord2dv\fP   153"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalCoord2fv\fP   154"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalMesh1\fP   155"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalPoint1\fP   156"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalMesh2\fP   157"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_EvalPoint2\fP   158"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_AlphaFunc\fP   159"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BlendFunc\fP   160"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LogicOp\fP   161"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_StencilFunc\fP   162"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_StencilOp\fP   163"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DepthFunc\fP   164"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PixelZoom\fP   165"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PixelTransferf\fP   166"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PixelTransferi\fP   167"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PixelMapfv\fP   168"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PixelMapuiv\fP   169"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PixelMapusv\fP   170"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ReadBuffer\fP   171"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyPixels\fP   172"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DrawPixels\fP   173"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DepthRange\fP   174"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Frustum\fP   175"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LoadIdentity\fP   176"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LoadMatrixf\fP   177"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LoadMatrixd\fP   178"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MatrixMode\fP   179"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultMatrixf\fP   180"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultMatrixd\fP   181"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Ortho\fP   182"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PopMatrix\fP   183"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PushMatrix\fP   184"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Rotated\fP   185"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Rotatef\fP   186"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Scaled\fP   187"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Scalef\fP   188"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Translated\fP   189"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Translatef\fP   190"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Viewport\fP   191"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DrawArrays\fP   193"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PolygonOffset\fP   192"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyTexImage1D\fP   4119"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyTexImage2D\fP   4120"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyTexSubImage1D\fP   4121"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyTexSubImage2D\fP   4122"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexSubImage1D\fP   4099"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexSubImage2D\fP   4100"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BindTexture\fP   4117"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PrioritizeTextures\fP   4118"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Indexubv\fP   194"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BlendColor\fP   4096"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BlendEquation\fP   4097"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ColorTable\fP   2053"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ColorTableParameterfv\fP   2054"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ColorTableParameteriv\fP   2055"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyColorTable\fP   2056"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ColorSubTable\fP   195"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyColorSubTable\fP   196"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ConvolutionFilter1D\fP   4101"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ConvolutionFilter2D\fP   4102"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ConvolutionParameterf\fP   4103"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ConvolutionParameterfv\fP   4104"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ConvolutionParameteri\fP   4105"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ConvolutionParameteriv\fP   4106"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyConvolutionFilter1D\fP   4107"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyConvolutionFilter2D\fP   4108"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SeparableFilter2D\fP   4109"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Histogram\fP   4110"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_Minmax\fP   4111"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ResetHistogram\fP   4112"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ResetMinmax\fP   4113"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexImage3D\fP   4114"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TexSubImage3D\fP   4115"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CopyTexSubImage3D\fP   4123"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DrawArraysEXT\fP   4116"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ActiveTextureARB\fP   197"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord1dvARB\fP   198"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord1fvARB\fP   199"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord1ivARB\fP   200"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord1svARB\fP   201"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord2dvARB\fP   202"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord2fvARB\fP   203"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord2ivARB\fP   204"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord2svARB\fP   205"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord3dvARB\fP   206"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord3fvARB\fP   207"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord3ivARB\fP   208"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord3svARB\fP   209"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord4dvARB\fP   210"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord4fvARB\fP   211"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord4ivARB\fP   212"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_MultiTexCoord4svARB\fP   213"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CompressedTexImage1D\fP   214"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CompressedTexImage2D\fP   215"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CompressedTexImage3D\fP   216"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CompressedTexSubImage1D\fP   217"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CompressedTexSubImage2D\fP   218"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CompressedTexSubImage3D\fP   219"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SampleCoverageARB\fP   229"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WindowPos3fARB\fP   230"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_FogCoordfv\fP   4124"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_FogCoorddv\fP   4125"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PointParameterfARB\fP   2065"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PointParameterfvARB\fP   2066"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3bv\fP   4126"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3sv\fP   4127"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3iv\fP   4128"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3fv\fP   4129"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3dv\fP   4130"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3ubv\fP   4131"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3usv\fP   4132"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SecondaryColor3uiv\fP   4133"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BlendFuncSeparate\fP   4134"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PointParameteri\fP   4221"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_PointParameteriv\fP   4222"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetConvolutionFilterEXT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetConvolutionParameterfvEXT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetConvolutionParameterivEXT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetSeparableFilterEXT\fP   4"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetHistogramEXT\fP   5"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetHistogramParameterfvEXT\fP   6"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetHistogramParameterivEXT\fP   7"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetMinmaxEXT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetMinmaxParameterfvEXT\fP   9"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetMinmaxParameterivEXT\fP   10"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_AreTexturesResidentEXT\fP   11"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_DeleteTexturesEXT\fP   12"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GenTexturesEXT\fP   13"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_IsTextureEXT\fP   14"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetCombinerInputParameterfvNV\fP   1270"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetCombinerInputParameterivNV\fP   1271"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetCombinerOutputParameterfvNV\fP   1272"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetCombinerOutputParameterivNV\fP   1273"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetFinalCombinerOutputParameterfvNV\fP   1274"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetFinalCombinerOutputParameterivNV\fP   1275"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_DeleteFenceNV\fP   1276"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GenFencesNV\fP   1277"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_IsFenceNV\fP   1278"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_TestFenceNV\fP   1279"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetFenceivNV\fP   1280"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_AreProgramsResidentNV\fP   1293"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_DeleteProgramARB\fP   1294"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GenProgramsARB\fP   1295"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramEnvParameterfvARB\fP   1296"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramEnvParameterdvARB\fP   1297"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramEnvParameterivNV\fP   1298"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramStringNV\fP   1299"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetTrackMatrixivNV\fP   1300"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetVertexAttribdvARB\fP   1301"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetVertexAttribfvARB\fP   1302"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetVertexAttribivARB\fP   1303"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_IsProgramARB\fP   1304"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramLocalParameterfvARB\fP   1305"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramLocalParameterdvARB\fP   1306"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramivARB\fP   1307"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramStringARB\fP   1308"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramNamedParameter4fvNV\fP   1310"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetProgramNamedParameter4dvNV\fP   1311"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_SampleMaskSGIS\fP   2048"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_SamplePatternSGIS\fP   2049"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetDetailTexFuncSGIS\fP   4096"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetSharpenTexFuncSGIS\fP   4097"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetColorTableSGI\fP   4098"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetColorTableParameterfvSGI\fP   4099"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetColorTableParameterivSGI\fP   4100"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetTexFilterFuncSGIS\fP   4101"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetInstrumentsSGIX\fP   4102"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_InstrumentsBufferSGIX\fP   4103"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_PollInstrumentsSGIX\fP   4104"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_FlushRasterSGIX\fP   4105"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_QueryContextInfoEXT\fP   1024"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_BindTexImageEXT\fP   1330"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_ReleaseTexImageEXT\fP   1331"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_SwapIntervalSGI\fP   65536"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_MakeCurrentReadSGI\fP   65537"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_CreateGLXVideoSourceSGIX\fP   65538"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_DestroyGLXVideoSourceSGIX\fP   65539"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_GetFBConfigsSGIX\fP   65540"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_CreateContextWithConfigSGIX\fP   65541"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_CreateGLXPixmapWithConfigSGIX\fP   65542"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_CreateGLXPbufferSGIX\fP   65543"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_DestroyGLXPbufferSGIX\fP   65544"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_ChangeDrawableAttributesSGIX\fP   65545"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_GetDrawableAttributesSGIX\fP   65546"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_JoinSwapGroupSGIX\fP   65547"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_BindSwapBarrierSGIX\fP   65548"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_QueryMaxSwapBarriersSGIX\fP   65549"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_QueryHyperpipeNetworkSGIX\fP   65550"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_QueryHyperpipeConfigSGIX\fP   65551"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_HyperpipeConfigSGIX\fP   65552"
+.br
+.ti -1c
+.RI "#define \fBX_GLXvop_DestroyHyperpipeConfigSGIX\fP   65553"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightbvARB\fP   220"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightubvARB\fP   221"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightsvARB\fP   222"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightusvARB\fP   223"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightivARB\fP   224"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightuivARB\fP   225"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexBlendARB\fP   226"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightfvARB\fP   227"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_WeightdvARB\fP   228"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BindProgramARB\fP   4180"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramEnvParameter4fvARB\fP   4184"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramEnvParameter4dvARB\fP   4185"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib1svARB\fP   4189"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib2svARB\fP   4190"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib3svARB\fP   4191"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4svARB\fP   4192"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib1fvARB\fP   4193"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib2fvARB\fP   4194"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib3fvARB\fP   4195"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4fvARB\fP   4196"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib1dvARB\fP   4197"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib2dvARB\fP   4198"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib3dvARB\fP   4199"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramLocalParameter4fvARB\fP   4215"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramLocalParameter4dvARB\fP   4216"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramStringARB\fP   4217"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4dvARB\fP   4200"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4NubvARB\fP   4201"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4bvARB\fP   4230"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4ivARB\fP   4231"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4ubvARB\fP   4232"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4usvARB\fP   4233"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4uivARB\fP   4234"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4NbvARB\fP   4235"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4NsvARB\fP   4236"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4NivARB\fP   4237"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4NusvARB\fP   4238"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttrib4NuivARB\fP   4239"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexWeightfvEXT\fP   4135"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CombinerParameterfNV\fP   4136"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CombinerParameterfvNV\fP   4137"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CombinerParameteriNV\fP   4138"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CombinerParameterivNV\fP   4139"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CombinerInputNV\fP   4140"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_CombinerOutputNV\fP   4141"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_FinalCombinerInputNV\fP   4142"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_SetFenceNV\fP   4143"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_FinishFenceNV\fP   4144"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ExecuteProgramNV\fP   4181"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_RequestResidentProgramsNV\fP   4182"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_LoadProgamNV\fP   4183"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramParameters4fvNV\fP   4186"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramParameters4dvNV\fP   4187"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_TrackMatrixNV\fP   4188"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs1svNV\fP   4202"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs2svNV\fP   4203"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs3svNV\fP   4204"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs4svNV\fP   4205"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs1fvNV\fP   4206"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs2fvNV\fP   4207"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs3fvNV\fP   4208"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs4fvNV\fP   4209"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs1dvNV\fP   4210"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs2dvNV\fP   4211"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs3dvNV\fP   4212"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs4dvNV\fP   4213"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_VertexAttribs4ubvNV\fP   4214"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ActiveStencilFaceEXT\fP   4220"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramNamedParameter4fvNV\fP   4218"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_ProgramNamedParameter4dvNV\fP   4219"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_DepthBoundsEXT\fP   4229"
+.br
+.ti -1c
+.RI "#define \fBX_GLrop_BlendEquationSeparateEXT\fP   4228"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_IsRenderbufferEXT\fP   1422"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GenRenderbuffersEXT\fP   1423"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetRenderbufferParameterivEXT\fP   1424"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_IsFramebufferEXT\fP   1425"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GenFramebuffersEXT\fP   1426"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_CheckFramebufferStatusEXT\fP   1427"
+.br
+.ti -1c
+.RI "#define \fBX_GLvop_GetFramebufferAttachmentParameterivEXT\fP   1428"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef CARD32 \fBGLXContextTag\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXRender\fP \fBxGLXRenderReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXRenderLarge\fP \fBxGLXRenderLargeReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXSingle\fP \fBxGLXSingleReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryVersion\fP \fBxGLXQueryVersionReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXIsDirect\fP \fBxGLXIsDirectReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateContext\fP \fBxGLXCreateContextReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyContext\fP \fBxGLXDestroyContextReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXMakeCurrent\fP \fBxGLXMakeCurrentReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXWaitGL\fP \fBxGLXWaitGLReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXWaitX\fP \fBxGLXWaitXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCopyContext\fP \fBxGLXCopyContextReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXSwapBuffers\fP \fBxGLXSwapBuffersReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXUseXFont\fP \fBxGLXUseXFontReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateGLXPixmap\fP \fBxGLXCreateGLXPixmapReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyGLXPixmap\fP \fBxGLXDestroyGLXPixmapReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXGetVisualConfigs\fP \fBxGLXGetVisualConfigsReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXVendorPrivate\fP \fBxGLXVendorPrivateReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXVendorPrivateWithReply\fP \fBxGLXVendorPrivateWithReplyReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryExtensionsString\fP \fBxGLXQueryExtensionsStringReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryServerString\fP \fBxGLXQueryServerStringReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXClientInfo\fP \fBxGLXClientInfoReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXGetFBConfigs\fP \fBxGLXGetFBConfigsReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreatePixmap\fP \fBxGLXCreatePixmapReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyPixmap\fP \fBxGLXDestroyPixmapReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateNewContext\fP \fBxGLXCreateNewContextReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryContext\fP \fBxGLXQueryContextReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXMakeContextCurrent\fP \fBxGLXMakeContextCurrentReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreatePbuffer\fP \fBxGLXCreatePbufferReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyPbuffer\fP \fBxGLXDestroyPbufferReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXGetDrawableAttributes\fP \fBxGLXGetDrawableAttributesReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXChangeDrawableAttributes\fP \fBxGLXChangeDrawableAttributesReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateWindow\fP \fBxGLXCreateWindowReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyWindow\fP \fBxGLXDestroyWindowReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryContextInfoEXT\fP \fBxGLXQueryContextInfoEXTReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXMakeCurrentReadSGI\fP \fBxGLXMakeCurrentReadSGIReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXGetFBConfigsSGIX\fP \fBxGLXGetFBConfigsSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateContextWithConfigSGIX\fP \fBxGLXCreateContextWithConfigSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateGLXPixmapWithConfigSGIX\fP \fBxGLXCreateGLXPixmapWithConfigSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateGLXPbufferSGIX\fP \fBxGLXCreateGLXPbufferSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyGLXPbuffer\fP \fBxGLXDestroyGLXPbufferSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXChangeDrawableAttributesSGIX\fP \fBxGLXChangeDrawableAttributesSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXGetDrawableAttributesSGIX\fP \fBxGLXGetDrawableAttributesSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXJoinSwapGroupSGIX\fP \fBxGLXJoinSwapGroupSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXBindSwapBarrierSGIX\fP \fBxGLXBindSwapBarrierSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryMaxSwapBarriersSGIX\fP \fBxGLXQueryMaxSwapBarriersSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryHyperpipeNetworkSGIX\fP \fBxGLXQueryHyperpipeNetworkSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXDestroyHyperpipeConfigSGIX\fP \fBxGLXDestroyHyperpipeConfigSGIXReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXQueryHyperpipeConfigSGIX\fP \fBxGLXQueryHyperpipeConfigSGIXReq\fP"
+.br
+.in -1c
+.SS "Protocol structures for GLX_ARB_create_context and"
+GLX_ARB_create_context_profile 
+.in +1c
+.ti -1c
+.RI "#define \fBsz_xGLXSetClientInfoARBReq\fP   24"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXCreateContextAttribsARBReq\fP   28"
+.br
+.ti -1c
+.RI "#define \fBsz_xGLXSetClientInfo2ARBReq\fP   24"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXSetClientInfoARB\fP \fBxGLXSetClientInfoARBReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXCreateContextAttribsARB\fP \fBxGLXCreateContextAttribsARBReq\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBGLXSetClientInfo2ARB\fP \fBxGLXSetClientInfo2ARBReq\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define __GLX_BITMAP_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_BITMAP_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1542 du fichier glxproto\&.h\&.
+.SS "#define __GLX_BITMAP_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_BITMAP_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1539 du fichier glxproto\&.h\&.
+.SS "#define __GLX_BITMAP_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32    width B32;  \
+    CARD32  height B32; \
+    FLOAT32 xorig F32;  \
+    FLOAT32 yorig F32;  \
+    FLOAT32 xmove F32;  \
+    FLOAT32 ymove F32
+.fi
+.PP
+Définition à la ligne 1512 du fichier glxproto\&.h\&.
+.SS "#define __GLX_BITMAP_HDR_SIZE   24"
+
+.PP
+Définition à la ligne 1537 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COLOR_SUBTABLE_CMD_HDR_SIZE"
+\fBValeur :\fP
+.PP
+.nf
+(__GLX_RENDER_HDR_SIZE + __GLX_PIXEL_HDR_SIZE + \
+     __GLX_COLOR_SUBTABLE_HDR_SIZE)
+.fi
+.PP
+Définition à la ligne 2082 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COLOR_SUBTABLE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32 target B32;     \
+    CARD32  start B32;      \
+    CARD32  count B32;      \
+    CARD32  format B32;     \
+    CARD32  type   B32
+.fi
+.PP
+Définition à la ligne 2073 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COLOR_SUBTABLE_HDR_SIZE   20"
+
+.PP
+Définition à la ligne 2080 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COLOR_TABLE_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_COLOR_TABLE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 2045 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COLOR_TABLE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32  target B32;     \
+    CARD32  internalformat B32; \
+    CARD32  width B32;      \
+    CARD32  format B32;     \
+    CARD32  type   B32
+.fi
+.PP
+Définition à la ligne 2036 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COLOR_TABLE_HDR_SIZE   20"
+
+.PP
+Définition à la ligne 2043 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPONENT_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32 datatype B32; \
+    INT32   numVals B32; \
+    CARD32  component B32
+.fi
+.PP
+Définition à la ligne 2017 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPONENT_HDR_SIZE   12"
+
+.PP
+Définition à la ligne 2026 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_3D_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXIMAGE_3D_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1845 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_3D_DISPATCH_HDR_SIZE   (\fB__GLX_COMPRESSED_TEXIMAGE_3D_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1848 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_3D_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32     target B32;            \
+    CARD32     level B32;             \
+    CARD32     internalFormat B32;    \
+    CARD32     width B32;             \
+    CARD32     height B32;            \
+    CARD32     depth B32;             \
+    CARD32     border B32;            \
+    CARD32     imageSize B32
+.fi
+Data that is specific to a \fCglCompressedTexImage3D\fP call\&. The data is sent in the following order:
+.IP "\(bu" 2
+Render or RenderLarge header
+.IP "\(bu" 2
+CompressedTexImage3D header 
+.PP
+
+.PP
+Définition à la ligne 1833 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_3D_HDR_SIZE   32"
+
+.PP
+Définition à la ligne 1843 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1763 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_DISPATCH_HDR_SIZE   (\fB__GLX_COMPRESSED_TEXIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1766 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32     target B32;            \
+    CARD32     level B32;             \
+    CARD32     internalFormat B32;    \
+    CARD32     width B32;             \
+    CARD32     height B32;            \
+    CARD32     border B32;            \
+    CARD32     imageSize B32
+.fi
+Data that is specific to a \fCglCompressedTexImage1D\fP or \fCglCompressedTexImage2D\fP call\&. The data is sent in the following order:
+.IP "\(bu" 2
+Render or RenderLarge header
+.IP "\(bu" 2
+CompressedTexImage header
+.PP
+.PP
+When a \fCglCompressedTexImage1D\fP call is made, the \fCheight\fP field is not examined by the server and is considered padding\&. 
+.PP
+Définition à la ligne 1752 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXIMAGE_HDR_SIZE   28"
+
+.PP
+Définition à la ligne 1761 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_3D_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1886 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_3D_DISPATCH_HDR_SIZE   (\fB__GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1889 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32     target B32;            \
+    CARD32     level B32;             \
+    CARD32     xoffset B32;           \
+    CARD32     yoffset B32;           \
+    CARD32     zoffset B32;           \
+    CARD32     width B32;             \
+    CARD32     height B32;            \
+    CARD32     depth B32;             \
+    CARD32     format B32;            \
+    CARD32     imageSize B32
+.fi
+Data that is specifi to a \fCglCompressedTexSubImage3D\fP call\&. The data is sent in the following order:
+.IP "\(bu" 2
+Render or RenderLarge header
+.IP "\(bu" 2
+CompressedTexSubImage3D header 
+.PP
+
+.PP
+Définition à la ligne 1872 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_3D_HDR_SIZE   32"
+
+.PP
+Définition à la ligne 1884 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_COMPRESSED_TEXSUBIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1806 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_DISPATCH_HDR_SIZE   (\fB__GLX_COMPRESSED_TEXSUBIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1809 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32     target B32;            \
+    CARD32     level B32;             \
+    CARD32     xoffset B32;           \
+    CARD32     yoffset B32;           \
+    CARD32     width B32;             \
+    CARD32     height B32;            \
+    CARD32     format B32;            \
+    CARD32     imageSize B32
+.fi
+Data that is specifi to a \fCglCompressedTexSubImage1D\fP or \fCglCompressedTexSubImage2D\fP call\&. The data is sent in the following order:
+.IP "\(bu" 2
+Render or RenderLarge header
+.IP "\(bu" 2
+CompressedTexSubImage header
+.PP
+.PP
+When a \fCglCompressedTexSubImage1D\fP call is made, the \fCyoffset\fP and \fCheight\fP fields are not examined by the server and are considered padding\&. 
+.PP
+Définition à la ligne 1794 du fichier glxproto\&.h\&.
+.SS "#define __GLX_COMPRESSED_TEXSUBIMAGE_HDR_SIZE   32"
+
+.PP
+Définition à la ligne 1804 du fichier glxproto\&.h\&.
+.SS "#define __GLX_CONV_FILT_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_CONV_FILT_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1965 du fichier glxproto\&.h\&.
+.SS "#define __GLX_CONV_FILT_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_CONV_FILT_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1962 du fichier glxproto\&.h\&.
+.SS "#define __GLX_CONV_FILT_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32 target B32; \
+    CARD32  internalformat B32; \
+    CARD32  width B32;  \
+    CARD32  height B32; \
+    CARD32  format B32; \
+    CARD32  type B32
+.fi
+.PP
+Définition à la ligne 1952 du fichier glxproto\&.h\&.
+.SS "#define __GLX_CONV_FILT_HDR_SIZE   24"
+
+.PP
+Définition à la ligne 1960 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWARRAYS_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_DRAWARRAYS_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 2000 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWARRAYS_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32 numVertexes B32; \
+    CARD32  numComponents B32; \
+    CARD32  primType B32
+.fi
+.PP
+Définition à la ligne 1993 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWARRAYS_HDR_SIZE   12"
+
+.PP
+Définition à la ligne 1998 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWPIXELS_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_DRAWPIXELS_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1924 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWPIXELS_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_DRAWPIXELS_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1921 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWPIXELS_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32    width B32;   \
+    CARD32  height B32;  \
+    CARD32  format B32;  \
+    CARD32  type B32
+.fi
+.PP
+Définition à la ligne 1913 du fichier glxproto\&.h\&.
+.SS "#define __GLX_DRAWPIXELS_HDR_SIZE   16"
+
+.PP
+Définition à la ligne 1919 du fichier glxproto\&.h\&.
+.SS "#define __GLX_MAX_CONTEXT_PROPS   3"
+
+.PP
+Définition à la ligne 72 du fichier glxproto\&.h\&.
+.SS "#define __GLX_MAX_RENDER_CMD_SIZE   64000"
+
+.PP
+Définition à la ligne 139 du fichier glxproto\&.h\&.
+.SS "#define __GLX_NUMBER_ERRORS   14"
+
+.PP
+Définition à la ligne 56 du fichier glxproto\&.h\&.
+.SS "#define __GLX_NUMBER_EVENTS   17"
+
+.PP
+Définition à la ligne 67 du fichier glxproto\&.h\&.
+.SS "#define __GLX_PIXEL_3D_HDR"
+\fBValeur :\fP
+.PP
+.nf
+BOOL    swapBytes;      \
+    BOOL    lsbFirst;       \
+    CARD8   reserved0;      \
+    CARD8   reserved1;      \
+    CARD32  rowLength B32;      \
+    CARD32  imageHeight B32;    \
+    CARD32  imageDepth B32;     \
+    CARD32  skipRows B32;       \
+    CARD32  skipImages B32;     \
+    CARD32  skipVolumes B32;    \
+    CARD32  skipPixels B32;     \
+    CARD32  alignment B32
+.fi
+.PP
+Définition à la ligne 1489 du fichier glxproto\&.h\&.
+.SS "#define __GLX_PIXEL_3D_HDR_SIZE   36"
+
+.PP
+Définition à la ligne 1503 du fichier glxproto\&.h\&.
+.SS "#define __GLX_PIXEL_HDR"
+\fBValeur :\fP
+.PP
+.nf
+BOOL  swapBytes;  \
+    BOOL    lsbFirst;   \
+    CARD8   reserved0;  \
+    CARD8   reserved1;  \
+    CARD32  rowLength B32;  \
+    CARD32  skipRows B32;   \
+    CARD32  skipPixels B32; \
+    CARD32  alignment B32
+.fi
+.PP
+Définition à la ligne 1468 du fichier glxproto\&.h\&.
+.SS "#define __GLX_PIXEL_HDR_SIZE   20"
+
+.PP
+Définition à la ligne 1478 du fichier glxproto\&.h\&.
+.SS "#define __GLX_POLYGONSTIPPLE_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1550 du fichier glxproto\&.h\&.
+.SS "#define __GLX_RENDER_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD16  length B16; \
+    CARD16  opcode B16
+.fi
+.PP
+Définition à la ligne 1442 du fichier glxproto\&.h\&.
+.SS "#define __GLX_RENDER_HDR_SIZE   4"
+
+.PP
+Définition à la ligne 1446 du fichier glxproto\&.h\&.
+.SS "#define __GLX_RENDER_LARGE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32    length B32;    \
+    CARD32  opcode B32
+.fi
+.PP
+Définition à la ligne 1452 du fichier glxproto\&.h\&.
+.SS "#define __GLX_RENDER_LARGE_HDR_SIZE   8"
+
+.PP
+Définition à la ligne 1456 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SINGLE_HDR_SIZE   \fBsz_xGLXSingleReq\fP"
+
+.PP
+Définition à la ligne 1439 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_CARD16   2"
+
+.PP
+Définition à la ligne 114 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_CARD32   4"
+
+.PP
+Définition à la ligne 115 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_CARD8   1"
+
+.PP
+Définition à la ligne 113 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_FLOAT32   4"
+
+.PP
+Définition à la ligne 116 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_FLOAT64   8"
+
+.PP
+Définition à la ligne 117 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_INT16   2"
+
+.PP
+Définition à la ligne 111 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_INT32   4"
+
+.PP
+Définition à la ligne 112 du fichier glxproto\&.h\&.
+.SS "#define __GLX_SIZE_INT8   1"
+
+.PP
+Définition à la ligne 110 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_3D_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_3D_HDR_SIZE\fP + \fB__GLX_TEXIMAGE_3D_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1626 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_3D_CMD_HDR_SIZE"
+\fBValeur :\fP
+.PP
+.nf
+(__GLX_RENDER_HDR_SIZE + __GLX_PIXEL_3D_HDR_SIZE + \\
+		__GLX_TEXIMAGE_3D_HDR_SIZE)
+.fi
+.PP
+Définition à la ligne 1622 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_3D_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32    target B32; \
+    CARD32  level B32;  \
+    CARD32  internalformat B32; \
+    CARD32  width B32;  \
+    CARD32  height B32; \
+    CARD32  depth B32;  \
+    CARD32  size4d B32; \
+    CARD32  border B32; \
+    CARD32  format B32; \
+    CARD32  type B32;   \
+    CARD32  nullimage B32
+.fi
+.PP
+Définition à la ligne 1607 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_3D_HDR_SIZE   44"
+
+.PP
+Définition à la ligne 1620 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1576 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1573 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32 target B32; \
+    CARD32  level B32;  \
+    CARD32  components B32; \
+    CARD32  width B32;  \
+    CARD32  height B32; \
+    CARD32  border B32; \
+    CARD32  format B32; \
+    CARD32  type B32
+.fi
+.PP
+Définition à la ligne 1561 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXIMAGE_HDR_SIZE   32"
+
+.PP
+Définition à la ligne 1571 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_3D_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_3D_HDR_SIZE\fP + \fB__GLX_TEXSUBIMAGE_3D_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1721 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_3D_CMD_HDR_SIZE"
+\fBValeur :\fP
+.PP
+.nf
+(__GLX_RENDER_HDR_SIZE + __GLX_PIXEL_3D_HDR_SIZE + \\
+		__GLX_TEXSUBIMAGE_3D_HDR_SIZE)
+.fi
+.PP
+Définition à la ligne 1717 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_3D_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32 target B32; \
+    CARD32  level B32;  \
+    CARD32  xoffset B32;    \
+    CARD32  yoffset B32;    \
+    CARD32  zoffset B32;    \
+    CARD32  woffset B32;    \
+    CARD32  width B32;  \
+    CARD32  height B32; \
+    CARD32  depth B32;  \
+    CARD32  size4d B32; \
+    CARD32  format B32; \
+    CARD32  type B32;   \
+    CARD32  nullImage   \
+.fi
+.PP
+Définition à la ligne 1700 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_3D_HDR_SIZE   52"
+
+.PP
+Définition à la ligne 1715 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_CMD_DISPATCH_HDR_SIZE   (\fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXSUBIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1671 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_CMD_HDR_SIZE   (\fB__GLX_RENDER_HDR_SIZE\fP + \fB__GLX_PIXEL_HDR_SIZE\fP + \fB__GLX_TEXSUBIMAGE_HDR_SIZE\fP)"
+
+.PP
+Définition à la ligne 1668 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_HDR"
+\fBValeur :\fP
+.PP
+.nf
+CARD32   target B32; \
+    CARD32  level B32;  \
+    CARD32  xoffset B32;    \
+    CARD32  yoffset B32;    \
+    CARD32  width B32;  \
+    CARD32  height B32; \
+    CARD32  format B32; \
+    CARD32  type B32;   \
+    CARD32  nullImage   \
+.fi
+.PP
+Définition à la ligne 1655 du fichier glxproto\&.h\&.
+.SS "#define __GLX_TEXSUBIMAGE_HDR_SIZE   36"
+
+.PP
+Définition à la ligne 1666 du fichier glxproto\&.h\&.
+.SS "#define __GLX_VENDPRIV_HDR_SIZE   \fBsz_xGLXVendorPrivateReq\fP"
+
+.PP
+Définition à la ligne 1440 du fichier glxproto\&.h\&.
+.SS "#define GLX_BufferSwapComplete   1"
+
+.PP
+Définition à la ligne 65 du fichier glxproto\&.h\&.
+.SS "#define GLX_EXTENSION_ALIAS   'SGI\-GLX'"
+
+.PP
+Définition à la ligne 70 du fichier glxproto\&.h\&.
+.SS "#define GLX_EXTENSION_NAME   'GLX'"
+
+.PP
+Définition à la ligne 69 du fichier glxproto\&.h\&.
+.SS "#define GLX_EXTENSIONS   0x3"
+
+.PP
+Définition à la ligne 81 du fichier glxproto\&.h\&.
+.SS "#define GLX_GLXWINDOW_TYPE   6"
+
+.PP
+Définition à la ligne 2108 du fichier glxproto\&.h\&.
+.SS "#define GLX_PBUFFER_TYPE   4"
+
+.PP
+Définition à la ligne 2106 du fichier glxproto\&.h\&.
+.SS "#define GLX_PbufferClobber   0"
+
+.PP
+Définition à la ligne 64 du fichier glxproto\&.h\&.
+.SS "#define GLX_PIXMAP_TYPE   2"
+
+.PP
+Définition à la ligne 2104 du fichier glxproto\&.h\&.
+.SS "#define GLX_VENDOR   0x1"
+
+.PP
+Définition à la ligne 75 du fichier glxproto\&.h\&.
+.SS "#define GLX_VERSION   0x2"
+
+.PP
+Définition à la ligne 78 du fichier glxproto\&.h\&.
+.SS "#define GLX_VIDEO_SOURCE_TYPE   3"
+
+.PP
+Définition à la ligne 2105 du fichier glxproto\&.h\&.
+.SS "#define GLX_WINDOW_TYPE   1"
+
+.PP
+Définition à la ligne 2103 du fichier glxproto\&.h\&.
+.SS "#define GLXBadContext   0"
+
+.PP
+Définition à la ligne 41 du fichier glxproto\&.h\&.
+.SS "#define GLXBadContextState   1"
+
+.PP
+Définition à la ligne 42 du fichier glxproto\&.h\&.
+.SS "#define GLXBadContextTag   4"
+
+.PP
+Définition à la ligne 45 du fichier glxproto\&.h\&.
+.SS "#define GLXBadCurrentDrawable   11"
+
+.PP
+Définition à la ligne 52 du fichier glxproto\&.h\&.
+.SS "#define GLXBadCurrentWindow   5"
+
+.PP
+Définition à la ligne 46 du fichier glxproto\&.h\&.
+.SS "#define GLXBadDrawable   2"
+
+.PP
+Définition à la ligne 43 du fichier glxproto\&.h\&.
+.SS "#define GLXBadFBConfig   9"
+
+.PP
+Définition à la ligne 50 du fichier glxproto\&.h\&.
+.SS "#define GLXBadLargeRequest   7"
+
+.PP
+Définition à la ligne 48 du fichier glxproto\&.h\&.
+.SS "#define GLXBadPbuffer   10"
+
+.PP
+Définition à la ligne 51 du fichier glxproto\&.h\&.
+.SS "#define GLXBadPixmap   3"
+
+.PP
+Définition à la ligne 44 du fichier glxproto\&.h\&.
+.SS "#define GLXBadProfileARB   13"
+
+.PP
+Définition à la ligne 54 du fichier glxproto\&.h\&.
+.SS "#define GLXBadRenderRequest   6"
+
+.PP
+Définition à la ligne 47 du fichier glxproto\&.h\&.
+.SS "#define GLXBadWindow   12"
+
+.PP
+Définition à la ligne 53 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXContextID\fP   CARD32"
+
+.PP
+Définition à la ligne 91 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXDrawable\fP   CARD32"
+
+.PP
+Définition à la ligne 93 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXFBConfigID\fP   CARD32"
+
+.PP
+Définition à la ligne 96 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXFBConfigIDSGIX\fP   CARD32"
+
+.PP
+Définition à la ligne 97 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXPbuffer\fP   CARD32"
+
+.PP
+Définition à la ligne 94 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXPbufferSGIX\fP   CARD32"
+
+.PP
+Définition à la ligne 98 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXPixmap\fP   CARD32"
+
+.PP
+Définition à la ligne 92 du fichier glxproto\&.h\&.
+.SS "#define GLXUnsupportedPrivateRequest   8"
+
+.PP
+Définition à la ligne 49 du fichier glxproto\&.h\&.
+.SS "#define \fBGLXWindow\fP   CARD32"
+
+.PP
+Définition à la ligne 95 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXBindSwapBarrierSGIXReq   20"
+
+.PP
+Définition à la ligne 1129 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXChangeDrawableAttributesReq   12"
+
+.PP
+Définition à la ligne 531 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXChangeDrawableAttributesSGIXReq   20"
+
+.PP
+Définition à la ligne 1071 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXClientInfoReq   16"
+
+.PP
+Définition à la ligne 398 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCopyContextReq   20"
+
+.PP
+Définition à la ligne 269 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateContextAttribsARBReq   28"
+
+.PP
+Définition à la ligne 1354 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateContextReq   24"
+
+.PP
+Définition à la ligne 209 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateContextWithConfigSGIXReq   36"
+
+.PP
+Définition à la ligne 1008 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateGLXPbufferReply   32"
+
+.PP
+Définition à la ligne 877 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateGLXPbufferSGIXReq   32"
+
+.PP
+Définition à la ligne 1043 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateGLXPixmapReq   20"
+
+.PP
+Définition à la ligne 310 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateGLXPixmapWithConfigSGIXReq   28"
+
+.PP
+Définition à la ligne 1025 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateNewContextReq   28"
+
+.PP
+Définition à la ligne 456 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreatePbufferReq   20"
+
+.PP
+Définition à la ligne 496 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreatePixmapReq   24"
+
+.PP
+Définition à la ligne 427 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXCreateWindowReq   24"
+
+.PP
+Définition à la ligne 547 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyContextReq   8"
+
+.PP
+Définition à la ligne 220 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyGLXPbufferSGIXReq   16"
+
+.PP
+Définition à la ligne 1056 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyGLXPixmapReq   8"
+
+.PP
+Définition à la ligne 321 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyHyperpipeConfigSGIXReply   32"
+
+.PP
+Définition à la ligne 1220 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyHyperpipeConfigSGIXReq   32"
+
+.PP
+Définition à la ligne 1203 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyPbufferReq   8"
+
+.PP
+Définition à la ligne 507 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyPixmapReq   8"
+
+.PP
+Définition à la ligne 438 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXDestroyWindowReq   8"
+
+.PP
+Définition à la ligne 558 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetColorTableReply   32"
+
+.PP
+Définition à la ligne 911 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetConvolutionFilterReply   32"
+
+.PP
+Définition à la ligne 644 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetDrawableAttributesReply   32"
+
+.PP
+Définition à la ligne 894 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetDrawableAttributesReq   8"
+
+.PP
+Définition à la ligne 518 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetDrawableAttributesSGIXReply   32"
+
+.PP
+Définition à la ligne 1101 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetDrawableAttributesSGIXReq   16"
+
+.PP
+Définition à la ligne 1084 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetErrorReply   32"
+
+.PP
+Définition à la ligne 574 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetFBConfigsReply   32"
+
+.PP
+Définition à la ligne 824 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetFBConfigsReq   8"
+
+.PP
+Définition à la ligne 411 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetFBConfigsSGIXReq   16"
+
+.PP
+Définition à la ligne 987 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetHistogramReply   32"
+
+.PP
+Définition à la ligne 658 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetMinmaxReply   32"
+
+.PP
+Définition à la ligne 672 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetSeparableFilterReply   32"
+
+.PP
+Définition à la ligne 630 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetTexImageReply   32"
+
+.PP
+Définition à la ligne 616 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetVisualConfigsReply   32"
+
+.PP
+Définition à la ligne 714 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXGetVisualConfigsReq   8"
+
+.PP
+Définition à la ligne 332 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXHyperpipeConfigSGIXReply   32"
+
+.PP
+Définition à la ligne 1289 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXHyperpipeConfigSGIXReq   32"
+
+.PP
+Définition à la ligne 1272 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXIsDirectReply   32"
+
+.PP
+Définition à la ligne 730 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXIsDirectReq   8"
+
+.PP
+Définition à la ligne 192 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXJoinSwapGroupSGIXReq   20"
+
+.PP
+Définition à la ligne 1115 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXMakeContextCurrentReply   32"
+
+.PP
+Définition à la ligne 858 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXMakeContextCurrentReq   20"
+
+.PP
+Définition à la ligne 481 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXMakeCurrentReadSGIReply   32"
+
+.PP
+Définition à la ligne 974 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXMakeCurrentReadSGIReq   24"
+
+.PP
+Définition à la ligne 960 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXMakeCurrentReply   32"
+
+.PP
+Définition à la ligne 588 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXMakeCurrentReq   16"
+
+.PP
+Définition à la ligne 233 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryContextInfoEXTReply   32"
+
+.PP
+Définition à la ligne 945 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryContextInfoEXTReq   16"
+
+.PP
+Définition à la ligne 928 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryContextReply   32"
+
+.PP
+Définition à la ligne 841 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryContextReq   8"
+
+.PP
+Définition à la ligne 467 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryExtensionsStringReply   32"
+
+.PP
+Définition à la ligne 787 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryExtensionsStringReq   8"
+
+.PP
+Définition à la ligne 373 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryHyperpipeConfigSGIXReply   32"
+
+.PP
+Définition à la ligne 1254 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryHyperpipeConfigSGIXReq   32"
+
+.PP
+Définition à la ligne 1237 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryHyperpipeNetworkSGIXReply   32"
+
+.PP
+Définition à la ligne 1186 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryHyperpipeNetworkSGIXReq   16"
+
+.PP
+Définition à la ligne 1169 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryMaxSwapBarriersSGIXReply   32"
+
+.PP
+Définition à la ligne 1156 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryMaxSwapBarriersSGIXReq   16"
+
+.PP
+Définition à la ligne 1142 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryServerStringReply   32"
+
+.PP
+Définition à la ligne 805 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryServerStringReq   12"
+
+.PP
+Définition à la ligne 385 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryVersionReply   32"
+
+.PP
+Définition à la ligne 700 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXQueryVersionReq   12"
+
+.PP
+Définition à la ligne 181 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXReadPixelsReply   32"
+
+.PP
+Définition à la ligne 602 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXRenderLargeReq   16"
+
+.PP
+Définition à la ligne 156 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXRenderModeReply   32"
+
+.PP
+Définition à la ligne 686 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXRenderReq   8"
+
+.PP
+Définition à la ligne 133 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXSetClientInfo2ARBReq   24"
+
+.PP
+Définition à la ligne 1380 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXSetClientInfoARBReq   24"
+
+.PP
+Définition à la ligne 1332 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXSingleReply   32"
+
+.PP
+Définition à la ligne 749 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXSingleReq   8"
+
+.PP
+Définition à la ligne 169 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXSwapBuffersReq   12"
+
+.PP
+Définition à la ligne 281 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXUseXFontReq   24"
+
+.PP
+Définition à la ligne 296 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXVendorPrivateReq   12"
+
+.PP
+Définition à la ligne 347 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXVendorPrivateWithReplyReq   12"
+
+.PP
+Définition à la ligne 362 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXVendorPrivReply   32"
+
+.PP
+Définition à la ligne 769 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXWaitGLReq   8"
+
+.PP
+Définition à la ligne 244 du fichier glxproto\&.h\&.
+.SS "#define sz_xGLXWaitXReq   8"
+
+.PP
+Définition à la ligne 255 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Accum   137"
+
+.PP
+Définition à la ligne 2365 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ActiveStencilFaceEXT   4220"
+
+.PP
+Définition à la ligne 2698 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ActiveTextureARB   197"
+
+.PP
+Définition à la ligne 2458 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_AlphaFunc   159"
+
+.PP
+Définition à la ligne 2386 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Begin   4"
+
+.PP
+Définition à la ligne 2232 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BindProgramARB   4180"
+
+.PP
+Définition à la ligne 2612 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BindTexture   4117"
+
+.PP
+Définition à la ligne 2427 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Bitmap   5"
+
+.PP
+Définition à la ligne 2233 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BlendColor   4096"
+
+.PP
+Définition à la ligne 2430 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BlendEquation   4097"
+
+.PP
+Définition à la ligne 2431 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BlendEquationSeparateEXT   4228"
+
+.PP
+Définition à la ligne 2711 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BlendFunc   160"
+
+.PP
+Définition à la ligne 2387 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_BlendFuncSeparate   4134"
+
+.PP
+Définition à la ligne 2498 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CallList   1"
+
+.PP
+Définition à la ligne 2229 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CallLists   2"
+
+.PP
+Définition à la ligne 2230 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Clear   127"
+
+.PP
+Définition à la ligne 2355 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ClearAccum   128"
+
+.PP
+Définition à la ligne 2356 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ClearColor   130"
+
+.PP
+Définition à la ligne 2358 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ClearDepth   132"
+
+.PP
+Définition à la ligne 2360 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ClearIndex   129"
+
+.PP
+Définition à la ligne 2357 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ClearStencil   131"
+
+.PP
+Définition à la ligne 2359 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ClipPlane   77"
+
+.PP
+Définition à la ligne 2305 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3bv   6"
+
+.PP
+Définition à la ligne 2234 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3dv   7"
+
+.PP
+Définition à la ligne 2235 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3fv   8"
+
+.PP
+Définition à la ligne 2236 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3iv   9"
+
+.PP
+Définition à la ligne 2237 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3sv   10"
+
+.PP
+Définition à la ligne 2238 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3ubv   11"
+
+.PP
+Définition à la ligne 2239 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3uiv   12"
+
+.PP
+Définition à la ligne 2240 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color3usv   13"
+
+.PP
+Définition à la ligne 2241 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4bv   14"
+
+.PP
+Définition à la ligne 2242 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4dv   15"
+
+.PP
+Définition à la ligne 2243 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4fv   16"
+
+.PP
+Définition à la ligne 2244 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4iv   17"
+
+.PP
+Définition à la ligne 2245 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4sv   18"
+
+.PP
+Définition à la ligne 2246 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4ubv   19"
+
+.PP
+Définition à la ligne 2247 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4uiv   20"
+
+.PP
+Définition à la ligne 2248 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Color4usv   21"
+
+.PP
+Définition à la ligne 2249 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ColorMask   134"
+
+.PP
+Définition à la ligne 2362 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ColorMaterial   78"
+
+.PP
+Définition à la ligne 2306 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ColorSubTable   195"
+
+.PP
+Définition à la ligne 2436 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ColorTable   2053"
+
+.PP
+Définition à la ligne 2432 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ColorTableParameterfv   2054"
+
+.PP
+Définition à la ligne 2433 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ColorTableParameteriv   2055"
+
+.PP
+Définition à la ligne 2434 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CombinerInputNV   4140"
+
+.PP
+Définition à la ligne 2660 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CombinerOutputNV   4141"
+
+.PP
+Définition à la ligne 2661 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CombinerParameterfNV   4136"
+
+.PP
+Définition à la ligne 2656 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CombinerParameterfvNV   4137"
+
+.PP
+Définition à la ligne 2657 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CombinerParameteriNV   4138"
+
+.PP
+Définition à la ligne 2658 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CombinerParameterivNV   4139"
+
+.PP
+Définition à la ligne 2659 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CompressedTexImage1D   214"
+
+.PP
+Définition à la ligne 2475 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CompressedTexImage2D   215"
+
+.PP
+Définition à la ligne 2476 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CompressedTexImage3D   216"
+
+.PP
+Définition à la ligne 2477 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CompressedTexSubImage1D   217"
+
+.PP
+Définition à la ligne 2478 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CompressedTexSubImage2D   218"
+
+.PP
+Définition à la ligne 2479 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CompressedTexSubImage3D   219"
+
+.PP
+Définition à la ligne 2480 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ConvolutionFilter1D   4101"
+
+.PP
+Définition à la ligne 2438 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ConvolutionFilter2D   4102"
+
+.PP
+Définition à la ligne 2439 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ConvolutionParameterf   4103"
+
+.PP
+Définition à la ligne 2440 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ConvolutionParameterfv   4104"
+
+.PP
+Définition à la ligne 2441 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ConvolutionParameteri   4105"
+
+.PP
+Définition à la ligne 2442 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ConvolutionParameteriv   4106"
+
+.PP
+Définition à la ligne 2443 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyColorSubTable   196"
+
+.PP
+Définition à la ligne 2437 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyColorTable   2056"
+
+.PP
+Définition à la ligne 2435 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyConvolutionFilter1D   4107"
+
+.PP
+Définition à la ligne 2444 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyConvolutionFilter2D   4108"
+
+.PP
+Définition à la ligne 2445 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyPixels   172"
+
+.PP
+Définition à la ligne 2399 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyTexImage1D   4119"
+
+.PP
+Définition à la ligne 2421 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyTexImage2D   4120"
+
+.PP
+Définition à la ligne 2422 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyTexSubImage1D   4121"
+
+.PP
+Définition à la ligne 2423 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyTexSubImage2D   4122"
+
+.PP
+Définition à la ligne 2424 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CopyTexSubImage3D   4123"
+
+.PP
+Définition à la ligne 2453 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_CullFace   79"
+
+.PP
+Définition à la ligne 2307 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DepthBoundsEXT   4229"
+
+.PP
+Définition à la ligne 2708 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DepthFunc   164"
+
+.PP
+Définition à la ligne 2391 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DepthMask   135"
+
+.PP
+Définition à la ligne 2363 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DepthRange   174"
+
+.PP
+Définition à la ligne 2401 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Disable   138"
+
+.PP
+Définition à la ligne 2366 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DrawArrays   193"
+
+.PP
+Définition à la ligne 2419 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DrawArraysEXT   4116"
+
+.PP
+Définition à la ligne 2454 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DrawBuffer   126"
+
+.PP
+Définition à la ligne 2354 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_DrawPixels   173"
+
+.PP
+Définition à la ligne 2400 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EdgeFlagv   22"
+
+.PP
+Définition à la ligne 2250 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Enable   139"
+
+.PP
+Définition à la ligne 2367 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_End   23"
+
+.PP
+Définition à la ligne 2251 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalCoord1dv   151"
+
+.PP
+Définition à la ligne 2378 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalCoord1fv   152"
+
+.PP
+Définition à la ligne 2379 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalCoord2dv   153"
+
+.PP
+Définition à la ligne 2380 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalCoord2fv   154"
+
+.PP
+Définition à la ligne 2381 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalMesh1   155"
+
+.PP
+Définition à la ligne 2382 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalMesh2   157"
+
+.PP
+Définition à la ligne 2384 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalPoint1   156"
+
+.PP
+Définition à la ligne 2383 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_EvalPoint2   158"
+
+.PP
+Définition à la ligne 2385 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ExecuteProgramNV   4181"
+
+.PP
+Définition à la ligne 2672 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_FinalCombinerInputNV   4142"
+
+.PP
+Définition à la ligne 2662 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_FinishFenceNV   4144"
+
+.PP
+Définition à la ligne 2666 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_FogCoorddv   4125"
+
+.PP
+Définition à la ligne 2487 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_FogCoordfv   4124"
+
+.PP
+Définition à la ligne 2486 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Fogf   80"
+
+.PP
+Définition à la ligne 2308 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Fogfv   81"
+
+.PP
+Définition à la ligne 2309 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Fogi   82"
+
+.PP
+Définition à la ligne 2310 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Fogiv   83"
+
+.PP
+Définition à la ligne 2311 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_FrontFace   84"
+
+.PP
+Définition à la ligne 2312 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Frustum   175"
+
+.PP
+Définition à la ligne 2402 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Hint   85"
+
+.PP
+Définition à la ligne 2313 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Histogram   4110"
+
+.PP
+Définition à la ligne 2447 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Indexdv   24"
+
+.PP
+Définition à la ligne 2252 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Indexfv   25"
+
+.PP
+Définition à la ligne 2253 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Indexiv   26"
+
+.PP
+Définition à la ligne 2254 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_IndexMask   136"
+
+.PP
+Définition à la ligne 2364 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Indexsv   27"
+
+.PP
+Définition à la ligne 2255 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Indexubv   194"
+
+.PP
+Définition à la ligne 2429 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_InitNames   121"
+
+.PP
+Définition à la ligne 2349 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Lightf   86"
+
+.PP
+Définition à la ligne 2314 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Lightfv   87"
+
+.PP
+Définition à la ligne 2315 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Lighti   88"
+
+.PP
+Définition à la ligne 2316 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Lightiv   89"
+
+.PP
+Définition à la ligne 2317 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LightModelf   90"
+
+.PP
+Définition à la ligne 2318 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LightModelfv   91"
+
+.PP
+Définition à la ligne 2319 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LightModeli   92"
+
+.PP
+Définition à la ligne 2320 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LightModeliv   93"
+
+.PP
+Définition à la ligne 2321 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LineStipple   94"
+
+.PP
+Définition à la ligne 2322 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LineWidth   95"
+
+.PP
+Définition à la ligne 2323 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ListBase   3"
+
+.PP
+Définition à la ligne 2231 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LoadIdentity   176"
+
+.PP
+Définition à la ligne 2403 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LoadMatrixd   178"
+
+.PP
+Définition à la ligne 2405 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LoadMatrixf   177"
+
+.PP
+Définition à la ligne 2404 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LoadName   122"
+
+.PP
+Définition à la ligne 2350 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LoadProgamNV   4183"
+
+.PP
+Définition à la ligne 2674 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_LogicOp   161"
+
+.PP
+Définition à la ligne 2388 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Map1d   143"
+
+.PP
+Définition à la ligne 2370 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Map1f   144"
+
+.PP
+Définition à la ligne 2371 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Map2d   145"
+
+.PP
+Définition à la ligne 2372 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Map2f   146"
+
+.PP
+Définition à la ligne 2373 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MapGrid1d   147"
+
+.PP
+Définition à la ligne 2374 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MapGrid1f   148"
+
+.PP
+Définition à la ligne 2375 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MapGrid2d   149"
+
+.PP
+Définition à la ligne 2376 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MapGrid2f   150"
+
+.PP
+Définition à la ligne 2377 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Materialf   96"
+
+.PP
+Définition à la ligne 2324 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Materialfv   97"
+
+.PP
+Définition à la ligne 2325 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Materiali   98"
+
+.PP
+Définition à la ligne 2326 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Materialiv   99"
+
+.PP
+Définition à la ligne 2327 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MatrixMode   179"
+
+.PP
+Définition à la ligne 2406 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Minmax   4111"
+
+.PP
+Définition à la ligne 2448 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord1dvARB   198"
+
+.PP
+Définition à la ligne 2459 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord1fvARB   199"
+
+.PP
+Définition à la ligne 2460 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord1ivARB   200"
+
+.PP
+Définition à la ligne 2461 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord1svARB   201"
+
+.PP
+Définition à la ligne 2462 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord2dvARB   202"
+
+.PP
+Définition à la ligne 2463 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord2fvARB   203"
+
+.PP
+Définition à la ligne 2464 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord2ivARB   204"
+
+.PP
+Définition à la ligne 2465 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord2svARB   205"
+
+.PP
+Définition à la ligne 2466 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord3dvARB   206"
+
+.PP
+Définition à la ligne 2467 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord3fvARB   207"
+
+.PP
+Définition à la ligne 2468 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord3ivARB   208"
+
+.PP
+Définition à la ligne 2469 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord3svARB   209"
+
+.PP
+Définition à la ligne 2470 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord4dvARB   210"
+
+.PP
+Définition à la ligne 2471 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord4fvARB   211"
+
+.PP
+Définition à la ligne 2472 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord4ivARB   212"
+
+.PP
+Définition à la ligne 2473 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultiTexCoord4svARB   213"
+
+.PP
+Définition à la ligne 2474 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultMatrixd   181"
+
+.PP
+Définition à la ligne 2408 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_MultMatrixf   180"
+
+.PP
+Définition à la ligne 2407 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Normal3bv   28"
+
+.PP
+Définition à la ligne 2256 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Normal3dv   29"
+
+.PP
+Définition à la ligne 2257 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Normal3fv   30"
+
+.PP
+Définition à la ligne 2258 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Normal3iv   31"
+
+.PP
+Définition à la ligne 2259 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Normal3sv   32"
+
+.PP
+Définition à la ligne 2260 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Ortho   182"
+
+.PP
+Définition à la ligne 2409 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PassThrough   123"
+
+.PP
+Définition à la ligne 2351 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PixelMapfv   168"
+
+.PP
+Définition à la ligne 2395 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PixelMapuiv   169"
+
+.PP
+Définition à la ligne 2396 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PixelMapusv   170"
+
+.PP
+Définition à la ligne 2397 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PixelTransferf   166"
+
+.PP
+Définition à la ligne 2393 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PixelTransferi   167"
+
+.PP
+Définition à la ligne 2394 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PixelZoom   165"
+
+.PP
+Définition à la ligne 2392 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PointParameterfARB   2065"
+
+.PP
+Définition à la ligne 2488 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PointParameterfvARB   2066"
+
+.PP
+Définition à la ligne 2489 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PointParameteri   4221"
+
+.PP
+Définition à la ligne 2499 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PointParameteriv   4222"
+
+.PP
+Définition à la ligne 2500 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PointSize   100"
+
+.PP
+Définition à la ligne 2328 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PolygonMode   101"
+
+.PP
+Définition à la ligne 2329 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PolygonOffset   192"
+
+.PP
+Définition à la ligne 2420 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PolygonStipple   102"
+
+.PP
+Définition à la ligne 2330 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PopAttrib   141"
+
+.PP
+Définition à la ligne 2368 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PopMatrix   183"
+
+.PP
+Définition à la ligne 2410 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PopName   124"
+
+.PP
+Définition à la ligne 2352 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PrioritizeTextures   4118"
+
+.PP
+Définition à la ligne 2428 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramEnvParameter4dvARB   4185"
+
+.PP
+Définition à la ligne 2614 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramEnvParameter4fvARB   4184"
+
+.PP
+Définition à la ligne 2613 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramLocalParameter4dvARB   4216"
+
+.PP
+Définition à la ligne 2627 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramLocalParameter4fvARB   4215"
+
+.PP
+Définition à la ligne 2626 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramNamedParameter4dvNV   4219"
+
+.PP
+Définition à la ligne 2702 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramNamedParameter4fvNV   4218"
+
+.PP
+Définition à la ligne 2701 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramParameters4dvNV   4187"
+
+.PP
+Définition à la ligne 2676 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramParameters4fvNV   4186"
+
+.PP
+Définition à la ligne 2675 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ProgramStringARB   4217"
+
+.PP
+Définition à la ligne 2628 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PushAttrib   142"
+
+.PP
+Définition à la ligne 2369 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PushMatrix   184"
+
+.PP
+Définition à la ligne 2411 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_PushName   125"
+
+.PP
+Définition à la ligne 2353 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos2dv   33"
+
+.PP
+Définition à la ligne 2261 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos2fv   34"
+
+.PP
+Définition à la ligne 2262 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos2iv   35"
+
+.PP
+Définition à la ligne 2263 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos2sv   36"
+
+.PP
+Définition à la ligne 2264 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos3dv   37"
+
+.PP
+Définition à la ligne 2265 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos3fv   38"
+
+.PP
+Définition à la ligne 2266 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos3iv   39"
+
+.PP
+Définition à la ligne 2267 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos3sv   40"
+
+.PP
+Définition à la ligne 2268 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos4dv   41"
+
+.PP
+Définition à la ligne 2269 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos4fv   42"
+
+.PP
+Définition à la ligne 2270 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos4iv   43"
+
+.PP
+Définition à la ligne 2271 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RasterPos4sv   44"
+
+.PP
+Définition à la ligne 2272 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ReadBuffer   171"
+
+.PP
+Définition à la ligne 2398 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Rectdv   45"
+
+.PP
+Définition à la ligne 2273 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Rectfv   46"
+
+.PP
+Définition à la ligne 2274 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Rectiv   47"
+
+.PP
+Définition à la ligne 2275 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Rectsv   48"
+
+.PP
+Définition à la ligne 2276 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_RequestResidentProgramsNV   4182"
+
+.PP
+Définition à la ligne 2673 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ResetHistogram   4112"
+
+.PP
+Définition à la ligne 2449 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ResetMinmax   4113"
+
+.PP
+Définition à la ligne 2450 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Rotated   185"
+
+.PP
+Définition à la ligne 2412 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Rotatef   186"
+
+.PP
+Définition à la ligne 2413 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SampleCoverageARB   229"
+
+.PP
+Définition à la ligne 2481 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Scaled   187"
+
+.PP
+Définition à la ligne 2414 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Scalef   188"
+
+.PP
+Définition à la ligne 2415 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Scissor   103"
+
+.PP
+Définition à la ligne 2331 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3bv   4126"
+
+.PP
+Définition à la ligne 2490 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3dv   4130"
+
+.PP
+Définition à la ligne 2494 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3fv   4129"
+
+.PP
+Définition à la ligne 2493 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3iv   4128"
+
+.PP
+Définition à la ligne 2492 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3sv   4127"
+
+.PP
+Définition à la ligne 2491 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3ubv   4131"
+
+.PP
+Définition à la ligne 2495 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3uiv   4133"
+
+.PP
+Définition à la ligne 2497 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SecondaryColor3usv   4132"
+
+.PP
+Définition à la ligne 2496 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SeparableFilter2D   4109"
+
+.PP
+Définition à la ligne 2446 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_SetFenceNV   4143"
+
+.PP
+Définition à la ligne 2665 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_ShadeModel   104"
+
+.PP
+Définition à la ligne 2332 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_StencilFunc   162"
+
+.PP
+Définition à la ligne 2389 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_StencilMask   133"
+
+.PP
+Définition à la ligne 2361 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_StencilOp   163"
+
+.PP
+Définition à la ligne 2390 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord1dv   49"
+
+.PP
+Définition à la ligne 2277 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord1fv   50"
+
+.PP
+Définition à la ligne 2278 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord1iv   51"
+
+.PP
+Définition à la ligne 2279 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord1sv   52"
+
+.PP
+Définition à la ligne 2280 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord2dv   53"
+
+.PP
+Définition à la ligne 2281 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord2fv   54"
+
+.PP
+Définition à la ligne 2282 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord2iv   55"
+
+.PP
+Définition à la ligne 2283 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord2sv   56"
+
+.PP
+Définition à la ligne 2284 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord3dv   57"
+
+.PP
+Définition à la ligne 2285 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord3fv   58"
+
+.PP
+Définition à la ligne 2286 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord3iv   59"
+
+.PP
+Définition à la ligne 2287 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord3sv   60"
+
+.PP
+Définition à la ligne 2288 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord4dv   61"
+
+.PP
+Définition à la ligne 2289 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord4fv   62"
+
+.PP
+Définition à la ligne 2290 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord4iv   63"
+
+.PP
+Définition à la ligne 2291 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexCoord4sv   64"
+
+.PP
+Définition à la ligne 2292 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexEnvf   111"
+
+.PP
+Définition à la ligne 2339 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexEnvfv   112"
+
+.PP
+Définition à la ligne 2340 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexEnvi   113"
+
+.PP
+Définition à la ligne 2341 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexEnviv   114"
+
+.PP
+Définition à la ligne 2342 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexGend   115"
+
+.PP
+Définition à la ligne 2343 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexGendv   116"
+
+.PP
+Définition à la ligne 2344 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexGenf   117"
+
+.PP
+Définition à la ligne 2345 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexGenfv   118"
+
+.PP
+Définition à la ligne 2346 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexGeni   119"
+
+.PP
+Définition à la ligne 2347 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexGeniv   120"
+
+.PP
+Définition à la ligne 2348 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexImage1D   109"
+
+.PP
+Définition à la ligne 2337 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexImage2D   110"
+
+.PP
+Définition à la ligne 2338 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexImage3D   4114"
+
+.PP
+Définition à la ligne 2451 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexParameterf   105"
+
+.PP
+Définition à la ligne 2333 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexParameterfv   106"
+
+.PP
+Définition à la ligne 2334 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexParameteri   107"
+
+.PP
+Définition à la ligne 2335 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexParameteriv   108"
+
+.PP
+Définition à la ligne 2336 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexSubImage1D   4099"
+
+.PP
+Définition à la ligne 2425 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexSubImage2D   4100"
+
+.PP
+Définition à la ligne 2426 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TexSubImage3D   4115"
+
+.PP
+Définition à la ligne 2452 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_TrackMatrixNV   4188"
+
+.PP
+Définition à la ligne 2677 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Translated   189"
+
+.PP
+Définition à la ligne 2416 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Translatef   190"
+
+.PP
+Définition à la ligne 2417 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex2dv   65"
+
+.PP
+Définition à la ligne 2293 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex2fv   66"
+
+.PP
+Définition à la ligne 2294 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex2iv   67"
+
+.PP
+Définition à la ligne 2295 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex2sv   68"
+
+.PP
+Définition à la ligne 2296 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex3dv   69"
+
+.PP
+Définition à la ligne 2297 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex3fv   70"
+
+.PP
+Définition à la ligne 2298 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex3iv   71"
+
+.PP
+Définition à la ligne 2299 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex3sv   72"
+
+.PP
+Définition à la ligne 2300 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex4dv   73"
+
+.PP
+Définition à la ligne 2301 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex4fv   74"
+
+.PP
+Définition à la ligne 2302 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex4iv   75"
+
+.PP
+Définition à la ligne 2303 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Vertex4sv   76"
+
+.PP
+Définition à la ligne 2304 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib1dvARB   4197"
+
+.PP
+Définition à la ligne 2623 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib1fvARB   4193"
+
+.PP
+Définition à la ligne 2619 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib1svARB   4189"
+
+.PP
+Définition à la ligne 2615 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib2dvARB   4198"
+
+.PP
+Définition à la ligne 2624 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib2fvARB   4194"
+
+.PP
+Définition à la ligne 2620 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib2svARB   4190"
+
+.PP
+Définition à la ligne 2616 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib3dvARB   4199"
+
+.PP
+Définition à la ligne 2625 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib3fvARB   4195"
+
+.PP
+Définition à la ligne 2621 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib3svARB   4191"
+
+.PP
+Définition à la ligne 2617 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4bvARB   4230"
+
+.PP
+Définition à la ligne 2631 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4dvARB   4200"
+
+.PP
+Définition à la ligne 2629 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4fvARB   4196"
+
+.PP
+Définition à la ligne 2622 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4ivARB   4231"
+
+.PP
+Définition à la ligne 2632 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4NbvARB   4235"
+
+.PP
+Définition à la ligne 2636 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4NivARB   4237"
+
+.PP
+Définition à la ligne 2638 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4NsvARB   4236"
+
+.PP
+Définition à la ligne 2637 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4NubvARB   4201"
+
+.PP
+Définition à la ligne 2630 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4NuivARB   4239"
+
+.PP
+Définition à la ligne 2640 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4NusvARB   4238"
+
+.PP
+Définition à la ligne 2639 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4svARB   4192"
+
+.PP
+Définition à la ligne 2618 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4ubvARB   4232"
+
+.PP
+Définition à la ligne 2633 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4uivARB   4234"
+
+.PP
+Définition à la ligne 2635 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttrib4usvARB   4233"
+
+.PP
+Définition à la ligne 2634 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs1dvNV   4210"
+
+.PP
+Définition à la ligne 2686 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs1fvNV   4206"
+
+.PP
+Définition à la ligne 2682 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs1svNV   4202"
+
+.PP
+Définition à la ligne 2678 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs2dvNV   4211"
+
+.PP
+Définition à la ligne 2687 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs2fvNV   4207"
+
+.PP
+Définition à la ligne 2683 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs2svNV   4203"
+
+.PP
+Définition à la ligne 2679 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs3dvNV   4212"
+
+.PP
+Définition à la ligne 2688 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs3fvNV   4208"
+
+.PP
+Définition à la ligne 2684 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs3svNV   4204"
+
+.PP
+Définition à la ligne 2680 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs4dvNV   4213"
+
+.PP
+Définition à la ligne 2689 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs4fvNV   4209"
+
+.PP
+Définition à la ligne 2685 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs4svNV   4205"
+
+.PP
+Définition à la ligne 2681 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexAttribs4ubvNV   4214"
+
+.PP
+Définition à la ligne 2690 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexBlendARB   226"
+
+.PP
+Définition à la ligne 2602 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_VertexWeightfvEXT   4135"
+
+.PP
+Définition à la ligne 2653 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_Viewport   191"
+
+.PP
+Définition à la ligne 2418 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightbvARB   220"
+
+.PP
+Définition à la ligne 2596 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightdvARB   228"
+
+.PP
+Définition à la ligne 2604 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightfvARB   227"
+
+.PP
+Définition à la ligne 2603 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightivARB   224"
+
+.PP
+Définition à la ligne 2600 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightsvARB   222"
+
+.PP
+Définition à la ligne 2598 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightubvARB   221"
+
+.PP
+Définition à la ligne 2597 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightuivARB   225"
+
+.PP
+Définition à la ligne 2601 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WeightusvARB   223"
+
+.PP
+Définition à la ligne 2599 du fichier glxproto\&.h\&.
+.SS "#define X_GLrop_WindowPos3fARB   230"
+
+.PP
+Définition à la ligne 2485 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_AreTexturesResident   143"
+
+.PP
+Définition à la ligne 2207 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_DeleteLists   103"
+
+.PP
+Définition à la ligne 2167 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_DeleteTextures   144"
+
+.PP
+Définition à la ligne 2208 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_EndList   102"
+
+.PP
+Définition à la ligne 2166 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_FeedbackBuffer   105"
+
+.PP
+Définition à la ligne 2169 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_Finish   108"
+
+.PP
+Définition à la ligne 2172 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_Flush   142"
+
+.PP
+Définition à la ligne 2173 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GenLists   104"
+
+.PP
+Définition à la ligne 2168 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GenTextures   145"
+
+.PP
+Définition à la ligne 2209 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetBooleanv   112"
+
+.PP
+Définition à la ligne 2177 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetClipPlane   113"
+
+.PP
+Définition à la ligne 2178 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetColorTable   147"
+
+.PP
+Définition à la ligne 2211 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetColorTableParameterfv   148"
+
+.PP
+Définition à la ligne 2212 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetColorTableParameteriv   149"
+
+.PP
+Définition à la ligne 2213 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetCompressedTexImage   160"
+
+.PP
+Définition à la ligne 2224 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetConvolutionFilter   150"
+
+.PP
+Définition à la ligne 2214 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetConvolutionParameterfv   151"
+
+.PP
+Définition à la ligne 2215 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetConvolutionParameteriv   152"
+
+.PP
+Définition à la ligne 2216 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetDoublev   114"
+
+.PP
+Définition à la ligne 2179 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetError   115"
+
+.PP
+Définition à la ligne 2180 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetFloatv   116"
+
+.PP
+Définition à la ligne 2181 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetHistogram   154"
+
+.PP
+Définition à la ligne 2218 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetHistogramParameterfv   155"
+
+.PP
+Définition à la ligne 2219 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetHistogramParameteriv   156"
+
+.PP
+Définition à la ligne 2220 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetIntegerv   117"
+
+.PP
+Définition à la ligne 2182 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetLightfv   118"
+
+.PP
+Définition à la ligne 2183 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetLightiv   119"
+
+.PP
+Définition à la ligne 2184 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMapdv   120"
+
+.PP
+Définition à la ligne 2185 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMapfv   121"
+
+.PP
+Définition à la ligne 2186 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMapiv   122"
+
+.PP
+Définition à la ligne 2187 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMaterialfv   123"
+
+.PP
+Définition à la ligne 2188 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMaterialiv   124"
+
+.PP
+Définition à la ligne 2189 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMinmax   157"
+
+.PP
+Définition à la ligne 2221 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMinmaxParameterfv   158"
+
+.PP
+Définition à la ligne 2222 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetMinmaxParameteriv   159"
+
+.PP
+Définition à la ligne 2223 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetPixelMapfv   125"
+
+.PP
+Définition à la ligne 2190 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetPixelMapuiv   126"
+
+.PP
+Définition à la ligne 2191 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetPixelMapusv   127"
+
+.PP
+Définition à la ligne 2192 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetPolygonStipple   128"
+
+.PP
+Définition à la ligne 2193 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetSeparableFilter   153"
+
+.PP
+Définition à la ligne 2217 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetString   129"
+
+.PP
+Définition à la ligne 2194 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexEnvfv   130"
+
+.PP
+Définition à la ligne 2195 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexEnviv   131"
+
+.PP
+Définition à la ligne 2196 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexGendv   132"
+
+.PP
+Définition à la ligne 2197 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexGenfv   133"
+
+.PP
+Définition à la ligne 2198 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexGeniv   134"
+
+.PP
+Définition à la ligne 2199 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexImage   135"
+
+.PP
+Définition à la ligne 2200 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexLevelParameterfv   138"
+
+.PP
+Définition à la ligne 2203 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexLevelParameteriv   139"
+
+.PP
+Définition à la ligne 2204 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexParameterfv   136"
+
+.PP
+Définition à la ligne 2201 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_GetTexParameteriv   137"
+
+.PP
+Définition à la ligne 2202 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_IsEnabled   140"
+
+.PP
+Définition à la ligne 2205 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_IsList   141"
+
+.PP
+Définition à la ligne 2206 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_IsTexture   146"
+
+.PP
+Définition à la ligne 2210 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_NewList   101"
+
+.PP
+Définition à la ligne 2165 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_PixelStoref   109"
+
+.PP
+Définition à la ligne 2174 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_PixelStorei   110"
+
+.PP
+Définition à la ligne 2175 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_ReadPixels   111"
+
+.PP
+Définition à la ligne 2176 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_RenderMode   107"
+
+.PP
+Définition à la ligne 2171 du fichier glxproto\&.h\&.
+.SS "#define X_GLsop_SelectBuffer   106"
+
+.PP
+Définition à la ligne 2170 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_AreProgramsResidentNV   1293"
+
+.PP
+Définition à la ligne 2533 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_AreTexturesResidentEXT   11"
+
+.PP
+Définition à la ligne 2518 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_CheckFramebufferStatusEXT   1427"
+
+.PP
+Définition à la ligne 2719 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_DeleteFenceNV   1276"
+
+.PP
+Définition à la ligne 2528 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_DeleteProgramARB   1294"
+
+.PP
+Définition à la ligne 2534 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_DeleteTexturesEXT   12"
+
+.PP
+Définition à la ligne 2519 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_FlushRasterSGIX   4105"
+
+.PP
+Définition à la ligne 2562 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GenFencesNV   1277"
+
+.PP
+Définition à la ligne 2529 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GenFramebuffersEXT   1426"
+
+.PP
+Définition à la ligne 2718 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GenProgramsARB   1295"
+
+.PP
+Définition à la ligne 2535 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GenRenderbuffersEXT   1423"
+
+.PP
+Définition à la ligne 2715 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GenTexturesEXT   13"
+
+.PP
+Définition à la ligne 2520 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetColorTableParameterfvSGI   4099"
+
+.PP
+Définition à la ligne 2556 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetColorTableParameterivSGI   4100"
+
+.PP
+Définition à la ligne 2557 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetColorTableSGI   4098"
+
+.PP
+Définition à la ligne 2555 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetCombinerInputParameterfvNV   1270"
+
+.PP
+Définition à la ligne 2522 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetCombinerInputParameterivNV   1271"
+
+.PP
+Définition à la ligne 2523 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetCombinerOutputParameterfvNV   1272"
+
+.PP
+Définition à la ligne 2524 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetCombinerOutputParameterivNV   1273"
+
+.PP
+Définition à la ligne 2525 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetConvolutionFilterEXT   1"
+
+.PP
+Définition à la ligne 2508 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetConvolutionParameterfvEXT   2"
+
+.PP
+Définition à la ligne 2509 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetConvolutionParameterivEXT   3"
+
+.PP
+Définition à la ligne 2510 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetDetailTexFuncSGIS   4096"
+
+.PP
+Définition à la ligne 2553 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetFenceivNV   1280"
+
+.PP
+Définition à la ligne 2532 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetFinalCombinerOutputParameterfvNV   1274"
+
+.PP
+Définition à la ligne 2526 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetFinalCombinerOutputParameterivNV   1275"
+
+.PP
+Définition à la ligne 2527 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetFramebufferAttachmentParameterivEXT   1428"
+
+.PP
+Définition à la ligne 2720 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetHistogramEXT   5"
+
+.PP
+Définition à la ligne 2512 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetHistogramParameterfvEXT   6"
+
+.PP
+Définition à la ligne 2513 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetHistogramParameterivEXT   7"
+
+.PP
+Définition à la ligne 2514 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetInstrumentsSGIX   4102"
+
+.PP
+Définition à la ligne 2559 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetMinmaxEXT   8"
+
+.PP
+Définition à la ligne 2515 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetMinmaxParameterfvEXT   9"
+
+.PP
+Définition à la ligne 2516 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetMinmaxParameterivEXT   10"
+
+.PP
+Définition à la ligne 2517 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramEnvParameterdvARB   1297"
+
+.PP
+Définition à la ligne 2537 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramEnvParameterfvARB   1296"
+
+.PP
+Définition à la ligne 2536 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramEnvParameterivNV   1298"
+
+.PP
+Définition à la ligne 2538 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramivARB   1307"
+
+.PP
+Définition à la ligne 2547 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramLocalParameterdvARB   1306"
+
+.PP
+Définition à la ligne 2546 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramLocalParameterfvARB   1305"
+
+.PP
+Définition à la ligne 2545 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramNamedParameter4dvNV   1311"
+
+.PP
+Définition à la ligne 2550 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramNamedParameter4fvNV   1310"
+
+.PP
+Définition à la ligne 2549 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramStringARB   1308"
+
+.PP
+Définition à la ligne 2548 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetProgramStringNV   1299"
+
+.PP
+Définition à la ligne 2539 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetRenderbufferParameterivEXT   1424"
+
+.PP
+Définition à la ligne 2716 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetSeparableFilterEXT   4"
+
+.PP
+Définition à la ligne 2511 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetSharpenTexFuncSGIS   4097"
+
+.PP
+Définition à la ligne 2554 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetTexFilterFuncSGIS   4101"
+
+.PP
+Définition à la ligne 2558 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetTrackMatrixivNV   1300"
+
+.PP
+Définition à la ligne 2540 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetVertexAttribdvARB   1301"
+
+.PP
+Définition à la ligne 2541 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetVertexAttribfvARB   1302"
+
+.PP
+Définition à la ligne 2542 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_GetVertexAttribivARB   1303"
+
+.PP
+Définition à la ligne 2543 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_InstrumentsBufferSGIX   4103"
+
+.PP
+Définition à la ligne 2560 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_IsFenceNV   1278"
+
+.PP
+Définition à la ligne 2530 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_IsFramebufferEXT   1425"
+
+.PP
+Définition à la ligne 2717 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_IsProgramARB   1304"
+
+.PP
+Définition à la ligne 2544 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_IsRenderbufferEXT   1422"
+
+.PP
+Définition à la ligne 2714 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_IsTextureEXT   14"
+
+.PP
+Définition à la ligne 2521 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_PollInstrumentsSGIX   4104"
+
+.PP
+Définition à la ligne 2561 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_SampleMaskSGIS   2048"
+
+.PP
+Définition à la ligne 2551 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_SamplePatternSGIS   2049"
+
+.PP
+Définition à la ligne 2552 du fichier glxproto\&.h\&.
+.SS "#define X_GLvop_TestFenceNV   1279"
+
+.PP
+Définition à la ligne 2531 du fichier glxproto\&.h\&.
+.SS "#define X_GLXChangeDrawableAttributes   30"
+
+.PP
+Définition à la ligne 2156 du fichier glxproto\&.h\&.
+.SS "#define X_GLXClientInfo   20"
+
+.PP
+Définition à la ligne 2146 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCopyContext   10"
+
+.PP
+Définition à la ligne 2136 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreateContext   3"
+
+.PP
+Définition à la ligne 2129 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreateContextAtrribsARB   34"
+
+.PP
+Définition à la ligne 2160 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreateGLXPixmap   13"
+
+.PP
+Définition à la ligne 2139 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreateNewContext   24"
+
+.PP
+Définition à la ligne 2150 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreatePbuffer   27"
+
+.PP
+Définition à la ligne 2153 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreatePixmap   22"
+
+.PP
+Définition à la ligne 2148 du fichier glxproto\&.h\&.
+.SS "#define X_GLXCreateWindow   31"
+
+.PP
+Définition à la ligne 2157 du fichier glxproto\&.h\&.
+.SS "#define X_GLXDestroyContext   4"
+
+.PP
+Définition à la ligne 2130 du fichier glxproto\&.h\&.
+.SS "#define X_GLXDestroyGLXPixmap   15"
+
+.PP
+Définition à la ligne 2141 du fichier glxproto\&.h\&.
+.SS "#define X_GLXDestroyPbuffer   28"
+
+.PP
+Définition à la ligne 2154 du fichier glxproto\&.h\&.
+.SS "#define X_GLXDestroyPixmap   23"
+
+.PP
+Définition à la ligne 2149 du fichier glxproto\&.h\&.
+.SS "#define X_GLXDestroyWindow   32"
+
+.PP
+Définition à la ligne 2158 du fichier glxproto\&.h\&.
+.SS "#define X_GLXGetDrawableAttributes   29"
+
+.PP
+Définition à la ligne 2155 du fichier glxproto\&.h\&.
+.SS "#define X_GLXGetFBConfigs   21"
+
+.PP
+Définition à la ligne 2147 du fichier glxproto\&.h\&.
+.SS "#define X_GLXGetVisualConfigs   14"
+
+.PP
+Définition à la ligne 2140 du fichier glxproto\&.h\&.
+.SS "#define X_GLXIsDirect   6"
+
+.PP
+Définition à la ligne 2132 du fichier glxproto\&.h\&.
+.SS "#define X_GLXMakeContextCurrent   26"
+
+.PP
+Définition à la ligne 2152 du fichier glxproto\&.h\&.
+.SS "#define X_GLXMakeCurrent   5"
+
+.PP
+Définition à la ligne 2131 du fichier glxproto\&.h\&.
+.SS "#define X_GLXQueryContext   25"
+
+.PP
+Définition à la ligne 2151 du fichier glxproto\&.h\&.
+.SS "#define X_GLXQueryExtensionsString   18"
+
+.PP
+Définition à la ligne 2144 du fichier glxproto\&.h\&.
+.SS "#define X_GLXQueryServerString   19"
+
+.PP
+Définition à la ligne 2145 du fichier glxproto\&.h\&.
+.SS "#define X_GLXQueryVersion   7"
+
+.PP
+Définition à la ligne 2133 du fichier glxproto\&.h\&.
+.SS "#define X_GLXRender   1"
+
+.PP
+Définition à la ligne 2127 du fichier glxproto\&.h\&.
+.SS "#define X_GLXRenderLarge   2"
+
+.PP
+Définition à la ligne 2128 du fichier glxproto\&.h\&.
+.SS "#define X_GLXSetClientInfoARB   33"
+
+.PP
+Définition à la ligne 2159 du fichier glxproto\&.h\&.
+.SS "#define X_GLXSetConfigInfo2ARB   35"
+
+.PP
+Définition à la ligne 2161 du fichier glxproto\&.h\&.
+.SS "#define X_GLXSwapBuffers   11"
+
+.PP
+Définition à la ligne 2137 du fichier glxproto\&.h\&.
+.SS "#define X_GLXUseXFont   12"
+
+.PP
+Définition à la ligne 2138 du fichier glxproto\&.h\&.
+.SS "#define X_GLXVendorPrivate   16"
+
+.PP
+Définition à la ligne 2142 du fichier glxproto\&.h\&.
+.SS "#define X_GLXVendorPrivateWithReply   17"
+
+.PP
+Définition à la ligne 2143 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_BindSwapBarrierSGIX   65548"
+
+.PP
+Définition à la ligne 2581 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_BindTexImageEXT   1330"
+
+.PP
+Définition à la ligne 2567 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_ChangeDrawableAttributesSGIX   65545"
+
+.PP
+Définition à la ligne 2578 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_CreateContextWithConfigSGIX   65541"
+
+.PP
+Définition à la ligne 2574 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_CreateGLXPbufferSGIX   65543"
+
+.PP
+Définition à la ligne 2576 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_CreateGLXPixmapWithConfigSGIX   65542"
+
+.PP
+Définition à la ligne 2575 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_CreateGLXVideoSourceSGIX   65538"
+
+.PP
+Définition à la ligne 2571 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_DestroyGLXPbufferSGIX   65544"
+
+.PP
+Définition à la ligne 2577 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_DestroyGLXVideoSourceSGIX   65539"
+
+.PP
+Définition à la ligne 2572 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_DestroyHyperpipeConfigSGIX   65553"
+
+.PP
+Définition à la ligne 2586 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_GetDrawableAttributesSGIX   65546"
+
+.PP
+Définition à la ligne 2579 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_GetFBConfigsSGIX   65540"
+
+.PP
+Définition à la ligne 2573 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_HyperpipeConfigSGIX   65552"
+
+.PP
+Définition à la ligne 2585 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_JoinSwapGroupSGIX   65547"
+
+.PP
+Définition à la ligne 2580 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_MakeCurrentReadSGI   65537"
+
+.PP
+Définition à la ligne 2570 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_QueryContextInfoEXT   1024"
+
+.PP
+Définition à la ligne 2566 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_QueryHyperpipeConfigSGIX   65551"
+
+.PP
+Définition à la ligne 2584 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_QueryHyperpipeNetworkSGIX   65550"
+
+.PP
+Définition à la ligne 2583 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_QueryMaxSwapBarriersSGIX   65549"
+
+.PP
+Définition à la ligne 2582 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_ReleaseTexImageEXT   1331"
+
+.PP
+Définition à la ligne 2568 du fichier glxproto\&.h\&.
+.SS "#define X_GLXvop_SwapIntervalSGI   65536"
+
+.PP
+Définition à la ligne 2569 du fichier glxproto\&.h\&.
+.SS "#define X_GLXWaitGL   8"
+
+.PP
+Définition à la ligne 2134 du fichier glxproto\&.h\&.
+.SS "#define X_GLXWaitX   9"
+
+.PP
+Définition à la ligne 2135 du fichier glxproto\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef CARD32 \fBGLXContextTag\fP"
+
+.PP
+Définition à la ligne 103 du fichier glxproto\&.h\&.
+.SS "typedef struct \fBGLXBindSwapBarrierSGIX\fP  \fBxGLXBindSwapBarrierSGIXReq\fP"
+
+.SS "typedef struct \fBGLXChangeDrawableAttributes\fP  \fBxGLXChangeDrawableAttributesReq\fP"
+
+.SS "typedef struct \fBGLXChangeDrawableAttributesSGIX\fP  \fBxGLXChangeDrawableAttributesSGIXReq\fP"
+
+.SS "typedef struct \fBGLXClientInfo\fP  \fBxGLXClientInfoReq\fP"
+
+.SS "typedef struct \fBGLXCopyContext\fP  \fBxGLXCopyContextReq\fP"
+
+.SS "typedef struct \fBGLXCreateContextAttribsARB\fP  \fBxGLXCreateContextAttribsARBReq\fP"
+Protocol head for glXCreateContextAttribsARB
+.PP
+This protocol replaces \fC\fBGLXCreateContext\fP\fP, \fC\fBGLXCreateNewContext\fP\fP, and \fC\fBGLXCreateContextWithConfigSGIX\fP\fP\&. 
+.SS "typedef struct \fBGLXCreateContext\fP  \fBxGLXCreateContextReq\fP"
+
+.SS "typedef struct \fBGLXCreateContextWithConfigSGIX\fP  \fBxGLXCreateContextWithConfigSGIXReq\fP"
+
+.SS "typedef struct \fBGLXCreateGLXPbufferSGIX\fP  \fBxGLXCreateGLXPbufferSGIXReq\fP"
+
+.SS "typedef struct \fBGLXCreateGLXPixmap\fP  \fBxGLXCreateGLXPixmapReq\fP"
+
+.SS "typedef struct \fBGLXCreateGLXPixmapWithConfigSGIX\fP  \fBxGLXCreateGLXPixmapWithConfigSGIXReq\fP"
+
+.SS "typedef struct \fBGLXCreateNewContext\fP  \fBxGLXCreateNewContextReq\fP"
+
+.SS "typedef struct \fBGLXCreatePbuffer\fP  \fBxGLXCreatePbufferReq\fP"
+
+.SS "typedef struct \fBGLXCreatePixmap\fP  \fBxGLXCreatePixmapReq\fP"
+
+.SS "typedef struct \fBGLXCreateWindow\fP  \fBxGLXCreateWindowReq\fP"
+
+.SS "typedef struct \fBGLXDestroyContext\fP  \fBxGLXDestroyContextReq\fP"
+
+.SS "typedef struct \fBGLXDestroyGLXPbuffer\fP  \fBxGLXDestroyGLXPbufferSGIXReq\fP"
+
+.SS "typedef struct \fBGLXDestroyGLXPixmap\fP  \fBxGLXDestroyGLXPixmapReq\fP"
+
+.SS "typedef struct \fBGLXDestroyHyperpipeConfigSGIX\fP  \fBxGLXDestroyHyperpipeConfigSGIXReq\fP"
+
+.SS "typedef struct \fBGLXDestroyPbuffer\fP  \fBxGLXDestroyPbufferReq\fP"
+
+.SS "typedef struct \fBGLXDestroyPixmap\fP  \fBxGLXDestroyPixmapReq\fP"
+
+.SS "typedef struct \fBGLXDestroyWindow\fP  \fBxGLXDestroyWindowReq\fP"
+
+.SS "typedef struct \fBGLXGetDrawableAttributes\fP  \fBxGLXGetDrawableAttributesReq\fP"
+
+.SS "typedef struct \fBGLXGetDrawableAttributesSGIX\fP  \fBxGLXGetDrawableAttributesSGIXReq\fP"
+
+.SS "typedef struct \fBGLXGetFBConfigs\fP  \fBxGLXGetFBConfigsReq\fP"
+
+.SS "typedef struct \fBGLXGetFBConfigsSGIX\fP  \fBxGLXGetFBConfigsSGIXReq\fP"
+
+.SS "typedef struct \fBGLXGetVisualConfigs\fP  \fBxGLXGetVisualConfigsReq\fP"
+
+.SS "typedef struct \fBGLXIsDirect\fP  \fBxGLXIsDirectReq\fP"
+
+.SS "typedef struct \fBGLXJoinSwapGroupSGIX\fP  \fBxGLXJoinSwapGroupSGIXReq\fP"
+
+.SS "typedef struct \fBGLXMakeContextCurrent\fP  \fBxGLXMakeContextCurrentReq\fP"
+
+.SS "typedef struct \fBGLXMakeCurrentReadSGI\fP  \fBxGLXMakeCurrentReadSGIReq\fP"
+
+.SS "typedef struct \fBGLXMakeCurrent\fP  \fBxGLXMakeCurrentReq\fP"
+
+.SS "typedef struct \fBGLXQueryContextInfoEXT\fP  \fBxGLXQueryContextInfoEXTReq\fP"
+
+.SS "typedef struct \fBGLXQueryContext\fP  \fBxGLXQueryContextReq\fP"
+
+.SS "typedef struct \fBGLXQueryExtensionsString\fP  \fBxGLXQueryExtensionsStringReq\fP"
+
+.SS "typedef struct \fBGLXQueryHyperpipeConfigSGIX\fP  \fBxGLXQueryHyperpipeConfigSGIXReq\fP"
+
+.SS "typedef struct \fBGLXQueryHyperpipeNetworkSGIX\fP  \fBxGLXQueryHyperpipeNetworkSGIXReq\fP"
+
+.SS "typedef struct \fBGLXQueryMaxSwapBarriersSGIX\fP  \fBxGLXQueryMaxSwapBarriersSGIXReq\fP"
+
+.SS "typedef struct \fBGLXQueryServerString\fP  \fBxGLXQueryServerStringReq\fP"
+
+.SS "typedef struct \fBGLXQueryVersion\fP  \fBxGLXQueryVersionReq\fP"
+
+.SS "typedef struct \fBGLXRenderLarge\fP  \fBxGLXRenderLargeReq\fP"
+
+.SS "typedef struct \fBGLXRender\fP  \fBxGLXRenderReq\fP"
+
+.SS "typedef struct \fBGLXSetClientInfo2ARB\fP  \fBxGLXSetClientInfo2ARBReq\fP"
+Protocol header for glXSetClientInfo2ARB
+.PP
+The glXSetClientInfo2ARB protocol differs from glXSetClientInfoARB in that the list of \fBOpenGL\fP versions supported by the client is 3 \fCCARD32\fP values per version: major version, minor version, and supported profile mask\&.
+.PP
+This protocol replaces \fC\fBGLXClientInfo\fP\fP and \fC\fBGLXSetClientInfoARB\fP\fP\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBGLXClientInfo\fP, \fBGLXSetClientInfoARB\fP 
+.RE
+.PP
+
+.SS "typedef struct \fBGLXSetClientInfoARB\fP  \fBxGLXSetClientInfoARBReq\fP"
+Protocol header for glXSetClientInfoARB
+.PP
+This structure is follwed by \fCnumVersions\fP * 2 \fCCARD32\fP values listing the \fBOpenGL\fP versions supported by the client\&. The pairs of values are an \fBOpenGL\fP major version followed by a minor version\&. For example, 
+.PP
+.nf
+ CARD32 versions[4] = { 2, 1, 3, 0 };
+
+.fi
+.PP
+.PP
+says that the client supports \fBOpenGL\fP 2\&.1 and \fBOpenGL\fP 3\&.0\&.
+.PP
+These are followed by \fCnumGLExtensionBytes\fP bytes of \fCSTRING8\fP containing the \fBOpenGL\fP extension string supported by the client and up to 3 bytes of padding\&.
+.PP
+The list of \fBOpenGL\fP extensions is followed by \fCnumGLXExtensionBytes\fP bytes of \fCSTRING8\fP containing the GLX extension string supported by the client and up to 3 bytes of padding\&.
+.PP
+This protocol replaces \fC\fBGLXClientInfo\fP\fP\&.
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBGLXClientInfo\fP, \fBGLXSetClientInfo2ARB\fP 
+.RE
+.PP
+
+.SS "typedef struct \fBGLXSingle\fP  \fBxGLXSingleReq\fP"
+
+.SS "typedef struct \fBGLXSwapBuffers\fP  \fBxGLXSwapBuffersReq\fP"
+
+.SS "typedef struct \fBGLXUseXFont\fP  \fBxGLXUseXFontReq\fP"
+
+.SS "typedef struct \fBGLXVendorPrivate\fP  \fBxGLXVendorPrivateReq\fP"
+
+.SS "typedef struct \fBGLXVendorPrivateWithReply\fP  \fBxGLXVendorPrivateWithReplyReq\fP"
+
+.SS "typedef struct \fBGLXWaitGL\fP  \fBxGLXWaitGLReq\fP"
+
+.SS "typedef struct \fBGLXWaitX\fP  \fBxGLXWaitXReq\fP"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

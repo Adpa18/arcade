@@ -1,0 +1,148 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_timer.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_timer.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_TICKS_PASSED\fP(A,  B)   ((\fBSint32\fP)((B) \- (A)) <= 0)"
+.br
+.RI "\fICompare SDL ticks values, and return true if A has passed B\&. \fP"
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP * \fBparam\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBSDL_TimerID\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBUint32\fP \fBSDLCALL\fP \fBSDL_GetTicks\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the number of milliseconds since the SDL library initialization\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBUint64\fP \fBSDLCALL\fP \fBSDL_GetPerformanceCounter\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the current value of the high resolution counter\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBUint64\fP \fBSDLCALL\fP \fBSDL_GetPerformanceFrequency\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the count per second of the high resolution counter\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_Delay\fP (\fBUint32\fP ms)"
+.br
+.RI "\fIWait a specified number of milliseconds before returning\&. \fP"
+.ti -1c
+.RI "typedef \fBUint32\fP (\fBSDLCALL\fP *SDL_TimerCallback)(\fBUint32\fP interval"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_TimerID\fP \fBSDLCALL\fP \fBSDL_AddTimer\fP (\fBUint32\fP interval, SDL_TimerCallback callback, \fBvoid\fP *\fBparam\fP)"
+.br
+.RI "\fIAdd a new timer to the pool of timers already running\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP \fBSDL_RemoveTimer\fP (\fBSDL_TimerID\fP \fBid\fP)"
+.br
+.RI "\fIRemove a timer knowing its ID\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Header for the SDL time management routines\&. 
+.PP
+Définition dans le fichier \fBSDL_timer\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_TICKS_PASSED(A, B)   ((\fBSint32\fP)((B) \- (A)) <= 0)"
+
+.PP
+Compare SDL ticks values, and return true if A has passed B\&. e\&.g\&. if you want to wait 100 ms, you could do this: Uint32 timeout = \fBSDL_GetTicks()\fP + 100; while (!SDL_TICKS_PASSED(\fBSDL_GetTicks()\fP, timeout)) { \&.\&.\&. do work until timeout has elapsed } 
+.PP
+Définition à la ligne 56 du fichier SDL_timer\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef \fBvoid\fP* \fBparam\fP"
+
+.PP
+Définition à la ligne 81 du fichier SDL_timer\&.h\&.
+.SS "typedef \fBint\fP \fBSDL_TimerID\fP"
+Definition of the timer ID type\&. 
+.PP
+Définition à la ligne 86 du fichier SDL_timer\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBSDL_TimerID\fP \fBSDLCALL\fP SDL_AddTimer (\fBUint32\fP interval, SDL_TimerCallback callback, \fBvoid\fP * param)"
+
+.PP
+Add a new timer to the pool of timers already running\&. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+A timer ID, or 0 when an error occurs\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_Delay (\fBUint32\fP ms)"
+
+.PP
+Wait a specified number of milliseconds before returning\&. 
+.SS "\fBDECLSPEC\fP \fBUint64\fP \fBSDLCALL\fP SDL_GetPerformanceCounter (\fBvoid\fP)"
+
+.PP
+Get the current value of the high resolution counter\&. 
+.SS "\fBDECLSPEC\fP \fBUint64\fP \fBSDLCALL\fP SDL_GetPerformanceFrequency (\fBvoid\fP)"
+
+.PP
+Get the count per second of the high resolution counter\&. 
+.SS "\fBDECLSPEC\fP \fBUint32\fP \fBSDLCALL\fP SDL_GetTicks (\fBvoid\fP)"
+
+.PP
+Get the number of milliseconds since the SDL library initialization\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This value wraps if the program runs for more than ~49 days\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBSDL_bool\fP \fBSDLCALL\fP SDL_RemoveTimer (\fBSDL_TimerID\fP id)"
+
+.PP
+Remove a timer knowing its ID\&. 
+.PP
+\fBRenvoie:\fP
+.RS 4
+A boolean value indicating success or failure\&.
+.RE
+.PP
+\fBAvertissement:\fP
+.RS 4
+It is not safe to remove a timer multiple times\&. 
+.RE
+.PP
+
+.SS "typedef \fBUint32\fP (\fBSDLCALL\fP * SDL_TimerCallback)"
+Function prototype for the timer callback function\&.
+.PP
+The callback function is passed the current timer interval and returns the next timer interval\&. If the returned value is the same as the one passed in, the periodic alarm continues, otherwise a new alarm is scheduled\&. If the callback returns 0, the periodic alarm is cancelled\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

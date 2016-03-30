@@ -1,0 +1,170 @@
+.TH "NCursesMenuItem" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesMenuItem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesm\&.h>\fP
+.PP
+Dérivée par \fBNCursesMenuCallbackItem\fP, et \fBNCursesUserItem< T >\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBNCursesMenuItem\fP (\fBconst\fP char *p_name=\fBNULL\fP, \fBconst\fP char *p_descript=\fBNULL\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesMenuItem\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesMenuItem\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesMenuItem\fP (\fBconst\fP \fBNCursesMenuItem\fP &rhs)"
+.br
+.ti -1c
+.RI "virtual \fB~NCursesMenuItem\fP ()"
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBname\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBconst\fP char * \fBdescription\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBint\fP() \fBindex\fP (\fBvoid\fP) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBoptions_on\fP (\fBItem_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBoptions_off\fP (\fBItem_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBItem_Options\fP \fBoptions\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_options\fP (\fBItem_Options\fP opts)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBset_value\fP (\fBbool\fP \fBf\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBvalue\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBbool\fP \fBvisible\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBbool\fP \fBaction\fP ()"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBOnError\fP (\fBint\fP err) \fBconst\fP \fBTHROW2\fP(\fBNCursesException\fP \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBNCursesMenuException\fP \fBif\fP (err!=\fBE_OK\fP) \fBTHROW\fP(new \fBNCursesMenuException\fP(err))"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBITEM\fP * \fBitem\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "class \fBNCursesMenu\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 49 du fichier cursesm\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesMenuItem::NCursesMenuItem (\fBconst\fP char * p_name = \fC\fBNULL\fP\fP, \fBconst\fP char * p_descript = \fC\fBNULL\fP\fP)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 62 du fichier cursesm\&.h\&.
+.SS "NCursesMenuItem::NCursesMenuItem (\fBconst\fP \fBNCursesMenuItem\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 82 du fichier cursesm\&.h\&.
+.SS "virtual NCursesMenuItem::~NCursesMenuItem ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBbool\fP NCursesMenuItem::action ()\fC [virtual]\fP"
+
+.PP
+Réimplémentée dans \fBNCursesMenuCallbackItem\fP\&.
+.SS "\fBconst\fP char* NCursesMenuItem::description () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 96 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP \fBNCursesMenuException\fP NCursesMenuItem::if (err! = \fC\fBE_OK\fP\fP)\fC [new]\fP, \fC [protected]\fP"
+
+.SS "\fBint\fP() NCursesMenuItem::index (\fBvoid\fP) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 101 du fichier cursesm\&.h\&.
+.SS "\fBconst\fP char* NCursesMenuItem::name () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 91 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenuItem::OnError (\fBint\fP err) const\fC [inline]\fP, \fC [protected]\fP"
+
+.SS "\fBNCursesMenuItem\fP& NCursesMenuItem::operator= (\fBconst\fP \fBNCursesMenuItem\fP & rhs)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 74 du fichier cursesm\&.h\&.
+.SS "\fBItem_Options\fP NCursesMenuItem::options () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 116 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenuItem::options_off (\fBItem_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 111 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenuItem::options_on (\fBItem_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 106 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenuItem::set_options (\fBItem_Options\fP opts)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 121 du fichier cursesm\&.h\&.
+.SS "\fBvoid\fP NCursesMenuItem::set_value (\fBbool\fP f)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 126 du fichier cursesm\&.h\&.
+.SS "\fBbool\fP NCursesMenuItem::value () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 131 du fichier cursesm\&.h\&.
+.SS "\fBbool\fP NCursesMenuItem::visible () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 136 du fichier cursesm\&.h\&.
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "friend class \fBNCursesMenu\fP\fC [friend]\fP"
+
+.PP
+Définition à la ligne 51 du fichier cursesm\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBITEM\fP* NCursesMenuItem::item\fC [protected]\fP"
+
+.PP
+Définition à la ligne 54 du fichier cursesm\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

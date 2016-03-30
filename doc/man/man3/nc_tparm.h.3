@@ -1,0 +1,108 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/nc_tparm.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/nc_tparm.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTPARM_ARG\fP   long"
+.br
+.ti -1c
+.RI "#define \fBTPARM_N\fP(\fBn\fP)   (\fBTPARM_ARG\fP)(\fBn\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_9\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d,  e,  \fBf\fP,  \fBg\fP,  \fBh\fP,  i,  j)   tparm(\fBa\fP,\fBTPARM_N\fP(\fBb\fP),\fBTPARM_N\fP(\fBc\fP),\fBTPARM_N\fP(d),\fBTPARM_N\fP(e),\fBTPARM_N\fP(\fBf\fP),\fBTPARM_N\fP(\fBg\fP),\fBTPARM_N\fP(\fBh\fP),\fBTPARM_N\fP(i),\fBTPARM_N\fP(j))"
+.br
+.ti -1c
+.RI "#define \fBTPARM_8\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d,  e,  \fBf\fP,  \fBg\fP,  \fBh\fP,  i)   \fBTPARM_9\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,\fBg\fP,\fBh\fP,i,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_7\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d,  e,  \fBf\fP,  \fBg\fP,  \fBh\fP)   \fBTPARM_8\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,\fBg\fP,\fBh\fP,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_6\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d,  e,  \fBf\fP,  \fBg\fP)   \fBTPARM_7\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,\fBg\fP,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_5\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d,  e,  \fBf\fP)   \fBTPARM_6\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_4\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d,  e)   \fBTPARM_5\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_3\fP(\fBa\fP,  \fBb\fP,  \fBc\fP,  d)   \fBTPARM_4\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_2\fP(\fBa\fP,  \fBb\fP,  \fBc\fP)   \fBTPARM_3\fP(\fBa\fP,\fBb\fP,\fBc\fP,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_1\fP(\fBa\fP,  \fBb\fP)   \fBTPARM_2\fP(\fBa\fP,\fBb\fP,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_1\fP(\fBa\fP,  \fBb\fP)   \fBTPARM_2\fP(\fBa\fP,\fBb\fP,0)"
+.br
+.ti -1c
+.RI "#define \fBTPARM_0\fP(\fBa\fP)   \fBTPARM_1\fP(\fBa\fP,0)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define TPARM_0(\fBa\fP)   \fBTPARM_1\fP(\fBa\fP,0)"
+
+.PP
+Définition à la ligne 74 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_1(\fBa\fP, \fBb\fP)   \fBTPARM_2\fP(\fBa\fP,\fBb\fP,0)"
+
+.PP
+Définition à la ligne 73 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_1(\fBa\fP, \fBb\fP)   \fBTPARM_2\fP(\fBa\fP,\fBb\fP,0)"
+
+.PP
+Définition à la ligne 73 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_2(\fBa\fP, \fBb\fP, \fBc\fP)   \fBTPARM_3\fP(\fBa\fP,\fBb\fP,\fBc\fP,0)"
+
+.PP
+Définition à la ligne 71 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_3(\fBa\fP, \fBb\fP, \fBc\fP, d)   \fBTPARM_4\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,0)"
+
+.PP
+Définition à la ligne 70 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_4(\fBa\fP, \fBb\fP, \fBc\fP, d, e)   \fBTPARM_5\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,0)"
+
+.PP
+Définition à la ligne 69 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_5(\fBa\fP, \fBb\fP, \fBc\fP, d, e, \fBf\fP)   \fBTPARM_6\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,0)"
+
+.PP
+Définition à la ligne 68 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_6(\fBa\fP, \fBb\fP, \fBc\fP, d, e, \fBf\fP, \fBg\fP)   \fBTPARM_7\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,\fBg\fP,0)"
+
+.PP
+Définition à la ligne 67 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_7(\fBa\fP, \fBb\fP, \fBc\fP, d, e, \fBf\fP, \fBg\fP, \fBh\fP)   \fBTPARM_8\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,\fBg\fP,\fBh\fP,0)"
+
+.PP
+Définition à la ligne 66 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_8(\fBa\fP, \fBb\fP, \fBc\fP, d, e, \fBf\fP, \fBg\fP, \fBh\fP, i)   \fBTPARM_9\fP(\fBa\fP,\fBb\fP,\fBc\fP,d,e,\fBf\fP,\fBg\fP,\fBh\fP,i,0)"
+
+.PP
+Définition à la ligne 65 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_9(\fBa\fP, \fBb\fP, \fBc\fP, d, e, \fBf\fP, \fBg\fP, \fBh\fP, i, j)   tparm(\fBa\fP,\fBTPARM_N\fP(\fBb\fP),\fBTPARM_N\fP(\fBc\fP),\fBTPARM_N\fP(d),\fBTPARM_N\fP(e),\fBTPARM_N\fP(\fBf\fP),\fBTPARM_N\fP(\fBg\fP),\fBTPARM_N\fP(\fBh\fP),\fBTPARM_N\fP(i),\fBTPARM_N\fP(j))"
+
+.PP
+Définition à la ligne 52 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_ARG   long"
+
+.PP
+Définition à la ligne 46 du fichier nc_tparm\&.h\&.
+.SS "#define TPARM_N(\fBn\fP)   (\fBTPARM_ARG\fP)(\fBn\fP)"
+
+.PP
+Définition à la ligne 50 du fichier nc_tparm\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

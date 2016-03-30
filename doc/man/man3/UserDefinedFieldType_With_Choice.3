@@ -1,0 +1,72 @@
+.TH "UserDefinedFieldType_With_Choice" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UserDefinedFieldType_With_Choice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesf\&.h>\fP
+.PP
+Est dérivée de \fBUserDefinedFieldType\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBUserDefinedFieldType_With_Choice\fP ()"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBbool\fP \fBnext\fP (\fBNCursesFormField\fP &\fBf\fP)=0"
+.br
+.ti -1c
+.RI "virtual \fBbool\fP \fBprevious\fP (\fBNCursesFormField\fP &\fBf\fP)=0"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "class \fBUDF_Init\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_nc_xx_next_choice\fP (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fB_nc_xx_prev_choice\fP (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 941 du fichier cursesf\&.h\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "UserDefinedFieldType_With_Choice::UserDefinedFieldType_With_Choice ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 964 du fichier cursesf\&.h\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBbool\fP UserDefinedFieldType_With_Choice::next (\fBNCursesFormField\fP & f)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.SS "virtual \fBbool\fP UserDefinedFieldType_With_Choice::previous (\fBNCursesFormField\fP & f)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "\fBbool\fP _nc_xx_next_choice (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)\fC [friend]\fP"
+
+.SS "\fBbool\fP _nc_xx_prev_choice (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)\fC [friend]\fP"
+
+.SS "friend class UDF_Init\fC [friend]\fP"
+
+.PP
+Définition à la ligne 943 du fichier cursesf\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

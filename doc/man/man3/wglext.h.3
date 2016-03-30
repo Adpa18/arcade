@@ -1,0 +1,2993 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/wglext.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/openGL/include/wglext.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_GPU_DEVICE\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBAPIENTRY\fP"
+.br
+.ti -1c
+.RI "#define \fBAPIENTRYP\fP   \fBAPIENTRY\fP *"
+.br
+.ti -1c
+.RI "#define \fBGLAPI\fP   extern"
+.br
+.ti -1c
+.RI "#define \fBWGL_WGLEXT_VERSION\fP   22"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRONT_COLOR_BUFFER_BIT_ARB\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_BACK_COLOR_BUFFER_BIT_ARB\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_BUFFER_BIT_ARB\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGL_STENCIL_BUFFER_BIT_ARB\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLE_BUFFERS_ARB\fP   0x2041"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLES_ARB\fP   0x2042"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_PIXEL_FORMATS_ARB\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_WINDOW_ARB\fP   0x2001"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_BITMAP_ARB\fP   0x2002"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCELERATION_ARB\fP   0x2003"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_PALETTE_ARB\fP   0x2004"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_SYSTEM_PALETTE_ARB\fP   0x2005"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_LAYER_BUFFERS_ARB\fP   0x2006"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_METHOD_ARB\fP   0x2007"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_OVERLAYS_ARB\fP   0x2008"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_UNDERLAYS_ARB\fP   0x2009"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_ARB\fP   0x200A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_RED_VALUE_ARB\fP   0x2037"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_GREEN_VALUE_ARB\fP   0x2038"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_BLUE_VALUE_ARB\fP   0x2039"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_ALPHA_VALUE_ARB\fP   0x203A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_INDEX_VALUE_ARB\fP   0x203B"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_DEPTH_ARB\fP   0x200C"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_STENCIL_ARB\fP   0x200D"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_ACCUM_ARB\fP   0x200E"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_GDI_ARB\fP   0x200F"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_OPENGL_ARB\fP   0x2010"
+.br
+.ti -1c
+.RI "#define \fBWGL_DOUBLE_BUFFER_ARB\fP   0x2011"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_ARB\fP   0x2012"
+.br
+.ti -1c
+.RI "#define \fBWGL_PIXEL_TYPE_ARB\fP   0x2013"
+.br
+.ti -1c
+.RI "#define \fBWGL_COLOR_BITS_ARB\fP   0x2014"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_BITS_ARB\fP   0x2015"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_SHIFT_ARB\fP   0x2016"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_BITS_ARB\fP   0x2017"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_SHIFT_ARB\fP   0x2018"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_BITS_ARB\fP   0x2019"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_SHIFT_ARB\fP   0x201A"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_BITS_ARB\fP   0x201B"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_SHIFT_ARB\fP   0x201C"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BITS_ARB\fP   0x201D"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_RED_BITS_ARB\fP   0x201E"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_GREEN_BITS_ARB\fP   0x201F"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BLUE_BITS_ARB\fP   0x2020"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_ALPHA_BITS_ARB\fP   0x2021"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_BITS_ARB\fP   0x2022"
+.br
+.ti -1c
+.RI "#define \fBWGL_STENCIL_BITS_ARB\fP   0x2023"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX_BUFFERS_ARB\fP   0x2024"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_ACCELERATION_ARB\fP   0x2025"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENERIC_ACCELERATION_ARB\fP   0x2026"
+.br
+.ti -1c
+.RI "#define \fBWGL_FULL_ACCELERATION_ARB\fP   0x2027"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_EXCHANGE_ARB\fP   0x2028"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_COPY_ARB\fP   0x2029"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_UNDEFINED_ARB\fP   0x202A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_ARB\fP   0x202B"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_COLORINDEX_ARB\fP   0x202C"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PIXEL_TYPE_ARB\fP   0x2043"
+.br
+.ti -1c
+.RI "#define \fBERROR_INCOMPATIBLE_DEVICE_CONTEXTS_ARB\fP   0x2054"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_PBUFFER_ARB\fP   0x202D"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_PIXELS_ARB\fP   0x202E"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_WIDTH_ARB\fP   0x202F"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_HEIGHT_ARB\fP   0x2030"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_LARGEST_ARB\fP   0x2033"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_WIDTH_ARB\fP   0x2034"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_HEIGHT_ARB\fP   0x2035"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_LOST_ARB\fP   0x2036"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RGB_ARB\fP   0x2070"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RGBA_ARB\fP   0x2071"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FORMAT_ARB\fP   0x2072"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_TARGET_ARB\fP   0x2073"
+.br
+.ti -1c
+.RI "#define \fBWGL_MIPMAP_TEXTURE_ARB\fP   0x2074"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RGB_ARB\fP   0x2075"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RGBA_ARB\fP   0x2076"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_TEXTURE_ARB\fP   0x2077"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_ARB\fP   0x2078"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_1D_ARB\fP   0x2079"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_2D_ARB\fP   0x207A"
+.br
+.ti -1c
+.RI "#define \fBWGL_MIPMAP_LEVEL_ARB\fP   0x207B"
+.br
+.ti -1c
+.RI "#define \fBWGL_CUBE_MAP_FACE_ARB\fP   0x207C"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB\fP   0x207D"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB\fP   0x207E"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB\fP   0x207F"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB\fP   0x2080"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB\fP   0x2081"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB\fP   0x2082"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRONT_LEFT_ARB\fP   0x2083"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRONT_RIGHT_ARB\fP   0x2084"
+.br
+.ti -1c
+.RI "#define \fBWGL_BACK_LEFT_ARB\fP   0x2085"
+.br
+.ti -1c
+.RI "#define \fBWGL_BACK_RIGHT_ARB\fP   0x2086"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX0_ARB\fP   0x2087"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX1_ARB\fP   0x2088"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX2_ARB\fP   0x2089"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX3_ARB\fP   0x208A"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX4_ARB\fP   0x208B"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX5_ARB\fP   0x208C"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX6_ARB\fP   0x208D"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX7_ARB\fP   0x208E"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX8_ARB\fP   0x208F"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX9_ARB\fP   0x2090"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_FLOAT_ARB\fP   0x21A0"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRAMEBUFFER_SRGB_CAPABLE_ARB\fP   0x20A9"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_DEBUG_BIT_ARB\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_MAJOR_VERSION_ARB\fP   0x2091"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_MINOR_VERSION_ARB\fP   0x2092"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_LAYER_PLANE_ARB\fP   0x2093"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_FLAGS_ARB\fP   0x2094"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_VERSION_ARB\fP   0x2095"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_PROFILE_MASK_ARB\fP   0x9126"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_CORE_PROFILE_BIT_ARB\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PROFILE_ARB\fP   0x2096"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_ROBUST_ACCESS_BIT_ARB\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGL_LOSE_CONTEXT_ON_RESET_ARB\fP   0x8252"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB\fP   0x8256"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_RESET_NOTIFICATION_ARB\fP   0x8261"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PIXEL_TYPE_EXT\fP   0x2043"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_PIXEL_FORMATS_EXT\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_WINDOW_EXT\fP   0x2001"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_BITMAP_EXT\fP   0x2002"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCELERATION_EXT\fP   0x2003"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_PALETTE_EXT\fP   0x2004"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_SYSTEM_PALETTE_EXT\fP   0x2005"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_LAYER_BUFFERS_EXT\fP   0x2006"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_METHOD_EXT\fP   0x2007"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_OVERLAYS_EXT\fP   0x2008"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_UNDERLAYS_EXT\fP   0x2009"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_EXT\fP   0x200A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_VALUE_EXT\fP   0x200B"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_DEPTH_EXT\fP   0x200C"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_STENCIL_EXT\fP   0x200D"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_ACCUM_EXT\fP   0x200E"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_GDI_EXT\fP   0x200F"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_OPENGL_EXT\fP   0x2010"
+.br
+.ti -1c
+.RI "#define \fBWGL_DOUBLE_BUFFER_EXT\fP   0x2011"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_EXT\fP   0x2012"
+.br
+.ti -1c
+.RI "#define \fBWGL_PIXEL_TYPE_EXT\fP   0x2013"
+.br
+.ti -1c
+.RI "#define \fBWGL_COLOR_BITS_EXT\fP   0x2014"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_BITS_EXT\fP   0x2015"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_SHIFT_EXT\fP   0x2016"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_BITS_EXT\fP   0x2017"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_SHIFT_EXT\fP   0x2018"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_BITS_EXT\fP   0x2019"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_SHIFT_EXT\fP   0x201A"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_BITS_EXT\fP   0x201B"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_SHIFT_EXT\fP   0x201C"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BITS_EXT\fP   0x201D"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_RED_BITS_EXT\fP   0x201E"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_GREEN_BITS_EXT\fP   0x201F"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BLUE_BITS_EXT\fP   0x2020"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_ALPHA_BITS_EXT\fP   0x2021"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_BITS_EXT\fP   0x2022"
+.br
+.ti -1c
+.RI "#define \fBWGL_STENCIL_BITS_EXT\fP   0x2023"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX_BUFFERS_EXT\fP   0x2024"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_ACCELERATION_EXT\fP   0x2025"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENERIC_ACCELERATION_EXT\fP   0x2026"
+.br
+.ti -1c
+.RI "#define \fBWGL_FULL_ACCELERATION_EXT\fP   0x2027"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_EXCHANGE_EXT\fP   0x2028"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_COPY_EXT\fP   0x2029"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_UNDEFINED_EXT\fP   0x202A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_EXT\fP   0x202B"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_COLORINDEX_EXT\fP   0x202C"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_PBUFFER_EXT\fP   0x202D"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_PIXELS_EXT\fP   0x202E"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_WIDTH_EXT\fP   0x202F"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_HEIGHT_EXT\fP   0x2030"
+.br
+.ti -1c
+.RI "#define \fBWGL_OPTIMAL_PBUFFER_WIDTH_EXT\fP   0x2031"
+.br
+.ti -1c
+.RI "#define \fBWGL_OPTIMAL_PBUFFER_HEIGHT_EXT\fP   0x2032"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_LARGEST_EXT\fP   0x2033"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_WIDTH_EXT\fP   0x2034"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_HEIGHT_EXT\fP   0x2035"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_FLOAT_EXT\fP   0x2040"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLE_BUFFERS_3DFX\fP   0x2060"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLES_3DFX\fP   0x2061"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLE_BUFFERS_EXT\fP   0x2041"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLES_EXT\fP   0x2042"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_CURSOR_ALPHA_FRAMEBUFFER_I3D\fP   0x2050"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_CURSOR_ALPHA_VALUE_I3D\fP   0x2051"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_CURSOR_INCLUDED_I3D\fP   0x2052"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_GAMMA_CORRECTED_I3D\fP   0x2053"
+.br
+.ti -1c
+.RI "#define \fBWGL_GAMMA_TABLE_SIZE_I3D\fP   0x204E"
+.br
+.ti -1c
+.RI "#define \fBWGL_GAMMA_EXCLUDE_DESKTOP_I3D\fP   0x204F"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_MULTIVIEW_I3D\fP   0x2044"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EXTENAL_SYNC_I3D\fP   0x2045"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EXTENAL_FIELD_I3D\fP   0x2046"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EXTENAL_TTL_I3D\fP   0x2047"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_DIGITAL_SYNC_I3D\fP   0x2048"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_DIGITAL_FIELD_I3D\fP   0x2049"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EDGE_FALLING_I3D\fP   0x204A"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EDGE_RISING_I3D\fP   0x204B"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EDGE_BOTH_I3D\fP   0x204C"
+.br
+.ti -1c
+.RI "#define \fBWGL_IMAGE_BUFFER_MIN_ACCESS_I3D\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_IMAGE_BUFFER_LOCK_I3D\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_DEPTH_NV\fP   0x20A3"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV\fP   0x20A4"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_TEXTURE_FORMAT_NV\fP   0x20A5"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_DEPTH_COMPONENT_NV\fP   0x20A6"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_COMPONENT_NV\fP   0x20A7"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_RGB_NV\fP   0x20A0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_RGBA_NV\fP   0x20A1"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RECTANGLE_NV\fP   0x20A2"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_FLOAT_ATI\fP   0x21A0"
+.br
+.ti -1c
+.RI "#define \fBWGL_FLOAT_COMPONENTS_NV\fP   0x20B0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_R_NV\fP   0x20B1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RG_NV\fP   0x20B2"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGB_NV\fP   0x20B3"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGBA_NV\fP   0x20B4"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_R_NV\fP   0x20B5"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_RG_NV\fP   0x20B6"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_RGB_NV\fP   0x20B7"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_RGBA_NV\fP   0x20B8"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_EMITTER_ENABLE_3DL\fP   0x2055"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_EMITTER_DISABLE_3DL\fP   0x2056"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_POLARITY_NORMAL_3DL\fP   0x2057"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_POLARITY_INVERT_3DL\fP   0x2058"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT\fP   0x20A8"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRAMEBUFFER_SRGB_CAPABLE_EXT\fP   0x20A9"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUM_VIDEO_SLOTS_NV\fP   0x20F0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_VIDEO_RGB_NV\fP   0x20C0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_VIDEO_RGBA_NV\fP   0x20C1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV\fP   0x20C2"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_COLOR_NV\fP   0x20C3"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_ALPHA_NV\fP   0x20C4"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_DEPTH_NV\fP   0x20C5"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_COLOR_AND_ALPHA_NV\fP   0x20C6"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_COLOR_AND_DEPTH_NV\fP   0x20C7"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_FRAME\fP   0x20C8"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_FIELD_1\fP   0x20C9"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_FIELD_2\fP   0x20CA"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_STACKED_FIELDS_1_2\fP   0x20CB"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_STACKED_FIELDS_2_1\fP   0x20CC"
+.br
+.ti -1c
+.RI "#define \fBWGL_ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV\fP   0x20D0"
+.br
+.ti -1c
+.RI "#define \fBWGL_ERROR_MISSING_AFFINITY_MASK_NV\fP   0x20D1"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_VENDOR_AMD\fP   0x1F00"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_RENDERER_STRING_AMD\fP   0x1F01"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_OPENGL_VERSION_STRING_AMD\fP   0x1F02"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_FASTEST_TARGET_GPUS_AMD\fP   0x21A2"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_RAM_AMD\fP   0x21A3"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_CLOCK_AMD\fP   0x21A4"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_PIPES_AMD\fP   0x21A5"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_SIMD_AMD\fP   0x21A6"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_RB_AMD\fP   0x21A7"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_SPI_AMD\fP   0x21A8"
+.br
+.ti -1c
+.RI "#define \fBWGL_UNIQUE_ID_NV\fP   0x20CE"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUM_VIDEO_CAPTURE_SLOTS_NV\fP   0x20CF"
+.br
+.ti -1c
+.RI "#define \fBWGL_COVERAGE_SAMPLES_NV\fP   0x2042"
+.br
+.ti -1c
+.RI "#define \fBWGL_COLOR_SAMPLES_NV\fP   0x20B9"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_ES2_PROFILE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_buffer_region\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_extensions_string\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_pixel_format\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_make_current_read\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_pbuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_render_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_pixel_format_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_framebuffer_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_create_context\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_create_context_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_create_context_robustness\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_display_color_table\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_extensions_string\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_make_current_read\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_pbuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_pixel_format\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_swap_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_depth_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_vertex_array_range\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_3DFX_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_OML_sync_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_digital_video_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_gamma\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_genlock\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_image_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_swap_frame_lock\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_swap_frame_usage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ATI_pixel_format_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_float_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_3DL_stereo_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_pixel_format_packed_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_framebuffer_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_present_video\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_video_output\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_swap_group\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_gpu_affinity\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_AMD_gpu_association\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_video_capture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_copy_image\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_multisample_coverage\fP   1"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB_GPU_DEVICE\fP \fBGPU_DEVICE\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_GPU_DEVICE\fP * \fBPGPU_DEVICE\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiLayerPlane\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBUINT\fP \fBuType\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBx\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBy\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBwidth\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBheight\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBxSrc\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBySrc\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP char *WINAPI * \fBPFNWGLGETEXTENSIONSSTRINGARBPROC\fP(\fBHDC\fP hdc)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiPixelFormat\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBnAttributes\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBconst\fP \fBint\fP * \fBpiAttributes\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBconst\fP \fBint\fP \fBint\fP * \fBpiValues\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBconst\fP \fBint\fP FLOAT * \fBpfValues\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBint\fP * \fBpiAttribIList\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT * \fBpfAttribFList\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT \fBUINT\fP \fBnMaxFormats\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT \fBUINT\fP \fBint\fP * \fBpiFormats\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT \fBUINT\fP \fBint\fP \fBUINT\fP * \fBnNumFormats\fP"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP \fBhReadDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP \fBHGLRC\fP \fBhglrc\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBiWidth\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBiHeight\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBconst\fP \fBint\fP * \fBpiAttribList\fP"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiAttribute\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP * \fBpiValue\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiBuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBHGLRC\fP \fBhShareContext\fP"
+.br
+.ti -1c
+.RI "typedef \fBHGLRC\fP \fBconst\fP \fBint\fP * \fBattribList\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP char *WINAPI * \fBPFNWGLGETEXTENSIONSSTRINGEXTPROC\fP(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP *WINAPI * \fBPFNWGLALLOCATEMEMORYNVPROC\fP(\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readfreq, \fBGLfloat\fP writefreq, \fBGLfloat\fP priority)"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP * \fBust\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP * \fBmsc\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP * \fBsbc\fP"
+.br
+.ti -1c
+.RI "typedef INT32 * \fBnumerator\fP"
+.br
+.ti -1c
+.RI "typedef INT32 INT32 * \fBdenominator\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBtarget_msc\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP \fBdivisor\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP \fBremainder\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBfuPlanes\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBtarget_sbc\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiEntries\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP USHORT * \fBpuRed\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP USHORT USHORT * \fBpuGreen\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP USHORT USHORT USHORT * \fBpuBlue\fP"
+.br
+.ti -1c
+.RI "typedef \fBBOOL\fP * \fBpFlag\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuSource\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuEdge\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuRate\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuDelay\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP * \fBuMaxLineDelay\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBUINT\fP * \fBuMaxPixelDelay\fP"
+.br
+.ti -1c
+.RI "typedef DWORD \fBdwSize\fP"
+.br
+.ti -1c
+.RI "typedef DWORD \fBUINT\fP \fBuFlags\fP"
+.br
+.ti -1c
+.RI "typedef \fBLPVOID\fP \fBpAddress\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBHANDLE\fP * \fBpEvent\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBHANDLE\fP \fBconst\fP \fBLPVOID\fP \fBconst\fP DWORD * \fBpSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBconst\fP \fBHANDLE\fP \fBconst\fP \fBLPVOID\fP \fBconst\fP DWORD \fBUINT\fP \fBcount\fP"
+.br
+.ti -1c
+.RI "typedef DWORD * \fBpMissedFrames\fP"
+.br
+.ti -1c
+.RI "typedef DWORD float * \fBpLastMissedUsage\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuState\fP"
+.br
+.ti -1c
+.RI "typedef HVIDEOOUTPUTDEVICENV * \fBphDeviceList\fP"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP \fBuVideoSlot\fP"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP HVIDEOOUTPUTDEVICENV \fBhVideoDevice\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBnumDevices\fP"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFERARB\fP \fBhPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFERARB\fP \fBint\fP \fBiVideoBuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiBufferType\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP unsigned long * \fBpulCounterPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP unsigned long \fBBOOL\fP \fBbBlock\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long * \fBpulCounterOutputPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long unsigned long * \fBpulCounterOutputVideo\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBgroup\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBbarrier\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP * \fBmaxGroups\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLuint\fP * \fBmaxBarriers\fP"
+.br
+.ti -1c
+.RI "typedef HGPUNV * \fBphGpu\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBiDeviceIndex\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBPGPU_DEVICE\fP \fBlpGpuDevice\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBiGpuIndex\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP HGPUNV * \fBhGpu\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP * \fBids\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBproperty\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBGLenum\fP \fBdataType\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBGLenum\fP \fBUINT\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBGLenum\fP \fBUINT\fP \fBvoid\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBsrcX0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBsrcY0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcX1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBmask\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBGLenum\fP \fBfilter\fP"
+.br
+.ti -1c
+.RI "typedef HVIDEOINPUTDEVICENV \fBhDevice\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBsrcName\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBsrcTarget\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBsrcLevel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBsrcX\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcZ\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBhDstRC\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBdstName\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBdstTarget\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBdstLevel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBdstX\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstZ\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBdepth\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (\fBHPBUFFERARB\fP)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (\fBHPBUFFEREXT\fP)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HVIDEOOUTPUTDEVICENV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HPVIDEODEV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HPGPUNV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HGPUNV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HVIDEOINPUTDEVICENV)"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP (WINAPI *PFNWGLCREATEBUFFERREGIONARBPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBVOID\fP (WINAPI *PFNWGLDELETEBUFFERREGIONARBPROC)(\fBHANDLE\fP hRegion)"
+.br
+.ti -1c
+.RI "typedef \fBBOOL\fP (WINAPI *PFNWGLSAVEBUFFERREGIONARBPROC)(\fBHANDLE\fP hRegion"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP (WINAPI *PFNWGLGETCURRENTREADDCARBPROC)(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFERARB\fP (WINAPI *PFNWGLCREATEPBUFFERARBPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP (WINAPI *PFNWGLRELEASEPBUFFERDCARBPROC)(\fBHPBUFFERARB\fP \fBhPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBHGLRC\fP (WINAPI *PFNWGLCREATECONTEXTATTRIBSARBPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP (WINAPI *PFNWGLCREATEDISPLAYCOLORTABLEEXTPROC)(\fBGLushort\fP \fBid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFEREXT\fP (WINAPI *PFNWGLCREATEPBUFFEREXTPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP (WINAPI *PFNWGLFREEMEMORYNVPROC)(void *\fBpointer\fP)"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP (WINAPI *PFNWGLSWAPBUFFERSMSCOMLPROC)(\fBHDC\fP hdc"
+.br
+.ti -1c
+.RI "typedef \fBLPVOID\fP (WINAPI *PFNWGLCREATEIMAGEBUFFERI3DPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP (WINAPI *PFNWGLGETGPUIDSAMDPROC)(UINT \fBmaxCount\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP (WINAPI *PFNWGLGETGPUINFOAMDPROC)(\fBUINT\fP \fBid\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define APIENTRY"
+
+.PP
+Définition à la ligne 39 du fichier wglext\&.h\&.
+.SS "#define APIENTRYP   \fBAPIENTRY\fP *"
+
+.PP
+Définition à la ligne 42 du fichier wglext\&.h\&.
+.SS "#define ERROR_INCOMPATIBLE_DEVICE_CONTEXTS_ARB   0x2054"
+
+.PP
+Définition à la ligne 124 du fichier wglext\&.h\&.
+.SS "#define ERROR_INVALID_PIXEL_TYPE_ARB   0x2043"
+
+.PP
+Définition à la ligne 123 du fichier wglext\&.h\&.
+.SS "#define ERROR_INVALID_PIXEL_TYPE_EXT   0x2043"
+
+.PP
+Définition à la ligne 207 du fichier wglext\&.h\&.
+.SS "#define ERROR_INVALID_PROFILE_ARB   0x2096"
+
+.PP
+Définition à la ligne 196 du fichier wglext\&.h\&.
+.SS "#define ERROR_INVALID_VERSION_ARB   0x2095"
+
+.PP
+Définition à la ligne 189 du fichier wglext\&.h\&.
+.SS "#define GLAPI   extern"
+
+.PP
+Définition à la ligne 45 du fichier wglext\&.h\&.
+.SS "#define WGL_3DFX_multisample   1"
+
+.PP
+Définition à la ligne 635 du fichier wglext\&.h\&.
+.SS "#define WGL_3DL_stereo_control   1"
+
+.PP
+Définition à la ligne 765 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCELERATION_ARB   0x2003"
+
+.PP
+Définition à la ligne 74 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCELERATION_EXT   0x2003"
+
+.PP
+Définition à la ligne 214 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_ALPHA_BITS_ARB   0x2021"
+
+.PP
+Définition à la ligne 108 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_ALPHA_BITS_EXT   0x2021"
+
+.PP
+Définition à la ligne 244 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_BITS_ARB   0x201D"
+
+.PP
+Définition à la ligne 104 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_BITS_EXT   0x201D"
+
+.PP
+Définition à la ligne 240 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_BLUE_BITS_ARB   0x2020"
+
+.PP
+Définition à la ligne 107 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_BLUE_BITS_EXT   0x2020"
+
+.PP
+Définition à la ligne 243 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_GREEN_BITS_ARB   0x201F"
+
+.PP
+Définition à la ligne 106 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_GREEN_BITS_EXT   0x201F"
+
+.PP
+Définition à la ligne 242 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_RED_BITS_ARB   0x201E"
+
+.PP
+Définition à la ligne 105 du fichier wglext\&.h\&.
+.SS "#define WGL_ACCUM_RED_BITS_EXT   0x201E"
+
+.PP
+Définition à la ligne 241 du fichier wglext\&.h\&.
+.SS "#define WGL_ALPHA_BITS_ARB   0x201B"
+
+.PP
+Définition à la ligne 102 du fichier wglext\&.h\&.
+.SS "#define WGL_ALPHA_BITS_EXT   0x201B"
+
+.PP
+Définition à la ligne 238 du fichier wglext\&.h\&.
+.SS "#define WGL_ALPHA_SHIFT_ARB   0x201C"
+
+.PP
+Définition à la ligne 103 du fichier wglext\&.h\&.
+.SS "#define WGL_ALPHA_SHIFT_EXT   0x201C"
+
+.PP
+Définition à la ligne 239 du fichier wglext\&.h\&.
+.SS "#define WGL_AMD_gpu_association   1"
+
+.PP
+Définition à la ligne 845 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_buffer_region   1"
+
+.PP
+Définition à la ligne 451 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_create_context   1"
+
+.PP
+Définition à la ligne 535 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_create_context_profile   1"
+
+.PP
+Définition à la ligne 543 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_create_context_robustness   1"
+
+.PP
+Définition à la ligne 547 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_extensions_string   1"
+
+.PP
+Définition à la ligne 469 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_framebuffer_sRGB   1"
+
+.PP
+Définition à la ligne 531 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_make_current_read   1"
+
+.PP
+Définition à la ligne 489 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_multisample   1"
+
+.PP
+Définition à la ligne 465 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_pbuffer   1"
+
+.PP
+Définition à la ligne 499 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_pixel_format   1"
+
+.PP
+Définition à la ligne 477 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_pixel_format_float   1"
+
+.PP
+Définition à la ligne 527 du fichier wglext\&.h\&.
+.SS "#define WGL_ARB_render_texture   1"
+
+.PP
+Définition à la ligne 515 du fichier wglext\&.h\&.
+.SS "#define WGL_ATI_pixel_format_float   1"
+
+.PP
+Définition à la ligne 757 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX0_ARB   0x2087"
+
+.PP
+Définition à la ligne 162 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX1_ARB   0x2088"
+
+.PP
+Définition à la ligne 163 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX2_ARB   0x2089"
+
+.PP
+Définition à la ligne 164 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX3_ARB   0x208A"
+
+.PP
+Définition à la ligne 165 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX4_ARB   0x208B"
+
+.PP
+Définition à la ligne 166 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX5_ARB   0x208C"
+
+.PP
+Définition à la ligne 167 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX6_ARB   0x208D"
+
+.PP
+Définition à la ligne 168 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX7_ARB   0x208E"
+
+.PP
+Définition à la ligne 169 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX8_ARB   0x208F"
+
+.PP
+Définition à la ligne 170 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX9_ARB   0x2090"
+
+.PP
+Définition à la ligne 171 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX_BUFFERS_ARB   0x2024"
+
+.PP
+Définition à la ligne 111 du fichier wglext\&.h\&.
+.SS "#define WGL_AUX_BUFFERS_EXT   0x2024"
+
+.PP
+Définition à la ligne 247 du fichier wglext\&.h\&.
+.SS "#define WGL_BACK_COLOR_BUFFER_BIT_ARB   0x00000002"
+
+.PP
+Définition à la ligne 57 du fichier wglext\&.h\&.
+.SS "#define WGL_BACK_LEFT_ARB   0x2085"
+
+.PP
+Définition à la ligne 160 du fichier wglext\&.h\&.
+.SS "#define WGL_BACK_RIGHT_ARB   0x2086"
+
+.PP
+Définition à la ligne 161 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_DEPTH_NV   0x20A3"
+
+.PP
+Définition à la ligne 317 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV   0x20A4"
+
+.PP
+Définition à la ligne 318 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_R_NV   0x20B1"
+
+.PP
+Définition à la ligne 336 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RG_NV   0x20B2"
+
+.PP
+Définition à la ligne 337 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGB_NV   0x20B3"
+
+.PP
+Définition à la ligne 338 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGBA_NV   0x20B4"
+
+.PP
+Définition à la ligne 339 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_RGB_NV   0x20A0"
+
+.PP
+Définition à la ligne 325 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_RGBA_NV   0x20A1"
+
+.PP
+Définition à la ligne 326 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RGB_ARB   0x2070"
+
+.PP
+Définition à la ligne 139 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RGBA_ARB   0x2071"
+
+.PP
+Définition à la ligne 140 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV   0x20C2"
+
+.PP
+Définition à la ligne 368 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_VIDEO_RGB_NV   0x20C0"
+
+.PP
+Définition à la ligne 366 du fichier wglext\&.h\&.
+.SS "#define WGL_BIND_TO_VIDEO_RGBA_NV   0x20C1"
+
+.PP
+Définition à la ligne 367 du fichier wglext\&.h\&.
+.SS "#define WGL_BLUE_BITS_ARB   0x2019"
+
+.PP
+Définition à la ligne 100 du fichier wglext\&.h\&.
+.SS "#define WGL_BLUE_BITS_EXT   0x2019"
+
+.PP
+Définition à la ligne 236 du fichier wglext\&.h\&.
+.SS "#define WGL_BLUE_SHIFT_ARB   0x201A"
+
+.PP
+Définition à la ligne 101 du fichier wglext\&.h\&.
+.SS "#define WGL_BLUE_SHIFT_EXT   0x201A"
+
+.PP
+Définition à la ligne 237 du fichier wglext\&.h\&.
+.SS "#define WGL_COLOR_BITS_ARB   0x2014"
+
+.PP
+Définition à la ligne 95 du fichier wglext\&.h\&.
+.SS "#define WGL_COLOR_BITS_EXT   0x2014"
+
+.PP
+Définition à la ligne 231 du fichier wglext\&.h\&.
+.SS "#define WGL_COLOR_SAMPLES_NV   0x20B9"
+
+.PP
+Définition à la ligne 412 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB   0x00000002"
+
+.PP
+Définition à la ligne 195 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_CORE_PROFILE_BIT_ARB   0x00000001"
+
+.PP
+Définition à la ligne 194 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_DEBUG_BIT_ARB   0x00000001"
+
+.PP
+Définition à la ligne 183 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_ES2_PROFILE_BIT_EXT   0x00000004"
+
+.PP
+Définition à la ligne 416 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_FLAGS_ARB   0x2094"
+
+.PP
+Définition à la ligne 188 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB   0x00000002"
+
+.PP
+Définition à la ligne 184 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_LAYER_PLANE_ARB   0x2093"
+
+.PP
+Définition à la ligne 187 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_MAJOR_VERSION_ARB   0x2091"
+
+.PP
+Définition à la ligne 185 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_MINOR_VERSION_ARB   0x2092"
+
+.PP
+Définition à la ligne 186 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_PROFILE_MASK_ARB   0x9126"
+
+.PP
+Définition à la ligne 193 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB   0x8256"
+
+.PP
+Définition à la ligne 202 du fichier wglext\&.h\&.
+.SS "#define WGL_CONTEXT_ROBUST_ACCESS_BIT_ARB   0x00000004"
+
+.PP
+Définition à la ligne 200 du fichier wglext\&.h\&.
+.SS "#define WGL_COVERAGE_SAMPLES_NV   0x2042"
+
+.PP
+Définition à la ligne 411 du fichier wglext\&.h\&.
+.SS "#define WGL_CUBE_MAP_FACE_ARB   0x207C"
+
+.PP
+Définition à la ligne 151 du fichier wglext\&.h\&.
+.SS "#define WGL_DEPTH_BITS_ARB   0x2022"
+
+.PP
+Définition à la ligne 109 du fichier wglext\&.h\&.
+.SS "#define WGL_DEPTH_BITS_EXT   0x2022"
+
+.PP
+Définition à la ligne 245 du fichier wglext\&.h\&.
+.SS "#define WGL_DEPTH_BUFFER_BIT_ARB   0x00000004"
+
+.PP
+Définition à la ligne 58 du fichier wglext\&.h\&.
+.SS "#define WGL_DEPTH_COMPONENT_NV   0x20A7"
+
+.PP
+Définition à la ligne 321 du fichier wglext\&.h\&.
+.SS "#define WGL_DEPTH_FLOAT_EXT   0x2040"
+
+.PP
+Définition à la ligne 271 du fichier wglext\&.h\&.
+.SS "#define WGL_DEPTH_TEXTURE_FORMAT_NV   0x20A5"
+
+.PP
+Définition à la ligne 319 du fichier wglext\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_CURSOR_ALPHA_FRAMEBUFFER_I3D   0x2050"
+
+.PP
+Définition à la ligne 285 du fichier wglext\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_CURSOR_ALPHA_VALUE_I3D   0x2051"
+
+.PP
+Définition à la ligne 286 du fichier wglext\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_CURSOR_INCLUDED_I3D   0x2052"
+
+.PP
+Définition à la ligne 287 du fichier wglext\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_GAMMA_CORRECTED_I3D   0x2053"
+
+.PP
+Définition à la ligne 288 du fichier wglext\&.h\&.
+.SS "#define WGL_DOUBLE_BUFFER_ARB   0x2011"
+
+.PP
+Définition à la ligne 92 du fichier wglext\&.h\&.
+.SS "#define WGL_DOUBLE_BUFFER_EXT   0x2011"
+
+.PP
+Définition à la ligne 228 du fichier wglext\&.h\&.
+.SS "#define WGL_DRAW_TO_BITMAP_ARB   0x2002"
+
+.PP
+Définition à la ligne 73 du fichier wglext\&.h\&.
+.SS "#define WGL_DRAW_TO_BITMAP_EXT   0x2002"
+
+.PP
+Définition à la ligne 213 du fichier wglext\&.h\&.
+.SS "#define WGL_DRAW_TO_PBUFFER_ARB   0x202D"
+
+.PP
+Définition à la ligne 128 du fichier wglext\&.h\&.
+.SS "#define WGL_DRAW_TO_PBUFFER_EXT   0x202D"
+
+.PP
+Définition à la ligne 259 du fichier wglext\&.h\&.
+.SS "#define WGL_DRAW_TO_WINDOW_ARB   0x2001"
+
+.PP
+Définition à la ligne 72 du fichier wglext\&.h\&.
+.SS "#define WGL_DRAW_TO_WINDOW_EXT   0x2001"
+
+.PP
+Définition à la ligne 212 du fichier wglext\&.h\&.
+.SS "#define WGL_ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV   0x20D0"
+
+.PP
+Définition à la ligne 385 du fichier wglext\&.h\&.
+.SS "#define WGL_ERROR_MISSING_AFFINITY_MASK_NV   0x20D1"
+
+.PP
+Définition à la ligne 386 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_depth_float   1"
+
+.PP
+Définition à la ligne 621 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_display_color_table   1"
+
+.PP
+Définition à la ligne 551 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_extensions_string   1"
+
+.PP
+Définition à la ligne 565 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_framebuffer_sRGB   1"
+
+.PP
+Définition à la ligne 777 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_make_current_read   1"
+
+.PP
+Définition à la ligne 573 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_multisample   1"
+
+.PP
+Définition à la ligne 639 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_pbuffer   1"
+
+.PP
+Définition à la ligne 583 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_pixel_format   1"
+
+.PP
+Définition à la ligne 599 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_pixel_format_packed_float   1"
+
+.PP
+Définition à la ligne 773 du fichier wglext\&.h\&.
+.SS "#define WGL_EXT_swap_control   1"
+
+.PP
+Définition à la ligne 611 du fichier wglext\&.h\&.
+.SS "#define WGL_FLOAT_COMPONENTS_NV   0x20B0"
+
+.PP
+Définition à la ligne 335 du fichier wglext\&.h\&.
+.SS "#define WGL_FRAMEBUFFER_SRGB_CAPABLE_ARB   0x20A9"
+
+.PP
+Définition à la ligne 179 du fichier wglext\&.h\&.
+.SS "#define WGL_FRAMEBUFFER_SRGB_CAPABLE_EXT   0x20A9"
+
+.PP
+Définition à la ligne 358 du fichier wglext\&.h\&.
+.SS "#define WGL_FRONT_COLOR_BUFFER_BIT_ARB   0x00000001"
+
+.PP
+Définition à la ligne 56 du fichier wglext\&.h\&.
+.SS "#define WGL_FRONT_LEFT_ARB   0x2083"
+
+.PP
+Définition à la ligne 158 du fichier wglext\&.h\&.
+.SS "#define WGL_FRONT_RIGHT_ARB   0x2084"
+
+.PP
+Définition à la ligne 159 du fichier wglext\&.h\&.
+.SS "#define WGL_FULL_ACCELERATION_ARB   0x2027"
+
+.PP
+Définition à la ligne 114 du fichier wglext\&.h\&.
+.SS "#define WGL_FULL_ACCELERATION_EXT   0x2027"
+
+.PP
+Définition à la ligne 250 du fichier wglext\&.h\&.
+.SS "#define WGL_GAMMA_EXCLUDE_DESKTOP_I3D   0x204F"
+
+.PP
+Définition à la ligne 293 du fichier wglext\&.h\&.
+.SS "#define WGL_GAMMA_TABLE_SIZE_I3D   0x204E"
+
+.PP
+Définition à la ligne 292 du fichier wglext\&.h\&.
+.SS "#define WGL_GENERIC_ACCELERATION_ARB   0x2026"
+
+.PP
+Définition à la ligne 113 du fichier wglext\&.h\&.
+.SS "#define WGL_GENERIC_ACCELERATION_EXT   0x2026"
+
+.PP
+Définition à la ligne 249 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_DIGITAL_FIELD_I3D   0x2049"
+
+.PP
+Définition à la ligne 302 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_DIGITAL_SYNC_I3D   0x2048"
+
+.PP
+Définition à la ligne 301 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EDGE_BOTH_I3D   0x204C"
+
+.PP
+Définition à la ligne 305 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EDGE_FALLING_I3D   0x204A"
+
+.PP
+Définition à la ligne 303 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EDGE_RISING_I3D   0x204B"
+
+.PP
+Définition à la ligne 304 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EXTENAL_FIELD_I3D   0x2046"
+
+.PP
+Définition à la ligne 299 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EXTENAL_SYNC_I3D   0x2045"
+
+.PP
+Définition à la ligne 298 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EXTENAL_TTL_I3D   0x2047"
+
+.PP
+Définition à la ligne 300 du fichier wglext\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_MULTIVIEW_I3D   0x2044"
+
+.PP
+Définition à la ligne 297 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_CLOCK_AMD   0x21A4"
+
+.PP
+Définition à la ligne 395 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_FASTEST_TARGET_GPUS_AMD   0x21A2"
+
+.PP
+Définition à la ligne 393 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_NUM_PIPES_AMD   0x21A5"
+
+.PP
+Définition à la ligne 396 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_NUM_RB_AMD   0x21A7"
+
+.PP
+Définition à la ligne 398 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_NUM_SIMD_AMD   0x21A6"
+
+.PP
+Définition à la ligne 397 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_NUM_SPI_AMD   0x21A8"
+
+.PP
+Définition à la ligne 399 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_OPENGL_VERSION_STRING_AMD   0x1F02"
+
+.PP
+Définition à la ligne 392 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_RAM_AMD   0x21A3"
+
+.PP
+Définition à la ligne 394 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_RENDERER_STRING_AMD   0x1F01"
+
+.PP
+Définition à la ligne 391 du fichier wglext\&.h\&.
+.SS "#define WGL_GPU_VENDOR_AMD   0x1F00"
+
+.PP
+Définition à la ligne 390 du fichier wglext\&.h\&.
+.SS "#define WGL_GREEN_BITS_ARB   0x2017"
+
+.PP
+Définition à la ligne 98 du fichier wglext\&.h\&.
+.SS "#define WGL_GREEN_BITS_EXT   0x2017"
+
+.PP
+Définition à la ligne 234 du fichier wglext\&.h\&.
+.SS "#define WGL_GREEN_SHIFT_ARB   0x2018"
+
+.PP
+Définition à la ligne 99 du fichier wglext\&.h\&.
+.SS "#define WGL_GREEN_SHIFT_EXT   0x2018"
+
+.PP
+Définition à la ligne 235 du fichier wglext\&.h\&.
+.SS "#define WGL_I3D_digital_video_control   1"
+
+.PP
+Définition à la ligne 661 du fichier wglext\&.h\&.
+.SS "#define WGL_I3D_gamma   1"
+
+.PP
+Définition à la ligne 671 du fichier wglext\&.h\&.
+.SS "#define WGL_I3D_genlock   1"
+
+.PP
+Définition à la ligne 685 du fichier wglext\&.h\&.
+.SS "#define WGL_I3D_image_buffer   1"
+
+.PP
+Définition à la ligne 715 du fichier wglext\&.h\&.
+.SS "#define WGL_I3D_swap_frame_lock   1"
+
+.PP
+Définition à la ligne 729 du fichier wglext\&.h\&.
+.SS "#define WGL_I3D_swap_frame_usage   1"
+
+.PP
+Définition à la ligne 743 du fichier wglext\&.h\&.
+.SS "#define WGL_IMAGE_BUFFER_LOCK_I3D   0x00000002"
+
+.PP
+Définition à la ligne 310 du fichier wglext\&.h\&.
+.SS "#define WGL_IMAGE_BUFFER_MIN_ACCESS_I3D   0x00000001"
+
+.PP
+Définition à la ligne 309 du fichier wglext\&.h\&.
+.SS "#define WGL_LOSE_CONTEXT_ON_RESET_ARB   0x8252"
+
+.PP
+Définition à la ligne 201 du fichier wglext\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_HEIGHT_ARB   0x2030"
+
+.PP
+Définition à la ligne 131 du fichier wglext\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_HEIGHT_EXT   0x2030"
+
+.PP
+Définition à la ligne 262 du fichier wglext\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_PIXELS_ARB   0x202E"
+
+.PP
+Définition à la ligne 129 du fichier wglext\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_PIXELS_EXT   0x202E"
+
+.PP
+Définition à la ligne 260 du fichier wglext\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_WIDTH_ARB   0x202F"
+
+.PP
+Définition à la ligne 130 du fichier wglext\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_WIDTH_EXT   0x202F"
+
+.PP
+Définition à la ligne 261 du fichier wglext\&.h\&.
+.SS "#define WGL_MIPMAP_LEVEL_ARB   0x207B"
+
+.PP
+Définition à la ligne 150 du fichier wglext\&.h\&.
+.SS "#define WGL_MIPMAP_TEXTURE_ARB   0x2074"
+
+.PP
+Définition à la ligne 143 du fichier wglext\&.h\&.
+.SS "#define WGL_NEED_PALETTE_ARB   0x2004"
+
+.PP
+Définition à la ligne 75 du fichier wglext\&.h\&.
+.SS "#define WGL_NEED_PALETTE_EXT   0x2004"
+
+.PP
+Définition à la ligne 215 du fichier wglext\&.h\&.
+.SS "#define WGL_NEED_SYSTEM_PALETTE_ARB   0x2005"
+
+.PP
+Définition à la ligne 76 du fichier wglext\&.h\&.
+.SS "#define WGL_NEED_SYSTEM_PALETTE_EXT   0x2005"
+
+.PP
+Définition à la ligne 216 du fichier wglext\&.h\&.
+.SS "#define WGL_NO_ACCELERATION_ARB   0x2025"
+
+.PP
+Définition à la ligne 112 du fichier wglext\&.h\&.
+.SS "#define WGL_NO_ACCELERATION_EXT   0x2025"
+
+.PP
+Définition à la ligne 248 du fichier wglext\&.h\&.
+.SS "#define WGL_NO_RESET_NOTIFICATION_ARB   0x8261"
+
+.PP
+Définition à la ligne 203 du fichier wglext\&.h\&.
+.SS "#define WGL_NO_TEXTURE_ARB   0x2077"
+
+.PP
+Définition à la ligne 146 du fichier wglext\&.h\&.
+.SS "#define WGL_NUM_VIDEO_CAPTURE_SLOTS_NV   0x20CF"
+
+.PP
+Définition à la ligne 404 du fichier wglext\&.h\&.
+.SS "#define WGL_NUM_VIDEO_SLOTS_NV   0x20F0"
+
+.PP
+Définition à la ligne 362 du fichier wglext\&.h\&.
+.SS "#define WGL_NUMBER_OVERLAYS_ARB   0x2008"
+
+.PP
+Définition à la ligne 79 du fichier wglext\&.h\&.
+.SS "#define WGL_NUMBER_OVERLAYS_EXT   0x2008"
+
+.PP
+Définition à la ligne 219 du fichier wglext\&.h\&.
+.SS "#define WGL_NUMBER_PIXEL_FORMATS_ARB   0x2000"
+
+.PP
+Définition à la ligne 71 du fichier wglext\&.h\&.
+.SS "#define WGL_NUMBER_PIXEL_FORMATS_EXT   0x2000"
+
+.PP
+Définition à la ligne 211 du fichier wglext\&.h\&.
+.SS "#define WGL_NUMBER_UNDERLAYS_ARB   0x2009"
+
+.PP
+Définition à la ligne 80 du fichier wglext\&.h\&.
+.SS "#define WGL_NUMBER_UNDERLAYS_EXT   0x2009"
+
+.PP
+Définition à la ligne 220 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_copy_image   1"
+
+.PP
+Définition à la ligne 885 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_float_buffer   1"
+
+.PP
+Définition à la ligne 761 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_gpu_affinity   1"
+
+.PP
+Définition à la ligne 829 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_multisample_coverage   1"
+
+.PP
+Définition à la ligne 893 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_present_video   1"
+
+.PP
+Définition à la ligne 781 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_swap_group   1"
+
+.PP
+Définition à la ligne 811 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_vertex_array_range   1"
+
+.PP
+Définition à la ligne 625 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_video_capture   1"
+
+.PP
+Définition à la ligne 869 du fichier wglext\&.h\&.
+.SS "#define WGL_NV_video_output   1"
+
+.PP
+Définition à la ligne 793 du fichier wglext\&.h\&.
+.SS "#define WGL_OML_sync_control   1"
+
+.PP
+Définition à la ligne 643 du fichier wglext\&.h\&.
+.SS "#define WGL_OPTIMAL_PBUFFER_HEIGHT_EXT   0x2032"
+
+.PP
+Définition à la ligne 264 du fichier wglext\&.h\&.
+.SS "#define WGL_OPTIMAL_PBUFFER_WIDTH_EXT   0x2031"
+
+.PP
+Définition à la ligne 263 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_HEIGHT_ARB   0x2035"
+
+.PP
+Définition à la ligne 134 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_HEIGHT_EXT   0x2035"
+
+.PP
+Définition à la ligne 267 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_LARGEST_ARB   0x2033"
+
+.PP
+Définition à la ligne 132 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_LARGEST_EXT   0x2033"
+
+.PP
+Définition à la ligne 265 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_LOST_ARB   0x2036"
+
+.PP
+Définition à la ligne 135 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_WIDTH_ARB   0x2034"
+
+.PP
+Définition à la ligne 133 du fichier wglext\&.h\&.
+.SS "#define WGL_PBUFFER_WIDTH_EXT   0x2034"
+
+.PP
+Définition à la ligne 266 du fichier wglext\&.h\&.
+.SS "#define WGL_PIXEL_TYPE_ARB   0x2013"
+
+.PP
+Définition à la ligne 94 du fichier wglext\&.h\&.
+.SS "#define WGL_PIXEL_TYPE_EXT   0x2013"
+
+.PP
+Définition à la ligne 230 du fichier wglext\&.h\&.
+.SS "#define WGL_RED_BITS_ARB   0x2015"
+
+.PP
+Définition à la ligne 96 du fichier wglext\&.h\&.
+.SS "#define WGL_RED_BITS_EXT   0x2015"
+
+.PP
+Définition à la ligne 232 du fichier wglext\&.h\&.
+.SS "#define WGL_RED_SHIFT_ARB   0x2016"
+
+.PP
+Définition à la ligne 97 du fichier wglext\&.h\&.
+.SS "#define WGL_RED_SHIFT_EXT   0x2016"
+
+.PP
+Définition à la ligne 233 du fichier wglext\&.h\&.
+.SS "#define WGL_SAMPLE_BUFFERS_3DFX   0x2060"
+
+.PP
+Définition à la ligne 275 du fichier wglext\&.h\&.
+.SS "#define WGL_SAMPLE_BUFFERS_ARB   0x2041"
+
+.PP
+Définition à la ligne 63 du fichier wglext\&.h\&.
+.SS "#define WGL_SAMPLE_BUFFERS_EXT   0x2041"
+
+.PP
+Définition à la ligne 280 du fichier wglext\&.h\&.
+.SS "#define WGL_SAMPLES_3DFX   0x2061"
+
+.PP
+Définition à la ligne 276 du fichier wglext\&.h\&.
+.SS "#define WGL_SAMPLES_ARB   0x2042"
+
+.PP
+Définition à la ligne 64 du fichier wglext\&.h\&.
+.SS "#define WGL_SAMPLES_EXT   0x2042"
+
+.PP
+Définition à la ligne 281 du fichier wglext\&.h\&.
+.SS "#define WGL_SHARE_ACCUM_ARB   0x200E"
+
+.PP
+Définition à la ligne 89 du fichier wglext\&.h\&.
+.SS "#define WGL_SHARE_ACCUM_EXT   0x200E"
+
+.PP
+Définition à la ligne 225 du fichier wglext\&.h\&.
+.SS "#define WGL_SHARE_DEPTH_ARB   0x200C"
+
+.PP
+Définition à la ligne 87 du fichier wglext\&.h\&.
+.SS "#define WGL_SHARE_DEPTH_EXT   0x200C"
+
+.PP
+Définition à la ligne 223 du fichier wglext\&.h\&.
+.SS "#define WGL_SHARE_STENCIL_ARB   0x200D"
+
+.PP
+Définition à la ligne 88 du fichier wglext\&.h\&.
+.SS "#define WGL_SHARE_STENCIL_EXT   0x200D"
+
+.PP
+Définition à la ligne 224 du fichier wglext\&.h\&.
+.SS "#define WGL_STENCIL_BITS_ARB   0x2023"
+
+.PP
+Définition à la ligne 110 du fichier wglext\&.h\&.
+.SS "#define WGL_STENCIL_BITS_EXT   0x2023"
+
+.PP
+Définition à la ligne 246 du fichier wglext\&.h\&.
+.SS "#define WGL_STENCIL_BUFFER_BIT_ARB   0x00000008"
+
+.PP
+Définition à la ligne 59 du fichier wglext\&.h\&.
+.SS "#define WGL_STEREO_ARB   0x2012"
+
+.PP
+Définition à la ligne 93 du fichier wglext\&.h\&.
+.SS "#define WGL_STEREO_EMITTER_DISABLE_3DL   0x2056"
+
+.PP
+Définition à la ligne 348 du fichier wglext\&.h\&.
+.SS "#define WGL_STEREO_EMITTER_ENABLE_3DL   0x2055"
+
+.PP
+Définition à la ligne 347 du fichier wglext\&.h\&.
+.SS "#define WGL_STEREO_EXT   0x2012"
+
+.PP
+Définition à la ligne 229 du fichier wglext\&.h\&.
+.SS "#define WGL_STEREO_POLARITY_INVERT_3DL   0x2058"
+
+.PP
+Définition à la ligne 350 du fichier wglext\&.h\&.
+.SS "#define WGL_STEREO_POLARITY_NORMAL_3DL   0x2057"
+
+.PP
+Définition à la ligne 349 du fichier wglext\&.h\&.
+.SS "#define WGL_SUPPORT_GDI_ARB   0x200F"
+
+.PP
+Définition à la ligne 90 du fichier wglext\&.h\&.
+.SS "#define WGL_SUPPORT_GDI_EXT   0x200F"
+
+.PP
+Définition à la ligne 226 du fichier wglext\&.h\&.
+.SS "#define WGL_SUPPORT_OPENGL_ARB   0x2010"
+
+.PP
+Définition à la ligne 91 du fichier wglext\&.h\&.
+.SS "#define WGL_SUPPORT_OPENGL_EXT   0x2010"
+
+.PP
+Définition à la ligne 227 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_COPY_ARB   0x2029"
+
+.PP
+Définition à la ligne 116 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_COPY_EXT   0x2029"
+
+.PP
+Définition à la ligne 252 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_EXCHANGE_ARB   0x2028"
+
+.PP
+Définition à la ligne 115 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_EXCHANGE_EXT   0x2028"
+
+.PP
+Définition à la ligne 251 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_LAYER_BUFFERS_ARB   0x2006"
+
+.PP
+Définition à la ligne 77 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_LAYER_BUFFERS_EXT   0x2006"
+
+.PP
+Définition à la ligne 217 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_METHOD_ARB   0x2007"
+
+.PP
+Définition à la ligne 78 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_METHOD_EXT   0x2007"
+
+.PP
+Définition à la ligne 218 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_UNDEFINED_ARB   0x202A"
+
+.PP
+Définition à la ligne 117 du fichier wglext\&.h\&.
+.SS "#define WGL_SWAP_UNDEFINED_EXT   0x202A"
+
+.PP
+Définition à la ligne 253 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_1D_ARB   0x2079"
+
+.PP
+Définition à la ligne 148 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_2D_ARB   0x207A"
+
+.PP
+Définition à la ligne 149 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_ARB   0x2078"
+
+.PP
+Définition à la ligne 147 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB   0x207E"
+
+.PP
+Définition à la ligne 153 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB   0x2080"
+
+.PP
+Définition à la ligne 155 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB   0x2082"
+
+.PP
+Définition à la ligne 157 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB   0x207D"
+
+.PP
+Définition à la ligne 152 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB   0x207F"
+
+.PP
+Définition à la ligne 154 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB   0x2081"
+
+.PP
+Définition à la ligne 156 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_DEPTH_COMPONENT_NV   0x20A6"
+
+.PP
+Définition à la ligne 320 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_R_NV   0x20B5"
+
+.PP
+Définition à la ligne 340 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_RG_NV   0x20B6"
+
+.PP
+Définition à la ligne 341 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_RGB_NV   0x20B7"
+
+.PP
+Définition à la ligne 342 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_RGBA_NV   0x20B8"
+
+.PP
+Définition à la ligne 343 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_FORMAT_ARB   0x2072"
+
+.PP
+Définition à la ligne 141 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_RECTANGLE_NV   0x20A2"
+
+.PP
+Définition à la ligne 327 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_RGB_ARB   0x2075"
+
+.PP
+Définition à la ligne 144 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_RGBA_ARB   0x2076"
+
+.PP
+Définition à la ligne 145 du fichier wglext\&.h\&.
+.SS "#define WGL_TEXTURE_TARGET_ARB   0x2073"
+
+.PP
+Définition à la ligne 142 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_ALPHA_VALUE_ARB   0x203A"
+
+.PP
+Définition à la ligne 85 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_ARB   0x200A"
+
+.PP
+Définition à la ligne 81 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_BLUE_VALUE_ARB   0x2039"
+
+.PP
+Définition à la ligne 84 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_EXT   0x200A"
+
+.PP
+Définition à la ligne 221 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_GREEN_VALUE_ARB   0x2038"
+
+.PP
+Définition à la ligne 83 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_INDEX_VALUE_ARB   0x203B"
+
+.PP
+Définition à la ligne 86 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_RED_VALUE_ARB   0x2037"
+
+.PP
+Définition à la ligne 82 du fichier wglext\&.h\&.
+.SS "#define WGL_TRANSPARENT_VALUE_EXT   0x200B"
+
+.PP
+Définition à la ligne 222 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_COLORINDEX_ARB   0x202C"
+
+.PP
+Définition à la ligne 119 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_COLORINDEX_EXT   0x202C"
+
+.PP
+Définition à la ligne 255 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_RGBA_ARB   0x202B"
+
+.PP
+Définition à la ligne 118 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_RGBA_EXT   0x202B"
+
+.PP
+Définition à la ligne 254 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_RGBA_FLOAT_ARB   0x21A0"
+
+.PP
+Définition à la ligne 175 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_RGBA_FLOAT_ATI   0x21A0"
+
+.PP
+Définition à la ligne 331 du fichier wglext\&.h\&.
+.SS "#define WGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT   0x20A8"
+
+.PP
+Définition à la ligne 354 du fichier wglext\&.h\&.
+.SS "#define WGL_UNIQUE_ID_NV   0x20CE"
+
+.PP
+Définition à la ligne 403 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_ALPHA_NV   0x20C4"
+
+.PP
+Définition à la ligne 370 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_COLOR_AND_ALPHA_NV   0x20C6"
+
+.PP
+Définition à la ligne 372 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_COLOR_AND_DEPTH_NV   0x20C7"
+
+.PP
+Définition à la ligne 373 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_COLOR_NV   0x20C3"
+
+.PP
+Définition à la ligne 369 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_DEPTH_NV   0x20C5"
+
+.PP
+Définition à la ligne 371 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_FIELD_1   0x20C9"
+
+.PP
+Définition à la ligne 375 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_FIELD_2   0x20CA"
+
+.PP
+Définition à la ligne 376 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_FRAME   0x20C8"
+
+.PP
+Définition à la ligne 374 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_STACKED_FIELDS_1_2   0x20CB"
+
+.PP
+Définition à la ligne 377 du fichier wglext\&.h\&.
+.SS "#define WGL_VIDEO_OUT_STACKED_FIELDS_2_1   0x20CC"
+
+.PP
+Définition à la ligne 378 du fichier wglext\&.h\&.
+.SS "#define WGL_WGLEXT_VERSION   22"
+
+.PP
+Définition à la ligne 53 du fichier wglext\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef \fBHGLRC\fP \fBconst\fP \fBint\fP * \fBattribList\fP"
+
+.PP
+Définition à la ligne 539 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP * \fBbarrier\fP"
+
+.PP
+Définition à la ligne 821 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP unsigned long \fBBOOL\fP \fBbBlock\fP"
+
+.PP
+Définition à la ligne 806 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBcount\fP"
+
+.PP
+Définition à la ligne 724 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBGLenum\fP \fBUINT\fP \fBvoid\fP* \fBdata\fP"
+
+.PP
+Définition à la ligne 858 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBGLenum\fP \fBdataType\fP"
+
+.PP
+Définition à la ligne 858 du fichier wglext\&.h\&.
+.SS "typedef INT32 INT32* \fBdenominator\fP"
+
+.PP
+Définition à la ligne 653 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBdepth\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBdivisor\fP"
+
+.PP
+Définition à la ligne 654 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBdstLevel\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBdstName\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBdstTarget\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBdstX\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX0\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX1\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY0\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY1\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstZ\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef DWORD \fBdwSize\fP"
+
+.PP
+Définition à la ligne 722 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBGLenum\fP \fBfilter\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBfuPlanes\fP"
+
+.PP
+Définition à la ligne 655 du fichier wglext\&.h\&.
+.SS "typedef struct \fB_GPU_DEVICE\fP  \fBGPU_DEVICE\fP"
+
+.SS "typedef \fBGLuint\fP* \fBgroup\fP"
+
+.PP
+Définition à la ligne 820 du fichier wglext\&.h\&.
+.SS "typedef \fBHDC\fP \fBhDC\fP"
+
+.PP
+Définition à la ligne 509 du fichier wglext\&.h\&.
+.SS "typedef HVIDEOINPUTDEVICENV \fBhDevice\fP"
+
+.PP
+Définition à la ligne 877 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBhDstRC\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBheight\fP"
+
+.PP
+Définition à la ligne 460 du fichier wglext\&.h\&.
+.SS "typedef \fBHDC\fP \fBHGLRC\fP \fBhglrc\fP"
+
+.PP
+Définition à la ligne 494 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP HGPUNV* \fBhGpu\fP"
+
+.PP
+Définition à la ligne 840 du fichier wglext\&.h\&.
+.SS "typedef \fBHPBUFFERARB\fP \fBhPbuffer\fP"
+
+.PP
+Définition à la ligne 804 du fichier wglext\&.h\&.
+.SS "typedef \fBHDC\fP \fBhReadDC\fP"
+
+.PP
+Définition à la ligne 494 du fichier wglext\&.h\&.
+.SS "typedef \fBHGLRC\fP \fBhShareContext\fP"
+
+.PP
+Définition à la ligne 539 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP HPVIDEODEV * \fBhVideoDevice\fP"
+
+.PP
+Définition à la ligne 788 du fichier wglext\&.h\&.
+.SS "typedef HVIDEOINPUTDEVICENV \fBint\fP \fBiAttribute\fP"
+
+.PP
+Définition à la ligne 511 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBiBuffer\fP"
+
+.PP
+Définition à la ligne 521 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBiBufferType\fP"
+
+.PP
+Définition à la ligne 806 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP \fBiDeviceIndex\fP"
+
+.PP
+Définition à la ligne 838 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP* \fBids\fP"
+
+.PP
+Définition à la ligne 857 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBiEntries\fP"
+
+.PP
+Définition à la ligne 680 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP \fBiGpuIndex\fP"
+
+.PP
+Définition à la ligne 840 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBint\fP \fBiHeight\fP"
+
+.PP
+Définition à la ligne 507 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBiLayerPlane\fP"
+
+.PP
+Définition à la ligne 458 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBiPixelFormat\fP"
+
+.PP
+Définition à la ligne 483 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBiVideoBuffer\fP"
+
+.PP
+Définition à la ligne 804 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBiWidth\fP"
+
+.PP
+Définition à la ligne 507 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBlength\fP"
+
+.PP
+Définition à la ligne 559 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP \fBPGPU_DEVICE\fP \fBlpGpuDevice\fP"
+
+.PP
+Définition à la ligne 838 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBmask\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP* \fBmaxBarriers\fP"
+
+.PP
+Définition à la ligne 823 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBmaxGroups\fP"
+
+.PP
+Définition à la ligne 823 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP * \fBmsc\fP"
+
+.PP
+Définition à la ligne 652 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBnAttributes\fP"
+
+.PP
+Définition à la ligne 483 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT \fBUINT\fP \fBnMaxFormats\fP"
+
+.PP
+Définition à la ligne 485 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT \fBUINT\fP \fBint\fP \fBUINT\fP * \fBnNumFormats\fP"
+
+.PP
+Définition à la ligne 485 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBnumDevices\fP"
+
+.PP
+Définition à la ligne 802 du fichier wglext\&.h\&.
+.SS "typedef INT32* \fBnumerator\fP"
+
+.PP
+Définition à la ligne 653 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBLPVOID\fP * \fBpAddress\fP"
+
+.PP
+Définition à la ligne 723 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBHANDLE\fP* \fBpEvent\fP"
+
+.PP
+Définition à la ligne 724 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT * \fBpfAttribFList\fP"
+
+.PP
+Définition à la ligne 485 du fichier wglext\&.h\&.
+.SS "typedef \fBBOOL\fP* \fBpFlag\fP"
+
+.PP
+Définition à la ligne 702 du fichier wglext\&.h\&.
+.SS "typedef \fBvoid\fP* WINAPI* PFNWGLALLOCATEMEMORYNVPROC(\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readfreq, \fBGLfloat\fP writefreq, \fBGLfloat\fP priority)"
+
+.PP
+Définition à la ligne 630 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP char* WINAPI* PFNWGLGETEXTENSIONSSTRINGARBPROC(\fBHDC\fP hdc)"
+
+.PP
+Définition à la ligne 473 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP char* WINAPI* PFNWGLGETEXTENSIONSSTRINGEXTPROC(\fBvoid\fP)"
+
+.PP
+Définition à la ligne 569 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBint\fP FLOAT * \fBpfValues\fP"
+
+.PP
+Définition à la ligne 484 du fichier wglext\&.h\&.
+.SS "typedef struct \fB_GPU_DEVICE\fP * \fBPGPU_DEVICE\fP"
+
+.SS "typedef HVIDEOINPUTDEVICENV * \fBphDeviceList\fP"
+
+.PP
+Définition à la ligne 787 du fichier wglext\&.h\&.
+.SS "typedef HGPUNV* \fBphGpu\fP"
+
+.PP
+Définition à la ligne 837 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBint\fP * \fBpiAttribIList\fP"
+
+.PP
+Définition à la ligne 485 du fichier wglext\&.h\&.
+.SS "typedef unsigned \fBint\fP HVIDEOOUTPUTDEVICENV \fBconst\fP \fBint\fP * \fBpiAttribList\fP"
+
+.PP
+Définition à la ligne 507 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBint\fP * \fBpiAttributes\fP"
+
+.PP
+Définition à la ligne 483 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBint\fP \fBconst\fP FLOAT \fBUINT\fP \fBint\fP * \fBpiFormats\fP"
+
+.PP
+Définition à la ligne 485 du fichier wglext\&.h\&.
+.SS "typedef HVIDEOINPUTDEVICENV \fBint\fP \fBint\fP * \fBpiValue\fP"
+
+.PP
+Définition à la ligne 511 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBint\fP \fBint\fP * \fBpiValues\fP"
+
+.PP
+Définition à la ligne 483 du fichier wglext\&.h\&.
+.SS "typedef DWORD float* \fBpLastMissedUsage\fP"
+
+.PP
+Définition à la ligne 753 du fichier wglext\&.h\&.
+.SS "typedef DWORD* \fBpMissedFrames\fP"
+
+.PP
+Définition à la ligne 753 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBproperty\fP"
+
+.PP
+Définition à la ligne 858 du fichier wglext\&.h\&.
+.SS "typedef \fBconst\fP \fBHANDLE\fP \fBconst\fP \fBLPVOID\fP \fBconst\fP DWORD* \fBpSize\fP"
+
+.PP
+Définition à la ligne 724 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBconst\fP USHORT \fBconst\fP USHORT \fBconst\fP USHORT * \fBpuBlue\fP"
+
+.PP
+Définition à la ligne 680 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBconst\fP USHORT \fBconst\fP USHORT * \fBpuGreen\fP"
+
+.PP
+Définition à la ligne 680 du fichier wglext\&.h\&.
+.SS "typedef unsigned long* \fBpulCounterOutputPbuffer\fP"
+
+.PP
+Définition à la ligne 807 du fichier wglext\&.h\&.
+.SS "typedef unsigned long unsigned long* \fBpulCounterOutputVideo\fP"
+
+.PP
+Définition à la ligne 807 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP unsigned long* \fBpulCounterPbuffer\fP"
+
+.PP
+Définition à la ligne 806 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBconst\fP USHORT * \fBpuRed\fP"
+
+.PP
+Définition à la ligne 680 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP \fBremainder\fP"
+
+.PP
+Définition à la ligne 654 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP \fBINT64\fP * \fBsbc\fP"
+
+.PP
+Définition à la ligne 652 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBGLenum\fP \fBUINT\fP \fBsize\fP"
+
+.PP
+Définition à la ligne 858 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBsrcLevel\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBsrcName\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBsrcTarget\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBsrcX\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBsrcX0\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcX1\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBsrcY0\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY1\fP"
+
+.PP
+Définition à la ligne 865 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcZ\fP"
+
+.PP
+Définition à la ligne 889 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBtarget_msc\fP"
+
+.PP
+Définition à la ligne 654 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBtarget_sbc\fP"
+
+.PP
+Définition à la ligne 657 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuDelay\fP"
+
+.PP
+Définition à la ligne 709 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuEdge\fP"
+
+.PP
+Définition à la ligne 705 du fichier wglext\&.h\&.
+.SS "typedef DWORD \fBUINT\fP \fBuFlags\fP"
+
+.PP
+Définition à la ligne 722 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP* \fBuMaxLineDelay\fP"
+
+.PP
+Définition à la ligne 711 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP \fBUINT\fP* \fBuMaxPixelDelay\fP"
+
+.PP
+Définition à la ligne 711 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuRate\fP"
+
+.PP
+Définition à la ligne 707 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuSource\fP"
+
+.PP
+Définition à la ligne 703 du fichier wglext\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP * \fBust\fP"
+
+.PP
+Définition à la ligne 652 du fichier wglext\&.h\&.
+.SS "typedef \fBUINT\fP \fBuState\fP"
+
+.PP
+Définition à la ligne 769 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBUINT\fP \fBuType\fP"
+
+.PP
+Définition à la ligne 458 du fichier wglext\&.h\&.
+.SS "typedef unsigned \fBint\fP \fBuVideoSlot\fP"
+
+.PP
+Définition à la ligne 788 du fichier wglext\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBwidth\fP"
+
+.PP
+Définition à la ligne 460 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBx\fP"
+
+.PP
+Définition à la ligne 460 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBxSrc\fP"
+
+.PP
+Définition à la ligne 461 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBy\fP"
+
+.PP
+Définition à la ligne 460 du fichier wglext\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBySrc\fP"
+
+.PP
+Définition à la ligne 461 du fichier wglext\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "typedef BOOL (WINAPI * PFNWGLSAVEBUFFERREGIONARBPROC)"
+
+.SS "DECLARE_HANDLE (\fBHPBUFFERARB\fP)"
+
+.SS "DECLARE_HANDLE (\fBHPBUFFEREXT\fP)"
+
+.SS "DECLARE_HANDLE (HVIDEOOUTPUTDEVICENV)"
+
+.SS "DECLARE_HANDLE (HPVIDEODEV)"
+
+.SS "DECLARE_HANDLE (HPGPUNV)"
+
+.SS "DECLARE_HANDLE (HGPUNV)"
+
+.SS "DECLARE_HANDLE (HVIDEOINPUTDEVICENV)"
+
+.SS "typedef \fBGLboolean\fP (WINAPI * PFNWGLCREATEDISPLAYCOLORTABLEEXTPROC)"
+
+.SS "typedef HANDLE (WINAPI * PFNWGLCREATEBUFFERREGIONARBPROC)"
+
+.SS "typedef HDC (WINAPI * PFNWGLGETCURRENTREADDCARBPROC)"
+
+.SS "typedef HGLRC (WINAPI * PFNWGLCREATECONTEXTATTRIBSARBPROC)"
+
+.SS "typedef HPBUFFERARB (WINAPI * PFNWGLCREATEPBUFFERARBPROC)"
+
+.SS "typedef HPBUFFEREXT (WINAPI * PFNWGLCREATEPBUFFEREXTPROC)"
+
+.SS "typedef int (WINAPI * PFNWGLRELEASEPBUFFERDCARBPROC)"
+
+.SS "typedef INT (WINAPI * PFNWGLGETGPUINFOAMDPROC)"
+
+.SS "typedef INT64 (WINAPI * PFNWGLSWAPBUFFERSMSCOMLPROC)"
+
+.SS "typedef LPVOID (WINAPI * PFNWGLCREATEIMAGEBUFFERI3DPROC)"
+
+.SS "typedef UINT (WINAPI * PFNWGLGETGPUIDSAMDPROC)"
+
+.SS "typedef VOID (WINAPI * PFNWGLDELETEBUFFERREGIONARBPROC)"
+
+.SS "typedef void (WINAPI * PFNWGLFREEMEMORYNVPROC)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,100 @@
+.TH "typenode" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+typenode \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <form\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "unsigned short \fBstatus\fP"
+.br
+.ti -1c
+.RI "long \fBref\fP"
+.br
+.ti -1c
+.RI "struct \fBtypenode\fP * \fBleft\fP"
+.br
+.ti -1c
+.RI "struct \fBtypenode\fP * \fBright\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP *(* \fBmakearg\fP )(\fBva_list\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP *(* \fBcopyarg\fP )(\fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBfreearg\fP )(\fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP(* \fBfcheck\fP )(\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP(* \fBccheck\fP )(\fBint\fP, \fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP(* \fBnext\fP )(\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "\fBbool\fP(* \fBprev\fP )(\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 146 du fichier form\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBbool\fP(* typenode::ccheck) (\fBint\fP, \fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 177 du fichier form\&.h\&.
+.SS "\fBvoid\fP*(* typenode::copyarg) (\fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 153 du fichier form\&.h\&.
+.SS "\fBbool\fP(* typenode::fcheck) (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 176 du fichier form\&.h\&.
+.SS "\fBvoid\fP(* typenode::freearg) (\fBvoid\fP *)"
+
+.PP
+Définition à la ligne 154 du fichier form\&.h\&.
+.SS "struct \fBtypenode\fP* typenode::left"
+
+.PP
+Définition à la ligne 149 du fichier form\&.h\&.
+.SS "\fBvoid\fP*(* typenode::makearg) (\fBva_list\fP *)"
+
+.PP
+Définition à la ligne 152 du fichier form\&.h\&.
+.SS "\fBbool\fP(* typenode::next) (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 179 du fichier form\&.h\&.
+.SS "\fBbool\fP(* typenode::prev) (\fBFIELD\fP *, \fBconst\fP \fBvoid\fP *)"
+
+.PP
+Définition à la ligne 180 du fichier form\&.h\&.
+.SS "long typenode::ref"
+
+.PP
+Définition à la ligne 148 du fichier form\&.h\&.
+.SS "struct \fBtypenode\fP* typenode::right"
+
+.PP
+Définition à la ligne 150 du fichier form\&.h\&.
+.SS "unsigned short typenode::status"
+
+.PP
+Définition à la ligne 147 du fichier form\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,89 @@
+.TH "SDL_JoyBallEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_JoyBallEvent \- Joystick trackball motion event structure (event\&.jball\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBSDL_JoystickID\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBball\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding1\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fBxrel\fP"
+.br
+.ti -1c
+.RI "\fBSint16\fP \fByrel\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Joystick trackball motion event structure (event\&.jball\&.*) 
+.PP
+Définition à la ligne 292 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint8\fP SDL_JoyBallEvent::ball"
+The joystick trackball index 
+.PP
+Définition à la ligne 297 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyBallEvent::padding1"
+
+.PP
+Définition à la ligne 298 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyBallEvent::padding2"
+
+.PP
+Définition à la ligne 299 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_JoyBallEvent::padding3"
+
+.PP
+Définition à la ligne 300 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyBallEvent::timestamp"
+
+.PP
+Définition à la ligne 295 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_JoyBallEvent::type"
+\fBSDL_JOYBALLMOTION\fP 
+.PP
+Définition à la ligne 294 du fichier SDL_events\&.h\&.
+.SS "\fBSDL_JoystickID\fP SDL_JoyBallEvent::which"
+The joystick instance id 
+.PP
+Définition à la ligne 296 du fichier SDL_events\&.h\&.
+.SS "\fBSint16\fP SDL_JoyBallEvent::xrel"
+The relative motion in the X direction 
+.PP
+Définition à la ligne 301 du fichier SDL_events\&.h\&.
+.SS "\fBSint16\fP SDL_JoyBallEvent::yrel"
+The relative motion in the Y direction 
+.PP
+Définition à la ligne 302 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

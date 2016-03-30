@@ -1,0 +1,75 @@
+.TH "SDL_MouseWheelEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_MouseWheelEvent \- Mouse wheel event structure (event\&.wheel\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwhich\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBx\fP"
+.br
+.ti -1c
+.RI "\fBSint32\fP \fBy\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBdirection\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Mouse wheel event structure (event\&.wheel\&.*) 
+.PP
+Définition à la ligne 262 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBUint32\fP SDL_MouseWheelEvent::direction"
+Set to one of the SDL_MOUSEWHEEL_* defines\&. When FLIPPED the values in X and Y will be opposite\&. Multiply by -1 to change them back 
+.PP
+Définition à la ligne 270 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseWheelEvent::timestamp"
+
+.PP
+Définition à la ligne 265 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseWheelEvent::type"
+\fBSDL_MOUSEWHEEL\fP 
+.PP
+Définition à la ligne 264 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseWheelEvent::which"
+The mouse instance id, or SDL_TOUCH_MOUSEID 
+.PP
+Définition à la ligne 267 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_MouseWheelEvent::windowID"
+The window with mouse focus, if any 
+.PP
+Définition à la ligne 266 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_MouseWheelEvent::x"
+The amount scrolled horizontally, positive to the right and negative to the left 
+.PP
+Définition à la ligne 268 du fichier SDL_events\&.h\&.
+.SS "\fBSint32\fP SDL_MouseWheelEvent::y"
+The amount scrolled vertically, positive away from the user and negative toward the user 
+.PP
+Définition à la ligne 269 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

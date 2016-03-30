@@ -1,0 +1,80 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_gesture.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_gesture.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'SDL_touch\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBSint64\fP \fBSDL_GestureID\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_RecordGesture\fP (\fBSDL_TouchID\fP touchId)"
+.br
+.RI "\fIBegin Recording a gesture on the specified touch, or all touches (-1) \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SaveAllDollarTemplates\fP (\fBSDL_RWops\fP *\fBdst\fP)"
+.br
+.RI "\fISave all currently loaded Dollar Gesture templates\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_SaveDollarTemplate\fP (\fBSDL_GestureID\fP gestureId, \fBSDL_RWops\fP *\fBdst\fP)"
+.br
+.RI "\fISave a currently loaded Dollar Gesture template\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_LoadDollarTemplates\fP (\fBSDL_TouchID\fP touchId, \fBSDL_RWops\fP *\fBsrc\fP)"
+.br
+.RI "\fILoad Dollar Gesture templates from a file\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL gesture event handling\&. 
+.PP
+Définition dans le fichier \fBSDL_gesture\&.h\fP\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef \fBSint64\fP \fBSDL_GestureID\fP"
+
+.PP
+Définition à la ligne 44 du fichier SDL_gesture\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_LoadDollarTemplates (\fBSDL_TouchID\fP touchId, \fBSDL_RWops\fP * src)"
+
+.PP
+Load Dollar Gesture templates from a file\&. 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_RecordGesture (\fBSDL_TouchID\fP touchId)"
+
+.PP
+Begin Recording a gesture on the specified touch, or all touches (-1) 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SaveAllDollarTemplates (\fBSDL_RWops\fP * dst)"
+
+.PP
+Save all currently loaded Dollar Gesture templates\&. 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_SaveDollarTemplate (\fBSDL_GestureID\fP gestureId, \fBSDL_RWops\fP * dst)"
+
+.PP
+Save a currently loaded Dollar Gesture template\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

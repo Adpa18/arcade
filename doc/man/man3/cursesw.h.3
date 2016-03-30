@@ -1,0 +1,136 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/cursesw.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/cursesw.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/etip\&.h>\fP
+.br
+\fC#include <ncurses/curses\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBNCursesWindow\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesColorWindow\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesPad\fP"
+.br
+.ti -1c
+.RI "class \fBNCursesFramedPad\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUNDEF\fP(\fBname\fP)   CUR_ ##\fBname\fP"
+.br
+.ti -1c
+.RI "#define \fB_no_flushok\fP"
+.br
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPad_Request\fP { \fBREQ_PAD_REFRESH\fP = KEY_MAX + 1, \fBREQ_PAD_UP\fP, \fBREQ_PAD_DOWN\fP, \fBREQ_PAD_LEFT\fP, \fBREQ_PAD_RIGHT\fP, \fBREQ_PAD_EXIT\fP }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_IMPEXP\fP \fBint\fP \fBNCURSES_API\fP \fBclearok\fP (\fBWINDOW\fP *, \fBbool\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_IMPEXP\fP \fBint\fP \fBNCURSES_API\fP \fBleaveok\fP (\fBWINDOW\fP *win, \fBbool\fP bf)"
+.br
+.ti -1c
+.RI "\fBNCURSES_IMPEXP\fP \fBint\fP \fBNCURSES_API\fP \fBscrollok\fP (\fBWINDOW\fP *, char)"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_nc_ripoffline\fP (\fBint\fP, \fBint\fP(*init)(\fBWINDOW\fP *, \fBint\fP))"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_nc_xx_ripoff_init\fP (\fBWINDOW\fP *, \fBint\fP)"
+.br
+.ti -1c
+.RI "\fBint\fP \fB_nc_has_mouse\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBconst\fP \fBPad_Request\fP \fBPAD_LOW\fP = \fBREQ_PAD_REFRESH\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP \fBPad_Request\fP \fBPAD_HIGH\fP = \fBREQ_PAD_EXIT\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define _no_flushok"
+
+.PP
+Définition à la ligne 201 du fichier cursesw\&.h\&.
+.SS "#define UNDEF(\fBname\fP)   CUR_ ##\fBname\fP"
+
+.PP
+Définition à la ligne 50 du fichier cursesw\&.h\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBPad_Request\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIREQ_PAD_REFRESH \fP\fP
+.TP
+\fB\fIREQ_PAD_UP \fP\fP
+.TP
+\fB\fIREQ_PAD_DOWN \fP\fP
+.TP
+\fB\fIREQ_PAD_LEFT \fP\fP
+.TP
+\fB\fIREQ_PAD_RIGHT \fP\fP
+.TP
+\fB\fIREQ_PAD_EXIT \fP\fP
+.PP
+Définition à la ligne 1397 du fichier cursesw\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBint\fP _nc_has_mouse (\fBvoid\fP)"
+
+.SS "\fBint\fP _nc_ripoffline (\fBint\fP, \fBint\fP(*)(\fBWINDOW\fP *, \fBint\fP) init)"
+
+.SS "\fBint\fP _nc_xx_ripoff_init (\fBWINDOW\fP *, \fBint\fP)"
+
+.SS "\fBNCURSES_IMPEXP\fP \fBint\fP \fBNCURSES_API\fP clearok (\fBWINDOW\fP *, \fBbool\fP)"
+
+.SS "\fBNCURSES_IMPEXP\fP \fBint\fP \fBNCURSES_API\fP leaveok (\fBWINDOW\fP * win, \fBbool\fP bf)"
+
+.SS "\fBNCURSES_IMPEXP\fP \fBint\fP \fBNCURSES_API\fP scrollok (\fBWINDOW\fP *, char)"
+
+.SH "Documentation des variables"
+.PP 
+.SS "\fBconst\fP \fBPad_Request\fP PAD_HIGH = \fBREQ_PAD_EXIT\fP"
+
+.PP
+Définition à la ligne 1407 du fichier cursesw\&.h\&.
+.SS "\fBconst\fP \fBPad_Request\fP PAD_LOW = \fBREQ_PAD_REFRESH\fP"
+
+.PP
+Définition à la ligne 1406 du fichier cursesw\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

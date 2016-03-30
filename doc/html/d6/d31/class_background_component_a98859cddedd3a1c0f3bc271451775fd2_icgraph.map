@@ -1,0 +1,5 @@
+<map id="BackgroundComponent::setSprite2D" name="BackgroundComponent::setSprite2D">
+<area shape="rect" id="node2" href="$d2/dad/class_snake.html#a352449776ddbf4dfbe91cd7add8e15fb" title="Snake::restart" alt="" coords="212,31,316,57"/>
+<area shape="rect" id="node3" href="$d2/dad/class_snake.html#aa9cbcdb4b25d84cbf83509039cac8d01" title="Snake::Snake" alt="" coords="371,5,475,32"/>
+<area shape="rect" id="node4" href="$d2/dad/class_snake.html#ac79a6f5a1f1152035781a0f348eff05d" title="Snake::compute" alt="" coords="364,56,481,83"/>
+</map>

@@ -1,0 +1,173 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_messagebox.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_messagebox.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_MessageBoxButtonData\fP"
+.br
+.RI "\fIIndividual button data\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_MessageBoxColor\fP"
+.br
+.RI "\fIRGB value used in a message box color scheme\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_MessageBoxColorScheme\fP"
+.br
+.RI "\fIA set of colors to use for message box dialogs\&. \fP"
+.ti -1c
+.RI "struct \fBSDL_MessageBoxData\fP"
+.br
+.RI "\fIMessageBox structure containing title, text, window, etc\&. \fP"
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_MessageBoxFlags\fP { \fBSDL_MESSAGEBOX_ERROR\fP = 0x00000010, \fBSDL_MESSAGEBOX_WARNING\fP = 0x00000020, \fBSDL_MESSAGEBOX_INFORMATION\fP = 0x00000040 }
+.RI "\fISDL_MessageBox flags\&. If supported will display warning icon, etc\&. \fP""
+.br
+.ti -1c
+.RI "enum \fBSDL_MessageBoxButtonFlags\fP { \fBSDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT\fP = 0x00000001, \fBSDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT\fP = 0x00000002 }
+.RI "\fIFlags for \fBSDL_MessageBoxButtonData\fP\&. \fP""
+.br
+.ti -1c
+.RI "enum \fBSDL_MessageBoxColorType\fP { \fBSDL_MESSAGEBOX_COLOR_BACKGROUND\fP, \fBSDL_MESSAGEBOX_COLOR_TEXT\fP, \fBSDL_MESSAGEBOX_COLOR_BUTTON_BORDER\fP, \fBSDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND\fP, \fBSDL_MESSAGEBOX_COLOR_BUTTON_SELECTED\fP, \fBSDL_MESSAGEBOX_COLOR_MAX\fP }"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_ShowMessageBox\fP (\fBconst\fP \fBSDL_MessageBoxData\fP *messageboxdata, \fBint\fP *buttonid)"
+.br
+.RI "\fICreate a modal message box\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_ShowSimpleMessageBox\fP (\fBUint32\fP \fBflags\fP, \fBconst\fP char *title, \fBconst\fP char *\fBmessage\fP, \fBSDL_Window\fP *window)"
+.br
+.RI "\fICreate a simple modal message box\&. \fP"
+.in -1c
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBSDL_MessageBoxButtonFlags\fP"
+
+.PP
+Flags for \fBSDL_MessageBoxButtonData\fP\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT \fP\fP
+Marks the default button when return is hit 
+.TP
+\fB\fISDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT \fP\fP
+Marks the default button when escape is hit 
+.PP
+Définition à la ligne 47 du fichier SDL_messagebox\&.h\&.
+.SS "enum \fBSDL_MessageBoxColorType\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_MESSAGEBOX_COLOR_BACKGROUND \fP\fP
+.TP
+\fB\fISDL_MESSAGEBOX_COLOR_TEXT \fP\fP
+.TP
+\fB\fISDL_MESSAGEBOX_COLOR_BUTTON_BORDER \fP\fP
+.TP
+\fB\fISDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND \fP\fP
+.TP
+\fB\fISDL_MESSAGEBOX_COLOR_BUTTON_SELECTED \fP\fP
+.TP
+\fB\fISDL_MESSAGEBOX_COLOR_MAX \fP\fP
+.PP
+Définition à la ligne 71 du fichier SDL_messagebox\&.h\&.
+.SS "enum \fBSDL_MessageBoxFlags\fP"
+
+.PP
+SDL_MessageBox flags\&. If supported will display warning icon, etc\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_MESSAGEBOX_ERROR \fP\fP
+error dialog 
+.TP
+\fB\fISDL_MESSAGEBOX_WARNING \fP\fP
+warning dialog 
+.TP
+\fB\fISDL_MESSAGEBOX_INFORMATION \fP\fP
+informational dialog 
+.PP
+Définition à la ligne 37 du fichier SDL_messagebox\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_ShowMessageBox (\fBconst\fP \fBSDL_MessageBoxData\fP * messageboxdata, \fBint\fP * buttonid)"
+
+.PP
+Create a modal message box\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fImessageboxdata\fP The \fBSDL_MessageBoxData\fP structure with title, text, etc\&. 
+.br
+\fIbuttonid\fP The pointer to which user id of hit button should be copied\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+-1 on error, otherwise 0 and buttonid contains user id of button hit or -1 if dialog was closed\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This function should be called on the thread that created the parent window, or on the main thread if the messagebox has no parent\&. It will block execution of that thread until the user clicks a button or closes the messagebox\&. 
+.RE
+.PP
+
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_ShowSimpleMessageBox (\fBUint32\fP flags, \fBconst\fP char * title, \fBconst\fP char * message, \fBSDL_Window\fP * window)"
+
+.PP
+Create a simple modal message box\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIflags\fP \fBSDL_MessageBoxFlags\fP 
+.br
+\fItitle\fP UTF-8 title text 
+.br
+\fImessage\fP UTF-8 message text 
+.br
+\fIwindow\fP The parent window, or NULL for no parent
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 on success, -1 on error
+.RE
+.PP
+\fBVoir également:\fP
+.RS 4
+\fBSDL_ShowMessageBox\fP 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,85 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_power.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_power.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSDL_PowerState\fP { \fBSDL_POWERSTATE_UNKNOWN\fP, \fBSDL_POWERSTATE_ON_BATTERY\fP, \fBSDL_POWERSTATE_NO_BATTERY\fP, \fBSDL_POWERSTATE_CHARGING\fP, \fBSDL_POWERSTATE_CHARGED\fP }
+.RI "\fIThe basic state for the system's power supply\&. \fP""
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_PowerState\fP \fBSDLCALL\fP \fBSDL_GetPowerInfo\fP (\fBint\fP *secs, \fBint\fP *pct)"
+.br
+.RI "\fIGet the current power supply details\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Header for the SDL power management routines\&. 
+.PP
+Définition dans le fichier \fBSDL_power\&.h\fP\&.
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBSDL_PowerState\fP"
+
+.PP
+The basic state for the system's power supply\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fISDL_POWERSTATE_UNKNOWN \fP\fP
+cannot determine power status 
+.TP
+\fB\fISDL_POWERSTATE_ON_BATTERY \fP\fP
+Not plugged in, running on the battery 
+.TP
+\fB\fISDL_POWERSTATE_NO_BATTERY \fP\fP
+Plugged in, no battery available 
+.TP
+\fB\fISDL_POWERSTATE_CHARGING \fP\fP
+Plugged in, charging battery 
+.TP
+\fB\fISDL_POWERSTATE_CHARGED \fP\fP
+Plugged in, battery charged 
+.PP
+Définition à la ligne 42 du fichier SDL_power\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBSDL_PowerState\fP \fBSDLCALL\fP SDL_GetPowerInfo (\fBint\fP * secs, \fBint\fP * pct)"
+
+.PP
+Get the current power supply details\&. 
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsecs\fP Seconds of battery life left\&. You can pass a NULL here if you don't care\&. Will return -1 if we can't determine a value, or we're not running on a battery\&.
+.br
+\fIpct\fP Percentage of battery life left, between 0 and 100\&. You can pass a NULL here if you don't care\&. Will return -1 if we can't determine a value, or we're not running on a battery\&.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The state of the battery (if any)\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

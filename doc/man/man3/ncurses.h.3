@@ -1,0 +1,3454 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/ncurses.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/ncurses/include/ncurses.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ncurses/ncurses_dll\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <ncurses/unctrl\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_win_st\fP"
+.br
+.ti -1c
+.RI "struct \fB_win_st::pdat\fP"
+.br
+.ti -1c
+.RI "struct \fBMEVENT\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCURSES\fP   1"
+.br
+.ti -1c
+.RI "#define \fBCURSES_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_VERSION_MAJOR\fP   6"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_VERSION_PATCH\fP   20150808"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_VERSION\fP   '6\&.0'"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_MOUSE_VERSION\fP   2"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_ENABLE_STDBOOL_H\fP   1"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_ATTR_T\fP   \fBint\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_CONST\fP   \fBconst\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_INLINE\fP   inline"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_COLOR_T\fP   short"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_PAIRS_T\fP   short"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_OPAQUE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_REENTRANT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_INTEROP_FUNCS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_SIZE_T\fP   short"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_TPARM_VARARGS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_TPARM_ARG\fP   intptr_t"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_CH_T\fP   \fBchtype\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_WIDECHAR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTRUE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBFALSE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_BOOL\fP   \fBbool\fP"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_CAST\fP(\fBtype\fP,  \fBvalue\fP)   (\fBtype\fP)(\fBvalue\fP)"
+.br
+.ti -1c
+.RI "#define \fBWA_ATTRIBUTES\fP   \fBA_ATTRIBUTES\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_NORMAL\fP   \fBA_NORMAL\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_STANDOUT\fP   \fBA_STANDOUT\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_UNDERLINE\fP   \fBA_UNDERLINE\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_REVERSE\fP   \fBA_REVERSE\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_BLINK\fP   \fBA_BLINK\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_DIM\fP   \fBA_DIM\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_BOLD\fP   \fBA_BOLD\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_ALTCHARSET\fP   \fBA_ALTCHARSET\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_INVIS\fP   \fBA_INVIS\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_PROTECT\fP   \fBA_PROTECT\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_HORIZONTAL\fP   \fBA_HORIZONTAL\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_LEFT\fP   \fBA_LEFT\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_LOW\fP   \fBA_LOW\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_RIGHT\fP   \fBA_RIGHT\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_TOP\fP   \fBA_TOP\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_VERTICAL\fP   \fBA_VERTICAL\fP"
+.br
+.ti -1c
+.RI "#define \fBWA_ITALIC\fP   \fBA_ITALIC\fP	/* ncurses extension */"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_BLACK\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_RED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_GREEN\fP   2"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_YELLOW\fP   3"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_BLUE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_MAGENTA\fP   5"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_CYAN\fP   6"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_WHITE\fP   7"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_ACS\fP(\fBc\fP)   (acs_map[\fBNCURSES_CAST\fP(unsigned char,(\fBc\fP))])"
+.br
+.ti -1c
+.RI "#define \fBACS_ULCORNER\fP   \fBNCURSES_ACS\fP('l') /* upper \fBleft\fP corner */"
+.br
+.ti -1c
+.RI "#define \fBACS_LLCORNER\fP   \fBNCURSES_ACS\fP('\fBm\fP') /* lower \fBleft\fP corner */"
+.br
+.ti -1c
+.RI "#define \fBACS_URCORNER\fP   \fBNCURSES_ACS\fP('k') /* upper \fBright\fP corner */"
+.br
+.ti -1c
+.RI "#define \fBACS_LRCORNER\fP   \fBNCURSES_ACS\fP('j') /* lower \fBright\fP corner */"
+.br
+.ti -1c
+.RI "#define \fBACS_LTEE\fP   \fBNCURSES_ACS\fP('\fBt\fP') /* tee pointing \fBright\fP */"
+.br
+.ti -1c
+.RI "#define \fBACS_RTEE\fP   \fBNCURSES_ACS\fP('u') /* tee pointing \fBleft\fP */"
+.br
+.ti -1c
+.RI "#define \fBACS_BTEE\fP   \fBNCURSES_ACS\fP('\fBv\fP') /* tee pointing up */"
+.br
+.ti -1c
+.RI "#define \fBACS_TTEE\fP   \fBNCURSES_ACS\fP('\fBw\fP') /* tee pointing down */"
+.br
+.ti -1c
+.RI "#define \fBACS_HLINE\fP   \fBNCURSES_ACS\fP('\fBq\fP') /* horizontal line */"
+.br
+.ti -1c
+.RI "#define \fBACS_VLINE\fP   \fBNCURSES_ACS\fP('\fBx\fP') /* vertical line */"
+.br
+.ti -1c
+.RI "#define \fBACS_PLUS\fP   \fBNCURSES_ACS\fP('\fBn\fP') /* large plus or crossover */"
+.br
+.ti -1c
+.RI "#define \fBACS_S1\fP   \fBNCURSES_ACS\fP('o') /* scan line 1 */"
+.br
+.ti -1c
+.RI "#define \fBACS_S9\fP   \fBNCURSES_ACS\fP('\fBs\fP') /* scan line 9 */"
+.br
+.ti -1c
+.RI "#define \fBACS_DIAMOND\fP   \fBNCURSES_ACS\fP('`') /* diamond */"
+.br
+.ti -1c
+.RI "#define \fBACS_CKBOARD\fP   \fBNCURSES_ACS\fP('\fBa\fP') /* checker board (stipple) */"
+.br
+.ti -1c
+.RI "#define \fBACS_DEGREE\fP   \fBNCURSES_ACS\fP('\fBf\fP') /* degree symbol */"
+.br
+.ti -1c
+.RI "#define \fBACS_PLMINUS\fP   \fBNCURSES_ACS\fP('\fBg\fP') /* plus/minus */"
+.br
+.ti -1c
+.RI "#define \fBACS_BULLET\fP   \fBNCURSES_ACS\fP('~') /* bullet */"
+.br
+.ti -1c
+.RI "#define \fBACS_LARROW\fP   \fBNCURSES_ACS\fP(',') /* arrow pointing \fBleft\fP */"
+.br
+.ti -1c
+.RI "#define \fBACS_RARROW\fP   \fBNCURSES_ACS\fP('+') /* arrow pointing \fBright\fP */"
+.br
+.ti -1c
+.RI "#define \fBACS_DARROW\fP   \fBNCURSES_ACS\fP('\&.') /* arrow pointing down */"
+.br
+.ti -1c
+.RI "#define \fBACS_UARROW\fP   \fBNCURSES_ACS\fP('\-') /* arrow pointing up */"
+.br
+.ti -1c
+.RI "#define \fBACS_BOARD\fP   \fBNCURSES_ACS\fP('\fBh\fP') /* board of squares */"
+.br
+.ti -1c
+.RI "#define \fBACS_LANTERN\fP   \fBNCURSES_ACS\fP('i') /* lantern symbol */"
+.br
+.ti -1c
+.RI "#define \fBACS_BLOCK\fP   \fBNCURSES_ACS\fP('0') /* solid square block */"
+.br
+.ti -1c
+.RI "#define \fBACS_S3\fP   \fBNCURSES_ACS\fP('\fBp\fP') /* scan line 3 */"
+.br
+.ti -1c
+.RI "#define \fBACS_S7\fP   \fBNCURSES_ACS\fP('\fBr\fP') /* scan line 7 */"
+.br
+.ti -1c
+.RI "#define \fBACS_LEQUAL\fP   \fBNCURSES_ACS\fP('\fBy\fP') /* less/equal */"
+.br
+.ti -1c
+.RI "#define \fBACS_GEQUAL\fP   \fBNCURSES_ACS\fP('\fBz\fP') /* greater/equal */"
+.br
+.ti -1c
+.RI "#define \fBACS_PI\fP   \fBNCURSES_ACS\fP('{') /* Pi */"
+.br
+.ti -1c
+.RI "#define \fBACS_NEQUAL\fP   \fBNCURSES_ACS\fP('|') /* not equal */"
+.br
+.ti -1c
+.RI "#define \fBACS_STERLING\fP   \fBNCURSES_ACS\fP('}') /* UK pound sign */"
+.br
+.ti -1c
+.RI "#define \fBACS_BSSB\fP   \fBACS_ULCORNER\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SSBB\fP   \fBACS_LLCORNER\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_BBSS\fP   \fBACS_URCORNER\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SBBS\fP   \fBACS_LRCORNER\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SBSS\fP   \fBACS_RTEE\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SSSB\fP   \fBACS_LTEE\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SSBS\fP   \fBACS_BTEE\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_BSSS\fP   \fBACS_TTEE\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_BSBS\fP   \fBACS_HLINE\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SBSB\fP   \fBACS_VLINE\fP"
+.br
+.ti -1c
+.RI "#define \fBACS_SSSS\fP   \fBACS_PLUS\fP"
+.br
+.ti -1c
+.RI "#define \fBERR\fP   (\-1)"
+.br
+.ti -1c
+.RI "#define \fBOK\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fB_SUBWIN\fP   0x01	/* is this a sub\-window? */"
+.br
+.ti -1c
+.RI "#define \fB_ENDLINE\fP   0x02	/* is the window flush right? */"
+.br
+.ti -1c
+.RI "#define \fB_FULLWIN\fP   0x04	/* is the window full\-screen? */"
+.br
+.ti -1c
+.RI "#define \fB_SCROLLWIN\fP   0x08	/* bottom edge is at screen bottom? */"
+.br
+.ti -1c
+.RI "#define \fB_ISPAD\fP   0x10	/* is this window a pad? */"
+.br
+.ti -1c
+.RI "#define \fB_HASMOVED\fP   0x20	/* has cursor moved since last refresh? */"
+.br
+.ti -1c
+.RI "#define \fB_WRAPPED\fP   0x40	/* cursor was just wrappped */"
+.br
+.ti -1c
+.RI "#define \fB_NOCHANGE\fP   \-1"
+.br
+.ti -1c
+.RI "#define \fB_NEWINDEX\fP   \-1"
+.br
+.ti -1c
+.RI "#define \fB__attribute__\fP(\fBp\fP)   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBGCC_PRINTFLIKE\fP(fmt,  var)   /*nothing*/"
+.br
+.ti -1c
+.RI "#define \fBGCC_SCANFLIKE\fP(fmt,  var)   /*nothing*/"
+.br
+.ti -1c
+.RI "#define \fBGCC_NORETURN\fP   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBGCC_UNUSED\fP   /* nothing */"
+.br
+.ti -1c
+.RI "#define \fBvid_attr\fP(\fBa\fP,  pair,  opts)   vidattr(\fBa\fP)"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_EXT_FUNCS\fP   20150808"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_SP_FUNCS\fP   20150808"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_SP_NAME\fP(\fBname\fP)   \fBname\fP##_sp"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_SP_OUTC\fP   \fBNCURSES_SP_NAME\fP(\fBNCURSES_OUTC\fP)"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_ATTR_SHIFT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_BITS\fP(\fBmask\fP,  shift)   (\fBNCURSES_CAST\fP(\fBchtype\fP,(\fBmask\fP)) << ((shift) + \fBNCURSES_ATTR_SHIFT\fP))"
+.br
+.ti -1c
+.RI "#define \fBA_NORMAL\fP   (1U \- 1U)"
+.br
+.ti -1c
+.RI "#define \fBA_ATTRIBUTES\fP   \fBNCURSES_BITS\fP(~(1U \- 1U),0)"
+.br
+.ti -1c
+.RI "#define \fBA_CHARTEXT\fP   (\fBNCURSES_BITS\fP(1U,0) \- 1U)"
+.br
+.ti -1c
+.RI "#define \fBA_COLOR\fP   \fBNCURSES_BITS\fP(((1U) << 8) \- 1U,0)"
+.br
+.ti -1c
+.RI "#define \fBA_STANDOUT\fP   \fBNCURSES_BITS\fP(1U,8)"
+.br
+.ti -1c
+.RI "#define \fBA_UNDERLINE\fP   \fBNCURSES_BITS\fP(1U,9)"
+.br
+.ti -1c
+.RI "#define \fBA_REVERSE\fP   \fBNCURSES_BITS\fP(1U,10)"
+.br
+.ti -1c
+.RI "#define \fBA_BLINK\fP   \fBNCURSES_BITS\fP(1U,11)"
+.br
+.ti -1c
+.RI "#define \fBA_DIM\fP   \fBNCURSES_BITS\fP(1U,12)"
+.br
+.ti -1c
+.RI "#define \fBA_BOLD\fP   \fBNCURSES_BITS\fP(1U,13)"
+.br
+.ti -1c
+.RI "#define \fBA_ALTCHARSET\fP   \fBNCURSES_BITS\fP(1U,14)"
+.br
+.ti -1c
+.RI "#define \fBA_INVIS\fP   \fBNCURSES_BITS\fP(1U,15)"
+.br
+.ti -1c
+.RI "#define \fBA_PROTECT\fP   \fBNCURSES_BITS\fP(1U,16)"
+.br
+.ti -1c
+.RI "#define \fBA_HORIZONTAL\fP   \fBNCURSES_BITS\fP(1U,17)"
+.br
+.ti -1c
+.RI "#define \fBA_LEFT\fP   \fBNCURSES_BITS\fP(1U,18)"
+.br
+.ti -1c
+.RI "#define \fBA_LOW\fP   \fBNCURSES_BITS\fP(1U,19)"
+.br
+.ti -1c
+.RI "#define \fBA_RIGHT\fP   \fBNCURSES_BITS\fP(1U,20)"
+.br
+.ti -1c
+.RI "#define \fBA_TOP\fP   \fBNCURSES_BITS\fP(1U,21)"
+.br
+.ti -1c
+.RI "#define \fBA_VERTICAL\fP   \fBNCURSES_BITS\fP(1U,22)"
+.br
+.ti -1c
+.RI "#define \fBA_ITALIC\fP   \fBNCURSES_BITS\fP(1U,23)	/* ncurses extension */"
+.br
+.ti -1c
+.RI "#define \fBgetyx\fP(win,  \fBy\fP,  \fBx\fP)   	   (\fBy\fP = \fBgetcury\fP(win), \fBx\fP = \fBgetcurx\fP(win))"
+.br
+.ti -1c
+.RI "#define \fBgetbegyx\fP(win,  \fBy\fP,  \fBx\fP)   (\fBy\fP = \fBgetbegy\fP(win), \fBx\fP = \fBgetbegx\fP(win))"
+.br
+.ti -1c
+.RI "#define \fBgetmaxyx\fP(win,  \fBy\fP,  \fBx\fP)   (\fBy\fP = \fBgetmaxy\fP(win), \fBx\fP = \fBgetmaxx\fP(win))"
+.br
+.ti -1c
+.RI "#define \fBgetparyx\fP(win,  \fBy\fP,  \fBx\fP)   (\fBy\fP = \fBgetpary\fP(win), \fBx\fP = \fBgetparx\fP(win))"
+.br
+.ti -1c
+.RI "#define \fBgetsyx\fP(\fBy\fP,  \fBx\fP)"
+.br
+.ti -1c
+.RI "#define \fBsetsyx\fP(\fBy\fP,  \fBx\fP)"
+.br
+.ti -1c
+.RI "#define \fBwgetstr\fP(\fBw\fP,  \fBs\fP)   wgetnstr(\fBw\fP, \fBs\fP, \-1)"
+.br
+.ti -1c
+.RI "#define \fBgetnstr\fP(\fBs\fP,  \fBn\fP)   wgetnstr(stdscr, \fBs\fP, (\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBsetterm\fP(\fBterm\fP)   setupterm(\fBterm\fP, 1, (\fBint\fP *)0)"
+.br
+.ti -1c
+.RI "#define \fBfixterm\fP()   reset_prog_mode()"
+.br
+.ti -1c
+.RI "#define \fBresetterm\fP()   reset_shell_mode()"
+.br
+.ti -1c
+.RI "#define \fBsaveterm\fP()   def_prog_mode()"
+.br
+.ti -1c
+.RI "#define \fBcrmode\fP()   cbreak()"
+.br
+.ti -1c
+.RI "#define \fBnocrmode\fP()   nocbreak()"
+.br
+.ti -1c
+.RI "#define \fBgettmode\fP()"
+.br
+.ti -1c
+.RI "#define \fBgetattrs\fP(win)   \fBNCURSES_CAST\fP(\fBint\fP, (win) ? (win)\->_attrs : \fBA_NORMAL\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetcurx\fP(win)   ((win) ? (win)\->_curx : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetcury\fP(win)   ((win) ? (win)\->_cury : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetbegx\fP(win)   ((win) ? (win)\->_begx : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetbegy\fP(win)   ((win) ? (win)\->_begy : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetmaxx\fP(win)   ((win) ? ((win)\->_maxx + 1) : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetmaxy\fP(win)   ((win) ? ((win)\->_maxy + 1) : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetparx\fP(win)   ((win) ? (win)\->_parx : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBgetpary\fP(win)   ((win) ? (win)\->_pary : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBwstandout\fP(win)         	   (\fBwattrset\fP(win,\fBA_STANDOUT\fP))"
+.br
+.ti -1c
+.RI "#define \fBwstandend\fP(win)         	   (\fBwattrset\fP(win,\fBA_NORMAL\fP))"
+.br
+.ti -1c
+.RI "#define \fBwattron\fP(win,  at)   wattr_on(win, \fBNCURSES_CAST\fP(\fBattr_t\fP, at), \fBNULL\fP)"
+.br
+.ti -1c
+.RI "#define \fBwattroff\fP(win,  at)   wattr_off(win, \fBNCURSES_CAST\fP(\fBattr_t\fP, at), \fBNULL\fP)"
+.br
+.ti -1c
+.RI "#define \fBwattrset\fP(win,  at)            "
+.br
+.ti -1c
+.RI "#define \fBscroll\fP(win)   wscrl(win,1)"
+.br
+.ti -1c
+.RI "#define \fBtouchwin\fP(win)   wtouchln((win), 0, \fBgetmaxy\fP(win), 1)"
+.br
+.ti -1c
+.RI "#define \fBtouchline\fP(win,  \fBs\fP,  \fBc\fP)   wtouchln((win), \fBs\fP, \fBc\fP, 1)"
+.br
+.ti -1c
+.RI "#define \fBuntouchwin\fP(win)   wtouchln((win), 0, \fBgetmaxy\fP(win), 0)"
+.br
+.ti -1c
+.RI "#define \fBbox\fP(win,  \fBv\fP,  \fBh\fP)   wborder(win, \fBv\fP, \fBv\fP, \fBh\fP, \fBh\fP, 0, 0, 0, 0)"
+.br
+.ti -1c
+.RI "#define \fBborder\fP(ls,  rs,  ts,  bs,  tl,  tr,  bl,  br)   wborder(stdscr, ls, rs, ts, bs, tl, tr, bl, br)"
+.br
+.ti -1c
+.RI "#define \fBhline\fP(ch,  \fBn\fP)   whline(stdscr, ch, (\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBvline\fP(ch,  \fBn\fP)   wvline(stdscr, ch, (\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBwinstr\fP(\fBw\fP,  \fBs\fP)   winnstr(\fBw\fP, \fBs\fP, \-1)"
+.br
+.ti -1c
+.RI "#define \fBwinchstr\fP(\fBw\fP,  \fBs\fP)   winchnstr(\fBw\fP, \fBs\fP, \-1)"
+.br
+.ti -1c
+.RI "#define \fBwinsstr\fP(\fBw\fP,  \fBs\fP)   winsnstr(\fBw\fP, \fBs\fP, \-1)"
+.br
+.ti -1c
+.RI "#define \fBredrawwin\fP(win)   wredrawln(win, 0, ((win) ? (win)\->_maxy+1 : \-1))"
+.br
+.ti -1c
+.RI "#define \fBwaddstr\fP(win,  str)   waddnstr(win,str,\-1)"
+.br
+.ti -1c
+.RI "#define \fBwaddchstr\fP(win,  str)   waddchnstr(win,str,\-1)"
+.br
+.ti -1c
+.RI "#define \fBCOLOR_PAIR\fP(\fBn\fP)   \fBNCURSES_BITS\fP((\fBn\fP), 0)"
+.br
+.ti -1c
+.RI "#define \fBPAIR_NUMBER\fP(\fBa\fP)   (\fBNCURSES_CAST\fP(\fBint\fP,((\fBNCURSES_CAST\fP(unsigned long,(\fBa\fP)) & \fBA_COLOR\fP) >> \fBNCURSES_ATTR_SHIFT\fP)))"
+.br
+.ti -1c
+.RI "#define \fBaddch\fP(ch)   waddch(stdscr,(ch))"
+.br
+.ti -1c
+.RI "#define \fBaddchnstr\fP(str,  \fBn\fP)   waddchnstr(stdscr,(str),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBaddchstr\fP(str)   \fBwaddchstr\fP(stdscr,(str))"
+.br
+.ti -1c
+.RI "#define \fBaddnstr\fP(str,  \fBn\fP)   waddnstr(stdscr,(str),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBaddstr\fP(str)   waddnstr(stdscr,(str),\-1)"
+.br
+.ti -1c
+.RI "#define \fBattroff\fP(at)   \fBwattroff\fP(stdscr,(at))"
+.br
+.ti -1c
+.RI "#define \fBattron\fP(at)   \fBwattron\fP(stdscr,(at))"
+.br
+.ti -1c
+.RI "#define \fBattrset\fP(at)   \fBwattrset\fP(stdscr,(at))"
+.br
+.ti -1c
+.RI "#define \fBattr_get\fP(ap,  cp,  o)   \fBwattr_get\fP(stdscr,(ap),(cp),(o))"
+.br
+.ti -1c
+.RI "#define \fBattr_off\fP(\fBa\fP,  o)   wattr_off(stdscr,(\fBa\fP),(o))"
+.br
+.ti -1c
+.RI "#define \fBattr_on\fP(\fBa\fP,  o)   wattr_on(stdscr,(\fBa\fP),(o))"
+.br
+.ti -1c
+.RI "#define \fBattr_set\fP(\fBa\fP,  \fBc\fP,  o)   \fBwattr_set\fP(stdscr,(\fBa\fP),(\fBc\fP),(o))"
+.br
+.ti -1c
+.RI "#define \fBbkgd\fP(ch)   wbkgd(stdscr,(ch))"
+.br
+.ti -1c
+.RI "#define \fBbkgdset\fP(ch)   wbkgdset(stdscr,(ch))"
+.br
+.ti -1c
+.RI "#define \fBchgat\fP(\fBn\fP,  \fBa\fP,  \fBc\fP,  o)   wchgat(stdscr,(\fBn\fP),(\fBa\fP),(\fBc\fP),(o))"
+.br
+.ti -1c
+.RI "#define \fBclear\fP()   wclear(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBclrtobot\fP()   wclrtobot(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBclrtoeol\fP()   wclrtoeol(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBcolor_set\fP(\fBc\fP,  o)   wcolor_set(stdscr,(\fBc\fP),(o))"
+.br
+.ti -1c
+.RI "#define \fBdelch\fP()   wdelch(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBdeleteln\fP()   winsdelln(stdscr,\-1)"
+.br
+.ti -1c
+.RI "#define \fBechochar\fP(\fBc\fP)   wechochar(stdscr,(\fBc\fP))"
+.br
+.ti -1c
+.RI "#define \fBerase\fP()   werase(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBgetch\fP()   wgetch(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBgetstr\fP(str)   \fBwgetstr\fP(stdscr,(str))"
+.br
+.ti -1c
+.RI "#define \fBinch\fP()   winch(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBinchnstr\fP(\fBs\fP,  \fBn\fP)   winchnstr(stdscr,(\fBs\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBinchstr\fP(\fBs\fP)   \fBwinchstr\fP(stdscr,(\fBs\fP))"
+.br
+.ti -1c
+.RI "#define \fBinnstr\fP(\fBs\fP,  \fBn\fP)   winnstr(stdscr,(\fBs\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBinsch\fP(\fBc\fP)   winsch(stdscr,(\fBc\fP))"
+.br
+.ti -1c
+.RI "#define \fBinsdelln\fP(\fBn\fP)   winsdelln(stdscr,(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBinsertln\fP()   winsdelln(stdscr,1)"
+.br
+.ti -1c
+.RI "#define \fBinsnstr\fP(\fBs\fP,  \fBn\fP)   winsnstr(stdscr,(\fBs\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBinsstr\fP(\fBs\fP)   \fBwinsstr\fP(stdscr,(\fBs\fP))"
+.br
+.ti -1c
+.RI "#define \fBinstr\fP(\fBs\fP)   \fBwinstr\fP(stdscr,(\fBs\fP))"
+.br
+.ti -1c
+.RI "#define \fBmove\fP(\fBy\fP,  \fBx\fP)   wmove(stdscr,(\fBy\fP),(\fBx\fP))"
+.br
+.ti -1c
+.RI "#define \fBrefresh\fP()   wrefresh(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBscrl\fP(\fBn\fP)   wscrl(stdscr,(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBsetscrreg\fP(\fBt\fP,  \fBb\fP)   wsetscrreg(stdscr,(\fBt\fP),(\fBb\fP))"
+.br
+.ti -1c
+.RI "#define \fBstandend\fP()   \fBwstandend\fP(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBstandout\fP()   \fBwstandout\fP(stdscr)"
+.br
+.ti -1c
+.RI "#define \fBtimeout\fP(delay)   wtimeout(stdscr,(delay))"
+.br
+.ti -1c
+.RI "#define \fBwdeleteln\fP(win)   winsdelln(win,\-1)"
+.br
+.ti -1c
+.RI "#define \fBwinsertln\fP(win)   winsdelln(win,1)"
+.br
+.ti -1c
+.RI "#define \fBmvwaddch\fP(win,  \fBy\fP,  \fBx\fP,  ch)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddch((win),(ch)))"
+.br
+.ti -1c
+.RI "#define \fBmvwaddchnstr\fP(win,  \fBy\fP,  \fBx\fP,  str,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddchnstr((win),(str),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwaddchstr\fP(win,  \fBy\fP,  \fBx\fP,  str)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddchnstr((win),(str),\-1))"
+.br
+.ti -1c
+.RI "#define \fBmvwaddnstr\fP(win,  \fBy\fP,  \fBx\fP,  str,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddnstr((win),(str),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwaddstr\fP(win,  \fBy\fP,  \fBx\fP,  str)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddnstr((win),(str),\-1))"
+.br
+.ti -1c
+.RI "#define \fBmvwdelch\fP(win,  \fBy\fP,  \fBx\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wdelch(win))"
+.br
+.ti -1c
+.RI "#define \fBmvwchgat\fP(win,  \fBy\fP,  \fBx\fP,  \fBn\fP,  \fBa\fP,  \fBc\fP,  o)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wchgat((win),(\fBn\fP),(\fBa\fP),(\fBc\fP),(o)))"
+.br
+.ti -1c
+.RI "#define \fBmvwgetch\fP(win,  \fBy\fP,  \fBx\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wgetch(win))"
+.br
+.ti -1c
+.RI "#define \fBmvwgetnstr\fP(win,  \fBy\fP,  \fBx\fP,  str,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wgetnstr((win),(str),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwgetstr\fP(win,  \fBy\fP,  \fBx\fP,  str)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwgetstr\fP((win),(str)))"
+.br
+.ti -1c
+.RI "#define \fBmvwhline\fP(win,  \fBy\fP,  \fBx\fP,  \fBc\fP,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : whline((win),(\fBc\fP),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinch\fP(win,  \fBy\fP,  \fBx\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBNCURSES_CAST\fP(\fBchtype\fP, \fBERR\fP) : winch(win))"
+.br
+.ti -1c
+.RI "#define \fBmvwinchnstr\fP(win,  \fBy\fP,  \fBx\fP,  \fBs\fP,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winchnstr((win),(\fBs\fP),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinchstr\fP(win,  \fBy\fP,  \fBx\fP,  \fBs\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwinchstr\fP((win),(\fBs\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinnstr\fP(win,  \fBy\fP,  \fBx\fP,  \fBs\fP,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winnstr((win),(\fBs\fP),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinsch\fP(win,  \fBy\fP,  \fBx\fP,  \fBc\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winsch((win),(\fBc\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinsnstr\fP(win,  \fBy\fP,  \fBx\fP,  \fBs\fP,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winsnstr((win),(\fBs\fP),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinsstr\fP(win,  \fBy\fP,  \fBx\fP,  \fBs\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwinsstr\fP((win),(\fBs\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwinstr\fP(win,  \fBy\fP,  \fBx\fP,  \fBs\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwinstr\fP((win),(\fBs\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvwvline\fP(win,  \fBy\fP,  \fBx\fP,  \fBc\fP,  \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wvline((win),(\fBc\fP),(\fBn\fP)))"
+.br
+.ti -1c
+.RI "#define \fBmvaddch\fP(\fBy\fP,  \fBx\fP,  ch)   \fBmvwaddch\fP(stdscr,(\fBy\fP),(\fBx\fP),(ch))"
+.br
+.ti -1c
+.RI "#define \fBmvaddchnstr\fP(\fBy\fP,  \fBx\fP,  str,  \fBn\fP)   \fBmvwaddchnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvaddchstr\fP(\fBy\fP,  \fBx\fP,  str)   \fBmvwaddchstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str))"
+.br
+.ti -1c
+.RI "#define \fBmvaddnstr\fP(\fBy\fP,  \fBx\fP,  str,  \fBn\fP)   \fBmvwaddnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvaddstr\fP(\fBy\fP,  \fBx\fP,  str)   \fBmvwaddstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str))"
+.br
+.ti -1c
+.RI "#define \fBmvchgat\fP(\fBy\fP,  \fBx\fP,  \fBn\fP,  \fBa\fP,  \fBc\fP,  o)   \fBmvwchgat\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBn\fP),(\fBa\fP),(\fBc\fP),(o))"
+.br
+.ti -1c
+.RI "#define \fBmvdelch\fP(\fBy\fP,  \fBx\fP)   \fBmvwdelch\fP(stdscr,(\fBy\fP),(\fBx\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvgetch\fP(\fBy\fP,  \fBx\fP)   \fBmvwgetch\fP(stdscr,(\fBy\fP),(\fBx\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvgetnstr\fP(\fBy\fP,  \fBx\fP,  str,  \fBn\fP)   \fBmvwgetnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvgetstr\fP(\fBy\fP,  \fBx\fP,  str)   \fBmvwgetstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str))"
+.br
+.ti -1c
+.RI "#define \fBmvhline\fP(\fBy\fP,  \fBx\fP,  \fBc\fP,  \fBn\fP)   \fBmvwhline\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBc\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinch\fP(\fBy\fP,  \fBx\fP)   \fBmvwinch\fP(stdscr,(\fBy\fP),(\fBx\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinchnstr\fP(\fBy\fP,  \fBx\fP,  \fBs\fP,  \fBn\fP)   \fBmvwinchnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinchstr\fP(\fBy\fP,  \fBx\fP,  \fBs\fP)   \fBmvwinchstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinnstr\fP(\fBy\fP,  \fBx\fP,  \fBs\fP,  \fBn\fP)   \fBmvwinnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinsch\fP(\fBy\fP,  \fBx\fP,  \fBc\fP)   \fBmvwinsch\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBc\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinsnstr\fP(\fBy\fP,  \fBx\fP,  \fBs\fP,  \fBn\fP)   \fBmvwinsnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinsstr\fP(\fBy\fP,  \fBx\fP,  \fBs\fP)   \fBmvwinsstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvinstr\fP(\fBy\fP,  \fBx\fP,  \fBs\fP)   \fBmvwinstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP))"
+.br
+.ti -1c
+.RI "#define \fBmvvline\fP(\fBy\fP,  \fBx\fP,  \fBc\fP,  \fBn\fP)   \fBmvwvline\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBc\fP),(\fBn\fP))"
+.br
+.ti -1c
+.RI "#define \fBgetbkgd\fP(win)                                       ((win) ? ((win)\->_bkgd) : 0)"
+.br
+.ti -1c
+.RI "#define \fBslk_attr_off\fP(\fBa\fP,  \fBv\fP)   ((\fBv\fP) ? \fBERR\fP : slk_attroff(\fBa\fP))"
+.br
+.ti -1c
+.RI "#define \fBslk_attr_on\fP(\fBa\fP,  \fBv\fP)   ((\fBv\fP) ? \fBERR\fP : slk_attron(\fBa\fP))"
+.br
+.ti -1c
+.RI "#define \fBwattr_set\fP(win,  \fBa\fP,  \fBp\fP,  opts)"
+.br
+.ti -1c
+.RI "#define \fBwattr_get\fP(win,  \fBa\fP,  \fBp\fP,  opts)"
+.br
+.ti -1c
+.RI "#define \fBvw_printw\fP   vwprintw"
+.br
+.ti -1c
+.RI "#define \fBvw_scanw\fP   vwscanw"
+.br
+.ti -1c
+.RI "#define \fBis_cleared\fP(win)   ((win) ? (win)\->_clear : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_idcok\fP(win)   ((win) ? (win)\->_idcok : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_idlok\fP(win)   ((win) ? (win)\->_idlok : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_immedok\fP(win)   ((win) ? (win)\->_immed : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_keypad\fP(win)   ((win) ? (win)\->_use_keypad : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_leaveok\fP(win)   ((win) ? (win)\->_leaveok : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_nodelay\fP(win)   ((win) ? ((win)\->_delay == 0) : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_notimeout\fP(win)   ((win) ? (win)\->_notimeout : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_pad\fP(win)   ((win) ? ((win)\->_flags & \fB_ISPAD\fP) != 0 : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_scrollok\fP(win)   ((win) ? (win)\->_scroll : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_subwin\fP(win)   ((win) ? ((win)\->_flags & \fB_SUBWIN\fP) != 0 : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBis_syncok\fP(win)   ((win) ? (win)\->_sync : \fBFALSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBwgetdelay\fP(win)   ((win) ? (win)\->_delay : 0)"
+.br
+.ti -1c
+.RI "#define \fBwgetparent\fP(win)   ((win) ? (win)\->_parent : 0)"
+.br
+.ti -1c
+.RI "#define \fBwgetscrreg\fP(win,  \fBt\fP,  \fBb\fP)   ((win) ? (*(\fBt\fP) = (win)\->_regtop, *(\fBb\fP) = (win)\->_regbottom, \fBOK\fP) : \fBERR\fP)"
+.br
+.ti -1c
+.RI "#define \fBKEY_CODE_YES\fP   0400		/* A wchar_t contains \fBa\fP key code */"
+.br
+.ti -1c
+.RI "#define \fBKEY_MIN\fP   0401		/* Minimum curses key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_BREAK\fP   0401		/* Break key (unreliable) */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SRESET\fP   0530		/* Soft (partial) \fBreset\fP (unreliable) */"
+.br
+.ti -1c
+.RI "#define \fBKEY_RESET\fP   0531		/* Reset or hard \fBreset\fP (unreliable) */"
+.br
+.ti -1c
+.RI "#define \fBKEY_DOWN\fP   0402		/* down\-arrow key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_UP\fP   0403		/* up\-arrow key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_LEFT\fP   0404		/* \fBleft\fP\-arrow key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_RIGHT\fP   0405		/* \fBright\fP\-arrow key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_HOME\fP   0406		/* home key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_BACKSPACE\fP   0407		/* backspace key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_F0\fP   0410		/* Function keys\&.  Space for 64 */"
+.br
+.ti -1c
+.RI "#define \fBKEY_F\fP(\fBn\fP)   (\fBKEY_F0\fP+(\fBn\fP))	/* Value of function key \fBn\fP */"
+.br
+.ti -1c
+.RI "#define \fBKEY_DL\fP   0510		/* delete\-line key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_IL\fP   0511		/* insert\-line key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_DC\fP   0512		/* delete\-character key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_IC\fP   0513		/* insert\-character key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_EIC\fP   0514		/* sent \fBby\fP rmir or smir \fBin\fP insert \fBmode\fP */"
+.br
+.ti -1c
+.RI "#define \fBKEY_CLEAR\fP   0515		/* \fBclear\fP\-screen or \fBerase\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_EOS\fP   0516		/* \fBclear\fP\-to\-\fBend\fP\-of\-screen key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_EOL\fP   0517		/* \fBclear\fP\-to\-\fBend\fP\-of\-line key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SF\fP   0520		/* \fBscroll\fP\-forward key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SR\fP   0521		/* \fBscroll\fP\-backward key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_NPAGE\fP   0522		/* next\-page key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_PPAGE\fP   0523		/* previous\-page key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_STAB\fP   0524		/* set\-\fBtab\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_CTAB\fP   0525		/* \fBclear\fP\-\fBtab\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_CATAB\fP   0526		/* \fBclear\fP\-all\-tabs key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_ENTER\fP   0527		/* enter/send key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_PRINT\fP   0532		/* print key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_LL\fP   0533		/* lower\-\fBleft\fP key (home down) */"
+.br
+.ti -1c
+.RI "#define \fBKEY_A1\fP   0534		/* upper \fBleft\fP of keypad */"
+.br
+.ti -1c
+.RI "#define \fBKEY_A3\fP   0535		/* upper \fBright\fP of keypad */"
+.br
+.ti -1c
+.RI "#define \fBKEY_B2\fP   0536		/* center of keypad */"
+.br
+.ti -1c
+.RI "#define \fBKEY_C1\fP   0537		/* lower \fBleft\fP of keypad */"
+.br
+.ti -1c
+.RI "#define \fBKEY_C3\fP   0540		/* lower \fBright\fP of keypad */"
+.br
+.ti -1c
+.RI "#define \fBKEY_BTAB\fP   0541		/* back\-\fBtab\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_BEG\fP   0542		/* begin key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_CANCEL\fP   0543		/* cancel key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_CLOSE\fP   0544		/* close key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_COMMAND\fP   0545		/* command key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_COPY\fP   0546		/* copy key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_CREATE\fP   0547		/* create key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_END\fP   0550		/* \fBend\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_EXIT\fP   0551		/* \fBexit\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_FIND\fP   0552		/* find key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_HELP\fP   0553		/* help key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_MARK\fP   0554		/* mark key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_MESSAGE\fP   0555		/* \fBmessage\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_MOVE\fP   0556		/* \fBmove\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_NEXT\fP   0557		/* next key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_OPEN\fP   0560		/* open key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_OPTIONS\fP   0561		/* options key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_PREVIOUS\fP   0562		/* previous key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_REDO\fP   0563		/* redo key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_REFERENCE\fP   0564		/* \fBreference\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_REFRESH\fP   0565		/* \fBrefresh\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_REPLACE\fP   0566		/* replace key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_RESTART\fP   0567		/* restart key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_RESUME\fP   0570		/* resume key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SAVE\fP   0571		/* save key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SBEG\fP   0572		/* shifted begin key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SCANCEL\fP   0573		/* shifted cancel key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SCOMMAND\fP   0574		/* shifted command key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SCOPY\fP   0575		/* shifted copy key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SCREATE\fP   0576		/* shifted create key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SDC\fP   0577		/* shifted delete\-character key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SDL\fP   0600		/* shifted delete\-line key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SELECT\fP   0601		/* select key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SEND\fP   0602		/* shifted \fBend\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SEOL\fP   0603		/* shifted \fBclear\fP\-to\-\fBend\fP\-of\-line key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SEXIT\fP   0604		/* shifted \fBexit\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SFIND\fP   0605		/* shifted find key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SHELP\fP   0606		/* shifted help key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SHOME\fP   0607		/* shifted home key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SIC\fP   0610		/* shifted insert\-character key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SLEFT\fP   0611		/* shifted \fBleft\fP\-arrow key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SMESSAGE\fP   0612		/* shifted \fBmessage\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SMOVE\fP   0613		/* shifted \fBmove\fP key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SNEXT\fP   0614		/* shifted next key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SOPTIONS\fP   0615		/* shifted options key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SPREVIOUS\fP   0616		/* shifted previous key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SPRINT\fP   0617		/* shifted print key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SREDO\fP   0620		/* shifted redo key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SREPLACE\fP   0621		/* shifted replace key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SRIGHT\fP   0622		/* shifted \fBright\fP\-arrow key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SRSUME\fP   0623		/* shifted resume key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SSAVE\fP   0624		/* shifted save key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SSUSPEND\fP   0625		/* shifted suspend key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SUNDO\fP   0626		/* shifted undo key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_SUSPEND\fP   0627		/* suspend key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_UNDO\fP   0630		/* undo key */"
+.br
+.ti -1c
+.RI "#define \fBKEY_MOUSE\fP   0631		/* Mouse \fBevent\fP has occurred */"
+.br
+.ti -1c
+.RI "#define \fBKEY_RESIZE\fP   0632		/* Terminal resize \fBevent\fP */"
+.br
+.ti -1c
+.RI "#define \fBKEY_EVENT\fP   0633		/* We were interrupted \fBby\fP an \fBevent\fP */"
+.br
+.ti -1c
+.RI "#define \fBKEY_MAX\fP   0777		/* Maximum key \fBvalue\fP is 0633 */"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_MOUSE_MASK\fP(\fBb\fP,  \fBm\fP)   ((\fBm\fP) << (((\fBb\fP) \- 1) * 5))"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_BUTTON_RELEASED\fP   001L"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_BUTTON_PRESSED\fP   002L"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_BUTTON_CLICKED\fP   004L"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_DOUBLE_CLICKED\fP   010L"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_TRIPLE_CLICKED\fP   020L"
+.br
+.ti -1c
+.RI "#define \fBNCURSES_RESERVED_EVENT\fP   040L"
+.br
+.ti -1c
+.RI "#define \fBBUTTON1_RELEASED\fP   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_BUTTON_RELEASED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON1_PRESSED\fP   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_BUTTON_PRESSED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON1_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_BUTTON_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON1_DOUBLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_DOUBLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON1_TRIPLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_TRIPLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON2_RELEASED\fP   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_BUTTON_RELEASED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON2_PRESSED\fP   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_BUTTON_PRESSED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON2_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_BUTTON_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON2_DOUBLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_DOUBLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON2_TRIPLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_TRIPLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON3_RELEASED\fP   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_BUTTON_RELEASED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON3_PRESSED\fP   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_BUTTON_PRESSED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON3_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_BUTTON_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON3_DOUBLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_DOUBLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON3_TRIPLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_TRIPLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON4_RELEASED\fP   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_BUTTON_RELEASED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON4_PRESSED\fP   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_BUTTON_PRESSED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON4_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_BUTTON_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON4_DOUBLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_DOUBLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON4_TRIPLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_TRIPLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON5_RELEASED\fP   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_BUTTON_RELEASED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON5_PRESSED\fP   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_BUTTON_PRESSED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON5_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_BUTTON_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON5_DOUBLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_DOUBLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON5_TRIPLE_CLICKED\fP   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_TRIPLE_CLICKED\fP)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_CTRL\fP   \fBNCURSES_MOUSE_MASK\fP(6, 0001L)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_SHIFT\fP   \fBNCURSES_MOUSE_MASK\fP(6, 0002L)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_ALT\fP   \fBNCURSES_MOUSE_MASK\fP(6, 0004L)"
+.br
+.ti -1c
+.RI "#define \fBREPORT_MOUSE_POSITION\fP   \fBNCURSES_MOUSE_MASK\fP(6, 0010L)"
+.br
+.ti -1c
+.RI "#define \fBALL_MOUSE_EVENTS\fP   (\fBREPORT_MOUSE_POSITION\fP \- 1)"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_RELEASE\fP(e,  \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 001))"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_PRESS\fP(e,  \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 002))"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_CLICK\fP(e,  \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 004))"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_DOUBLE_CLICK\fP(e,  \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 010))"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_TRIPLE_CLICK\fP(e,  \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 020))"
+.br
+.ti -1c
+.RI "#define \fBBUTTON_RESERVED_EVENT\fP(e,  \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 040))"
+.br
+.ti -1c
+.RI "#define \fBmouse_trafo\fP(\fBy\fP,  \fBx\fP,  to_screen)   wmouse_trafo(stdscr,\fBy\fP,\fBx\fP,to_screen)"
+.br
+.ti -1c
+.RI "#define \fB_tracech_t\fP   _tracechtype"
+.br
+.ti -1c
+.RI "#define \fB_tracech_t2\fP   _tracechtype2"
+.br
+.ti -1c
+.RI "#define \fBTRACE_DISABLE\fP   0x0000	/* turn off tracing */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_TIMES\fP   0x0001	/* trace user and system times of updates */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_TPUTS\fP   0x0002	/* trace tputs calls */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_UPDATE\fP   0x0004	/* trace update actions, old & new screens */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_MOVE\fP   0x0008	/* trace cursor moves and scrolls */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_CHARPUT\fP   0x0010	/* trace all character outputs */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_ORDINARY\fP   0x001F	/* trace all update actions */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_CALLS\fP   0x0020	/* trace all curses calls */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_VIRTPUT\fP   0x0040	/* trace virtual character puts */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_IEVENT\fP   0x0080	/* trace low\-level input processing */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_BITS\fP   0x0100	/* trace state of TTY control bits */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_ICALLS\fP   0x0200	/* trace internal/nested calls */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_CCALLS\fP   0x0400	/* trace per\-character calls */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_DATABASE\fP   0x0800	/* trace read/write of terminfo/termcap data */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_ATTRS\fP   0x1000	/* trace attribute updates */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_SHIFT\fP   13	/* number of \fBbits\fP \fBin\fP the trace masks */"
+.br
+.ti -1c
+.RI "#define \fBTRACE_MAXIMUM\fP   ((1 << \fBTRACE_SHIFT\fP) \- 1) /* maximum trace \fBlevel\fP */"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef uint32_t \fBchtype\fP"
+.br
+.ti -1c
+.RI "typedef uint32_t \fBmmask_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBNCURSES_BOOL\fP"
+.br
+.ti -1c
+.RI "typedef struct screen \fBSCREEN\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_win_st\fP \fBWINDOW\fP"
+.br
+.ti -1c
+.RI "typedef \fBchtype\fP \fBattr_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBNCURSES_OUTC\fP) (\fBint\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBNCURSES_WINDOW_CB\fP) (\fBWINDOW\fP *, \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBNCURSES_SCREEN_CB\fP) (\fBSCREEN\fP *, \fBvoid\fP *)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBNCURSES_SP_OUTC\fP) (\fBSCREEN\fP *, \fBint\fP)"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBchtype\fP) acs_map[]"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBint\fP) \fBaddch\fP(\fBconst\fP \fBchtype\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBvoid\fP) \fBbkgdset\fP(\fBchtype\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBbool\fP) can_change_color(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBWINDOW\fP *) derwin(\fBWINDOW\fP *"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (char) erasechar(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBchtype\fP) \fBgetbkgd\fP(\fBWINDOW\fP *)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBNCURSES_CONST\fP char *) keyname(\fBint\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (char *) longname(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBconst\fP char char \fBconst\fP char \fBGCC_PRINTFLIKE\fP (3, 4)"
+.br
+.ti -1c
+.RI "\fBNCURSES_CONST\fP char \fBGCC_SCANFLIKE\fP (3, 4)"
+.br
+.ti -1c
+.RI "\fBconst\fP char char \fBconst\fP char \fBGCC_PRINTFLIKE\fP (4, 5)"
+.br
+.ti -1c
+.RI "\fBNCURSES_CONST\fP char \fBGCC_SCANFLIKE\fP (4, 5)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBSCREEN\fP *) new \fBterm\fP(\fBNCURSES_CONST\fP char *"
+.br
+.ti -1c
+.RI "\fBGCC_PRINTFLIKE\fP (1, 2)"
+.br
+.ti -1c
+.RI "\fBGCC_SCANFLIKE\fP (1, 2)"
+.br
+.ti -1c
+.RI "\fBconst\fP char \fBGCC_PRINTFLIKE\fP (2, 3)"
+.br
+.ti -1c
+.RI "\fBNCURSES_CONST\fP char \fBGCC_SCANFLIKE\fP (2, 3)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT\fP (\fBconst\fP char *) curses_version(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBWINDOW\fP *) curscr"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (char) ttytype[]"
+.br
+.ti -1c
+.RI "\fBNCURSES_EXPORT_VAR\fP (\fBint\fP) COLORS"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP"
+.br
+.ti -1c
+.RI "NCURSES_PAIRS_T \fBvoid\fP \fBvoid\fP \fBvoid\fP \fBNCURSES_PAIRS_T\fP"
+.br
+.ti -1c
+.RI "\fBbool\fP"
+.br
+.ti -1c
+.RI "\fBNCURSES_COLOR_T\fP"
+.br
+.ti -1c
+.RI "\fBconst\fP char \fBva_list\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define __attribute__(\fBp\fP)   /* nothing */"
+
+.PP
+Définition à la ligne 527 du fichier ncurses\&.h\&.
+.SS "#define _ENDLINE   0x02	/* is the window flush right? */"
+
+.PP
+Définition à la ligne 345 du fichier ncurses\&.h\&.
+.SS "#define _FULLWIN   0x04	/* is the window full\-screen? */"
+
+.PP
+Définition à la ligne 346 du fichier ncurses\&.h\&.
+.SS "#define _HASMOVED   0x20	/* has cursor moved since last refresh? */"
+
+.PP
+Définition à la ligne 349 du fichier ncurses\&.h\&.
+.SS "#define _ISPAD   0x10	/* is this window a pad? */"
+
+.PP
+Définition à la ligne 348 du fichier ncurses\&.h\&.
+.SS "#define _NEWINDEX   \-1"
+
+.PP
+Définition à la ligne 362 du fichier ncurses\&.h\&.
+.SS "#define _NOCHANGE   \-1"
+
+.PP
+Définition à la ligne 356 du fichier ncurses\&.h\&.
+.SS "#define _SCROLLWIN   0x08	/* bottom edge is at screen bottom? */"
+
+.PP
+Définition à la ligne 347 du fichier ncurses\&.h\&.
+.SS "#define _SUBWIN   0x01	/* is this a sub\-window? */"
+
+.PP
+Définition à la ligne 344 du fichier ncurses\&.h\&.
+.SS "#define _tracech_t   _tracechtype"
+
+.PP
+Définition à la ligne 1659 du fichier ncurses\&.h\&.
+.SS "#define _tracech_t2   _tracechtype2"
+
+.PP
+Définition à la ligne 1660 du fichier ncurses\&.h\&.
+.SS "#define _WRAPPED   0x40	/* cursor was just wrappped */"
+
+.PP
+Définition à la ligne 350 du fichier ncurses\&.h\&.
+.SS "#define A_ALTCHARSET   \fBNCURSES_BITS\fP(1U,14)"
+
+.PP
+Définition à la ligne 1064 du fichier ncurses\&.h\&.
+.SS "#define A_ATTRIBUTES   \fBNCURSES_BITS\fP(~(1U \- 1U),0)"
+
+.PP
+Définition à la ligne 1055 du fichier ncurses\&.h\&.
+.SS "#define A_BLINK   \fBNCURSES_BITS\fP(1U,11)"
+
+.PP
+Définition à la ligne 1061 du fichier ncurses\&.h\&.
+.SS "#define A_BOLD   \fBNCURSES_BITS\fP(1U,13)"
+
+.PP
+Définition à la ligne 1063 du fichier ncurses\&.h\&.
+.SS "#define A_CHARTEXT   (\fBNCURSES_BITS\fP(1U,0) \- 1U)"
+
+.PP
+Définition à la ligne 1056 du fichier ncurses\&.h\&.
+.SS "#define A_COLOR   \fBNCURSES_BITS\fP(((1U) << 8) \- 1U,0)"
+
+.PP
+Définition à la ligne 1057 du fichier ncurses\&.h\&.
+.SS "#define A_DIM   \fBNCURSES_BITS\fP(1U,12)"
+
+.PP
+Définition à la ligne 1062 du fichier ncurses\&.h\&.
+.SS "#define A_HORIZONTAL   \fBNCURSES_BITS\fP(1U,17)"
+
+.PP
+Définition à la ligne 1067 du fichier ncurses\&.h\&.
+.SS "#define A_INVIS   \fBNCURSES_BITS\fP(1U,15)"
+
+.PP
+Définition à la ligne 1065 du fichier ncurses\&.h\&.
+.SS "#define A_ITALIC   \fBNCURSES_BITS\fP(1U,23)	/* ncurses extension */"
+
+.PP
+Définition à la ligne 1075 du fichier ncurses\&.h\&.
+.SS "#define A_LEFT   \fBNCURSES_BITS\fP(1U,18)"
+
+.PP
+Définition à la ligne 1068 du fichier ncurses\&.h\&.
+.SS "#define A_LOW   \fBNCURSES_BITS\fP(1U,19)"
+
+.PP
+Définition à la ligne 1069 du fichier ncurses\&.h\&.
+.SS "#define A_NORMAL   (1U \- 1U)"
+
+.PP
+Définition à la ligne 1054 du fichier ncurses\&.h\&.
+.SS "#define A_PROTECT   \fBNCURSES_BITS\fP(1U,16)"
+
+.PP
+Définition à la ligne 1066 du fichier ncurses\&.h\&.
+.SS "#define A_REVERSE   \fBNCURSES_BITS\fP(1U,10)"
+
+.PP
+Définition à la ligne 1060 du fichier ncurses\&.h\&.
+.SS "#define A_RIGHT   \fBNCURSES_BITS\fP(1U,20)"
+
+.PP
+Définition à la ligne 1070 du fichier ncurses\&.h\&.
+.SS "#define A_STANDOUT   \fBNCURSES_BITS\fP(1U,8)"
+
+.PP
+Définition à la ligne 1058 du fichier ncurses\&.h\&.
+.SS "#define A_TOP   \fBNCURSES_BITS\fP(1U,21)"
+
+.PP
+Définition à la ligne 1071 du fichier ncurses\&.h\&.
+.SS "#define A_UNDERLINE   \fBNCURSES_BITS\fP(1U,9)"
+
+.PP
+Définition à la ligne 1059 du fichier ncurses\&.h\&.
+.SS "#define A_VERTICAL   \fBNCURSES_BITS\fP(1U,22)"
+
+.PP
+Définition à la ligne 1072 du fichier ncurses\&.h\&.
+.SS "#define ACS_BBSS   \fBACS_URCORNER\fP"
+
+.PP
+Définition à la ligne 327 du fichier ncurses\&.h\&.
+.SS "#define ACS_BLOCK   \fBNCURSES_ACS\fP('0') /* solid square block */"
+
+.PP
+Définition à la ligne 305 du fichier ncurses\&.h\&.
+.SS "#define ACS_BOARD   \fBNCURSES_ACS\fP('\fBh\fP') /* board of squares */"
+
+.PP
+Définition à la ligne 303 du fichier ncurses\&.h\&.
+.SS "#define ACS_BSBS   \fBACS_HLINE\fP"
+
+.PP
+Définition à la ligne 333 du fichier ncurses\&.h\&.
+.SS "#define ACS_BSSB   \fBACS_ULCORNER\fP"
+
+.PP
+Définition à la ligne 325 du fichier ncurses\&.h\&.
+.SS "#define ACS_BSSS   \fBACS_TTEE\fP"
+
+.PP
+Définition à la ligne 332 du fichier ncurses\&.h\&.
+.SS "#define ACS_BTEE   \fBNCURSES_ACS\fP('\fBv\fP') /* tee pointing up */"
+
+.PP
+Définition à la ligne 286 du fichier ncurses\&.h\&.
+.SS "#define ACS_BULLET   \fBNCURSES_ACS\fP('~') /* bullet */"
+
+.PP
+Définition à la ligne 297 du fichier ncurses\&.h\&.
+.SS "#define ACS_CKBOARD   \fBNCURSES_ACS\fP('\fBa\fP') /* checker board (stipple) */"
+
+.PP
+Définition à la ligne 294 du fichier ncurses\&.h\&.
+.SS "#define ACS_DARROW   \fBNCURSES_ACS\fP('\&.') /* arrow pointing down */"
+
+.PP
+Définition à la ligne 301 du fichier ncurses\&.h\&.
+.SS "#define ACS_DEGREE   \fBNCURSES_ACS\fP('\fBf\fP') /* degree symbol */"
+
+.PP
+Définition à la ligne 295 du fichier ncurses\&.h\&.
+.SS "#define ACS_DIAMOND   \fBNCURSES_ACS\fP('`') /* diamond */"
+
+.PP
+Définition à la ligne 293 du fichier ncurses\&.h\&.
+.SS "#define ACS_GEQUAL   \fBNCURSES_ACS\fP('\fBz\fP') /* greater/equal */"
+
+.PP
+Définition à la ligne 314 du fichier ncurses\&.h\&.
+.SS "#define ACS_HLINE   \fBNCURSES_ACS\fP('\fBq\fP') /* horizontal line */"
+
+.PP
+Définition à la ligne 288 du fichier ncurses\&.h\&.
+.SS "#define ACS_LANTERN   \fBNCURSES_ACS\fP('i') /* lantern symbol */"
+
+.PP
+Définition à la ligne 304 du fichier ncurses\&.h\&.
+.SS "#define ACS_LARROW   \fBNCURSES_ACS\fP(',') /* arrow pointing \fBleft\fP */"
+
+.PP
+Définition à la ligne 299 du fichier ncurses\&.h\&.
+.SS "#define ACS_LEQUAL   \fBNCURSES_ACS\fP('\fBy\fP') /* less/equal */"
+
+.PP
+Définition à la ligne 313 du fichier ncurses\&.h\&.
+.SS "#define ACS_LLCORNER   \fBNCURSES_ACS\fP('\fBm\fP') /* lower \fBleft\fP corner */"
+
+.PP
+Définition à la ligne 281 du fichier ncurses\&.h\&.
+.SS "#define ACS_LRCORNER   \fBNCURSES_ACS\fP('j') /* lower \fBright\fP corner */"
+
+.PP
+Définition à la ligne 283 du fichier ncurses\&.h\&.
+.SS "#define ACS_LTEE   \fBNCURSES_ACS\fP('\fBt\fP') /* tee pointing \fBright\fP */"
+
+.PP
+Définition à la ligne 284 du fichier ncurses\&.h\&.
+.SS "#define ACS_NEQUAL   \fBNCURSES_ACS\fP('|') /* not equal */"
+
+.PP
+Définition à la ligne 316 du fichier ncurses\&.h\&.
+.SS "#define ACS_PI   \fBNCURSES_ACS\fP('{') /* Pi */"
+
+.PP
+Définition à la ligne 315 du fichier ncurses\&.h\&.
+.SS "#define ACS_PLMINUS   \fBNCURSES_ACS\fP('\fBg\fP') /* plus/minus */"
+
+.PP
+Définition à la ligne 296 du fichier ncurses\&.h\&.
+.SS "#define ACS_PLUS   \fBNCURSES_ACS\fP('\fBn\fP') /* large plus or crossover */"
+
+.PP
+Définition à la ligne 290 du fichier ncurses\&.h\&.
+.SS "#define ACS_RARROW   \fBNCURSES_ACS\fP('+') /* arrow pointing \fBright\fP */"
+
+.PP
+Définition à la ligne 300 du fichier ncurses\&.h\&.
+.SS "#define ACS_RTEE   \fBNCURSES_ACS\fP('u') /* tee pointing \fBleft\fP */"
+
+.PP
+Définition à la ligne 285 du fichier ncurses\&.h\&.
+.SS "#define ACS_S1   \fBNCURSES_ACS\fP('o') /* scan line 1 */"
+
+.PP
+Définition à la ligne 291 du fichier ncurses\&.h\&.
+.SS "#define ACS_S3   \fBNCURSES_ACS\fP('\fBp\fP') /* scan line 3 */"
+
+.PP
+Définition à la ligne 311 du fichier ncurses\&.h\&.
+.SS "#define ACS_S7   \fBNCURSES_ACS\fP('\fBr\fP') /* scan line 7 */"
+
+.PP
+Définition à la ligne 312 du fichier ncurses\&.h\&.
+.SS "#define ACS_S9   \fBNCURSES_ACS\fP('\fBs\fP') /* scan line 9 */"
+
+.PP
+Définition à la ligne 292 du fichier ncurses\&.h\&.
+.SS "#define ACS_SBBS   \fBACS_LRCORNER\fP"
+
+.PP
+Définition à la ligne 328 du fichier ncurses\&.h\&.
+.SS "#define ACS_SBSB   \fBACS_VLINE\fP"
+
+.PP
+Définition à la ligne 334 du fichier ncurses\&.h\&.
+.SS "#define ACS_SBSS   \fBACS_RTEE\fP"
+
+.PP
+Définition à la ligne 329 du fichier ncurses\&.h\&.
+.SS "#define ACS_SSBB   \fBACS_LLCORNER\fP"
+
+.PP
+Définition à la ligne 326 du fichier ncurses\&.h\&.
+.SS "#define ACS_SSBS   \fBACS_BTEE\fP"
+
+.PP
+Définition à la ligne 331 du fichier ncurses\&.h\&.
+.SS "#define ACS_SSSB   \fBACS_LTEE\fP"
+
+.PP
+Définition à la ligne 330 du fichier ncurses\&.h\&.
+.SS "#define ACS_SSSS   \fBACS_PLUS\fP"
+
+.PP
+Définition à la ligne 335 du fichier ncurses\&.h\&.
+.SS "#define ACS_STERLING   \fBNCURSES_ACS\fP('}') /* UK pound sign */"
+
+.PP
+Définition à la ligne 317 du fichier ncurses\&.h\&.
+.SS "#define ACS_TTEE   \fBNCURSES_ACS\fP('\fBw\fP') /* tee pointing down */"
+
+.PP
+Définition à la ligne 287 du fichier ncurses\&.h\&.
+.SS "#define ACS_UARROW   \fBNCURSES_ACS\fP('\-') /* arrow pointing up */"
+
+.PP
+Définition à la ligne 302 du fichier ncurses\&.h\&.
+.SS "#define ACS_ULCORNER   \fBNCURSES_ACS\fP('l') /* upper \fBleft\fP corner */"
+
+.PP
+Définition à la ligne 280 du fichier ncurses\&.h\&.
+.SS "#define ACS_URCORNER   \fBNCURSES_ACS\fP('k') /* upper \fBright\fP corner */"
+
+.PP
+Définition à la ligne 282 du fichier ncurses\&.h\&.
+.SS "#define ACS_VLINE   \fBNCURSES_ACS\fP('\fBx\fP') /* vertical line */"
+
+.PP
+Définition à la ligne 289 du fichier ncurses\&.h\&.
+.SS "#define addch(ch)   waddch(stdscr,(ch))"
+
+.PP
+Définition à la ligne 1195 du fichier ncurses\&.h\&.
+.SS "#define addchnstr(str, \fBn\fP)   waddchnstr(stdscr,(str),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1196 du fichier ncurses\&.h\&.
+.SS "#define addchstr(str)   \fBwaddchstr\fP(stdscr,(str))"
+
+.PP
+Définition à la ligne 1197 du fichier ncurses\&.h\&.
+.SS "#define addnstr(str, \fBn\fP)   waddnstr(stdscr,(str),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1198 du fichier ncurses\&.h\&.
+.SS "#define addstr(str)   waddnstr(stdscr,(str),\-1)"
+
+.PP
+Définition à la ligne 1199 du fichier ncurses\&.h\&.
+.SS "#define ALL_MOUSE_EVENTS   (\fBREPORT_MOUSE_POSITION\fP \- 1)"
+
+.PP
+Définition à la ligne 1596 du fichier ncurses\&.h\&.
+.SS "#define attr_get(ap, cp, o)   \fBwattr_get\fP(stdscr,(ap),(cp),(o))"
+
+.PP
+Définition à la ligne 1203 du fichier ncurses\&.h\&.
+.SS "#define attr_off(\fBa\fP, o)   wattr_off(stdscr,(\fBa\fP),(o))"
+
+.PP
+Définition à la ligne 1204 du fichier ncurses\&.h\&.
+.SS "#define attr_on(\fBa\fP, o)   wattr_on(stdscr,(\fBa\fP),(o))"
+
+.PP
+Définition à la ligne 1205 du fichier ncurses\&.h\&.
+.SS "#define attr_set(\fBa\fP, \fBc\fP, o)   \fBwattr_set\fP(stdscr,(\fBa\fP),(\fBc\fP),(o))"
+
+.PP
+Définition à la ligne 1206 du fichier ncurses\&.h\&.
+.SS "#define attroff(at)   \fBwattroff\fP(stdscr,(at))"
+
+.PP
+Définition à la ligne 1200 du fichier ncurses\&.h\&.
+.SS "#define attron(at)   \fBwattron\fP(stdscr,(at))"
+
+.PP
+Définition à la ligne 1201 du fichier ncurses\&.h\&.
+.SS "#define attrset(at)   \fBwattrset\fP(stdscr,(at))"
+
+.PP
+Définition à la ligne 1202 du fichier ncurses\&.h\&.
+.SS "#define bkgd(ch)   wbkgd(stdscr,(ch))"
+
+.PP
+Définition à la ligne 1207 du fichier ncurses\&.h\&.
+.SS "#define bkgdset(ch)   wbkgdset(stdscr,(ch))"
+
+.PP
+Définition à la ligne 1208 du fichier ncurses\&.h\&.
+.SS "#define \fBborder\fP(ls, rs, ts, bs, tl, tr, bl, br)   wborder(stdscr, ls, rs, ts, bs, tl, tr, bl, br)"
+
+.PP
+Définition à la ligne 1170 du fichier ncurses\&.h\&.
+.SS "#define box(win, \fBv\fP, \fBh\fP)   wborder(win, \fBv\fP, \fBv\fP, \fBh\fP, \fBh\fP, 0, 0, 0, 0)"
+
+.PP
+Définition à la ligne 1169 du fichier ncurses\&.h\&.
+.SS "#define BUTTON1_CLICKED   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_BUTTON_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1543 du fichier ncurses\&.h\&.
+.SS "#define BUTTON1_DOUBLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_DOUBLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1544 du fichier ncurses\&.h\&.
+.SS "#define BUTTON1_PRESSED   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_BUTTON_PRESSED\fP)"
+
+.PP
+Définition à la ligne 1542 du fichier ncurses\&.h\&.
+.SS "#define BUTTON1_RELEASED   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_BUTTON_RELEASED\fP)"
+
+.PP
+Définition à la ligne 1541 du fichier ncurses\&.h\&.
+.SS "#define BUTTON1_TRIPLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(1, \fBNCURSES_TRIPLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1545 du fichier ncurses\&.h\&.
+.SS "#define BUTTON2_CLICKED   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_BUTTON_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1549 du fichier ncurses\&.h\&.
+.SS "#define BUTTON2_DOUBLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_DOUBLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1550 du fichier ncurses\&.h\&.
+.SS "#define BUTTON2_PRESSED   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_BUTTON_PRESSED\fP)"
+
+.PP
+Définition à la ligne 1548 du fichier ncurses\&.h\&.
+.SS "#define BUTTON2_RELEASED   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_BUTTON_RELEASED\fP)"
+
+.PP
+Définition à la ligne 1547 du fichier ncurses\&.h\&.
+.SS "#define BUTTON2_TRIPLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(2, \fBNCURSES_TRIPLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1551 du fichier ncurses\&.h\&.
+.SS "#define BUTTON3_CLICKED   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_BUTTON_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1555 du fichier ncurses\&.h\&.
+.SS "#define BUTTON3_DOUBLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_DOUBLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1556 du fichier ncurses\&.h\&.
+.SS "#define BUTTON3_PRESSED   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_BUTTON_PRESSED\fP)"
+
+.PP
+Définition à la ligne 1554 du fichier ncurses\&.h\&.
+.SS "#define BUTTON3_RELEASED   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_BUTTON_RELEASED\fP)"
+
+.PP
+Définition à la ligne 1553 du fichier ncurses\&.h\&.
+.SS "#define BUTTON3_TRIPLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(3, \fBNCURSES_TRIPLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1557 du fichier ncurses\&.h\&.
+.SS "#define BUTTON4_CLICKED   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_BUTTON_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1561 du fichier ncurses\&.h\&.
+.SS "#define BUTTON4_DOUBLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_DOUBLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1562 du fichier ncurses\&.h\&.
+.SS "#define BUTTON4_PRESSED   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_BUTTON_PRESSED\fP)"
+
+.PP
+Définition à la ligne 1560 du fichier ncurses\&.h\&.
+.SS "#define BUTTON4_RELEASED   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_BUTTON_RELEASED\fP)"
+
+.PP
+Définition à la ligne 1559 du fichier ncurses\&.h\&.
+.SS "#define BUTTON4_TRIPLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(4, \fBNCURSES_TRIPLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1563 du fichier ncurses\&.h\&.
+.SS "#define BUTTON5_CLICKED   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_BUTTON_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1573 du fichier ncurses\&.h\&.
+.SS "#define BUTTON5_DOUBLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_DOUBLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1574 du fichier ncurses\&.h\&.
+.SS "#define BUTTON5_PRESSED   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_BUTTON_PRESSED\fP)"
+
+.PP
+Définition à la ligne 1572 du fichier ncurses\&.h\&.
+.SS "#define BUTTON5_RELEASED   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_BUTTON_RELEASED\fP)"
+
+.PP
+Définition à la ligne 1571 du fichier ncurses\&.h\&.
+.SS "#define BUTTON5_TRIPLE_CLICKED   \fBNCURSES_MOUSE_MASK\fP(5, \fBNCURSES_TRIPLE_CLICKED\fP)"
+
+.PP
+Définition à la ligne 1575 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_ALT   \fBNCURSES_MOUSE_MASK\fP(6, 0004L)"
+
+.PP
+Définition à la ligne 1579 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_CLICK(e, \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 004))"
+
+.PP
+Définition à la ligne 1601 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_CTRL   \fBNCURSES_MOUSE_MASK\fP(6, 0001L)"
+
+.PP
+Définition à la ligne 1577 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_DOUBLE_CLICK(e, \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 010))"
+
+.PP
+Définition à la ligne 1602 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_PRESS(e, \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 002))"
+
+.PP
+Définition à la ligne 1600 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_RELEASE(e, \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 001))"
+
+.PP
+Définition à la ligne 1599 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_RESERVED_EVENT(e, \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 040))"
+
+.PP
+Définition à la ligne 1604 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_SHIFT   \fBNCURSES_MOUSE_MASK\fP(6, 0002L)"
+
+.PP
+Définition à la ligne 1578 du fichier ncurses\&.h\&.
+.SS "#define BUTTON_TRIPLE_CLICK(e, \fBx\fP)   ((e) & \fBNCURSES_MOUSE_MASK\fP(\fBx\fP, 020))"
+
+.PP
+Définition à la ligne 1603 du fichier ncurses\&.h\&.
+.SS "#define chgat(\fBn\fP, \fBa\fP, \fBc\fP, o)   wchgat(stdscr,(\fBn\fP),(\fBa\fP),(\fBc\fP),(o))"
+
+.PP
+Définition à la ligne 1209 du fichier ncurses\&.h\&.
+.SS "#define clear()   wclear(stdscr)"
+
+.PP
+Définition à la ligne 1210 du fichier ncurses\&.h\&.
+.SS "#define clrtobot()   wclrtobot(stdscr)"
+
+.PP
+Définition à la ligne 1211 du fichier ncurses\&.h\&.
+.SS "#define clrtoeol()   wclrtoeol(stdscr)"
+
+.PP
+Définition à la ligne 1212 du fichier ncurses\&.h\&.
+.SS "#define COLOR_BLACK   0"
+
+.PP
+Définition à la ligne 259 du fichier ncurses\&.h\&.
+.SS "#define COLOR_BLUE   4"
+
+.PP
+Définition à la ligne 263 du fichier ncurses\&.h\&.
+.SS "#define COLOR_CYAN   6"
+
+.PP
+Définition à la ligne 265 du fichier ncurses\&.h\&.
+.SS "#define COLOR_GREEN   2"
+
+.PP
+Définition à la ligne 261 du fichier ncurses\&.h\&.
+.SS "#define COLOR_MAGENTA   5"
+
+.PP
+Définition à la ligne 264 du fichier ncurses\&.h\&.
+.SS "#define COLOR_PAIR(\fBn\fP)   \fBNCURSES_BITS\fP((\fBn\fP), 0)"
+
+.PP
+Définition à la ligne 1188 du fichier ncurses\&.h\&.
+.SS "#define COLOR_RED   1"
+
+.PP
+Définition à la ligne 260 du fichier ncurses\&.h\&.
+.SS "#define color_set(\fBc\fP, o)   wcolor_set(stdscr,(\fBc\fP),(o))"
+
+.PP
+Définition à la ligne 1213 du fichier ncurses\&.h\&.
+.SS "#define COLOR_WHITE   7"
+
+.PP
+Définition à la ligne 266 du fichier ncurses\&.h\&.
+.SS "#define COLOR_YELLOW   3"
+
+.PP
+Définition à la ligne 262 du fichier ncurses\&.h\&.
+.SS "#define crmode()   cbreak()"
+
+.PP
+Définition à la ligne 1125 du fichier ncurses\&.h\&.
+.SS "#define CURSES   1"
+
+.PP
+Définition à la ligne 40 du fichier ncurses\&.h\&.
+.SS "#define CURSES_H   1"
+
+.PP
+Définition à la ligne 41 du fichier ncurses\&.h\&.
+.SS "#define delch()   wdelch(stdscr)"
+
+.PP
+Définition à la ligne 1214 du fichier ncurses\&.h\&.
+.SS "#define deleteln()   winsdelln(stdscr,\-1)"
+
+.PP
+Définition à la ligne 1215 du fichier ncurses\&.h\&.
+.SS "#define echochar(\fBc\fP)   wechochar(stdscr,(\fBc\fP))"
+
+.PP
+Définition à la ligne 1216 du fichier ncurses\&.h\&.
+.SS "#define erase()   werase(stdscr)"
+
+.PP
+Définition à la ligne 1217 du fichier ncurses\&.h\&.
+.SS "#define ERR   (\-1)"
+
+.PP
+Définition à la ligne 338 du fichier ncurses\&.h\&.
+.SS "#define FALSE   0"
+
+.PP
+Définition à la ligne 202 du fichier ncurses\&.h\&.
+.SS "#define fixterm()   reset_prog_mode()"
+
+.PP
+Définition à la ligne 1122 du fichier ncurses\&.h\&.
+.SS "#define GCC_NORETURN   /* nothing */"
+
+.PP
+Définition à la ligne 555 du fichier ncurses\&.h\&.
+.SS "#define GCC_PRINTFLIKE(fmt, var)   /*nothing*/"
+
+.PP
+Définition à la ligne 542 du fichier ncurses\&.h\&.
+.SS "#define GCC_SCANFLIKE(fmt, var)   /*nothing*/"
+
+.PP
+Définition à la ligne 550 du fichier ncurses\&.h\&.
+.SS "#define GCC_UNUSED   /* nothing */"
+
+.PP
+Définition à la ligne 559 du fichier ncurses\&.h\&.
+.SS "#define getattrs(win)   \fBNCURSES_CAST\fP(\fBint\fP, (win) ? (win)\->_attrs : \fBA_NORMAL\fP)"
+
+.PP
+Définition à la ligne 1131 du fichier ncurses\&.h\&.
+.SS "#define getbegx(win)   ((win) ? (win)\->_begx : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1134 du fichier ncurses\&.h\&.
+.SS "#define getbegy(win)   ((win) ? (win)\->_begy : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1135 du fichier ncurses\&.h\&.
+.SS "#define getbegyx(win, \fBy\fP, \fBx\fP)   (\fBy\fP = \fBgetbegy\fP(win), \fBx\fP = \fBgetbegx\fP(win))"
+
+.PP
+Définition à la ligne 1089 du fichier ncurses\&.h\&.
+.SS "#define getbkgd(win)   ((win) ? ((win)\->_bkgd) : 0)"
+
+.PP
+Définition à la ligne 1290 du fichier ncurses\&.h\&.
+.SS "#define getch()   wgetch(stdscr)"
+
+.PP
+Définition à la ligne 1218 du fichier ncurses\&.h\&.
+.SS "#define getcurx(win)   ((win) ? (win)\->_curx : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1132 du fichier ncurses\&.h\&.
+.SS "#define getcury(win)   ((win) ? (win)\->_cury : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1133 du fichier ncurses\&.h\&.
+.SS "#define getmaxx(win)   ((win) ? ((win)\->_maxx + 1) : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1136 du fichier ncurses\&.h\&.
+.SS "#define getmaxy(win)   ((win) ? ((win)\->_maxy + 1) : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1137 du fichier ncurses\&.h\&.
+.SS "#define getmaxyx(win, \fBy\fP, \fBx\fP)   (\fBy\fP = \fBgetmaxy\fP(win), \fBx\fP = \fBgetmaxx\fP(win))"
+
+.PP
+Définition à la ligne 1090 du fichier ncurses\&.h\&.
+.SS "#define getnstr(\fBs\fP, \fBn\fP)   wgetnstr(stdscr, \fBs\fP, (\fBn\fP))"
+
+.PP
+Définition à la ligne 1118 du fichier ncurses\&.h\&.
+.SS "#define getparx(win)   ((win) ? (win)\->_parx : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1138 du fichier ncurses\&.h\&.
+.SS "#define getpary(win)   ((win) ? (win)\->_pary : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1139 du fichier ncurses\&.h\&.
+.SS "#define getparyx(win, \fBy\fP, \fBx\fP)   (\fBy\fP = \fBgetpary\fP(win), \fBx\fP = \fBgetparx\fP(win))"
+
+.PP
+Définition à la ligne 1091 du fichier ncurses\&.h\&.
+.SS "#define getstr(str)   \fBwgetstr\fP(stdscr,(str))"
+
+.PP
+Définition à la ligne 1219 du fichier ncurses\&.h\&.
+.SS "#define getsyx(\fBy\fP, \fBx\fP)"
+\fBValeur :\fP
+.PP
+.nf
+do { if (newscr) { \
+                 if (is_leaveok(newscr)) \
+                (y) = (x) = -1; \\
+			     else \\
+				 getyx(newscr,(y), (x)); \
+            } \
+            } while(0)
+.fi
+.PP
+Définition à la ligne 1093 du fichier ncurses\&.h\&.
+.SS "#define gettmode()"
+
+.PP
+Définition à la ligne 1127 du fichier ncurses\&.h\&.
+.SS "#define getyx(win, \fBy\fP, \fBx\fP)   (\fBy\fP = \fBgetcury\fP(win), \fBx\fP = \fBgetcurx\fP(win))"
+
+.PP
+Définition à la ligne 1088 du fichier ncurses\&.h\&.
+.SS "#define hline(ch, \fBn\fP)   whline(stdscr, ch, (\fBn\fP))"
+
+.PP
+Définition à la ligne 1171 du fichier ncurses\&.h\&.
+.SS "#define inch()   winch(stdscr)"
+
+.PP
+Définition à la ligne 1220 du fichier ncurses\&.h\&.
+.SS "#define inchnstr(\fBs\fP, \fBn\fP)   winchnstr(stdscr,(\fBs\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1221 du fichier ncurses\&.h\&.
+.SS "#define inchstr(\fBs\fP)   \fBwinchstr\fP(stdscr,(\fBs\fP))"
+
+.PP
+Définition à la ligne 1222 du fichier ncurses\&.h\&.
+.SS "#define innstr(\fBs\fP, \fBn\fP)   winnstr(stdscr,(\fBs\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1223 du fichier ncurses\&.h\&.
+.SS "#define insch(\fBc\fP)   winsch(stdscr,(\fBc\fP))"
+
+.PP
+Définition à la ligne 1224 du fichier ncurses\&.h\&.
+.SS "#define insdelln(\fBn\fP)   winsdelln(stdscr,(\fBn\fP))"
+
+.PP
+Définition à la ligne 1225 du fichier ncurses\&.h\&.
+.SS "#define insertln()   winsdelln(stdscr,1)"
+
+.PP
+Définition à la ligne 1226 du fichier ncurses\&.h\&.
+.SS "#define insnstr(\fBs\fP, \fBn\fP)   winsnstr(stdscr,(\fBs\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1227 du fichier ncurses\&.h\&.
+.SS "#define insstr(\fBs\fP)   \fBwinsstr\fP(stdscr,(\fBs\fP))"
+
+.PP
+Définition à la ligne 1228 du fichier ncurses\&.h\&.
+.SS "#define instr(\fBs\fP)   \fBwinstr\fP(stdscr,(\fBs\fP))"
+
+.PP
+Définition à la ligne 1229 du fichier ncurses\&.h\&.
+.SS "#define is_cleared(win)   ((win) ? (win)\->_clear : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1339 du fichier ncurses\&.h\&.
+.SS "#define is_idcok(win)   ((win) ? (win)\->_idcok : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1340 du fichier ncurses\&.h\&.
+.SS "#define is_idlok(win)   ((win) ? (win)\->_idlok : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1341 du fichier ncurses\&.h\&.
+.SS "#define is_immedok(win)   ((win) ? (win)\->_immed : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1342 du fichier ncurses\&.h\&.
+.SS "#define is_keypad(win)   ((win) ? (win)\->_use_keypad : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1343 du fichier ncurses\&.h\&.
+.SS "#define is_leaveok(win)   ((win) ? (win)\->_leaveok : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1344 du fichier ncurses\&.h\&.
+.SS "#define is_nodelay(win)   ((win) ? ((win)\->_delay == 0) : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1345 du fichier ncurses\&.h\&.
+.SS "#define is_notimeout(win)   ((win) ? (win)\->_notimeout : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1346 du fichier ncurses\&.h\&.
+.SS "#define is_pad(win)   ((win) ? ((win)\->_flags & \fB_ISPAD\fP) != 0 : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1347 du fichier ncurses\&.h\&.
+.SS "#define is_scrollok(win)   ((win) ? (win)\->_scroll : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1348 du fichier ncurses\&.h\&.
+.SS "#define is_subwin(win)   ((win) ? ((win)\->_flags & \fB_SUBWIN\fP) != 0 : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1349 du fichier ncurses\&.h\&.
+.SS "#define is_syncok(win)   ((win) ? (win)\->_sync : \fBFALSE\fP)"
+
+.PP
+Définition à la ligne 1350 du fichier ncurses\&.h\&.
+.SS "#define KEY_A1   0534		/* upper \fBleft\fP of keypad */"
+
+.PP
+Définition à la ligne 1452 du fichier ncurses\&.h\&.
+.SS "#define KEY_A3   0535		/* upper \fBright\fP of keypad */"
+
+.PP
+Définition à la ligne 1453 du fichier ncurses\&.h\&.
+.SS "#define KEY_B2   0536		/* center of keypad */"
+
+.PP
+Définition à la ligne 1454 du fichier ncurses\&.h\&.
+.SS "#define KEY_BACKSPACE   0407		/* backspace key */"
+
+.PP
+Définition à la ligne 1431 du fichier ncurses\&.h\&.
+.SS "#define KEY_BEG   0542		/* begin key */"
+
+.PP
+Définition à la ligne 1458 du fichier ncurses\&.h\&.
+.SS "#define KEY_BREAK   0401		/* Break key (unreliable) */"
+
+.PP
+Définition à la ligne 1420 du fichier ncurses\&.h\&.
+.SS "#define KEY_BTAB   0541		/* back\-\fBtab\fP key */"
+
+.PP
+Définition à la ligne 1457 du fichier ncurses\&.h\&.
+.SS "#define KEY_C1   0537		/* lower \fBleft\fP of keypad */"
+
+.PP
+Définition à la ligne 1455 du fichier ncurses\&.h\&.
+.SS "#define KEY_C3   0540		/* lower \fBright\fP of keypad */"
+
+.PP
+Définition à la ligne 1456 du fichier ncurses\&.h\&.
+.SS "#define KEY_CANCEL   0543		/* cancel key */"
+
+.PP
+Définition à la ligne 1459 du fichier ncurses\&.h\&.
+.SS "#define KEY_CATAB   0526		/* \fBclear\fP\-all\-tabs key */"
+
+.PP
+Définition à la ligne 1448 du fichier ncurses\&.h\&.
+.SS "#define KEY_CLEAR   0515		/* \fBclear\fP\-screen or \fBerase\fP key */"
+
+.PP
+Définition à la ligne 1439 du fichier ncurses\&.h\&.
+.SS "#define KEY_CLOSE   0544		/* close key */"
+
+.PP
+Définition à la ligne 1460 du fichier ncurses\&.h\&.
+.SS "#define KEY_CODE_YES   0400		/* A wchar_t contains \fBa\fP key code */"
+
+.PP
+Définition à la ligne 1418 du fichier ncurses\&.h\&.
+.SS "#define KEY_COMMAND   0545		/* command key */"
+
+.PP
+Définition à la ligne 1461 du fichier ncurses\&.h\&.
+.SS "#define KEY_COPY   0546		/* copy key */"
+
+.PP
+Définition à la ligne 1462 du fichier ncurses\&.h\&.
+.SS "#define KEY_CREATE   0547		/* create key */"
+
+.PP
+Définition à la ligne 1463 du fichier ncurses\&.h\&.
+.SS "#define KEY_CTAB   0525		/* \fBclear\fP\-\fBtab\fP key */"
+
+.PP
+Définition à la ligne 1447 du fichier ncurses\&.h\&.
+.SS "#define KEY_DC   0512		/* delete\-character key */"
+
+.PP
+Définition à la ligne 1436 du fichier ncurses\&.h\&.
+.SS "#define KEY_DL   0510		/* delete\-line key */"
+
+.PP
+Définition à la ligne 1434 du fichier ncurses\&.h\&.
+.SS "#define KEY_DOWN   0402		/* down\-arrow key */"
+
+.PP
+Définition à la ligne 1426 du fichier ncurses\&.h\&.
+.SS "#define KEY_EIC   0514		/* sent \fBby\fP rmir or smir \fBin\fP insert \fBmode\fP */"
+
+.PP
+Définition à la ligne 1438 du fichier ncurses\&.h\&.
+.SS "#define KEY_END   0550		/* \fBend\fP key */"
+
+.PP
+Définition à la ligne 1464 du fichier ncurses\&.h\&.
+.SS "#define KEY_ENTER   0527		/* enter/send key */"
+
+.PP
+Définition à la ligne 1449 du fichier ncurses\&.h\&.
+.SS "#define KEY_EOL   0517		/* \fBclear\fP\-to\-\fBend\fP\-of\-line key */"
+
+.PP
+Définition à la ligne 1441 du fichier ncurses\&.h\&.
+.SS "#define KEY_EOS   0516		/* \fBclear\fP\-to\-\fBend\fP\-of\-screen key */"
+
+.PP
+Définition à la ligne 1440 du fichier ncurses\&.h\&.
+.SS "#define KEY_EVENT   0633		/* We were interrupted \fBby\fP an \fBevent\fP */"
+
+.PP
+Définition à la ligne 1515 du fichier ncurses\&.h\&.
+.SS "#define KEY_EXIT   0551		/* \fBexit\fP key */"
+
+.PP
+Définition à la ligne 1465 du fichier ncurses\&.h\&.
+.SS "#define KEY_F(\fBn\fP)   (\fBKEY_F0\fP+(\fBn\fP))	/* Value of function key \fBn\fP */"
+
+.PP
+Définition à la ligne 1433 du fichier ncurses\&.h\&.
+.SS "#define KEY_F0   0410		/* Function keys\&.  Space for 64 */"
+
+.PP
+Définition à la ligne 1432 du fichier ncurses\&.h\&.
+.SS "#define KEY_FIND   0552		/* find key */"
+
+.PP
+Définition à la ligne 1466 du fichier ncurses\&.h\&.
+.SS "#define KEY_HELP   0553		/* help key */"
+
+.PP
+Définition à la ligne 1467 du fichier ncurses\&.h\&.
+.SS "#define KEY_HOME   0406		/* home key */"
+
+.PP
+Définition à la ligne 1430 du fichier ncurses\&.h\&.
+.SS "#define KEY_IC   0513		/* insert\-character key */"
+
+.PP
+Définition à la ligne 1437 du fichier ncurses\&.h\&.
+.SS "#define KEY_IL   0511		/* insert\-line key */"
+
+.PP
+Définition à la ligne 1435 du fichier ncurses\&.h\&.
+.SS "#define KEY_LEFT   0404		/* \fBleft\fP\-arrow key */"
+
+.PP
+Définition à la ligne 1428 du fichier ncurses\&.h\&.
+.SS "#define KEY_LL   0533		/* lower\-\fBleft\fP key (home down) */"
+
+.PP
+Définition à la ligne 1451 du fichier ncurses\&.h\&.
+.SS "#define KEY_MARK   0554		/* mark key */"
+
+.PP
+Définition à la ligne 1468 du fichier ncurses\&.h\&.
+.SS "#define KEY_MAX   0777		/* Maximum key \fBvalue\fP is 0633 */"
+
+.PP
+Définition à la ligne 1517 du fichier ncurses\&.h\&.
+.SS "#define KEY_MESSAGE   0555		/* \fBmessage\fP key */"
+
+.PP
+Définition à la ligne 1469 du fichier ncurses\&.h\&.
+.SS "#define KEY_MIN   0401		/* Minimum curses key */"
+
+.PP
+Définition à la ligne 1419 du fichier ncurses\&.h\&.
+.SS "#define KEY_MOUSE   0631		/* Mouse \fBevent\fP has occurred */"
+
+.PP
+Définition à la ligne 1513 du fichier ncurses\&.h\&.
+.SS "#define KEY_MOVE   0556		/* \fBmove\fP key */"
+
+.PP
+Définition à la ligne 1470 du fichier ncurses\&.h\&.
+.SS "#define KEY_NEXT   0557		/* next key */"
+
+.PP
+Définition à la ligne 1471 du fichier ncurses\&.h\&.
+.SS "#define KEY_NPAGE   0522		/* next\-page key */"
+
+.PP
+Définition à la ligne 1444 du fichier ncurses\&.h\&.
+.SS "#define KEY_OPEN   0560		/* open key */"
+
+.PP
+Définition à la ligne 1472 du fichier ncurses\&.h\&.
+.SS "#define KEY_OPTIONS   0561		/* options key */"
+
+.PP
+Définition à la ligne 1473 du fichier ncurses\&.h\&.
+.SS "#define KEY_PPAGE   0523		/* previous\-page key */"
+
+.PP
+Définition à la ligne 1445 du fichier ncurses\&.h\&.
+.SS "#define KEY_PREVIOUS   0562		/* previous key */"
+
+.PP
+Définition à la ligne 1474 du fichier ncurses\&.h\&.
+.SS "#define KEY_PRINT   0532		/* print key */"
+
+.PP
+Définition à la ligne 1450 du fichier ncurses\&.h\&.
+.SS "#define KEY_REDO   0563		/* redo key */"
+
+.PP
+Définition à la ligne 1475 du fichier ncurses\&.h\&.
+.SS "#define KEY_REFERENCE   0564		/* \fBreference\fP key */"
+
+.PP
+Définition à la ligne 1476 du fichier ncurses\&.h\&.
+.SS "#define KEY_REFRESH   0565		/* \fBrefresh\fP key */"
+
+.PP
+Définition à la ligne 1477 du fichier ncurses\&.h\&.
+.SS "#define KEY_REPLACE   0566		/* replace key */"
+
+.PP
+Définition à la ligne 1478 du fichier ncurses\&.h\&.
+.SS "#define KEY_RESET   0531		/* Reset or hard \fBreset\fP (unreliable) */"
+
+.PP
+Définition à la ligne 1422 du fichier ncurses\&.h\&.
+.SS "#define KEY_RESIZE   0632		/* Terminal resize \fBevent\fP */"
+
+.PP
+Définition à la ligne 1514 du fichier ncurses\&.h\&.
+.SS "#define KEY_RESTART   0567		/* restart key */"
+
+.PP
+Définition à la ligne 1479 du fichier ncurses\&.h\&.
+.SS "#define KEY_RESUME   0570		/* resume key */"
+
+.PP
+Définition à la ligne 1480 du fichier ncurses\&.h\&.
+.SS "#define KEY_RIGHT   0405		/* \fBright\fP\-arrow key */"
+
+.PP
+Définition à la ligne 1429 du fichier ncurses\&.h\&.
+.SS "#define KEY_SAVE   0571		/* save key */"
+
+.PP
+Définition à la ligne 1481 du fichier ncurses\&.h\&.
+.SS "#define KEY_SBEG   0572		/* shifted begin key */"
+
+.PP
+Définition à la ligne 1482 du fichier ncurses\&.h\&.
+.SS "#define KEY_SCANCEL   0573		/* shifted cancel key */"
+
+.PP
+Définition à la ligne 1483 du fichier ncurses\&.h\&.
+.SS "#define KEY_SCOMMAND   0574		/* shifted command key */"
+
+.PP
+Définition à la ligne 1484 du fichier ncurses\&.h\&.
+.SS "#define KEY_SCOPY   0575		/* shifted copy key */"
+
+.PP
+Définition à la ligne 1485 du fichier ncurses\&.h\&.
+.SS "#define KEY_SCREATE   0576		/* shifted create key */"
+
+.PP
+Définition à la ligne 1486 du fichier ncurses\&.h\&.
+.SS "#define KEY_SDC   0577		/* shifted delete\-character key */"
+
+.PP
+Définition à la ligne 1487 du fichier ncurses\&.h\&.
+.SS "#define KEY_SDL   0600		/* shifted delete\-line key */"
+
+.PP
+Définition à la ligne 1488 du fichier ncurses\&.h\&.
+.SS "#define KEY_SELECT   0601		/* select key */"
+
+.PP
+Définition à la ligne 1489 du fichier ncurses\&.h\&.
+.SS "#define KEY_SEND   0602		/* shifted \fBend\fP key */"
+
+.PP
+Définition à la ligne 1490 du fichier ncurses\&.h\&.
+.SS "#define KEY_SEOL   0603		/* shifted \fBclear\fP\-to\-\fBend\fP\-of\-line key */"
+
+.PP
+Définition à la ligne 1491 du fichier ncurses\&.h\&.
+.SS "#define KEY_SEXIT   0604		/* shifted \fBexit\fP key */"
+
+.PP
+Définition à la ligne 1492 du fichier ncurses\&.h\&.
+.SS "#define KEY_SF   0520		/* \fBscroll\fP\-forward key */"
+
+.PP
+Définition à la ligne 1442 du fichier ncurses\&.h\&.
+.SS "#define KEY_SFIND   0605		/* shifted find key */"
+
+.PP
+Définition à la ligne 1493 du fichier ncurses\&.h\&.
+.SS "#define KEY_SHELP   0606		/* shifted help key */"
+
+.PP
+Définition à la ligne 1494 du fichier ncurses\&.h\&.
+.SS "#define KEY_SHOME   0607		/* shifted home key */"
+
+.PP
+Définition à la ligne 1495 du fichier ncurses\&.h\&.
+.SS "#define KEY_SIC   0610		/* shifted insert\-character key */"
+
+.PP
+Définition à la ligne 1496 du fichier ncurses\&.h\&.
+.SS "#define KEY_SLEFT   0611		/* shifted \fBleft\fP\-arrow key */"
+
+.PP
+Définition à la ligne 1497 du fichier ncurses\&.h\&.
+.SS "#define KEY_SMESSAGE   0612		/* shifted \fBmessage\fP key */"
+
+.PP
+Définition à la ligne 1498 du fichier ncurses\&.h\&.
+.SS "#define KEY_SMOVE   0613		/* shifted \fBmove\fP key */"
+
+.PP
+Définition à la ligne 1499 du fichier ncurses\&.h\&.
+.SS "#define KEY_SNEXT   0614		/* shifted next key */"
+
+.PP
+Définition à la ligne 1500 du fichier ncurses\&.h\&.
+.SS "#define KEY_SOPTIONS   0615		/* shifted options key */"
+
+.PP
+Définition à la ligne 1501 du fichier ncurses\&.h\&.
+.SS "#define KEY_SPREVIOUS   0616		/* shifted previous key */"
+
+.PP
+Définition à la ligne 1502 du fichier ncurses\&.h\&.
+.SS "#define KEY_SPRINT   0617		/* shifted print key */"
+
+.PP
+Définition à la ligne 1503 du fichier ncurses\&.h\&.
+.SS "#define KEY_SR   0521		/* \fBscroll\fP\-backward key */"
+
+.PP
+Définition à la ligne 1443 du fichier ncurses\&.h\&.
+.SS "#define KEY_SREDO   0620		/* shifted redo key */"
+
+.PP
+Définition à la ligne 1504 du fichier ncurses\&.h\&.
+.SS "#define KEY_SREPLACE   0621		/* shifted replace key */"
+
+.PP
+Définition à la ligne 1505 du fichier ncurses\&.h\&.
+.SS "#define KEY_SRESET   0530		/* Soft (partial) \fBreset\fP (unreliable) */"
+
+.PP
+Définition à la ligne 1421 du fichier ncurses\&.h\&.
+.SS "#define KEY_SRIGHT   0622		/* shifted \fBright\fP\-arrow key */"
+
+.PP
+Définition à la ligne 1506 du fichier ncurses\&.h\&.
+.SS "#define KEY_SRSUME   0623		/* shifted resume key */"
+
+.PP
+Définition à la ligne 1507 du fichier ncurses\&.h\&.
+.SS "#define KEY_SSAVE   0624		/* shifted save key */"
+
+.PP
+Définition à la ligne 1508 du fichier ncurses\&.h\&.
+.SS "#define KEY_SSUSPEND   0625		/* shifted suspend key */"
+
+.PP
+Définition à la ligne 1509 du fichier ncurses\&.h\&.
+.SS "#define KEY_STAB   0524		/* set\-\fBtab\fP key */"
+
+.PP
+Définition à la ligne 1446 du fichier ncurses\&.h\&.
+.SS "#define KEY_SUNDO   0626		/* shifted undo key */"
+
+.PP
+Définition à la ligne 1510 du fichier ncurses\&.h\&.
+.SS "#define KEY_SUSPEND   0627		/* suspend key */"
+
+.PP
+Définition à la ligne 1511 du fichier ncurses\&.h\&.
+.SS "#define KEY_UNDO   0630		/* undo key */"
+
+.PP
+Définition à la ligne 1512 du fichier ncurses\&.h\&.
+.SS "#define KEY_UP   0403		/* up\-arrow key */"
+
+.PP
+Définition à la ligne 1427 du fichier ncurses\&.h\&.
+.SS "#define mouse_trafo(\fBy\fP, \fBx\fP, to_screen)   wmouse_trafo(stdscr,\fBy\fP,\fBx\fP,to_screen)"
+
+.PP
+Définition à la ligne 1631 du fichier ncurses\&.h\&.
+.SS "#define move(\fBy\fP, \fBx\fP)   wmove(stdscr,(\fBy\fP),(\fBx\fP))"
+
+.PP
+Définition à la ligne 1230 du fichier ncurses\&.h\&.
+.SS "#define mvaddch(\fBy\fP, \fBx\fP, ch)   \fBmvwaddch\fP(stdscr,(\fBy\fP),(\fBx\fP),(ch))"
+
+.PP
+Définition à la ligne 1265 du fichier ncurses\&.h\&.
+.SS "#define mvaddchnstr(\fBy\fP, \fBx\fP, str, \fBn\fP)   \fBmvwaddchnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1266 du fichier ncurses\&.h\&.
+.SS "#define mvaddchstr(\fBy\fP, \fBx\fP, str)   \fBmvwaddchstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str))"
+
+.PP
+Définition à la ligne 1267 du fichier ncurses\&.h\&.
+.SS "#define mvaddnstr(\fBy\fP, \fBx\fP, str, \fBn\fP)   \fBmvwaddnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1268 du fichier ncurses\&.h\&.
+.SS "#define mvaddstr(\fBy\fP, \fBx\fP, str)   \fBmvwaddstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str))"
+
+.PP
+Définition à la ligne 1269 du fichier ncurses\&.h\&.
+.SS "#define mvchgat(\fBy\fP, \fBx\fP, \fBn\fP, \fBa\fP, \fBc\fP, o)   \fBmvwchgat\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBn\fP),(\fBa\fP),(\fBc\fP),(o))"
+
+.PP
+Définition à la ligne 1270 du fichier ncurses\&.h\&.
+.SS "#define mvdelch(\fBy\fP, \fBx\fP)   \fBmvwdelch\fP(stdscr,(\fBy\fP),(\fBx\fP))"
+
+.PP
+Définition à la ligne 1271 du fichier ncurses\&.h\&.
+.SS "#define mvgetch(\fBy\fP, \fBx\fP)   \fBmvwgetch\fP(stdscr,(\fBy\fP),(\fBx\fP))"
+
+.PP
+Définition à la ligne 1272 du fichier ncurses\&.h\&.
+.SS "#define mvgetnstr(\fBy\fP, \fBx\fP, str, \fBn\fP)   \fBmvwgetnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1273 du fichier ncurses\&.h\&.
+.SS "#define mvgetstr(\fBy\fP, \fBx\fP, str)   \fBmvwgetstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(str))"
+
+.PP
+Définition à la ligne 1274 du fichier ncurses\&.h\&.
+.SS "#define mvhline(\fBy\fP, \fBx\fP, \fBc\fP, \fBn\fP)   \fBmvwhline\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBc\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1275 du fichier ncurses\&.h\&.
+.SS "#define mvinch(\fBy\fP, \fBx\fP)   \fBmvwinch\fP(stdscr,(\fBy\fP),(\fBx\fP))"
+
+.PP
+Définition à la ligne 1276 du fichier ncurses\&.h\&.
+.SS "#define mvinchnstr(\fBy\fP, \fBx\fP, \fBs\fP, \fBn\fP)   \fBmvwinchnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1277 du fichier ncurses\&.h\&.
+.SS "#define mvinchstr(\fBy\fP, \fBx\fP, \fBs\fP)   \fBmvwinchstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP))"
+
+.PP
+Définition à la ligne 1278 du fichier ncurses\&.h\&.
+.SS "#define mvinnstr(\fBy\fP, \fBx\fP, \fBs\fP, \fBn\fP)   \fBmvwinnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1279 du fichier ncurses\&.h\&.
+.SS "#define mvinsch(\fBy\fP, \fBx\fP, \fBc\fP)   \fBmvwinsch\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBc\fP))"
+
+.PP
+Définition à la ligne 1280 du fichier ncurses\&.h\&.
+.SS "#define mvinsnstr(\fBy\fP, \fBx\fP, \fBs\fP, \fBn\fP)   \fBmvwinsnstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1281 du fichier ncurses\&.h\&.
+.SS "#define mvinsstr(\fBy\fP, \fBx\fP, \fBs\fP)   \fBmvwinsstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP))"
+
+.PP
+Définition à la ligne 1282 du fichier ncurses\&.h\&.
+.SS "#define mvinstr(\fBy\fP, \fBx\fP, \fBs\fP)   \fBmvwinstr\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBs\fP))"
+
+.PP
+Définition à la ligne 1283 du fichier ncurses\&.h\&.
+.SS "#define mvvline(\fBy\fP, \fBx\fP, \fBc\fP, \fBn\fP)   \fBmvwvline\fP(stdscr,(\fBy\fP),(\fBx\fP),(\fBc\fP),(\fBn\fP))"
+
+.PP
+Définition à la ligne 1284 du fichier ncurses\&.h\&.
+.SS "#define mvwaddch(win, \fBy\fP, \fBx\fP, ch)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddch((win),(ch)))"
+
+.PP
+Définition à la ligne 1244 du fichier ncurses\&.h\&.
+.SS "#define mvwaddchnstr(win, \fBy\fP, \fBx\fP, str, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddchnstr((win),(str),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1245 du fichier ncurses\&.h\&.
+.SS "#define mvwaddchstr(win, \fBy\fP, \fBx\fP, str)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddchnstr((win),(str),\-1))"
+
+.PP
+Définition à la ligne 1246 du fichier ncurses\&.h\&.
+.SS "#define mvwaddnstr(win, \fBy\fP, \fBx\fP, str, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddnstr((win),(str),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1247 du fichier ncurses\&.h\&.
+.SS "#define mvwaddstr(win, \fBy\fP, \fBx\fP, str)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : waddnstr((win),(str),\-1))"
+
+.PP
+Définition à la ligne 1248 du fichier ncurses\&.h\&.
+.SS "#define mvwchgat(win, \fBy\fP, \fBx\fP, \fBn\fP, \fBa\fP, \fBc\fP, o)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wchgat((win),(\fBn\fP),(\fBa\fP),(\fBc\fP),(o)))"
+
+.PP
+Définition à la ligne 1250 du fichier ncurses\&.h\&.
+.SS "#define mvwdelch(win, \fBy\fP, \fBx\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wdelch(win))"
+
+.PP
+Définition à la ligne 1249 du fichier ncurses\&.h\&.
+.SS "#define mvwgetch(win, \fBy\fP, \fBx\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wgetch(win))"
+
+.PP
+Définition à la ligne 1251 du fichier ncurses\&.h\&.
+.SS "#define mvwgetnstr(win, \fBy\fP, \fBx\fP, str, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wgetnstr((win),(str),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1252 du fichier ncurses\&.h\&.
+.SS "#define mvwgetstr(win, \fBy\fP, \fBx\fP, str)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwgetstr\fP((win),(str)))"
+
+.PP
+Définition à la ligne 1253 du fichier ncurses\&.h\&.
+.SS "#define mvwhline(win, \fBy\fP, \fBx\fP, \fBc\fP, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : whline((win),(\fBc\fP),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1254 du fichier ncurses\&.h\&.
+.SS "#define mvwinch(win, \fBy\fP, \fBx\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBNCURSES_CAST\fP(\fBchtype\fP, \fBERR\fP) : winch(win))"
+
+.PP
+Définition à la ligne 1255 du fichier ncurses\&.h\&.
+.SS "#define mvwinchnstr(win, \fBy\fP, \fBx\fP, \fBs\fP, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winchnstr((win),(\fBs\fP),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1256 du fichier ncurses\&.h\&.
+.SS "#define mvwinchstr(win, \fBy\fP, \fBx\fP, \fBs\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwinchstr\fP((win),(\fBs\fP)))"
+
+.PP
+Définition à la ligne 1257 du fichier ncurses\&.h\&.
+.SS "#define mvwinnstr(win, \fBy\fP, \fBx\fP, \fBs\fP, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winnstr((win),(\fBs\fP),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1258 du fichier ncurses\&.h\&.
+.SS "#define mvwinsch(win, \fBy\fP, \fBx\fP, \fBc\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winsch((win),(\fBc\fP)))"
+
+.PP
+Définition à la ligne 1259 du fichier ncurses\&.h\&.
+.SS "#define mvwinsnstr(win, \fBy\fP, \fBx\fP, \fBs\fP, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : winsnstr((win),(\fBs\fP),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1260 du fichier ncurses\&.h\&.
+.SS "#define mvwinsstr(win, \fBy\fP, \fBx\fP, \fBs\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwinsstr\fP((win),(\fBs\fP)))"
+
+.PP
+Définition à la ligne 1261 du fichier ncurses\&.h\&.
+.SS "#define mvwinstr(win, \fBy\fP, \fBx\fP, \fBs\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : \fBwinstr\fP((win),(\fBs\fP)))"
+
+.PP
+Définition à la ligne 1262 du fichier ncurses\&.h\&.
+.SS "#define mvwvline(win, \fBy\fP, \fBx\fP, \fBc\fP, \fBn\fP)   (wmove((win),(\fBy\fP),(\fBx\fP)) == \fBERR\fP ? \fBERR\fP : wvline((win),(\fBc\fP),(\fBn\fP)))"
+
+.PP
+Définition à la ligne 1263 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_ACS(\fBc\fP)   (acs_map[\fBNCURSES_CAST\fP(unsigned char,(\fBc\fP))])"
+
+.PP
+Définition à la ligne 277 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_ATTR_SHIFT   8"
+
+.PP
+Définition à la ligne 1051 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_ATTR_T   \fBint\fP"
+
+.PP
+Définition à la ligne 78 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_BITS(\fBmask\fP, shift)   (\fBNCURSES_CAST\fP(\fBchtype\fP,(\fBmask\fP)) << ((shift) + \fBNCURSES_ATTR_SHIFT\fP))"
+
+.PP
+Définition à la ligne 1052 du fichier ncurses\&.h\&.
+.SS "#define \fBNCURSES_BOOL\fP   \fBbool\fP"
+
+.PP
+Définition à la ligne 216 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_BUTTON_CLICKED   004L"
+
+.PP
+Définition à la ligne 1535 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_BUTTON_PRESSED   002L"
+
+.PP
+Définition à la ligne 1534 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_BUTTON_RELEASED   001L"
+
+.PP
+Définition à la ligne 1533 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_CAST(\fBtype\fP, \fBvalue\fP)   (\fBtype\fP)(\fBvalue\fP)"
+
+.PP
+Définition à la ligne 229 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_CH_T   \fBchtype\fP"
+
+.PP
+Définition à la ligne 151 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_COLOR_T   short"
+
+.PP
+Définition à la ligne 101 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_CONST   \fBconst\fP"
+
+.PP
+Définition à la ligne 86 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_DOUBLE_CLICKED   010L"
+
+.PP
+Définition à la ligne 1536 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_ENABLE_STDBOOL_H   1"
+
+.PP
+Définition à la ligne 70 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_EXT_FUNCS   20150808"
+
+.PP
+Définition à la ligne 891 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_INLINE   inline"
+
+.PP
+Définition à la ligne 89 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_INTEROP_FUNCS   1"
+
+.PP
+Définition à la ligne 124 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_MOUSE_MASK(\fBb\fP, \fBm\fP)   ((\fBm\fP) << (((\fBb\fP) \- 1) * 5))"
+
+.PP
+Définition à la ligne 1528 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_MOUSE_VERSION   2"
+
+.PP
+Définition à la ligne 55 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_OPAQUE   0"
+
+.PP
+Définition à la ligne 110 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_PAIRS_T   short"
+
+.PP
+Définition à la ligne 104 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_REENTRANT   0"
+
+.PP
+Définition à la ligne 117 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_RESERVED_EVENT   040L"
+
+.PP
+Définition à la ligne 1538 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_SIZE_T   short"
+
+.PP
+Définition à la ligne 130 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_SP_FUNCS   20150808"
+
+.PP
+Définition à la ligne 944 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_SP_NAME(\fBname\fP)   \fBname\fP##_sp"
+
+.PP
+Définition à la ligne 945 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_SP_OUTC   \fBNCURSES_SP_NAME\fP(\fBNCURSES_OUTC\fP)"
+
+.PP
+Définition à la ligne 948 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_TPARM_ARG   intptr_t"
+
+.PP
+Définition à la ligne 143 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_TPARM_VARARGS   1"
+
+.PP
+Définition à la ligne 136 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_TRIPLE_CLICKED   020L"
+
+.PP
+Définition à la ligne 1537 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_VERSION   '6\&.0'"
+
+.PP
+Définition à la ligne 50 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_VERSION_MAJOR   6"
+
+.PP
+Définition à la ligne 44 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_VERSION_MINOR   0"
+
+.PP
+Définition à la ligne 45 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_VERSION_PATCH   20150808"
+
+.PP
+Définition à la ligne 46 du fichier ncurses\&.h\&.
+.SS "#define NCURSES_WIDECHAR   0"
+
+.PP
+Définition à la ligne 177 du fichier ncurses\&.h\&.
+.SS "#define nocrmode()   nocbreak()"
+
+.PP
+Définition à la ligne 1126 du fichier ncurses\&.h\&.
+.SS "#define OK   (0)"
+
+.PP
+Définition à la ligne 341 du fichier ncurses\&.h\&.
+.SS "#define PAIR_NUMBER(\fBa\fP)   (\fBNCURSES_CAST\fP(\fBint\fP,((\fBNCURSES_CAST\fP(unsigned long,(\fBa\fP)) & \fBA_COLOR\fP) >> \fBNCURSES_ATTR_SHIFT\fP)))"
+
+.PP
+Définition à la ligne 1189 du fichier ncurses\&.h\&.
+.SS "#define redrawwin(win)   wredrawln(win, 0, ((win) ? (win)\->_maxy+1 : \-1))"
+
+.PP
+Définition à la ligne 1179 du fichier ncurses\&.h\&.
+.SS "#define refresh()   wrefresh(stdscr)"
+
+.PP
+Définition à la ligne 1231 du fichier ncurses\&.h\&.
+.SS "#define REPORT_MOUSE_POSITION   \fBNCURSES_MOUSE_MASK\fP(6, 0010L)"
+
+.PP
+Définition à la ligne 1580 du fichier ncurses\&.h\&.
+.SS "#define resetterm()   reset_shell_mode()"
+
+.PP
+Définition à la ligne 1123 du fichier ncurses\&.h\&.
+.SS "#define saveterm()   def_prog_mode()"
+
+.PP
+Définition à la ligne 1124 du fichier ncurses\&.h\&.
+.SS "#define scrl(\fBn\fP)   wscrl(stdscr,(\fBn\fP))"
+
+.PP
+Définition à la ligne 1232 du fichier ncurses\&.h\&.
+.SS "#define scroll(win)   wscrl(win,1)"
+
+.PP
+Définition à la ligne 1163 du fichier ncurses\&.h\&.
+.SS "#define setscrreg(\fBt\fP, \fBb\fP)   wsetscrreg(stdscr,(\fBt\fP),(\fBb\fP))"
+
+.PP
+Définition à la ligne 1233 du fichier ncurses\&.h\&.
+.SS "#define setsyx(\fBy\fP, \fBx\fP)"
+\fBValeur :\fP
+.PP
+.nf
+do { if (newscr) { \
+                if ((y) == -1 && (x) == -1) \\
+				leaveok(newscr, TRUE); \
+                else { \\
+				leaveok(newscr, FALSE); \
+                wmove(newscr, (y), (x)); \
+                } \
+            } \
+            } while(0)
+.fi
+.PP
+Définition à la ligne 1101 du fichier ncurses\&.h\&.
+.SS "#define setterm(\fBterm\fP)   setupterm(\fBterm\fP, 1, (\fBint\fP *)0)"
+
+.PP
+Définition à la ligne 1120 du fichier ncurses\&.h\&.
+.SS "#define slk_attr_off(\fBa\fP, \fBv\fP)   ((\fBv\fP) ? \fBERR\fP : slk_attroff(\fBa\fP))"
+
+.PP
+Définition à la ligne 1293 du fichier ncurses\&.h\&.
+.SS "#define slk_attr_on(\fBa\fP, \fBv\fP)   ((\fBv\fP) ? \fBERR\fP : slk_attron(\fBa\fP))"
+
+.PP
+Définition à la ligne 1294 du fichier ncurses\&.h\&.
+.SS "#define standend()   \fBwstandend\fP(stdscr)"
+
+.PP
+Définition à la ligne 1234 du fichier ncurses\&.h\&.
+.SS "#define standout()   \fBwstandout\fP(stdscr)"
+
+.PP
+Définition à la ligne 1235 du fichier ncurses\&.h\&.
+.SS "#define \fBtimeout\fP(delay)   wtimeout(stdscr,(delay))"
+
+.PP
+Définition à la ligne 1236 du fichier ncurses\&.h\&.
+.SS "#define touchline(win, \fBs\fP, \fBc\fP)   wtouchln((win), \fBs\fP, \fBc\fP, 1)"
+
+.PP
+Définition à la ligne 1166 du fichier ncurses\&.h\&.
+.SS "#define touchwin(win)   wtouchln((win), 0, \fBgetmaxy\fP(win), 1)"
+
+.PP
+Définition à la ligne 1165 du fichier ncurses\&.h\&.
+.SS "#define TRACE_ATTRS   0x1000	/* trace attribute updates */"
+
+.PP
+Définition à la ligne 1680 du fichier ncurses\&.h\&.
+.SS "#define TRACE_BITS   0x0100	/* trace state of TTY control bits */"
+
+.PP
+Définition à la ligne 1676 du fichier ncurses\&.h\&.
+.SS "#define TRACE_CALLS   0x0020	/* trace all curses calls */"
+
+.PP
+Définition à la ligne 1673 du fichier ncurses\&.h\&.
+.SS "#define TRACE_CCALLS   0x0400	/* trace per\-character calls */"
+
+.PP
+Définition à la ligne 1678 du fichier ncurses\&.h\&.
+.SS "#define TRACE_CHARPUT   0x0010	/* trace all character outputs */"
+
+.PP
+Définition à la ligne 1671 du fichier ncurses\&.h\&.
+.SS "#define TRACE_DATABASE   0x0800	/* trace read/write of terminfo/termcap data */"
+
+.PP
+Définition à la ligne 1679 du fichier ncurses\&.h\&.
+.SS "#define TRACE_DISABLE   0x0000	/* turn off tracing */"
+
+.PP
+Définition à la ligne 1666 du fichier ncurses\&.h\&.
+.SS "#define TRACE_ICALLS   0x0200	/* trace internal/nested calls */"
+
+.PP
+Définition à la ligne 1677 du fichier ncurses\&.h\&.
+.SS "#define TRACE_IEVENT   0x0080	/* trace low\-level input processing */"
+
+.PP
+Définition à la ligne 1675 du fichier ncurses\&.h\&.
+.SS "#define TRACE_MAXIMUM   ((1 << \fBTRACE_SHIFT\fP) \- 1) /* maximum trace \fBlevel\fP */"
+
+.PP
+Définition à la ligne 1683 du fichier ncurses\&.h\&.
+.SS "#define TRACE_MOVE   0x0008	/* trace cursor moves and scrolls */"
+
+.PP
+Définition à la ligne 1670 du fichier ncurses\&.h\&.
+.SS "#define TRACE_ORDINARY   0x001F	/* trace all update actions */"
+
+.PP
+Définition à la ligne 1672 du fichier ncurses\&.h\&.
+.SS "#define TRACE_SHIFT   13	/* number of \fBbits\fP \fBin\fP the trace masks */"
+
+.PP
+Définition à la ligne 1682 du fichier ncurses\&.h\&.
+.SS "#define TRACE_TIMES   0x0001	/* trace user and system times of updates */"
+
+.PP
+Définition à la ligne 1667 du fichier ncurses\&.h\&.
+.SS "#define TRACE_TPUTS   0x0002	/* trace tputs calls */"
+
+.PP
+Définition à la ligne 1668 du fichier ncurses\&.h\&.
+.SS "#define TRACE_UPDATE   0x0004	/* trace update actions, old & new screens */"
+
+.PP
+Définition à la ligne 1669 du fichier ncurses\&.h\&.
+.SS "#define TRACE_VIRTPUT   0x0040	/* trace virtual character puts */"
+
+.PP
+Définition à la ligne 1674 du fichier ncurses\&.h\&.
+.SS "#define TRUE   1"
+
+.PP
+Définition à la ligne 199 du fichier ncurses\&.h\&.
+.SS "#define untouchwin(win)   wtouchln((win), 0, \fBgetmaxy\fP(win), 0)"
+
+.PP
+Définition à la ligne 1167 du fichier ncurses\&.h\&.
+.SS "#define vid_attr(\fBa\fP, pair, opts)   vidattr(\fBa\fP)"
+
+.PP
+Définition à la ligne 883 du fichier ncurses\&.h\&.
+.SS "#define vline(ch, \fBn\fP)   wvline(stdscr, ch, (\fBn\fP))"
+
+.PP
+Définition à la ligne 1172 du fichier ncurses\&.h\&.
+.SS "#define vw_printw   vwprintw"
+
+.PP
+Définition à la ligne 1323 du fichier ncurses\&.h\&.
+.SS "#define vw_scanw   vwscanw"
+
+.PP
+Définition à la ligne 1324 du fichier ncurses\&.h\&.
+.SS "#define WA_ALTCHARSET   \fBA_ALTCHARSET\fP"
+
+.PP
+Définition à la ligne 244 du fichier ncurses\&.h\&.
+.SS "#define WA_ATTRIBUTES   \fBA_ATTRIBUTES\fP"
+
+.PP
+Définition à la ligne 236 du fichier ncurses\&.h\&.
+.SS "#define WA_BLINK   \fBA_BLINK\fP"
+
+.PP
+Définition à la ligne 241 du fichier ncurses\&.h\&.
+.SS "#define WA_BOLD   \fBA_BOLD\fP"
+
+.PP
+Définition à la ligne 243 du fichier ncurses\&.h\&.
+.SS "#define WA_DIM   \fBA_DIM\fP"
+
+.PP
+Définition à la ligne 242 du fichier ncurses\&.h\&.
+.SS "#define WA_HORIZONTAL   \fBA_HORIZONTAL\fP"
+
+.PP
+Définition à la ligne 247 du fichier ncurses\&.h\&.
+.SS "#define WA_INVIS   \fBA_INVIS\fP"
+
+.PP
+Définition à la ligne 245 du fichier ncurses\&.h\&.
+.SS "#define WA_ITALIC   \fBA_ITALIC\fP	/* ncurses extension */"
+
+.PP
+Définition à la ligne 255 du fichier ncurses\&.h\&.
+.SS "#define WA_LEFT   \fBA_LEFT\fP"
+
+.PP
+Définition à la ligne 248 du fichier ncurses\&.h\&.
+.SS "#define WA_LOW   \fBA_LOW\fP"
+
+.PP
+Définition à la ligne 249 du fichier ncurses\&.h\&.
+.SS "#define WA_NORMAL   \fBA_NORMAL\fP"
+
+.PP
+Définition à la ligne 237 du fichier ncurses\&.h\&.
+.SS "#define WA_PROTECT   \fBA_PROTECT\fP"
+
+.PP
+Définition à la ligne 246 du fichier ncurses\&.h\&.
+.SS "#define WA_REVERSE   \fBA_REVERSE\fP"
+
+.PP
+Définition à la ligne 240 du fichier ncurses\&.h\&.
+.SS "#define WA_RIGHT   \fBA_RIGHT\fP"
+
+.PP
+Définition à la ligne 250 du fichier ncurses\&.h\&.
+.SS "#define WA_STANDOUT   \fBA_STANDOUT\fP"
+
+.PP
+Définition à la ligne 238 du fichier ncurses\&.h\&.
+.SS "#define WA_TOP   \fBA_TOP\fP"
+
+.PP
+Définition à la ligne 251 du fichier ncurses\&.h\&.
+.SS "#define WA_UNDERLINE   \fBA_UNDERLINE\fP"
+
+.PP
+Définition à la ligne 239 du fichier ncurses\&.h\&.
+.SS "#define WA_VERTICAL   \fBA_VERTICAL\fP"
+
+.PP
+Définition à la ligne 252 du fichier ncurses\&.h\&.
+.SS "#define waddchstr(win, str)   waddchnstr(win,str,\-1)"
+
+.PP
+Définition à la ligne 1183 du fichier ncurses\&.h\&.
+.SS "#define waddstr(win, str)   waddnstr(win,str,\-1)"
+
+.PP
+Définition à la ligne 1182 du fichier ncurses\&.h\&.
+.SS "#define wattr_get(win, \fBa\fP, \fBp\fP, opts)"
+\fBValeur :\fP
+.PP
+.nf
+((void)(((a) != (void *)0) ? (*(a) = (win) ? (win)->_attrs : 0) : OK), \
+                     (void)(((p) != (void *)0) ? (*(p) = (NCURSES_PAIRS_T) ((win) ? PAIR_NUMBER((win)->_attrs) : 0)) : OK), \
+                     OK)
+.fi
+.PP
+Définition à la ligne 1311 du fichier ncurses\&.h\&.
+.SS "#define wattr_set(win, \fBa\fP, \fBp\fP, opts)"
+\fBValeur :\fP
+.PP
+.nf
+(((win) \
+                      ? ((win)->_attrs = (((a) & ~A_COLOR) | (attr_t)COLOR_PAIR(p))) \
+                      : OK), \
+                     OK)
+.fi
+.PP
+Définition à la ligne 1307 du fichier ncurses\&.h\&.
+.SS "#define wattroff(win, at)   wattr_off(win, \fBNCURSES_CAST\fP(\fBattr_t\fP, at), \fBNULL\fP)"
+
+.PP
+Définition à la ligne 1146 du fichier ncurses\&.h\&.
+.SS "#define wattron(win, at)   wattr_on(win, \fBNCURSES_CAST\fP(\fBattr_t\fP, at), \fBNULL\fP)"
+
+.PP
+Définition à la ligne 1145 du fichier ncurses\&.h\&.
+.SS "#define wattrset(win, at)"
+\fBValeur :\fP
+.PP
+.nf
+((win) \
+                  ? ((win)->_attrs = NCURSES_CAST(attr_t, at), \
+                     OK) \
+                  : ERR)
+.fi
+.PP
+Définition à la ligne 1156 du fichier ncurses\&.h\&.
+.SS "#define wdeleteln(win)   winsdelln(win,\-1)"
+
+.PP
+Définition à la ligne 1237 du fichier ncurses\&.h\&.
+.SS "#define wgetdelay(win)   ((win) ? (win)\->_delay : 0)"
+
+.PP
+Définition à la ligne 1351 du fichier ncurses\&.h\&.
+.SS "#define wgetparent(win)   ((win) ? (win)\->_parent : 0)"
+
+.PP
+Définition à la ligne 1352 du fichier ncurses\&.h\&.
+.SS "#define wgetscrreg(win, \fBt\fP, \fBb\fP)   ((win) ? (*(\fBt\fP) = (win)\->_regtop, *(\fBb\fP) = (win)\->_regbottom, \fBOK\fP) : \fBERR\fP)"
+
+.PP
+Définition à la ligne 1353 du fichier ncurses\&.h\&.
+.SS "#define wgetstr(\fBw\fP, \fBs\fP)   wgetnstr(\fBw\fP, \fBs\fP, \-1)"
+
+.PP
+Définition à la ligne 1117 du fichier ncurses\&.h\&.
+.SS "#define winchstr(\fBw\fP, \fBs\fP)   winchnstr(\fBw\fP, \fBs\fP, \-1)"
+
+.PP
+Définition à la ligne 1175 du fichier ncurses\&.h\&.
+.SS "#define winsertln(win)   winsdelln(win,1)"
+
+.PP
+Définition à la ligne 1238 du fichier ncurses\&.h\&.
+.SS "#define winsstr(\fBw\fP, \fBs\fP)   winsnstr(\fBw\fP, \fBs\fP, \-1)"
+
+.PP
+Définition à la ligne 1176 du fichier ncurses\&.h\&.
+.SS "#define winstr(\fBw\fP, \fBs\fP)   winnstr(\fBw\fP, \fBs\fP, \-1)"
+
+.PP
+Définition à la ligne 1174 du fichier ncurses\&.h\&.
+.SS "#define wstandend(win)   (\fBwattrset\fP(win,\fBA_NORMAL\fP))"
+
+.PP
+Définition à la ligne 1143 du fichier ncurses\&.h\&.
+.SS "#define wstandout(win)   (\fBwattrset\fP(win,\fBA_STANDOUT\fP))"
+
+.PP
+Définition à la ligne 1142 du fichier ncurses\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "\fBconst\fP \fBattr_t\fP"
+
+.PP
+Définition à la ligne 367 du fichier ncurses\&.h\&.
+.SS "\fBchtype\fP"
+
+.PP
+Définition à la ligne 157 du fichier ncurses\&.h\&.
+.SS "\fBMEVENT\fP \fBMEVENT\fP \fBmmask_t\fP"
+
+.PP
+Définition à la ligne 158 du fichier ncurses\&.h\&.
+.SS "typedef unsigned char \fBNCURSES_BOOL\fP"
+
+.PP
+Définition à la ligne 204 du fichier ncurses\&.h\&.
+.SS "NCURSES_OUTC"
+
+.PP
+Définition à la ligne 566 du fichier ncurses\&.h\&.
+.SS "NCURSES_SCREEN_CB"
+
+.PP
+Définition à la ligne 893 du fichier ncurses\&.h\&.
+.SS "NCURSES_SP_OUTC"
+
+.PP
+Définition à la ligne 949 du fichier ncurses\&.h\&.
+.SS "\fBvoid\fP NCURSES_WINDOW_CB"
+
+.PP
+Définition à la ligne 892 du fichier ncurses\&.h\&.
+.SS "typedef struct screen \fBSCREEN\fP"
+
+.PP
+Définition à la ligne 364 du fichier ncurses\&.h\&.
+.SS "\fBint\fP \fBWINDOW\fP"
+
+.PP
+Définition à la ligne 365 du fichier ncurses\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBconst\fP char char \fBconst\fP char GCC_PRINTFLIKE (3, 4)"
+
+.SS "\fBconst\fP char char \fBconst\fP char GCC_PRINTFLIKE (4, 5)"
+
+.SS "GCC_PRINTFLIKE (1, 2)"
+
+.SS "\fBconst\fP char GCC_PRINTFLIKE (2, 3)"
+
+.SS "\fBNCURSES_CONST\fP char GCC_SCANFLIKE (3, 4)"
+
+.SS "\fBNCURSES_CONST\fP char GCC_SCANFLIKE (4, 5)"
+
+.SS "GCC_SCANFLIKE (1, 2)"
+
+.SS "\fBNCURSES_CONST\fP char GCC_SCANFLIKE (2, 3)"
+
+.SS "NCURSES_EXPORT (\fBint\fP) const"
+
+.SS "NCURSES_EXPORT (\fBvoid\fP)"
+
+.SS "NCURSES_EXPORT (\fBbool\fP)"
+
+.SS "NCURSES_EXPORT (\fBWINDOW\fP *)"
+
+.SS "NCURSES_EXPORT (char)"
+
+.SS "NCURSES_EXPORT (\fBchtype\fP)"
+
+.SS "NCURSES_EXPORT (\fBNCURSES_CONST\fP char *)"
+
+.SS "NCURSES_EXPORT (char *)"
+
+.SS "NCURSES_EXPORT (\fBSCREEN\fP *)\fC [new]\fP"
+
+.SS "NCURSES_EXPORT (\fBconst\fP char *)"
+
+.SS "NCURSES_EXPORT_VAR (\fBchtype\fP)"
+
+.SS "NCURSES_EXPORT_VAR (\fBWINDOW\fP *)"
+
+.SS "NCURSES_EXPORT_VAR (char)"
+
+.SS "NCURSES_EXPORT_VAR (\fBint\fP)"
+
+.SH "Documentation des variables"
+.PP 
+.SS "\fBint\fP bool"
+
+.PP
+Définition à la ligne 597 du fichier ncurses\&.h\&.
+.SS "char int"
+
+.PP
+Définition à la ligne 576 du fichier ncurses\&.h\&.
+.SS "NCURSES_COLOR_T"
+
+.PP
+Définition à la ligne 640 du fichier ncurses\&.h\&.
+.SS "NCURSES_PAIRS_T"
+
+.PP
+Définition à la ligne 586 du fichier ncurses\&.h\&.
+.SS "\fBNCURSES_CONST\fP char va_list"
+
+.PP
+Définition à la ligne 788 du fichier ncurses\&.h\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

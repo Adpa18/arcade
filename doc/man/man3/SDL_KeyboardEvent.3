@@ -1,0 +1,82 @@
+.TH "SDL_KeyboardEvent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SDL_KeyboardEvent \- Keyboard button event structure (event\&.key\&.*)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SDL_events\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBUint32\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBUint32\fP \fBwindowID\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBstate\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBrepeat\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding2\fP"
+.br
+.ti -1c
+.RI "\fBUint8\fP \fBpadding3\fP"
+.br
+.ti -1c
+.RI "\fBSDL_Keysym\fP \fBkeysym\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Keyboard button event structure (event\&.key\&.*) 
+.PP
+Définition à la ligne 187 du fichier SDL_events\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBSDL_Keysym\fP SDL_KeyboardEvent::keysym"
+The key that was pressed or released 
+.PP
+Définition à la ligne 196 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_KeyboardEvent::padding2"
+
+.PP
+Définition à la ligne 194 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_KeyboardEvent::padding3"
+
+.PP
+Définition à la ligne 195 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_KeyboardEvent::repeat"
+Non-zero if this is a key repeat 
+.PP
+Définition à la ligne 193 du fichier SDL_events\&.h\&.
+.SS "\fBUint8\fP SDL_KeyboardEvent::state"
+\fBSDL_PRESSED\fP or \fBSDL_RELEASED\fP 
+.PP
+Définition à la ligne 192 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_KeyboardEvent::timestamp"
+
+.PP
+Définition à la ligne 190 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_KeyboardEvent::type"
+\fBSDL_KEYDOWN\fP or \fBSDL_KEYUP\fP 
+.PP
+Définition à la ligne 189 du fichier SDL_events\&.h\&.
+.SS "\fBUint32\fP SDL_KeyboardEvent::windowID"
+The window with keyboard focus, if any 
+.PP
+Définition à la ligne 191 du fichier SDL_events\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,0 +1,115 @@
+.TH "entry" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+entry \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <term_entry\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBTERMTYPE\fP \fBtterm\fP"
+.br
+.ti -1c
+.RI "unsigned \fBnuses\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   char * \fBname\fP"
+.br
+.ti -1c
+.RI "   struct \fBentry\fP * \fBlink\fP"
+.br
+.ti -1c
+.RI "   long \fBline\fP"
+.br
+.ti -1c
+.RI "} \fBuses\fP [\fBMAX_USES\fP]"
+.br
+.ti -1c
+.RI "\fBint\fP \fBncrosslinks\fP"
+.br
+.ti -1c
+.RI "struct \fBentry\fP * \fBcrosslinks\fP [\fBMAX_CROSSLINKS\fP]"
+.br
+.ti -1c
+.RI "long \fBcstart\fP"
+.br
+.ti -1c
+.RI "long \fBcend\fP"
+.br
+.ti -1c
+.RI "long \fBstartline\fP"
+.br
+.ti -1c
+.RI "struct \fBentry\fP * \fBnext\fP"
+.br
+.ti -1c
+.RI "struct \fBentry\fP * \fBlast\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 74 du fichier term_entry\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "long entry::cend"
+
+.PP
+Définition à la ligne 84 du fichier term_entry\&.h\&.
+.SS "struct \fBentry\fP* entry::crosslinks[\fBMAX_CROSSLINKS\fP]"
+
+.PP
+Définition à la ligne 83 du fichier term_entry\&.h\&.
+.SS "long entry::cstart"
+
+.PP
+Définition à la ligne 84 du fichier term_entry\&.h\&.
+.SS "struct \fBentry\fP* entry::last"
+
+.PP
+Définition à la ligne 87 du fichier term_entry\&.h\&.
+.SS "long entry::line"
+
+.PP
+Définition à la ligne 80 du fichier term_entry\&.h\&.
+.SS "struct \fBentry\fP* entry::link"
+
+.PP
+Définition à la ligne 79 du fichier term_entry\&.h\&.
+.SS "char* entry::name"
+
+.PP
+Définition à la ligne 78 du fichier term_entry\&.h\&.
+.SS "\fBint\fP entry::ncrosslinks"
+
+.PP
+Définition à la ligne 82 du fichier term_entry\&.h\&.
+.SS "struct \fBentry\fP* entry::next"
+
+.PP
+Définition à la ligne 86 du fichier term_entry\&.h\&.
+.SS "unsigned entry::nuses"
+
+.PP
+Définition à la ligne 76 du fichier term_entry\&.h\&.
+.SS "long entry::startline"
+
+.PP
+Définition à la ligne 85 du fichier term_entry\&.h\&.
+.SS "\fBTERMTYPE\fP entry::tterm"
+
+.PP
+Définition à la ligne 75 du fichier term_entry\&.h\&.
+.SS "struct { \&.\&.\&. }   entry::uses[\fBMAX_USES\fP]"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

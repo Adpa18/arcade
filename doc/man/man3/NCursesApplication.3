@@ -1,0 +1,234 @@
+.TH "NCursesApplication" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NCursesApplication \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cursesapp\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_slk_link\fP"
+.br
+.in -1c
+.SS "Types publics"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBNCursesApplication::_slk_link\fP \fBSLK_Link\fP"
+.br
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~NCursesApplication\fP ()"
+.br
+.ti -1c
+.RI "\fBint\fP \fBoperator()\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBhandleArgs\fP (\fBint\fP argc, char *argv[])"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBuseColors\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBpush\fP (\fBSoft_Label_Key_Set\fP &S)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBpop\fP ()"
+.br
+.ti -1c
+.RI "\fBSoft_Label_Key_Set\fP * \fBtop\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBforegrounds\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBbackgrounds\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBinactives\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBlabels\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBdialog_backgrounds\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBwindow_backgrounds\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBchtype\fP \fBscreen_titles\fP () \fBconst\fP "
+.br
+.in -1c
+.SS "Fonctions membres publiques statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBNCursesApplication\fP * \fBgetApplication\fP ()"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBbool\fP bColors)"
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBtitlesize\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBtitle\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBSoft_Label_Key_Set::Label_Layout\fP \fBuseSLKs\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBinit_labels\fP (\fBSoft_Label_Key_Set\fP &S) \fBconst\fP "
+.br
+.ti -1c
+.RI "virtual \fBint\fP \fBrun\fP ()=0"
+.br
+.ti -1c
+.RI "\fBNCursesApplication\fP (\fBbool\fP wantColors=\fBFALSE\fP)"
+.br
+.ti -1c
+.RI "\fBNCursesApplication\fP & \fBoperator=\fP (\fBconst\fP \fBNCursesApplication\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBNCursesApplication\fP (\fBconst\fP \fBNCursesApplication\fP &rhs)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBb_Colors\fP"
+.br
+.ti -1c
+.RI "\fBNCursesWindow\fP * \fBRoot_Window\fP"
+.br
+.in -1c
+.SS "Attributs protégés statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBNCursesWindow\fP * \fBtitleWindow\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 41 du fichier cursesapp\&.h\&.
+.SH "Documentation des définitions de type membres"
+.PP 
+.SS "typedef struct \fBNCursesApplication::_slk_link\fP  \fBNCursesApplication::SLK_Link\fP"
+
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "NCursesApplication::NCursesApplication (\fBbool\fP wantColors = \fC\fBFALSE\fP\fP)\fC [protected]\fP"
+
+.SS "NCursesApplication::NCursesApplication (\fBconst\fP \fBNCursesApplication\fP & rhs)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 102 du fichier cursesapp\&.h\&.
+.SS "virtual NCursesApplication::~NCursesApplication ()\fC [virtual]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual \fBchtype\fP NCursesApplication::backgrounds () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 148 du fichier cursesapp\&.h\&.
+.SS "virtual \fBchtype\fP NCursesApplication::dialog_backgrounds () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 163 du fichier cursesapp\&.h\&.
+.SS "virtual \fBchtype\fP NCursesApplication::foregrounds () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 143 du fichier cursesapp\&.h\&.
+.SS "static \fBNCursesApplication\fP* NCursesApplication::getApplication ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Définition à la ligne 112 du fichier cursesapp\&.h\&.
+.SS "virtual \fBvoid\fP NCursesApplication::handleArgs (\fBint\fP argc, char * argv[])\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 121 du fichier cursesapp\&.h\&.
+.SS "virtual \fBchtype\fP NCursesApplication::inactives () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 153 du fichier cursesapp\&.h\&.
+.SS "virtual \fBvoid\fP NCursesApplication::init (\fBbool\fP bColors)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "virtual \fBvoid\fP NCursesApplication::init_labels (\fBSoft_Label_Key_Set\fP & S) const\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 82 du fichier cursesapp\&.h\&.
+.SS "virtual \fBchtype\fP NCursesApplication::labels () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 158 du fichier cursesapp\&.h\&.
+.SS "\fBint\fP NCursesApplication::operator() (\fBvoid\fP)"
+
+.SS "\fBNCursesApplication\fP& NCursesApplication::operator= (\fBconst\fP \fBNCursesApplication\fP & rhs)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 94 du fichier cursesapp\&.h\&.
+.SS "\fBbool\fP NCursesApplication::pop ()"
+
+.SS "\fBvoid\fP NCursesApplication::push (\fBSoft_Label_Key_Set\fP & S)"
+
+.SS "virtual \fBint\fP NCursesApplication::run ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.SS "virtual \fBchtype\fP NCursesApplication::screen_titles () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 173 du fichier cursesapp\&.h\&.
+.SS "virtual \fBvoid\fP NCursesApplication::title ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 71 du fichier cursesapp\&.h\&.
+.SS "virtual \fBint\fP NCursesApplication::titlesize () const\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 65 du fichier cursesapp\&.h\&.
+.SS "\fBSoft_Label_Key_Set\fP* NCursesApplication::top () const"
+
+.SS "\fBbool\fP NCursesApplication::useColors () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 127 du fichier cursesapp\&.h\&.
+.SS "virtual \fBSoft_Label_Key_Set::Label_Layout\fP NCursesApplication::useSLKs () const\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 76 du fichier cursesapp\&.h\&.
+.SS "virtual \fBchtype\fP NCursesApplication::window_backgrounds () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Définition à la ligne 168 du fichier cursesapp\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBbool\fP NCursesApplication::b_Colors\fC [protected]\fP"
+
+.PP
+Définition à la ligne 56 du fichier cursesapp\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesApplication::Root_Window\fC [protected]\fP"
+
+.PP
+Définition à la ligne 57 du fichier cursesapp\&.h\&.
+.SS "\fBNCursesWindow\fP* NCursesApplication::titleWindow\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Définition à la ligne 54 du fichier cursesapp\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

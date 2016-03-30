@@ -1,0 +1,68 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_main.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_main.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBC_LINKAGE\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBC_LINKAGE\fP \fBint\fP \fBSDL_main\fP (\fBint\fP argc, char *argv[])"
+.br
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP \fBSDL_SetMainReady\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Redefine \fBmain()\fP on some platforms so that it is called by SDL\&.
+.PP
+The application's \fBmain()\fP function must be called with C linkage, and should be declared like this: 
+.PP
+.nf
+#ifdef __cplusplus
+extern "C"
+#endif
+int main(int argc, char *argv[])
+{
+}
+
+.fi
+.PP
+ 
+.PP
+Définition dans le fichier \fBSDL_main\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define C_LINKAGE"
+
+.PP
+Définition à la ligne 85 du fichier SDL_main\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBC_LINKAGE\fP \fBint\fP SDL_main (\fBint\fP argc, char * argv[])"
+The prototype for the application's \fBmain()\fP function 
+.SS "\fBDECLSPEC\fP \fBvoid\fP \fBSDLCALL\fP SDL_SetMainReady (\fBvoid\fP)"
+This is called by the real SDL main function to let the rest of the library know that initialization was done properly\&.
+.PP
+Calling this yourself without knowing what you're doing can cause crashes and hard to diagnose problems with your application\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

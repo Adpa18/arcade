@@ -1,0 +1,54 @@
+.TH "__DRIdamageExtensionRec" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DRIdamageExtensionRec \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dri_interface\&.h>\fP
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fB__DRIextension\fP \fBbase\fP"
+.br
+.ti -1c
+.RI "\fBvoid\fP(* \fBreportDamage\fP )(\fB__DRIdrawable\fP *draw, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, drm_clip_rect_t *rects, \fBint\fP num_rects, \fBGLboolean\fP front_buffer, \fBvoid\fP *loaderPrivate)"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 409 du fichier dri_interface\&.h\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fB__DRIextension\fP __DRIdamageExtensionRec::base"
+
+.PP
+Définition à la ligne 410 du fichier dri_interface\&.h\&.
+.SS "\fBvoid\fP(* __DRIdamageExtensionRec::reportDamage) (\fB__DRIdrawable\fP *draw, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, drm_clip_rect_t *rects, \fBint\fP num_rects, \fBGLboolean\fP front_buffer, \fBvoid\fP *loaderPrivate)"
+Reports areas of the given drawable which have been modified by the driver\&.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIdrawable\fP which the drawing was done to\&. 
+.br
+\fIrects\fP rectangles affected, with the drawable origin as the origin\&. 
+.br
+\fIx\fP X offset of the drawable within the screen (used in the front_buffer case) 
+.br
+\fIy\fP Y offset of the drawable within the screen\&. 
+.br
+\fIfront_buffer\fP boolean flag for whether the drawing to the drawable was actually done directly to the front buffer (instead of backing storage, for example) 
+.br
+\fIloaderPrivate\fP the data passed in at createNewDrawable time 
+.RE
+.PP
+
+.PP
+Définition à la ligne 427 du fichier dri_interface\&.h\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

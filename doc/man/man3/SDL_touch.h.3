@@ -1,0 +1,110 @@
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_touch.h" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/wery_a/rendu/CPP/cpp_arcade/library/sdl2/include/SDL_touch.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'SDL_stdinc\&.h'\fP
+.br
+\fC#include 'SDL_error\&.h'\fP
+.br
+\fC#include 'SDL_video\&.h'\fP
+.br
+\fC#include 'begin_code\&.h'\fP
+.br
+\fC#include 'close_code\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSDL_Finger\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSDL_TOUCH_MOUSEID\fP   ((\fBUint32\fP)\-1)"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBSint64\fP \fBSDL_TouchID\fP"
+.br
+.ti -1c
+.RI "typedef \fBSint64\fP \fBSDL_FingerID\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSDL_Finger\fP \fBSDL_Finger\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetNumTouchDevices\fP (\fBvoid\fP)"
+.br
+.RI "\fIGet the number of registered touch devices\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_TouchID\fP \fBSDLCALL\fP \fBSDL_GetTouchDevice\fP (\fBint\fP \fBindex\fP)"
+.br
+.RI "\fIGet the touch ID with the given index, or 0 if the index is invalid\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP \fBSDL_GetNumTouchFingers\fP (\fBSDL_TouchID\fP touchID)"
+.br
+.RI "\fIGet the number of active fingers for a given touch device\&. \fP"
+.ti -1c
+.RI "\fBDECLSPEC\fP \fBSDL_Finger\fP *\fBSDLCALL\fP \fBSDL_GetTouchFinger\fP (\fBSDL_TouchID\fP touchID, \fBint\fP \fBindex\fP)"
+.br
+.RI "\fIGet the finger object of the given touch, with the given index\&. \fP"
+.in -1c
+.SH "Description détaillée"
+.PP 
+Include file for SDL touch event handling\&. 
+.PP
+Définition dans le fichier \fBSDL_touch\&.h\fP\&.
+.SH "Documentation des macros"
+.PP 
+.SS "#define SDL_TOUCH_MOUSEID   ((\fBUint32\fP)\-1)"
+
+.PP
+Définition à la ligne 53 du fichier SDL_touch\&.h\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBSDL_Finger\fP  \fBSDL_Finger\fP"
+
+.SS "typedef \fBSint64\fP \fBSDL_FingerID\fP"
+
+.PP
+Définition à la ligne 42 du fichier SDL_touch\&.h\&.
+.SS "typedef \fBSint64\fP \fBSDL_TouchID\fP"
+
+.PP
+Définition à la ligne 41 du fichier SDL_touch\&.h\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetNumTouchDevices (\fBvoid\fP)"
+
+.PP
+Get the number of registered touch devices\&. 
+.SS "\fBDECLSPEC\fP \fBint\fP \fBSDLCALL\fP SDL_GetNumTouchFingers (\fBSDL_TouchID\fP touchID)"
+
+.PP
+Get the number of active fingers for a given touch device\&. 
+.SS "\fBDECLSPEC\fP \fBSDL_TouchID\fP \fBSDLCALL\fP SDL_GetTouchDevice (\fBint\fP index)"
+
+.PP
+Get the touch ID with the given index, or 0 if the index is invalid\&. 
+.SS "\fBDECLSPEC\fP \fBSDL_Finger\fP* \fBSDLCALL\fP SDL_GetTouchFinger (\fBSDL_TouchID\fP touchID, \fBint\fP index)"
+
+.PP
+Get the finger object of the given touch, with the given index\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.
