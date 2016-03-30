@@ -3,8 +3,8 @@
 
 # include <cstdlib>
 # include <unistd.h>
-# include <ncurses.h>
 # include <map>
+# include <ncurses.h>
 # include "IGraph.hpp"
 # include "AGame.hpp"
 # include "Window.hpp"

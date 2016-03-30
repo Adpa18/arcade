@@ -4,4 +4,6 @@
 -I./inc/games/snake
 -I./inc/games/Pacman
 -I./inc
--I./library/SDL2/include/SDL2/
+-I./library/ncurses/include
+-I./library/sdl2/include
+-I./library/openGL/include

@@ -18,9 +18,11 @@ CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w -g
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/sdl2/ -I$(BASE)inc/
 
-CPPFLAGS	+= -D_REENTRANT
+CPPFLAGS	+= 	-I$(BASE)library/sdl2/include -D_REENTRANT
 
 LIBS 		=	-lSDL2 -lSDL2_image -lSDL2_ttf -lpthread
+
+LIBS 		+= 	-L$(BASE)library/sdl2
 
 LDFLAGS		=	-shared -z defs
 

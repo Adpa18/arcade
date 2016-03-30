@@ -1,11 +1,11 @@
 #ifndef OpenGL_HPP_
 # define OpenGL_HPP_
 
-# include <SDL2/SDL.h>
-# include <SDL2/SDL_image.h>
-# include <SDL2/SDL_ttf.h>
-# include <GL/gl.h>
-# include <GL/glu.h>
+# include "SDL.h"
+# include "SDL_image.h"
+# include "SDL_ttf.h"
+# include "gl.h"
+# include "glu.h"
 # include <cstdlib>
 # include <exception>
 # include <stack>
