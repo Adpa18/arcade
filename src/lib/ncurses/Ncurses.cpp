@@ -103,12 +103,12 @@ void Ncurses::display(std::stack<AComponent*> components)
         obj = components.top();
         components.pop();
         if ((Gobj = dynamic_cast<GameComponent*>(obj))) {
-            if (Gobj->getSpriteText() == ' ')
+            if (Gobj->getSpriteText()[0] == ' ')
             {
               wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
               wattr_on(this->wind->getWind(), A_REVERSE, NULL);
               mvwaddch(this->wind->getWind(),
-              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText());
+              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText()[0]);
               wattr_off(this->wind->getWind(), A_REVERSE, NULL);
               wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
             }
@@ -116,7 +116,7 @@ void Ncurses::display(std::stack<AComponent*> components)
             {
               wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
               mvwaddch(this->wind->getWind(),
-              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText());
+              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText()[0]);
               wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
             }
         }

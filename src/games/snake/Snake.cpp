@@ -5,7 +5,7 @@
 ** Login	wery_a
 **
 ** Started on	Wed Mar 16 21:47:41 2016 Adrien WERY
-** Last update	Tue Mar 29 21:57:50 2016 Nicolas Constanty
+** Last update	Wed Mar 30 03:58:06 2016 Nicolas Constanty
 */
 
 #include "Snake.hpp"
@@ -13,10 +13,10 @@
 Snake::Snake () : AGame("Snake", Vector2<double>(WIDTH, HEIGHT))
 {
     Vector2<double> pos(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP);
-    this->target = new GameComponent(pos, Vector2<double>(STEP, STEP), AComponent::RED, ' ', "snakeApple.png", NULL);
+    this->target = new GameComponent(pos, Vector2<double>(STEP, STEP), AComponent::RED, ' ', "snakeApple.png", GameComponent::CUBE_SMALL);
     this->background = new BackgroundComponent(Vector2<double>(0, 0), Vector2<double>(WIDTH, HEIGHT), AComponent::BLACK, "");
     this->sound = new AudioComponent(Vector2<double>(0, 0), AComponent::BLACK, '\a', "", "");
-    this->old_target = new GameComponent(pos, Vector2<double>(STEP, STEP), AComponent::BLACK, ' ', this->background->getSprite2D(), NULL);
+    this->old_target = new GameComponent(pos, Vector2<double>(STEP, STEP), AComponent::BLACK, ' ', this->background->getSprite2D(), GameComponent::CUBE_SMALL);
     this->score = new ScoreComponent("snake");
     this->restart();
 }
@@ -132,7 +132,7 @@ std::stack<AComponent*>     Snake::compute(int key)
         this->restart();
         return (components);
     }
-    this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2<double>(STEP, STEP), AComponent::GREEN, ' ', "", NULL));
+    this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2<double>(STEP, STEP), AComponent::GREEN, ' ', "", GameComponent::CUBE_SMALL));
     components.push(this->score->getScoreUI());
     if (this->snake.front()->getPos() == this->target->getPos()) {
         this->target->setPos(Vector2<double>(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
@@ -179,7 +179,7 @@ void                        Snake::restart()
     this->score->getScoreUI()->setText("Score : 0");
     this->snake.erase(this->snake.begin(), this->snake.end());
     for (size_t i = 0; i < SIZE; i++) {
-      this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / STEP / 2 * STEP, HEIGHT / STEP / 2 * STEP), Vector2<double>(STEP, STEP), AComponent::RED, ' ', "", NULL));
+      this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / STEP / 2 * STEP, HEIGHT / STEP / 2 * STEP), Vector2<double>(STEP, STEP), AComponent::RED, ' ', "", GameComponent::CUBE_SMALL));
     }
     this->target->setPos(Vector2<double>(rand() % (WIDTH / STEP) * STEP, rand() % (HEIGHT / STEP) * STEP));
 }

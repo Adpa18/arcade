@@ -82,7 +82,7 @@ int OpenGL::eventManagment()
     SDL_Event event;
     SDL_PollEvent(&event);
     if (event.key.type != SDL_KEYDOWN)
-    return (-1);
+      return (-1);
     return (this->keyMap[event.key.keysym.scancode]);
 }
 

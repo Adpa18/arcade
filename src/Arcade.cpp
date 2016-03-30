@@ -138,6 +138,6 @@ int	main(int ac, char **av)
     }
     arcade = new arcade::Arcade();
     arcade->run(av[1]);
-    arcade->clean();
+    // arcade->clean();
     return (0);
 }
