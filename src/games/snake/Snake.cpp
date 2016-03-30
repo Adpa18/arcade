@@ -10,12 +10,12 @@ Snake::Snake () : AGame("Snake", Vector2<double>(WIDTH, HEIGHT))
     this->old_target = new GameComponent(pos, Vector2<double>(1, 1), AComponent::BLACK, ' ', this->background->getSprite2D(), GameComponent::CUBE_LARGE);
     this->score = new ScoreComponent("snake");
     for (size_t i = 0; i < WIDTH; i += 1) {
-        this->walls.push_back(new GameComponent(Vector2<double>(i, 0), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
-        this->walls.push_back(new GameComponent(Vector2<double>(i, HEIGHT - 1), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
+        this->walls.push_back(new GameComponent(Vector2<double>(i, 0), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
+        this->walls.push_back(new GameComponent(Vector2<double>(i, HEIGHT - 1), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
     }
     for (size_t i = 0; i < HEIGHT; i += 1) {
-        this->walls.push_back(new GameComponent(Vector2<double>(0, i), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
-        this->walls.push_back(new GameComponent(Vector2<double>(WIDTH - 1, i), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "", GameComponent::CUBE_LARGE));
+        this->walls.push_back(new GameComponent(Vector2<double>(0, i), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
+        this->walls.push_back(new GameComponent(Vector2<double>(WIDTH - 1, i), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
     }
     this->restart();
 }

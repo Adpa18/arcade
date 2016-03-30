@@ -79,8 +79,11 @@ void Sdl2::display(std::stack<AComponent*> components)
     BackgroundComponent   *Bobj;
     unsigned int    colorInt;
 
-    if (is_init == false)
-      init("SDL2", Vector2<double>(50, 30));
+    if (is_init == false) {
+        init("SDL2", Vector2<double>(50, 30));
+    }
+    SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
+    SDL_RenderClear(this->render);
     while (!components.empty()) {
         obj = components.top();
         components.pop();

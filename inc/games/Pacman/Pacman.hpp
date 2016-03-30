@@ -5,13 +5,12 @@
 ** Login	vencat_a
 **
 ** Started on	Tue Mar 15 17:55:08 2016 Axel Vencatareddy
-** Last update	Wed Mar 30 18:12:22 2016 Adrien WERY
+** Last update	Wed Mar 30 19:59:55 2016 Adrien WERY
 */
 
 #ifndef PACMAN_HPP_
 # define PACMAN_HPP_
 
-# include <vector>
 # include "AGame.hpp"
 # include "Utils.hpp"
 # include "GameComponent.hpp"
@@ -20,12 +19,14 @@
 # include "AudioComponent.hpp"
 # include "ScoreComponent.hpp"
 # include "Protocol.hpp"
+# include <vector>
+# include <map>
 
 # define WIDTH  50
 # define HEIGHT 30
 # define NB_PH  4
 
-enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
+enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN, NOTHING };
 
 typedef struct	s_phantom {
   direction	dir;
@@ -36,8 +37,9 @@ class Pacman : public AGame {
 private:
     GameComponent               *pacman;
     std::vector<GameComponent*> phantom;
-    std::vector<GameComponent*> mapObjs;
-    char                        map[HEIGHT + 1][WIDTH + 1] = {
+    std::map<double, GameComponent*> mapObjs;
+    direction                   dir;
+    const char                  map[HEIGHT + 1][WIDTH + 1] = {
         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "Xo.....................XXXX.....................oX",
         "X.XXXXXXXX.XXXXXXXXXXX.XXXX.XXXXXXXXXXX.XXXXXXXX.X",
@@ -74,6 +76,9 @@ public:
     virtual std::stack<AComponent*> compute(int);
     virtual std::stack<AComponent*>	getInfos();
     virtual void			        restart();
+    void 							changeDirection(int key);
+    void 							move();
+    void 							eat();
 private:
     bool                            check(Vector2<double> pos);
     // void				phantom_compute(GameComponent *,
