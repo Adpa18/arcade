@@ -55,7 +55,7 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
     }
     else
       myso = dlopen(name.c_str(), RTLD_NOW | RTLD_GLOBAL);
-    if (!myso)
+    if (!myso || (dlsym_error = dlerror()))
         std::runtime_error(std::string("Cannot open library: ") + dlerror());
     symbol = (type == GAME) ? "loadGame" : "loadLib";
     fptr load = (void *(*)())(dlsym(myso, symbol));
@@ -63,19 +63,21 @@ std::pair<void *, bool> *arcade::Arcade::initSo(std::string const &name, SOTYPE 
       std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
     this->libs.push(myso);
     //check if init exist
-    f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
-    if ((dlsym_error = dlerror())) {
-      (void)ini;
-      has_init = false;
+    if (type == GRAPH) {
+        f_init ini = (void *(*)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>))(dlsym(myso, "initLib"));
+        if ((dlsym_error = dlerror())) {
+            (void)ini;
+            has_init = false;
+        }
+        f_destroy dest = (void *(*)(IGraph *))(dlsym(myso, "destroyLib"));
+        if ((dlsym_error = dlerror()))
+        {
+            (void)dest;
+            has_init = false;
+        }
+        if (has_init)
+            return (new std::pair<void *, bool>(load(), true));
     }
-    f_destroy dest = (void *(*)(IGraph *))(dlsym(myso, "destroyLib"));
-    if ((dlsym_error = dlerror()))
-      {
-        (void)dest;
-        has_init = false;
-      }
-    if (has_init)
-      return (new std::pair<void *, bool>(load(), true));
   return (new std::pair<void *, bool>(load(), false));
 }
 
@@ -95,7 +97,7 @@ bool    arcade::Arcade::run(const std::string &graphPath)
     int    gamePos;
 
     graphPos = find(this->graphsNames.begin(), this->graphsNames.end(), graphPath.substr(graphPath.find_last_of('/') + 1, graphPath.length())) - this->graphsNames.begin();
-    gamePos = 0;
+    gamePos = 1;
     if (graphs[graphPos].second)
       graphs[graphPos].first->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());
     std::chrono::milliseconds interval(60);
