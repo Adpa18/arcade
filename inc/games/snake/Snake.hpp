@@ -13,7 +13,6 @@
 
 # define WIDTH  50
 # define HEIGHT 30
-# define STEP   1
 # define SIZE   3
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
