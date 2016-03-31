@@ -145,9 +145,9 @@ std::stack<AComponent*>     Pacman::compute(int key)
     components.push(this->phantom[1]);
     components.push(this->phantom[2]);
     components.push(this->phantom[3]);
-    for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
-        components.push(it->second);
-    }
+    // for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
+    //     components.push(it->second);
+    // }
     return (components);
 }
 

@@ -162,7 +162,6 @@ std::stack<AComponent*>     Snake::getInfos()
 
     components.push(this->target);
     components.push(this->background);
-    this->getMap();
     return (components);
 }
 
