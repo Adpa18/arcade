@@ -17,12 +17,6 @@ OpenGL::~OpenGL ()
 {
     if (is_destroy == false)
       this->destroy();
-    for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
-        TTF_CloseFont(it->second);
-    }
-    for (std::map<std::string, SDL_Surface*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
-        SDL_FreeSurface(it->second);
-    }
     TTF_Quit();
     SDL_Quit();
 }
@@ -47,6 +41,8 @@ void    OpenGL::initOpenGL(const std::string &name, Vector2<double> size)
     glLoadIdentity();
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_TEXTURE_2D);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     gluPerspective(70, (double)((size.x * STEP) / (double)(size.y * STEP)), 1, 1000);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
@@ -65,6 +61,14 @@ void  OpenGL::init(const std::string &name, Vector2<double> size)
 void    OpenGL::destroy()
 {
     is_destroy = true;
+    for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
+        TTF_CloseFont(it->second);
+    }
+    for (std::map<std::string, SDL_Surface*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
+        SDL_FreeSurface(it->second);
+    }
+    fonts.clear();
+    tex.clear();
     SDL_GL_DeleteContext(this->gl);
     SDL_DestroyWindow(this->win);
 }
@@ -74,8 +78,10 @@ int OpenGL::eventManagment()
     SDL_Event event;
     SDL_PollEvent(&event);
     if (event.key.type != SDL_KEYDOWN)
-      return (-1);
-    return (this->keyMap[event.key.keysym.scancode]);
+        return (-1);
+    if (this->keyMap[event.key.keysym.scancode])
+        return (this->keyMap[event.key.keysym.scancode]);
+    return (event.key.keysym.sym);
 }
 
 void    OpenGL::drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot, const std::string &texName)
@@ -132,6 +138,8 @@ void    OpenGL::drawCube(Vector2<double> pos, Vector2<double> size, Vector2<doub
     glTexCoord2i(1,1); glVertex3i(-1,-1,1);
     glEnd();
     glPopMatrix();
+    if (isTextured)
+        glDeleteTextures(1, &texture);
 }
 
 void OpenGL::display(std::stack<AComponent*> components)
@@ -158,8 +166,8 @@ void OpenGL::display(std::stack<AComponent*> components)
     while (!components.empty()) {
         obj = components.top();
         components.pop();
-        rect.x = obj->getPos().x * STEP;
-        rect.y = obj->getPos().y * STEP;
+        rect.x = obj->getPos().x;
+        rect.y = obj->getPos().y;
         if ((Gobj = dynamic_cast<GameComponent*>(obj))) {
             this->displayGame(*Gobj);
         } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
@@ -182,8 +190,8 @@ void    OpenGL::displayHighScore(UIComponent const * const *uiComponents)
     SDL_Rect    rect;
 
     for (size_t i = 0; i < HighScoreComponent::componentNb && uiComponents[i] != NULL; i++) {
-        rect.x = uiComponents[i]->getPos().x * STEP;
-        rect.y = uiComponents[i]->getPos().y * STEP + 3 * STEP;
+        rect.x = uiComponents[i]->getPos().x;
+        rect.y = uiComponents[i]->getPos().y + 3;
         displayUI(*uiComponents[i], &rect);
     }
 }
@@ -194,8 +202,6 @@ void    OpenGL::displayUI(const UIComponent &ui, SDL_Rect *rect)
     SDL_Color       color;
     SDL_Surface     *surface;
 
-    // glPushMatrix();
-    // glLoadIdentity();
     colorInt = this->colors[ui.getColor()];
     color.r = ((colorInt) & 255);
     color.g = ((colorInt >> 8) & 255);
@@ -206,14 +212,35 @@ void    OpenGL::displayUI(const UIComponent &ui, SDL_Rect *rect)
     }
     surface = TTF_RenderText_Blended(this->fonts["default"], ui.getText().c_str(), color);
     this->loadSurface(surface);
-    glBegin(GL_QUADS);
-    glTexCoord2f(0,0); glVertex2f(rect->x, rect->y);
-    glTexCoord2f(1,0); glVertex2f(rect->x + surface->w, rect->y);
-    glTexCoord2f(1,1); glVertex2f(rect->x + surface->w, rect->y + surface->h);
-    glTexCoord2f(0,1); glVertex2f(rect->x, rect->y + surface->h);
-    glEnd();
     SDL_FreeSurface(surface);
-    // glPopMatrix();
+    glPushMatrix();
+    if (!ui.getDim().x || !ui.getDim().y) {
+        rect->w = ui.getText().length();
+        rect->h = 2;
+        glRotatef(45, 1, 0, 0);
+    } else {
+        rect->w = ui.getDim().x / 2;
+        rect->h = ui.getDim().y / 2;
+    }
+    if (ui.getPos().x < 0 || ui.getPos().y < 0) {
+      rect->x = this->size.x / 2;
+      rect->y = 0;
+      glTranslatef(rect->x, rect->y - 10, 0);
+  } else {
+      glTranslatef(rect->x, rect->y, -2);
+  }
+  glBegin(GL_QUADS);
+  glTexCoord2i(0, 0);
+  glVertex3i(-rect->w, -rect->h, 1);
+  glTexCoord2i(1, 0);
+  glVertex3i(rect->w, -rect->h, 1);
+  glTexCoord2i(1, 1);
+  glVertex3i(rect->w, rect->h, 1);
+  glTexCoord2i(0, 1);
+  glVertex3i(-rect->w, rect->h, 1);
+  glEnd();
+  glPopMatrix();
+  glDeleteTextures(1, &texture);
 }
 
 void    OpenGL::displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect)
@@ -245,7 +272,7 @@ void    OpenGL::displayGame(const GameComponent &game)
 void    OpenGL::displayBackground(const BackgroundComponent &background)
 {
     glPushMatrix();
-     loadTexture(background.getSprite2D());
+    loadTexture(background.getSprite2D());
     glTranslatef(size.x / 2, size.y / 2 - 1, 0);
     glBegin(GL_QUADS);
     glTexCoord2i(0, 0);
@@ -258,6 +285,7 @@ void    OpenGL::displayBackground(const BackgroundComponent &background)
     glVertex3i(-size.x / 2, size.y / 2, 1);
     glEnd();
     glPopMatrix();
+    glDeleteTextures(1, &texture);
 }
 
 void sound()
@@ -290,11 +318,16 @@ bool           OpenGL::loadSurface(SDL_Surface *surface)
     } else {
         return (false);
     }
-    glGenTextures(1, NULL);
-    glBindTexture(GL_TEXTURE_2D, 0);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel,surface->w,
             surface->h, 0, format, GL_UNSIGNED_BYTE, surface->pixels);
+	// glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel,
+    //     puissance2sup(surface->w), puissance2sup(surface->h),
+    //     0, format, GL_UNSIGNED_BYTE, NULL);
+	// glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, surface->w,
+    //         surface->h, format, GL_UNSIGNED_BYTE, surface->pixels);
     return (true);
 }

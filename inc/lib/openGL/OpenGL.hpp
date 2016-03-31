@@ -24,7 +24,6 @@
 class OpenGL : public IGraph {
 private:
     SDL_Window      *win;
-    SDL_Renderer    *render;
     SDL_GLContext   gl;
     std::map<std::string, TTF_Font*> fonts;
     std::map<int, int>    keyMap = {
@@ -57,8 +56,9 @@ private:
 
     Vector2<double>         size;
     std::string     background;
-    bool						is_init;
-    bool						is_destroy;
+    bool			is_init;
+    bool			is_destroy;
+    unsigned int    texture;
 public:
     OpenGL (void);
     virtual ~OpenGL ();

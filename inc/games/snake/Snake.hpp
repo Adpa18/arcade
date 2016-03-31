@@ -13,7 +13,7 @@
 # include <string>
 
 # define SIZE   3
-# define RANDOM_POS Vector2<double>(rand() % (ArcadeSystem::winWidth - 1) + 1, rand() % (ArcadeSystem::winHeight - 1) + 1)
+# define RANDOM_POS Vector2<double>(rand() % (ArcadeSystem::winWidth - 2) + 1, rand() % (ArcadeSystem::winHeight - 2) + 1)
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 

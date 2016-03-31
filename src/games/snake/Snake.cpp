@@ -33,6 +33,7 @@ void    Snake::restart()
       this->snake.push_back(new GameComponent(Vector2<double>(ArcadeSystem::winWidth / 2 - i, ArcadeSystem::winHeight / 2), Vector2<double>(1, 1), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
     }
     this->target->setPos(RANDOM_POS);
+    this->scoreText->setText("Score : 0");
     this->score = 0;
 }
 
