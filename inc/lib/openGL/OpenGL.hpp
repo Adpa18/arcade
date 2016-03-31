@@ -24,7 +24,6 @@ private:
     SDL_Window      *win;
     SDL_GLContext   gl;
     std::map<std::string, TTF_Font*> fonts;
-    std::map<std::string, SDL_Texture*> tex;
     std::map<int, int>    keyMap = {
         {SDL_SCANCODE_ESCAPE, ArcadeSystem::Exit},
         {SDL_SCANCODE_UP, ArcadeSystem::ArrowUp},
@@ -51,7 +50,7 @@ private:
         {AComponent::CYAN, 0x00FFFF},
         {AComponent::WHITE, 0xFFFFFF}
     };
-    std::map<size_t, SDL_Surface *> texts;
+    std::map<std::string, SDL_Surface *> tex;
 
     Vector2<double>         size;
     std::string     background;
@@ -68,11 +67,13 @@ public:
     virtual void    destroy();
 
 private:
-    void            drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot);
+    void            initOpenGL(const std::string &name, Vector2<double> size);
+    void            drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot, const std::string &texName);
     void            displayGame(const GameComponent &game);
     void            displayUI(const UIComponent &ui);
     void            displayBackground(const BackgroundComponent &background);
     void			fill_audio(void *udata, Uint8 *stream, int len);
+    bool            loadTexture(const std::string &filename);
 
 };
 

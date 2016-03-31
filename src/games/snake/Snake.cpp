@@ -2,12 +2,8 @@
 
 Snake::Snake () : AGame("Snake", Vector2<double>(WIDTH, HEIGHT))
 {
-    Vector2<double> pos(rand() % (WIDTH - 1) + 1, rand() % (HEIGHT - 1) + 1);
-
-    this->target = new GameComponent(pos, Vector2<double>(1, 1), AComponent::RED, ' ', "snakeApple.png", GameComponent::CUBE_LARGE);
+    this->target = new GameComponent(RANDOM_POS, Vector2<double>(1, 1), AComponent::RED, ' ', "snakeApple.png", GameComponent::CUBE_LARGE);
     this->background = new BackgroundComponent(Vector2<double>(0, 0), Vector2<double>(WIDTH, HEIGHT), AComponent::BLACK, "");
-    this->sound = new AudioComponent(Vector2<double>(0, 0), AComponent::BLACK, '\a', "", "");
-    this->score = new ScoreComponent("snake");
     for (size_t i = 0; i < WIDTH; i += 1) {
         this->walls.push_back(new GameComponent(Vector2<double>(i, 0), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
         this->walls.push_back(new GameComponent(Vector2<double>(i, HEIGHT - 1), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
@@ -21,6 +17,22 @@ Snake::Snake () : AGame("Snake", Vector2<double>(WIDTH, HEIGHT))
 
 Snake::~Snake ()
 {}
+
+void    Snake::restart()
+{
+    static const char * const backgroundSprites[] = {
+        "snakeBackground.jpg",
+        "snakeBackground1.jpg",
+        "snakeBackground2.jpg"
+    };
+    this->dir = DIR_UP;
+    this->background->setSprite2D(backgroundSprites[rand() % 3]);
+    this->snake.erase(this->snake.begin(), this->snake.end());
+    for (size_t i = 0; i < SIZE; i++) {
+      this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / 2 - i, HEIGHT / 2), Vector2<double>(1, 1), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
+    }
+    this->target->setPos(RANDOM_POS);
+}
 
 const   std::string     Snake::getImg(size_t pos)
 {
@@ -121,30 +133,16 @@ std::stack<AComponent*>     Snake::compute(int key)
             snakePos.y += 1;
             break;
     }
-    if (!check(snakePos)) {
-        components.push(this->target);
-        components.push(this->background);
-        for (size_t i = 0; i < this->snake.size(); i++) {
-            this->snake[i]->setColor(AComponent::BLACK);
-            this->snake[i]->setSprite2D(this->background->getSprite2D());
-            components.push(this->snake[i]);
+    if (check(snakePos)) {
+        this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2<double>(1, 1), AComponent::GREEN, ' ', "", GameComponent::CUBE_LARGE));
+        if (this->snake.front()->getPos() == this->target->getPos()) {
+            this->target->setPos(RANDOM_POS);
+            components.push(this->target);
+        } else {
+            this->snake.pop_back();
         }
-        components.push(this->sound);
-        this->restart();
-        return (components);
-    }
-    this->snake.insert(this->snake.begin(), new GameComponent(snakePos, Vector2<double>(1, 1), AComponent::GREEN, ' ', "", GameComponent::CUBE_LARGE));
-    components.push(this->score->getScoreUI());
-    if (this->snake.front()->getPos() == this->target->getPos()) {
-        this->target->setPos(Vector2<double>(rand() % WIDTH, rand() % HEIGHT));
-        components.push(this->target);
-        components.push(this->sound);
-        this->score->setScore(this->score->getScore() + 10);
-        components.push(new BackgroundComponent(this->score->getScoreUI()->getPos(),
-            this->score->getScoreUI()->getDim(), AComponent::BLACK, this->background->getSprite2D()));
-        this->score->getScoreUI()->setText("Score : " + std::to_string(this->score->getScore()));
     } else {
-        this->snake.pop_back();
+        this->restart();
     }
     for (size_t i = 0; i < this->snake.size(); i++) {
         this->snake[i]->setSprite2D(this->getImg(i));
@@ -165,24 +163,6 @@ std::stack<AComponent*>     Snake::getInfos()
     components.push(this->target);
     components.push(this->background);
     return (components);
-}
-
-void                        Snake::restart()
-{
-    static const char * const backgroundSprites[] = {
-        "snakeBackground.jpg",
-        "snakeBackground1.jpg",
-        "snakeBackground2.jpg"
-    };
-    this->dir = DIR_UP;
-    this->score->writeScore();
-    this->background->setSprite2D(backgroundSprites[rand() % 3]);
-    this->score->getScoreUI()->setText("Score : 0");
-    this->snake.erase(this->snake.begin(), this->snake.end());
-    for (size_t i = 0; i < SIZE; i++) {
-      this->snake.push_back(new GameComponent(Vector2<double>(WIDTH / 2 - i, HEIGHT / 2), Vector2<double>(1, 1), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
-    }
-    this->target->setPos(Vector2<double>(rand() % WIDTH, rand() % HEIGHT));
 }
 
 void        Snake::getMap()

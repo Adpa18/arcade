@@ -7,7 +7,7 @@
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
 # include "AudioComponent.hpp"
-# include "ScoreComponent.hpp"
+# include "HighScoreComponent.hpp"
 # include "Protocol.hpp"
 # include <vector>
 # include <map>
@@ -71,15 +71,6 @@ public:
     void 							eat();
 private:
     bool                            check(Vector2<double> pos);
-    // void				phantom_compute(GameComponent *,
-    //                                     std::stack<AComponent*> &);
-    // bool				collision();
-    // bool				limit(Vector2<double>);
-    // void				newDir(GameComponent *);
-    // bool				tryLeft(Vector2<double>);
-    // bool				tryRight(Vector2<double>);
-    // bool				tryUp(Vector2<double>);
-    // bool				tryDown(Vector2<double>);
 };
 
 extern "C" AGame *loadGame()

@@ -20,17 +20,16 @@ OpenGL::~OpenGL ()
     for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
         TTF_CloseFont(it->second);
     }
-    for (std::map<std::string, SDL_Texture*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
-        SDL_DestroyTexture(it->second);
+    for (std::map<std::string, SDL_Surface*>::iterator it = this->tex.begin(); it != this->tex.end(); ++it) {
+        SDL_FreeSurface(it->second);
     }
     TTF_Quit();
     SDL_Quit();
 }
 
-void  OpenGL::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
+void    OpenGL::initOpenGL(const std::string &name, Vector2<double> size)
 {
     this->is_init = true;
-    std::cout << "StartInit => Lib OpenGL" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
     SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL)))
@@ -43,31 +42,21 @@ void  OpenGL::init(const std::string &name, Vector2<double> size, std::stack<ACo
     SDL_GL_SetSwapInterval(1);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(70, (double)((size.x * STEP) / (double)(size.y * STEP)), 1, 1000);
     glEnable(GL_DEPTH_TEST);
-    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+    glEnable(GL_TEXTURE_2D);
+    gluPerspective(70, (double)((size.x * STEP) / (double)(size.y * STEP)), 1, 1000);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void  OpenGL::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
+{
+    this->initOpenGL(name, size);
     this->display(cache);
 }
 
 void  OpenGL::init(const std::string &name, Vector2<double> size)
 {
-    this->is_init = true;
-    std::cout << "StartInit => Lib OpenGL" << std::endl;
-    this->size = size;
-    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
-    SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL)))
-    throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
-    this->gl = SDL_GL_CreateContext(this->win);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
-    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    SDL_GL_SetSwapInterval(1);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective(70, (double)((size.x * STEP) / (double)(size.y * STEP)), 1, 1000);
-    glEnable(GL_DEPTH_TEST);
-    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+    this->initOpenGL(name, size);
 }
 
 void    OpenGL::destroy()
@@ -86,44 +75,58 @@ int OpenGL::eventManagment()
     return (this->keyMap[event.key.keysym.scancode]);
 }
 
-void    OpenGL::drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot)
+void    OpenGL::drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot, const std::string &texName)
 {
+    bool    isTextured = loadTexture(texName);
     glPushMatrix();
     glTranslatef(pos.x, pos.y, 0);
     glScalef((double)size.x / 2.0, (double)size.y / 2.0, 0.5);
     glRotatef(rot.x, 1, 0, 0);
     glRotatef(rot.y, 0, 1, 0);
     glBegin(GL_QUADS);
-    glColor3ub(255,0,0); //face rouge
-    glVertex3d(1,1,1);
-    glVertex3d(1,1,-1);
-    glVertex3d(-1,1,-1);
-    glVertex3d(-1,1,1);
-    glColor3ub(0,255,0); //face verte
-    glVertex3d(1,-1,1);
-    glVertex3d(1,-1,-1);
-    glVertex3d(1,1,-1);
-    glVertex3d(1,1,1);
-    glColor3ub(0,0,255); //face bleue
-    glVertex3d(-1,-1,1);
-    glVertex3d(-1,-1,-1);
-    glVertex3d(1,-1,-1);
-    glVertex3d(1,-1,1);
-    glColor3ub(255,255,0); //face jaune
-    glVertex3d(-1,1,1);
-    glVertex3d(-1,1,-1);
-    glVertex3d(-1,-1,-1);
-    glVertex3d(-1,-1,1);
-    glColor3ub(0,255,255); //face cyan
-    glVertex3d(1,1,-1);
-    glVertex3d(1,-1,-1);
-    glVertex3d(-1,-1,-1);
-    glVertex3d(-1,1,-1);
-    glColor3ub(255,0,255); //face magenta
-    glVertex3d(1,-1,1);
-    glVertex3d(1,1,1);
-    glVertex3d(-1,1,1);
-    glVertex3d(-1,-1,1);
+    glColor3ub(255,255,255);
+    if (!isTextured) {
+        glColor3ub(255,0,0); //face rouge
+    }
+    glTexCoord2i(0,1); glVertex3i(1,1,1);
+    glTexCoord2i(0,0); glVertex3i(1,1,-1);
+    glTexCoord2i(1,0); glVertex3i(-1,1,-1);
+    glTexCoord2i(1,1); glVertex3i(-1,1,1);
+    if (!isTextured) {
+        glColor3ub(0,255,0); //face verte
+    }
+    glTexCoord2i(0,1); glVertex3i(1,-1,1);
+    glTexCoord2i(0,0); glVertex3i(1,-1,-1);
+    glTexCoord2i(1,0); glVertex3i(1,1,-1);
+    glTexCoord2i(1,1); glVertex3i(1,1,1);
+    if (!isTextured) {
+        glColor3ub(0,0,255); //face bleue
+    }
+    glTexCoord2i(0,1); glVertex3i(-1,-1,1);
+    glTexCoord2i(0,0); glVertex3i(-1,-1,-1);
+    glTexCoord2i(1,0); glVertex3i(1,-1,-1);
+    glTexCoord2i(1,1); glVertex3i(1,-1,1);
+    if (!isTextured) {
+        glColor3ub(255,255,0); //face jaune
+    }
+    glTexCoord2i(0,1); glVertex3i(-1,1,1);
+    glTexCoord2i(0,0); glVertex3i(-1,1,-1);
+    glTexCoord2i(1,0); glVertex3i(-1,-1,-1);
+    glTexCoord2i(1,1); glVertex3i(-1,-1,1);
+    if (!isTextured) {
+        glColor3ub(0,255,255); //face cyan
+    }
+    glTexCoord2i(0,1); glVertex3i(1,1,-1);
+    glTexCoord2i(0,0); glVertex3i(1,-1,-1);
+    glTexCoord2i(1,0); glVertex3i(-1,-1,-1);
+    glTexCoord2i(1,1); glVertex3i(-1,1,-1);
+    if (!isTextured) {
+        glColor3ub(255,0,255); //face magenta
+    }
+    glTexCoord2i(0,1); glVertex3i(1,-1,1);
+    glTexCoord2i(0,0); glVertex3i(1,1,1);
+    glTexCoord2i(1,0); glVertex3i(-1,1,1);
+    glTexCoord2i(1,1); glVertex3i(-1,-1,1);
     glEnd();
     glPopMatrix();
 }
@@ -135,16 +138,16 @@ void OpenGL::display(std::stack<AComponent*> components)
     UIComponent     *Uobj;
     BackgroundComponent   *Bobj;
 
-    // glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
     if (is_init == false)
       init("OpenGl", Vector2<double>(50, 30));
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(50, 0, 20, 0, 0, 0, 0, 0, 1);
+    gluLookAt(30, 0, 10, 0, 0, 0, 0, 0, 1);
     glRotatef(-90, 0, 0, 1);
     glRotatef(180, 0, 1, 0);
     glTranslatef(-size.x / 2, -size.y / 2, -10);
-    glRotatef(45, 1, 0, 0);
+    glRotatef(30, 1, 0, 0);
 
     while (!components.empty()) {
         obj = components.top();
@@ -156,7 +159,7 @@ void OpenGL::display(std::stack<AComponent*> components)
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
             this->displayBackground(*Bobj);
         } else {
-            this->drawCube(obj->getPos(), Vector2<double>(1, 1), Vector2<double>(0, 0));
+            this->drawCube(obj->getPos(), Vector2<double>(1, 1), Vector2<double>(0, 0), "");
         }
     }
     SDL_GL_SwapWindow(this->win);
@@ -164,33 +167,25 @@ void OpenGL::display(std::stack<AComponent*> components)
 
 void    OpenGL::displayGame(const GameComponent &game)
 {
-    this->drawCube(game.getPos(), game.getDim(), Vector2<double>(0, 0));
+    this->drawCube(game.getPos(), game.getDim(), Vector2<double>(0, 0), game.getSprite2D());
 }
 
 void    OpenGL::displayBackground(const BackgroundComponent &background)
 {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glPushMatrix();
-    glTranslatef(size.x / 2, size.y / 2 - 1, 1);
-    glScalef((double)size.x / 2.0, (double)size.y / 2.0, 1);
+     loadTexture(background.getSprite2D());
+    glTranslatef(size.x / 2, size.y / 2 - 1, 0);
     glBegin(GL_QUADS);
-    glColor3ub(255, 180, 0);
-    glVertex3d(1,-1,1);
-    glVertex3d(1,1,1);
-    glVertex3d(-1,1,1);
-    glVertex3d(-1,-1,1);
+    glTexCoord2i(0, 0);
+    glVertex3i(-size.x / 2, -size.y / 2, 1);
+    glTexCoord2i(size.x / 2, 0);
+    glVertex3i(size.x / 2, -size.y / 2, 1);
+    glTexCoord2i(size.x / 2, size.y / 2);
+    glVertex3i(size.x / 2, size.y / 2, 1);
+    glTexCoord2i(0, size.y / 2);
+    glVertex3i(-size.x / 2, size.y / 2, 1);
     glEnd();
     glPopMatrix();
-    for (int i = 0; i <= size.x; i++) {
-        this->drawCube(Vector2<double>(i, 0), Vector2<double>(1, 1), Vector2<double>(0, 0));
-    }
-    for (int i = 1; i < size.y; i++) {
-        this->drawCube(Vector2<double>(0, i), Vector2<double>(1, 1), Vector2<double>(0, 0));
-        this->drawCube(Vector2<double>(size.x, i), Vector2<double>(1, 1), Vector2<double>(0, 0));
-    }
-    for (int i = 0; i <= size.x; i++) {
-        this->drawCube(Vector2<double>(i, size.y), Vector2<double>(1, 1), Vector2<double>(0, 0));
-    }
 }
 
 void    OpenGL::displayUI(const UIComponent &ui)
@@ -198,7 +193,7 @@ void    OpenGL::displayUI(const UIComponent &ui)
     // std::string     fontName;
     // unsigned int    colorInt;
     // SDL_Color       color;
-    // SDL_Surface     *surface;
+    // SDLsurface     *surface;
     // SDL_Texture     *texture;
     //
     // colorInt = this->colors[ui.getColor()];
@@ -226,4 +221,30 @@ void    OpenGL::displayUI(const UIComponent &ui)
 void sound()
 {
 
+}
+
+bool           OpenGL::loadTexture(const std::string &sprite2D)
+{
+    GLenum      format;
+
+    if (sprite2D.empty()) {
+        return (false);
+    }
+    if (this->tex[sprite2D] == 0) {
+        this->tex[sprite2D] = IMG_Load(std::string("./assets/sprites2D/" + sprite2D).c_str());
+    }
+    if (this->tex[sprite2D]->format->BytesPerPixel == 4) {
+        format = (this->tex[sprite2D]->format->Rmask == 0x000000ff) ? GL_RGBA : GL_BGRA;
+    } else if (this->tex[sprite2D]->format->BytesPerPixel == 3) {
+        format = (this->tex[sprite2D]->format->Rmask == 0x000000ff) ? GL_RGB : GL_BGR;
+    } else {
+        return (false);
+    }
+    glGenTextures(1, NULL);
+    glBindTexture(GL_TEXTURE_2D, 0);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, this->tex[sprite2D]->format->BytesPerPixel,this->tex[sprite2D]->w,
+            this->tex[sprite2D]->h, 0, format, GL_UNSIGNED_BYTE, this->tex[sprite2D]->pixels);
+    return (true);
 }

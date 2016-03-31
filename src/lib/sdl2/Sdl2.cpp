@@ -36,7 +36,6 @@ void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComp
 void  Sdl2::init(const std::string &name, Vector2<double> size)
 {
     this->is_init = true;
-    std::cout << "StartInit => Lib Sdl2" << std::endl;
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
@@ -161,8 +160,6 @@ void    Sdl2::displayUI(const UIComponent &ui, SDL_Rect *rect)
     if (this->fonts["default"] == 0) {
         this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP);
     }
-    std::cout << fonts["default"] << std::endl;
-    std::cout << ui.getText() << std::endl;
     surface = TTF_RenderText_Blended(fonts["default"], ui.getText().c_str(), color);
     texture = SDL_CreateTextureFromSurface(this->render, surface);
     SDL_FreeSurface(surface);

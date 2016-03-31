@@ -8,25 +8,25 @@
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
 # include "AudioComponent.hpp"
-# include "ScoreComponent.hpp"
+# include "HighScoreComponent.hpp"
 # include "Protocol.hpp"
 
 # define WIDTH  50
 # define HEIGHT 30
 # define SIZE   3
+# define RANDOM_POS Vector2<double>(rand() % (WIDTH - 1) + 1, rand() % (HEIGHT - 1) + 1)
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
 class Snake : public AGame {
 private:
-    GameComponent   *target;
-    ScoreComponent  *score;
-    AudioComponent  *sound;
     std::vector<GameComponent*> snake;
-    BackgroundComponent *background;
-    std::vector<std::string>    backgroundSprites;
+    GameComponent               *target;
+    BackgroundComponent         *background;
     std::vector<GameComponent*> walls;
-    direction       dir;
+    HighScoreComponent          *score;
+    direction                   dir;
+    // AudioComponent              *sound;
 public:
     Snake ();
     virtual ~Snake ();
