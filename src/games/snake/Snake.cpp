@@ -162,6 +162,7 @@ std::stack<AComponent*>     Snake::getInfos()
 
     components.push(this->target);
     components.push(this->background);
+    this->getMap();
     return (components);
 }
 
@@ -174,10 +175,10 @@ void        Snake::getMap()
     map->width = WIDTH;
     map->height = HEIGHT;
     for (size_t i = 0; i < WIDTH * HEIGHT; i++) {
-        if (this->target->getPos().y * WIDTH + this->target->getPos().x == i) {
-            map->tile[i] = arcade::TileType::POWERUP;
-        } else if (i / HEIGHT == 0 || i / HEIGHT == HEIGHT - 1 || i % WIDTH == 0 || i % WIDTH == WIDTH - 1) {
+        if (i % WIDTH == 0 || i % WIDTH == WIDTH - 1 || i / WIDTH == 0 || i / WIDTH == HEIGHT - 1) {
             map->tile[i] = arcade::TileType::BLOCK;
+        } else if (this->target->getPos().y * WIDTH + this->target->getPos().x == i) {
+            map->tile[i] = arcade::TileType::POWERUP;
         } else {
             map->tile[i] = arcade::TileType::EMPTY;
         }
