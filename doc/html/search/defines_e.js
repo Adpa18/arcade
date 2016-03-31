@@ -2,6 +2,7 @@ var searchData=
 [
   ['names',['NAMES',['../d9/d3b/tic_8h.html#a1224dbeb12320494fbd819c86fb3172b',1,'tic.h']]],
   ['namesize',['NAMESIZE',['../db/d45/term_8h.html#ad79aefee6a8990632311a15e98d9a65f',1,'term.h']]],
+  ['nb_5fph',['NB_PH',['../d1/d4b/_pacman_8hpp.html#a4f3fe98753ec3658ac485ac7978fb079',1,'Pacman.hpp']]],
   ['ncurses_5facs',['NCURSES_ACS',['../dd/df4/curses_8h.html#a286aa28f11f3fd5e4f6c44adcd22d783',1,'NCURSES_ACS():&#160;curses.h'],['../d3/def/ncurses_8h.html#a286aa28f11f3fd5e4f6c44adcd22d783',1,'NCURSES_ACS():&#160;ncurses.h']]],
   ['ncurses_5fapi',['NCURSES_API',['../df/ddb/ncurses__dll_8h.html#a4915fe31ee461b9347d77d87a559a34b',1,'ncurses_dll.h']]],
   ['ncurses_5fattr_5fshift',['NCURSES_ATTR_SHIFT',['../dd/df4/curses_8h.html#a0bd346a79d5437db634927bf35037482',1,'NCURSES_ATTR_SHIFT():&#160;curses.h'],['../d3/def/ncurses_8h.html#a0bd346a79d5437db634927bf35037482',1,'NCURSES_ATTR_SHIFT():&#160;ncurses.h']]],

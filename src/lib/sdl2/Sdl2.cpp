@@ -21,7 +21,7 @@ Sdl2::~Sdl2 ()
     SDL_Quit();
 }
 
-void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
+void    Sdl2::initSDL2(const std::string &name, Vector2<double> size)
 {
     this->is_init = true;
     this->size = size;
@@ -30,18 +30,17 @@ void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComp
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
+}
+
+void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
+{
+    this->initSDL2(name, size);
     this->display(cache);
 }
 
 void  Sdl2::init(const std::string &name, Vector2<double> size)
 {
-    this->is_init = true;
-    this->size = size;
-    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
-        throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
-    if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
-        throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
+    this->initSDL2(name, size);
 }
 
 void    Sdl2::destroy()

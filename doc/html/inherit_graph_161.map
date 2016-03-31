@@ -1,3 +1,12 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$df/dfd/structpanel.html" title="panel" alt="" coords="5,5,59,32"/>
+<area shape="rect" id="node1" href="$d7/d51/class_n_curses_window.html" title="NCursesWindow" alt="" coords="5,56,127,83"/>
+<area shape="rect" id="node2" href="$db/de2/class_n_curses_color_window.html" title="NCursesColorWindow" alt="" coords="175,5,327,32"/>
+<area shape="rect" id="node3" href="$db/d26/class_n_curses_pad.html" title="NCursesPad" alt="" coords="202,56,299,83"/>
+<area shape="rect" id="node5" href="$d5/d4a/class_n_curses_panel.html" title="NCursesPanel" alt="" coords="197,132,304,159"/>
+<area shape="rect" id="node4" href="$d2/d83/class_n_curses_framed_pad.html" title="NCursesFramedPad" alt="" coords="387,43,529,69"/>
+<area shape="rect" id="node6" href="$d5/d49/class_n_curses_form.html" title="NCursesForm" alt="" coords="406,93,510,120"/>
+<area shape="rect" id="node8" href="$df/d5c/class_n_curses_menu.html" title="NCursesMenu" alt="" coords="405,144,511,171"/>
+<area shape="rect" id="node10" href="$d3/d9f/class_n_curses_user_panel.html" title="NCursesUserPanel\&lt; T \&gt;" alt="" coords="375,195,541,221"/>
+<area shape="rect" id="node7" href="$d0/d53/class_n_curses_user_form.html" title="NCursesUserForm\&lt; T \&gt;" alt="" coords="591,93,755,120"/>
+<area shape="rect" id="node9" href="$d1/d11/class_n_curses_user_menu.html" title="NCursesUserMenu\&lt; T \&gt;" alt="" coords="589,144,756,171"/>
 </map>

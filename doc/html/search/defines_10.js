@@ -19,7 +19,6 @@ var searchData=
   ['parm_5fup_5fcursor',['parm_up_cursor',['../db/d45/term_8h.html#a8c410def0b57b701e6363b4aa0f8307a',1,'term.h']]],
   ['parm_5fup_5fmicro',['parm_up_micro',['../db/d45/term_8h.html#a143717849a6cfbc410dda1c198d14ac2',1,'term.h']]],
   ['pc_5fterm_5foptions',['pc_term_options',['../db/d45/term_8h.html#a3a2be58762fa25c640649b8318d3074e',1,'term.h']]],
-  ['phantom',['PHANTOM',['../d1/d4b/_pacman_8hpp.html#ab43a93e9cd308d12b27cb4d514229103',1,'Pacman.hpp']]],
   ['pkey_5fkey',['pkey_key',['../db/d45/term_8h.html#a898a2196026b31ddb59b8bdbaf85c406',1,'term.h']]],
   ['pkey_5flocal',['pkey_local',['../db/d45/term_8h.html#a551512ecbc2a5f80d5044d6c8352b008',1,'term.h']]],
   ['pkey_5fplab',['pkey_plab',['../db/d45/term_8h.html#a108b22b2a9a361a1f11345d7614fd403',1,'term.h']]],

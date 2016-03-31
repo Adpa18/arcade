@@ -8,6 +8,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "AudioComponent.cpp", "dc/db1/_audio_component_8cpp.html", null ],
     [ "BackgroundComponent.cpp", "da/d9d/_background_component_8cpp.html", null ],
     [ "GameComponent.cpp", "d8/d4f/_game_component_8cpp.html", null ],
-    [ "ScoreComponent.cpp", "d6/dd2/_score_component_8cpp.html", null ],
+    [ "HighScoreComponent.cpp", "d8/d22/_high_score_component_8cpp.html", null ],
+    [ "LoadHighScore.cpp", "d3/d26/_load_high_score_8cpp.html", "d3/d26/_load_high_score_8cpp" ],
+    [ "UIAdvanceComponent.cpp", "d6/ddf/_u_i_advance_component_8cpp.html", null ],
     [ "UIComponent.cpp", "d1/d0a/_u_i_component_8cpp.html", null ]
 ];

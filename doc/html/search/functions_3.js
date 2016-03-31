@@ -2,6 +2,7 @@ var searchData=
 [
   ['centertext',['centertext',['../d5/d4a/class_n_curses_panel.html#a28d157c45f2b93430f2f5a679676a815',1,'NCursesPanel']]],
   ['changed',['changed',['../db/d57/class_n_curses_form_field.html#acaa055d09a709e76a4e9dbce6efe4f03',1,'NCursesFormField']]],
+  ['changedirection',['changeDirection',['../da/dab/class_pacman.html#a2bce1a202d944ef8fa0fa18a9c087f59',1,'Pacman::changeDirection()'],['../d2/dad/class_snake.html#aca8f1435945a98ed458c99fd0d0dca92',1,'Snake::changeDirection()']]],
   ['char_5fcheck',['char_check',['../de/d28/class_user_defined_field_type.html#a044bf16e8dc960a6725f02296f51769e',1,'UserDefinedFieldType']]],
   ['chgat',['chgat',['../d7/d51/class_n_curses_window.html#a94f745c9a3b5b181574c6fb28a79af6e',1,'NCursesWindow::chgat(int n, attr_t attr, NCURSES_PAIRS_T color, const void *opts=NULL)'],['../d7/d51/class_n_curses_window.html#af8d308b081a9bdfd80964dbdc2f88ced',1,'NCursesWindow::chgat(int y, int x, int n, attr_t attr, NCURSES_PAIRS_T color, const void *opts=NULL)']]],
   ['child',['child',['../d7/d51/class_n_curses_window.html#ab303c8a57cef13dc8faec2f653c7c8cb',1,'NCursesWindow']]],
@@ -13,7 +14,6 @@ var searchData=
   ['close',['close',['../dd/dba/classncurses_1_1_window.html#a6741ca1daf9c1c1eb2f7a290b845911d',1,'ncurses::Window']]],
   ['clrtobot',['clrtobot',['../d7/d51/class_n_curses_window.html#aa7fbf7e1b24de0b5fcc38dfce1fd50ac',1,'NCursesWindow']]],
   ['clrtoeol',['clrtoeol',['../d7/d51/class_n_curses_window.html#a7f1dd0aa5172f35bca1e0a783884e4b5',1,'NCursesWindow']]],
-  ['collision',['collision',['../da/dab/class_pacman.html#ab7558c9295e31d2056beef087ca664c2',1,'Pacman']]],
   ['color',['color',['../d5/d41/class_soft___label___key___set.html#adb8343a821e9de23596452371e0a77a7',1,'Soft_Label_Key_Set']]],
   ['color_5fset',['color_set',['../d7/d51/class_n_curses_window.html#aabc53207870370ce60d876f43d875704',1,'NCursesWindow']]],
   ['colors',['colors',['../d7/d51/class_n_curses_window.html#af470cf5d502800c5e460e899e020ce2b',1,'NCursesWindow']]],

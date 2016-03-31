@@ -6,7 +6,7 @@ var searchData=
   ['maxy',['maxy',['../d7/d51/class_n_curses_window.html#ad407b64051686162efe0942303611b4d',1,'NCursesWindow']]],
   ['menu_5fformat',['menu_format',['../df/d5c/class_n_curses_menu.html#a9e6e0a670cecdc97b5502b53bdf07f06',1,'NCursesMenu']]],
   ['meta',['meta',['../d7/d51/class_n_curses_window.html#a8e0a0dcfd1bd1648ea35724200664e4b',1,'NCursesWindow']]],
-  ['move',['move',['../db/d57/class_n_curses_form_field.html#acfc392ac4d948913c8ffcfea27a3dacb',1,'NCursesFormField::move()'],['../d7/d51/class_n_curses_window.html#a46431a0d98b988b168854501cc2275d0',1,'NCursesWindow::move()']]],
+  ['move',['move',['../da/dab/class_pacman.html#ae78323bec47da559a46420901429cc2c',1,'Pacman::move()'],['../db/d57/class_n_curses_form_field.html#acfc392ac4d948913c8ffcfea27a3dacb',1,'NCursesFormField::move()'],['../d7/d51/class_n_curses_window.html#a46431a0d98b988b168854501cc2275d0',1,'NCursesWindow::move()']]],
   ['mvcur',['mvcur',['../d7/d51/class_n_curses_window.html#a619f28a30b5a9382c6b40abf38db2cfd',1,'NCursesWindow']]],
   ['mvwin',['mvwin',['../d5/d4a/class_n_curses_panel.html#a89aeda6727d7333f1348eb0feff5f7ff',1,'NCursesPanel::mvwin()'],['../d7/d51/class_n_curses_window.html#a16a143dfe0f3e2151aa467f9ff3238a4',1,'NCursesWindow::mvwin()']]]
 ];

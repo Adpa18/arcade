@@ -1,5 +1,0 @@
-<map id="Pacman::tryDown" name="Pacman::tryDown">
-<area shape="rect" id="node2" href="$da/dab/class_pacman.html#af72727e26b0326c4ec062cdbfe0cd97a" title="Pacman::newDir" alt="" coords="180,5,299,32"/>
-<area shape="rect" id="node3" href="$da/dab/class_pacman.html#ab7558c9295e31d2056beef087ca664c2" title="Pacman::collision" alt="" coords="347,5,472,32"/>
-<area shape="rect" id="node4" href="$da/dab/class_pacman.html#a5ea1cb3abd83f71f01962ccfcfeb8a4c" title="Pacman::compute" alt="" coords="520,5,648,32"/>
-</map>

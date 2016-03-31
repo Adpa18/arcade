@@ -24,6 +24,7 @@ var searchData=
   ['cols',['cols',['../d0/d37/structfieldnode.html#a4391d992dcc0c3f489a067d7029c1468',1,'fieldnode::cols()'],['../d3/d28/structformnode.html#a0f595de067ef041fe025dd7b7d649cac',1,'formnode::cols()'],['../d6/dee/structtag_m_e_n_u.html#a852e291206b9e36a9cd500da61407892',1,'tagMENU::cols()']]],
   ['common',['common',['../df/d1f/union_s_d_l___event.html#abe5cb8767f93de55163c8ddd4562a7f2',1,'SDL_Event']]],
   ['compare_5fnames',['compare_names',['../df/d7d/struct_hash_data.html#a124cc6059b9889b44a7985b90e5a9fca',1,'HashData']]],
+  ['componentnb',['componentNb',['../d3/d19/class_high_score_component.html#a2dda79a092cb435b977345a6b1cdf7ed',1,'HighScoreComponent']]],
   ['condition',['condition',['../d7/d08/struct_s_d_l___assert_data.html#aec6d372462fa8c94a9d04c1168cd38c9',1,'SDL_AssertData::condition()'],['../d4/d80/union_s_d_l___haptic_effect.html#aa8fdd1ba202ccd7e61f48ef9977080d2',1,'SDL_HapticEffect::condition()']]],
   ['configqueryb',['configQueryb',['../da/de7/struct_____d_r_i2config_query_extension_rec.html#a7cc59175418a2257819fb634581795fa',1,'__DRI2configQueryExtensionRec']]],
   ['configqueryf',['configQueryf',['../da/de7/struct_____d_r_i2config_query_extension_rec.html#a82f13d02a9a0b341fd73dc5079ad4664',1,'__DRI2configQueryExtensionRec']]],

@@ -9,24 +9,22 @@
 # include "AudioComponent.hpp"
 # include "HighScoreComponent.hpp"
 # include "Protocol.hpp"
+# include "Ghost.hpp"
 # include <vector>
 # include <map>
+# include <cmath>
 
 # define WIDTH  50
 # define HEIGHT 30
 # define NB_PH  4
+# define STEP   1
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN, NOTHING };
-
-typedef struct	s_phantom {
-  direction	dir;
-  GameComponent g;
-}		t_phantom;
 
 class Pacman : public AGame {
 private:
     GameComponent               *pacman;
-    std::vector<GameComponent*> phantom;
+    std::vector<Ghost*>         ghosts;
     std::map<double, GameComponent*> mapObjs;
     direction                   dir;
     const char                  map[HEIGHT + 1][WIDTH + 1] = {

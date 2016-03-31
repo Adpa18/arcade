@@ -1,4 +1,4 @@
-.TH "OpenGL" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "OpenGL" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,10 +26,10 @@ Est dérivée de \fBIGraph\fP\&.
 .RI "virtual \fBvoid\fP \fBdisplay\fP (std::stack< \fBAComponent\fP * >)"
 .br
 .ti -1c
-.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< double > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
 .br
 .ti -1c
-.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP)"
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< double > \fBsize\fP)"
 .br
 .ti -1c
 .RI "virtual \fBvoid\fP \fBdestroy\fP ()"
@@ -37,7 +37,7 @@ Est dérivée de \fBIGraph\fP\&.
 .in -1c
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 23 du fichier OpenGL\&.hpp\&.
+Définition à la ligne 22 du fichier OpenGL\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
 .SS "OpenGL::OpenGL (\fBvoid\fP)"
@@ -55,29 +55,29 @@ Définition à la ligne 16 du fichier OpenGL\&.cpp\&.
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 73 du fichier OpenGL\&.cpp\&.
+Définition à la ligne 62 du fichier OpenGL\&.cpp\&.
 .SS "\fBvoid\fP OpenGL::display (std::stack< \fBAComponent\fP * > components)\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 131 du fichier OpenGL\&.cpp\&.
+Définition à la ligne 134 du fichier OpenGL\&.cpp\&.
 .SS "\fBint\fP OpenGL::eventManagment ()\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 80 du fichier OpenGL\&.cpp\&.
-.SS "\fBvoid\fP OpenGL::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
+Définition à la ligne 69 du fichier OpenGL\&.cpp\&.
+.SS "\fBvoid\fP OpenGL::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< double > size, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 30 du fichier OpenGL\&.cpp\&.
-.SS "\fBvoid\fP OpenGL::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size)\fC [virtual]\fP"
+Définition à la ligne 51 du fichier OpenGL\&.cpp\&.
+.SS "\fBvoid\fP OpenGL::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< double > size)\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 52 du fichier OpenGL\&.cpp\&.
+Définition à la ligne 57 du fichier OpenGL\&.cpp\&.
 
 .SH "Auteur"
 .PP 

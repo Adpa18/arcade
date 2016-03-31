@@ -1,9 +1,4 @@
 <map id="Snake::Snake" name="Snake::Snake">
-<area shape="rect" id="node2" href="$d6/d93/_open_g_l_8cpp.html#a69f6d7fff9dfce3a42b94789a5264396" title="sound" alt="" coords="208,5,265,32"/>
-<area shape="rect" id="node3" href="$d6/d31/class_background_component.html#ab1ba9bfad811a26e4f293dca246266d9" title="BackgroundComponent\l::getSprite2D" alt="" coords="157,57,316,98"/>
-<area shape="rect" id="node4" href="$d2/dad/class_snake.html#a352449776ddbf4dfbe91cd7add8e15fb" title="Snake::restart" alt="" coords="185,123,289,149"/>
-<area shape="rect" id="node5" href="$d0/de1/class_score_component.html#aa2c2c46c5c94149d55282d70d1f3dabe" title="ScoreComponent::writeScore" alt="" coords="366,43,559,69"/>
-<area shape="rect" id="node6" href="$d5/d71/class_u_i_component.html#a1731fb003e73c1c6e343691bd08f83e5" title="UIComponent::setText" alt="" coords="609,68,764,95"/>
-<area shape="rect" id="node7" href="$d6/d31/class_background_component.html#a98859cddedd3a1c0f3bc271451775fd2" title="BackgroundComponent\l::setSprite2D" alt="" coords="383,145,542,186"/>
-<area shape="rect" id="node8" href="$d0/de1/class_score_component.html#a9d63de4ac83e45fd8a565a14a2e1d7e0" title="ScoreComponent::getScoreUI" alt="" coords="364,211,561,237"/>
+<area shape="rect" id="node2" href="$d2/dad/class_snake.html#a352449776ddbf4dfbe91cd7add8e15fb" title="Snake::restart" alt="" coords="157,13,261,39"/>
+<area shape="rect" id="node3" href="$d6/d31/class_background_component.html#a98859cddedd3a1c0f3bc271451775fd2" title="BackgroundComponent\l::setSprite2D" alt="" coords="309,5,468,47"/>
 </map>

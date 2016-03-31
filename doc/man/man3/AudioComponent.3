@@ -1,4 +1,4 @@
-.TH "AudioComponent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "AudioComponent" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,7 +14,7 @@ Est dérivée de \fBAComponent\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBAudioComponent\fP (\fBVector2\fP< \fBint\fP > \fBconst\fP &pos, \fBComponentColor\fP \fBcolor\fP, char \fBconst\fP s_term, \fBstd::string\fP \fBconst\fP &s_2D, \fBstd::string\fP \fBconst\fP &s_3D)"
+.RI "\fBAudioComponent\fP (\fBVector2\fP< double > \fBconst\fP &pos, \fBComponentColor\fP \fBcolor\fP, char \fBconst\fP s_term, \fBstd::string\fP \fBconst\fP &s_2D, \fBstd::string\fP \fBconst\fP &s_3D)"
 .br
 .ti -1c
 .RI "virtual \fB~AudioComponent\fP ()"
@@ -29,33 +29,34 @@ Est dérivée de \fBAComponent\fP\&.
 .RI "\fBstd::string\fP \fBconst\fP & \fBgetSound3D\fP () \fBconst\fP "
 .br
 .in -1c
+.SS "Membres hérités additionnels"
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 17 du fichier AudioComponent\&.hpp\&.
+Définition à la ligne 7 du fichier AudioComponent\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
-.SS "AudioComponent::AudioComponent (\fBVector2\fP< \fBint\fP > \fBconst\fP & pos, \fBComponentColor\fP color, char \fBconst\fP s_term, \fBstd::string\fP \fBconst\fP & s_2D, \fBstd::string\fP \fBconst\fP & s_3D)"
+.SS "AudioComponent::AudioComponent (\fBVector2\fP< double > \fBconst\fP & pos, \fBComponentColor\fP color, char \fBconst\fP s_term, \fBstd::string\fP \fBconst\fP & s_2D, \fBstd::string\fP \fBconst\fP & s_3D)"
 
 .PP
-Définition à la ligne 13 du fichier AudioComponent\&.cpp\&.
+Définition à la ligne 3 du fichier AudioComponent\&.cpp\&.
 .SS "AudioComponent::~AudioComponent ()\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 22 du fichier AudioComponent\&.cpp\&.
+Définition à la ligne 12 du fichier AudioComponent\&.cpp\&.
 .SH "Documentation des fonctions membres"
 .PP 
 .SS "\fBstd::string\fP \fBconst\fP & AudioComponent::getSound2D () const"
 
 .PP
-Définition à la ligne 30 du fichier AudioComponent\&.cpp\&.
+Définition à la ligne 20 du fichier AudioComponent\&.cpp\&.
 .SS "\fBstd::string\fP \fBconst\fP & AudioComponent::getSound3D () const"
 
 .PP
-Définition à la ligne 35 du fichier AudioComponent\&.cpp\&.
+Définition à la ligne 25 du fichier AudioComponent\&.cpp\&.
 .SS "char \fBconst\fP & AudioComponent::getSoundTerm () const"
 
 .PP
-Définition à la ligne 25 du fichier AudioComponent\&.cpp\&.
+Définition à la ligne 15 du fichier AudioComponent\&.cpp\&.
 
 .SH "Auteur"
 .PP 

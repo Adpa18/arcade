@@ -1,4 +1,4 @@
-.TH "s_header" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "s_header" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,7 +7,17 @@ s_header \-
 .br
 .PP
 .PP
-\fC#include <ScoreComponent\&.hpp>\fP
+\fC#include <HighScore\&.hpp>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBs_header\fP (\fBint\fP \fBheaderSize\fP, \fBint\fP \fBfileSize\fP, \fBint\fP \fBnbrHighScore\fP)"
+.br
+.ti -1c
+.RI "\fBs_header\fP ()"
+.br
+.in -1c
 .SS "Attributs publics"
 
 .in +1c
@@ -26,25 +36,35 @@ s_header \-
 .in -1c
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 21 du fichier ScoreComponent\&.hpp\&.
+Définition à la ligne 19 du fichier HighScore\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "s_header::s_header (\fBint\fP headerSize, \fBint\fP fileSize, \fBint\fP nbrHighScore)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 26 du fichier HighScore\&.hpp\&.
+.SS "s_header::s_header ()\fC [inline]\fP"
+
+.PP
+Définition à la ligne 31 du fichier HighScore\&.hpp\&.
 .SH "Documentation des données membres"
 .PP 
 .SS "\fBint\fP s_header::fileSize"
 
 .PP
-Définition à la ligne 24 du fichier ScoreComponent\&.hpp\&.
+Définition à la ligne 23 du fichier HighScore\&.hpp\&.
 .SS "\fBint\fP s_header::headerSize"
 
 .PP
-Définition à la ligne 23 du fichier ScoreComponent\&.hpp\&.
+Définition à la ligne 22 du fichier HighScore\&.hpp\&.
 .SS "\fBint\fP s_header::magicNbr"
 
 .PP
-Définition à la ligne 22 du fichier ScoreComponent\&.hpp\&.
+Définition à la ligne 21 du fichier HighScore\&.hpp\&.
 .SS "\fBint\fP s_header::nbrHighScore"
 
 .PP
-Définition à la ligne 25 du fichier ScoreComponent\&.hpp\&.
+Définition à la ligne 24 du fichier HighScore\&.hpp\&.
 
 .SH "Auteur"
 .PP 

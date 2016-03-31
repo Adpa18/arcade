@@ -1,0 +1,8 @@
+<map id="Play" name="Play">
+<area shape="rect" id="node2" href="$d2/dad/class_snake.html#a347a6ddd21bf6dc30f6639dd8c0d1bf9" title="Snake::whereAmI" alt="" coords="101,5,228,32"/>
+<area shape="rect" id="node3" href="$d2/dad/class_snake.html#a827630ffddc161ec800c74442ffd870c" title="Snake::getMap" alt="" coords="109,56,220,83"/>
+<area shape="rect" id="node4" href="$d2/dad/class_snake.html#aca8f1435945a98ed458c99fd0d0dca92" title="Snake::changeDirection" alt="" coords="276,107,437,133"/>
+<area shape="rect" id="node5" href="$d2/dad/class_snake.html#ac79a6f5a1f1152035781a0f348eff05d" title="Snake::compute" alt="" coords="106,157,223,184"/>
+<area shape="rect" id="node6" href="$d2/dad/class_snake.html#a352449776ddbf4dfbe91cd7add8e15fb" title="Snake::restart" alt="" coords="305,157,409,184"/>
+<area shape="rect" id="node7" href="$d6/d31/class_background_component.html#a98859cddedd3a1c0f3bc271451775fd2" title="BackgroundComponent\l::setSprite2D" alt="" coords="485,150,644,191"/>
+</map>

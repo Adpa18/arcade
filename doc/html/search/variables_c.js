@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['labelhighscores',['labelHighscores',['../d3/d19/class_high_score_component.html#a7130cb1808836c75a0580e708d8f24d9',1,'HighScoreComponent']]],
   ['large_5fmagnitude',['large_magnitude',['../d3/d93/struct_s_d_l___haptic_left_right.html#a8cd16fe2200ef10cc4f3b4209adef959',1,'SDL_HapticLeftRight']]],
   ['last',['last',['../d3/d96/structentry.html#a18d98d27a6599f7d645e3096f01812f5',1,'entry']]],
   ['left',['left',['../d9/d33/structtypenode.html#a2986201d4ce4443a48f4e6cfbed93228',1,'typenode::left()'],['../d1/da1/structtag_i_t_e_m.html#a92ec9fa6ac34a79b95035dc288138590',1,'tagITEM::left()']]],

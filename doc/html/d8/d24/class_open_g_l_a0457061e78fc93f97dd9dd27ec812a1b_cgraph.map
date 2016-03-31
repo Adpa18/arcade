@@ -1,0 +1,6 @@
+<map id="OpenGL::init" name="OpenGL::init">
+<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#a53362b30778d282de770bb6033d6853d" title="OpenGL::display" alt="" coords="148,56,267,83"/>
+<area shape="rect" id="node3" href="$d9/d8e/glu_8h.html#a82e82820091e91aa88c3e44c8cee4aba" title="gluLookAt" alt="" coords="354,5,434,32"/>
+<area shape="rect" id="node4" href="$d1/db4/class_a_component.html#a4575869d086fd815ed433dcbf57c3b96" title="AComponent::getPos" alt="" coords="321,56,467,83"/>
+<area shape="rect" id="node5" href="$dc/d64/_s_d_l__video_8h.html#a11d1245662f49f6af257627119f22835" title="Swap the OpenGL buffers for a window, if double&#45;buffering is supported. " alt="" coords="315,107,473,133"/>
+</map>

@@ -1,7 +1,15 @@
 <map id="/home/wery_a/rendu/CPP/cpp_arcade/inc/games/Pacman/Pacman.hpp" name="/home/wery_a/rendu/CPP/cpp_arcade/inc/games/Pacman/Pacman.hpp">
-<area shape="rect" id="node4" href="$df/df1/_a_game_8hpp.html" title="AGame.hpp" alt="" coords="197,109,287,136"/>
-<area shape="rect" id="node10" href="$d7/d6d/_utils_8hpp.html" title="Utils.hpp" alt="" coords="327,184,402,211"/>
-<area shape="rect" id="node11" href="$dd/d7d/_game_component_8hpp.html" title="GameComponent.hpp" alt="" coords="365,109,514,136"/>
-<area shape="rect" id="node7" href="$dd/dea/_a_component_8hpp.html" title="AComponent.hpp" alt="" coords="181,184,303,211"/>
-<area shape="rect" id="node8" href="$d3/d12/_vector2_8hpp.html" title="Vector2.hpp" alt="" coords="319,259,411,285"/>
+<area shape="rect" id="node2" href="$df/df1/_a_game_8hpp.html" title="AGame.hpp" alt="" coords="787,184,877,211"/>
+<area shape="rect" id="node10" href="$d7/d6d/_utils_8hpp.html" title="Utils.hpp" alt="" coords="1316,109,1391,136"/>
+<area shape="rect" id="node11" href="$dd/d7d/_game_component_8hpp.html" title="GameComponent.hpp" alt="" coords="1275,184,1424,211"/>
+<area shape="rect" id="node13" href="$df/d96/_background_component_8hpp.html" title="BackgroundComponent.hpp" alt="" coords="1449,184,1631,211"/>
+<area shape="rect" id="node14" href="$d4/da4/_u_i_component_8hpp.html" title="UIComponent.hpp" alt="" coords="952,184,1080,211"/>
+<area shape="rect" id="node15" href="$df/d56/_audio_component_8hpp.html" title="AudioComponent.hpp" alt="" coords="1104,184,1251,211"/>
+<area shape="rect" id="node16" href="$d7/d2e/_high_score_component_8hpp.html" title="HighScoreComponent.hpp" alt="" coords="886,109,1061,136"/>
+<area shape="rect" id="node26" href="$d5/dce/_protocol_8hpp.html" title="Protocol.hpp" alt="" coords="1415,109,1510,136"/>
+<area shape="rect" id="node5" href="$dd/dea/_a_component_8hpp.html" title="AComponent.hpp" alt="" coords="1116,259,1239,285"/>
+<area shape="rect" id="node8" href="$db/d6e/_arcade_system_8hpp.html" title="ArcadeSystem.hpp" alt="" coords="828,259,961,285"/>
+<area shape="rect" id="node6" href="$d3/d12/_vector2_8hpp.html" title="Vector2.hpp" alt="" coords="1221,333,1313,360"/>
+<area shape="rect" id="node17" href="$d9/d24/_load_high_score_8hpp.html" title="LoadHighScore.hpp" alt="" coords="347,184,483,211"/>
+<area shape="rect" id="node24" href="$d9/d54/_high_score_8hpp.html" title="HighScore.hpp" alt="" coords="361,259,469,285"/>
 </map>

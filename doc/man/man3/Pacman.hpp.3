@@ -1,4 +1,4 @@
-.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/games/Pacman/Pacman.hpp" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/games/Pacman/Pacman.hpp" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,15 +6,25 @@
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <vector>\fP
-.br
-\fC#include <map>\fP
-.br
 \fC#include 'AGame\&.hpp'\fP
 .br
 \fC#include 'Utils\&.hpp'\fP
 .br
 \fC#include 'GameComponent\&.hpp'\fP
+.br
+\fC#include 'BackgroundComponent\&.hpp'\fP
+.br
+\fC#include 'UIComponent\&.hpp'\fP
+.br
+\fC#include 'AudioComponent\&.hpp'\fP
+.br
+\fC#include 'HighScoreComponent\&.hpp'\fP
+.br
+\fC#include 'Protocol\&.hpp'\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <map>\fP
 .br
 
 .SS "Classes"
@@ -31,16 +41,13 @@
 
 .in +1c
 .ti -1c
-.RI "#define \fBWIDTH\fP   1000"
+.RI "#define \fBWIDTH\fP   50"
 .br
 .ti -1c
-.RI "#define \fBHEIGHT\fP   1000"
+.RI "#define \fBHEIGHT\fP   30"
 .br
 .ti -1c
-.RI "#define \fBSTEP\fP   20"
-.br
-.ti -1c
-.RI "#define \fBPHANTOM\fP   4"
+.RI "#define \fBNB_PH\fP   4"
 .br
 .in -1c
 .SS "Définitions de type"
@@ -54,7 +61,7 @@
 
 .in +1c
 .ti -1c
-.RI "enum \fBdirection\fP { \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP, \fBWAIT\fP, \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP }"
+.RI "enum \fBdirection\fP { \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP, \fBNOTHING\fP, \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP }"
 .br
 .in -1c
 .SS "Fonctions"
@@ -66,22 +73,18 @@
 .in -1c
 .SH "Documentation des macros"
 .PP 
-.SS "#define HEIGHT   1000"
+.SS "#define HEIGHT   30"
 
 .PP
-Définition à la ligne 21 du fichier Pacman\&.hpp\&.
-.SS "#define PHANTOM   4"
+Définition à la ligne 16 du fichier Pacman\&.hpp\&.
+.SS "#define NB_PH   4"
 
 .PP
-Définition à la ligne 23 du fichier Pacman\&.hpp\&.
-.SS "#define STEP   20"
+Définition à la ligne 17 du fichier Pacman\&.hpp\&.
+.SS "#define WIDTH   50"
 
 .PP
-Définition à la ligne 22 du fichier Pacman\&.hpp\&.
-.SS "#define WIDTH   1000"
-
-.PP
-Définition à la ligne 20 du fichier Pacman\&.hpp\&.
+Définition à la ligne 15 du fichier Pacman\&.hpp\&.
 .SH "Documentation des définitions de type"
 .PP 
 .SS "typedef struct \fBs_phantom\fP		 \fBt_phantom\fP"
@@ -102,7 +105,7 @@ Définition à la ligne 20 du fichier Pacman\&.hpp\&.
 .TP
 \fB\fIDIR_DOWN \fP\fP
 .TP
-\fB\fIWAIT \fP\fP
+\fB\fINOTHING \fP\fP
 .TP
 \fB\fIDIR_LEFT \fP\fP
 .TP
@@ -112,13 +115,13 @@ Définition à la ligne 20 du fichier Pacman\&.hpp\&.
 .TP
 \fB\fIDIR_DOWN \fP\fP
 .PP
-Définition à la ligne 25 du fichier Pacman\&.hpp\&.
+Définition à la ligne 19 du fichier Pacman\&.hpp\&.
 .SH "Documentation des fonctions"
 .PP 
 .SS "\fBAGame\fP* loadGame ()"
 
 .PP
-Définition à la ligne 54 du fichier Pacman\&.hpp\&.
+Définition à la ligne 76 du fichier Pacman\&.hpp\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

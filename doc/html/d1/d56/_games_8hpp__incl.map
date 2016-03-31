@@ -1,13 +1,16 @@
 <map id="/home/wery_a/rendu/CPP/cpp_arcade/inc/Games.hpp" name="/home/wery_a/rendu/CPP/cpp_arcade/inc/Games.hpp">
-<area shape="rect" id="node2" href="$d1/d62/_snake_8hpp.html" title="Snake.hpp" alt="" coords="699,109,783,136"/>
-<area shape="rect" id="node4" href="$df/df1/_a_game_8hpp.html" title="AGame.hpp" alt="" coords="158,184,249,211"/>
-<area shape="rect" id="node10" href="$d7/d6d/_utils_8hpp.html" title="Utils.hpp" alt="" coords="1145,333,1220,360"/>
-<area shape="rect" id="node11" href="$dd/d7d/_game_component_8hpp.html" title="GameComponent.hpp" alt="" coords="1042,259,1192,285"/>
-<area shape="rect" id="node13" href="$df/d96/_background_component_8hpp.html" title="BackgroundComponent.hpp" alt="" coords="107,259,290,285"/>
-<area shape="rect" id="node14" href="$d4/da4/_u_i_component_8hpp.html" title="UIComponent.hpp" alt="" coords="890,259,1018,285"/>
-<area shape="rect" id="node15" href="$df/d56/_audio_component_8hpp.html" title="AudioComponent.hpp" alt="" coords="410,259,557,285"/>
-<area shape="rect" id="node16" href="$d6/d8e/_score_component_8hpp.html" title="ScoreComponent.hpp" alt="" coords="667,184,815,211"/>
-<area shape="rect" id="node19" href="$d5/dce/_protocol_8hpp.html" title="Protocol.hpp" alt="" coords="1267,184,1362,211"/>
-<area shape="rect" id="node7" href="$dd/dea/_a_component_8hpp.html" title="AComponent.hpp" alt="" coords="462,333,585,360"/>
-<area shape="rect" id="node8" href="$d3/d12/_vector2_8hpp.html" title="Vector2.hpp" alt="" coords="908,408,1000,435"/>
+<area shape="rect" id="node2" href="$d1/d62/_snake_8hpp.html" title="Snake.hpp" alt="" coords="504,109,588,136"/>
+<area shape="rect" id="node4" href="$df/df1/_a_game_8hpp.html" title="AGame.hpp" alt="" coords="778,259,868,285"/>
+<area shape="rect" id="node12" href="$d7/d6d/_utils_8hpp.html" title="Utils.hpp" alt="" coords="8,184,83,211"/>
+<area shape="rect" id="node13" href="$dd/d7d/_game_component_8hpp.html" title="GameComponent.hpp" alt="" coords="604,259,754,285"/>
+<area shape="rect" id="node15" href="$df/d96/_background_component_8hpp.html" title="BackgroundComponent.hpp" alt="" coords="24,259,206,285"/>
+<area shape="rect" id="node16" href="$d4/da4/_u_i_component_8hpp.html" title="UIComponent.hpp" alt="" coords="231,259,359,285"/>
+<area shape="rect" id="node17" href="$df/d56/_audio_component_8hpp.html" title="AudioComponent.hpp" alt="" coords="434,259,580,285"/>
+<area shape="rect" id="node18" href="$d7/d2e/_high_score_component_8hpp.html" title="HighScoreComponent.hpp" alt="" coords="333,184,508,211"/>
+<area shape="rect" id="node27" href="$d5/dce/_protocol_8hpp.html" title="Protocol.hpp" alt="" coords="1094,184,1189,211"/>
+<area shape="rect" id="node7" href="$dd/dea/_a_component_8hpp.html" title="AComponent.hpp" alt="" coords="383,333,506,360"/>
+<area shape="rect" id="node10" href="$db/d6e/_arcade_system_8hpp.html" title="ArcadeSystem.hpp" alt="" coords="660,333,794,360"/>
+<area shape="rect" id="node8" href="$d3/d12/_vector2_8hpp.html" title="Vector2.hpp" alt="" coords="309,408,401,435"/>
+<area shape="rect" id="node19" href="$d9/d24/_load_high_score_8hpp.html" title="LoadHighScore.hpp" alt="" coords="1062,259,1198,285"/>
+<area shape="rect" id="node25" href="$d9/d54/_high_score_8hpp.html" title="HighScore.hpp" alt="" coords="1508,333,1616,360"/>
 </map>

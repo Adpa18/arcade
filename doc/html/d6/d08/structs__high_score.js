@@ -1,5 +1,7 @@
 var structs__high_score =
 [
-    [ "name", "d6/d08/structs__high_score.html#a995147343de949779f669b13fb8d3197", null ],
-    [ "score", "d6/d08/structs__high_score.html#a667371f7a06f13bbe325c6a52ff2a8e5", null ]
+    [ "s_highScore", "d6/d08/structs__high_score.html#ac7428d09ab8182122d0f2612e8c0bfb3", null ],
+    [ "s_highScore", "d6/d08/structs__high_score.html#ab66103fd2ea1d55773fd33efd082ba1b", null ],
+    [ "getName", "d6/d08/structs__high_score.html#ad289b94ab2542a72dc326ef958f575b6", null ],
+    [ "getScore", "d6/d08/structs__high_score.html#ab64cd765a67593897dcfcfe0572b9a7e", null ]
 ];

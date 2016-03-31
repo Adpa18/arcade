@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['eat',['eat',['../da/dab/class_pacman.html#a8942f6bc13599d23825559e75aef3eac',1,'Pacman']]],
   ['echochar',['echochar',['../d7/d51/class_n_curses_window.html#a7e6d2559ce1a835a0ac07edf0a70afca',1,'NCursesWindow::echochar()'],['../db/d26/class_n_curses_pad.html#a7e00fbd33f22b33f17e409313f5aaff9',1,'NCursesPad::echochar()']]],
   ['enumeration_5ffield',['Enumeration_Field',['../da/d98/class_enumeration___field.html#a96a8ba576cee0754c8b524d66777199c',1,'Enumeration_Field::Enumeration_Field(const char *enums[], bool case_sens=FALSE, bool non_unique=FALSE)'],['../da/d98/class_enumeration___field.html#a19fd8e8981bfde776646048d7f8a110a',1,'Enumeration_Field::Enumeration_Field(const Enumeration_Field &amp;rhs)']]],
   ['erase',['erase',['../d7/d51/class_n_curses_window.html#aa9788b401bac1ab706c5bd8e63c38d28',1,'NCursesWindow']]],

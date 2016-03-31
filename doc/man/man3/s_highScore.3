@@ -1,4 +1,4 @@
-.TH "s_highScore" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "s_highScore" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,30 +7,46 @@ s_highScore \-
 .br
 .PP
 .PP
-\fC#include <ScoreComponent\&.hpp>\fP
-.SS "Attributs publics"
+\fC#include <HighScore\&.hpp>\fP
+.SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
-.RI "char \fBname\fP [20]"
+.RI "unsigned \fBint\fP \fBgetScore\fP () \fBconst\fP "
 .br
 .ti -1c
-.RI "unsigned \fBint\fP \fBscore\fP"
+.RI "\fBstd::string\fP \fBconst\fP \fBgetName\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBs_highScore\fP (unsigned \fBint\fP newScore, \fBstd::string\fP \fBconst\fP &newName)"
+.br
+.ti -1c
+.RI "\fBs_highScore\fP ()"
 .br
 .in -1c
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 28 du fichier ScoreComponent\&.hpp\&.
-.SH "Documentation des données membres"
+Définition à la ligne 34 du fichier HighScore\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
 .PP 
-.SS "char s_highScore::name[20]"
+.SS "s_highScore::s_highScore (unsigned \fBint\fP newScore, \fBstd::string\fP \fBconst\fP & newName)\fC [inline]\fP"
 
 .PP
-Définition à la ligne 29 du fichier ScoreComponent\&.hpp\&.
-.SS "unsigned \fBint\fP s_highScore::score"
+Définition à la ligne 68 du fichier HighScore\&.hpp\&.
+.SS "s_highScore::s_highScore ()\fC [inline]\fP"
 
 .PP
-Définition à la ligne 30 du fichier ScoreComponent\&.hpp\&.
+Définition à la ligne 76 du fichier HighScore\&.hpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBstd::string\fP \fBconst\fP s_highScore::getName () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 63 du fichier HighScore\&.hpp\&.
+.SS "unsigned \fBint\fP s_highScore::getScore () const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 58 du fichier HighScore\&.hpp\&.
 
 .SH "Auteur"
 .PP 

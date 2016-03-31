@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['random_5fpos',['RANDOM_POS',['../d1/d62/_snake_8hpp.html#a84cf1dc10cc6ca07b4c2846d92b701f9',1,'Snake.hpp']]],
   ['redrawwin',['redrawwin',['../dd/df4/curses_8h.html#a9e78a55e802036055f20e55e598cec9d',1,'redrawwin():&#160;curses.h'],['../d3/def/ncurses_8h.html#a9e78a55e802036055f20e55e598cec9d',1,'redrawwin():&#160;ncurses.h']]],
   ['refresh',['refresh',['../dd/df4/curses_8h.html#a79af28443525d4cccad45d58d60911ad',1,'refresh():&#160;curses.h'],['../d3/def/ncurses_8h.html#a79af28443525d4cccad45d58d60911ad',1,'refresh():&#160;ncurses.h']]],
   ['remove_5fclock',['remove_clock',['../db/d45/term_8h.html#addf9a7c23fc55ea2c1936f169d9d601d',1,'term.h']]],

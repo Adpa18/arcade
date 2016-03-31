@@ -18,7 +18,7 @@ RM			=	rm -rf
 
 NAME		=	$(BASE)games/lib_arcade_snake.so
 
-CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -g
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC
 
 CPPFLAGS	+= 	-I$(BASE)inc/games/snake/ -I$(BASE)inc/
 

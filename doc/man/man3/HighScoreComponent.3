@@ -1,0 +1,127 @@
+.TH "HighScoreComponent" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HighScoreComponent \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <HighScoreComponent\&.hpp>\fP
+.PP
+Est dérivée de \fBAComponent\fP\&.
+.SS "Types publics"
+
+.in +1c
+.ti -1c
+.RI "enum \fBComponentsPos\fP { \fBGAMENAME\fP, \fBSCORE\fP, \fBPSEUDO\fP, \fBLABEL\fP }"
+.br
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBHighScoreComponent\fP (\fBstd::string\fP \fBconst\fP &gameName, size_t score)"
+.br
+.ti -1c
+.RI "virtual \fB~HighScoreComponent\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBUpdatePseudo\fP (\fBconst\fP \fBint\fP key)"
+.br
+.ti -1c
+.RI "\fBUIComponent\fP \fBconst\fP *\fBconst\fP * \fBgetComponentsToDisplay\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBbool\fP \fBsubmit\fP ()"
+.br
+.in -1c
+.SS "Attributs publics statiques"
+
+.in +1c
+.ti -1c
+.RI "static \fBconst\fP \fBstd::string\fP \fBpseudoPlaceholder\fP"
+.br
+.ti -1c
+.RI "static \fBconst\fP \fBstd::string\fP \fBlabelHighscores\fP"
+.br
+.ti -1c
+.RI "static \fBconst\fP size_t \fBcomponentNb\fP = 14"
+.br
+.ti -1c
+.RI "static \fBconst\fP \fBVector2\fP< double > \fBhighscoreDim\fP"
+.br
+.ti -1c
+.RI "static \fBconst\fP \fBVector2\fP< double > \fBhighscorePos\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 12 du fichier HighScoreComponent\&.hpp\&.
+.SH "Documentation des énumérations membres"
+.PP 
+.SS "enum \fBHighScoreComponent::ComponentsPos\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIGAMENAME \fP\fP
+.TP
+\fB\fISCORE \fP\fP
+.TP
+\fB\fIPSEUDO \fP\fP
+.TP
+\fB\fILABEL \fP\fP
+.PP
+Définition à la ligne 22 du fichier HighScoreComponent\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "HighScoreComponent::HighScoreComponent (\fBstd::string\fP \fBconst\fP & gameName, size_t score)"
+
+.PP
+Définition à la ligne 15 du fichier HighScoreComponent\&.cpp\&.
+.SS "HighScoreComponent::~HighScoreComponent ()\fC [virtual]\fP"
+
+.PP
+Définition à la ligne 75 du fichier HighScoreComponent\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBUIComponent\fP \fBconst\fP *\fBconst\fP * HighScoreComponent::getComponentsToDisplay () const"
+
+.PP
+Définition à la ligne 108 du fichier HighScoreComponent\&.cpp\&.
+.SS "\fBbool\fP HighScoreComponent::submit ()"
+
+.PP
+Définition à la ligne 113 du fichier HighScoreComponent\&.cpp\&.
+.SS "\fBvoid\fP HighScoreComponent::UpdatePseudo (\fBconst\fP \fBint\fP key)"
+
+.PP
+Définition à la ligne 83 du fichier HighScoreComponent\&.cpp\&.
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBconst\fP size_t HighScoreComponent::componentNb = 14\fC [static]\fP"
+
+.PP
+Définition à la ligne 19 du fichier HighScoreComponent\&.hpp\&.
+.SS "\fBconst\fP \fBVector2\fP< double > HighScoreComponent::highscoreDim\fC [static]\fP"
+
+.PP
+Définition à la ligne 20 du fichier HighScoreComponent\&.hpp\&.
+.SS "\fBconst\fP \fBVector2\fP< double > HighScoreComponent::highscorePos\fC [static]\fP"
+
+.PP
+Définition à la ligne 21 du fichier HighScoreComponent\&.hpp\&.
+.SS "\fBconst\fP \fBstd::string\fP HighScoreComponent::labelHighscores\fC [static]\fP"
+
+.PP
+Définition à la ligne 18 du fichier HighScoreComponent\&.hpp\&.
+.SS "\fBconst\fP \fBstd::string\fP HighScoreComponent::pseudoPlaceholder\fC [static]\fP"
+
+.PP
+Définition à la ligne 17 du fichier HighScoreComponent\&.hpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

@@ -1,4 +1,4 @@
-.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/lib/openGL/OpenGL.hpp" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/lib/openGL/OpenGL.hpp" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,8 +28,6 @@
 .br
 \fC#include 'IGraph\&.hpp'\fP
 .br
-\fC#include 'AGame\&.hpp'\fP
-.br
 \fC#include 'GameComponent\&.hpp'\fP
 .br
 \fC#include 'UIComponent\&.hpp'\fP
@@ -58,7 +56,7 @@
 .RI "\fBIGraph\fP * \fBloadLib\fP ()"
 .br
 .ti -1c
-.RI "\fBvoid\fP \fBinitLib\fP (\fBIGraph\fP *graph, \fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
+.RI "\fBvoid\fP \fBinitLib\fP (\fBIGraph\fP *graph, \fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< double > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
 .br
 .ti -1c
 .RI "\fBvoid\fP \fBdestroyLib\fP (\fBIGraph\fP *graph)"
@@ -69,21 +67,21 @@
 .SS "#define STEP   30"
 
 .PP
-Définition à la ligne 21 du fichier OpenGL\&.hpp\&.
+Définition à la ligne 20 du fichier OpenGL\&.hpp\&.
 .SH "Documentation des fonctions"
 .PP 
 .SS "\fBvoid\fP destroyLib (\fBIGraph\fP * graph)"
 
 .PP
-Définition à la ligne 82 du fichier OpenGL\&.hpp\&.
-.SS "\fBvoid\fP initLib (\fBIGraph\fP * graph, \fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size, std::stack< \fBAComponent\fP * > cache)"
+Définition à la ligne 90 du fichier OpenGL\&.hpp\&.
+.SS "\fBvoid\fP initLib (\fBIGraph\fP * graph, \fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< double > size, std::stack< \fBAComponent\fP * > cache)"
 
 .PP
-Définition à la ligne 77 du fichier OpenGL\&.hpp\&.
+Définition à la ligne 85 du fichier OpenGL\&.hpp\&.
 .SS "\fBIGraph\fP* loadLib ()"
 
 .PP
-Définition à la ligne 72 du fichier OpenGL\&.hpp\&.
+Définition à la ligne 80 du fichier OpenGL\&.hpp\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

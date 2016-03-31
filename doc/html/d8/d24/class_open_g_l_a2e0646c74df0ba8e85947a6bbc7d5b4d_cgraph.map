@@ -1,9 +1,9 @@
 <map id="OpenGL::~OpenGL" name="OpenGL::~OpenGL">
-<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#af9e484c792299f864f256b4790ad66f2" title="OpenGL::destroy" alt="" coords="200,31,321,57"/>
-<area shape="rect" id="node5" href="$dc/d92/_s_d_l__ttf_8h.html#a006b7c83a8ff15bb9f9d453d48ba3e51" title="TTF_CloseFont" alt="" coords="204,81,317,108"/>
-<area shape="rect" id="node6" href="$d6/d30/_s_d_l__render_8h.html#a078c0a925e24542d356a02183a306be6" title="Destroy the specified texture. " alt="" coords="188,132,333,159"/>
-<area shape="rect" id="node7" href="$dc/d92/_s_d_l__ttf_8h.html#aa215d7d4fe202960904507a6ad4e6097" title="TTF_Quit" alt="" coords="222,183,299,209"/>
-<area shape="rect" id="node8" href="$de/ddc/_s_d_l_8h.html#afdabaf714781099083592051f2d9ac11" title="SDL_Quit" alt="" coords="221,233,300,260"/>
-<area shape="rect" id="node3" href="$dc/d64/_s_d_l__video_8h.html#aa64ab050e0bd3a61057c3dffe953aa9f" title="Delete an OpenGL context. " alt="" coords="381,5,544,32"/>
-<area shape="rect" id="node4" href="$dc/d64/_s_d_l__video_8h.html#a72609295a4faee0587268339ccff80c2" title="Destroy a window. " alt="" coords="389,56,537,83"/>
+<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#af9e484c792299f864f256b4790ad66f2" title="OpenGL::destroy" alt="" coords="191,31,312,57"/>
+<area shape="rect" id="node5" href="$dc/d92/_s_d_l__ttf_8h.html#a006b7c83a8ff15bb9f9d453d48ba3e51" title="TTF_CloseFont" alt="" coords="195,81,308,108"/>
+<area shape="rect" id="node6" href="$d4/d6d/_s_d_l__surface_8h.html#a7b8d4f9cc058822501896a2eed81220e" title="SDL_FreeSurface" alt="" coords="188,132,315,159"/>
+<area shape="rect" id="node7" href="$dc/d92/_s_d_l__ttf_8h.html#aa215d7d4fe202960904507a6ad4e6097" title="TTF_Quit" alt="" coords="213,183,290,209"/>
+<area shape="rect" id="node8" href="$de/ddc/_s_d_l_8h.html#afdabaf714781099083592051f2d9ac11" title="SDL_Quit" alt="" coords="212,233,291,260"/>
+<area shape="rect" id="node3" href="$dc/d64/_s_d_l__video_8h.html#aa64ab050e0bd3a61057c3dffe953aa9f" title="Delete an OpenGL context. " alt="" coords="363,5,525,32"/>
+<area shape="rect" id="node4" href="$dc/d64/_s_d_l__video_8h.html#a72609295a4faee0587268339ccff80c2" title="Destroy a window. " alt="" coords="370,56,518,83"/>
 </map>

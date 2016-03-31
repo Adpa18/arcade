@@ -14,7 +14,7 @@ RM			=	rm -rf
 
 NAME		=	$(BASE)lib/lib_arcade_openGL.so
 
-CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w -g
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -w
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/openGL/ -I$(BASE)inc/
 

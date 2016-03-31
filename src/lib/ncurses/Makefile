@@ -15,7 +15,7 @@ RM			=	rm -rf
 
 NAME		=	$(BASE)lib/lib_arcade_ncurses.so
 
-CPPFLAGS	=	-g -W -Wall -Wextra -Werror -fPIC
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC
 
 CPPFLAGS	+=	-I$(BASE)inc/lib/ncurses/ -I$(BASE)inc/
 

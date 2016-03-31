@@ -2,6 +2,7 @@ var searchData=
 [
   ['magic',['MAGIC',['../d9/d3b/tic_8h.html#a94630370ae389fb1189282fa0742f310',1,'tic.h']]],
   ['magic_5fcookie_5fglitch',['magic_cookie_glitch',['../db/d45/term_8h.html#ac5b262bb4ba8ff05a28cc5a59287d0d7',1,'term.h']]],
+  ['magicnbr',['MAGICNBR',['../d9/d54/_high_score_8hpp.html#a95f886596846e14820208b17dfb53608',1,'HighScore.hpp']]],
   ['mangle',['MANGLE',['../d2/d17/gl__mangle_8h.html#a62d020536d4004873b851431ce251782',1,'gl_mangle.h']]],
   ['max_5falias',['MAX_ALIAS',['../d9/d3b/tic_8h.html#aaa0cecf844a83c126fe28812f62ca93b',1,'tic.h']]],
   ['max_5fattributes',['max_attributes',['../db/d45/term_8h.html#a8ef33708857797d93859e924c32df616',1,'term.h']]],

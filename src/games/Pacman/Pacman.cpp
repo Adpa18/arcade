@@ -6,10 +6,10 @@ Pacman::Pacman() : AGame("Pacman", Vector2<double>(WIDTH, HEIGHT))
     AComponent::ComponentColor  color;
 
     this->pacman = new GameComponent(Vector2<double>(25, 18), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "pacman.gif", GameComponent::CUBE_LARGE);
-    this->phantom.push_back(new GameComponent(Vector2<double>(25, 13), Vector2<double>(1, 1), AComponent::RED, ' ', "ghost_red.gif", GameComponent::CUBE_LARGE));
-    this->phantom.push_back(new GameComponent(Vector2<double>(25, 14), Vector2<double>(1, 1), AComponent::CYAN, ' ', "ghost_cyan.gif", GameComponent::CUBE_LARGE));
-    this->phantom.push_back(new GameComponent(Vector2<double>(25, 15), Vector2<double>(1, 1), AComponent::GREEN, ' ', "ghost_orange.gif", GameComponent::CUBE_LARGE));
-    this->phantom.push_back(new GameComponent(Vector2<double>(25, 16), Vector2<double>(1, 1), AComponent::MAGENTA, ' ', "ghost_pink.gif", GameComponent::CUBE_LARGE));
+    this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 13), AComponent::RED, "ghost_red.gif"));
+    this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 14), AComponent::CYAN, "ghost_cyan.gif"));
+    this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 15), AComponent::GREEN, "ghost_orange.gif"));
+    this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 16), AComponent::MAGENTA, "ghost_pink.gif"));
     for (size_t y = 0; y < HEIGHT; y++) {
         for (size_t x = 0; x < WIDTH; x++) {
             if (map[y][x] == 'X') {
@@ -36,10 +36,10 @@ Pacman::~Pacman()
 
 bool                        Pacman::check(Vector2<double> pos)
 {
-    for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
-        if (it->second->getSpriteText() == "X" && it->second->getPos() == pos)
-            return (false);
-    }
+    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pos.y * WIDTH + pos.x);
+
+    if (it != mapObjs.end() && it->second->getSpriteText() == "X")
+        return (false);
     return (true);
 }
 
@@ -68,20 +68,20 @@ void 		             Pacman::changeDirection(int key)
     }
     switch (dir) {
         case DIR_LEFT:
-            pacmanPos.x -= 1;
+            pacmanPos.x -= STEP;
             if (pacmanPos.x <= 0)
                 pacmanPos.x = WIDTH - 1;
             break;
         case DIR_RIGHT:
-            pacmanPos.x += 1;
+            pacmanPos.x += STEP;
             if (pacmanPos.x >= WIDTH)
                 pacmanPos.x = 0;
             break;
         case DIR_UP:
-            pacmanPos.y -= 1;
+            pacmanPos.y -= STEP;
             break;
         case DIR_DOWN:
-            pacmanPos.y += 1;
+            pacmanPos.y += STEP;
             break;
         default:
             return;
@@ -101,20 +101,20 @@ void                Pacman::move()
 
     switch (this->dir) {
         case DIR_LEFT:
-            pacmanPos.x -= 1;
+            pacmanPos.x -= STEP;
             if (pacmanPos.x <= 0)
                 pacmanPos.x = WIDTH - 1;
             break;
         case DIR_RIGHT:
-            pacmanPos.x += 1;
+            pacmanPos.x += STEP;
             if (pacmanPos.x >= WIDTH)
                 pacmanPos.x = 0;
             break;
         case DIR_UP:
-            pacmanPos.y -= 1;
+            pacmanPos.y -= STEP;
             break;
         case DIR_DOWN:
-            pacmanPos.y += 1;
+            pacmanPos.y += STEP;
             break;
         default:
             return;
@@ -141,13 +141,13 @@ std::stack<AComponent*>     Pacman::compute(int key)
     this->move();
     this->eat();
     components.push(this->pacman);
-    components.push(this->phantom[0]);
-    components.push(this->phantom[1]);
-    components.push(this->phantom[2]);
-    components.push(this->phantom[3]);
-    // for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
-    //     components.push(it->second);
-    // }
+    components.push(this->ghosts[0]->getObj());
+    components.push(this->ghosts[1]->getObj());
+    components.push(this->ghosts[2]->getObj());
+    components.push(this->ghosts[3]->getObj());
+    for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
+        components.push(it->second);
+    }
     return (components);
 }
 
@@ -155,23 +155,23 @@ std::stack<AComponent*>     Pacman::getInfos()
 {
     std::stack<AComponent*> components;
 
+    components.push(this->pacman);
+    components.push(this->ghosts[0]->getObj());
+    components.push(this->ghosts[1]->getObj());
+    components.push(this->ghosts[2]->getObj());
+    components.push(this->ghosts[3]->getObj());
     for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
         components.push(it->second);
     }
-    components.push(this->pacman);
-    components.push(this->phantom[0]);
-    components.push(this->phantom[1]);
-    components.push(this->phantom[2]);
-    components.push(this->phantom[3]);
     return (components);
 }
 
 void				Pacman::restart()
 {
     this->pacman->setPos(Vector2<double>(25, 18));
-    this->phantom[0]->setPos(Vector2<double>(25, 13));
-    this->phantom[1]->setPos(Vector2<double>(25, 14));
-    this->phantom[2]->setPos(Vector2<double>(25, 15));
-    this->phantom[3]->setPos(Vector2<double>(25, 16));
+    this->ghosts[0]->init();
+    this->ghosts[1]->init();
+    this->ghosts[2]->init();
+    this->ghosts[3]->init();
     this->dir = DIR_LEFT;
 }

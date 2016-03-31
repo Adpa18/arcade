@@ -1,0 +1,6 @@
+<map id="AComponent::setPos" name="AComponent::setPos">
+<area shape="rect" id="node2" href="$da/dab/class_pacman.html#ae78323bec47da559a46420901429cc2c" title="Pacman::move" alt="" coords="202,5,313,32"/>
+<area shape="rect" id="node4" href="$da/dab/class_pacman.html#ae850eba09184407b22c1f06aae6bafa6" title="Pacman::restart" alt="" coords="200,56,315,83"/>
+<area shape="rect" id="node3" href="$da/dab/class_pacman.html#a5ea1cb3abd83f71f01962ccfcfeb8a4c" title="Pacman::compute" alt="" coords="363,5,491,32"/>
+<area shape="rect" id="node5" href="$da/dab/class_pacman.html#a499408baab38f119ebd4f41e90fbe3fe" title="Pacman::Pacman" alt="" coords="363,56,490,83"/>
+</map>

@@ -1,13 +1,6 @@
 <map id="OpenGL::display" name="OpenGL::display">
-<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#a730b14504e39297448a570fedbb1996b" title="OpenGL::init" alt="" coords="204,132,299,159"/>
-<area shape="rect" id="node9" href="$d9/d8e/glu_8h.html#a82e82820091e91aa88c3e44c8cee4aba" title="gluLookAt" alt="" coords="211,183,291,209"/>
-<area shape="rect" id="node10" href="$d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac" title="AComponent::getPos" alt="" coords="178,233,325,260"/>
-<area shape="rect" id="node11" href="$d1/db4/class_a_component.html#ab29cf456e841468b939eb5a11804fd3e" title="AComponent::getSize" alt="" coords="176,284,327,311"/>
-<area shape="rect" id="node12" href="$dc/d64/_s_d_l__video_8h.html#a11d1245662f49f6af257627119f22835" title="Swap the OpenGL buffers for a window, if double&#45;buffering is supported. " alt="" coords="172,335,331,361"/>
-<area shape="rect" id="node3" href="$dc/d64/_s_d_l__video_8h.html#a42565088bdb739a5353fd67abbe235d2" title="Create a window with the specified position, dimensions, and flags. " alt="" coords="395,5,537,32"/>
-<area shape="rect" id="node4" href="$df/d2d/_s_d_l__error_8h.html#ac88e1aa404a8f94aaee4ad6b94547647" title="SDL_GetError" alt="" coords="414,56,518,83"/>
-<area shape="rect" id="node5" href="$dc/d64/_s_d_l__video_8h.html#a0e14c935cf304133278893bf6c1d2691" title="Create an OpenGL context for use with an OpenGL window, and make it current. " alt="" coords="384,107,548,133"/>
-<area shape="rect" id="node6" href="$dc/d64/_s_d_l__video_8h.html#aed4d4347f2d5def1532bc22893e0e0d9" title="Set an OpenGL window attribute before window creation. " alt="" coords="392,157,540,184"/>
-<area shape="rect" id="node7" href="$dc/d64/_s_d_l__video_8h.html#a68b0d06595d086d9244fd49afe3e8360" title="Set the swap interval for the current OpenGL context. " alt="" coords="379,208,553,235"/>
-<area shape="rect" id="node8" href="$d9/d8e/glu_8h.html#a4e914cad03cb90cd24f501327a31bdeb" title="gluPerspective" alt="" coords="412,259,520,285"/>
+<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#a0457061e78fc93f97dd9dd27ec812a1b" title="OpenGL::init" alt="" coords="204,5,299,32"/>
+<area shape="rect" id="node3" href="$d9/d8e/glu_8h.html#a82e82820091e91aa88c3e44c8cee4aba" title="gluLookAt" alt="" coords="211,56,291,83"/>
+<area shape="rect" id="node4" href="$d1/db4/class_a_component.html#a4575869d086fd815ed433dcbf57c3b96" title="AComponent::getPos" alt="" coords="178,107,325,133"/>
+<area shape="rect" id="node5" href="$dc/d64/_s_d_l__video_8h.html#a11d1245662f49f6af257627119f22835" title="Swap the OpenGL buffers for a window, if double&#45;buffering is supported. " alt="" coords="172,157,331,184"/>
 </map>

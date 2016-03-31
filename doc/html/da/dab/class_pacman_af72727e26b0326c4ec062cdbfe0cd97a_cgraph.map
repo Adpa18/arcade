@@ -1,7 +1,0 @@
-<map id="Pacman::newDir" name="Pacman::newDir">
-<area shape="rect" id="node2" href="$d1/db4/class_a_component.html#a10bd94cfe7abe3821ccca1696b0045ac" title="AComponent::getPos" alt="" coords="172,5,319,32"/>
-<area shape="rect" id="node3" href="$da/dab/class_pacman.html#a6d2e5e763bd204b2d2556632db635b47" title="Pacman::tryDown" alt="" coords="182,56,309,83"/>
-<area shape="rect" id="node4" href="$da/dab/class_pacman.html#a5c2f5c02e3a20c12de569a6dfb395b7f" title="Pacman::tryUp" alt="" coords="190,107,301,133"/>
-<area shape="rect" id="node5" href="$da/dab/class_pacman.html#ae82074836a46ac48fd85552dc8377624" title="Pacman::tryLeft" alt="" coords="188,157,303,184"/>
-<area shape="rect" id="node6" href="$da/dab/class_pacman.html#aead7a84d2fd4573d019c9e0ba4937dda" title="Pacman::tryRight" alt="" coords="183,208,307,235"/>
-</map>

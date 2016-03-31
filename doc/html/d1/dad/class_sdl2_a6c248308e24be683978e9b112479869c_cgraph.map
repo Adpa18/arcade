@@ -1,0 +1,16 @@
+<map id="Sdl2::init" name="Sdl2::init">
+<area shape="rect" id="node2" href="$dc/d64/_s_d_l__video_8h.html#a42565088bdb739a5353fd67abbe235d2" title="Create a window with the specified position, dimensions, and flags. " alt="" coords="129,81,271,108"/>
+<area shape="rect" id="node3" href="$df/d2d/_s_d_l__error_8h.html#ac88e1aa404a8f94aaee4ad6b94547647" title="SDL_GetError" alt="" coords="148,132,252,159"/>
+<area shape="rect" id="node4" href="$d6/d30/_s_d_l__render_8h.html#a8db1ba55c15a3477d71f6a793cee54f1" title="Create a 2D rendering context for a window. " alt="" coords="127,183,273,209"/>
+<area shape="rect" id="node5" href="$d1/dad/class_sdl2.html#a4b615f5ce2e2a90768c08a8358b596cd" title="Sdl2::display" alt="" coords="151,233,249,260"/>
+<area shape="rect" id="node6" href="$d6/d30/_s_d_l__render_8h.html#aa26234da40f87f4b16d715564242a341" title="Set the color used for drawing operations (Rect, Line and Clear). " alt="" coords="333,5,511,32"/>
+<area shape="rect" id="node7" href="$d6/d30/_s_d_l__render_8h.html#a473b4abbb29c60e98876eb68ad850f79" title="Clear the current rendering target with the drawing color. " alt="" coords="358,56,486,83"/>
+<area shape="rect" id="node8" href="$d1/db4/class_a_component.html#a4575869d086fd815ed433dcbf57c3b96" title="AComponent::getPos" alt="" coords="349,107,495,133"/>
+<area shape="rect" id="node9" href="$df/d75/class_game_component.html#a5375a72cc30b54fdfdaf7a2656ad7d22" title="GameComponent::getSprite2D" alt="" coords="321,157,523,184"/>
+<area shape="rect" id="node10" href="$df/d75/class_game_component.html#a1171816670c8e2bb987b570d0cc5c16d" title="GameComponent::getDim" alt="" coords="335,208,509,235"/>
+<area shape="rect" id="node11" href="$d5/d71/class_u_i_component.html#acd2a80727cf82b76e3c879f809f4bd66" title="UIComponent::getDim" alt="" coords="345,259,499,285"/>
+<area shape="rect" id="node12" href="$d6/d31/class_background_component.html#a09502e7a15ee8a3b32d2efb13dc604b4" title="BackgroundComponent\l::getDim" alt="" coords="343,310,501,351"/>
+<area shape="rect" id="node13" href="$d1/db4/class_a_component.html#a1d4f4b730662573a9e00a69dac6772ce" title="AComponent::getColor" alt="" coords="345,376,499,403"/>
+<area shape="rect" id="node14" href="$d6/d30/_s_d_l__render_8h.html#a3b5098c1944441034d2c5cff419f93cc" title="Fill a rectangle on the current rendering target with the drawing color. " alt="" coords="351,427,493,453"/>
+<area shape="rect" id="node15" href="$d6/d30/_s_d_l__render_8h.html#a48fa9d24395f3610746988ecca2aae86" title="Update the screen with rendering performed. " alt="" coords="351,477,493,504"/>
+</map>

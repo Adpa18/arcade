@@ -1,10 +1,10 @@
 var searchData=
 [
   ['m',['m',['../db/d11/class_n_curses_menu_exception.html#a63121ff04f101068bf058ca5155ddb7b',1,'NCursesMenuException::m()'],['../dc/dd2/glext_8h.html#af593500c283bf1a787a6f947f503a5c2',1,'m():&#160;glext.h'],['../d0/d32/_s_d_l__opengl__glext_8h.html#a7a620116649a5b0963149b6e24690240',1,'m():&#160;SDL_opengl_glext.h']]],
-  ['magenta',['MAGENTA',['../dd/dea/_a_component_8hpp.html#a97809ada5105f1581f3d2a5fd4a90705a56926c820ad72d0977e7ee44d9916e62',1,'AComponent.hpp']]],
+  ['magenta',['MAGENTA',['../d1/db4/class_a_component.html#a76ed8540d67007fd0ab5a74c6b425b87ab75cfef4b48f5826e9e6eb9e3fc749a3',1,'AComponent']]],
   ['magic',['MAGIC',['../d9/d3b/tic_8h.html#a94630370ae389fb1189282fa0742f310',1,'tic.h']]],
   ['magic_5fcookie_5fglitch',['magic_cookie_glitch',['../db/d45/term_8h.html#ac5b262bb4ba8ff05a28cc5a59287d0d7',1,'term.h']]],
-  ['magicnbr',['magicNbr',['../d4/dfa/structs__header.html#ab51b24a72fd3a2932a25723dcd93f668',1,'s_header']]],
+  ['magicnbr',['magicNbr',['../d4/dfa/structs__header.html#ab51b24a72fd3a2932a25723dcd93f668',1,'s_header::magicNbr()'],['../d9/d54/_high_score_8hpp.html#a95f886596846e14820208b17dfb53608',1,'MAGICNBR():&#160;HighScore.hpp']]],
   ['magnitude',['magnitude',['../d1/d6b/struct_s_d_l___haptic_periodic.html#aad0ad2b00c7e6959da627663d91f7b94',1,'SDL_HapticPeriodic']]],
   ['main',['main',['../db/de2/_arcade_8cpp.html#a0c99d968a34e803d378692bde2e3f18f',1,'Arcade.cpp']]],
   ['major',['major',['../d5/d68/struct_____d_r_iversion_rec.html#a9cb2a493f978f3f0eb79b5cb5385be6e',1,'__DRIversionRec::major()'],['../d9/d84/struct_s_d_l__version.html#ad7d7674532073eed237b90f546c97cd0',1,'SDL_version::major()']]],
@@ -117,7 +117,7 @@ var searchData=
   ['motion',['motion',['../df/d1f/union_s_d_l___event.html#ac3c89e190faacbe84280cd539453bab6',1,'SDL_Event']]],
   ['mouse_5finfo',['mouse_info',['../db/d45/term_8h.html#a30ae60e478f9559fbc3ca426634a6ac0',1,'term.h']]],
   ['mouse_5ftrafo',['mouse_trafo',['../dd/df4/curses_8h.html#a4858121ba5846fefc02cbebadab74253',1,'mouse_trafo():&#160;curses.h'],['../d3/def/ncurses_8h.html#a4858121ba5846fefc02cbebadab74253',1,'mouse_trafo():&#160;ncurses.h']]],
-  ['move',['move',['../db/d57/class_n_curses_form_field.html#acfc392ac4d948913c8ffcfea27a3dacb',1,'NCursesFormField::move()'],['../d7/d51/class_n_curses_window.html#a46431a0d98b988b168854501cc2275d0',1,'NCursesWindow::move()'],['../dd/df4/curses_8h.html#a24cb4202a916583a0823086f3f29708b',1,'move():&#160;curses.h'],['../d3/def/ncurses_8h.html#a24cb4202a916583a0823086f3f29708b',1,'move():&#160;ncurses.h']]],
+  ['move',['move',['../da/dab/class_pacman.html#ae78323bec47da559a46420901429cc2c',1,'Pacman::move()'],['../db/d57/class_n_curses_form_field.html#acfc392ac4d948913c8ffcfea27a3dacb',1,'NCursesFormField::move()'],['../d7/d51/class_n_curses_window.html#a46431a0d98b988b168854501cc2275d0',1,'NCursesWindow::move()'],['../dd/df4/curses_8h.html#a24cb4202a916583a0823086f3f29708b',1,'move():&#160;curses.h'],['../d3/def/ncurses_8h.html#a24cb4202a916583a0823086f3f29708b',1,'move():&#160;ncurses.h']]],
   ['move_5finsert_5fmode',['move_insert_mode',['../db/d45/term_8h.html#afc51ec068f5d33da0b5118ff4ab5220a',1,'term.h']]],
   ['move_5fstandout_5fmode',['move_standout_mode',['../db/d45/term_8h.html#a881a42749c047e8dd68925db93723b42',1,'term.h']]],
   ['msc',['msc',['../d8/d80/struct_g_l_x_buffer_swap_complete.html#ad856b4068246e7a96ca26a938929ca15',1,'GLXBufferSwapComplete::msc()'],['../db/d2e/wglext_8h.html#ac6ab09fc64bb73d869061c8f9a13c9fd',1,'msc():&#160;wglext.h']]],

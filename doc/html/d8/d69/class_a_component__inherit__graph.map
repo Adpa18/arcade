@@ -2,5 +2,7 @@
 <area shape="rect" id="node2" href="$d3/dba/class_audio_component.html" title="AudioComponent" alt="" coords="5,80,128,107"/>
 <area shape="rect" id="node3" href="$d6/d31/class_background_component.html" title="BackgroundComponent" alt="" coords="153,80,311,107"/>
 <area shape="rect" id="node4" href="$df/d75/class_game_component.html" title="GameComponent" alt="" coords="335,80,459,107"/>
-<area shape="rect" id="node5" href="$d5/d71/class_u_i_component.html" title="UIComponent" alt="" coords="483,80,586,107"/>
+<area shape="rect" id="node5" href="$d3/d19/class_high_score_component.html" title="HighScoreComponent" alt="" coords="483,80,634,107"/>
+<area shape="rect" id="node6" href="$d5/d71/class_u_i_component.html" title="UIComponent" alt="" coords="658,80,761,107"/>
+<area shape="rect" id="node7" href="$da/d2b/class_u_i_advance_component.html" title="UIAdvanceComponent" alt="" coords="632,155,787,181"/>
 </map>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['back',['back',['../db/d57/class_n_curses_form_field.html#afb6619ece2151f0439cf6fc23a1c16d1',1,'NCursesFormField::back()'],['../df/d5c/class_n_curses_menu.html#ad070cd8681a4e45c4e47c2007b17499c',1,'NCursesMenu::back()']]],
   ['background',['background',['../d7/d51/class_n_curses_window.html#ab9c965dc9eaceacd6ee134069f9e0537',1,'NCursesWindow']]],
-  ['backgroundcomponent',['BackgroundComponent',['../d6/d31/class_background_component.html#ae384cc2666ce70a8531544845cfed1b4',1,'BackgroundComponent']]],
+  ['backgroundcomponent',['BackgroundComponent',['../d6/d31/class_background_component.html#ad970c2ad68a4df2544fed79f7cc62578',1,'BackgroundComponent']]],
   ['backgrounds',['backgrounds',['../d6/d0d/class_n_curses_application.html#a6624b3f67674e2dd7aadb51f3ff62474',1,'NCursesApplication']]],
   ['begx',['begx',['../d7/d51/class_n_curses_window.html#a4a7deab45e658817aa06608c96b4dc32',1,'NCursesWindow']]],
   ['begy',['begy',['../d7/d51/class_n_curses_window.html#a456f46cc3a288e47530c241b8595527d',1,'NCursesWindow']]],

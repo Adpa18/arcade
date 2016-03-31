@@ -5,6 +5,6 @@ var class_open_g_l =
     [ "destroy", "d8/d24/class_open_g_l.html#af9e484c792299f864f256b4790ad66f2", null ],
     [ "display", "d8/d24/class_open_g_l.html#a53362b30778d282de770bb6033d6853d", null ],
     [ "eventManagment", "d8/d24/class_open_g_l.html#a6d0b530f6898435c418dd0742ffe757f", null ],
-    [ "init", "d8/d24/class_open_g_l.html#a730b14504e39297448a570fedbb1996b", null ],
-    [ "init", "d8/d24/class_open_g_l.html#ad70524034b09b6fe2ab19c67ef723cae", null ]
+    [ "init", "d8/d24/class_open_g_l.html#a0457061e78fc93f97dd9dd27ec812a1b", null ],
+    [ "init", "d8/d24/class_open_g_l.html#a80c66a4f95067c4d0fa46604cc2e7fc2", null ]
 ];

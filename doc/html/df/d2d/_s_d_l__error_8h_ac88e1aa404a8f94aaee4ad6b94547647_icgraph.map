@@ -1,8 +1,6 @@
 <map id="SDL_GetError" name="SDL_GetError">
 <area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#af5a59472e49278dc51dd427d567791e0" title="OpenGL::OpenGL" alt="" coords="157,5,284,32"/>
-<area shape="rect" id="node3" href="$d8/d24/class_open_g_l.html#a730b14504e39297448a570fedbb1996b" title="OpenGL::init" alt="" coords="173,56,268,83"/>
-<area shape="rect" id="node5" href="$d1/dad/class_sdl2.html#a50bfe7526527b7b9688b1ed657482920" title="Sdl2::Sdl2" alt="" coords="179,107,262,133"/>
-<area shape="rect" id="node6" href="$d1/dad/class_sdl2.html#a86ff8d9f455ce8cc3b3be98724364552" title="Sdl2::init" alt="" coords="184,157,257,184"/>
-<area shape="rect" id="node4" href="$d8/d24/class_open_g_l.html#a53362b30778d282de770bb6033d6853d" title="OpenGL::display" alt="" coords="332,56,451,83"/>
-<area shape="rect" id="node7" href="$d1/dad/class_sdl2.html#a4b615f5ce2e2a90768c08a8358b596cd" title="Sdl2::display" alt="" coords="343,157,440,184"/>
+<area shape="rect" id="node3" href="$d1/dad/class_sdl2.html#a50bfe7526527b7b9688b1ed657482920" title="Sdl2::Sdl2" alt="" coords="179,56,262,83"/>
+<area shape="rect" id="node4" href="$d1/dad/class_sdl2.html#a6c248308e24be683978e9b112479869c" title="Sdl2::init" alt="" coords="184,107,257,133"/>
+<area shape="rect" id="node5" href="$d1/dad/class_sdl2.html#a4b615f5ce2e2a90768c08a8358b596cd" title="Sdl2::display" alt="" coords="332,107,429,133"/>
 </map>

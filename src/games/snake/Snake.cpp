@@ -21,9 +21,9 @@ Snake::~Snake ()
 void    Snake::restart()
 {
     static const char * const backgroundSprites[] = {
-        "snakeBackground.jpg",
-        "snakeBackground1.jpg",
-        "snakeBackground2.jpg"
+        "background.jpg",
+        "background1.jpg",
+        "background2.jpg"
     };
     this->dir = DIR_UP;
     this->background->setSprite2D(backgroundSprites[rand() % 3]);

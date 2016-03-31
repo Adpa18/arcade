@@ -1,0 +1,21 @@
+<map id="/home/wery_a/rendu/CPP/cpp_arcade/inc/ArcadeSystem.hpp" name="/home/wery_a/rendu/CPP/cpp_arcade/inc/ArcadeSystem.hpp">
+<area shape="rect" id="node2" href="$df/df1/_a_game_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/AGame.hpp" alt="" coords="419,109,565,165"/>
+<area shape="rect" id="node12" href="$d1/d1a/_i_graph_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/IGraph.hpp" alt="" coords="769,109,916,165"/>
+<area shape="rect" id="node20" href="$d8/d22/_high_score_component_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/HighScoreComponent.cpp" alt="" coords="940,109,1119,165"/>
+<area shape="rect" id="node3" href="$d4/d12/_interfaces_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/Interfaces.hpp" alt="" coords="589,213,736,269"/>
+<area shape="rect" id="node6" href="$d1/d4b/_pacman_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/games/Pacman/Pacman.hpp" alt="" coords="5,213,200,269"/>
+<area shape="rect" id="node8" href="$d1/d62/_snake_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/games/snake/Snake.hpp" alt="" coords="224,213,395,269"/>
+<area shape="rect" id="node11" href="$dc/d94/_a_game_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/AGame.cpp" alt="" coords="419,213,565,269"/>
+<area shape="rect" id="node4" href="$d8/dda/_arcade_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/Arcade.hpp" alt="" coords="589,317,736,373"/>
+<area shape="rect" id="node5" href="$db/de2/_arcade_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/Arcade.cpp" alt="" coords="589,421,736,477"/>
+<area shape="rect" id="node7" href="$d9/d87/_pacman_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/games/Pacman/Pacman.cpp" alt="" coords="5,317,200,373"/>
+<area shape="rect" id="node9" href="$db/de9/_games_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/Games.hpp" alt="" coords="419,317,565,373"/>
+<area shape="rect" id="node10" href="$dd/d33/_snake_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/games/snake/Snake.cpp" alt="" coords="224,317,395,373"/>
+<area shape="rect" id="node13" href="$de/d3a/_ncurses_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/ncurses/Ncurses.hpp" alt="" coords="1121,213,1287,269"/>
+<area shape="rect" id="node16" href="$dd/d12/_open_g_l_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/openGL/OpenGL.hpp" alt="" coords="760,213,925,269"/>
+<area shape="rect" id="node18" href="$d1/d40/_sdl2_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/lib/sdl2/Sdl2.hpp" alt="" coords="949,213,1096,269"/>
+<area shape="rect" id="node14" href="$d3/d71/_lib_8hpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/inc\l/Lib.hpp" alt="" coords="1125,317,1272,373"/>
+<area shape="rect" id="node15" href="$d3/d50/_ncurses_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/ncurses/Ncurses.cpp" alt="" coords="1297,317,1463,373"/>
+<area shape="rect" id="node17" href="$d6/d93/_open_g_l_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/openGL/OpenGL.cpp" alt="" coords="760,317,925,373"/>
+<area shape="rect" id="node19" href="$d5/de5/_sdl2_8cpp.html" title="/home/wery_a/rendu\l/CPP/cpp_arcade/src\l/lib/sdl2/Sdl2.cpp" alt="" coords="949,317,1096,373"/>
+</map>

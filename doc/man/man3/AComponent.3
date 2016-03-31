@@ -1,4 +1,4 @@
-.TH "AComponent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "AComponent" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,88 +9,99 @@ AComponent \-
 .PP
 \fC#include <AComponent\&.hpp>\fP
 .PP
-Dérivée par \fBAudioComponent\fP, \fBBackgroundComponent\fP, \fBGameComponent\fP, et \fBUIComponent\fP\&.
+Dérivée par \fBAudioComponent\fP, \fBBackgroundComponent\fP, \fBGameComponent\fP, \fBHighScoreComponent\fP, et \fBUIComponent\fP\&.
+.SS "Types publics"
+
+.in +1c
+.ti -1c
+.RI "enum \fBComponentColor\fP { \fBBLACK\fP, \fBRED\fP, \fBGREEN\fP, \fBYELLOW\fP, \fBBLUE\fP, \fBMAGENTA\fP, \fBCYAN\fP, \fBWHITE\fP }"
+.br
+.in -1c
 .SS "Fonctions membres publiques"
 
 .in +1c
 .ti -1c
-.RI "\fBAComponent\fP (\fBVector2\fP< \fBint\fP > \fBconst\fP &pos, \fBComponentColor\fP \fBcolor\fP)"
+.RI "\fBAComponent\fP (\fBint\fP \fBx\fP, \fBint\fP \fBy\fP, enum \fBComponentColor\fP \fBcolor\fP)"
 .br
 .ti -1c
-.RI "\fBAComponent\fP (\fBVector2\fP< \fBint\fP > \fBconst\fP &pos, \fBVector2\fP< \fBint\fP > \fBconst\fP &\fBsize\fP, \fBComponentColor\fP \fBcolor\fP)"
-.br
-.ti -1c
-.RI "\fBAComponent\fP (\fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBComponentColor\fP \fBcolor\fP)"
+.RI "\fBAComponent\fP (\fBVector2\fP< double > \fBconst\fP &pos, enum \fBComponentColor\fP \fBcolor\fP)"
 .br
 .ti -1c
 .RI "virtual \fB~AComponent\fP ()"
 .br
 .ti -1c
-.RI "\fBVector2\fP< \fBint\fP > \fBconst\fP & \fBgetPos\fP () \fBconst\fP "
+.RI "\fBVector2\fP< double > \fBconst\fP & \fBgetPos\fP () \fBconst\fP "
 .br
 .ti -1c
-.RI "\fBvoid\fP \fBsetPos\fP (\fBconst\fP \fBVector2\fP< \fBint\fP > &pos)"
+.RI "enum \fBComponentColor\fP \fBgetColor\fP () \fBconst\fP "
 .br
 .ti -1c
-.RI "\fBVector2\fP< \fBint\fP > \fBconst\fP & \fBgetSize\fP () \fBconst\fP "
+.RI "\fBvoid\fP \fBsetColor\fP (\fBComponentColor\fP \fBcolor\fP)"
 .br
 .ti -1c
-.RI "\fBvoid\fP \fBsetSize\fP (\fBconst\fP \fBVector2\fP< \fBint\fP > &pos)"
-.br
-.ti -1c
-.RI "\fBComponentColor\fP \fBconst\fP & \fBgetColor\fP () \fBconst\fP "
-.br
-.ti -1c
-.RI "\fBvoid\fP \fBsetColor\fP (\fBconst\fP \fBComponentColor\fP \fBcolor\fP)"
+.RI "\fBvoid\fP \fBsetPos\fP (\fBconst\fP \fBVector2\fP< double > &pos)"
 .br
 .in -1c
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 27 du fichier AComponent\&.hpp\&.
+Définition à la ligne 6 du fichier AComponent\&.hpp\&.
+.SH "Documentation des énumérations membres"
+.PP 
+.SS "enum \fBAComponent::ComponentColor\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIBLACK \fP\fP
+.TP
+\fB\fIRED \fP\fP
+.TP
+\fB\fIGREEN \fP\fP
+.TP
+\fB\fIYELLOW \fP\fP
+.TP
+\fB\fIBLUE \fP\fP
+.TP
+\fB\fIMAGENTA \fP\fP
+.TP
+\fB\fICYAN \fP\fP
+.TP
+\fB\fIWHITE \fP\fP
+.PP
+Définition à la ligne 8 du fichier AComponent\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
-.SS "AComponent::AComponent (\fBVector2\fP< \fBint\fP > \fBconst\fP & pos, \fBComponentColor\fP color)"
+.SS "AComponent::AComponent (\fBint\fP x, \fBint\fP y, enum \fBComponentColor\fP color)"
 
 .PP
-Définition à la ligne 13 du fichier AComponent\&.cpp\&.
-.SS "AComponent::AComponent (\fBVector2\fP< \fBint\fP > \fBconst\fP & pos, \fBVector2\fP< \fBint\fP > \fBconst\fP & size, \fBComponentColor\fP color)"
+Définition à la ligne 3 du fichier AComponent\&.cpp\&.
+.SS "AComponent::AComponent (\fBVector2\fP< double > \fBconst\fP & pos, enum \fBComponentColor\fP color)"
 
 .PP
-Définition à la ligne 16 du fichier AComponent\&.cpp\&.
-.SS "AComponent::AComponent (\fBint\fP x, \fBint\fP y, \fBComponentColor\fP color)"
-
-.PP
-Définition à la ligne 19 du fichier AComponent\&.cpp\&.
+Définition à la ligne 6 du fichier AComponent\&.cpp\&.
 .SS "AComponent::~AComponent ()\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 22 du fichier AComponent\&.cpp\&.
+Définition à la ligne 12 du fichier AComponent\&.cpp\&.
 .SH "Documentation des fonctions membres"
 .PP 
-.SS "\fBComponentColor\fP \fBconst\fP & AComponent::getColor () const"
-
-.PP
-Définition à la ligne 45 du fichier AComponent\&.cpp\&.
-.SS "\fBVector2\fP< \fBint\fP > \fBconst\fP & AComponent::getPos () const"
-
-.PP
-Définition à la ligne 25 du fichier AComponent\&.cpp\&.
-.SS "\fBVector2\fP< \fBint\fP > \fBconst\fP & AComponent::getSize () const"
+.SS "\fBAComponent::ComponentColor\fP AComponent::getColor () const"
 
 .PP
 Définition à la ligne 35 du fichier AComponent\&.cpp\&.
-.SS "\fBvoid\fP AComponent::setColor (\fBconst\fP \fBComponentColor\fP color)"
+.SS "\fBVector2\fP< double > \fBconst\fP & AComponent::getPos () const"
 
 .PP
-Définition à la ligne 50 du fichier AComponent\&.cpp\&.
-.SS "\fBvoid\fP AComponent::setPos (\fBconst\fP \fBVector2\fP< \fBint\fP > & pos)"
-
-.PP
-Définition à la ligne 30 du fichier AComponent\&.cpp\&.
-.SS "\fBvoid\fP AComponent::setSize (\fBconst\fP \fBVector2\fP< \fBint\fP > & pos)"
+Définition à la ligne 15 du fichier AComponent\&.cpp\&.
+.SS "\fBvoid\fP AComponent::setColor (\fBComponentColor\fP color)"
 
 .PP
 Définition à la ligne 40 du fichier AComponent\&.cpp\&.
+.SS "\fBvoid\fP AComponent::setPos (\fBconst\fP \fBVector2\fP< double > & pos)"
+
+.PP
+Définition à la ligne 20 du fichier AComponent\&.cpp\&.
 
 .SH "Auteur"
 .PP 

@@ -1,4 +1,4 @@
-.TH "Sdl2" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "Sdl2" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,10 +26,10 @@ Est dérivée de \fBIGraph\fP\&.
 .RI "virtual \fBvoid\fP \fBdisplay\fP (std::stack< \fBAComponent\fP * >)"
 .br
 .ti -1c
-.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< double > \fBsize\fP, std::stack< \fBAComponent\fP * > cache)"
 .br
 .ti -1c
-.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBsize\fP)"
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< double > \fBsize\fP)"
 .br
 .ti -1c
 .RI "virtual \fBvoid\fP \fBdestroy\fP ()"
@@ -55,29 +55,29 @@ Définition à la ligne 16 du fichier Sdl2\&.cpp\&.
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 49 du fichier Sdl2\&.cpp\&.
+Définition à la ligne 47 du fichier Sdl2\&.cpp\&.
 .SS "\fBvoid\fP Sdl2::display (std::stack< \fBAComponent\fP * > components)\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 73 du fichier Sdl2\&.cpp\&.
+Définition à la ligne 71 du fichier Sdl2\&.cpp\&.
 .SS "\fBint\fP Sdl2::eventManagment ()\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 64 du fichier Sdl2\&.cpp\&.
-.SS "\fBvoid\fP Sdl2::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
+Définition à la ligne 62 du fichier Sdl2\&.cpp\&.
+.SS "\fBvoid\fP Sdl2::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< double > size, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
 Définition à la ligne 24 du fichier Sdl2\&.cpp\&.
-.SS "\fBvoid\fP Sdl2::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > size)\fC [virtual]\fP"
+.SS "\fBvoid\fP Sdl2::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< double > size)\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 37 du fichier Sdl2\&.cpp\&.
+Définition à la ligne 36 du fichier Sdl2\&.cpp\&.
 
 .SH "Auteur"
 .PP 

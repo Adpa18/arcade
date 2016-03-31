@@ -97,7 +97,7 @@ bool    arcade::Arcade::run(const std::string &graphPath)
     IGraph	*graph;
 
     graphPos = find(this->graphsNames.begin(), this->graphsNames.end(), graphPath.substr(graphPath.find_last_of('/') + 1, graphPath.length())) - this->graphsNames.begin();
-    gamePos = 0;
+    gamePos = 1;
     graph = static_cast<IGraph *>(graphs[graphPos].first());
     if (graphs[graphPos].second)
       graph->init(games[gamePos]->getName(), games[gamePos]->getSize(), games[gamePos]->getInfos());

@@ -1,3 +1,6 @@
 <map id="arcade::Arcade::run" name="arcade::Arcade::run">
-<area shape="rect" id="node2" href="$d9/d51/class_i_graph.html#a7f3ef8d2f699fbca53123077af8dae3f" title="IGraph::display" alt="" coords="189,5,300,32"/>
+<area shape="rect" id="node2" href="$d9/d51/class_i_graph.html#a49a3f7bb5165028b636832206f99499e" title="IGraph::init" alt="" coords="231,5,317,32"/>
+<area shape="rect" id="node3" href="$d9/d51/class_i_graph.html#aba1fcfc4c4233def69d3137f225d8377" title="IGraph::eventManagment" alt="" coords="189,56,359,83"/>
+<area shape="rect" id="node4" href="$d9/d51/class_i_graph.html#afa434dfb9bc4639cda45552b08b1ab93" title="IGraph::destroy" alt="" coords="218,107,330,133"/>
+<area shape="rect" id="node5" href="$d9/d51/class_i_graph.html#a7f3ef8d2f699fbca53123077af8dae3f" title="IGraph::display" alt="" coords="219,157,329,184"/>
 </map>

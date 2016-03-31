@@ -1,4 +1,4 @@
-.TH "Ncurses" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "Ncurses" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,10 +26,7 @@ Est dérivée de \fBIGraph\fP\&.
 .RI "virtual \fBvoid\fP \fBdisplay\fP (std::stack< \fBAComponent\fP * >)"
 .br
 .ti -1c
-.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< \fBint\fP > \fBs\fP, std::stack< \fBAComponent\fP * > cache)"
-.br
-.ti -1c
-.RI "virtual \fBvoid\fP \fBinit\fP (\fBVector2\fP< \fBint\fP > \fBs\fP)"
+.RI "virtual \fBvoid\fP \fBinit\fP (\fBconst\fP \fBstd::string\fP &\fBname\fP, \fBVector2\fP< double > \fBs\fP, std::stack< \fBAComponent\fP * > cache)"
 .br
 .ti -1c
 .RI "virtual \fBvoid\fP \fBdestroy\fP ()"
@@ -37,7 +34,7 @@ Est dérivée de \fBIGraph\fP\&.
 .in -1c
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 16 du fichier Ncurses\&.hpp\&.
+Définition à la ligne 15 du fichier Ncurses\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
 .SS "Ncurses::Ncurses (\fBvoid\fP)"
@@ -47,7 +44,7 @@ Définition à la ligne 6 du fichier Ncurses\&.cpp\&.
 .SS "Ncurses::~Ncurses ()\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 12 du fichier Ncurses\&.cpp\&.
+Définition à la ligne 13 du fichier Ncurses\&.cpp\&.
 .SH "Documentation des fonctions membres"
 .PP 
 .SS "\fBvoid\fP Ncurses::destroy ()\fC [virtual]\fP"
@@ -55,29 +52,25 @@ Définition à la ligne 12 du fichier Ncurses\&.cpp\&.
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 218 du fichier Ncurses\&.cpp\&.
+Définition à la ligne 231 du fichier Ncurses\&.cpp\&.
 .SS "\fBvoid\fP Ncurses::display (std::stack< \fBAComponent\fP * > components)\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 91 du fichier Ncurses\&.cpp\&.
+Définition à la ligne 92 du fichier Ncurses\&.cpp\&.
 .SS "\fBint\fP Ncurses::eventManagment ()\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 78 du fichier Ncurses\&.cpp\&.
-.SS "\fBvoid\fP Ncurses::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< \fBint\fP > s, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
+Définition à la ligne 77 du fichier Ncurses\&.cpp\&.
+.SS "\fBvoid\fP Ncurses::init (\fBconst\fP \fBstd::string\fP & name, \fBVector2\fP< double > s, std::stack< \fBAComponent\fP * > cache)\fC [virtual]\fP"
 
 .PP
 Implémente \fBIGraph\fP\&.
 .PP
-Définition à la ligne 144 du fichier Ncurses\&.cpp\&.
-.SS "\fBvoid\fP Ncurses::init (\fBVector2\fP< \fBint\fP > s)\fC [virtual]\fP"
-
-.PP
-Définition à la ligne 182 du fichier Ncurses\&.cpp\&.
+Définition à la ligne 159 du fichier Ncurses\&.cpp\&.
 
 .SH "Auteur"
 .PP 

@@ -138,8 +138,8 @@ void OpenGL::display(std::stack<AComponent*> components)
     UIComponent     *Uobj;
     BackgroundComponent   *Bobj;
 
-    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-    if (is_init == false)
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    if (this->is_init == false)
       init("OpenGl", Vector2<double>(50, 30));
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();

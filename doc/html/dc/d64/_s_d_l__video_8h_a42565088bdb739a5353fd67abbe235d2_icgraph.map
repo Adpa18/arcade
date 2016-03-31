@@ -1,6 +1,4 @@
 <map id="SDL_CreateWindow" name="SDL_CreateWindow">
-<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#a730b14504e39297448a570fedbb1996b" title="OpenGL::init" alt="" coords="195,5,289,32"/>
-<area shape="rect" id="node4" href="$d1/dad/class_sdl2.html#a86ff8d9f455ce8cc3b3be98724364552" title="Sdl2::init" alt="" coords="205,56,279,83"/>
-<area shape="rect" id="node3" href="$d8/d24/class_open_g_l.html#a53362b30778d282de770bb6033d6853d" title="OpenGL::display" alt="" coords="337,5,456,32"/>
-<area shape="rect" id="node5" href="$d1/dad/class_sdl2.html#a4b615f5ce2e2a90768c08a8358b596cd" title="Sdl2::display" alt="" coords="348,56,445,83"/>
+<area shape="rect" id="node2" href="$d1/dad/class_sdl2.html#a6c248308e24be683978e9b112479869c" title="Sdl2::init" alt="" coords="195,5,268,32"/>
+<area shape="rect" id="node3" href="$d1/dad/class_sdl2.html#a4b615f5ce2e2a90768c08a8358b596cd" title="Sdl2::display" alt="" coords="316,5,413,32"/>
 </map>

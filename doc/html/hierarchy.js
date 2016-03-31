@@ -85,7 +85,10 @@ var hierarchy =
       [ "AudioComponent", "d3/dba/class_audio_component.html", null ],
       [ "BackgroundComponent", "d6/d31/class_background_component.html", null ],
       [ "GameComponent", "df/d75/class_game_component.html", null ],
-      [ "UIComponent", "d5/d71/class_u_i_component.html", null ]
+      [ "HighScoreComponent", "d3/d19/class_high_score_component.html", null ],
+      [ "UIComponent", "d5/d71/class_u_i_component.html", [
+        [ "UIAdvanceComponent", "da/d2b/class_u_i_advance_component.html", null ]
+      ] ]
     ] ],
     [ "AGame", "db/d1c/class_a_game.html", [
       [ "Pacman", "da/dab/class_pacman.html", null ],
@@ -161,6 +164,7 @@ var hierarchy =
       [ "OpenGL", "d8/d24/class_open_g_l.html", null ],
       [ "Sdl2", "d1/dad/class_sdl2.html", null ]
     ] ],
+    [ "LoadHighScore", "d5/d80/class_load_high_score.html", null ],
     [ "MEVENT", "db/df5/struct_m_e_v_e_n_t.html", null ],
     [ "name_table_entry", "da/ddf/structname__table__entry.html", null ],
     [ "NCursesApplication", "d6/d0d/class_n_curses_application.html", null ],
@@ -209,7 +213,6 @@ var hierarchy =
     [ "s_header", "d4/dfa/structs__header.html", null ],
     [ "s_highScore", "d6/d08/structs__high_score.html", null ],
     [ "s_phantom", "de/dc1/structs__phantom.html", null ],
-    [ "ScoreComponent", "d0/de1/class_score_component.html", null ],
     [ "SDL_AssertData", "d7/d08/struct_s_d_l___assert_data.html", null ],
     [ "SDL_atomic_t", "de/d13/struct_s_d_l__atomic__t.html", null ],
     [ "SDL_AudioCVT", "d1/d4b/struct_s_d_l___audio_c_v_t.html", null ],
@@ -288,7 +291,7 @@ var hierarchy =
     [ "token", "d4/df4/structtoken.html", null ],
     [ "typenode", "d9/d33/structtypenode.html", null ],
     [ "Vector2< T >", "d8/dbe/class_vector2.html", null ],
-    [ "Vector2< int >", "d8/dbe/class_vector2.html", null ],
+    [ "Vector2< double >", "d8/dbe/class_vector2.html", null ],
     [ "arcade::WhereAmI", "d9/d18/structarcade_1_1_where_am_i.html", null ],
     [ "ncurses::Window", "dd/dba/classncurses_1_1_window.html", null ],
     [ "xGLXBufferSwapComplete", "d2/ddd/structx_g_l_x_buffer_swap_complete.html", null ],

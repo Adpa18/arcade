@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['whereami',['WhereAmI',['../d9/d18/structarcade_1_1_where_am_i.html',1,'arcade']]],
-  ['window',['Window',['../dd/dba/classncurses_1_1_window.html',1,'ncurses']]]
+  ['vector2',['Vector2',['../d8/dbe/class_vector2.html',1,'']]],
+  ['vector2_3c_20double_20_3e',['Vector2&lt; double &gt;',['../d8/dbe/class_vector2.html',1,'']]]
 ];

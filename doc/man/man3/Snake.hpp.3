@@ -1,4 +1,4 @@
-.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/games/snake/Snake.hpp" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "/home/wery_a/rendu/CPP/cpp_arcade/inc/games/snake/Snake.hpp" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,7 +20,7 @@
 .br
 \fC#include 'AudioComponent\&.hpp'\fP
 .br
-\fC#include 'ScoreComponent\&.hpp'\fP
+\fC#include 'HighScoreComponent\&.hpp'\fP
 .br
 \fC#include 'Protocol\&.hpp'\fP
 .br
@@ -42,22 +42,25 @@
 .RI "#define \fBHEIGHT\fP   30"
 .br
 .ti -1c
-.RI "#define \fBSTEP\fP   1"
+.RI "#define \fBSIZE\fP   3"
 .br
 .ti -1c
-.RI "#define \fBSIZE\fP   3"
+.RI "#define \fBRANDOM_POS\fP   \fBVector2\fP<double>(rand() % (\fBWIDTH\fP \- 1) + 1, rand() % (\fBHEIGHT\fP \- 1) + 1)"
 .br
 .in -1c
 .SS "Énumérations"
 
 .in +1c
 .ti -1c
-.RI "enum \fBdirection\fP { \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP, \fBWAIT\fP, \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP }"
+.RI "enum \fBdirection\fP { \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP, \fBNOTHING\fP, \fBDIR_LEFT\fP, \fBDIR_RIGHT\fP, \fBDIR_UP\fP, \fBDIR_DOWN\fP }"
 .br
 .in -1c
 .SS "Fonctions"
 
 .in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBPlay\fP (\fBvoid\fP)"
+.br
 .ti -1c
 .RI "\fBAGame\fP * \fBloadGame\fP ()"
 .br
@@ -67,19 +70,19 @@
 .SS "#define HEIGHT   30"
 
 .PP
-Définition à la ligne 25 du fichier Snake\&.hpp\&.
+Définition à la ligne 15 du fichier Snake\&.hpp\&.
+.SS "#define RANDOM_POS   \fBVector2\fP<double>(rand() % (\fBWIDTH\fP \- 1) + 1, rand() % (\fBHEIGHT\fP \- 1) + 1)"
+
+.PP
+Définition à la ligne 17 du fichier Snake\&.hpp\&.
 .SS "#define SIZE   3"
 
 .PP
-Définition à la ligne 27 du fichier Snake\&.hpp\&.
-.SS "#define STEP   1"
-
-.PP
-Définition à la ligne 26 du fichier Snake\&.hpp\&.
+Définition à la ligne 16 du fichier Snake\&.hpp\&.
 .SS "#define WIDTH   50"
 
 .PP
-Définition à la ligne 24 du fichier Snake\&.hpp\&.
+Définition à la ligne 14 du fichier Snake\&.hpp\&.
 .SH "Documentation du type de l'énumération"
 .PP 
 .SS "enum \fBdirection\fP"
@@ -96,7 +99,7 @@ Définition à la ligne 24 du fichier Snake\&.hpp\&.
 .TP
 \fB\fIDIR_DOWN \fP\fP
 .TP
-\fB\fIWAIT \fP\fP
+\fB\fINOTHING \fP\fP
 .TP
 \fB\fIDIR_LEFT \fP\fP
 .TP
@@ -106,13 +109,17 @@ Définition à la ligne 24 du fichier Snake\&.hpp\&.
 .TP
 \fB\fIDIR_DOWN \fP\fP
 .PP
-Définition à la ligne 29 du fichier Snake\&.hpp\&.
+Définition à la ligne 19 du fichier Snake\&.hpp\&.
 .SH "Documentation des fonctions"
 .PP 
 .SS "\fBAGame\fP* loadGame ()"
 
 .PP
-Définition à la ligne 54 du fichier Snake\&.hpp\&.
+Définition à la ligne 48 du fichier Snake\&.hpp\&.
+.SS "\fBvoid\fP Play (\fBvoid\fP)"
+
+.PP
+Définition à la ligne 203 du fichier Snake\&.cpp\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

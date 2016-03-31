@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['score',['SCORE',['../d3/d19/class_high_score_component.html#a1032f25b694200af9771532f06cd25afaaba148e844c5e3e793027a0975017600',1,'HighScoreComponent']]],
   ['sdl_5faddevent',['SDL_ADDEVENT',['../d9/d42/_s_d_l__events_8h.html#a8fdf1485b0419bb77b89e745267dc179a3cfcf139ec3d85b9ed46931b3ee5542f',1,'SDL_events.h']]],
   ['sdl_5fapp_5fdidenterbackground',['SDL_APP_DIDENTERBACKGROUND',['../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaab2a804d0e9d91a604f4a03e49f5ab7c1',1,'SDL_events.h']]],
   ['sdl_5fapp_5fdidenterforeground',['SDL_APP_DIDENTERFOREGROUND',['../d9/d42/_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa964e90265b0910f3a52619cc460699d7',1,'SDL_events.h']]],
@@ -826,5 +827,8 @@ var searchData=
   ['shapemodecolorkey',['ShapeModeColorKey',['../dc/d20/_s_d_l__shape_8h.html#aa30948f2699e316a43b740eccebe5c20a1d3ca52e90d5b3086e22120c2899f214',1,'SDL_shape.h']]],
   ['shapemodedefault',['ShapeModeDefault',['../dc/d20/_s_d_l__shape_8h.html#aa30948f2699e316a43b740eccebe5c20aca1bc38c9b5179cbed0e9e176cd84d9e',1,'SDL_shape.h']]],
   ['shapemodereversebinarizealpha',['ShapeModeReverseBinarizeAlpha',['../dc/d20/_s_d_l__shape_8h.html#aa30948f2699e316a43b740eccebe5c20ae478c81ede522586674806541e145993',1,'SDL_shape.h']]],
-  ['shoot',['SHOOT',['../db/d1a/namespacearcade.html#a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2',1,'arcade']]]
+  ['shoot',['SHOOT',['../db/d1a/namespacearcade.html#a23d58aed7310b22b59e2b8f8ff8a5ffda0504ea30baff7b670a10cb44f8e5cca2',1,'arcade']]],
+  ['sphere_5flarge',['SPHERE_LARGE',['../df/d75/class_game_component.html#a11ac7d0c01f4151895a18176347d396eaa02ac953c6951c123d1cfe99b77acb55',1,'GameComponent']]],
+  ['sphere_5fmedium',['SPHERE_MEDIUM',['../df/d75/class_game_component.html#a11ac7d0c01f4151895a18176347d396eaad4a055e91948d941eaebc90a4c099b7',1,'GameComponent']]],
+  ['sphere_5fsmall',['SPHERE_SMALL',['../df/d75/class_game_component.html#a11ac7d0c01f4151895a18176347d396eaf30b92071beba8ebf80c8f7c85775aa8',1,'GameComponent']]]
 ];

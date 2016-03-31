@@ -33,6 +33,7 @@ var searchData=
   ['pressure',['pressure',['../d8/d17/struct_s_d_l___touch_finger_event.html#ab4fca822d0807b5748dbae8d3cc56524',1,'SDL_TouchFingerEvent::pressure()'],['../da/db6/struct_s_d_l___finger.html#a0ecb50c7fd699d59899ac60c941bdee6',1,'SDL_Finger::pressure()']]],
   ['prev',['prev',['../d7/dd2/struct_n_curses_application_1_1__slk__link.html#ad87ffb171a35200b7a5e8abb51d920d1',1,'NCursesApplication::_slk_link::prev()'],['../d9/d33/structtypenode.html#a86022811dc6b529f018ed4a1e6655eee',1,'typenode::prev()']]],
   ['prev_5fchoice',['prev_choice',['../d0/d63/form_8h.html#a513a30e1a14ff7e207196eeb7d988c05',1,'form.h']]],
+  ['pseudoplaceholder',['pseudoPlaceholder',['../d3/d19/class_high_score_component.html#a88fc8d3d5c066bc8732caf41018be8a1',1,'HighScoreComponent']]],
   ['ptr',['ptr',['../d2/d3b/struct_s_d_l___r_wops.html#a3f68b93789331775de802d51a2934f0a',1,'SDL_RWops::ptr()'],['../d2/d3b/struct_s_d_l___r_wops.html#a51baff579726790887a4ca41ce14873c',1,'SDL_RWops::ptr()']]],
   ['putimage',['putImage',['../d1/df6/struct_____d_r_iswrast_loader_extension_rec.html#a9c1f99c2a8270652f8637e1e415bbd0a',1,'__DRIswrastLoaderExtensionRec']]]
 ];

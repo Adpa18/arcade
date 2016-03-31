@@ -1,0 +1,67 @@
+.TH "LoadHighScore" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LoadHighScore \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LoadHighScore\&.hpp>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBLoadHighScore\fP (\fBstd::string\fP \fBconst\fP &fileName)"
+.br
+.ti -1c
+.RI "\fB~LoadHighScore\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetHighScore\fP (\fBt_highScore\fP \fBconst\fP *newScore)"
+.br
+.ti -1c
+.RI "\fBconst\fP std::vector< \fBt_highScore\fP \fBconst\fP * > \fBgetAllHighScore\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBstd::string\fP \fBconst\fP & \fBgetFileName\fP () \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBflush\fP () \fBconst\fP "
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 24 du fichier LoadHighScore\&.hpp\&.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "LoadHighScore::LoadHighScore (\fBstd::string\fP \fBconst\fP & fileName)"
+
+.PP
+Définition à la ligne 13 du fichier LoadHighScore\&.cpp\&.
+.SS "LoadHighScore::~LoadHighScore ()"
+
+.PP
+Définition à la ligne 48 du fichier LoadHighScore\&.cpp\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBvoid\fP LoadHighScore::flush () const"
+
+.PP
+Définition à la ligne 81 du fichier LoadHighScore\&.cpp\&.
+.SS "\fBconst\fP std::vector< \fBt_highScore\fP \fBconst\fP * > LoadHighScore::getAllHighScore () const"
+
+.PP
+Définition à la ligne 71 du fichier LoadHighScore\&.cpp\&.
+.SS "\fBstd::string\fP \fBconst\fP & LoadHighScore::getFileName () const"
+
+.PP
+Définition à la ligne 76 du fichier LoadHighScore\&.cpp\&.
+.SS "\fBvoid\fP LoadHighScore::setHighScore (\fBt_highScore\fP \fBconst\fP * newScore)"
+
+.PP
+Définition à la ligne 65 du fichier LoadHighScore\&.cpp\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Arcade à partir du code source\&.

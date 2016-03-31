@@ -65,11 +65,12 @@ public:
     virtual void    destroy();
 
 private:
+    void            initSDL2(const std::string &name, Vector2<double> size);
     void            displayGame(const GameComponent &game, SDL_Rect *rect);
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);
     void            displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect);
     void            displayBackground(const BackgroundComponent &background, SDL_Rect *rect);
-    void			      fill_audio(void *udata, Uint8 *stream, int len);
+    void			fill_audio(void *udata, Uint8 *stream, int len);
 
 };
 

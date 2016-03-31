@@ -34,5 +34,6 @@ var searchData=
   ['sdl_5fthreadpriority',['SDL_ThreadPriority',['../d8/ded/_s_d_l__thread_8h.html#acce8dea56f6b307fadd2949b64e3ebda',1,'SDL_thread.h']]],
   ['sdl_5fwindoweventid',['SDL_WindowEventID',['../dc/d64/_s_d_l__video_8h.html#ac486b40a4860d980dbc74d0b4adf3bab',1,'SDL_video.h']]],
   ['sdl_5fwindowflags',['SDL_WindowFlags',['../dc/d64/_s_d_l__video_8h.html#ab10f4fd6a082ef06fcae96860c95fb18',1,'SDL_video.h']]],
+  ['shapes',['Shapes',['../df/d75/class_game_component.html#a11ac7d0c01f4151895a18176347d396e',1,'GameComponent']]],
   ['sotype',['SOTYPE',['../d8/dda/_arcade_8hpp.html#a6f40ac72a050a37f2b0078fcf1f79c82',1,'Arcade.hpp']]]
 ];

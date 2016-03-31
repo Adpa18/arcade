@@ -1,9 +1,0 @@
-<map id="AComponent::getSize" name="AComponent::getSize">
-<area shape="rect" id="node2" href="$d2/dad/class_snake.html#ac79a6f5a1f1152035781a0f348eff05d" title="Snake::compute" alt="" coords="205,5,323,32"/>
-<area shape="rect" id="node3" href="$d6/d57/class_ncurses.html#ae12387421d11fab55a0e54c9f233f989" title="Ncurses::display" alt="" coords="204,56,324,83"/>
-<area shape="rect" id="node5" href="$d8/d24/class_open_g_l.html#a53362b30778d282de770bb6033d6853d" title="OpenGL::display" alt="" coords="205,107,323,133"/>
-<area shape="rect" id="node7" href="$d1/dad/class_sdl2.html#a4b615f5ce2e2a90768c08a8358b596cd" title="Sdl2::display" alt="" coords="215,157,313,184"/>
-<area shape="rect" id="node4" href="$d6/d57/class_ncurses.html#a811ce85a26d52c4b62bedffcaf6f516e" title="Ncurses::init" alt="" coords="372,56,468,83"/>
-<area shape="rect" id="node6" href="$d8/d24/class_open_g_l.html#a730b14504e39297448a570fedbb1996b" title="OpenGL::init" alt="" coords="373,107,467,133"/>
-<area shape="rect" id="node8" href="$d1/dad/class_sdl2.html#a86ff8d9f455ce8cc3b3be98724364552" title="Sdl2::init" alt="" coords="383,157,457,184"/>
-</map>

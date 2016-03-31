@@ -1,4 +1,4 @@
-.TH "BackgroundComponent" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "BackgroundComponent" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,7 +14,7 @@ Est dérivée de \fBAComponent\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBBackgroundComponent\fP (\fBVector2\fP< \fBint\fP > pos, \fBVector2\fP< \fBint\fP > \fBsize\fP, \fBComponentColor\fP \fBcolor\fP, \fBstd::string\fP \fBconst\fP &sprite2D)"
+.RI "\fBBackgroundComponent\fP (\fBVector2\fP< double > pos, \fBVector2\fP< double > \fBsize\fP, \fBComponentColor\fP \fBcolor\fP, \fBstd::string\fP \fBconst\fP &sprite2D)"
 .br
 .ti -1c
 .RI "virtual \fB~BackgroundComponent\fP ()"
@@ -25,30 +25,38 @@ Est dérivée de \fBAComponent\fP\&.
 .ti -1c
 .RI "\fBvoid\fP \fBsetSprite2D\fP (\fBconst\fP \fBstd::string\fP &sprite2D)"
 .br
+.ti -1c
+.RI "\fBVector2\fP< double > \fBconst\fP & \fBgetDim\fP () \fBconst\fP "
+.br
 .in -1c
+.SS "Membres hérités additionnels"
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 18 du fichier BackgroundComponent\&.hpp\&.
+Définition à la ligne 8 du fichier BackgroundComponent\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
-.SS "BackgroundComponent::BackgroundComponent (\fBVector2\fP< \fBint\fP > pos, \fBVector2\fP< \fBint\fP > size, \fBComponentColor\fP color, \fBstd::string\fP \fBconst\fP & sprite2D)"
+.SS "BackgroundComponent::BackgroundComponent (\fBVector2\fP< double > pos, \fBVector2\fP< double > size, \fBComponentColor\fP color, \fBstd::string\fP \fBconst\fP & sprite2D)"
 
 .PP
-Définition à la ligne 13 du fichier BackgroundComponent\&.cpp\&.
+Définition à la ligne 3 du fichier BackgroundComponent\&.cpp\&.
 .SS "BackgroundComponent::~BackgroundComponent ()\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 19 du fichier BackgroundComponent\&.cpp\&.
+Définition à la ligne 9 du fichier BackgroundComponent\&.cpp\&.
 .SH "Documentation des fonctions membres"
 .PP 
-.SS "\fBstd::string\fP \fBconst\fP & BackgroundComponent::getSprite2D () const"
+.SS "\fBVector2\fP< double > \fBconst\fP & BackgroundComponent::getDim () const"
 
 .PP
 Définition à la ligne 22 du fichier BackgroundComponent\&.cpp\&.
+.SS "\fBstd::string\fP \fBconst\fP & BackgroundComponent::getSprite2D () const"
+
+.PP
+Définition à la ligne 12 du fichier BackgroundComponent\&.cpp\&.
 .SS "\fBvoid\fP BackgroundComponent::setSprite2D (\fBconst\fP \fBstd::string\fP & sprite2D)"
 
 .PP
-Définition à la ligne 27 du fichier BackgroundComponent\&.cpp\&.
+Définition à la ligne 17 du fichier BackgroundComponent\&.cpp\&.
 
 .SH "Auteur"
 .PP 

@@ -1,4 +1,4 @@
-.TH "Vector2< T >" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "Vector2< T >" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,16 +15,25 @@ Vector2< T > \-
 .RI "\fBVector2\fP (T \fBx\fP, T \fBy\fP)"
 .br
 .ti -1c
-.RI "\fBVector2\fP (\fBconst\fP \fBVector2\fP< T > &\fBobj\fP)"
+.RI "\fBVector2\fP ()"
 .br
 .ti -1c
 .RI "\fB~Vector2\fP ()"
 .br
 .ti -1c
-.RI "\fBVector2\fP< T > & \fBoperator=\fP (\fBconst\fP \fBVector2\fP< T > &vec)"
+.RI "\fBVector2\fP \fBoperator+\fP (\fBVector2\fP \fBconst\fP &vector2)"
 .br
 .ti -1c
-.RI "\fBbool\fP \fBoperator==\fP (\fBconst\fP \fBVector2\fP< T > &vec) \fBconst\fP "
+.RI "\fBVector2\fP \fBoperator\-\fP (\fBVector2\fP \fBconst\fP &vector2)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBoperator==\fP (\fBVector2\fP \fBconst\fP &vector2) \fBconst\fP "
+.br
+.ti -1c
+.RI "\fBVector2\fP \fBinvert\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBisEqual\fP (\fBVector2\fP< T > \fBconst\fP &other, double delta) \fBconst\fP "
 .br
 .in -1c
 .SS "Attributs publics"
@@ -43,41 +52,53 @@ Vector2< T > \-
 .SS "template<class T>class Vector2< T >"
 
 .PP
-Définition à la ligne 17 du fichier Vector2\&.hpp\&.
+Définition à la ligne 8 du fichier Vector2\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
 .SS "template<class T> \fBVector2\fP< T >::\fBVector2\fP (T x, T y)\fC [inline]\fP"
 
 .PP
-Définition à la ligne 22 du fichier Vector2\&.hpp\&.
-.SS "template<class T> \fBVector2\fP< T >::\fBVector2\fP (\fBconst\fP \fBVector2\fP< T > & obj)\fC [inline]\fP"
+Définition à la ligne 13 du fichier Vector2\&.hpp\&.
+.SS "template<class T> \fBVector2\fP< T >::\fBVector2\fP ()\fC [inline]\fP"
 
 .PP
-Définition à la ligne 29 du fichier Vector2\&.hpp\&.
+Définition à la ligne 14 du fichier Vector2\&.hpp\&.
 .SS "template<class T> \fBVector2\fP< T >::~\fBVector2\fP ()\fC [inline]\fP"
 
 .PP
-Définition à la ligne 34 du fichier Vector2\&.hpp\&.
+Définition à la ligne 15 du fichier Vector2\&.hpp\&.
 .SH "Documentation des fonctions membres"
 .PP 
-.SS "template<class T> \fBVector2\fP<T>& \fBVector2\fP< T >::operator= (\fBconst\fP \fBVector2\fP< T > & vec)\fC [inline]\fP"
+.SS "template<class T> \fBVector2\fP \fBVector2\fP< T >::\fBinvert\fP ()\fC [inline]\fP"
 
 .PP
-Définition à la ligne 37 du fichier Vector2\&.hpp\&.
-.SS "template<class T> \fBbool\fP \fBVector2\fP< T >::operator== (\fBconst\fP \fBVector2\fP< T > & vec) const\fC [inline]\fP"
+Définition à la ligne 28 du fichier Vector2\&.hpp\&.
+.SS "template<class T> \fBbool\fP \fBVector2\fP< T >::isEqual (\fBVector2\fP< T > \fBconst\fP & other, double delta) const\fC [inline]\fP"
 
 .PP
-Définition à la ligne 44 du fichier Vector2\&.hpp\&.
+Définition à la ligne 32 du fichier Vector2\&.hpp\&.
+.SS "template<class T> \fBVector2\fP \fBVector2\fP< T >::operator+ (\fBVector2\fP< T > \fBconst\fP & vector2)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 16 du fichier Vector2\&.hpp\&.
+.SS "template<class T> \fBVector2\fP \fBVector2\fP< T >::operator\- (\fBVector2\fP< T > \fBconst\fP & vector2)\fC [inline]\fP"
+
+.PP
+Définition à la ligne 20 du fichier Vector2\&.hpp\&.
+.SS "template<class T> \fBbool\fP \fBVector2\fP< T >::operator== (\fBVector2\fP< T > \fBconst\fP & vector2) const\fC [inline]\fP"
+
+.PP
+Définition à la ligne 24 du fichier Vector2\&.hpp\&.
 .SH "Documentation des données membres"
 .PP 
 .SS "template<class T> T \fBVector2\fP< T >::\fBx\fP"
 
 .PP
-Définition à la ligne 19 du fichier Vector2\&.hpp\&.
+Définition à la ligne 10 du fichier Vector2\&.hpp\&.
 .SS "template<class T> T \fBVector2\fP< T >::\fBy\fP"
 
 .PP
-Définition à la ligne 20 du fichier Vector2\&.hpp\&.
+Définition à la ligne 11 du fichier Vector2\&.hpp\&.
 
 .SH "Auteur"
 .PP 

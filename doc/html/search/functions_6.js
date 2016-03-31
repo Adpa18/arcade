@@ -2,6 +2,7 @@ var searchData=
 [
   ['field_5fcheck',['field_check',['../de/d28/class_user_defined_field_type.html#a62aba42ff1561eeb1c545fcd68030aef',1,'UserDefinedFieldType']]],
   ['fieldtype',['fieldtype',['../db/d57/class_n_curses_form_field.html#ac68055ec9fa9e9ef89e945b5cc997b5a',1,'NCursesFormField']]],
+  ['flush',['flush',['../d5/d80/class_load_high_score.html#abe988bee8c025745dc8dd7c9ea73a63a',1,'LoadHighScore']]],
   ['fore',['fore',['../db/d57/class_n_curses_form_field.html#a4bfb93b9802f063332cca6e337e6be44',1,'NCursesFormField::fore()'],['../df/d5c/class_n_curses_menu.html#ad17286c210f0aefe19f09155190a8e58',1,'NCursesMenu::fore()']]],
   ['foreground',['foreground',['../d7/d51/class_n_curses_window.html#a70f9db473ace588be1af635644d2dfb3',1,'NCursesWindow']]],
   ['foregrounds',['foregrounds',['../d6/d0d/class_n_curses_application.html#ad1b440ce99b9554a2b33d7f73bff99ae',1,'NCursesApplication']]],

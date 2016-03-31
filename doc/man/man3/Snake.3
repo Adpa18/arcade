@@ -1,4 +1,4 @@
-.TH "Snake" 3 "Mercredi 30 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
+.TH "Snake" 3 "Jeudi 31 Mars 2016" "Version 1" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,34 +31,51 @@ Est dérivée de \fBAGame\fP\&.
 .ti -1c
 .RI "\fBvoid\fP \fBPlay\fP (\fBvoid\fP)"
 .br
+.ti -1c
+.RI "\fBvoid\fP \fBgetMap\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBwhereAmI\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBchangeDirection\fP (\fBint\fP key)"
+.br
 .in -1c
 .SH "Description détaillée"
 .PP 
-Définition à la ligne 31 du fichier Snake\&.hpp\&.
+Définition à la ligne 21 du fichier Snake\&.hpp\&.
 .SH "Documentation des constructeurs et destructeur"
 .PP 
 .SS "Snake::Snake ()"
 
 .PP
-Définition à la ligne 13 du fichier Snake\&.cpp\&.
+Définition à la ligne 3 du fichier Snake\&.cpp\&.
 .SS "Snake::~Snake ()\fC [virtual]\fP"
 
 .PP
-Définition à la ligne 24 du fichier Snake\&.cpp\&.
+Définition à la ligne 18 du fichier Snake\&.cpp\&.
 .SH "Documentation des fonctions membres"
 .PP 
+.SS "\fBvoid\fP Snake::changeDirection (\fBint\fP key)"
+
+.PP
+Définition à la ligne 103 du fichier Snake\&.cpp\&.
 .SS "std::stack< \fBAComponent\fP * > Snake::compute (\fBint\fP key)\fC [virtual]\fP"
 
 .PP
 Implémente \fBAGame\fP\&.
 .PP
-Définition à la ligne 93 du fichier Snake\&.cpp\&.
+Définition à la ligne 116 du fichier Snake\&.cpp\&.
 .SS "std::stack< \fBAComponent\fP * > Snake::getInfos (\fBvoid\fP)\fC [virtual]\fP"
 
 .PP
 Implémente \fBAGame\fP\&.
 .PP
-Définition à la ligne 160 du fichier Snake\&.cpp\&.
+Définition à la ligne 159 du fichier Snake\&.cpp\&.
+.SS "\fBvoid\fP Snake::getMap ()"
+
+.PP
+Définition à la ligne 168 du fichier Snake\&.cpp\&.
 .SS "\fBvoid\fP Snake::Play (\fBvoid\fP)"
 
 .SS "\fBvoid\fP Snake::restart (\fBvoid\fP)\fC [virtual]\fP"
@@ -66,7 +83,11 @@ Définition à la ligne 160 du fichier Snake\&.cpp\&.
 .PP
 Implémente \fBAGame\fP\&.
 .PP
-Définition à la ligne 169 du fichier Snake\&.cpp\&.
+Définition à la ligne 21 du fichier Snake\&.cpp\&.
+.SS "\fBvoid\fP Snake::whereAmI ()"
+
+.PP
+Définition à la ligne 188 du fichier Snake\&.cpp\&.
 
 .SH "Auteur"
 .PP 
