@@ -8,6 +8,9 @@
 
 # define WIDTH  50
 # define HEIGHT 30
+# define STEP	1
+
+enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN, NOTHING };
 
 class Ghost {
 public:
@@ -18,11 +21,14 @@ private:
     state           status;
     time_t          beginTime;
     std::map<double, GameComponent*> &mapObjs;
+    direction		dir;
+    bool			force_dir;
 public:
     Ghost (std::map<double, GameComponent*> &mapObjs, Vector2<double> pos,
         AComponent::ComponentColor color, const std::string sprite2D);
     virtual ~Ghost ();
     void            goTo(Vector2<double> pos);
+    void            goToRand(Vector2<double> pos);
     GameComponent   *getObj() const;
     state           getState() const;
     Vector2<double> getStartPos() const;
@@ -32,6 +38,11 @@ public:
     void            init();
 private:
     bool            check(Vector2<double> pos);
+    bool			tryMove();
+    bool			isInside();
+    bool			otherWay();
+    void            goToInv(Vector2<double> pos);
+    void			inverseDir();
 };
 
 #endif /* !GHOST_HPP */

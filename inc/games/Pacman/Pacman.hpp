@@ -17,7 +17,7 @@
 # define NB_PH  4
 # define STEP   1
 
-enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN, NOTHING };
+enum state { ON_GAME, ON_PAUSE, ON_START };
 
 class Pacman : public AGame {
 private:
@@ -25,6 +25,7 @@ private:
     std::vector<Ghost*>         ghosts;
     std::map<double, GameComponent*> mapObjs;
     direction                   dir;
+    enum state						play_state;
     const char                  map[HEIGHT + 1][WIDTH + 1] = {
         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "Xo.....................XXXX.....................oX",
@@ -67,6 +68,7 @@ public:
     void 							eat();
 private:
     bool                            check(Vector2<double> pos);
+    bool							is_empty();
 };
 
 extern "C" AGame *loadGame()
