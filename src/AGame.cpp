@@ -1,6 +1,7 @@
 #include "AGame.hpp"
 
-AGame::AGame(std::string const &name, Vector2<double> size) : name(name), size(size)
+AGame::AGame(std::string const &name) : state(ALIVE), name(name),
+    size(ArcadeSystem::winWidth, ArcadeSystem::winHeight)
 {
 
 }

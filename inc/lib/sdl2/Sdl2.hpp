@@ -14,7 +14,7 @@
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
 # include "UIAdvanceComponent.hpp"
-
+# include "HighScoreComponent.hpp"
 
 # define STEP 30
 
@@ -70,6 +70,7 @@ private:
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);
     void            displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect);
     void            displayBackground(const BackgroundComponent &background, SDL_Rect *rect);
+    void            displayHighScore(UIComponent const * const *uiComponents);
     void			fill_audio(void *udata, Uint8 *stream, int len);
 
 };

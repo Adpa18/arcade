@@ -33,7 +33,10 @@ void    OpenGL::initOpenGL(const std::string &name, Vector2<double> size)
     this->size = size;
     if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
     SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL)))
-    throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
+        throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
+    if (!(this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP))) {
+        this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans.ttf", STEP);
+    }
     this->gl = SDL_GL_CreateContext(this->win);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
@@ -133,10 +136,13 @@ void    OpenGL::drawCube(Vector2<double> pos, Vector2<double> size, Vector2<doub
 
 void OpenGL::display(std::stack<AComponent*> components)
 {
-    AComponent      *obj;
-    GameComponent   *Gobj;
-    UIComponent     *Uobj;
-    BackgroundComponent   *Bobj;
+    SDL_Rect            rect;
+    AComponent          *obj;
+    GameComponent       *Gobj;
+    UIComponent         *Uobj;
+    UIAdvanceComponent  *UAobj;
+    BackgroundComponent *Bobj;
+    HighScoreComponent  *Hobj;
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     if (this->is_init == false)
@@ -152,10 +158,16 @@ void OpenGL::display(std::stack<AComponent*> components)
     while (!components.empty()) {
         obj = components.top();
         components.pop();
+        rect.x = obj->getPos().x * STEP;
+        rect.y = obj->getPos().y * STEP;
         if ((Gobj = dynamic_cast<GameComponent*>(obj))) {
             this->displayGame(*Gobj);
         } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
-            this->displayUI(*Uobj);
+            this->displayUI(*Uobj, &rect);
+        } else if ((UAobj = dynamic_cast<UIAdvanceComponent*>(obj))) {
+            this->displayAdvanceUI(*UAobj, &rect);
+        } else if ((Hobj = dynamic_cast<HighScoreComponent*>(obj))) {
+            this->displayHighScore(Hobj->getComponentsToDisplay());
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
             this->displayBackground(*Bobj);
         } else {
@@ -163,6 +175,66 @@ void OpenGL::display(std::stack<AComponent*> components)
         }
     }
     SDL_GL_SwapWindow(this->win);
+}
+
+void    OpenGL::displayHighScore(UIComponent const * const *uiComponents)
+{
+    SDL_Rect    rect;
+
+    for (size_t i = 0; i < HighScoreComponent::componentNb && uiComponents[i] != NULL; i++) {
+        rect.x = uiComponents[i]->getPos().x * STEP;
+        rect.y = uiComponents[i]->getPos().y * STEP + 3 * STEP;
+        displayUI(*uiComponents[i], &rect);
+    }
+}
+
+void    OpenGL::displayUI(const UIComponent &ui, SDL_Rect *rect)
+{
+    unsigned int    colorInt;
+    SDL_Color       color;
+    SDL_Surface     *surface;
+
+    // glPushMatrix();
+    // glLoadIdentity();
+    colorInt = this->colors[ui.getColor()];
+    color.r = ((colorInt) & 255);
+    color.g = ((colorInt >> 8) & 255);
+    color.b = ((colorInt >> 16) & 255);
+    color.a = ((colorInt >> 24) & 255);
+    if (!this->fonts["default"]) {
+        return;
+    }
+    surface = TTF_RenderText_Blended(this->fonts["default"], ui.getText().c_str(), color);
+    this->loadSurface(surface);
+    glBegin(GL_QUADS);
+    glTexCoord2f(0,0); glVertex2f(rect->x, rect->y);
+    glTexCoord2f(1,0); glVertex2f(rect->x + surface->w, rect->y);
+    glTexCoord2f(1,1); glVertex2f(rect->x + surface->w, rect->y + surface->h);
+    glTexCoord2f(0,1); glVertex2f(rect->x, rect->y + surface->h);
+    glEnd();
+    SDL_FreeSurface(surface);
+    // glPopMatrix();
+}
+
+void    OpenGL::displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect)
+{
+    std::string     fontName;
+    unsigned int    colorInt;
+    SDL_Color       color;
+    SDL_Surface     *surface;
+
+    colorInt = this->colors[ui.getColor()];
+    color.r = ((colorInt) & 255);
+    color.g = ((colorInt >> 8) & 255);
+    color.b = ((colorInt >> 16) & 255);
+    color.a = ((colorInt >> 24) & 255);
+    fontName = ui.getFontName();
+    if (this->fonts[fontName] == 0) {
+        this->fonts[fontName] = TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(), ui.getFontSize());
+    }
+    surface = TTF_RenderText_Blended(fonts[fontName], ui.getText().c_str(), color);
+    this->loadSurface(surface);
+    SDL_FreeSurface(surface);
 }
 
 void    OpenGL::displayGame(const GameComponent &game)
@@ -188,36 +260,6 @@ void    OpenGL::displayBackground(const BackgroundComponent &background)
     glPopMatrix();
 }
 
-void    OpenGL::displayUI(const UIComponent &ui)
-{
-    // std::string     fontName;
-    // unsigned int    colorInt;
-    // SDL_Color       color;
-    // SDLsurface     *surface;
-    // SDL_Texture     *texture;
-    //
-    // colorInt = this->colors[ui.getColor()];
-    // color.r = ((colorInt) & 255);
-    // color.g = ((colorInt >> 8) & 255);
-    // color.b = ((colorInt >> 16) & 255);
-    // color.a = ((colorInt >> 24) & 255);
-    // fontName = ui.getFontName();
-    // if (this->fonts[fontName] == 0) {
-    //     this->fonts[fontName] = TTF_OpenFont(std::string("./assets/fonts/" + fontName + ".ttf").c_str(), ui.getFontSize());
-    // }
-    // surface = TTF_RenderText_Blended(fonts[fontName], ui.getText().c_str(), color);
-    // texture = SDL_CreateTextureFromSurface(this->render, surface);
-    // SDL_FreeSurface(surface);
-    // if (ui.getPos().x < 0 || ui.getPos().y < 0)
-    // {
-    //   rect->x = this->size.x * STEP / 2 - ui.getFontSize() * ui.getText().length() / 4;
-    //   rect->y = STEP;
-    // }
-    // SDL_QueryTexture(texture, NULL, NULL, &(rect->w), &(rect->h));
-    // SDL_RenderCopy(this->render, texture, NULL, rect);
-    // SDL_DestroyTexture(texture);
-}
-
 void sound()
 {
 
@@ -225,18 +267,26 @@ void sound()
 
 bool           OpenGL::loadTexture(const std::string &sprite2D)
 {
-    GLenum      format;
-
     if (sprite2D.empty()) {
         return (false);
     }
     if (this->tex[sprite2D] == 0) {
         this->tex[sprite2D] = IMG_Load(std::string("./assets/sprites2D/" + sprite2D).c_str());
     }
-    if (this->tex[sprite2D]->format->BytesPerPixel == 4) {
-        format = (this->tex[sprite2D]->format->Rmask == 0x000000ff) ? GL_RGBA : GL_BGRA;
-    } else if (this->tex[sprite2D]->format->BytesPerPixel == 3) {
-        format = (this->tex[sprite2D]->format->Rmask == 0x000000ff) ? GL_RGB : GL_BGR;
+    return (this->loadSurface(this->tex[sprite2D]));
+}
+
+bool           OpenGL::loadSurface(SDL_Surface *surface)
+{
+    GLenum      format;
+
+    if (!surface) {
+        return (false);
+    }
+    if (surface->format->BytesPerPixel == 4) {
+        format = (surface->format->Rmask == 0x000000ff) ? GL_RGBA : GL_BGRA;
+    } else if (surface->format->BytesPerPixel == 3) {
+        format = (surface->format->Rmask == 0x000000ff) ? GL_RGB : GL_BGR;
     } else {
         return (false);
     }
@@ -244,7 +294,7 @@ bool           OpenGL::loadTexture(const std::string &sprite2D)
     glBindTexture(GL_TEXTURE_2D, 0);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, this->tex[sprite2D]->format->BytesPerPixel,this->tex[sprite2D]->w,
-            this->tex[sprite2D]->h, 0, format, GL_UNSIGNED_BYTE, this->tex[sprite2D]->pixels);
+	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel,surface->w,
+            surface->h, 0, format, GL_UNSIGNED_BYTE, surface->pixels);
     return (true);
 }

@@ -10,11 +10,10 @@
 # include "AudioComponent.hpp"
 # include "HighScoreComponent.hpp"
 # include "Protocol.hpp"
+# include <string>
 
-# define WIDTH  50
-# define HEIGHT 30
 # define SIZE   3
-# define RANDOM_POS Vector2<double>(rand() % (WIDTH - 1) + 1, rand() % (HEIGHT - 1) + 1)
+# define RANDOM_POS Vector2<double>(rand() % (ArcadeSystem::winWidth - 1) + 1, rand() % (ArcadeSystem::winHeight - 1) + 1)
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
 
@@ -24,14 +23,16 @@ private:
     GameComponent               *target;
     BackgroundComponent         *background;
     std::vector<GameComponent*> walls;
-    HighScoreComponent          *score;
+    HighScoreComponent          *highScore;
+    UIComponent                 *scoreText;
     direction                   dir;
+    size_t                      score;
     // AudioComponent              *sound;
 public:
     Snake ();
     virtual ~Snake ();
     virtual std::stack<AComponent*> compute(int key);
-    virtual std::stack<AComponent*> getInfos(void);
+    virtual std::stack<AComponent*> getInfos(void) const;
     virtual void                    restart(void);
     void                            Play(void);
     void                            getMap();

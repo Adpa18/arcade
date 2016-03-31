@@ -30,6 +30,9 @@ void    Sdl2::initSDL2(const std::string &name, Vector2<double> size)
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
     if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
+    if (!(this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP))) {
+        this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans.ttf", STEP);
+    }
 }
 
 void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
@@ -64,18 +67,21 @@ int Sdl2::eventManagment()
     SDL_PollEvent(&event);
     if (event.key.type != SDL_KEYDOWN)
         return (-1);
-    return (this->keyMap[event.key.keysym.scancode]);
+    if (this->keyMap[event.key.keysym.scancode])
+        return (this->keyMap[event.key.keysym.scancode]);
+    return (event.key.keysym.sym);
 }
 
 void Sdl2::display(std::stack<AComponent*> components)
 {
-    SDL_Rect              rect;
-    AComponent            *obj;
-    GameComponent         *Gobj;
-    UIComponent           *Uobj;
-    UIAdvanceComponent    *UAobj;
-    BackgroundComponent   *Bobj;
-    unsigned int    colorInt;
+    SDL_Rect            rect;
+    AComponent          *obj;
+    GameComponent       *Gobj;
+    UIComponent         *Uobj;
+    UIAdvanceComponent  *UAobj;
+    BackgroundComponent *Bobj;
+    HighScoreComponent  *Hobj;
+    unsigned int        colorInt;
 
     if (is_init == false) {
         init("SDL2", Vector2<double>(50, 30));
@@ -92,17 +98,13 @@ void Sdl2::display(std::stack<AComponent*> components)
             rect.h = Gobj->getDim().y * STEP;
             this->displayGame(*Gobj, &rect);
         } else if ((UAobj = dynamic_cast<UIAdvanceComponent*>(obj))) {
-            rect.w = UAobj->getDim().x * STEP;
-            rect.h = UAobj->getDim().y * STEP;
             this->displayAdvanceUI(*UAobj, &rect);
         } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
-            rect.w = Uobj->getDim().x * STEP;
-            rect.h = Uobj->getDim().y * STEP;
             this->displayUI(*Uobj, &rect);
         } else if ((Bobj = dynamic_cast<BackgroundComponent*>(obj))) {
-            rect.w = Bobj->getDim().x * STEP;
-            rect.h = Bobj->getDim().y * STEP;
             this->displayBackground(*Bobj, &rect);
+        } else if ((Hobj = dynamic_cast<HighScoreComponent*>(obj))) {
+            this->displayHighScore(Hobj->getComponentsToDisplay());
         } else {
             rect.w = STEP;
             rect.h = STEP;
@@ -144,6 +146,17 @@ void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect 
     }
 }
 
+void    Sdl2::displayHighScore(UIComponent const * const *uiComponents)
+{
+    SDL_Rect    rect;
+
+    for (size_t i = 0; i < HighScoreComponent::componentNb && uiComponents[i] != NULL; i++) {
+        rect.x = uiComponents[i]->getPos().x * STEP;
+        rect.y = uiComponents[i]->getPos().y * STEP + 3 * STEP;
+        displayUI(*uiComponents[i], &rect);
+    }
+}
+
 void    Sdl2::displayUI(const UIComponent &ui, SDL_Rect *rect)
 {
     unsigned int    colorInt;
@@ -156,10 +169,10 @@ void    Sdl2::displayUI(const UIComponent &ui, SDL_Rect *rect)
     color.g = ((colorInt >> 8) & 255);
     color.b = ((colorInt >> 16) & 255);
     color.a = ((colorInt >> 24) & 255);
-    if (this->fonts["default"] == 0) {
-        this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP);
+    if (!this->fonts["default"]) {
+        return;
     }
-    surface = TTF_RenderText_Blended(fonts["default"], ui.getText().c_str(), color);
+    surface = TTF_RenderText_Blended(this->fonts["default"], ui.getText().c_str(), color);
     texture = SDL_CreateTextureFromSurface(this->render, surface);
     SDL_FreeSurface(surface);
     if (ui.getPos().x < 0 || ui.getPos().y < 0)

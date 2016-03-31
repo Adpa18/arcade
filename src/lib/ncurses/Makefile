@@ -3,11 +3,13 @@ BASE		=   ../../../
 SRC			=	Ncurses.cpp	\
 				Window.cpp	\
 
-DEP_SRC		=	$(BASE)src/AComponent.cpp		\
-						$(BASE)src/GameComponent.cpp	\
-						$(BASE)src/UIComponent.cpp	\
+DEP_SRC		=	$(BASE)src/AComponent.cpp					\
+						$(BASE)src/GameComponent.cpp		\
+						$(BASE)src/UIComponent.cpp			\
 						$(BASE)src/AudioComponent.cpp		\
-						$(BASE)src/UIAdvanceComponent.cpp		\
+						$(BASE)src/UIAdvanceComponent.cpp	\
+						$(BASE)src/HighScoreComponent.cpp 	\
+						$(BASE)src/LoadHighScore.cpp	 	\
 
 CC			=	g++ -std=gnu++11
 

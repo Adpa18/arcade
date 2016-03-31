@@ -14,8 +14,6 @@
 # include <map>
 # include <cmath>
 
-# define WIDTH  50
-# define HEIGHT 30
 # define NB_PH  4
 # define STEP   1
 
@@ -62,7 +60,7 @@ public:
     Pacman ();
     virtual ~Pacman ();
     virtual std::stack<AComponent*> compute(int);
-    virtual std::stack<AComponent*>	getInfos();
+    virtual std::stack<AComponent*>	getInfos() const;
     virtual void			        restart();
     void 							changeDirection(int key);
     void 							move();

@@ -1,6 +1,7 @@
 #ifndef GHOST_HPP
 #define GHOST_HPP
 
+# include "ArcadeSystem.hpp"
 # include "GameComponent.hpp"
 # include <chrono>
 # include <map>

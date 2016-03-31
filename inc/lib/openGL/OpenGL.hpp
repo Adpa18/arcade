@@ -16,12 +16,15 @@
 # include "UIComponent.hpp"
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
+# include "UIAdvanceComponent.hpp"
+# include "HighScoreComponent.hpp"
 
 # define STEP 30
 
 class OpenGL : public IGraph {
 private:
     SDL_Window      *win;
+    SDL_Renderer    *render;
     SDL_GLContext   gl;
     std::map<std::string, TTF_Font*> fonts;
     std::map<int, int>    keyMap = {
@@ -70,10 +73,13 @@ private:
     void            initOpenGL(const std::string &name, Vector2<double> size);
     void            drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot, const std::string &texName);
     void            displayGame(const GameComponent &game);
-    void            displayUI(const UIComponent &ui);
+    void            displayUI(const UIComponent &ui, SDL_Rect *rect);
+    void            displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect);
+    void            displayHighScore(UIComponent const * const *uiComponents);
     void            displayBackground(const BackgroundComponent &background);
     void			fill_audio(void *udata, Uint8 *stream, int len);
     bool            loadTexture(const std::string &filename);
+    bool            loadSurface(SDL_Surface *surface);
 
 };
 

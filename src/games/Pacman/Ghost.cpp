@@ -22,7 +22,7 @@ void    Ghost::init()
 
 bool    Ghost::check(Vector2<double> pos)
 {
-    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pos.y * WIDTH + pos.x);
+    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pos.y * ArcadeSystem::winWidth + pos.x);
 
     if (it != mapObjs.end() && it->second->getSpriteText() == "X")
         return (false);

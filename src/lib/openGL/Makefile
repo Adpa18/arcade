@@ -2,11 +2,13 @@ BASE		=   ../../../
 
 SRC			=	OpenGL.cpp	\
 
-DEP_SRC		=	$(BASE)src/AComponent.cpp		\
-						$(BASE)src/GameComponent.cpp	\
+DEP_SRC		=	$(BASE)src/AComponent.cpp					\
+						$(BASE)src/GameComponent.cpp		\
 						$(BASE)src/BackgroundComponent.cpp	\
-						$(BASE)src/UIComponent.cpp		\
-						$(BASE)src/UIAdvanceComponent.cpp		\
+						$(BASE)src/UIComponent.cpp			\
+						$(BASE)src/UIAdvanceComponent.cpp	\
+						$(BASE)src/HighScoreComponent.cpp 	\
+						$(BASE)src/LoadHighScore.cpp	 	\
 
 CC			=	g++ -std=gnu++11
 

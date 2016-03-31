@@ -1,6 +1,6 @@
 #include "Pacman.hpp"
 
-Pacman::Pacman() : AGame("Pacman", Vector2<double>(WIDTH, HEIGHT))
+Pacman::Pacman() : AGame("Pacman")
 {
     std::string                 sprite2D;
     AComponent::ComponentColor  color;
@@ -10,8 +10,8 @@ Pacman::Pacman() : AGame("Pacman", Vector2<double>(WIDTH, HEIGHT))
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 14), AComponent::CYAN, "ghost_cyan.gif"));
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 15), AComponent::GREEN, "ghost_orange.gif"));
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 16), AComponent::MAGENTA, "ghost_pink.gif"));
-    for (size_t y = 0; y < HEIGHT; y++) {
-        for (size_t x = 0; x < WIDTH; x++) {
+    for (size_t y = 0; y < ArcadeSystem::winHeight; y++) {
+        for (size_t x = 0; x < ArcadeSystem::winWidth; x++) {
             if (map[y][x] == 'X') {
                 sprite2D = "wall.jpg";
                 color = AComponent::BLUE;
@@ -25,7 +25,7 @@ Pacman::Pacman() : AGame("Pacman", Vector2<double>(WIDTH, HEIGHT))
                 sprite2D = "";
                 color = AComponent::BLACK;
             }
-            mapObjs[y * WIDTH + x] = new GameComponent(Vector2<double>(x, y), Vector2<double>(1, 1), color, map[y][x], sprite2D, GameComponent::CUBE_LARGE);
+            mapObjs[y * ArcadeSystem::winWidth + x] = new GameComponent(Vector2<double>(x, y), Vector2<double>(1, 1), color, map[y][x], sprite2D, GameComponent::CUBE_LARGE);
         }
     }
     this->restart();
@@ -36,7 +36,7 @@ Pacman::~Pacman()
 
 bool                        Pacman::check(Vector2<double> pos)
 {
-    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pos.y * WIDTH + pos.x);
+    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pos.y * ArcadeSystem::winWidth + pos.x);
 
     if (it != mapObjs.end() && it->second->getSpriteText() == "X")
         return (false);
@@ -70,11 +70,11 @@ void 		             Pacman::changeDirection(int key)
         case DIR_LEFT:
             pacmanPos.x -= STEP;
             if (pacmanPos.x <= 0)
-                pacmanPos.x = WIDTH - 1;
+                pacmanPos.x = ArcadeSystem::winWidth - 1;
             break;
         case DIR_RIGHT:
             pacmanPos.x += STEP;
-            if (pacmanPos.x >= WIDTH)
+            if (pacmanPos.x >= ArcadeSystem::winWidth)
                 pacmanPos.x = 0;
             break;
         case DIR_UP:
@@ -103,11 +103,11 @@ void                Pacman::move()
         case DIR_LEFT:
             pacmanPos.x -= STEP;
             if (pacmanPos.x <= 0)
-                pacmanPos.x = WIDTH - 1;
+                pacmanPos.x = ArcadeSystem::winWidth - 1;
             break;
         case DIR_RIGHT:
             pacmanPos.x += STEP;
-            if (pacmanPos.x >= WIDTH)
+            if (pacmanPos.x >= ArcadeSystem::winWidth)
                 pacmanPos.x = 0;
             break;
         case DIR_UP:
@@ -127,7 +127,7 @@ void                Pacman::move()
 void                Pacman::eat()
 {
     Vector2<double>         pacmanPos = this->pacman->getPos();
-    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pacmanPos.y * WIDTH + pacmanPos.x);
+    std::map<double, GameComponent*>::iterator  it = mapObjs.find(pacmanPos.y * ArcadeSystem::winWidth + pacmanPos.x);
 
     if (it != mapObjs.end())
         mapObjs.erase(it);
@@ -151,7 +151,7 @@ std::stack<AComponent*>     Pacman::compute(int key)
     return (components);
 }
 
-std::stack<AComponent*>     Pacman::getInfos()
+std::stack<AComponent*>     Pacman::getInfos() const
 {
     std::stack<AComponent*> components;
 
@@ -160,7 +160,7 @@ std::stack<AComponent*>     Pacman::getInfos()
     components.push(this->ghosts[1]->getObj());
     components.push(this->ghosts[2]->getObj());
     components.push(this->ghosts[3]->getObj());
-    for (std::map<double, GameComponent*>::iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
+    for (std::map<double, GameComponent*>::const_iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
         components.push(it->second);
     }
     return (components);
