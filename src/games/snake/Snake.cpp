@@ -163,15 +163,15 @@ std::stack<AComponent*>     Snake::compute(int key)
         }
     }
     components.push(this->scoreText);
-    // components.push(this->target);
-    // for (size_t i = 0; i < this->snake.size(); i++) {
-    //     this->snake[i]->setSprite2D(this->getImg(i));
-    //     components.push(this->snake[i]);
-    // }
-    // for (size_t i = 0; i < this->walls.size(); i++) {
-    //     components.push(this->walls[i]);
-    // }
-    // components.push(this->background);
+    components.push(this->target);
+    for (size_t i = 0; i < this->snake.size(); i++) {
+        this->snake[i]->setSprite2D(this->getImg(i));
+        components.push(this->snake[i]);
+    }
+    for (size_t i = 0; i < this->walls.size(); i++) {
+        components.push(this->walls[i]);
+    }
+    components.push(this->background);
     return (components);
 }
 
