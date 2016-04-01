@@ -14,11 +14,12 @@
 
 class Ncurses : public IGraph {
 private:
-  Vector2<double> size;
-  bool						is_init;
-  bool						is_destroy;
-  bool				    valid_size;
+  Vector2<double>   size;
+  bool              valid_size;
   ncurses::Window	*wind;
+  std::map<AComponent*, WINDOW*> texts;
+  std::stack<Vector2<double>>	old_component;
+
   std::map<int, int>    keyMap = {
       {27, ArcadeSystem::Exit},
       {KEY_UP, ArcadeSystem::ArrowUp}, {KEY_DOWN, ArcadeSystem::ArrowDown}, {KEY_LEFT, ArcadeSystem::ArrowLeft}, {KEY_RIGHT, ArcadeSystem::ArrowRight},
@@ -26,36 +27,25 @@ private:
       {52, ArcadeSystem::NextGame}, {53, ArcadeSystem::NextGame},
       {56, ArcadeSystem::Restart}, {57, ArcadeSystem::Home}
   };
-  std::map<AComponent *, WINDOW *> texts;
 
-  bool 						invalidSize(Vector2<double> const &size, Vector2<double> const &pos);
-  void						initMainWindow();
-  int							resizeTerm();
-  void            initc(Vector2<double> s);
-  std::stack<Vector2<double>>	old_component;
+
+  bool 	        invalidSize(Vector2<double> const &size, Vector2<double> const &pos);
+  void			initMainWindow();
+  int			resizeTerm();
 public:
   Ncurses (void);
   virtual ~Ncurses ();
 
   virtual int eventManagment();
-  virtual void display(std::stack<AComponent*>);
-  virtual void init(const std::string &name, Vector2<double> s, std::stack<AComponent*> cache);
-  virtual void    destroy();
+  virtual void  display(std::stack<AComponent*>);
+  virtual void  init(const std::string &name);
+  virtual void  init(const std::string &name, std::stack<AComponent*> cache);
+  virtual void  setTitle(const std::string &title){(void)title;}
 };
 
 extern "C" IGraph *loadLib()
 {
   return (new Ncurses());
-}
-
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<double> size, std::stack<AComponent *> cache)
-{
-  static_cast<Ncurses *>(graph)->init(name, size, cache);
-}
-
-extern "C" void destroyLib(IGraph *graph)
-{
-  static_cast<Ncurses *>(graph)->destroy();
 }
 
 

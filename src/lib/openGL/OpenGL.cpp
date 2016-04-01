@@ -1,33 +1,20 @@
 #include <iostream>
 #include "OpenGL.hpp"
 
-OpenGL::OpenGL (void) : size(0, 0)
+OpenGL::OpenGL (void) : size(ArcadeSystem::winWidth, ArcadeSystem::winHeight)
 {
-    if (SDL_Init(SDL_INIT_VIDEO) != 0)
-    throw std::runtime_error(std::string("Can't init SDL") + SDL_GetError());
-    if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1)
-    throw std::runtime_error(std::string("Can't init IMG") + SDL_GetError());
-    if (TTF_Init() == -1)
-    throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
-    this->is_init = false;
-    this->is_destroy = false;
-}
-
-OpenGL::~OpenGL ()
-{
-    if (is_destroy == false)
-      this->destroy();
-    TTF_Quit();
-    SDL_Quit();
-}
-
-void    OpenGL::initOpenGL(const std::string &name, Vector2<double> size)
-{
-    this->is_init = true;
-    this->size = size;
-    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
-    SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL)))
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+        throw std::runtime_error(std::string("Can't init SDL") + SDL_GetError());
+    }
+    if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1) {
+        throw std::runtime_error(std::string("Can't init IMG") + SDL_GetError());
+    }
+    if (TTF_Init() == -1) {
+        throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
+    }
+    if (!(this->win = SDL_CreateWindow("OpenGL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL))) {
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
+    }
     if (!(this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP))) {
         this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans.ttf", STEP);
     }
@@ -47,20 +34,8 @@ void    OpenGL::initOpenGL(const std::string &name, Vector2<double> size)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void  OpenGL::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
+OpenGL::~OpenGL ()
 {
-    this->initOpenGL(name, size);
-    this->display(cache);
-}
-
-void  OpenGL::init(const std::string &name, Vector2<double> size)
-{
-    this->initOpenGL(name, size);
-}
-
-void    OpenGL::destroy()
-{
-    is_destroy = true;
     for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
         TTF_CloseFont(it->second);
     }
@@ -71,6 +46,24 @@ void    OpenGL::destroy()
     tex.clear();
     SDL_GL_DeleteContext(this->gl);
     SDL_DestroyWindow(this->win);
+    TTF_Quit();
+    SDL_Quit();
+}
+
+void  OpenGL::init(const std::string &name, std::stack<AComponent*> cache)
+{
+    this->setTitle(name);
+    this->display(cache);
+}
+
+void  OpenGL::init(const std::string &name)
+{
+    this->setTitle(name);
+}
+
+void    OpenGL::setTitle(const std::string &title)
+{
+    SDL_SetWindowTitle(this->win, title.c_str());
 }
 
 int OpenGL::eventManagment()
@@ -153,8 +146,6 @@ void OpenGL::display(std::stack<AComponent*> components)
     HighScoreComponent  *Hobj;
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    if (this->is_init == false)
-      init("OpenGl", Vector2<double>(50, 30));
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(30, 0, 10, 0, 0, 0, 0, 0, 1);

@@ -24,20 +24,18 @@ namespace arcade {
   class Arcade {
   private:
     typedef void  *(*fptr)();
-    typedef void  *(*f_init)(IGraph *, const std::string &, Vector2<double>, std::stack<AComponent*>);
-    typedef void  *(*f_destroy)(IGraph *);
-    std::vector<std::pair<fptr, bool>>  		graphs;
-    std::vector<AGame *>                    games;
-    std::stack<void *>                      libs;
-    std::vector<std::string>                graphsNames;
-    std::vector<std::string>                gamesNames;
+    std::vector<fptr>           graphs;
+    std::vector<fptr>           games;
+    std::stack<void *>          libs;
+    std::vector<std::string>    graphsNames;
+    std::vector<std::string>    gamesNames;
   public:
     Arcade ();
     virtual ~Arcade ();
-    bool    run(const std::string &graph);
-    void		initSo(std::string const &, SOTYPE);
+    bool    run(const std::string &graphPath);
+    void	initSo(std::string const &, SOTYPE);
     void    refresh_lib(std::string const &folder, SOTYPE);
-    void		clean();
+    void	clean();
   };
 }
 

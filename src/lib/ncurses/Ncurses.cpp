@@ -5,15 +5,52 @@ using namespace ncurses;
 
 Ncurses::Ncurses (void) : size(ArcadeSystem::winWidth, ArcadeSystem::winHeight)
 {
-  this->is_init = false;
-  this->is_destroy = false;
   this->valid_size = false;
+  initscr();
+  cbreak();
+  keypad(stdscr, true);
+  start_color();
+  curs_set(0);
+  noecho();
+  // halfdelay(1);
+  timeout(1);
+  init_pair(1, COLOR_BLACK, COLOR_BLACK);
+  init_pair(2, COLOR_RED, COLOR_BLACK);
+  init_pair(3, COLOR_GREEN, COLOR_BLACK);
+  init_pair(4, COLOR_YELLOW, COLOR_BLACK);
+  init_pair(5, COLOR_BLUE, COLOR_BLACK);
+  init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
+  init_pair(7, COLOR_CYAN, COLOR_BLACK);
+  init_pair(8, COLOR_WHITE, COLOR_BLACK);
+  init_pair(9, COLOR_WHITE, -1);
+  refresh();
+  Vector2<double> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
+  this->wind = NULL;
+  if (this->invalidSize(size, pos) == false)
+  {
+      this->wind = new Window(size, pos, NULL);
+      // this->main_wind = new Window(size_main, pos_main, NULL);
+      keypad(this->wind->getWind(), true);
+      this->initMainWindow();
+  }
+  else
+    this->wind = NULL;
 }
 
 Ncurses::~Ncurses ()
 {
-  if (this->is_destroy == false)
-    this->destroy();
+    endwin();
+}
+
+void  Ncurses::init(const std::string &name)
+{
+    (void)name;
+}
+
+void  Ncurses::init(const std::string &name, std::stack<AComponent*> cache)
+{
+    (void)name;
+    this->display(cache);
 }
 
 void	Ncurses::initMainWindow()
@@ -78,8 +115,6 @@ int Ncurses::eventManagment()
 {
     int key;
 
-    if (is_init == false)
-      this->initc(Vector2<double>(50, 30));
     key = getch();
     if (key == KEY_RESIZE)
         return (this->resizeTerm());
@@ -155,81 +190,3 @@ void Ncurses::display(std::stack<AComponent*> components)
     }
     wrefresh(this->wind->getWind());
 }
-
-void  Ncurses::init(const std::string &name, Vector2<double> s, std::stack<AComponent*> cache)
-{
-    (void)name;
-    this->is_init = true;
-    this->size = s;
-    initscr();
-    cbreak();
-    keypad(stdscr, true);
-    start_color();
-    curs_set(0);
-    noecho();
-    // halfdelay(1);
-    timeout(1);
-    init_pair(1, COLOR_BLACK, COLOR_BLACK);
-    init_pair(2, COLOR_RED, COLOR_BLACK);
-    init_pair(3, COLOR_GREEN, COLOR_BLACK);
-    init_pair(4, COLOR_YELLOW, COLOR_BLACK);
-    init_pair(5, COLOR_BLUE, COLOR_BLACK);
-    init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
-    init_pair(7, COLOR_CYAN, COLOR_BLACK);
-    init_pair(8, COLOR_WHITE, COLOR_BLACK);
-    init_pair(9, COLOR_WHITE, -1);
-    refresh();
-    Vector2<double> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
-    this->wind = NULL;
-    if (this->invalidSize(size, pos) == false)
-    {
-        this->wind = new Window(size, pos, NULL);
-        // this->main_wind = new Window(size_main, pos_main, NULL);
-        keypad(this->wind->getWind(), true);
-        this->initMainWindow();
-    }
-    else
-      this->wind = NULL;
-    this->display(cache);
-}
-
-void  Ncurses::initc(Vector2<double> s)
-{
-    this->size = s;
-    this->is_init = true;
-    initscr();
-    cbreak();
-    keypad(stdscr, true);
-    start_color();
-    curs_set(0);
-    noecho();
-    // halfdelay(1);
-    timeout(1);
-    init_pair(1, COLOR_BLACK, COLOR_BLACK);
-    init_pair(2, COLOR_RED, COLOR_BLACK);
-    init_pair(3, COLOR_GREEN, COLOR_BLACK);
-    init_pair(4, COLOR_YELLOW, COLOR_BLACK);
-    init_pair(5, COLOR_BLUE, COLOR_BLACK);
-    init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
-    init_pair(7, COLOR_CYAN, COLOR_BLACK);
-    init_pair(8, COLOR_WHITE, COLOR_BLACK);
-    init_pair(9, COLOR_WHITE, -1);
-    refresh();
-    this->wind = NULL;
-    Vector2<double> pos(COLS / 2 - (size.x / 2), LINES / 2 - (size.y / 2));
-    if (this->invalidSize(size, pos) == false)
-    {
-        this->wind = new Window(size, pos, NULL);
-        // this->main_wind = new Window(size_main, pos_main, NULL);
-        keypad(this->wind->getWind(), true);
-        this->initMainWindow();
-    }
-    else
-      this->wind = NULL;
-}
-
-void    Ncurses::destroy()
- {
-    this->is_destroy = true;
-    endwin();
- }

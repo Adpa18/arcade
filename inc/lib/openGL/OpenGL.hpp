@@ -25,7 +25,13 @@ class OpenGL : public IGraph {
 private:
     SDL_Window      *win;
     SDL_GLContext   gl;
+    Vector2<double> size;
+    std::string     background;
+    // bool			is_init;
+    // bool			is_destroy;
+    unsigned int    texture;
     std::map<std::string, TTF_Font*> fonts;
+
     std::map<int, int>    keyMap = {
         {SDL_SCANCODE_ESCAPE, ArcadeSystem::Exit},
         {SDL_SCANCODE_UP, ArcadeSystem::ArrowUp},
@@ -53,24 +59,18 @@ private:
         {AComponent::WHITE, 0xFFFFFF}
     };
     std::map<std::string, SDL_Surface *> tex;
-
-    Vector2<double>         size;
-    std::string     background;
-    bool			is_init;
-    bool			is_destroy;
-    unsigned int    texture;
 public:
     OpenGL (void);
     virtual ~OpenGL ();
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    virtual void    init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache);
-    virtual void    init(const std::string &name, Vector2<double> size);
-    virtual void    destroy();
+    virtual void    init(const std::string &name, std::stack<AComponent*> cache);
+    virtual void    init(const std::string &name);
+    virtual void    setTitle(const std::string &title);
 
 private:
-    void            initOpenGL(const std::string &name, Vector2<double> size);
+    // void            initOpenGL(const std::string &name, Vector2<double> size);
     void            drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot, const std::string &texName);
     void            displayGame(const GameComponent &game);
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);
@@ -87,16 +87,5 @@ extern "C" IGraph *loadLib()
 {
     return (new OpenGL());
 }
-
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<double> size, std::stack<AComponent *> cache)
-{
-  static_cast<OpenGL *>(graph)->init(name, size, cache);
-}
-
-extern "C" void destroyLib(IGraph *graph)
-{
-  static_cast<OpenGL *>(graph)->destroy();
-}
-
 
 #endif /* !OpenGL_HPP_ */

@@ -1,54 +1,30 @@
 #include <iostream>
 #include "Sdl2.hpp"
 
-Sdl2::Sdl2 (void) : size(0, 0)
+Sdl2::Sdl2 (void) : size(ArcadeSystem::winWidth, ArcadeSystem::winHeight)
 {
-    if (SDL_Init(SDL_INIT_VIDEO) != 0)
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         throw std::runtime_error(std::string("Can't init SDL") + SDL_GetError());
-    if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1)
+    }
+    if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) == -1) {
         throw std::runtime_error(std::string("Can't init IMG") + SDL_GetError());
-    if (TTF_Init() == -1)
+    }
+    if (TTF_Init() == -1) {
         throw std::runtime_error(std::string("Can't init TTF") + SDL_GetError());
-    this->is_destroy = false;
-    this->is_init = false;
-}
-
-Sdl2::~Sdl2 ()
-{
-    if (is_destroy == false)
-      this->destroy();
-    TTF_Quit();
-    SDL_Quit();
-}
-
-void    Sdl2::initSDL2(const std::string &name, Vector2<double> size)
-{
-    this->is_init = true;
-    this->size = size;
-    if (!(this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_SHOWN)))
+    }
+    if (!(this->win = SDL_CreateWindow("SDL2", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, size.x * STEP, size.y * STEP, SDL_WINDOW_OPENGL))) {
         throw std::runtime_error(std::string("Can't create Window") + SDL_GetError());
-    if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED)))
+    }
+    if (!(this->render = SDL_CreateRenderer(this->win, -1, SDL_RENDERER_ACCELERATED))) {
         throw std::runtime_error(std::string("Can't render Window") + SDL_GetError());
+    }
     if (!(this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/truetype/DejaVuSans.ttf", STEP))) {
         this->fonts["default"] = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans.ttf", STEP);
     }
 }
 
-void  Sdl2::init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache)
+Sdl2::~Sdl2 ()
 {
-    this->initSDL2(name, size);
-    this->display(cache);
-}
-
-void  Sdl2::init(const std::string &name, Vector2<double> size)
-{
-    this->initSDL2(name, size);
-}
-
-void    Sdl2::destroy()
-{
-    is_destroy = true;
     for (std::map<std::string, TTF_Font*>::iterator it = this->fonts.begin(); it != this->fonts.end(); ++it) {
         TTF_CloseFont(it->second);
     }
@@ -59,11 +35,31 @@ void    Sdl2::destroy()
     tex.clear();
     SDL_DestroyRenderer(this->render);
     SDL_DestroyWindow(this->win);
+    TTF_Quit();
+    SDL_Quit();
 }
+
+void  Sdl2::init(const std::string &name, std::stack<AComponent*> cache)
+{
+    this->setTitle(name);
+    this->display(cache);
+}
+
+void  Sdl2::init(const std::string &name)
+{
+    this->setTitle(name);
+}
+
+void    Sdl2::setTitle(const std::string &title)
+{
+    SDL_SetWindowTitle(this->win, title.c_str());
+}
+
 
 int Sdl2::eventManagment()
 {
     SDL_Event event;
+
     SDL_PollEvent(&event);
     if (event.key.type != SDL_KEYDOWN)
         return (-1);
@@ -83,9 +79,6 @@ void Sdl2::display(std::stack<AComponent*> components)
     HighScoreComponent  *Hobj;
     unsigned int        colorInt;
 
-    if (is_init == false) {
-        init("SDL2", Vector2<double>(50, 30));
-    }
     SDL_SetRenderDrawColor(this->render, 0, 0, 0, 0);
     SDL_RenderClear(this->render);
     while (!components.empty()) {

@@ -22,6 +22,9 @@ class Sdl2 : public IGraph {
 private:
     SDL_Window      *win;
     SDL_Renderer    *render;
+    Vector2<double> size;
+    std::string     background;
+
     std::map<std::string, TTF_Font*> fonts;
     std::map<std::string, SDL_Texture*> tex;
     std::map<int, int>    keyMap = {
@@ -50,22 +53,17 @@ private:
         {AComponent::CYAN, 0x00FFFF},
         {AComponent::WHITE, 0xFFFFFF}
     };
-    Vector2<double>         size;
-    std::string     background;
-    bool						is_init;
-    bool						is_destroy;
 public:
     Sdl2 (void);
     virtual ~Sdl2 ();
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    virtual void    init(const std::string &name, Vector2<double> size, std::stack<AComponent*> cache);
-    virtual void    init(const std::string &name, Vector2<double> size);
-    virtual void    destroy();
+    virtual void    init(const std::string &name);
+    virtual void    init(const std::string &name, std::stack<AComponent*> cache);
+    virtual void    setTitle(const std::string &title);
 
 private:
-    void            initSDL2(const std::string &name, Vector2<double> size);
     void            displayGame(const GameComponent &game, SDL_Rect *rect);
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);
     void            displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect);
@@ -78,16 +76,6 @@ private:
 extern "C" IGraph *loadLib()
 {
     return (new Sdl2());
-}
-
-extern "C" void initLib(IGraph *graph, const std::string &name, Vector2<double> size, std::stack<AComponent *> cache)
-{
-  static_cast<Sdl2 *>(graph)->init(name, size, cache);
-}
-
-extern "C" void destroyLib(IGraph *graph)
-{
-  static_cast<Sdl2 *>(graph)->destroy();
 }
 
 #endif /* !SDL2_HPP_ */
