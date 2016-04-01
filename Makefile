@@ -30,14 +30,14 @@ OBJ			=	$(SRC:%cpp=%o)
 
 $(NAME)	:	$(OBJ)
 	@$(CC) $(OBJ) -o $(NAME) $(LFLAGS)
-
-all		:	$(NAME)
 	@echo -e "\033[32mCompiling Arcade\033[00m"
 	@mkdir -p lib
 	@mkdir -p games
 	@make --no-print-directory -C $(SRC_DIR)lib
 	@make --no-print-directory -C $(SRC_DIR)games
 	@echo -e "\033[33mArcade Compiled\033[00m"
+
+all		:	$(NAME)
 
 clean	:
 	@echo -e "\033[31mRemoving Objects\033[00m"
