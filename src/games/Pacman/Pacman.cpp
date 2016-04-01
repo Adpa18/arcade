@@ -197,8 +197,7 @@ void				Pacman::restart()
                 sprite2D = "smallBall.png";
                 color = AComponent::GREEN;
             } else {
-                sprite2D = "";
-                color = AComponent::BLACK;
+                continue;
             }
             mapObjs[y * ArcadeSystem::winWidth + x] = new GameComponent(Vector2<double>(x, y), Vector2<double>(1, 1), color, map[y][x], sprite2D, GameComponent::CUBE_LARGE);
         }

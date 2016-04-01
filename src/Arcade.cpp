@@ -4,6 +4,12 @@ arcade::Arcade::Arcade()
 {
     this->refresh_lib("./lib/", GRAPH);
     this->refresh_lib("./games/", GAME);
+    this->_status = Menu;
+    this->graphPos = 0;
+    this->gamePos = 0;
+    this->graph = NULL;
+    this->game = NULL;
+    this->isPaused = false;
 }
 
 arcade::Arcade::~Arcade(){}
@@ -58,56 +64,87 @@ void	arcade::Arcade::initSo(std::string const &name, SOTYPE type)
     }
 }
 
+void    arcade::Arcade::changeGraph(int key)
+{
+    if (this->graph) {
+        delete (this->graph);
+    }
+    this->graphPos += (key == ArcadeSystem::PrevGraph) ? -1 : 1;
+    this->graphPos = (this->graphPos < 0) ? this->graphsNames.size() - 1 : this->graphPos % this->graphsNames.size();
+    this->graph = static_cast<IGraph *>(this->graphs[this->graphPos]());
+    this->graph->setTitle(this->game->getName());
+}
+
+void    arcade::Arcade::changeGame(int key)
+{
+    if (this->game) {
+        delete (this->game);
+    }
+    this->gamePos += (key == ArcadeSystem::PrevGame) ? -1 : 1;
+    this->gamePos = (this->gamePos < 0) ? this->gamesNames.size() - 1 : this->gamePos % this->gamesNames.size();
+    this->game = static_cast<IGame *>(this->games[this->gamePos]());
+    this->graph->setTitle(this->game->getName());
+}
+
+
 bool    arcade::Arcade::run(const std::string &graphPath)
 {
-    IGraph  *graph;
-    IGame   *game;
+    std::stack<AComponent*> components;
+    UIComponent *pauseUI;
+    UIComponent *gamesUI[this->gamesNames.size()];
     int     key;
-    int		graphPos;
-    int		gamePos;
 
     if ((graphPos = find(this->graphsNames.begin(), this->graphsNames.end(), graphPath.substr(graphPath.find_last_of('/') + 1, graphPath.length())) - this->graphsNames.begin()) == (int)this->graphsNames.size()) {
         return (false);
     }
-    gamePos = 1;
-    graph = static_cast<IGraph *>(graphs[graphPos]());
-    game = NULL;
-    // tmp
-    game = static_cast<IGame *>(games[gamePos]());
-    graph->setTitle(game->getName());
-    // tmp
+    pauseUI = new UIComponent(Vector2<double>(ArcadeSystem::winWidth / 2, ArcadeSystem::winHeight / 2), AComponent::WHITE, Vector2<double>(0, 0), "Pause");
+    for (size_t i = 0; i < this->gamesNames.size(); i++) {
+        gamesUI[i] = new UIComponent(Vector2<double>(ArcadeSystem::winWidth / 2, i + ArcadeSystem::winHeight / 2 - this->gamesNames.size() / 2), AComponent::WHITE, Vector2<double>(0, 0), this->gamesNames[i].substr(11, this->gamesNames[i].length() -14));
+    }
+    this->graph = static_cast<IGraph *>(this->graphs[graphPos]());
     std::chrono::milliseconds interval(60);
     GameLoop:
-        if ((key = graph->eventManagment()) == ArcadeSystem::Exit) {
-            if (graph)
-                delete (graph);
-            if (game)
-                delete (game);
-            return (true);
-        } else if (key == ArcadeSystem::PrevGraph || key == ArcadeSystem::NextGraph) {
-            if (key == ArcadeSystem::PrevGraph) {
-                --graphPos;
-            } else if (key == ArcadeSystem::NextGraph) {
-                ++graphPos;
-            }
-            if (graph)
-                delete (graph);
-            graphPos = (graphPos < 0) ? graphsNames.size() - 1 : graphPos % graphsNames.size();
-            graph = static_cast<IGraph *>(graphs[graphPos]());
-            graph->setTitle(game->getName());
-        } else if (key == ArcadeSystem::PrevGame || key == ArcadeSystem::NextGame) {
-            if (key == ArcadeSystem::PrevGame) {
-                --gamePos;
-            } else if (key == ArcadeSystem::NextGame) {
-                ++gamePos;
-            }
-            if (game)
-                delete (game);
-            gamePos = (gamePos < 0) ? gamesNames.size() - 1 : gamePos % gamesNames.size();
-            game = static_cast<IGame *>(games[gamePos]());
-            graph->setTitle(game->getName());
+        key = this->graph->eventManagment();
+        switch (key) {
+            case ArcadeSystem::Exit:
+                return (true);
+            case ArcadeSystem::Home:
+                this->_status = Menu;
+                break;
+            case ArcadeSystem::Pause:
+                this->isPaused = !this->isPaused;
+                break;
+            case ArcadeSystem::PrevGraph:
+            case ArcadeSystem::NextGraph:
+                this->changeGraph(key);
+                break;
+            case ArcadeSystem::PrevGame:
+            case ArcadeSystem::NextGame:
+                this->changeGame(key);
+                break;
         }
-        graph->display(game->compute(key));
+        if (this->_status == Menu && key == ArcadeSystem::Enter) {
+            this->_status = Game;
+        }
+        if (this->isPaused) {
+            components.push(pauseUI);
+        } else if (this->_status == Game) {
+            components = game->compute(key);
+        } else if (this->_status == Menu) {
+            if (key == ArcadeSystem::ArrowUp) {
+                this->changeGame(ArcadeSystem::PrevGame);
+            } else if (key == ArcadeSystem::ArrowDown) {
+                this->changeGame(ArcadeSystem::NextGame);
+            }
+            for (size_t i = 0; i < this->gamesNames.size(); i++) {
+                gamesUI[i]->setColor((this->gamePos == (int)i) ? AComponent::RED : AComponent::WHITE);
+                components.push(gamesUI[i]);
+            }
+        }
+        graph->display(components);
+        while (!components.empty()) {
+            components.pop();
+        }
         std::this_thread::sleep_for(interval);
     goto GameLoop;
     return (true);
@@ -115,6 +152,10 @@ bool    arcade::Arcade::run(const std::string &graphPath)
 
 void		arcade::Arcade::clean()
 {
+    if (this->graph)
+        delete (this->graph);
+    if (this->game)
+        delete (this->game);
     while (!this->libs.empty())
     {
         dlclose(this->libs.top());

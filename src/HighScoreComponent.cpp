@@ -113,7 +113,7 @@ UIComponent const * const *HighScoreComponent::getComponentsToDisplay() const
 bool    HighScoreComponent::submit()
 {
     if (pseudo.empty() || pseudo == HighScoreComponent::pseudoPlaceholder)
-        return false;
+        return true;
     highScores.setHighScore(new t_highScore(score, pseudo));
     highScores.flush();
     pseudo = HighScoreComponent::pseudoPlaceholder;
