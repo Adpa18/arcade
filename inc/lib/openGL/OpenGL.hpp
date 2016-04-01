@@ -65,8 +65,8 @@ public:
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    virtual void    init(const std::string &name, std::stack<AComponent*> cache);
-    virtual void    init(const std::string &name);
+    // virtual void    init(const std::string &name, std::stack<AComponent*> cache);
+    // virtual void    init(const std::string &name);
     virtual void    setTitle(const std::string &title);
 
 private:

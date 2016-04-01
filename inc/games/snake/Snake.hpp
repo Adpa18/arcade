@@ -32,7 +32,7 @@ public:
     Snake ();
     virtual ~Snake ();
     virtual std::stack<AComponent*> compute(int key);
-    virtual std::stack<AComponent*> getInfos(void) const;
+    // virtual std::stack<AComponent*> getInfos(void) const;
     virtual void                    restart(void);
     void                            getMap() const;
     void                            whereAmI() const;

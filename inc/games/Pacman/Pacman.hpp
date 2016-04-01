@@ -92,7 +92,7 @@ public:
     Pacman ();
     virtual ~Pacman ();
     virtual std::stack<AComponent*> compute(int);
-    virtual std::stack<AComponent*>	getInfos() const;
+    // virtual std::stack<AComponent*>	getInfos() const;
     virtual void			        restart();
     void 							changeDirection(int key);
     void                            getMap() const;

@@ -4,7 +4,7 @@ Snake::Snake () : AGame("Snake")
 {
     this->target = new GameComponent(RANDOM_POS, Vector2<double>(1, 1), AComponent::RED, ' ', "snakeApple.png", GameComponent::CUBE_LARGE);
     this->background = new BackgroundComponent(Vector2<double>(0, 0), Vector2<double>(ArcadeSystem::winWidth, ArcadeSystem::winHeight), AComponent::BLACK, "");
-    this->scoreText = new UIComponent(Vector2<double>(-1, -1), AComponent::WHITE, Vector2<double>(0, 0), "Score : 0");
+    this->scoreText = new UIComponent(Vector2<double>(ArcadeSystem::winWidth / 2, 1), AComponent::WHITE, Vector2<double>(0, 0), "Score : 0");
     for (size_t i = 0; i < ArcadeSystem::winWidth; i += 1) {
         this->walls.push_back(new GameComponent(Vector2<double>(i, 0), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
         this->walls.push_back(new GameComponent(Vector2<double>(i, ArcadeSystem::winHeight - 1), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
@@ -163,29 +163,29 @@ std::stack<AComponent*>     Snake::compute(int key)
         }
     }
     components.push(this->scoreText);
-    components.push(this->target);
-    for (size_t i = 0; i < this->snake.size(); i++) {
-        this->snake[i]->setSprite2D(this->getImg(i));
-        components.push(this->snake[i]);
-    }
-    for (size_t i = 0; i < this->walls.size(); i++) {
-        components.push(this->walls[i]);
-    }
-    components.push(this->background);
+    // components.push(this->target);
+    // for (size_t i = 0; i < this->snake.size(); i++) {
+    //     this->snake[i]->setSprite2D(this->getImg(i));
+    //     components.push(this->snake[i]);
+    // }
+    // for (size_t i = 0; i < this->walls.size(); i++) {
+    //     components.push(this->walls[i]);
+    // }
+    // components.push(this->background);
     return (components);
 }
 
-std::stack<AComponent*>     Snake::getInfos() const
-{
-    std::stack<AComponent*> components;
-
-    for (size_t i = 0; i < this->walls.size(); i++) {
-        components.push(this->walls[i]);
-    }
-    components.push(this->target);
-    components.push(this->background);
-    return (components);
-}
+// std::stack<AComponent*>     Snake::getInfos() const
+// {
+//     std::stack<AComponent*> components;
+//
+//     for (size_t i = 0; i < this->walls.size(); i++) {
+//         components.push(this->walls[i]);
+//     }
+//     components.push(this->target);
+//     components.push(this->background);
+//     return (components);
+// }
 
 void        Snake::getMap() const
 {

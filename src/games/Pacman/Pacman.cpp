@@ -158,20 +158,20 @@ std::stack<AComponent*>     Pacman::compute(int key)
     return (components);
 }
 
-std::stack<AComponent*>     Pacman::getInfos() const
-{
-    std::stack<AComponent*> components;
-
-    components.push(this->pacman);
-    components.push(this->ghosts[0]->getObj());
-    components.push(this->ghosts[1]->getObj());
-    components.push(this->ghosts[2]->getObj());
-    components.push(this->ghosts[3]->getObj());
-    for (std::map<double, GameComponent*>::const_iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
-        components.push(it->second);
-    }
-    return (components);
-}
+// std::stack<AComponent*>     Pacman::getInfos() const
+// {
+//     std::stack<AComponent*> components;
+//
+//     components.push(this->pacman);
+//     components.push(this->ghosts[0]->getObj());
+//     components.push(this->ghosts[1]->getObj());
+//     components.push(this->ghosts[2]->getObj());
+//     components.push(this->ghosts[3]->getObj());
+//     for (std::map<double, GameComponent*>::const_iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
+//         components.push(it->second);
+//     }
+//     return (components);
+// }
 
 void				Pacman::restart()
 {

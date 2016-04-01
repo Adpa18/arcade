@@ -18,7 +18,7 @@ public:
     AGame(std::string const &name);
     virtual ~AGame();
     virtual std::stack<AComponent*> compute(int) = 0;
-    virtual std::stack<AComponent*> getInfos() const = 0;
+    // virtual std::stack<AComponent*> getInfos() const = 0;
     virtual void                    restart() = 0;
     Vector2<double> const           &getSize() const;
     std::string const               &getName() const;

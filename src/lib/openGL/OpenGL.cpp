@@ -50,16 +50,16 @@ OpenGL::~OpenGL ()
     SDL_Quit();
 }
 
-void  OpenGL::init(const std::string &name, std::stack<AComponent*> cache)
-{
-    this->setTitle(name);
-    this->display(cache);
-}
-
-void  OpenGL::init(const std::string &name)
-{
-    this->setTitle(name);
-}
+// void  OpenGL::init(const std::string &name, std::stack<AComponent*> cache)
+// {
+//     this->setTitle(name);
+//     this->display(cache);
+// }
+//
+// void  OpenGL::init(const std::string &name)
+// {
+//     this->setTitle(name);
+// }
 
 void    OpenGL::setTitle(const std::string &title)
 {
@@ -182,7 +182,7 @@ void    OpenGL::displayHighScore(UIComponent const * const *uiComponents)
 
     for (size_t i = 0; i < HighScoreComponent::componentNb && uiComponents[i] != NULL; i++) {
         rect.x = uiComponents[i]->getPos().x;
-        rect.y = uiComponents[i]->getPos().y + 3;
+        rect.y = uiComponents[i]->getPos().y;
         displayUI(*uiComponents[i], &rect);
     }
 }
@@ -198,40 +198,29 @@ void    OpenGL::displayUI(const UIComponent &ui, SDL_Rect *rect)
     color.g = ((colorInt >> 8) & 255);
     color.b = ((colorInt >> 16) & 255);
     color.a = ((colorInt >> 24) & 255);
-    if (!this->fonts["default"]) {
+    if (ui.getText().empty() || !this->fonts["default"]) {
         return;
     }
     surface = TTF_RenderText_Blended(this->fonts["default"], ui.getText().c_str(), color);
     this->loadSurface(surface);
     SDL_FreeSurface(surface);
     glPushMatrix();
-    if (!ui.getDim().x || !ui.getDim().y) {
-        rect->w = ui.getText().length();
-        rect->h = 2;
-        glRotatef(45, 1, 0, 0);
-    } else {
-        rect->w = ui.getDim().x / 2;
-        rect->h = ui.getDim().y / 2;
-    }
-    if (ui.getPos().x < 0 || ui.getPos().y < 0) {
-      rect->x = this->size.x / 2;
-      rect->y = 0;
-      glTranslatef(rect->x, rect->y - 10, 0);
-  } else {
-      glTranslatef(rect->x, rect->y, -2);
-  }
-  glBegin(GL_QUADS);
-  glTexCoord2i(0, 0);
-  glVertex3i(-rect->w, -rect->h, 1);
-  glTexCoord2i(1, 0);
-  glVertex3i(rect->w, -rect->h, 1);
-  glTexCoord2i(1, 1);
-  glVertex3i(rect->w, rect->h, 1);
-  glTexCoord2i(0, 1);
-  glVertex3i(-rect->w, rect->h, 1);
-  glEnd();
-  glPopMatrix();
-  glDeleteTextures(1, &texture);
+    rect->w = ui.getText().length();
+    rect->h = 2;
+    glRotatef(45, 1, 0, 0);
+    glTranslatef(this->size.x / 2, -this->size.y / 2 + rect->y, 0);
+    glBegin(GL_QUADS);
+    glTexCoord2i(0, 0);
+    glVertex3i(-rect->w, -rect->h, 1);
+    glTexCoord2i(1, 0);
+    glVertex3i(rect->w, -rect->h, 1);
+    glTexCoord2i(1, 1);
+    glVertex3i(rect->w, rect->h, 1);
+    glTexCoord2i(0, 1);
+    glVertex3i(-rect->w, rect->h, 1);
+    glEnd();
+    glPopMatrix();
+    glDeleteTextures(1, &texture);
 }
 
 void    OpenGL::displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect)
@@ -315,10 +304,5 @@ bool           OpenGL::loadSurface(SDL_Surface *surface)
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel,surface->w,
             surface->h, 0, format, GL_UNSIGNED_BYTE, surface->pixels);
-	// glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel,
-    //     puissance2sup(surface->w), puissance2sup(surface->h),
-    //     0, format, GL_UNSIGNED_BYTE, NULL);
-	// glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, surface->w,
-    //         surface->h, format, GL_UNSIGNED_BYTE, surface->pixels);
     return (true);
 }

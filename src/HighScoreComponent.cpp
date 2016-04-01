@@ -18,64 +18,36 @@ HighScoreComponent::HighScoreComponent(std::string const &gameName, size_t score
     highScores(gameName + ".arcade"),
     score(score)
 {
-    int                                     mid = ArcadeSystem::winWidth / 2;
     const std::vector<const t_highScore *>  scores = highScores.getAllHighScore();
-    std::stringstream                       scoreStr("");
 
-    scoreStr << "score : " << score;
     //Nom du jeu
-    components[ComponentsPos::GAMENAME] = new UIComponent(
-            Vector2<double>(mid - static_cast<int>(gameName.length()) / 2, 1),
-            AComponent::ComponentColor::WHITE,
-            Vector2<double>(static_cast<int>(gameName.length()), 2),
-            gameName
-    );
+    components[ComponentsPos::GAMENAME] = new UIComponent(Vector2<double>(0, 0), AComponent::ComponentColor::WHITE, Vector2<double>(0, 0), "");
     //Score
-    components[HighScoreComponent::ComponentsPos::SCORE] = new UIComponent(
-            Vector2<double>(static_cast<int>(ArcadeSystem::winWidth) / 2 - static_cast<int>(scoreStr.str().length()) / 2, 3),
-            AComponent::ComponentColor::WHITE,
-            Vector2<double>(static_cast<int>(scoreStr.str().length()), 2),
-            scoreStr.str()
-    );
+    components[HighScoreComponent::ComponentsPos::SCORE] = new UIComponent(Vector2<double>(0, 0), AComponent::ComponentColor::WHITE, Vector2<double>(0, 0), "");
     //Enter you pseudo
     components[ComponentsPos::PSEUDO] = new UIComponent(
-            Vector2<double>(mid - static_cast<int>(pseudoPlaceholder.length()) / 2, 5),
-            AComponent::ComponentColor::YELLOW,
-            Vector2<double>(static_cast<int>(pseudoPlaceholder.length()), 2),
-            HighScoreComponent::pseudoPlaceholder
-    );
+        Vector2<double>(ArcadeSystem::winWidth / 2, 3), AComponent::ComponentColor::YELLOW,
+        Vector2<double>(0, 0), HighScoreComponent::pseudoPlaceholder);
     //Highscores label
     components[ComponentsPos::LABEL] = new UIComponent(
-            Vector2<double>(mid - static_cast<int>(HighScoreComponent::labelHighscores.length()) / 2, 8),
-            AComponent::ComponentColor::WHITE,
-            Vector2<double>(static_cast<int>(HighScoreComponent::labelHighscores.length()), 2),
-            HighScoreComponent::labelHighscores
-    );
+        Vector2<double>(ArcadeSystem::winWidth / 2, 5), AComponent::ComponentColor::WHITE,
+        Vector2<double>(0, 0), HighScoreComponent::labelHighscores);
     // All scores
-    for (int i = 0, len = static_cast<int>(scores.size()); i < 10; ++i)
-    {
-        if (i < len)
-        {
-            std::stringstream displayed("");
-
-            displayed << scores[i]->getName() << " " << scores[i]->getScore();
+    for (size_t i = 0, len = scores.size(); i < 10; i++) {
+        if (i < len) {
             components[i + 3] = new UIComponent(
-                    Vector2<double>(mid - static_cast<int>(displayed.str().length()) / 2, (i * 2) + 10),
-                    AComponent::ComponentColor::WHITE,
-                    Vector2<double>(static_cast<int>(displayed.str().length()), 2),
-                    displayed.str()
-            );
-        }
-        else
+                Vector2<double>(ArcadeSystem::winWidth / 2, (i * 2) + 7), AComponent::ComponentColor::WHITE,
+                Vector2<double>(0, 0), scores[i]->getName() + std::string(" ") + std::to_string(scores[i]->getScore()));
+        } else {
             components[i + 3] = NULL;
+        }
     }
     components[13] = NULL;
 }
 
 HighScoreComponent::~HighScoreComponent()
 {
-    for (size_t i = 0; i < HighScoreComponent::componentNb && components[i] != NULL; ++i)
-    {
+    for (size_t i = 0; i < HighScoreComponent::componentNb && components[i] != NULL; ++i) {
         delete(components[i]);
     }
 }
@@ -98,11 +70,8 @@ void HighScoreComponent::UpdatePseudo(const int key)
         pseudo = HighScoreComponent::pseudoPlaceholder;
     delete(components[HighScoreComponent::ComponentsPos::PSEUDO]);
     components[HighScoreComponent::ComponentsPos::PSEUDO] = new UIComponent(
-            Vector2<double>(static_cast<int>(ArcadeSystem::winWidth) / 2 - static_cast<int>(pseudo.length()) / 2, 5),
-            AComponent::ComponentColor::WHITE,
-            Vector2<double>(static_cast<int>(pseudo.length()), 2),
-            pseudo
-    );
+        Vector2<double>(ArcadeSystem::winWidth / 2, 3), AComponent::ComponentColor::WHITE,
+        Vector2<double>(0, 0), pseudo);
 }
 
 UIComponent const * const *HighScoreComponent::getComponentsToDisplay() const
@@ -112,8 +81,9 @@ UIComponent const * const *HighScoreComponent::getComponentsToDisplay() const
 
 bool    HighScoreComponent::submit()
 {
-    if (pseudo.empty() || pseudo == HighScoreComponent::pseudoPlaceholder)
+    if (pseudo.empty() || pseudo == HighScoreComponent::pseudoPlaceholder) {
         return true;
+    }
     highScores.setHighScore(new t_highScore(score, pseudo));
     highScores.flush();
     pseudo = HighScoreComponent::pseudoPlaceholder;
