@@ -19,7 +19,7 @@ RM			=	rm -rf
 
 NAME		=	$(BASE)games/lib_arcade_pacman.so
 
-CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -lm
+CPPFLAGS	=	-W -Wall -Wextra -Werror -fPIC -lm -g
 
 CPPFLAGS	+= 	-I$(BASE)inc/games/Pacman/ -I$(BASE)inc/
 

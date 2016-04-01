@@ -26,7 +26,7 @@ private:
     std::map<double, GameComponent*> mapObjs;
     direction                   dir;
     enum state						play_state;
-    const char                  map[HEIGHT + 1][WIDTH + 1] = {
+    const char                  map1[ArcadeSystem::winHeight + 1][ArcadeSystem::winWidth + 1] = {
         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "Xo.....................XXXX.....................oX",
         "X.XXXXXXXX.XXXXXXXXXXX.XXXX.XXXXXXXXXXX.XXXXXXXX.X",
@@ -57,6 +57,37 @@ private:
         "X.XXXXXXXXXXXXXXXXXXXX.XXXX.XXXXXXXXXXXXXXXXXXXX.X",
         "Xo..............................................oX",
         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"};
+    const char                  map[ArcadeSystem::winHeight + 1][ArcadeSystem::winWidth + 1] = {
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "X..........X..........................X..........X",
+        "X.XXXXXXXX.X.XXXXXXXXXXXXXXXXXXXXXXXX.X.XXXXXXXX.X",
+        "X.Xo.......X............XX............X.......oX.X",
+        "X.X.XXXXXX.X.XXXXXXXXXX.XX.XXXXXXXXXX.X.XXXXXX.X.X",
+        "X.X.XXXXXX.X.X        X.XX.X        X.X.XXXXXX.X.X",
+        "X.X.XXXXXX.X.X        X.XX.X        X.X.XXXXXX.X.X",
+        "X.X........X.X        X.XX.X        X.X........X.X",
+        "X.XXXXXXXX.X.X        X.XX.X        X.X.XXXXXXXX.X",
+        "X..........X.XXXXXXXXXX.XX.XXXXXXXXXX.X..........X",
+        "XXXXXXXXXX..............XX..............XXXXXXXXXX",
+        " .......XX.XXXXXXXXX..........XXXXXXXXX.XX....... ",
+        "XXXXXXX.XX.........X.XXXX XXX.X.........XX.XXXXXXX",
+        " .......XX.XXXXXXX.X.X      X.X.XXXXXXX.XX....... ",
+        "XXXXXXX....X     X X.X      X.X X     X....XXXXXXX",
+        "X....XX.XX.X     X X.X      X.X X     X.XX.XX....X",
+        "X.XX.XX.XX.XXXXXXX.X.X      X.X.XXXXXXX.XX.XX.XX.X",
+        "X.XX.XX.XX.........X.XXXXXXXX.X.........XX.XX.XX.X",
+        "X.XX.XX....X.XXXXXXX..........XXXXXXX.X....XX.XX.X",
+        "X.XX.XXXXX.X............XX............X.XXXXX.XX.X",
+        "X..........X.XXXXXXXXXX.XX.XXXXXXXXXX.X..........X",
+        "X.XXXXXXXX.X.X        X.XX.X        X.X.XXXXXXXX.X",
+        "X.X........X.X        X.XX.X        X.X........X.X",
+        "X.X.XXXXXX.X.X        X.XX.X        X.X.XXXXXX.X.X",
+        "X.X.XXXXXX.X.X        X.XX.X        X.X.XXXXXX.X.X",
+        "X.X.XXXXXX.X.XXXXXXXXXX.XX.XXXXXXXXXX.X.XXXXXX.X.X",
+        "X.Xo.......X............XX............X.......oX.X",
+        "X.XXXXXXXX.X.XXXXXXXXXXXXXXXXXXXXXXXX.X.XXXXXXXX.X",
+        "X..........X..........................X..........X",
+        "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"};
 public:
     Pacman ();
     virtual ~Pacman ();
@@ -64,12 +95,16 @@ public:
     virtual std::stack<AComponent*>	getInfos() const;
     virtual void			        restart();
     void 							changeDirection(int key);
+    void                            getMap() const;
+    void                            whereAmI() const;
     void 							move();
     void 							eat();
 private:
     bool                            check(Vector2<double> pos);
     bool							is_empty();
 };
+
+extern "C" void     Play(void);
 
 extern "C" AGame *loadGame()
 {

@@ -2,7 +2,7 @@
 
 Pacman::Pacman() : AGame("Pacman")
 {
-    this->pacman = new GameComponent(Vector2<double>(26, 18), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "pacman.gif", GameComponent::CUBE_LARGE);
+    this->pacman = new GameComponent(Vector2<double>(25, 18), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "pacman.gif", GameComponent::CUBE_LARGE);
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 13), AComponent::RED, "ghost_red.gif"));
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 14), AComponent::CYAN, "ghost_cyan.gif"));
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 15), AComponent::GREEN, "ghost_orange.gif"));
@@ -184,7 +184,7 @@ void				Pacman::restart()
     this->ghosts[2]->init();
     this->ghosts[3]->init();
     this->dir = DIR_LEFT;
-    this->play_state = ON_START;
+    this->play_state = ON_GAME;
     for (size_t y = 0; y < ArcadeSystem::winHeight; y++) {
         for (size_t x = 0; x < ArcadeSystem::winWidth; x++) {
             if (map[y][x] == 'X') {
@@ -201,6 +201,76 @@ void				Pacman::restart()
                 color = AComponent::BLACK;
             }
             mapObjs[y * ArcadeSystem::winWidth + x] = new GameComponent(Vector2<double>(x, y), Vector2<double>(1, 1), color, map[y][x], sprite2D, GameComponent::CUBE_LARGE);
+        }
+    }
+}
+
+void        Pacman::getMap() const
+{
+    arcade::GetMap      map;
+    char                c;
+
+    map.type = arcade::CommandType::GET_MAP;
+    map.width = ArcadeSystem::winWidth;
+    map.height = ArcadeSystem::winHeight;
+    for (size_t i = 0; i < ArcadeSystem::winWidth * ArcadeSystem::winHeight; i++) {
+        c = this->map[i / ArcadeSystem::winWidth][i % ArcadeSystem::winWidth];
+        if (c == 'X') {
+            map.tile[i] = arcade::TileType::BLOCK;
+        }else if (c == 'o') {
+            map.tile[i] = arcade::TileType::POWERUP;
+        } else {
+            map.tile[i] = arcade::TileType::EMPTY;
+        }
+    }
+    std::cout.write((const char *)&map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
+}
+
+void        Pacman::whereAmI() const
+{
+    arcade::WhereAmI    wai;
+
+    wai.type = arcade::CommandType::WHERE_AM_I;
+    wai.lenght = 1;
+    wai.position[0].x = static_cast<uint16_t>(this->pacman->getPos().x);
+    wai.position[0].y = static_cast<uint16_t>(this->pacman->getPos().y);
+    std::cout.write((const char *)&wai, sizeof(arcade::WhereAmI) + sizeof(arcade::Position));
+}
+
+void 	Play(void)
+{
+    Pacman              *pacman;
+    char                cmd;
+
+    pacman = new Pacman();
+    while (std::cin.read(&cmd, 1))
+    {
+        switch ((arcade::CommandType)cmd) {
+            case arcade::CommandType::WHERE_AM_I:
+                pacman->whereAmI();
+                break;
+            case arcade::CommandType::GET_MAP:
+                pacman->getMap();
+                break;
+            case arcade::CommandType::GO_UP:
+                pacman->changeDirection(DIR_UP);
+                break;
+            case arcade::CommandType::GO_DOWN:
+                pacman->changeDirection(DIR_DOWN);
+                break;
+            case arcade::CommandType::GO_LEFT:
+                pacman->changeDirection(DIR_LEFT);
+                break;
+            case arcade::CommandType::GO_RIGHT:
+                pacman->changeDirection(DIR_RIGHT);
+                break;
+            case arcade::CommandType::GO_FORWARD:
+                break;
+            case arcade::CommandType::PLAY:
+                pacman->compute(-1);
+                break;
+            default:
+                break;
         }
     }
 }

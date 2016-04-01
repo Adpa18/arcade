@@ -34,9 +34,8 @@ public:
     virtual std::stack<AComponent*> compute(int key);
     virtual std::stack<AComponent*> getInfos(void) const;
     virtual void                    restart(void);
-    void                            Play(void);
-    void                            getMap();
-    void                            whereAmI();
+    void                            getMap() const;
+    void                            whereAmI() const;
     void 							changeDirection(int key);
 private:
     bool                            check(Vector2<double> snakePos);

@@ -187,39 +187,36 @@ std::stack<AComponent*>     Snake::getInfos() const
     return (components);
 }
 
-void        Snake::getMap()
+void        Snake::getMap() const
 {
-    arcade::GetMap      *map;
+    arcade::GetMap      map;
 
-    map = new arcade::GetMap + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType);
-    map->type = arcade::CommandType::GET_MAP;
-    map->width = ArcadeSystem::winWidth;
-    map->height = ArcadeSystem::winHeight;
+    map.type = arcade::CommandType::GET_MAP;
+    map.width = ArcadeSystem::winWidth;
+    map.height = ArcadeSystem::winHeight;
     for (size_t i = 0; i < ArcadeSystem::winWidth * ArcadeSystem::winHeight; i++) {
         if (i % ArcadeSystem::winWidth == 0 || i % ArcadeSystem::winWidth == ArcadeSystem::winWidth - 1 || i / ArcadeSystem::winWidth == 0 || i / ArcadeSystem::winWidth == ArcadeSystem::winHeight - 1) {
-            map->tile[i] = arcade::TileType::BLOCK;
+            map.tile[i] = arcade::TileType::BLOCK;
         } else if (this->target->getPos().y * ArcadeSystem::winWidth + this->target->getPos().x == i) {
-            map->tile[i] = arcade::TileType::POWERUP;
+            map.tile[i] = arcade::TileType::POWERUP;
         } else {
-            map->tile[i] = arcade::TileType::EMPTY;
+            map.tile[i] = arcade::TileType::EMPTY;
         }
     }
-    std::cout.write((const char *)map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
+    std::cout.write((const char *)&map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
 }
 
-void        Snake::whereAmI()
+void        Snake::whereAmI() const
 {
-    arcade::WhereAmI    *wai;
+    arcade::WhereAmI    wai;
 
-    wai = new arcade::WhereAmI + this->snake.size() * sizeof(arcade::Position);
-
-    wai->type = arcade::CommandType::WHERE_AM_I;
-    wai->lenght = static_cast<uint16_t>(this->snake.size());
-    for (uint16_t i = 0; i < wai->lenght; i++) {
-        wai->position[i].x = static_cast<uint16_t>(this->snake[i]->getPos().x);
-        wai->position[i].y = static_cast<uint16_t>(this->snake[i]->getPos().y);
+    wai.type = arcade::CommandType::WHERE_AM_I;
+    wai.lenght = static_cast<uint16_t>(this->snake.size());
+    for (uint16_t i = 0; i < wai.lenght; i++) {
+        wai.position[i].x = static_cast<uint16_t>(this->snake[i]->getPos().x);
+        wai.position[i].y = static_cast<uint16_t>(this->snake[i]->getPos().y);
     }
-    std::cout.write((const char *)wai, sizeof(arcade::WhereAmI) + wai->lenght * sizeof(arcade::Position));
+    std::cout.write((const char *)&wai, sizeof(arcade::WhereAmI) + wai.lenght * sizeof(arcade::Position));
 }
 
 void 	Play(void)
