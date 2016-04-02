@@ -26,9 +26,8 @@ private:
     SDL_Window      *win;
     SDL_GLContext   gl;
     Vector2<double> size;
+    int             i;
     std::string     background;
-    // bool			is_init;
-    // bool			is_destroy;
     unsigned int    texture;
     std::map<std::string, TTF_Font*> fonts;
 
@@ -65,12 +64,9 @@ public:
 
     virtual int     eventManagment();
     virtual void    display(std::stack<AComponent*>);
-    // virtual void    init(const std::string &name, std::stack<AComponent*> cache);
-    // virtual void    init(const std::string &name);
     virtual void    setTitle(const std::string &title);
 
 private:
-    // void            initOpenGL(const std::string &name, Vector2<double> size);
     void            drawCube(Vector2<double> pos, Vector2<double> size, Vector2<double> rot, const std::string &texName);
     void            displayGame(const GameComponent &game);
     void            displayUI(const UIComponent &ui, SDL_Rect *rect);

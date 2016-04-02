@@ -41,18 +41,6 @@ Ncurses::~Ncurses ()
 {
     endwin();
 }
-
-// void  Ncurses::init(const std::string &name)
-// {
-//     (void)name;
-// }
-//
-// void  Ncurses::init(const std::string &name, std::stack<AComponent*> cache)
-// {
-//     (void)name;
-//     this->display(cache);
-// }
-
 void	Ncurses::initMainWindow()
 {
     // wbkgd(this->main_wind->getWind(), COLOR_PAIR(9));

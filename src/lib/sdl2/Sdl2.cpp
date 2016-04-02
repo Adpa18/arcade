@@ -39,17 +39,6 @@ Sdl2::~Sdl2 ()
     SDL_Quit();
 }
 
-// void  Sdl2::init(const std::string &name, std::stack<AComponent*> cache)
-// {
-//     this->setTitle(name);
-//     this->display(cache);
-// }
-//
-// void  Sdl2::init(const std::string &name)
-// {
-//     this->setTitle(name);
-// }
-
 void    Sdl2::setTitle(const std::string &title)
 {
     SDL_SetWindowTitle(this->win, title.c_str());

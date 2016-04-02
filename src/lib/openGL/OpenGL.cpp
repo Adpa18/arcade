@@ -50,17 +50,6 @@ OpenGL::~OpenGL ()
     SDL_Quit();
 }
 
-// void  OpenGL::init(const std::string &name, std::stack<AComponent*> cache)
-// {
-//     this->setTitle(name);
-//     this->display(cache);
-// }
-//
-// void  OpenGL::init(const std::string &name)
-// {
-//     this->setTitle(name);
-// }
-
 void    OpenGL::setTitle(const std::string &title)
 {
     SDL_SetWindowTitle(this->win, title.c_str());
@@ -154,6 +143,7 @@ void OpenGL::display(std::stack<AComponent*> components)
     glTranslatef(-size.x / 2, -size.y / 2, -10);
     glRotatef(30, 1, 0, 0);
 
+    this->i = 0;
     while (!components.empty()) {
         obj = components.top();
         components.pop();
@@ -180,6 +170,7 @@ void    OpenGL::displayHighScore(UIComponent const * const *uiComponents)
 {
     SDL_Rect    rect;
 
+    // glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     for (size_t i = 0; i < HighScoreComponent::componentNb && uiComponents[i] != NULL; i++) {
         rect.x = uiComponents[i]->getPos().x;
         rect.y = uiComponents[i]->getPos().y;
@@ -205,10 +196,10 @@ void    OpenGL::displayUI(const UIComponent &ui, SDL_Rect *rect)
     this->loadSurface(surface);
     SDL_FreeSurface(surface);
     glPushMatrix();
-    rect->w = ui.getText().length();
+    rect->w = ui.getText().length() / 2;
     rect->h = 2;
     glRotatef(45, 1, 0, 0);
-    glTranslatef(this->size.x / 2, -this->size.y / 2 + rect->y, 0);
+    glTranslatef(this->size.x / 2, -this->size.y / 2 + ui.getPos().y + this->i, 0);
     glBegin(GL_QUADS);
     glTexCoord2i(0, 0);
     glVertex3i(-rect->w, -rect->h, 1);
@@ -221,6 +212,7 @@ void    OpenGL::displayUI(const UIComponent &ui, SDL_Rect *rect)
     glEnd();
     glPopMatrix();
     glDeleteTextures(1, &texture);
+    this->i += 5;
 }
 
 void    OpenGL::displayAdvanceUI(const UIAdvanceComponent &ui, SDL_Rect *rect)

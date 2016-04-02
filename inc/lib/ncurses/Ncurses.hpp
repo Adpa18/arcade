@@ -44,8 +44,6 @@ public:
   void          displayGame(const GameComponent &game);
   void          displayUI(const UIComponent &ui);
   void          displayHighScore(UIComponent const * const *uiComponents);
-  // virtual void  init(const std::string &name);
-  // virtual void  init(const std::string &name, std::stack<AComponent*> cache);
   virtual void  setTitle(const std::string &title){(void)title;}
 };
 
