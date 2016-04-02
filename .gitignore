@@ -1,3 +1,6 @@
 *.gch
 *.o
+games/
+lib/
 arcade
+*.arcade
