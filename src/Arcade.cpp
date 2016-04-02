@@ -45,16 +45,16 @@ void	arcade::Arcade::initSo(std::string const &name, SOTYPE type)
     const char    *symbol;
 
     if (type != GAME && type != GRAPH)
-      std::runtime_error("Type Error");
+      throw std::runtime_error("Type Error");
     dlerror();
     myso = dlopen(name.c_str(), RTLD_NOW);
     if (!myso || (dlsym_error = dlerror())) {
-        std::runtime_error(std::string("Cannot open library: ") + dlerror());
+        throw std::runtime_error(std::string("Cannot open library: ") + dlerror());
     }
     symbol = (type == GAME) ? "loadGame" : "loadLib";
     fptr load = (void *(*)())(dlsym(myso, symbol));
-    if (!load || (dlsym_error = dlerror())) {
-        std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
+    if ((dlsym_error = dlerror())) {
+        throw std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
     }
     this->libs.push(myso);
     if (type == GRAPH) {
