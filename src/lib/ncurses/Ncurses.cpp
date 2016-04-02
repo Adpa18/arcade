@@ -119,7 +119,6 @@ void Ncurses::display(std::stack<AComponent*> components)
 {
     AComponent      *obj;
     GameComponent   *Gobj;
-    AudioComponent  *Aobj;
     UIComponent     *Uobj;
     HighScoreComponent  *Hobj;
 
@@ -146,8 +145,6 @@ void Ncurses::display(std::stack<AComponent*> components)
         components.pop();
         if ((Gobj = dynamic_cast<GameComponent*>(obj))) {
             this->displayGame(*Gobj);
-        } else if ((Aobj = dynamic_cast<AudioComponent*>(obj))) {
-            beep();
         } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
             this->displayUI(*Uobj);
         } else if ((Hobj = dynamic_cast<HighScoreComponent*>(obj))) {

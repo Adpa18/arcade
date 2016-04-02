@@ -2,11 +2,10 @@
 # define PACMAN_HPP_
 
 # include "AGame.hpp"
-# include "Utils.hpp"
+# include "Vector2.hpp"
 # include "GameComponent.hpp"
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
-# include "AudioComponent.hpp"
 # include "HighScoreComponent.hpp"
 # include "Protocol.hpp"
 # include "Ghost.hpp"

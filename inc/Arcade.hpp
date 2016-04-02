@@ -11,8 +11,9 @@
 # include <thread>
 # include <iostream>
 # include <map>
-# include "Utils.hpp"
-# include "Interfaces.hpp"
+# include "Vector2.hpp"
+# include "IGame.hpp"
+# include "IGraph.hpp"
 # include "UIComponent.hpp"
 # include "ArcadeSystem.hpp"
 

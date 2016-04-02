@@ -10,8 +10,8 @@
 class UIComponent : public AComponent {
 
 protected:
-  Vector2<double> dim;
-  std::string text;
+  Vector2<double>   dim;
+  std::string       text;
 
  public:
    UIComponent(Vector2<double> const &pos, enum ComponentColor color,
@@ -22,20 +22,6 @@ protected:
   Vector2<double> const &getDim() const;
   std::string const     &getText() const;
   void                  setText(const std::string &text);
-// private:
-//     std::string     text;
-//     std::string     fontName;
-//     unsigned int    fontSize;
-//
-// public:
-//     UIComponent(Vector2<double> const &p, Vector2<double> const &s, ComponentColor color, const std::string &text,
-//             const std::string &fontName, unsigned int fontSize);
-//     virtual             ~UIComponent();
-//     const std::string   &getText() const;
-//     const std::string   &getFontName() const;
-//     unsigned int        getFontSize() const;
-//     void                setFontName(const std::string &fontName);
-//     void                setFontSize(unsigned int fontSize);
 };
 
 #endif /* !UICOMPONENT_HPP_ */

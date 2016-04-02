@@ -9,7 +9,6 @@ DEP_SRC		=	$(BASE)src/AComponent.cpp			\
 				$(BASE)src/BackgroundComponent.cpp	\
 				$(BASE)src/UIComponent.cpp			\
 				$(BASE)src/UIAdvanceComponent.cpp	\
-				$(BASE)src/AudioComponent.cpp		\
 				$(BASE)src/HighScoreComponent.cpp 	\
 				$(BASE)src/LoadHighScore.cpp	 	\
 

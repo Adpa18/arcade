@@ -8,7 +8,6 @@
 # include "IGraph.hpp"
 # include "Window.hpp"
 # include "GameComponent.hpp"
-# include "AudioComponent.hpp"
 # include "UIComponent.hpp"
 # include "HighScoreComponent.hpp"
 

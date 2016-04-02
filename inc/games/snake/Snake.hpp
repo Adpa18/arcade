@@ -3,11 +3,10 @@
 
 # include <vector>
 # include "AGame.hpp"
-# include "Utils.hpp"
+# include "Vector2.hpp"
 # include "GameComponent.hpp"
 # include "BackgroundComponent.hpp"
 # include "UIComponent.hpp"
-# include "AudioComponent.hpp"
 # include "HighScoreComponent.hpp"
 # include "Protocol.hpp"
 # include <string>
@@ -27,7 +26,6 @@ private:
     UIComponent                 *scoreText;
     direction                   dir;
     size_t                      score;
-    // AudioComponent              *sound;
 public:
     Snake ();
     virtual ~Snake ();

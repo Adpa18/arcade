@@ -4,7 +4,6 @@ SRC			=		$(SRC_DIR)Arcade.cpp				\
 					$(SRC_DIR)AGame.cpp					\
 					$(SRC_DIR)AComponent.cpp			\
 					$(SRC_DIR)GameComponent.cpp			\
-					$(SRC_DIR)AudioComponent.cpp		\
 					$(SRC_DIR)BackgroundComponent.cpp	\
 					$(SRC_DIR)HighScoreComponent.cpp 	\
 					$(SRC_DIR)LoadHighScore.cpp	 		\
