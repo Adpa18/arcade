@@ -2,10 +2,12 @@
 
 Ghost::Ghost (std::map<double, GameComponent*> &mapObjs, Vector2<double> pos,
     AComponent::ComponentColor color, const std::string sprite2D)
-    : startPos(pos), status(ALIVE), mapObjs(mapObjs)
+    : startPos(pos), status(ALIVE), mapObjs(mapObjs), sprite2D(sprite2D)
 {
     this->obj = new GameComponent(pos, Vector2<double>(1, 1), color, ' ', sprite2D, GameComponent::CUBE_LARGE);
     this->init();
+    this->first_color = color;
+    this->tmp = true;
 }
 
 Ghost::~Ghost()
@@ -26,7 +28,7 @@ bool    Ghost::check(Vector2<double> pos)
 {
     std::map<double, GameComponent*>::iterator  it = mapObjs.find(pos.y * ArcadeSystem::winWidth + pos.x);
 
-    if (it != mapObjs.end() && (it->second->getSpriteText() == "X" || (it->second->getPos().x == 25 && it->second->getPos().y == 12)))
+    if (it != mapObjs.end() && (it->second->getSpriteText() == "X" || (this->getState() != Ghost::DEAD && it->second->getPos().x == 25 && it->second->getPos().y == 12)))
         return (false);
     return (true);
 }
@@ -155,6 +157,9 @@ void			Ghost::goToRand(Vector2<double> pos)
     time_t  	currentTime;
     direction	oldDir;
 
+    tmp = !tmp;
+    if (this->getState() == VULNERABLE && tmp != true)
+        return;
     std::time(&currentTime);
     if (difftime(currentTime, this->beginTime) < 10)
         return;
@@ -208,13 +213,24 @@ void	Ghost::goTo(Vector2<double> pos)
 {
     time_t  currentTime;
 
+    tmp = !tmp;
+    if (this->getState() == Ghost::VULNERABLE && tmp != true)
+        return;
     std::time(&currentTime);
     if (difftime(currentTime, this->beginTime) < 10)
         return;
-    if (this->isInside() == true) {
+    if (this->getState() != Ghost::DEAD && this->isInside() == true) {
         dir = DIR_UP;
         tryMove();
         return;
+    } else if (this->getState() == Ghost::DEAD && this->isInside() == true) {
+        this->alive();
+    }
+    if (this->getState() == Ghost::DEAD) {
+        if (this->obj->getPos().x == 25 && this->obj->getPos().y == 11) {
+            this->dir = DIR_DOWN;
+            tryMove();
+        }
     }
     if (this->dir != NOTHING && this->force_dir != true && tryMove() == true) {
         this->force_dir = false;
@@ -280,18 +296,24 @@ Vector2<double> Ghost::getStartPos() const
 
 void            Ghost::alive()
 {
-    this->status = ALIVE;
+    this->status = Ghost::ALIVE;
+    this->obj->setSprite2D(this->sprite2D);
+    this->obj->setColor(this->first_color);
     // Change Texture
 }
 
 void            Ghost::dead()
 {
-    this->status = DEAD;
+    this->status = Ghost::DEAD;
+    this->obj->setColor(AComponent::WHITE);
+    this->obj->setSprite2D("eyes2.png");
     // Change Texture
 }
 
 void            Ghost::vulnerable()
 {
-    this->status = VULNERABLE;
+    this->status = Ghost::VULNERABLE;
+    this->obj->setColor(AComponent::BLUE);
+    this->obj->setSprite2D("ghost_dead.gif");
     // Change Texture
 }

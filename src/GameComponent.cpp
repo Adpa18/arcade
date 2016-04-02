@@ -5,7 +5,7 @@
 ** Login	consta_n
 **
 ** Started on	Wed Mar 16 21:34:17 2016 Nicolas Constanty
-** Last update	Wed Mar 30 18:26:23 2016 Adrien WERY
+** Last update	Sat Apr 02 20:03:14 2016 Adrien WERY
 */
 
 #include "GameComponent.hpp"
@@ -16,7 +16,7 @@ GameComponent::GameComponent(Vector2<double> const &pos,
 			     std::string const &spriteText,
                              std::string const &sprite2D)
   : AComponent(pos, color), sprite3D(sprite3D),
-    spriteText(spriteText), fileSprite2D(sprite2D)
+    spriteText(spriteText), fileSprite2D(sprite2D), dim(1, 1)
 {
 }
 

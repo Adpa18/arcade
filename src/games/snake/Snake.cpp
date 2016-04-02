@@ -149,7 +149,8 @@ std::stack<AComponent*>     Snake::compute(int key)
         } else {
             this->state = DEAD;
         }
-    } else {
+    }
+    if (this->state == DEAD) {
         if (!this->highScore)
             highScore = new HighScoreComponent("snake", this->score);
         highScore->UpdatePseudo(key);

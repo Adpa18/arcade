@@ -16,7 +16,8 @@
 # define NB_PH  4
 # define STEP   1
 
-enum state { ON_GAME, ON_PAUSE, ON_START };
+enum p_state { ON_GAME, ON_PAUSE, ON_START };
+enum e_state { INVINCIBLE, NORMAL };
 
 class Pacman : public AGame {
 private:
@@ -24,7 +25,10 @@ private:
     std::vector<Ghost*>         ghosts;
     std::map<double, GameComponent*> mapObjs;
     direction                   dir;
-    enum state						play_state;
+    time_t						beginTime;
+    enum p_state				play_state;
+    enum e_state				eat_state;
+    int							nb_life;
     const char                  map1[ArcadeSystem::winHeight + 1][ArcadeSystem::winWidth + 1] = {
         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "Xo.....................XXXX.....................oX",
@@ -67,16 +71,16 @@ private:
         "X.X........X.X        X.XX.X        X.X........X.X",
         "X.XXXXXXXX.X.X        X.XX.X        X.X.XXXXXXXX.X",
         "X..........X.XXXXXXXXXX.XX.XXXXXXXXXX.X..........X",
-        "XXXXXXXXXX..............XX..............XXXXXXXXXX",
+        "XXXXXXXXXX...........XX.XX.XX...........XXXXXXXXXX",
         " .......XX.XXXXXXXXX..........XXXXXXXXX.XX....... ",
         "XXXXXXX.XX.........X.XXXX XXX.X.........XX.XXXXXXX",
         " .......XX.XXXXXXX.X.X      X.X.XXXXXXX.XX....... ",
-        "XXXXXXX....X     X.X.X      X.X X     X....XXXXXXX",
-        "X....XX.XX.X     X.X.X      X.X X     X.XX.XX....X",
+        "XXXXXXX....X     X.X.X      X.X.X     X....XXXXXXX",
+        "X....XX.XX.X     X.X.X      X.X.X     X.XX.XX....X",
         "X.XX.XX.XX.XXXXXXX.X.X      X.X.XXXXXXX.XX.XX.XX.X",
         "X.XX.XX.XX.........X.XXXXXXXX.X.........XX.XX.XX.X",
         "X.XX.XX....X.XXXXXXX..........XXXXXXX.X....XX.XX.X",
-        "X.XX.XXXXX.X............XX............X.XXXXX.XX.X",
+        "X.XX.XXXXX.X.........XX.XX.XX.........X.XXXXX.XX.X",
         "X..........X.XXXXXXXXXX.XX.XXXXXXXXXX.X..........X",
         "X.XXXXXXXX.X.X        X.XX.X        X.X.XXXXXXXX.X",
         "X.X........X.X        X.XX.X        X.X........X.X",
@@ -93,6 +97,7 @@ public:
     virtual std::stack<AComponent*> compute(int);
     // virtual std::stack<AComponent*>	getInfos() const;
     virtual void			        restart();
+    void							restart_with_life();
     void 							changeDirection(int key);
     void                            getMap() const;
     void                            whereAmI() const;
