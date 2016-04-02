@@ -219,7 +219,7 @@ void 	Play(void)
     char                cmd;
 
     snake = new Snake();
-    while (std::cin.read(&cmd, 1))
+    while (std::cin.read(&cmd, sizeof(arcade::CommandType)))
     {
         switch ((arcade::CommandType)cmd) {
             case arcade::CommandType::WHERE_AM_I:
@@ -229,18 +229,19 @@ void 	Play(void)
                 snake->getMap();
                 break;
             case arcade::CommandType::GO_UP:
-                snake->changeDirection(DIR_UP);
+                snake->changeDirection(ArcadeSystem::ArrowUp);
                 break;
             case arcade::CommandType::GO_DOWN:
-                snake->changeDirection(DIR_DOWN);
+                snake->changeDirection(ArcadeSystem::ArrowDown);
                 break;
             case arcade::CommandType::GO_LEFT:
-                snake->changeDirection(DIR_LEFT);
+                snake->changeDirection(ArcadeSystem::ArrowLeft);
                 break;
             case arcade::CommandType::GO_RIGHT:
-                snake->changeDirection(DIR_RIGHT);
+                snake->changeDirection(ArcadeSystem::ArrowRight);
                 break;
             case arcade::CommandType::GO_FORWARD:
+                break;
             case arcade::CommandType::PLAY:
                 snake->compute(-1);
                 break;
