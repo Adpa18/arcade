@@ -104,8 +104,13 @@ void    Sdl2::displayGame(const GameComponent &game, SDL_Rect *rect)
         this->tex[game.getSprite2D()] = IMG_LoadTexture(this->render,
                 std::string("./assets/sprites2D/" + game.getSprite2D()).c_str());
     }
-    // SDL_RenderCopy(this->render, this->tex[this->background], NULL, rect);
-    SDL_RenderCopy(this->render, this->tex[game.getSprite2D()], NULL, rect);
+    if (this->tex[game.getSprite2D()]) {
+        SDL_RenderCopy(this->render, this->tex[game.getSprite2D()], NULL, rect);
+    } else {
+        unsigned int colorInt = this->colors[game.getColor()];
+        SDL_SetRenderDrawColor(this->render, ((colorInt >> 16) & 255), ((colorInt >> 8) & 255), ((colorInt) & 255), ((colorInt >> 24) & 255));
+        SDL_RenderFillRect(this->render, rect);
+    }
 }
 
 void    Sdl2::displayBackground(const BackgroundComponent &background, SDL_Rect *rect2)
