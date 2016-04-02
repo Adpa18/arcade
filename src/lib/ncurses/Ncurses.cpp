@@ -42,16 +42,16 @@ Ncurses::~Ncurses ()
     endwin();
 }
 
-void  Ncurses::init(const std::string &name)
-{
-    (void)name;
-}
-
-void  Ncurses::init(const std::string &name, std::stack<AComponent*> cache)
-{
-    (void)name;
-    this->display(cache);
-}
+// void  Ncurses::init(const std::string &name)
+// {
+//     (void)name;
+// }
+//
+// void  Ncurses::init(const std::string &name, std::stack<AComponent*> cache)
+// {
+//     (void)name;
+//     this->display(cache);
+// }
 
 void	Ncurses::initMainWindow()
 {
@@ -121,7 +121,10 @@ int Ncurses::eventManagment()
     if (key == 27) {
         endwin();
     }
-    return (this->keyMap[key]);
+    if (this->keyMap[key]) {
+        return (this->keyMap[key]);
+    }
+    return (key);
 }
 
 void Ncurses::display(std::stack<AComponent*> components)
@@ -129,12 +132,12 @@ void Ncurses::display(std::stack<AComponent*> components)
     AComponent      *obj;
     GameComponent   *Gobj;
     AudioComponent  *Aobj;
-    UIComponent     *Tobj;
+    UIComponent     *Uobj;
+    HighScoreComponent  *Hobj;
 
     if (this->valid_size == false)
         return;
-    while (!old_component.empty())
-    {
+    while (!old_component.empty()) {
       wattron(this->wind->getWind(), COLOR_PAIR(AComponent::BLACK + 1));
       wattr_on(this->wind->getWind(), A_REVERSE, NULL);
       mvwaddch(this->wind->getWind(),
@@ -143,50 +146,70 @@ void Ncurses::display(std::stack<AComponent*> components)
       wattroff(this->wind->getWind(), COLOR_PAIR(AComponent::BLACK + 1));
       old_component.pop();
     }
+    while (!old_componentUI.empty()) {
+        wclear(old_componentUI.top());
+        wrefresh(old_componentUI.top());
+        delwin(old_componentUI.top());
+        old_componentUI.pop();
+    }
+    this->i = 0;
     while (!components.empty()) {
         obj = components.top();
         components.pop();
         if ((Gobj = dynamic_cast<GameComponent*>(obj))) {
-            old_component.push(Gobj->getPos());
-            if (Gobj->getSpriteText()[0] == ' ')
-            {
-              wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
-              wattr_on(this->wind->getWind(), A_REVERSE, NULL);
-              mvwaddch(this->wind->getWind(),
-              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText()[0]);
-              wattr_off(this->wind->getWind(), A_REVERSE, NULL);
-              wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
-            }
-            else
-            {
-              wattron(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
-              mvwaddch(this->wind->getWind(),
-              Gobj->getPos().y, Gobj->getPos().x, Gobj->getSpriteText()[0]);
-              wattroff(this->wind->getWind(), COLOR_PAIR(Gobj->getColor() + 1));
-            }
-        }
-        else if ((Aobj = dynamic_cast<AudioComponent*>(obj)))
-          beep();
-        else if ((Tobj = dynamic_cast<UIComponent*>(obj)))
-        {
-          WINDOW *ntext;
-          if (Tobj->getPos().x < 0 || Tobj->getPos().y < 0)
-            ntext = newwin(Tobj->getDim().y, Tobj->getDim().x, 1, COLS / 2 - (Tobj->getDim().x / 2));
-          else
-          {
-            ntext = newwin(Tobj->getDim().y, Tobj->getDim().x, Tobj->getPos().y, Tobj->getPos().x);
-            // if (!ntext)
-              // perror("");
-          }
-          box(ntext, 0, 0);
-          wattr_on(ntext, A_REVERSE, NULL);
-          wbkgd(ntext, COLOR_PAIR(Tobj->getColor() + 1));
-          wattr_off(ntext, A_REVERSE, NULL);
-          mvwprintw(ntext, Tobj->getDim().y / 2, Tobj->getDim().x / 2 - Tobj->getText().length() / 2,
-           "%s", Tobj->getText().c_str());
-          wrefresh(ntext);
-          refresh();
+            this->displayGame(*Gobj);
+        } else if ((Aobj = dynamic_cast<AudioComponent*>(obj))) {
+            beep();
+        } else if ((Uobj = dynamic_cast<UIComponent*>(obj))) {
+            this->displayUI(*Uobj);
+        } else if ((Hobj = dynamic_cast<HighScoreComponent*>(obj))) {
+            this->displayHighScore(Hobj->getComponentsToDisplay());
         }
     }
     wrefresh(this->wind->getWind());
+}
+
+void          Ncurses::displayGame(const GameComponent &game)
+{
+    old_component.push(game.getPos());
+    wattron(this->wind->getWind(), COLOR_PAIR(game.getColor() + 1));
+    if (game.getSpriteText()[0] == ' ') {
+      wattr_on(this->wind->getWind(), A_REVERSE, NULL);
+      mvwaddch(this->wind->getWind(),
+      game.getPos().y, game.getPos().x, game.getSpriteText()[0]);
+      wattr_off(this->wind->getWind(), A_REVERSE, NULL);
+    } else {
+      mvwaddch(this->wind->getWind(),
+      game.getPos().y, game.getPos().x, game.getSpriteText()[0]);
+    }
+    wattroff(this->wind->getWind(), COLOR_PAIR(game.getColor() + 1));
+}
+
+void         Ncurses::displayUI(const UIComponent &ui)
+{
+    WINDOW  *text;
+
+    if (!ui.getText().length()) {
+        return;
+    }
+    Vector2<double> pos(COLS / 2 - size.x / 2, LINES / 2 - size.y + ui.getPos().y + this->i);
+    text = newwin(3, size.x, pos.y, pos.x);
+    box(text, 0, 0);
+    wattr_on(text, A_REVERSE, NULL);
+    wbkgd(text, COLOR_PAIR(ui.getColor() + 1));
+    wattr_off(text, A_REVERSE, NULL);
+    mvwprintw(text, 1, (size.x - ui.getText().length()) / 2, "%s", ui.getText().c_str());
+    wrefresh(text);
+    refresh();
+    old_componentUI.push(text);
+    this->i += 4;
+}
+
+void          Ncurses::displayHighScore(UIComponent const * const *uiComponents)
+{
+    wclear(this->wind->getWind());
+    wrefresh(this->wind->getWind());
+    for (size_t i = 0; i < HighScoreComponent::componentNb && uiComponents[i] != NULL; i++) {
+        displayUI(*uiComponents[i]);
+    }
 }
