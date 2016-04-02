@@ -53,7 +53,7 @@ void	arcade::Arcade::initSo(std::string const &name, SOTYPE type)
     }
     symbol = (type == GAME) ? "loadGame" : "loadLib";
     fptr load = (void *(*)())(dlsym(myso, symbol));
-    if ((dlsym_error = dlerror())) {
+    if (!load || (dlsym_error = dlerror())) {
         std::runtime_error(std::string("Cannot load symbol '") + symbol + "': " + dlsym_error);
     }
     this->libs.push(myso);
@@ -101,7 +101,6 @@ bool    arcade::Arcade::run(const std::string &graphPath)
     for (size_t i = 0; i < this->gamesNames.size(); i++) {
         gamesUI[i] = new UIComponent(Vector2<double>(ArcadeSystem::winWidth / 2, i + ArcadeSystem::winHeight / 2 - this->gamesNames.size() / 2), AComponent::WHITE, Vector2<double>(0, 0), this->gamesNames[i].substr(11, this->gamesNames[i].length() -14));
     }
-    // this->graphs[graphPos]();
     this->graph = static_cast<IGraph *>(this->graphs[graphPos]());
     this->game = static_cast<IGame *>(this->games[this->gamePos]());
     this->graph->setTitle(this->game->getName());
