@@ -11,7 +11,7 @@
 # include "Protocol.hpp"
 # include <string>
 
-# define SIZE   3
+# define SIZE   4
 # define RANDOM_POS Vector2<double>(rand() % (ArcadeSystem::winWidth - 2) + 1, rand() % (ArcadeSystem::winHeight - 2) + 1)
 
 enum direction { DIR_LEFT, DIR_RIGHT, DIR_UP, DIR_DOWN };
@@ -30,7 +30,6 @@ public:
     Snake ();
     virtual ~Snake ();
     virtual std::stack<AComponent*> compute(int key);
-    // virtual std::stack<AComponent*> getInfos(void) const;
     virtual void                    restart(void);
     void                            getMap() const;
     void                            whereAmI() const;

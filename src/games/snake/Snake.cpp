@@ -30,7 +30,7 @@ void    Snake::restart()
     this->background->setSprite2D(backgroundSprites[rand() % 3]);
     this->snake.erase(this->snake.begin(), this->snake.end());
     for (size_t i = 0; i < SIZE; i++) {
-      this->snake.push_back(new GameComponent(Vector2<double>(ArcadeSystem::winWidth / 2 - i, ArcadeSystem::winHeight / 2), Vector2<double>(1, 1), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
+      this->snake.push_back(new GameComponent(Vector2<double>(ArcadeSystem::winWidth / 2, ArcadeSystem::winHeight / 2 + i), Vector2<double>(1, 1), AComponent::RED, ' ', "", GameComponent::CUBE_LARGE));
     }
     this->target->setPos(RANDOM_POS);
     this->scoreText->setText("Score : 0");
@@ -171,40 +171,46 @@ std::stack<AComponent*>     Snake::compute(int key)
     for (size_t i = 0; i < this->walls.size(); i++) {
         components.push(this->walls[i]);
     }
-    // components.push(this->background);
+    components.push(this->background);
     return (components);
 }
 
 void        Snake::getMap() const
 {
-    arcade::GetMap      map;
+    arcade::GetMap      *map;
 
-    map.type = arcade::CommandType::GET_MAP;
-    map.width = ArcadeSystem::winWidth;
-    map.height = ArcadeSystem::winHeight;
+    if (!(map = (arcade::GetMap*)malloc(sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType)))) {
+        throw std::bad_alloc();
+    }
+    map->type = arcade::CommandType::GET_MAP;
+    map->width = ArcadeSystem::winWidth;
+    map->height = ArcadeSystem::winHeight;
     for (size_t i = 0; i < ArcadeSystem::winWidth * ArcadeSystem::winHeight; i++) {
         if (i % ArcadeSystem::winWidth == 0 || i % ArcadeSystem::winWidth == ArcadeSystem::winWidth - 1 || i / ArcadeSystem::winWidth == 0 || i / ArcadeSystem::winWidth == ArcadeSystem::winHeight - 1) {
-            map.tile[i] = arcade::TileType::BLOCK;
+            map->tile[i] = arcade::TileType::BLOCK;
         } else if (this->target->getPos().y * ArcadeSystem::winWidth + this->target->getPos().x == i) {
-            map.tile[i] = arcade::TileType::POWERUP;
+            map->tile[i] = arcade::TileType::POWERUP;
         } else {
-            map.tile[i] = arcade::TileType::EMPTY;
+            map->tile[i] = arcade::TileType::EMPTY;
         }
     }
-    std::cout.write((const char *)&map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
+    std::cout.write((const char *)map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
 }
 
 void        Snake::whereAmI() const
 {
-    arcade::WhereAmI    wai;
+    arcade::WhereAmI    *wai;
 
-    wai.type = arcade::CommandType::WHERE_AM_I;
-    wai.lenght = static_cast<uint16_t>(this->snake.size());
-    for (uint16_t i = 0; i < wai.lenght; i++) {
-        wai.position[i].x = static_cast<uint16_t>(this->snake[i]->getPos().x);
-        wai.position[i].y = static_cast<uint16_t>(this->snake[i]->getPos().y);
+    if (!(wai = (arcade::WhereAmI*)malloc(sizeof(arcade::WhereAmI) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType)))) {
+        throw std::bad_alloc();
     }
-    std::cout.write((const char *)&wai, sizeof(arcade::WhereAmI) + wai.lenght * sizeof(arcade::Position));
+    wai->type = arcade::CommandType::WHERE_AM_I;
+    wai->lenght = static_cast<uint16_t>(this->snake.size());
+    for (uint16_t i = 0; i < wai->lenght; i++) {
+        wai->position[i].x = static_cast<uint16_t>(this->snake[i]->getPos().x);
+        wai->position[i].y = static_cast<uint16_t>(this->snake[i]->getPos().y);
+    }
+    std::cout.write((const char *)wai, sizeof(arcade::WhereAmI) + wai->lenght * sizeof(arcade::Position));
 }
 
 void 	Play(void)
@@ -235,7 +241,6 @@ void 	Play(void)
                 snake->changeDirection(DIR_RIGHT);
                 break;
             case arcade::CommandType::GO_FORWARD:
-                break;
             case arcade::CommandType::PLAY:
                 snake->compute(-1);
                 break;
