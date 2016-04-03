@@ -120,7 +120,6 @@ void 	Play(void)
             case arcade::CommandType::GO_FORWARD:
                 break;
             case arcade::CommandType::SHOOT:
-
                 break;
             case arcade::CommandType::PLAY:
                 obj->compute(-1);

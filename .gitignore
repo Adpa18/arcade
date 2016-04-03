@@ -1,6 +1,6 @@
 *.gch
 *.o
-./games/*.so
-./lib/*.so
+games/*.so
+lib/*.so
 arcade
 *.arcade
