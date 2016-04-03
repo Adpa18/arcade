@@ -203,7 +203,7 @@ void                Pacman::move()
     }
     if (!this->started) {
         std::time(&currentTime);
-        if (difftime(currentTime, this->startTime) >= 1) {
+        if (difftime(currentTime, this->startTime) >= 10) {
             this->started = true;
         }
         return;
