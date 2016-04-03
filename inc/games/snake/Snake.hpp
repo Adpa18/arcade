@@ -22,9 +22,9 @@ private:
     GameComponent               *target;
     BackgroundComponent         *background;
     std::vector<GameComponent*> walls;
+    direction                   dir;
     HighScoreComponent          *highScore;
     UIComponent                 *scoreText;
-    direction                   dir;
     size_t                      score;
 public:
     Snake ();

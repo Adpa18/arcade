@@ -13,6 +13,7 @@ Snake::Snake () : AGame("Snake")
         this->walls.push_back(new GameComponent(Vector2<double>(0, i), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
         this->walls.push_back(new GameComponent(Vector2<double>(ArcadeSystem::winWidth - 1, i), Vector2<double>(1, 1), AComponent::YELLOW, ' ', "wall1.png", GameComponent::CUBE_LARGE));
     }
+    this->highScore = NULL;
     this->restart();
 }
 

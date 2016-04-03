@@ -7,11 +7,71 @@ Pacman::Pacman() : AGame("Pacman")
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 14), AComponent::CYAN, "ghost_cyan.gif"));
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 15), AComponent::GREEN, "ghost_orange.gif"));
     this->ghosts.push_back(new Ghost(mapObjs, Vector2<double>(25, 16), AComponent::MAGENTA, "ghost_pink.gif"));
+    this->scoreText = new UIComponent(Vector2<double>(ArcadeSystem::winWidth / 2, 0), AComponent::WHITE, Vector2<double>(0, 0), "Score : 0");
+    this->nbLivesText = new UIComponent(Vector2<double>(2, 0), AComponent::WHITE, Vector2<double>(0, 0), "Lives : 3");
+    this->highScore = NULL;
     this->restart();
 }
 
 Pacman::~Pacman()
 {}
+
+void				Pacman::restart()
+{
+    this->nb_life = 3;
+    this->scoreText->setText("Score : 0");
+    this->nbLivesText->setText("Lives : 3");
+    this->score = 0;
+    this->started = false;
+    std::time(&this->startTime);
+    this->init();
+}
+
+void				Pacman::restart_with_life()
+{
+    this->pacman->setPos(Vector2<double>(25, 18));
+    this->ghosts[0]->init();
+    this->ghosts[1]->init();
+    this->ghosts[2]->init();
+    this->ghosts[3]->init();
+    this->dir = DIR_LEFT;
+    this->play_state = ALIVE;
+    this->eat_state = NORMAL;
+    --this->nb_life;
+    this->nbLivesText->setText("Lives : " + std::to_string(this->nb_life));
+}
+
+void    Pacman::init()
+{
+    std::string                 sprite2D;
+    AComponent::ComponentColor  color;
+
+    this->pacman->setPos(Vector2<double>(25, 18));
+    this->ghosts[0]->init();
+    this->ghosts[1]->init();
+    this->ghosts[2]->init();
+    this->ghosts[3]->init();
+    this->dir = DIR_LEFT;
+    this->play_state = ALIVE;
+    this->eat_state = NORMAL;
+    for (size_t y = 0; y < ArcadeSystem::winHeight; y++) {
+        for (size_t x = 0; x < ArcadeSystem::winWidth; x++) {
+            if (map[y][x] == 'X') {
+                sprite2D = "wall.jpg";
+                color = AComponent::BLUE;
+            } else if (map[y][x] == 'o') {
+                sprite2D = "bigBall.png";
+                color = AComponent::CYAN;
+            } else if (map[y][x] == '.') {
+                sprite2D = "smallBall.png";
+                color = AComponent::GREEN;
+            } else {
+                continue;
+            }
+            mapObjs[y * ArcadeSystem::winWidth + x] = new GameComponent(Vector2<double>(x, y), Vector2<double>(1, 1), color, map[y][x], sprite2D, GameComponent::CUBE_LARGE);
+        }
+    }
+}
 
 bool                        Pacman::check(Vector2<double> pos)
 {
@@ -73,9 +133,50 @@ void 		             Pacman::changeDirection(int key)
     }
 }
 
+void                Pacman::checkEvent()
+{
+    if (this->pacman->getPos() == this->ghosts[0]->getObj()->getPos()) {
+        if (this->eat_state == INVINCIBLE && this->ghosts[0]->getState() == Ghost::VULNERABLE) {
+            this->ghosts[0]->dead();
+            this->score += 200;
+        } else if (this->eat_state != INVINCIBLE && this->ghosts[0]->getState() == Ghost::ALIVE) {
+            this->play_state = DEAD;
+            return;
+        }
+    }
+    if (this->pacman->getPos() == this->ghosts[1]->getObj()->getPos()) {
+        if (this->eat_state == INVINCIBLE && this->ghosts[1]->getState() == Ghost::VULNERABLE) {
+            this->ghosts[1]->dead();
+            this->score += 200;
+        } else if (this->eat_state != INVINCIBLE && this->ghosts[1]->getState() == Ghost::ALIVE) {
+            this->play_state = DEAD;
+            return;
+        }
+    }
+    if (this->pacman->getPos() == this->ghosts[2]->getObj()->getPos()) {
+        if (this->eat_state == INVINCIBLE && this->ghosts[2]->getState() == Ghost::VULNERABLE) {
+            this->ghosts[2]->dead();
+            this->score += 200;
+        } else if (this->eat_state != INVINCIBLE && this->ghosts[2]->getState() == Ghost::ALIVE) {
+            this->play_state = DEAD;
+            return;
+        }
+    }
+    if (this->pacman->getPos() == this->ghosts[2]->getObj()->getPos()) {
+        if (this->eat_state == INVINCIBLE && this->ghosts[2]->getState() == Ghost::VULNERABLE) {
+            this->ghosts[2]->dead();
+            this->score += 200;
+        } else if (this->eat_state != INVINCIBLE && this->ghosts[3]->getState() == Ghost::ALIVE) {
+            this->play_state = DEAD;
+            return;
+        }
+    }
+}
+
 void                Pacman::move()
 {
-    Vector2<double>         pacmanPos = this->pacman->getPos();
+    time_t          currentTime;
+    Vector2<double> pacmanPos = this->pacman->getPos();
 
     switch (this->dir) {
         case DIR_LEFT:
@@ -100,22 +201,19 @@ void                Pacman::move()
     if (this->check(pacmanPos)) {
         this->pacman->setPos(pacmanPos);
     }
-    if (this->ghosts[0]->getState() == Ghost::DEAD)
-        this->ghosts[0]->goTo(this->ghosts[0]->getStartPos());
-    else
-        this->ghosts[0]->goTo(this->pacman->getPos());
-    if (this->ghosts[1]->getState() == Ghost::DEAD)
-        this->ghosts[1]->goTo(this->ghosts[1]->getStartPos());
-    else
-        this->ghosts[1]->goTo(this->pacman->getPos());
-    if (this->ghosts[2]->getState() == Ghost::DEAD)
-        this->ghosts[2]->goTo(this->ghosts[2]->getStartPos());
-    else
-        this->ghosts[2]->goToRand(this->pacman->getPos());
-    if (this->ghosts[3]->getState() == Ghost::DEAD)
-        this->ghosts[3]->goTo(this->ghosts[3]->getStartPos());
-    else
-        this->ghosts[3]->goToRand(this->pacman->getPos());
+    if (!this->started) {
+        std::time(&currentTime);
+        if (difftime(currentTime, this->startTime) >= 1) {
+            this->started = true;
+        }
+        return;
+    }
+    this->checkEvent();
+    this->ghosts[0]->goTo(this->pacman->getPos());
+    this->ghosts[1]->goTo(this->pacman->getPos());
+    this->ghosts[2]->goTo(this->pacman->getPos());
+    this->ghosts[3]->goTo(this->pacman->getPos());
+    this->checkEvent();
 }
 
 void                Pacman::eat()
@@ -126,49 +224,23 @@ void                Pacman::eat()
     if (it != mapObjs.end()) {
         if (it->second->getSpriteText() == "o") {
             this->eat_state = INVINCIBLE;
-            for (short i = 0; i < 4; i++) {
-                if (this->ghosts[i]->getState() != Ghost::DEAD)
-                    this->ghosts[i]->vulnerable();
+            this->score += 90;
+            if (this->ghosts[0]->getState() != Ghost::DEAD) {
+                this->ghosts[0]->vulnerable();
+            }
+            if (this->ghosts[1]->getState() != Ghost::DEAD) {
+                this->ghosts[1]->vulnerable();
+            }
+            if (this->ghosts[2]->getState() != Ghost::DEAD) {
+                this->ghosts[2]->vulnerable();
+            }
+            if (this->ghosts[3]->getState() != Ghost::DEAD) {
+                this->ghosts[3]->vulnerable();
             }
             std::time(&this->beginTime);
         }
         mapObjs.erase(it);
-    }
-    if (this->eat_state == INVINCIBLE) {
-        if (this->pacman->getPos() == this->ghosts[0]->getObj()->getPos())
-        this->ghosts[0]->dead();
-        if (this->pacman->getPos() == this->ghosts[1]->getObj()->getPos())
-        this->ghosts[1]->dead();
-        if (this->pacman->getPos() == this->ghosts[2]->getObj()->getPos())
-        this->ghosts[2]->dead();
-        if (this->pacman->getPos() == this->ghosts[3]->getObj()->getPos())
-        this->ghosts[3]->dead();
-    }
-    else if (this->eat_state != INVINCIBLE) {
-        if (this->pacman->getPos() == this->ghosts[0]->getObj()->getPos() && this->ghosts[0]->getState() == Ghost::ALIVE) {
-            if (this->nb_life > 0)
-            this->restart_with_life();
-            else
-            this->restart();
-        }
-        if (this->pacman->getPos() == this->ghosts[1]->getObj()->getPos() && this->ghosts[1]->getState() == Ghost::ALIVE) {
-            if (this->nb_life > 0)
-            this->restart_with_life();
-            else
-            this->restart();
-        }
-        if (this->pacman->getPos() == this->ghosts[2]->getObj()->getPos() && this->ghosts[2]->getState() == Ghost::ALIVE) {
-            if (this->nb_life > 0)
-            this->restart_with_life();
-            else
-            this->restart();
-        }
-        if (this->pacman->getPos() == this->ghosts[3]->getObj()->getPos() && this->ghosts[3]->getState() == Ghost::ALIVE) {
-            if (this->nb_life > 0)
-            this->restart_with_life();
-            else
-            this->restart();
-        }
+        this->score += 10;
     }
 }
 
@@ -186,35 +258,44 @@ std::stack<AComponent*>     Pacman::compute(int key)
     std::stack<AComponent*> components;
     time_t					currentTime;
 
+    if (this->play_state == ALIVE) {
+        if (this->is_empty() == true) {
+            this->init();
+        }
+        this->changeDirection(key);
+        this->move();
+        this->eat();
+    }
     if (this->eat_state == INVINCIBLE) {
         std::time(&currentTime);
         if (difftime(currentTime, this->beginTime) > 10) {
             this->eat_state = NORMAL;
             for (short i = 0; i < 4; i++) {
-                if (this->ghosts[i]->getState() != Ghost::DEAD)
+                if (this->ghosts[i]->getState() != Ghost::DEAD) {
                     this->ghosts[i]->alive();
+                }
             }
         }
     }
-    if (this->play_state == ON_GAME && key == ArcadeSystem::Enter)
-        this->play_state = ON_PAUSE;
-    else if (this->play_state == ON_GAME) {
-        if (this->is_empty() == true)
+    if (this->play_state == DEAD && this->nb_life > 1) {
+        this->restart_with_life();
+    } else if (this->play_state == DEAD) {
+        if (!this->highScore) {
+            highScore = new HighScoreComponent("pacman", this->score);
+        }
+        highScore->UpdatePseudo(key);
+        if (key == ArcadeSystem::Enter && highScore->submit()) {
+            this->state = ALIVE;
+            delete highScore;
+            highScore = NULL;
             this->restart();
-        this->changeDirection(key);
-        this->move();
-        this->eat();
+        } else {
+            components.push(highScore);
+        }
     }
-    else if (this->play_state == ON_START && key == ArcadeSystem::Enter) {
-        this->play_state = ON_GAME;
-        this->ghosts[0]->init();
-        this->ghosts[1]->init();
-        this->ghosts[2]->init();
-        this->ghosts[3]->init();
-    }
-    else if (this->play_state == ON_PAUSE && key == ArcadeSystem::Enter) {
-        this->play_state = ON_GAME;
-    }
+    this->scoreText->setText("Score : " + std::to_string(this->score));
+    components.push(this->scoreText);
+    components.push(this->nbLivesText);
     components.push(this->pacman);
     components.push(this->ghosts[0]->getObj());
     components.push(this->ghosts[1]->getObj());
@@ -224,52 +305,6 @@ std::stack<AComponent*>     Pacman::compute(int key)
         components.push(it->second);
     }
     return (components);
-}
-
-void				Pacman::restart()
-{
-    std::string                 sprite2D;
-    AComponent::ComponentColor  color;
-
-    this->pacman->setPos(Vector2<double>(25, 18));
-    this->ghosts[0]->init();
-    this->ghosts[1]->init();
-    this->ghosts[2]->init();
-    this->ghosts[3]->init();
-    this->dir = DIR_LEFT;
-    this->play_state = ON_START;
-    this->nb_life = 3;
-    for (size_t y = 0; y < ArcadeSystem::winHeight; y++) {
-        for (size_t x = 0; x < ArcadeSystem::winWidth; x++) {
-            if (map[y][x] == 'X') {
-                sprite2D = "wall.jpg";
-                color = AComponent::BLUE;
-            } else if (map[y][x] == 'o') {
-                sprite2D = "bigBall.png";
-                color = AComponent::CYAN;
-            } else if (map[y][x] == '.') {
-                sprite2D = "smallBall.png";
-                color = AComponent::GREEN;
-            } else {
-                continue;
-            }
-            mapObjs[y * ArcadeSystem::winWidth + x] = new GameComponent(Vector2<double>(x, y), Vector2<double>(1, 1), color, map[y][x], sprite2D, GameComponent::CUBE_LARGE);
-        }
-    }
-}
-
-void				Pacman::restart_with_life()
-{
-    std::string                 sprite2D;
-
-    this->pacman->setPos(Vector2<double>(25, 18));
-    this->ghosts[0]->init();
-    this->ghosts[1]->init();
-    this->ghosts[2]->init();
-    this->ghosts[3]->init();
-    this->dir = DIR_LEFT;
-    this->play_state = ON_PAUSE;
-    this->nb_life--;
 }
 
 void        Pacman::getMap() const

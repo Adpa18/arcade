@@ -16,22 +16,21 @@ class Ghost {
 public:
     enum state { ALIVE, DEAD, VULNERABLE };
 private:
-    GameComponent   *obj;
-    AComponent::ComponentColor	first_color;
-    Vector2<double> startPos;
-    state           status;
-    time_t          beginTime;
-    std::map<double, GameComponent*> &mapObjs;
-    direction		dir;
-    bool			force_dir;
-    bool			tmp;
-    const std::string	sprite2D;
+    GameComponent                       *obj;
+    AComponent::ComponentColor          first_color;
+    Vector2<double>                     startPos;
+    state                               status;
+    std::map<double, GameComponent*>    &mapObjs;
+    direction                           dir;
+    bool                                force_dir;
+    bool                                slow;
+    const std::string                   sprite2D;
 public:
     Ghost (std::map<double, GameComponent*> &mapObjs, Vector2<double> pos,
         AComponent::ComponentColor color, const std::string sprite2D);
     virtual ~Ghost ();
     void            goTo(Vector2<double> pos);
-    void            goToRand(Vector2<double> pos);
+    // void            goToRand(Vector2<double> pos);
     GameComponent   *getObj() const;
     state           getState() const;
     Vector2<double> getStartPos() const;

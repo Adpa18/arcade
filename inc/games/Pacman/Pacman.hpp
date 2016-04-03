@@ -16,7 +16,6 @@
 # define NB_PH  4
 # define STEP   1
 
-enum p_state { ON_GAME, ON_PAUSE, ON_START };
 enum e_state { INVINCIBLE, NORMAL };
 
 class Pacman : public AGame {
@@ -25,10 +24,16 @@ private:
     std::vector<Ghost*>         ghosts;
     std::map<double, GameComponent*> mapObjs;
     direction                   dir;
+    HighScoreComponent          *highScore;
+    UIComponent                 *scoreText;
+    UIComponent                 *nbLivesText;
+    size_t                      score;
     time_t						beginTime;
-    enum p_state				play_state;
+    time_t						startTime;
+    AGame::GameState            play_state;
     enum e_state				eat_state;
     int							nb_life;
+    bool                        started;
     const char                  map[ArcadeSystem::winHeight + 1][ArcadeSystem::winWidth + 1] = {
         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "X..........X..........................X..........X",
@@ -64,17 +69,18 @@ public:
     Pacman ();
     virtual ~Pacman ();
     virtual std::stack<AComponent*> compute(int);
-    // virtual std::stack<AComponent*>	getInfos() const;
     virtual void			        restart();
-    void							restart_with_life();
     void 							changeDirection(int key);
     void                            getMap() const;
     void                            whereAmI() const;
+private:
     void 							move();
     void 							eat();
-private:
+    void							restart_with_life();
     bool                            check(Vector2<double> pos);
     bool							is_empty();
+    void                            init();
+    void                            checkEvent();
 };
 
 extern "C" void     Play(void);

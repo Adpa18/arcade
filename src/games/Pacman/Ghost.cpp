@@ -7,7 +7,7 @@ Ghost::Ghost (std::map<double, GameComponent*> &mapObjs, Vector2<double> pos,
     this->obj = new GameComponent(pos, Vector2<double>(1, 1), color, ' ', sprite2D, GameComponent::CUBE_LARGE);
     this->init();
     this->first_color = color;
-    this->tmp = true;
+    this->slow = true;
 }
 
 Ghost::~Ghost()
@@ -20,7 +20,6 @@ void    Ghost::init()
     this->dir = NOTHING;
     this->force_dir = false;
     this->obj->setPos(this->startPos);
-    std::time(&this->beginTime);
     this->alive();
 }
 
@@ -81,9 +80,7 @@ bool	Ghost::otherWay()
     if (this->dir == DIR_LEFT || this->dir == DIR_RIGHT) {
         if (check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y + 1)) || check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y - 1)))
             return (true);
-    }
-    else
-        if (check(Vector2<double>(this->obj->getPos().x + 1, this->obj->getPos().y)) || check(Vector2<double>(this->obj->getPos().x - 1, this->obj->getPos().y)))
+    } else if (check(Vector2<double>(this->obj->getPos().x + 1, this->obj->getPos().y)) || check(Vector2<double>(this->obj->getPos().x - 1, this->obj->getPos().y)))
             return (true);
     return (false);
 }
@@ -94,23 +91,19 @@ void	Ghost::goToInv(Vector2<double> pos)
         this->dir = DIR_UP;
         this->force_dir = false;
         tryMove();
-    }
-    else if (pos.y - this->obj->getPos().y < 0 && ((check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y + 1)) && this->dir != DIR_UP))) {
+    } else if (pos.y - this->obj->getPos().y < 0 && ((check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y + 1)) && this->dir != DIR_UP))) {
         this->dir = DIR_DOWN;
         this->force_dir = false;
         tryMove();
-    }
-    else if (pos.x - this->obj->getPos().x > 0 && ((check(Vector2<double>(this->obj->getPos().x + 1, this->obj->getPos().y)) && this->dir != DIR_LEFT))) {
+    } else if (pos.x - this->obj->getPos().x > 0 && ((check(Vector2<double>(this->obj->getPos().x + 1, this->obj->getPos().y)) && this->dir != DIR_LEFT))) {
         this->dir = DIR_RIGHT;
         this->force_dir = false;
         tryMove();
-    }
-    else if (pos.x - this->obj->getPos().x < 0 && ((check(Vector2<double>(this->obj->getPos().x - 1, this->obj->getPos().y)) && this->dir != DIR_RIGHT))) {
+    } else if (pos.x - this->obj->getPos().x < 0 && ((check(Vector2<double>(this->obj->getPos().x - 1, this->obj->getPos().y)) && this->dir != DIR_RIGHT))) {
         this->dir = DIR_LEFT;
         this->force_dir = false;
         tryMove();
-    }
-    else {
+    } else {
         while (tryMove() != true) {
             switch (rand() % 4) {
                 case 0:
@@ -151,74 +144,72 @@ void			Ghost::inverseDir()
             break;
     }
 }
-
-void			Ghost::goToRand(Vector2<double> pos)
-{
-    time_t  	currentTime;
-    direction	oldDir;
-
-    tmp = !tmp;
-    if (this->getState() == VULNERABLE && tmp != true)
-        return;
-    std::time(&currentTime);
-    if (difftime(currentTime, this->beginTime) < 10)
-        return;
-    if (this->isInside() == true) {
-        dir = DIR_UP;
-        if (tryMove() == false) {
-            dir = pos.x - this->obj->getPos().x < 0 ? DIR_RIGHT : DIR_LEFT;
-            tryMove();
-            return;
-        }
-    }
-    if (!otherWay()) {
-        if (tryMove() == true)
-            return;
-    }
-    inverseDir();
-    oldDir = this->dir;
-    switch (rand() % 4) {
-        case 0:
-            this->dir = DIR_LEFT;
-            break;
-        case 1:
-            this->dir = DIR_RIGHT;
-            break;
-        case 2:
-            this->dir = DIR_UP;
-            break;
-        case 3:
-            this->dir = DIR_DOWN;
-            break;
-    }
-    while (this->dir == oldDir || tryMove() != true) {
-        switch (rand() % 4) {
-            case 0:
-            this->dir = DIR_LEFT;
-            break;
-            case 1:
-            this->dir = DIR_RIGHT;
-            break;
-            case 2:
-            this->dir = DIR_UP;
-            break;
-            case 3:
-            this->dir = DIR_DOWN;
-            break;
-        }
-    }
-}
+//
+// void			Ghost::goToRand(Vector2<double> pos)
+// {
+//     direction	oldDir;
+//
+//     if (this->status == DEAD) {
+//         pos = this->startPos;
+//     }
+//     this->slow = !this->slow;
+//     if (this->getState() == VULNERABLE && this->slow != true)
+//         return;
+//     if (this->isInside() == true) {
+//         dir = DIR_UP;
+//         if (tryMove() == false) {
+//             dir = pos.x - this->obj->getPos().x < 0 ? DIR_RIGHT : DIR_LEFT;
+//             tryMove();
+//             return;
+//         }
+//     }
+//     if (!otherWay()) {
+//         if (tryMove() == true)
+//             return;
+//     }
+//     inverseDir();
+//     oldDir = this->dir;
+//     switch (rand() % 4) {
+//         case 0:
+//             this->dir = DIR_LEFT;
+//             break;
+//         case 1:
+//             this->dir = DIR_RIGHT;
+//             break;
+//         case 2:
+//             this->dir = DIR_UP;
+//             break;
+//         case 3:
+//             this->dir = DIR_DOWN;
+//             break;
+//     }
+//     while (this->dir == oldDir || tryMove() != true) {
+//         switch (rand() % 4) {
+//             case 0:
+//             this->dir = DIR_LEFT;
+//             break;
+//             case 1:
+//             this->dir = DIR_RIGHT;
+//             break;
+//             case 2:
+//             this->dir = DIR_UP;
+//             break;
+//             case 3:
+//             this->dir = DIR_DOWN;
+//             break;
+//         }
+//     }
+// }
 
 void	Ghost::goTo(Vector2<double> pos)
 {
-    time_t  currentTime;
-
-    tmp = !tmp;
-    if (this->getState() == Ghost::VULNERABLE && tmp != true)
+    if (this->status == DEAD) {
+        pos = this->startPos;
+    }
+    this->slow = !this->slow;
+    if (this->getState() == Ghost::VULNERABLE && this->slow != true) {
         return;
-    std::time(&currentTime);
-    if (difftime(currentTime, this->beginTime) < 10)
-        return;
+    }
     if (this->getState() != Ghost::DEAD && this->isInside() == true) {
         dir = DIR_UP;
         tryMove();
@@ -236,29 +227,26 @@ void	Ghost::goTo(Vector2<double> pos)
         this->force_dir = false;
         return;
     }
-    if (otherWay())
+    if (otherWay()) {
         goToInv(pos);
+    }
     if (pos.x - this->obj->getPos().x > 0 && ((check(Vector2<double>(this->obj->getPos().x + 1, this->obj->getPos().y)) && this->dir != DIR_LEFT))) {
         this->dir = DIR_RIGHT;
         this->force_dir = false;
         tryMove();
-    }
-    else if (pos.x - this->obj->getPos().x < 0 && ((check(Vector2<double>(this->obj->getPos().x - 1, this->obj->getPos().y)) && this->dir != DIR_RIGHT))) {
+    } else if (pos.x - this->obj->getPos().x < 0 && ((check(Vector2<double>(this->obj->getPos().x - 1, this->obj->getPos().y)) && this->dir != DIR_RIGHT))) {
         this->dir = DIR_LEFT;
         this->force_dir = false;
         tryMove();
-    }
-    else if (pos.y - this->obj->getPos().y < 0 && ((check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y - 1)) && this->dir != DIR_DOWN))) {
+    } else if (pos.y - this->obj->getPos().y < 0 && ((check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y - 1)) && this->dir != DIR_DOWN))) {
         this->dir = DIR_UP;
         this->force_dir = false;
         tryMove();
-    }
-    else if (pos.y - this->obj->getPos().y < 0 && ((check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y + 1)) && this->dir != DIR_UP))) {
+    } else if (pos.y - this->obj->getPos().y < 0 && ((check(Vector2<double>(this->obj->getPos().x, this->obj->getPos().y + 1)) && this->dir != DIR_UP))) {
         this->dir = DIR_DOWN;
         this->force_dir = false;
         tryMove();
-    }
-    else {
+    } else {
         while (tryMove() != true) {
             switch (rand() % 4) {
                 case 0:
@@ -299,7 +287,6 @@ void            Ghost::alive()
     this->status = Ghost::ALIVE;
     this->obj->setSprite2D(this->sprite2D);
     this->obj->setColor(this->first_color);
-    // Change Texture
 }
 
 void            Ghost::dead()
@@ -307,7 +294,6 @@ void            Ghost::dead()
     this->status = Ghost::DEAD;
     this->obj->setColor(AComponent::WHITE);
     this->obj->setSprite2D("eyes2.png");
-    // Change Texture
 }
 
 void            Ghost::vulnerable()
@@ -315,5 +301,4 @@ void            Ghost::vulnerable()
     this->status = Ghost::VULNERABLE;
     this->obj->setColor(AComponent::BLUE);
     this->obj->setSprite2D("ghost_dead.gif");
-    // Change Texture
 }
