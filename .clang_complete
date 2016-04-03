@@ -2,6 +2,9 @@
 -I./inc/lib/sdl2
 -I./inc/lib/openGL
 -I./inc/games/snake
+-I./inc/games/qix
+-I./inc/games/centepede
+-I./inc/games/solar_fox
 -I./inc/games/Pacman
 -I./inc
 -I./library/ncurses/include

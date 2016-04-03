@@ -226,21 +226,6 @@ std::stack<AComponent*>     Pacman::compute(int key)
     return (components);
 }
 
-// std::stack<AComponent*>     Pacman::getInfos() const
-// {
-//     std::stack<AComponent*> components;
-//
-//     components.push(this->pacman);
-//     components.push(this->ghosts[0]->getObj());
-//     components.push(this->ghosts[1]->getObj());
-//     components.push(this->ghosts[2]->getObj());
-//     components.push(this->ghosts[3]->getObj());
-//     for (std::map<double, GameComponent*>::const_iterator it = this->mapObjs.begin(); it != this->mapObjs.end(); ++it) {
-//         components.push(it->second);
-//     }
-//     return (components);
-// }
-
 void				Pacman::restart()
 {
     std::string                 sprite2D;
@@ -289,34 +274,38 @@ void				Pacman::restart_with_life()
 
 void        Pacman::getMap() const
 {
-    arcade::GetMap      map;
-    char                c;
+    arcade::GetMap      *map;
 
-    map.type = arcade::CommandType::GET_MAP;
-    map.width = ArcadeSystem::winWidth;
-    map.height = ArcadeSystem::winHeight;
+    if (!(map = (arcade::GetMap*)malloc(sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType)))) {
+        throw std::bad_alloc();
+    }
+    map->type = arcade::CommandType::GET_MAP;
+    map->width = ArcadeSystem::winWidth;
+    map->height = ArcadeSystem::winHeight;
     for (size_t i = 0; i < ArcadeSystem::winWidth * ArcadeSystem::winHeight; i++) {
-        c = this->map[i / ArcadeSystem::winWidth][i % ArcadeSystem::winWidth];
-        if (c == 'X') {
-            map.tile[i] = arcade::TileType::BLOCK;
-        }else if (c == 'o') {
-            map.tile[i] = arcade::TileType::POWERUP;
+        if (this->map[i / ArcadeSystem::winWidth][i % ArcadeSystem::winWidth] == 'X') {
+            map->tile[i] = arcade::TileType::BLOCK;
+        }else if (this->map[i / ArcadeSystem::winWidth][i % ArcadeSystem::winWidth] == 'o') {
+            map->tile[i] = arcade::TileType::POWERUP;
         } else {
-            map.tile[i] = arcade::TileType::EMPTY;
+            map->tile[i] = arcade::TileType::EMPTY;
         }
     }
-    std::cout.write((const char *)&map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
+    std::cout.write((const char *)map, sizeof(arcade::GetMap) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType));
 }
 
 void        Pacman::whereAmI() const
 {
-    arcade::WhereAmI    wai;
+    arcade::WhereAmI    *wai;
 
-    wai.type = arcade::CommandType::WHERE_AM_I;
-    wai.lenght = 1;
-    wai.position[0].x = static_cast<uint16_t>(this->pacman->getPos().x);
-    wai.position[0].y = static_cast<uint16_t>(this->pacman->getPos().y);
-    std::cout.write((const char *)&wai, sizeof(arcade::WhereAmI) + sizeof(arcade::Position));
+    if (!(wai = (arcade::WhereAmI*)malloc(sizeof(arcade::WhereAmI) + sizeof(arcade::TileType)))) {
+        throw std::bad_alloc();
+    }
+    wai->type = arcade::CommandType::WHERE_AM_I;
+    wai->lenght = 1;
+    wai->position[0].x = static_cast<uint16_t>(this->pacman->getPos().x);
+    wai->position[0].y = static_cast<uint16_t>(this->pacman->getPos().y);
+    std::cout.write((const char *)wai, sizeof(arcade::WhereAmI) + wai->lenght * sizeof(arcade::Position));
 }
 
 void 	Play(void)
@@ -325,7 +314,7 @@ void 	Play(void)
     char                cmd;
 
     pacman = new Pacman();
-    while (std::cin.read(&cmd, 1))
+    while (std::cin.read(&cmd, sizeof(arcade::CommandType)))
     {
         switch ((arcade::CommandType)cmd) {
             case arcade::CommandType::WHERE_AM_I:
@@ -335,16 +324,16 @@ void 	Play(void)
                 pacman->getMap();
                 break;
             case arcade::CommandType::GO_UP:
-                pacman->changeDirection(DIR_UP);
+                pacman->changeDirection(ArcadeSystem::ArrowUp);
                 break;
             case arcade::CommandType::GO_DOWN:
-                pacman->changeDirection(DIR_DOWN);
+                pacman->changeDirection(ArcadeSystem::ArrowDown);
                 break;
             case arcade::CommandType::GO_LEFT:
-                pacman->changeDirection(DIR_LEFT);
+                pacman->changeDirection(ArcadeSystem::ArrowLeft);
                 break;
             case arcade::CommandType::GO_RIGHT:
-                pacman->changeDirection(DIR_RIGHT);
+                pacman->changeDirection(ArcadeSystem::ArrowRight);
                 break;
             case arcade::CommandType::GO_FORWARD:
                 break;

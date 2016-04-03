@@ -1,5 +1,8 @@
-SUBDIRS	=	snake \
-			Pacman \
+SUBDIRS	=	snake 		\
+			Pacman 		\
+			qix			\
+			centipede	\
+			solar_fox	\
 
 all		:
 	@echo -e "\033[32m=> Compiling Games\033[00m"

@@ -202,7 +202,7 @@ void        Snake::whereAmI() const
 {
     arcade::WhereAmI    *wai;
 
-    if (!(wai = (arcade::WhereAmI*)malloc(sizeof(arcade::WhereAmI) + (ArcadeSystem::winWidth * ArcadeSystem::winHeight) * sizeof(arcade::TileType)))) {
+    if (!(wai = (arcade::WhereAmI*)malloc(sizeof(arcade::WhereAmI) + this->snake.size() * sizeof(arcade::TileType)))) {
         throw std::bad_alloc();
     }
     wai->type = arcade::CommandType::WHERE_AM_I;
