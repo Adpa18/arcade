@@ -24,7 +24,7 @@ CPPFLAGS	+= 	-I$(BASE)library/sdl2/include -D_REENTRANT
 
 LIBS 		=	-lSDL2 -lSDL2_image -lSDL2_ttf -lpthread
 
-LIBS 		+= 	-L$(BASE)library/sdl2
+LIBS 		+= 	-Wl,-rpath,./library/sdl2/ -L$(BASE)library/sdl2 $(BASE)library/sdl2/libSDL2_image.so
 
 LDFLAGS		=	-shared -z defs
 
